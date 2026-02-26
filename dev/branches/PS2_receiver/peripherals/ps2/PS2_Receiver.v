@@ -43,26 +43,23 @@ module PS2_Receiver(
     localparam STATE_1_RX = 1'b1;
 
     assign shift_en = (state == STATE_1_RX) ? 1 : 0;
-    assign output_data = (rx_done == 1'b1) ? 0 : ps2_data_rx[8:1];
+    assign output_data = ps2_data_rx[8:1];
     assign out_valid = rx_done_reg;
 
     always @(posedge clk) begin
         if (reset) begin
-            cnt <= 8'b0;
+            cnt <= 4'b0;
             state <= STATE_0_IDLE;
-            next_state <= 2'b0;
             rx_done_reg <= 1'b0;
 		    last_ps2_clk <= 1'b1;
 		    ps2_clk_reg	<= 1'b1;
-
         end
         else begin
            state <= next_state;
            cnt <= next_cnt;
     	   last_ps2_clk	<= ps2_clk_reg;
-           ps2_clk_reg <= ps2_clk; 
+           ps2_clk_reg <= ps2_clk_f; 
            rx_done_reg <= rx_done;
-
         end
     end
 
@@ -73,23 +70,25 @@ module PS2_Receiver(
     // FSM
     always @(*) begin
         rx_done = 0;
+        next_cnt = cnt;
+        next_state = state;
         case (state)
             STATE_0_IDLE:
                 if(ps2_clk_negedge) begin
-                    next_cnt = 4'hA;
+                    next_cnt = 4'd10; // 10 bits remaining (D0-D7, Parity, Stop)
                     next_state = STATE_1_RX;
                 end
-                else
-                    next_state = STATE_0_IDLE;
             STATE_1_RX:
             begin
                 if (ps2_clk_negedge) begin
-                    next_cnt = cnt - 1;
-                    next_state = STATE_1_RX;
-                end
-                if (cnt == 0) begin
-                    rx_done = 1'b1;
-                    next_state = STATE_0_IDLE;
+                    if (cnt == 4'd1) begin
+                        next_cnt = 4'd0;
+                        rx_done = 1'b1;
+                        next_state = STATE_0_IDLE;
+                    end
+                    else begin
+                        next_cnt = cnt - 1;
+                    end
                 end
             end
             default:
@@ -98,14 +97,13 @@ module PS2_Receiver(
     end
    
     // Shift register to receive data packet
-    // Using unfiltered data for simulation, actual connection may need debounce
-    // TODO Reconnect w/ debouncce
+    // Now synchronous to main clk, shifting on detected falling edge of filtered PS2 clock
     shift_register #(11) rx_shift_reg(
-        .clk(!ps2_clk),
+        .clk(clk),
         .rstn(!reset),
-        .data(ps2_data),
-        .enable(shift_en), // change to enable wire later
-        .direction(1), // PS2 sends LSB first, shift to the right
+        .data(ps2_data_f),
+        .enable(shift_en && ps2_clk_negedge), 
+        .direction(1), 
         .out_data(ps2_data_rx)
     );
     // Debounce module
