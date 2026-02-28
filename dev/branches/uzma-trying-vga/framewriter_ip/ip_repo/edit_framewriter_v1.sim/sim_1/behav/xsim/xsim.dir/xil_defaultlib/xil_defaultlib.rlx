@@ -1,0 +1,9 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+y:/framewriter_ip/ip_repo/edit_framewriter_v1.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1.v,1772218011,verilog,,y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v,,framewriter_v1,,,,,,,,
+y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v,1772217719,verilog,,y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v,,framewriter_v1_S00_AXI,,,,,,,,
+y:/framewriter_ip/ip_repo/framewriter_1/src/framewriter.v,1772225766,verilog,,y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1.v,,framewriter,,,,,,,,
+y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v,1772221021,verilog,,,,tb1,,,,,,,,
