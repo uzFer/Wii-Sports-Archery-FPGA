@@ -1,0 +1,28 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 4dd2de92e58d4f46b1ce29e51d377097 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_behav xil_defaultlib.tb1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-2861] module 'framewriter_v1' does not have a parameter named BRAM_ADDR_WIDTH [y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v:46]
+WARNING: [VRFC 10-2861] module 'framewriter_v1' does not have a parameter named BRAM_DATA_WIDTH [y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v:47]
+WARNING: [VRFC 10-2861] module 'framewriter_v1' does not have a parameter named BRAM_WE_WIDTH [y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v:48]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 's00_axi_awaddr' [y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v:62]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 's00_axi_wdata' [y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'slv_reg0' [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1.v:70]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'slv_reg1' [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1.v:71]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'slv_reg2' [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1.v:72]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'slv_reg3' [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1.v:73]
+WARNING: [VRFC 10-3027] 'slv_reg0' was previously declared with a different range [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v:18]
+WARNING: [VRFC 10-3027] 'slv_reg1' was previously declared with a different range [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v:19]
+WARNING: [VRFC 10-3027] 'slv_reg2' was previously declared with a different range [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v:20]
+WARNING: [VRFC 10-3027] 'slv_reg3' was previously declared with a different range [y:/framewriter_ip/ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v:21]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.framewriter_v1_S00_AXI_default
+Compiling module xil_defaultlib.framewriter
+Compiling module xil_defaultlib.framewriter_v1
+Compiling module xil_defaultlib.tb1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_behav
