@@ -25,12 +25,12 @@ module gyro_top(
     input resetn,
     
     // Gyroscope SPI Interface
-    (* mark_debug = "true" *) input MISO,
+    input MISO,
     input gyroscope_enable,
     input calibrate,
-    (* mark_debug = "true" *) output MOSI,
-    (* mark_debug = "true" *) output SCLK,
-    (* mark_debug = "true" *) output CS,
+    output MOSI,
+    output SCLK,
+    output CS,
     output calibration_done,
     
     // 7-segment Display
@@ -39,8 +39,8 @@ module gyro_top(
     output dp
     );
     
-    (* mark_debug = "true" *) wire [9:0] x_coord;
-    (* mark_debug = "true" *) wire [9:0] y_coord;
+    wire [9:0] x_coord;
+    wire [9:0] y_coord;
     
     // Sampling logic for 1Hz display refresh
     reg [26:0] one_sec_counter;
