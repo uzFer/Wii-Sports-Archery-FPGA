@@ -66,7 +66,7 @@ module spi_master(
     localparam [15:0] CONFIG_GYRO = 16'h0F20; // Enable x, y, z.
 	// address of X_AXIS (0x28) with read and multiple bytes selected (0xC0)
 	parameter [7:0]  DATA_READ_BEGIN = 8'hE8;
-    parameter [23:0] COUNT_WAIT_MAX = 24'h7FFFFF;
+    parameter [23:0] COUNT_WAIT_MAX = 24'h0F4240;
     parameter [11:0] SETUP_COUNT_MAX = 12'hFFF;
 
    
@@ -172,6 +172,7 @@ module spi_master(
                 end
                 
                 STATE_4_WAIT: begin
+                    slave_sel <= 1'b1; // Terminate SPI transaction
                     o_data_valid <= 0; // Clear valid flag immediately (Pulse generation)
                     begin_tx <= 1'b0;
                     if (spi_enable == 1'b0)
