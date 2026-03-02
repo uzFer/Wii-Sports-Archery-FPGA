@@ -22,7 +22,7 @@
 
 module gyro_calc_interface(
     input clk,
-    input resetn,
+    input reset,
     input i_MISO,
     input gyroscope_enable,
     input calibrate,
@@ -31,15 +31,31 @@ module gyro_calc_interface(
     output o_CS,
     output [9:0] x_coord,
     output [9:0] y_coord,
-    output calibration_done
+    output calibration_done,
+    output reg output_valid
     );
     
     wire [15:0] x_axis_data, y_axis_data, z_axis_data;
     wire gyro_data_valid;
     
+    // Toggle the valid signal to allow slow software polling to detect updates
+    reg [1:0] valid_pipe;
+    always @(posedge clk) begin
+        if (reset) begin
+            valid_pipe <= 2'b0;
+            output_valid <= 1'b0;
+        end else begin
+            valid_pipe <= {valid_pipe[0], gyro_data_valid};
+            // Toggle output_valid every time new data is ready (2 cycle delay)
+            if (valid_pipe[1]) begin
+                output_valid <= ~output_valid;
+            end
+        end
+    end
+    
     spi_gyroscope_top spi_gyroscope_inst (
     .CLK(clk),
-    .resetn(resetn),
+    .resetn(~reset),
     .i_MISO(i_MISO),
     .gyroscope_enable(gyroscope_enable),
     .o_MOSI(o_MOSI),
@@ -53,7 +69,7 @@ module gyro_calc_interface(
     
     gyro_aim_calculator gyro_aim_calculator_inst (
     .clk(clk),
-    .rst_n(resetn),
+    .rst_n(~reset),
 
     .x_rate(x_axis_data),
     .y_rate(y_axis_data),

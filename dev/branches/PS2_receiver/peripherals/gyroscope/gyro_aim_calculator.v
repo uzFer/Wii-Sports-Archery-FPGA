@@ -208,16 +208,16 @@ module gyro_aim_calculator #(
         else if (CENTER_X + scaled_x >= SCREEN_WIDTH)
             r_pos_x <= SCREEN_WIDTH - 1;
         else
-            r_pos_x <= CENTER_X + scaled_x;
+            r_pos_x <= CENTER_X - scaled_x;
             
         // Y position (Pitch maps to Y)
-        // Inverted: Subtract scaled_y to make 'Up' movement (positive rate) decrease Y index
+        // Note: If direction inverted, swap add for subtract
         if (CENTER_Y - scaled_y < 0)
             r_pos_y <= 0;
         else if (CENTER_Y - scaled_y >= SCREEN_HEIGHT)
             r_pos_y <= SCREEN_HEIGHT - 1;
         else
-            r_pos_y <= CENTER_Y - scaled_y;
+            r_pos_y <= CENTER_Y + scaled_y;
     end
     
     assign pos_x = r_pos_x;
