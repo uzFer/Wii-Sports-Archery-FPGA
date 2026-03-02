@@ -14,8 +14,8 @@
       "rst_clk_wiz_100M": "",
       "axi_bram_ctrl_0": "",
       "axi_bram_ctrl_0_bram": "",
-      "framewriter_0": "",
-      "sync_gen_1": ""
+      "sync_gen_1": "",
+      "framewriter_0": ""
     },
     "ports": {
       "reset_rtl_0": {
@@ -238,20 +238,20 @@
           }
         }
       },
-      "framewriter_0": {
-        "vlnv": "xilinx.com:user:framewriter:1",
-        "xci_name": "design_2_framewriter_0_0"
-      },
       "sync_gen_1": {
         "vlnv": "xilinx.com:user:sync_gen:1",
         "xci_name": "design_2_sync_gen_1_0"
+      },
+      "framewriter_0": {
+        "vlnv": "xilinx.com:user:framewriter:1",
+        "xci_name": "design_2_framewriter_0_0"
       }
     },
     "interface_nets": {
-      "axi_vip_0_M_AXI": {
+      "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
-          "axi_vip_0/M_AXI",
-          "sync_gen_1/S00_AXI"
+          "axi_bram_ctrl_0/BRAM_PORTA",
+          "axi_bram_ctrl_0_bram/BRAM_PORTA"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTB": {
@@ -260,10 +260,10 @@
           "axi_bram_ctrl_0_bram/BRAM_PORTB"
         ]
       },
-      "axi_bram_ctrl_0_BRAM_PORTA": {
+      "axi_vip_0_M_AXI": {
         "interface_ports": [
-          "axi_bram_ctrl_0/BRAM_PORTA",
-          "axi_bram_ctrl_0_bram/BRAM_PORTA"
+          "axi_vip_0/M_AXI",
+          "sync_gen_1/S00_AXI"
         ]
       }
     },
@@ -292,8 +292,8 @@
           "rst_clk_wiz_100M/interconnect_aresetn",
           "axi_vip_0/aresetn",
           "axi_bram_ctrl_0/s_axi_aresetn",
-          "framewriter_0/s00_axi_aresetn",
-          "sync_gen_1/s00_axi_aresetn"
+          "sync_gen_1/s00_axi_aresetn",
+          "framewriter_0/s00_axi_aresetn"
         ]
       },
       "clk_100MHz_clk_out1": {
@@ -303,8 +303,8 @@
           "rst_clk_wiz_100M/slowest_sync_clk",
           "axi_bram_ctrl_0/s_axi_aclk",
           "axi_bram_ctrl_0_bram/clka",
-          "framewriter_0/s00_axi_aclk",
-          "sync_gen_1/s00_axi_aclk"
+          "sync_gen_1/s00_axi_aclk",
+          "framewriter_0/s00_axi_aclk"
         ]
       },
       "clk_100MHz_clk_out2": {

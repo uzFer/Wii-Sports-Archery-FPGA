@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb3_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="tb3" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2097015000000fs"></ZoomStartTime>
+      <ZoomEndTime time="2964015000001fs"></ZoomEndTime>
+      <Cursor1Time time="2819515000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="381"></NameColumnWidth>
+      <ValueColumnWidth column_width="161"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="group1059" type="group">
+      <obj_property name="label">inputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/axi_framewriter_y" type="array">
+         <obj_property name="ElementShortName">axi_framewriter_y[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_framewriter_y[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/axi_framewriter_x" type="array">
+         <obj_property name="ElementShortName">axi_framewriter_x[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_framewriter_x[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/axi_framewriter_myScore" type="array">
+         <obj_property name="ElementShortName">axi_framewriter_myScore[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_framewriter_myScore[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/internal_y" type="array">
+         <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/internal_x" type="array">
+         <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1069" type="group">
+      <obj_property name="label">pixel game state</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/is_triangle_pixel" type="logic">
+         <obj_property name="ElementShortName">is_triangle_pixel</obj_property>
+         <obj_property name="ObjectShortName">is_triangle_pixel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/is_target_pixel" type="logic">
+         <obj_property name="ElementShortName">is_target_pixel</obj_property>
+         <obj_property name="ObjectShortName">is_target_pixel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/is_square_pixel" type="logic">
+         <obj_property name="ElementShortName">is_square_pixel</obj_property>
+         <obj_property name="ObjectShortName">is_square_pixel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/is_crosshair_pixel" type="logic">
+         <obj_property name="ElementShortName">is_crosshair_pixel</obj_property>
+         <obj_property name="ObjectShortName">is_crosshair_pixel</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1070" type="group">
+      <obj_property name="label">frame writer internal</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/frame_busy" type="logic">
+         <obj_property name="ElementShortName">frame_busy</obj_property>
+         <obj_property name="ObjectShortName">frame_busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/start_rmw_pulse" type="logic">
+         <obj_property name="ElementShortName">start_rmw_pulse</obj_property>
+         <obj_property name="ObjectShortName">start_rmw_pulse</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/bram_write_data" type="array">
+         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/reg_bram_addr" type="array">
+         <obj_property name="ElementShortName">reg_bram_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_bram_addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/bram_write_enable" type="array">
+         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/framewriter_0/inst/framewriter_1/pixel_to_write" type="logic">
+         <obj_property name="ElementShortName">pixel_to_write</obj_property>
+         <obj_property name="ObjectShortName">pixel_to_write</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1073" type="group">
+      <obj_property name="label">sync gen</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/inst/sync_generator_1/bram_read_data" type="array">
+         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/inst/sync_generator_1/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/inst/sync_generator_1/vcount" type="array">
+         <obj_property name="ElementShortName">vcount[15:0]</obj_property>
+         <obj_property name="ObjectShortName">vcount[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/inst/sync_generator_1/hcount" type="array">
+         <obj_property name="ElementShortName">hcount[15:0]</obj_property>
+         <obj_property name="ObjectShortName">hcount[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group310" type="group">
+      <obj_property name="label">pins</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/VGA_HSYNC" type="logic">
+         <obj_property name="ElementShortName">VGA_HSYNC</obj_property>
+         <obj_property name="ObjectShortName">VGA_HSYNC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/VGA_VSYNC" type="logic">
+         <obj_property name="ElementShortName">VGA_VSYNC</obj_property>
+         <obj_property name="ObjectShortName">VGA_VSYNC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/VGA_R" type="array">
+         <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
+         <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/VGA_G" type="array">
+         <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
+         <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/VGA_B" type="array">
+         <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
+         <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group314" type="group">
+      <obj_property name="label">sync gen internal</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/display_on" type="logic">
+         <obj_property name="ElementShortName">display_on</obj_property>
+         <obj_property name="ObjectShortName">display_on</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/hcount_640" type="array">
+         <obj_property name="ElementShortName">hcount_640[15:0]</obj_property>
+         <obj_property name="ObjectShortName">hcount_640[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb3/DUT/design_4_i/sync_gen_1/vcount_480" type="array">
+         <obj_property name="ElementShortName">vcount_480[15:0]</obj_property>
+         <obj_property name="ObjectShortName">vcount_480[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

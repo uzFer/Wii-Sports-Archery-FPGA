@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Fri Feb 27 19:31:31 2026
+//Date        : Sun Mar  1 19:54:34 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_2.bd
 //Design      : design_2
@@ -26,7 +26,6 @@ module design_2
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN design_2_clk_100MHz, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input clk_100MHz;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
 
-  wire axi_bram_ctrl_0_BRAM_PORTB_RST;
   wire [31:0]axi_bram_ctrl_0_bram_douta;
   wire [31:0]axi_bram_ctrl_0_bram_doutb;
   wire [31:0]axi_vip_0_M_AXI_ARADDR;
@@ -59,27 +58,27 @@ module design_2
   wire [3:0]framewriter_0_bram_write_enable;
   wire reset_rtl_0_1;
   wire [0:0]rst_clk_wiz_100M_interconnect_aresetn;
-  wire [3:0]sync_gen_0_VGA_B;
-  wire [3:0]sync_gen_0_VGA_G;
-  wire sync_gen_0_VGA_HSYNC;
-  wire [3:0]sync_gen_0_VGA_R;
-  wire sync_gen_0_VGA_VSYNC;
-  wire [14:0]sync_gen_0_bram_address;
-  wire sync_gen_0_bram_en;
-  wire [31:0]sync_gen_0_bram_write_data;
-  wire [3:0]sync_gen_0_bram_write_enable;
+  wire [3:0]sync_gen_1_VGA_B;
+  wire [3:0]sync_gen_1_VGA_G;
+  wire sync_gen_1_VGA_HSYNC;
+  wire [3:0]sync_gen_1_VGA_R;
+  wire sync_gen_1_VGA_VSYNC;
+  wire [31:0]sync_gen_1_bram_address;
+  wire sync_gen_1_bram_en;
+  wire sync_gen_1_bram_rst;
+  wire [31:0]sync_gen_1_bram_write_data;
+  wire [3:0]sync_gen_1_bram_write_enable;
 
-  assign VGA_B[3:0] = sync_gen_0_VGA_B;
-  assign VGA_G[3:0] = sync_gen_0_VGA_G;
-  assign VGA_HSYNC = sync_gen_0_VGA_HSYNC;
-  assign VGA_R[3:0] = sync_gen_0_VGA_R;
-  assign VGA_VSYNC = sync_gen_0_VGA_VSYNC;
+  assign VGA_B[3:0] = sync_gen_1_VGA_B;
+  assign VGA_G[3:0] = sync_gen_1_VGA_G;
+  assign VGA_HSYNC = sync_gen_1_VGA_HSYNC;
+  assign VGA_R[3:0] = sync_gen_1_VGA_R;
+  assign VGA_VSYNC = sync_gen_1_VGA_VSYNC;
   assign clk_100MHz_1 = clk_100MHz;
   assign reset_rtl_0_1 = reset_rtl_0;
   design_2_axi_bram_ctrl_0_0 axi_bram_ctrl_0
        (.bram_rddata_a({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
         .bram_rddata_b({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
-        .bram_rst_b(axi_bram_ctrl_0_BRAM_PORTB_RST),
         .s_axi_aclk(clk_100MHz_clk_out1),
         .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axi_aresetn(rst_clk_wiz_100M_interconnect_aresetn),
@@ -95,19 +94,19 @@ module design_2
         .s_axi_wvalid(1'b0));
   design_2_axi_bram_ctrl_0_bram_0 axi_bram_ctrl_0_bram
        (.addra(framewriter_0_bram_address),
-        .addrb(sync_gen_0_bram_address),
+        .addrb(sync_gen_1_bram_address),
         .clka(clk_100MHz_clk_out1),
         .clkb(clk_100MHz_clk_out2),
         .dina(framewriter_0_bram_write_data),
-        .dinb(sync_gen_0_bram_write_data),
+        .dinb(sync_gen_1_bram_write_data),
         .douta(axi_bram_ctrl_0_bram_douta),
         .doutb(axi_bram_ctrl_0_bram_doutb),
         .ena(framewriter_0_bram_en),
-        .enb(sync_gen_0_bram_en),
+        .enb(sync_gen_1_bram_en),
         .rsta(framewriter_0_bram_rst),
-        .rstb(axi_bram_ctrl_0_BRAM_PORTB_RST),
+        .rstb(sync_gen_1_bram_rst),
         .wea(framewriter_0_bram_write_enable),
-        .web(sync_gen_0_bram_write_enable));
+        .web(sync_gen_1_bram_write_enable));
   design_2_axi_vip_0_0 axi_vip_0
        (.aclk(clk_100MHz_clk_out1),
         .aresetn(rst_clk_wiz_100M_interconnect_aresetn),
@@ -163,17 +162,18 @@ module design_2
         .interconnect_aresetn(rst_clk_wiz_100M_interconnect_aresetn),
         .mb_debug_sys_rst(1'b0),
         .slowest_sync_clk(clk_100MHz_clk_out1));
-  design_2_sync_gen_0_0 sync_gen_0
-       (.VGA_B(sync_gen_0_VGA_B),
-        .VGA_G(sync_gen_0_VGA_G),
-        .VGA_HSYNC(sync_gen_0_VGA_HSYNC),
-        .VGA_R(sync_gen_0_VGA_R),
-        .VGA_VSYNC(sync_gen_0_VGA_VSYNC),
-        .bram_address(sync_gen_0_bram_address),
-        .bram_en(sync_gen_0_bram_en),
+  design_2_sync_gen_1_0 sync_gen_1
+       (.VGA_B(sync_gen_1_VGA_B),
+        .VGA_G(sync_gen_1_VGA_G),
+        .VGA_HSYNC(sync_gen_1_VGA_HSYNC),
+        .VGA_R(sync_gen_1_VGA_R),
+        .VGA_VSYNC(sync_gen_1_VGA_VSYNC),
+        .bram_address(sync_gen_1_bram_address),
+        .bram_en(sync_gen_1_bram_en),
         .bram_read_data(axi_bram_ctrl_0_bram_doutb),
-        .bram_write_data(sync_gen_0_bram_write_data),
-        .bram_write_enable(sync_gen_0_bram_write_enable),
+        .bram_rst(sync_gen_1_bram_rst),
+        .bram_write_data(sync_gen_1_bram_write_data),
+        .bram_write_enable(sync_gen_1_bram_write_enable),
         .pixel_clk(clk_100MHz_clk_out2),
         .s00_axi_aclk(clk_100MHz_clk_out1),
         .s00_axi_araddr(axi_vip_0_M_AXI_ARADDR[3:0]),

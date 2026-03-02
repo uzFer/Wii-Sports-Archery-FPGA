@@ -11,31 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="24056766212499fs"></ZoomStartTime>
-      <ZoomEndTime time="24057007812500fs"></ZoomEndTime>
-      <Cursor1Time time="47401455000000fs"></Cursor1Time>
+      <ZoomStartTime time="36651224477908fs"></ZoomStartTime>
+      <ZoomEndTime time="36651699495569fs"></ZoomEndTime>
+      <Cursor1Time time="36651358019000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="232"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="218"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="23" />
-   <wvobject fp_name="/tb1/uut/framewriter_v1_S00_AXI_inst/slv_reg0" type="array">
-      <obj_property name="ElementShortName">slv_reg0[15:0]</obj_property>
-      <obj_property name="ObjectShortName">slv_reg0[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_v1_S00_AXI_inst/slv_reg1" type="array">
-      <obj_property name="ElementShortName">slv_reg1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">slv_reg1[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_v1_S00_AXI_inst/slv_reg2" type="array">
-      <obj_property name="ElementShortName">slv_reg2[15:0]</obj_property>
-      <obj_property name="ObjectShortName">slv_reg2[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_v1_S00_AXI_inst/slv_reg3" type="array">
-      <obj_property name="ElementShortName">slv_reg3[15:0]</obj_property>
-      <obj_property name="ObjectShortName">slv_reg3[15:0]</obj_property>
-   </wvobject>
+   <WVObjectSize size="26" />
    <wvobject fp_name="/tb1/uut/framewriter_1/axi_framewriter_x" type="array">
       <obj_property name="ElementShortName">axi_framewriter_x[15:0]</obj_property>
       <obj_property name="ObjectShortName">axi_framewriter_x[15:0]</obj_property>
@@ -62,27 +46,27 @@
       <obj_property name="ElementShortName">bram_address_calc[14:0]</obj_property>
       <obj_property name="ObjectShortName">bram_address_calc[14:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/bram_offset" type="array">
-      <obj_property name="ElementShortName">bram_offset[4:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_offset[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/word_index" type="array">
-      <obj_property name="ElementShortName">word_index[12:0]</obj_property>
-      <obj_property name="ObjectShortName">word_index[12:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb1/uut/framewriter_1/bram_read_data" type="array">
       <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb1/uut/framewriter_1/bram_write_data" type="array">
       <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb1/uut/framewriter_1/bram_address" type="array">
-      <obj_property name="ElementShortName">bram_address[14:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_address[14:0]</obj_property>
+      <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/start_rmw_pulse" type="logic">
+      <obj_property name="ElementShortName">start_rmw_pulse</obj_property>
+      <obj_property name="ObjectShortName">start_rmw_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb1/uut/framewriter_1/bram_write_enable" type="array">
       <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
@@ -91,6 +75,36 @@
    <wvobject fp_name="/tb1/uut/framewriter_1/start_rmw_pulse" type="logic">
       <obj_property name="ElementShortName">start_rmw_pulse</obj_property>
       <obj_property name="ObjectShortName">start_rmw_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/frame_busy" type="logic">
+      <obj_property name="ElementShortName">frame_busy</obj_property>
+      <obj_property name="ObjectShortName">frame_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/update_req" type="logic">
+      <obj_property name="ElementShortName">update_req</obj_property>
+      <obj_property name="ObjectShortName">update_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/internal_y" type="array">
+      <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/internal_x" type="array">
+      <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/y_old" type="array">
+      <obj_property name="ElementShortName">y_old[15:0]</obj_property>
+      <obj_property name="ObjectShortName">y_old[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/x_old" type="array">
+      <obj_property name="ElementShortName">x_old[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x_old[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/uut/framewriter_1/score_old" type="array">
+      <obj_property name="ElementShortName">score_old[3:0]</obj_property>
+      <obj_property name="ObjectShortName">score_old[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb1/uut/framewriter_1/current_state" type="array">
       <obj_property name="ElementShortName">current_state[1:0]</obj_property>
