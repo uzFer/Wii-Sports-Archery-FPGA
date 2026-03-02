@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar  1 20:57:33 2026
+# Process ID: 14508
+# Current directory: Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_4_framewriter_0_1_synth_1
+# Command line: vivado.exe -log design_4_framewriter_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_4_framewriter_0_1.tcl
+# Log file: Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_4_framewriter_0_1_synth_1/design_4_framewriter_0_1.vds
+# Journal file: Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_4_framewriter_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_4_framewriter_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'y:/framewriter_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'y:/sync_gen_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_4_framewriter_0_1, cache-ID = 67498248c113becf.
+INFO: [Common 17-206] Exiting Vivado at Sun Mar  1 20:57:37 2026...
