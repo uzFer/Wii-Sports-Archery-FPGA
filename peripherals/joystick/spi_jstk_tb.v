@@ -63,7 +63,7 @@ module spi_jstk_tb;
         .o_data_valid(o_data_valid)
     );
     
-    spi_interface u_interface (
+    spi_jstk_interface u_interface (
         .clk(clk),
         .rstn(rst_n),
         .send_data(master_send_data),
