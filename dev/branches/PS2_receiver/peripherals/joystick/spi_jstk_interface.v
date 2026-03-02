@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module spi_interface(
+module spi_jstk_interface(
     input clk,
     input rstn,
     input [7:0] send_data,

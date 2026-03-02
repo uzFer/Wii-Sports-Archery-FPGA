@@ -20,7 +20,7 @@ module spi_jstk_subsystem(
     wire [7:0] received_data;
     wire slave_sel;
 
-    spi_interface interface_inst (
+    spi_jstk_interface interface_inst (
         .clk(clk),
         .rstn(rstn),
         .send_data(send_data),
