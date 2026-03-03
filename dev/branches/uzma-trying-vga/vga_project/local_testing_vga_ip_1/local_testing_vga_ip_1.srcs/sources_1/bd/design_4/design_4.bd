@@ -286,18 +286,6 @@
       }
     },
     "interface_nets": {
-      "axi_vip_1_M_AXI": {
-        "interface_ports": [
-          "axi_vip_1/M_AXI",
-          "framewriter_0/S00_AXI"
-        ]
-      },
-      "axi_vip_0_M_AXI": {
-        "interface_ports": [
-          "axi_vip_0/M_AXI",
-          "sync_gen_1/S00_AXI"
-        ]
-      },
       "axi_bram_ctrl_0_BRAM_PORTB": {
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTB",
@@ -308,6 +296,18 @@
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTA",
           "axi_bram_ctrl_0_bram/BRAM_PORTA"
+        ]
+      },
+      "axi_vip_1_M_AXI": {
+        "interface_ports": [
+          "axi_vip_1/M_AXI",
+          "framewriter_0/S00_AXI"
+        ]
+      },
+      "axi_vip_0_M_AXI": {
+        "interface_ports": [
+          "axi_vip_0/M_AXI",
+          "sync_gen_1/S00_AXI"
         ]
       }
     },

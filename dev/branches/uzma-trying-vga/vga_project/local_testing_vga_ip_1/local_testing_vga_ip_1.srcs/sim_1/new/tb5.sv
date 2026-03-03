@@ -50,7 +50,18 @@ module tb5();
         #100;
         reset_rtl_0 = 1;      // release reset 
         #200;                 // Wait for Clock Wizard to lock in simulation
-
+        
+        // post-implementation addition
+        force uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore = 16'h01; 
+        #1000ns;
+        release uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore;
+        #1000ns;
+        
+        force uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore = 16'h04; 
+        #1000ns;
+        release uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore;
+        
+        
         // Simulation Run Time
         // Note: MicroBlaze boot-up in Post-Synthesis Sim is extremely slow.
         // If testing VGA sync only, this time is sufficient.

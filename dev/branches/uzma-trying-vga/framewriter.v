@@ -144,19 +144,47 @@
 
     wire start_rmw_pulse;
 
-   assign start_rmw_pulse = (axi_awvalid && axi_awready && axi_wvalid && axi_wready);
-    // // testing pulse start
-    // reg freq_divider; 
+    assign start_rmw_pulse = (axi_awvalid && axi_awready && axi_wvalid && axi_wready);
     
-    // always @(posedge axi_aclk) begin
-    //     if (!axi_aresetn) begin
-    //         freq_divider <= 1'b0;
-    //     end else begin
-    //         freq_divider <= ~freq_divider; 
-    //     end
-    // end
-    // wire clk_50mhz_en = (freq_divider == 1'b1);
-    // assign start_rmw_pulse = clk_50mhz_en;
+    /*
+        logic: only update frame when there's a new x/y coordinate or state
+    */
+    reg [15:0] x_old, y_old;
+    reg [3:0] score_old;
+    reg frame_busy;
+    
+    wire update_req = (x_old != axi_framewriter_x) || (y_old != axi_framewriter_y) || (score_old != axi_framewriter_myScore);
+    
+    always @(posedge axi_aclk) begin
+        if (!axi_aresetn) begin
+            frame_busy <= 0;
+            x_old <= 16'd0;
+            y_old <= 16'd0;
+            score_old <= 4'd0;
+        end else begin
+            if (update_req) begin
+                frame_busy <= 1; // Start the scan
+                x_old <= axi_framewriter_x;
+                y_old <= axi_framewriter_y;
+                score_old <= axi_framewriter_myScore;
+            end else if (internal_x == 319 && internal_y == 239 && current_state == WRITE) begin
+                frame_busy <= 0; // Stop exactly after one frame
+            end
+        end
+    end
+    
+    // testing pulse start
+//    reg freq_divider; 
+    
+//    always @(posedge axi_aclk) begin
+//        if (!axi_aresetn) begin
+//            freq_divider <= 1'b0;
+//        end else begin
+//            freq_divider <= ~freq_divider; 
+//        end
+//    end
+//    wire clk_50mhz_en = (freq_divider == 1'b1);
+//    assign start_rmw_pulse = clk_50mhz_en;
     // testing pulse end
     
 
@@ -185,7 +213,7 @@
                         internal_y <= internal_y + 1;
                     end
                 end else begin
-                    internal_x <= internal_x + 1;
+                    internal_x <= internal_x + 1; 
                 end
             end
         end
@@ -360,7 +388,8 @@
         next_state = current_state; // default stay in current state unless transition triggered
         case (current_state) 
             IDLE: 
-                if (start_rmw_pulse) next_state = READ;
+//                if (start_rmw_pulse) next_state = READ;
+                if (frame_busy) next_state = READ;
                 else next_state = IDLE;
             READ: 
                 next_state = WAIT;

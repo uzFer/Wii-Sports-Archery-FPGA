@@ -3,23 +3,28 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb5_func_synth.wdb" id="1">
+      <db_ref path="tb5_behav.wdb" id="1">
          <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
             <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lmb_bram_if_funcs" />
+            <top_module name="mdm_funcs" />
             <top_module name="tb5" />
+            <top_module name="vcomponents" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4286388632150fs"></ZoomStartTime>
-      <ZoomEndTime time="4286408273570fs"></ZoomEndTime>
-      <Cursor1Time time="4286405000000fs"></Cursor1Time>
+      <ZoomStartTime time="200166667fs"></ZoomStartTime>
+      <ZoomEndTime time="713166668fs"></ZoomEndTime>
+      <Cursor1Time time="300000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="336"></NameColumnWidth>
-      <ValueColumnWidth column_width="143"></ValueColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/tb5/clk_100MHz" type="logic">
       <obj_property name="ElementShortName">clk_100MHz</obj_property>
       <obj_property name="ObjectShortName">clk_100MHz</obj_property>
@@ -77,10 +82,71 @@
          <obj_property name="ElementShortName">axi_framewriter_y[15:0]</obj_property>
          <obj_property name="ObjectShortName">axi_framewriter_y[15:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/modified_data" type="array">
+         <obj_property name="ElementShortName">modified_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">modified_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/frame_busy" type="logic">
+         <obj_property name="ElementShortName">frame_busy</obj_property>
+         <obj_property name="ObjectShortName">frame_busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/score_old" type="array">
+         <obj_property name="ElementShortName">score_old[3:0]</obj_property>
+         <obj_property name="ObjectShortName">score_old[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/internal_x" type="array">
+         <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/update_req" type="logic">
+         <obj_property name="ElementShortName">update_req</obj_property>
+         <obj_property name="ObjectShortName">update_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/internal_y" type="array">
+         <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_read_data" type="array">
+         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_data" type="array">
+         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_enable" type="array">
+         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/is_triangle_pixel" type="logic">
+         <obj_property name="ElementShortName">is_triangle_pixel</obj_property>
+         <obj_property name="ObjectShortName">is_triangle_pixel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pixel_to_write" type="logic">
+         <obj_property name="ElementShortName">pixel_to_write</obj_property>
+         <obj_property name="ObjectShortName">pixel_to_write</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/modified_data" type="array">
+         <obj_property name="ElementShortName">modified_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">modified_data[31:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/pixel_clk" type="logic">
       <obj_property name="ElementShortName">pixel_clk</obj_property>
       <obj_property name="ObjectShortName">pixel_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pixel_index" type="array">
+      <obj_property name="ElementShortName">pixel_index[16:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_index[16:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_read_data" type="array">
       <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>

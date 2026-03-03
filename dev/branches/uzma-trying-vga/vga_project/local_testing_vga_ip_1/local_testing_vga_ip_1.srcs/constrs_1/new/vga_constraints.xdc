@@ -38,7 +38,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[2]}]
 set_property PACKAGE_PIN N17 [get_ports {gpio_io_i_0[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[3]}]
 
-
+# prevent optimization
+set_property DONT_TOUCH yes [get_cells design_3_i/sync_gen_1] 
+set_property DONT_TOUCH yes [get_cells design_3_i/framewriter_0] 
+set_property DONT_TOUCH yes [get_cells design_3_i/framewriter_0/framewriter_1] 
 
 set_property MARK_DEBUG true [get_nets {design_3_i/framewriter_0/inst/axi_framewriter_myScore[5]}]
 set_property MARK_DEBUG true [get_nets {design_3_i/framewriter_0/inst/axi_framewriter_y[4]}]
