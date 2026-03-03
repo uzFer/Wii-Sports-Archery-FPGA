@@ -1,77 +1,20 @@
-12:42:44 **** Build of project vga_bsp ****
-make -k all 
-make: *** No rule to make target 'all'.
-12:44:05 **** Build of project vga_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/framewriter_v1_0/src"
-make -C microblaze_0/libsrc/framewriter_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
-make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/framewriter_v1_0/src"
-make -C microblaze_0/libsrc/framewriter_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling framewriter..."
-framewriter_selftest.c: In function 'FRAMEWRITER_Reg_SelfTest':
-framewriter_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( FRAMEWRITER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                            ^~
-framewriter_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
-make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-                   ^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-'Finished building libraries'
-
-**** Build of configuration Debug for project vga ****
-
-Nothing to build for project vga
-12:45:02 **** Auto Build of configuration Debug for project vga ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
+00:02:51 **** Clean-only build of configuration Debug for project vga2 ****
+make clean 
+rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d  vga2.elf.size  vga2.elf
 ' '
-'Building target: vga.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
-(.text+0x78): undefined reference to `main'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:38: vga.elf] Error 1
-12:45:34 **** Build of project vga2_bsp ****
+00:02:51 **** Clean-only build of project vga2_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_8/src -s clean 
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s clean 
+rm: cannot lstat `*.o': Invalid argument
+make[1]: *** [Makefile:26: clean] Error 1
+make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+make: *** [Makefile:33: microblaze_0/libsrc/framewriter_v1_0/src/make.clean] Error 2
+make -C microblaze_0/libsrc/intc_v3_8/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_8/src -s clean 
+make: Target 'clean' not remade because of errors.
+00:02:51 **** Build of project vga2_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -123,493 +66,18 @@ microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly
  #pragma message ("For the sleep routines, assembly instructions are used")
          ^~~~~~~
 'Finished building libraries'
-12:45:38 **** Build of configuration Debug for project vga2 ****
+00:02:57 **** Build of configuration Debug for project vga2 ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
 ../src/testperiph.c: In function 'main':
-../src/testperiph.c:46:11: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-       int status;
-           ^~~~~~
-../src/testperiph.c:53:12: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
-        int Status;
-            ^~~~~~
-../src/testperiph.c:62:11: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-       int status;
-           ^~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building file: ../src/xintc_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
-'Finished building: ../src/xintc_tapp_example.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5656	    340	   3316	   9312	   2460	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-12:46:07 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:109:15: warning: unused variable 'check_val' [-Wunused-variable]
-      uint32_t check_val = FRAMEWRITER_mReadReg(FRAMEWRITER_BASE, REG_STATE_OFFSET);
-               ^~~~~~~~~
-../src/testperiph.c:125:15: warning: unused variable 'read_y' [-Wunused-variable]
-      uint32_t read_y = FRAMEWRITER_mReadReg(FRAMEWRITER_BASE, REG_Y_OFFSET);
-               ^~~~~~
-../src/testperiph.c:124:15: warning: unused variable 'read_x' [-Wunused-variable]
-      uint32_t read_x = FRAMEWRITER_mReadReg(FRAMEWRITER_BASE, REG_X_OFFSET);
-               ^~~~~~
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5932	    428	   3136	   9496	   2518	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-12:46:28 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5860	    428	   3136	   9424	   24d0	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-12:47:57 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-12:49:00 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-12:56:31 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-09:59:13 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-10:38:44 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-12:19:44 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-12:21:18 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-12:49:57 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-12:54:57 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-13:13:15 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5836	    404	   3136	   9376	   24a0	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-13:15:50 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5836	    404	   3136	   9376	   24a0	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-13:16:14 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:116:15: warning: unused variable 'y' [-Wunused-variable]
+../src/testperiph.c:117:15: warning: unused variable 'y' [-Wunused-variable]
       uint32_t y = coords[coord_idx][1];
                ^
-../src/testperiph.c:115:15: warning: unused variable 'x' [-Wunused-variable]
+../src/testperiph.c:116:15: warning: unused variable 'x' [-Wunused-variable]
       uint32_t x = coords[coord_idx][0];
                ^
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5736	    404	   3124	   9264	   2430	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-13:17:25 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-13:20:23 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:116:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:115:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5736	    404	   3124	   9264	   2430	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-13:21:55 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-13:24:08 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-13:29:39 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-13:33:20 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:116:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:115:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5736	    404	   3124	   9264	   2430	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-14:05:05 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-20:37:55 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:116:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:115:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5812	    420	   3136	   9368	   2498	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-20:37:58 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:116:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:115:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5812	    420	   3136	   9368	   2498	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-20:38:13 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:116:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:115:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
-../src/testperiph.c:75:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:75:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5940	    420	   3136	   9496	   2518	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-20:42:35 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:116:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:115:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
-../src/testperiph.c:76:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:76:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5928	    364	   3132	   9424	   24d0	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-20:43:11 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:76:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:76:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5928	    364	   3132	   9424	   24d0	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-08:50:47 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c:32:10: fatal error: xil_cache.h: No such file or directory
- #include "xil_cache.h"
-          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [src/subdir.mk:29: src/testperiph.o] Error 1
-08:52:05 **** Auto Build of project vga2_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/framewriter_v1_0/src"
-make -C microblaze_0/libsrc/framewriter_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
-make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/framewriter_v1_0/src"
-make -C microblaze_0/libsrc/framewriter_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling framewriter..."
-framewriter_selftest.c: In function 'FRAMEWRITER_Reg_SelfTest':
-framewriter_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( FRAMEWRITER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                            ^~
-framewriter_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
-make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-                   ^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-'Finished building libraries'
-08:52:12 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
 ../src/testperiph.c:76:17: warning: unused variable 'intc' [-Wunused-variable]
     static XIntc intc;
                  ^~~~
@@ -635,70 +103,19 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size vga2.elf  |tee "vga2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   5928	    364	   3132	   9424	   24d0	vga2.elf
+   5920	    364	   3132	   9416	   24c8	vga2.elf
 'Finished building: vga2.elf.size'
 ' '
-08:52:30 **** Incremental Build of configuration Debug for project vga2 ****
+00:03:28 **** Incremental Build of configuration Debug for project vga2 ****
 make all 
 make: Nothing to be done for 'all'.
-08:54:52 **** Incremental Build of configuration Debug for project vga2 ****
+00:04:20 **** Incremental Build of configuration Debug for project vga2 ****
 make all 
 make: Nothing to be done for 'all'.
-08:56:28 **** Incremental Build of configuration Debug for project vga2 ****
+00:05:15 **** Incremental Build of configuration Debug for project vga2 ****
 make all 
 make: Nothing to be done for 'all'.
-08:58:26 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:76:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:76:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5928	    364	   3132	   9424	   24d0	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-08:59:52 **** Incremental Build of configuration Debug for project vga2 ****
-make all 
-make: Nothing to be done for 'all'.
-09:00:35 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:76:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:76:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5928	    364	   3132	   9424	   24d0	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-09:00:53 **** Auto Build of configuration Debug for project vga2 ****
+00:07:28 **** Auto Build of configuration Debug for project vga2 ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -725,54 +142,18 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size vga2.elf  |tee "vga2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   5920	    364	   3132	   9416	   24c8	vga2.elf
+   5928	    364	   3132	   9424	   24d0	vga2.elf
 'Finished building: vga2.elf.size'
 ' '
-09:01:59 **** Auto Build of configuration Debug for project vga2 ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:117:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:116:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
-../src/testperiph.c:76:17: warning: unused variable 'intc' [-Wunused-variable]
-    static XIntc intc;
-                 ^~~~
-At top level:
-../src/testperiph.c:76:17: warning: 'intc' defined but not used [-Wunused-variable]
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: vga2.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga2.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga2.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga2.elf  |tee "vga2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   5920	    364	   3132	   9416	   24c8	vga2.elf
-'Finished building: vga2.elf.size'
-' '
-09:23:44 **** Incremental Build of configuration Debug for project vga2 ****
+00:07:58 **** Incremental Build of configuration Debug for project vga2 ****
 make all 
 make: Nothing to be done for 'all'.
-09:24:24 **** Auto Build of configuration Debug for project vga2 ****
+00:10:42 **** Auto Build of configuration Debug for project vga2 ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
 ../src/testperiph.c: In function 'main':
-../src/testperiph.c:117:15: warning: unused variable 'y' [-Wunused-variable]
-      uint32_t y = coords[coord_idx][1];
-               ^
-../src/testperiph.c:116:15: warning: unused variable 'x' [-Wunused-variable]
-      uint32_t x = coords[coord_idx][0];
-               ^
 ../src/testperiph.c:76:17: warning: unused variable 'intc' [-Wunused-variable]
     static XIntc intc;
                  ^~~~
@@ -788,9 +169,12 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size vga2.elf  |tee "vga2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   5920	    364	   3132	   9416	   24c8	vga2.elf
+   5928	    364	   3132	   9424	   24d0	vga2.elf
 'Finished building: vga2.elf.size'
 ' '
-09:29:06 **** Incremental Build of configuration Debug for project vga2 ****
+00:12:31 **** Incremental Build of configuration Debug for project vga2 ****
+make all 
+make: Nothing to be done for 'all'.
+00:14:27 **** Incremental Build of configuration Debug for project vga2 ****
 make all 
 make: Nothing to be done for 'all'.

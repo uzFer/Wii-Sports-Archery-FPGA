@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="design_3_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="design_3_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="design_3_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="design_3_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="design_3_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="design_3_wrapper.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -72,17 +70,17 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_dlmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_clk_100MHz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_dlmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_mdm_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_ilmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_ilmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_axi_bram_ctrl_0_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_rst_clk_wiz_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_microblaze_0_axi_intc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_microblaze_0_axi_intc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_microblaze_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_lmb_bram_0"/>

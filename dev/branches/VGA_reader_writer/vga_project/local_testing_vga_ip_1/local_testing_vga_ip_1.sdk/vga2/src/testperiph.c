@@ -103,8 +103,8 @@ int main ()
 		   state_idx = (state_idx + 1) % 4;
 		   current_hw_state = state_list[state_idx];
 
-//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, current_hw_state); // Update state in IP
-		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 1);
+		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, current_hw_state); // Update state in IP
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 1);
 
 		   // check
 		   // Read it back to verify the AXI register actually holds the value
@@ -116,12 +116,12 @@ int main ()
 		   uint32_t x = coords[coord_idx][0];
 		   uint32_t y = coords[coord_idx][1];
 
-//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, x); // Update X in IP
-//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, y); // Update Y in IP
+		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, x); // Update X in IP
+		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, y); // Update Y in IP
 
 		   // testing (hardcode)
-		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, 10);
-		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, 12);
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, 10);
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, 12);
 
 //		   xil_printf("Target Set: x=%d y=%d\n\r", (int)x, (int)y);
 		   coord_idx = (coord_idx + 1) % 3;
