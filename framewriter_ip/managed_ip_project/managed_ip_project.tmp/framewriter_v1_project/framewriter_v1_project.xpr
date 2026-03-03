@@ -6,7 +6,7 @@
 <Project Version="7" Minor="39" Path="y:/framewriter_ip/managed_ip_project/managed_ip_project.tmp/framewriter_v1_project/framewriter_v1_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="2eefb4c4f16f4856bd3aa844cdef6e31"/>
+    <Option Name="Id" Val="172d8be3f763475ab05af84c20a6f19b"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -62,7 +62,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PPRDIR/../../../ip_repo/framewriter_1/src/framewriter.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

@@ -18,32 +18,32 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9648 
+INFO: Helper process launched with PID 19832 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 529.875 ; gain = 105.824
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 530.383 ; gain = 105.988
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_3_wrapper' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_3' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:13]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:172]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_0_0' (1#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_0_0' (1#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_bram_ctrl_0' of module 'design_3_axi_bram_ctrl_0_0' requires 35 connections, but only 15 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:172]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_0_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_0_bram_0' (2#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_bram_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_0_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_0_bram_0' (2#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_0_bram_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_bram_ctrl_0_bram' of module 'design_3_axi_bram_ctrl_0_bram_0' requires 16 connections, but only 14 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:188]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_0_0' (3#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_clk_100MHz_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_clk_100MHz_0' (4#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_3_framewriter_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_framewriter_0_0' (5#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_0_0' (3#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_clk_100MHz_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_clk_100MHz_0' (4#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_3_framewriter_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_framewriter_0_0' (5#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'framewriter_0' of module 'design_3_framewriter_0_0' requires 28 connections, but only 27 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:230]
-INFO: [Synth 8-6157] synthesizing module 'design_3_mdm_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_mdm_1_0' (6#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_0' (7#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_axi_intc_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_axi_intc_0' (8#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_mdm_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_mdm_1_0' (6#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_0' (7#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_axi_intc_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_axi_intc_0' (8#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_axi_periph_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:497]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1V0YUEO' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1093]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1V0YUEO' (9#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1093]
@@ -53,24 +53,24 @@ INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1VRZ01F' [Y:/vga_proj
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1VRZ01F' (11#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1371]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_2ER29E' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1737]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_2ER29E' (12#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1737]
-INFO: [Synth 8-6157] synthesizing module 'design_3_xbar_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_xbar_0' (13#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_xbar_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_xbar_0' (13#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
 WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (9) of module 'design_3_xbar_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1054]
 WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (9) of module 'design_3_xbar_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1058]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_axi_periph_0' (14#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:497]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_B2GKS4' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1503]
-INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_bram_if_cntlr_0' (15#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_v10_0' (16#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_bram_if_cntlr_0' (15#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_v10_0' (16#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_3_dlmb_v10_0' requires 25 connections, but only 24 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1649]
-INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_bram_if_cntlr_0' (17#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_v10_0' (18#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_bram_if_cntlr_0' (17#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_v10_0' (18#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_3_ilmb_v10_0' requires 25 connections, but only 24 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1695]
-INFO: [Synth 8-6157] synthesizing module 'design_3_lmb_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_lmb_bram_0' (19#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_lmb_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_lmb_bram_0' (19#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_3_lmb_bram_0' requires 16 connections, but only 14 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1720]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_B2GKS4' (20#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1503]
 INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_xlconcat_0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_microblaze_0_xlconcat_0/synth/design_3_microblaze_0_xlconcat_0.v:58]
@@ -111,11 +111,11 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [y:/vga_proj
 	Parameter NUM_PORTS bound to: 2 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (21#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_xlconcat_0' (22#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_microblaze_0_xlconcat_0/synth/design_3_microblaze_0_xlconcat_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'design_3_rst_clk_wiz_100M_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_rst_clk_wiz_100M_0' (23#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_rst_clk_wiz_100M_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_rst_clk_wiz_100M_0' (23#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_clk_wiz_100M' of module 'design_3_rst_clk_wiz_100M_0' requires 10 connections, but only 9 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:459]
-INFO: [Synth 8-6157] synthesizing module 'design_3_sync_gen_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_sync_gen_1_0' (24#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-30024-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_sync_gen_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_sync_gen_1_0' (24#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-38492-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'sync_gen_1' of module 'design_3_sync_gen_1_0' requires 37 connections, but only 25 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:469]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sync_gen_1'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:469]
 INFO: [Synth 8-6155] done synthesizing module 'design_3' (25#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:13]
@@ -175,7 +175,7 @@ WARNING: [Synth 8-3331] design design_3_microblaze_0_axi_periph_0 has unconnecte
 WARNING: [Synth 8-3331] design design_3_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_3_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 764.887 ; gain = 340.836
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 765.957 ; gain = 341.562
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -188,18 +188,18 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 764.887 ; gain = 340.836
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 765.957 ; gain = 341.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 764.887 ; gain = 340.836
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 765.957 ; gain = 341.562
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/design_3_framewriter_0_0/design_3_framewriter_0_0_in_context.xdc] for cell 'design_3_i/framewriter_0'
-Finished Parsing XDC File [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/design_3_framewriter_0_0/design_3_framewriter_0_0_in_context.xdc] for cell 'design_3_i/framewriter_0'
+Parsing XDC File [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/design_3_framewriter_0_0/design_4_framewriter_0_1_in_context.xdc] for cell 'design_3_i/framewriter_0'
+Finished Parsing XDC File [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/design_3_framewriter_0_0/design_4_framewriter_0_1_in_context.xdc] for cell 'design_3_i/framewriter_0'
 Parsing XDC File [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_bram_ctrl_0_0/design_3_axi_bram_ctrl_0_0/design_3_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_3_i/axi_bram_ctrl_0'
 Finished Parsing XDC File [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_bram_ctrl_0_0/design_3_axi_bram_ctrl_0_0/design_3_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_3_i/axi_bram_ctrl_0'
 Parsing XDC File [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_bram_ctrl_0_bram_0/design_3_axi_bram_ctrl_0_bram_0/design_3_axi_bram_ctrl_0_bram_0_in_context.xdc] for cell 'design_3_i/axi_bram_ctrl_0_bram'
@@ -235,70 +235,71 @@ CRITICAL WARNING: [Designutils 20-1280] Could not find module 'design_2_clk_wiz_
 CRITICAL WARNING: [Designutils 20-1280] Could not find module 'design_2_rst_clk_wiz_100M_1'. The XDC file y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_2/ip/design_2_rst_clk_wiz_100M_1/design_2_rst_clk_wiz_100M_1_board.xdc will not be read for any cell of this module.
 CRITICAL WARNING: [Designutils 20-1280] Could not find module 'design_2_rst_clk_wiz_100M_1'. The XDC file y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_2/ip/design_2_rst_clk_wiz_100M_1/design_2_rst_clk_wiz_100M_1.xdc will not be read for any cell of this module.
 Parsing XDC File [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:43]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:44]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:45]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:46]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:47]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:48]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:49]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:50]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:51]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:52]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:53]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:54]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:55]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:56]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:57]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:62]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:63]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:64]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:65]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:66]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:67]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:68]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:69]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:70]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:71]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:72]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:73]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:74]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:75]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:76]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:77]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:78]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:79]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:80]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:81]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:82]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:83]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:84]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:85]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:86]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:87]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:88]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:89]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:90]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:91]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:92]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:93]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:94]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:95]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:96]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:97]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:98]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:99]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:100]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:101]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:102]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:103]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:104]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:105]
-WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:106]
+WARNING: [Vivado 12-180] No cells matched 'design_3_i/framewriter_0/framewriter_1'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:44]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:46]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:47]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:48]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:49]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:50]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:51]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:56]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:57]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:58]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:59]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:62]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:63]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:64]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:65]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:66]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:67]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:68]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:69]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:70]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:71]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:72]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:73]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[4]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:77]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:80]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:81]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:82]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[11]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:83]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:84]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[10]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:85]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:86]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:87]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:88]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:89]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[13]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:90]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:91]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:92]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_x[5]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:93]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:94]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:95]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:96]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[3]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:97]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[15]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:98]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[0]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:99]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:100]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:101]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_myScore[1]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:102]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[2]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:103]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[8]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:104]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_y[14]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:105]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[6]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:106]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[7]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:107]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[9]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:108]
+WARNING: [Vivado 12-507] No nets matched 'design_3_i/framewriter_0/inst/axi_framewriter_oppScore[12]'. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc:109]
 Finished Parsing XDC File [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_3_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_3_wrapper_propImpl.xdc].
@@ -307,37 +308,37 @@ Parsing XDC File [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.r
 Finished Parsing XDC File [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_3_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_3_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 915.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.480 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 915.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.480 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 915.762 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 915.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.480 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 916.480 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_3_i/axi_bram_ctrl_0_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_3_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 915.762 ; gain = 491.711
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 916.480 ; gain = 492.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 915.762 ; gain = 491.711
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 916.480 ; gain = 492.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0/design_3_clk_100MHz_0_in_context.xdc, line 4).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0/design_3_clk_100MHz_0_in_context.xdc, line 5).
-Applied set_property MARK_DEBUG = true for design_3_i/gpio_io_i_0[2]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 108).
-Applied set_property MARK_DEBUG = true for design_3_i/framewriter_0_bram_write_enable[0]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 113).
-Applied set_property MARK_DEBUG = true for design_3_i/framewriter_0_bram_write_data[2]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 117).
-Applied set_property MARK_DEBUG = true for design_3_i/framewriter_0_bram_address[3]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 149).
-Applied set_property MARK_DEBUG = true for design_3_i/axi_bram_ctrl_0_bram_doutb[12]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 181).
+Applied set_property MARK_DEBUG = true for design_3_i/gpio_io_i_0[2]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 111).
+Applied set_property MARK_DEBUG = true for design_3_i/framewriter_0_bram_write_enable[0]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 116).
+Applied set_property MARK_DEBUG = true for design_3_i/framewriter_0_bram_write_data[2]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 120).
+Applied set_property MARK_DEBUG = true for design_3_i/framewriter_0_bram_address[3]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 152).
+Applied set_property MARK_DEBUG = true for design_3_i/axi_bram_ctrl_0_bram_doutb[12]. (constraint file  Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc, line 184).
 Applied set_property DONT_TOUCH = true for design_3_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_3_i/framewriter_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_3_i/axi_bram_ctrl_0. (constraint file  auto generated constraint, line ).
@@ -358,13 +359,13 @@ Applied set_property DONT_TOUCH = true for design_3_i/microblaze_0_xlconcat. (co
 Applied set_property DONT_TOUCH = true for design_3_i/mdm_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_3_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 915.762 ; gain = 491.711
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 916.480 ; gain = 492.086
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_0'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:203]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'framewriter_0'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:230]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_bram_ctrl_0_bram'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:188]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 915.762 ; gain = 491.711
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 916.480 ; gain = 492.086
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -447,7 +448,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_1V0YUEO has unconnected port S_A
 WARNING: [Synth 8-3331] design m00_couplers_imp_1V0YUEO has unconnected port S_ARESETN
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 915.762 ; gain = 491.711
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 916.480 ; gain = 492.086
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -468,13 +469,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_3_i/mdm_1/Dbg_Clk_
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_3_i/mdm_1/Dbg_Update_0' to pin 'design_3_i/mdm_1/bbstub_Dbg_Update_0/O'
 INFO: [Synth 8-5819] Moved 8 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 915.762 ; gain = 491.711
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 916.480 ; gain = 492.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 915.762 ; gain = 491.711
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 916.480 ; gain = 492.086
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -486,7 +487,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 919.785 ; gain = 495.734
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 922.805 ; gain = 498.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -504,7 +505,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 919.785 ; gain = 495.734
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 922.805 ; gain = 498.410
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -517,7 +518,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 919.785 ; gain = 495.734
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 922.805 ; gain = 498.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -529,7 +530,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 919.785 ; gain = 495.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 922.805 ; gain = 498.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -592,27 +593,25 @@ Report Instance Areas:
 |5     |    microblaze_0_xlconcat     |design_3_microblaze_0_xlconcat_0     |     0|
 +------+------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 919.785 ; gain = 495.734
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 922.805 ; gain = 498.410
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 54 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 919.785 ; gain = 344.859
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 919.785 ; gain = 495.734
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 922.805 ; gain = 347.887
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:45 . Memory (MB): peak = 922.805 ; gain = 498.410
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 933.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-81 Infos, 178 Warnings, 4 Critical Warnings and 0 Errors encountered.
+81 Infos, 179 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 930.520 ; gain = 511.441
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.520 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:47 . Memory (MB): peak = 933.020 ; gain = 513.586
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 933.020 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/design_3_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_3_wrapper_utilization_synth.rpt -pb design_3_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar  1 21:04:19 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  2 21:58:49 2026...

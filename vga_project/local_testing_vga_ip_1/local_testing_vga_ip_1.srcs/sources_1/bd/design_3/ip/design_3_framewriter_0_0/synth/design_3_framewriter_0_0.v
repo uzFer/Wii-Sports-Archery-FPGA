@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:framewriter:1
-// IP Revision: 24
+// IP Revision: 30
 
 (* X_CORE_INFO = "framewriter_v1,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_3_framewriter_0_0,framewriter_v1,{}" *)
-(* CORE_GENERATION_INFO = "design_3_framewriter_0_0,framewriter_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=framewriter,x_ipVersion=1,x_ipCoreRevision=24,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,SLAVE_REG_WIDTH=16,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "design_3_framewriter_0_0,framewriter_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=framewriter,x_ipVersion=1,x_ipCoreRevision=30,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,SLAVE_REG_WIDTH=16,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_framewriter_0_0 (
   bram_address,
