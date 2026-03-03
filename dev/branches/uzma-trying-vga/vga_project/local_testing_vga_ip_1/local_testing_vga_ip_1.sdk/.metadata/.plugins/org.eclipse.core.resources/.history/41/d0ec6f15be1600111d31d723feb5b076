@@ -1,0 +1,161 @@
+/*
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A 
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR 
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION 
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE 
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO 
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO 
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE 
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY 
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
+/*
+ * 
+ *
+ * This file is a generated sample test application.
+ *
+ * This application is intended to test and/or illustrate some 
+ * functionality of your system.  The contents of this file may
+ * vary depending on the IP in your system and may use existing
+ * IP driver functions.  These drivers will be generated in your
+ * SDK application project when you run the "Generate Libraries" menu item.
+ *
+ */
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_testcache.h"
+#include "xintc.h"
+#include "intc_header.h"
+
+#include "framewriter.h"
+
+//volatile unsigned int* fw = (unsigned int*) XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR;
+
+/* GPIO Addresses - Replace these with your actual XPAR constants from xparameters.h */
+#define BTN_BASE          XPAR_AXI_GPIO_0_BASEADDR // btn D = 4, C = 8, L = 1, R = 2, U = 0
+#define FRAMEWRITER_BASE  XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR
+
+/* Register Offsets from your framewriter.h */
+#define REG_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG0_OFFSET
+#define REG_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET
+#define REG_STATE_OFFSET  FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET
+
+/* Button Bit Masks  */
+#define BTN_L_MASK (1 << 1) // Value 1
+#define BTN_R_MASK (1 << 2) // Value 2
+#define BTN_D_MASK (1 << 4) // Value 4
+#define BTN_C_MASK (1 << 8) // Value 8
+#define BTN_U_MASK (1 << 0) // Value 0
+
+// Valid state sequence: 1, 2, 6, 4, 8, 12
+uint32_t state_list[] = {1, 2, 4, 12};
+int state_idx = 0;
+
+// Coordinate pairs: {x, y}
+//uint32_t coords[10][2] = {
+//	{250, 120}, {160, 215}, {225, 185}, {70, 120}, // Outer
+//	{210, 120}, {160, 175}, {125, 85},             // Middle
+//	{175, 120}, {160, 130}, {150, 110}              // Inner
+//};
+uint32_t coords[3][2] = { {10,10}, {160,120}, {300,150}};
+int coord_idx = 0;
+
+uint32_t btn_data;
+uint32_t last_btn_data = 0;
+
+uint32_t current_hw_state = 0;
+
+int main () 
+{
+   static XIntc intc;
+   Xil_ICacheEnable();
+   Xil_DCacheEnable();
+   xil_printf("---Wii Sports Archery Controller Active---\n\r");
+
+
+	while(1)
+	{
+
+	/*
+	* pseudo code
+	*
+		if (push button pressed) {
+		   state = next state -- circle between them;
+		   FRAMEWRITER_mWriteReg(XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR, FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET);
+		}
+
+		if (push button L pressed) {
+		   print("x=%d y= %d\n\r", x, y);
+		}
+	*/
+
+	   btn_data = Xil_In32(BTN_BASE); // Read current button states
+	   xil_printf("btn_data=%d\n\r", (int)btn_data);
+
+	   // --- BUTTON D (Value 4): Switch Game States ---
+	   if ((btn_data & BTN_R_MASK) && !(last_btn_data & BTN_R_MASK)) {
+		   state_idx = (state_idx + 1) % 4;
+		   current_hw_state = state_list[state_idx];
+
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, current_hw_state); // Update state in IP
+		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 1);
+
+		   // check
+		   // Read it back to verify the AXI register actually holds the value
+//		   uint32_t check_val = FRAMEWRITER_mReadReg(FRAMEWRITER_BASE, REG_STATE_OFFSET);
+
+	   } else if ((btn_data & BTN_L_MASK) && !(last_btn_data & BTN_L_MASK)) {
+		   // --- BUTTON R (Value 2): Iterate Coordinates ---
+
+		   uint32_t x = coords[coord_idx][0];
+		   uint32_t y = coords[coord_idx][1];
+
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, x); // Update X in IP
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, y); // Update Y in IP
+
+		   // testing (hardcode)
+		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, 10);
+		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, 12);
+
+//		   xil_printf("Target Set: x=%d y=%d\n\r", (int)x, (int)y);
+		   coord_idx = (coord_idx + 1) % 3;
+
+		   // 2. Read back to verify
+//		   uint32_t read_x = FRAMEWRITER_mReadReg(FRAMEWRITER_BASE, REG_X_OFFSET);
+//		   uint32_t read_y = FRAMEWRITER_mReadReg(FRAMEWRITER_BASE, REG_Y_OFFSET);
+	   }
+
+	   last_btn_data = btn_data; // Store for edge detection
+	   for(int i=0; i<50000; i++); // Simple debounce delay
+	}
+
+	xil_printf("---Exiting main---\n\r");
+   Xil_DCacheDisable();
+   Xil_ICacheDisable();
+   return 0;
+}
+
+
+// -----------------------------
+// testperiph.c starter code
+// -----------------------------
+
+//   {
+//      int status;
+//
+//      status = IntcSelfTestExample(XPAR_MICROBLAZE_0_AXI_INTC_DEVICE_ID);
+//
+//   }
+//
+//   {
+//       int Status;
+//
+//       Status = IntcInterruptSetup(&intc, XPAR_MICROBLAZE_0_AXI_INTC_DEVICE_ID);
+//
+//   }

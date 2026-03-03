@@ -1,0 +1,4 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Simulation Complete.
+$finish called at time : 5000240 ns : File "y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v" Line 126
