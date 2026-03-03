@@ -6,7 +6,7 @@
 <Project Version="7" Minor="39" Path="y:/framewriter_ip/managed_ip_project/managed_ip_project.tmp/framewriter_v1_project/framewriter_v1_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="172d8be3f763475ab05af84c20a6f19b"/>
+    <Option Name="Id" Val="dc391c4ae6084559ae9e6f02ac418e46"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -32,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="3"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -70,7 +70,7 @@
       </File>
       <File Path="$PPRDIR/../../../ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -78,7 +78,7 @@
       </File>
       <File Path="$PPRDIR/../../../ip_repo/framewriter_1/hdl/framewriter_v1.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -102,7 +102,7 @@
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <File Path="$PPRDIR/../../../ip_repo/framewriter_1/src/tb_writer_1.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="simulation"/>
           <Attr Name="UsedIn" Val="testbench"/>
         </FileInfo>

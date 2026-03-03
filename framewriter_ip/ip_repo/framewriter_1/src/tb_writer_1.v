@@ -102,26 +102,26 @@ module tb1();
         s00_axi_aresetn = 1;
         #20;
 
-        // 3. The for loop (Standard Verilog Syntax)
-        for (i = 0; i < 5; i = i + 1) begin
+//        // 3. The for loop (Standard Verilog Syntax)
+//        for (i = 0; i < 5; i = i + 1) begin
             
-            @(posedge s00_axi_aclk);
-            s00_axi_awvalid = 1;
-            s00_axi_wvalid  = 1;
+//            @(posedge s00_axi_aclk);
+//            s00_axi_awvalid = 1;
+//            s00_axi_wvalid  = 1;
             
-            // Wait for handshake
-            // In Verilog, wait is level-sensitive
-            wait(s00_axi_awready == 1'b1 && s00_axi_wready == 1'b1);
+//            // Wait for handshake
+//            // In Verilog, wait is level-sensitive
+//            wait(s00_axi_awready == 1'b1 && s00_axi_wready == 1'b1);
             
-            @(posedge s00_axi_aclk);
-            s00_axi_awvalid = 0;
-            s00_axi_wvalid  = 0;
+//            @(posedge s00_axi_aclk);
+//            s00_axi_awvalid = 0;
+//            s00_axi_wvalid  = 0;
 
-            // Wait for the RMW FSM to cycle through READ -> WAIT -> WRITE
-            repeat(10) @(posedge s00_axi_aclk); 
-        end
+//            // Wait for the RMW FSM to cycle through READ -> WAIT -> WRITE
+//            repeat(10) @(posedge s00_axi_aclk); 
+//        end
 
-        #500;
+        #5000000;
         $display("Simulation Complete.");
         $finish;
 

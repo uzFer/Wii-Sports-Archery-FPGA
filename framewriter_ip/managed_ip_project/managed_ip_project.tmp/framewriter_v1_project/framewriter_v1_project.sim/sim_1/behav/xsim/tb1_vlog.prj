@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../ip_repo/framewriter_1/src/framewriter.v" \
+"../../../../../../../ip_repo/framewriter_1/hdl/framewriter_v1.v" \
+"../../../../../../../ip_repo/framewriter_1/hdl/framewriter_v1_S00_AXI.v" \
+"../../../../../../../ip_repo/framewriter_1/src/tb_writer_1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

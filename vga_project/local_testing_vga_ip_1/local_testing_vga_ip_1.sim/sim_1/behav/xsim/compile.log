@@ -1,13 +1,15 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/76e1/src/framewriter.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/src/framewriter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/76e1/hdl/framewriter_v1_S00_AXI.v" into library xil_defaultlib
+WARNING: [VRFC 10-3380] identifier 'internal_x' is used before its declaration [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/src/framewriter.v:176]
+WARNING: [VRFC 10-3380] identifier 'modified_data' is used before its declaration [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/src/framewriter.v:281]
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/hdl/framewriter_v1_S00_AXI.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter_v1_S00_AXI
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/76e1/hdl/framewriter_v1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/hdl/framewriter_v1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter_v1
-INFO: [VRFC 10-2458] undeclared symbol pixel_to_write, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/76e1/hdl/framewriter_v1.v:141]
-INFO: [VRFC 10-2458] undeclared symbol is_crosshair_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/76e1/hdl/framewriter_v1.v:142]
-INFO: [VRFC 10-2458] undeclared symbol is_target_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/76e1/hdl/framewriter_v1.v:143]
-INFO: [VRFC 10-2458] undeclared symbol is_square_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/76e1/hdl/framewriter_v1.v:144]
+INFO: [VRFC 10-2458] undeclared symbol pixel_to_write, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/hdl/framewriter_v1.v:141]
+INFO: [VRFC 10-2458] undeclared symbol is_crosshair_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/hdl/framewriter_v1.v:142]
+INFO: [VRFC 10-2458] undeclared symbol is_target_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/hdl/framewriter_v1.v:143]
+INFO: [VRFC 10-2458] undeclared symbol is_square_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ipshared/0555/hdl/framewriter_v1.v:144]
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ip/design_4_framewriter_0_1/sim/design_4_framewriter_0_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_4_framewriter_0_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ip/design_4_axi_bram_ctrl_0_bram_1/sim/design_4_axi_bram_ctrl_0_bram_1.v" into library xil_defaultlib
@@ -28,19 +30,21 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip
 INFO: [VRFC 10-311] analyzing module design_4_clk_wiz_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/hdl/design_4_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_4_wrapper
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/src/framewriter.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/src/framewriter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/src/framewriter.v:449]
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1_S00_AXI.v" into library xil_defaultlib
+WARNING: [VRFC 10-3380] identifier 'internal_x' is used before its declaration [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/src/framewriter.v:176]
+WARNING: [VRFC 10-3380] identifier 'modified_data' is used before its declaration [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/src/framewriter.v:281]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/src/framewriter.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1_S00_AXI.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter_v1_S00_AXI
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1_S00_AXI' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1_S00_AXI.v:3]
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1.v" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1_S00_AXI' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1_S00_AXI.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter_v1
-INFO: [VRFC 10-2458] undeclared symbol pixel_to_write, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1.v:141]
-INFO: [VRFC 10-2458] undeclared symbol is_crosshair_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1.v:142]
-INFO: [VRFC 10-2458] undeclared symbol is_target_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1.v:143]
-INFO: [VRFC 10-2458] undeclared symbol is_square_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1.v:144]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/76e1/hdl/framewriter_v1.v:4]
+INFO: [VRFC 10-2458] undeclared symbol pixel_to_write, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1.v:141]
+INFO: [VRFC 10-2458] undeclared symbol is_crosshair_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1.v:142]
+INFO: [VRFC 10-2458] undeclared symbol is_target_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1.v:143]
+INFO: [VRFC 10-2458] undeclared symbol is_square_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1.v:144]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0555/hdl/framewriter_v1.v:4]
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_framewriter_0_0/sim/design_3_framewriter_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_3_framewriter_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_microblaze_0_xlconcat_0/sim/design_3_microblaze_0_xlconcat_0.v" into library xil_defaultlib
@@ -63,19 +67,21 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip
 INFO: [VRFC 10-311] analyzing module design_2
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ip/design_2_axi_bram_ctrl_0_bram_0/sim/design_2_axi_bram_ctrl_0_bram_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_2_axi_bram_ctrl_0_bram_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/src/framewriter.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/src/framewriter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/src/framewriter.v:449]
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1_S00_AXI.v" into library xil_defaultlib
+WARNING: [VRFC 10-3380] identifier 'internal_x' is used before its declaration [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/src/framewriter.v:176]
+WARNING: [VRFC 10-3380] identifier 'modified_data' is used before its declaration [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/src/framewriter.v:281]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/src/framewriter.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1_S00_AXI.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter_v1_S00_AXI
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1_S00_AXI' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1_S00_AXI.v:3]
-INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1.v" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1_S00_AXI' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1_S00_AXI.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module framewriter_v1
-INFO: [VRFC 10-2458] undeclared symbol pixel_to_write, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1.v:141]
-INFO: [VRFC 10-2458] undeclared symbol is_crosshair_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1.v:142]
-INFO: [VRFC 10-2458] undeclared symbol is_target_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1.v:143]
-INFO: [VRFC 10-2458] undeclared symbol is_square_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1.v:144]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/76e1/hdl/framewriter_v1.v:4]
+INFO: [VRFC 10-2458] undeclared symbol pixel_to_write, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1.v:141]
+INFO: [VRFC 10-2458] undeclared symbol is_crosshair_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1.v:142]
+INFO: [VRFC 10-2458] undeclared symbol is_target_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1.v:143]
+INFO: [VRFC 10-2458] undeclared symbol is_square_pixel, assumed default net type wire [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1.v:144]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'framewriter_v1' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/0555/hdl/framewriter_v1.v:4]
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ip/design_2_framewriter_0_0/sim/design_2_framewriter_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_2_framewriter_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_2/ipshared/de7f/hdl/sync_gen_v1_S00_AXI.v" into library xil_defaultlib

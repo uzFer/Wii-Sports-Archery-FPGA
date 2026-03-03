@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1772505802">
-  <File Type="PA-TCL" Name="design_3_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_3_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="design_3_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="design_3_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="design_3_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="design_3_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="design_3_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="design_3_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="design_3_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1772510169">
+  <File Type="PA-TCL" Name="design_2_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_2_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="design_2_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="design_2_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="design_2_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="design_2_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="design_2_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="design_2_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="design_2_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/design_4/design_4.bd">
@@ -61,7 +61,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="design_3_wrapper"/>
+      <Option Name="TopModule" Val="design_2_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

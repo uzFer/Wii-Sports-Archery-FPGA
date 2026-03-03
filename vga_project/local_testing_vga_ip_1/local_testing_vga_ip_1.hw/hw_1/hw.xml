@@ -7,9 +7,9 @@
   <device name="xc7a100t_0" gui_info="dashboard1=hw_ila_1[xc7a100t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a100t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a100t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a100t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a100t_0/hw_ila_1/Waveform=ILA_WAVE_1;],dashboard2=hw_ila_2[xc7a100t_0/hw_ila_2/Waveform=ILA_WAVE_1;xc7a100t_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7a100t_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7a100t_0/hw_ila_2/Status=ILA_STATUS_1;xc7a100t_0/hw_ila_2/Settings=ILA_SETTINGS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a100t_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_2/design_3_wrapper.ltx"/>
-      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_2/design_3_wrapper.ltx"/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_2/design_3_wrapper.bit"/>
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_2/design_2_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
@@ -149,7 +149,7 @@
         <net name="VGA_VSYNC_OBUF"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -222,7 +222,7 @@
         <net name="design_3_i/framewriter_0/inst/axi_framewriter_myScore[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -258,7 +258,7 @@
         <net name="design_3_i/framewriter_0/inst/axi_framewriter_myScore[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -294,7 +294,7 @@
         <net name="design_3_i/framewriter_0/inst/axi_framewriter_oppScore[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -330,7 +330,7 @@
         <net name="design_3_i/framewriter_0/inst/axi_framewriter_x[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -618,7 +618,7 @@
         <net name="design_3_i/framewriter_0/inst/framewriter_v1_S00_AXI_inst_n_7"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq11&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq11&apos;hXXX"/>
@@ -720,7 +720,7 @@
         <net name="design_3_i/framewriter_0_bram_address_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -772,7 +772,7 @@
         <net name="design_3_i/framewriter_0_bram_write_data[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="neq4&apos;h0"/>
@@ -869,7 +869,7 @@
         <net name="design_3_i/sync_gen_1_VGA_HSYNC"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -971,7 +971,7 @@
         <net name="u_ila_0_framewriter_0_bram_address[13]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
@@ -993,7 +993,7 @@
         <net name="u_ila_0_framewriter_0_bram_address[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq19&apos;hX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq19&apos;hX_XXXX"/>
@@ -1116,7 +1116,7 @@
         <net name="u_ila_0_framewriter_0_bram_write_enable[0]_3"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>

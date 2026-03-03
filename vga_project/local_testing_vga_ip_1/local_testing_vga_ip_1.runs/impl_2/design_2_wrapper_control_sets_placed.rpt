@@ -1,0 +1,79 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Mar  2 22:59:21 2026
+| Host         : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_2_wrapper_control_sets_placed.rpt
+| Design       : design_2_wrapper
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    11 |
+| Unused register locations in slices containing registers |    21 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      6 |            1 |
+|      7 |            1 |
+|     14 |            1 |
+|    16+ |            7 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              45 |           14 |
+| No           | No                    | Yes                    |              16 |            4 |
+| No           | Yes                   | No                     |             176 |           83 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              16 |            4 |
+| Yes          | Yes                   | No                     |              38 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------------+-----------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|                           Clock Signal                           |                          Enable Signal                          |                                Set/Reset Signal                               | Slice Load Count | Bel Load Count |
++------------------------------------------------------------------+-----------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|  design_2_i/clk_100MHz_RnM/inst/clk_out1                         |                                                                 | design_2_i/rst_clk_wiz_100M/U0/EXT_LPF/Lpf_reset                              |                1 |              4 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out1                         | design_2_i/rst_clk_wiz_100M/U0/SEQ/seq_cnt_en                   | design_2_i/rst_clk_wiz_100M/U0/SEQ/SEQ_COUNTER/clear                          |                1 |              6 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out1                         |                                                                 | design_2_i/framewriter_0/inst/framewriter_1/bram_rst                          |                2 |              7 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out2                         |                                                                 |                                                                               |                6 |             14 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out1                         | design_2_i/framewriter_0/inst/framewriter_1/internal_y0         | design_2_i/framewriter_0/inst/framewriter_1/bram_rst                          |                4 |             16 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out1                         | design_2_i/framewriter_0/inst/framewriter_1/reg_bram_wdata_BUFG | design_2_i/framewriter_0/inst/framewriter_1/bram_rst                          |                5 |             16 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out2                         |                                                                 | design_2_i/sync_gen_1/inst/sync_generator_1/bram_rst                          |                4 |             16 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out2                         | design_2_i/sync_gen_1/inst/sync_generator_1/vcount[15]_i_1_n_0  | design_2_i/sync_gen_1/inst/sync_generator_1/bram_rst                          |                4 |             16 |
+|  design_2_i/framewriter_0/inst/framewriter_1/reg_bram_wdata_BUFG |                                                                 | design_2_i/framewriter_0/inst/framewriter_1/bram_rst                          |               11 |             32 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out1                         |                                                                 |                                                                               |                9 |             36 |
+|  design_2_i/clk_100MHz_RnM/inst/clk_out1                         |                                                                 | design_2_i/framewriter_0/inst/framewriter_v1_S00_AXI_inst/axi_awready_i_1_n_0 |               69 |            133 |
++------------------------------------------------------------------+-----------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+
+

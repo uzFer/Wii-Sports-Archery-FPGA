@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Mar  2 21:57:46 2026
+-- Date        : Mon Mar  2 22:56:56 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_framewriter_0_1/design_4_framewriter_0_1_stub.vhdl
