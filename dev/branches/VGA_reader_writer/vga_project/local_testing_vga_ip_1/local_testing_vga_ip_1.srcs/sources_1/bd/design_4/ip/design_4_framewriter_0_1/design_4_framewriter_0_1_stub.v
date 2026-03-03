@@ -1,11 +1,11 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar  1 20:57:30 2026
+// Date        : Mon Mar  2 21:57:46 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_4_framewriter_0_1 -prefix
-//               design_4_framewriter_0_1_ design_3_framewriter_0_0_stub.v
-// Design      : design_3_framewriter_0_0
+// Command     : write_verilog -force -mode synth_stub
+//               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_framewriter_0_1/design_4_framewriter_0_1_stub.v
+// Design      : design_4_framewriter_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------

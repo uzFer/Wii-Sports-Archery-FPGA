@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Mar  2 10:31:55 2026
+// Date        : Mon Mar  2 15:47:49 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode funcsim -nolib -force -file
 //               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sim/sim_1/synth/func/xsim/tb5_func_synth.v
