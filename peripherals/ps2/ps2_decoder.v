@@ -61,10 +61,12 @@ module ps2_decoder(
                 if (is_break_code) begin
                     // This is the second byte of a break sequence, ignore it
                     is_break_code <= 1'b0;
+                    valid <= 0;
                 end
                 else if (data == 8'hF0) begin
                     // This is the first byte of a break sequence
                     is_break_code <= 1'b1;
+                    valid <= 0;
                 end
                 else begin
                     // This is a make code, decode it
