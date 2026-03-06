@@ -16,3 +16,4 @@ Gyroscope:
     3. Toggle all resets
     4. Then turn on gyroscope enable and calibrate.
     5. Try switching on and off the FGPA's power switch or disconnecting/reconnecting the USB connection to your computer.
+    6. Plug in laptop charger.
