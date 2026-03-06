@@ -58,7 +58,7 @@ module PS2_Receiver(
            state <= next_state;
            cnt <= next_cnt;
     	   last_ps2_clk	<= ps2_clk_reg;
-           ps2_clk_reg <= ps2_clk_f; 
+           ps2_clk_reg <= ps2_clk_f; // Use filtered clock 
            rx_done_reg <= rx_done;
         end
     end
@@ -73,22 +73,21 @@ module PS2_Receiver(
         next_cnt = cnt;
         next_state = state;
         case (state)
-            STATE_0_IDLE:
+            STATE_0_IDLE: begin
                 if(ps2_clk_negedge) begin
                     next_cnt = 4'd10; // 10 bits remaining (D0-D7, Parity, Stop)
                     next_state = STATE_1_RX;
                 end
+            end
             STATE_1_RX:
             begin
                 if (ps2_clk_negedge) begin
-                    if (cnt == 4'd1) begin
-                        next_cnt = 4'd0;
-                        rx_done = 1'b1;
-                        next_state = STATE_0_IDLE;
-                    end
-                    else begin
-                        next_cnt = cnt - 1;
-                    end
+                    next_cnt = cnt - 1;
+                    next_state = STATE_1_RX;
+                end
+                if (cnt == 0) begin
+                    rx_done = 1'b1;
+                    next_state = STATE_0_IDLE;
                 end
             end
             default:
@@ -100,8 +99,8 @@ module PS2_Receiver(
     // Now synchronous to main clk, shifting on detected falling edge of filtered PS2 clock
     shift_register #(11) rx_shift_reg(
         .clk(clk),
-        .rstn(!reset),
-        .data(ps2_data_f),
+        .rstn(~reset),
+        .data(ps2_data_f), // Use filtered data
         .enable(shift_en && ps2_clk_negedge), 
         .direction(1), 
         .out_data(ps2_data_rx)

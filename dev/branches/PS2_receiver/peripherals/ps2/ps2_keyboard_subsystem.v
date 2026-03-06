@@ -39,8 +39,8 @@ module ps2_keyboard_subsystem (
 );
 
     // Wires to connect PS2_Receiver output to PS2_Decoder input
-    (* MARK_DEBUG = "true" *) wire [7:0] ps2_receiver_data;
-    (* MARK_DEBUG = "true" *) wire ps2_receiver_valid;
+    wire [7:0] ps2_receiver_data;
+    wire ps2_receiver_valid;
 
     // Wires to connect PS2_Decoder output to FIFO input
     wire [7:0] decoder_ascii_char;
@@ -97,7 +97,7 @@ module ps2_keyboard_subsystem (
     seven_seg_controller seven_seg_inst (
         .clk(clk),
         .resetn(~reset),
-        .data({8'h0, ascii_bcd[11:0], 4'h0, 4'h0, ascii_out}),
+        .data({8'h0, ascii_bcd[11:0], 4'h0, 4'h0, ps2_receiver_data}),
         .seg(seg),
         .an(an)
     );
