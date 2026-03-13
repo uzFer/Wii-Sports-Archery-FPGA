@@ -32,7 +32,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="nexys4_ddr"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="22"/>
+    <Option Name="WTXSimLaunchSim" Val="33"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -67,26 +67,195 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/blk_mem_gen_0/blk_mem_gen_0.xci"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/addr_counter.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/addr_counter.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/pwm_modulator.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/pwm_modulator.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/top_sound.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/top_sound.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/gyro_aim_calculator.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/gyro_aim_calculator.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/spi_interface.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/spi_interface.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/spi_master.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/spi_master.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/top.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/top.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/gyro_calc_interface.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/gyro_calc_interface.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/PS2_Receiver.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/PS2_Receiver.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/new/bin2bcd.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/imports/new/bin2bcd.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ps2/debouncer.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/peripherals/ps2/debouncer.v"/>
+          <Attr Name="ImportTime" Val="1773002194"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/fifo.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/fifo.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/ps2_decoder.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/ps2_decoder.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/new/seven_seg_controller.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/imports/new/seven_seg_controller.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/shift_register.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/shift_register.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/ps2_keyboard_subsystem.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/ps2_keyboard_subsystem.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/scoring_calc.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/bd1/bd1.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_ilmb_v10_1/bd1_ilmb_v10_1.xci">
-          <Proxy FileSetName="bd1_ilmb_v10_1"/>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_axi_tft_0_1/bd1_axi_tft_0_1.xci">
+          <Proxy FileSetName="bd1_axi_tft_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_ilmb_bram_if_cntlr_1/bd1_ilmb_bram_if_cntlr_1.xci">
-          <Proxy FileSetName="bd1_ilmb_bram_if_cntlr_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_xbar_1/bd1_xbar_1.xci">
-          <Proxy FileSetName="bd1_xbar_1"/>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_microblaze_0_1/bd1_microblaze_0_1.xci">
+          <Proxy FileSetName="bd1_microblaze_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_dlmb_bram_if_cntlr_1/bd1_dlmb_bram_if_cntlr_1.xci">
           <Proxy FileSetName="bd1_dlmb_bram_if_cntlr_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_mdm_1_1/bd1_mdm_1_1.xci">
-          <Proxy FileSetName="bd1_mdm_1_1"/>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_ilmb_bram_if_cntlr_1/bd1_ilmb_bram_if_cntlr_1.xci">
+          <Proxy FileSetName="bd1_ilmb_bram_if_cntlr_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_rst_clk_wiz_1_100M_1/bd1_rst_clk_wiz_1_100M_1.xci">
+          <Proxy FileSetName="bd1_rst_clk_wiz_1_100M_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_ilmb_v10_1/bd1_ilmb_v10_1.xci">
+          <Proxy FileSetName="bd1_ilmb_v10_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_lmb_bram_1/bd1_lmb_bram_1.xci">
+          <Proxy FileSetName="bd1_lmb_bram_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_dlmb_v10_1/bd1_dlmb_v10_1.xci">
+          <Proxy FileSetName="bd1_dlmb_v10_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_microblaze_0_axi_intc_0/bd1_microblaze_0_axi_intc_0.xci">
           <Proxy FileSetName="bd1_microblaze_0_axi_intc_0"/>
@@ -94,17 +263,11 @@
         <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_clk_wiz_1_1/bd1_clk_wiz_1_1.xci">
           <Proxy FileSetName="bd1_clk_wiz_1_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_microblaze_0_1/bd1_microblaze_0_1.xci">
-          <Proxy FileSetName="bd1_microblaze_0_1"/>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_axi_uartlite_0_0/bd1_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="bd1_axi_uartlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_dlmb_v10_1/bd1_dlmb_v10_1.xci">
-          <Proxy FileSetName="bd1_dlmb_v10_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_lmb_bram_1/bd1_lmb_bram_1.xci">
-          <Proxy FileSetName="bd1_lmb_bram_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_rst_clk_wiz_1_100M_1/bd1_rst_clk_wiz_1_100M_1.xci">
-          <Proxy FileSetName="bd1_rst_clk_wiz_1_100M_1"/>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_mdm_1_1/bd1_mdm_1_1.xci">
+          <Proxy FileSetName="bd1_mdm_1_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_mig_7series_0_1/bd1_mig_7series_0_1.xci">
           <Proxy FileSetName="bd1_mig_7series_0_1"/>
@@ -112,21 +275,43 @@
         <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_rst_mig_7series_0_81M_0/bd1_rst_mig_7series_0_81M_0.xci">
           <Proxy FileSetName="bd1_rst_mig_7series_0_81M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_axi_uartlite_0_0/bd1_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="bd1_axi_uartlite_0_0"/>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_archery_fsm_0_0/bd1_archery_fsm_0_0.xci">
+          <Proxy FileSetName="bd1_archery_fsm_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_axi_tft_0_1/bd1_axi_tft_0_1.xci">
-          <Proxy FileSetName="bd1_axi_tft_0_1"/>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_top_sound_0_0/bd1_top_sound_0_0.xci">
+          <Proxy FileSetName="bd1_top_sound_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_gyro_calc_interface_0_0/bd1_gyro_calc_interface_0_0.xci">
+          <Proxy FileSetName="bd1_gyro_calc_interface_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_axi_gpio_2_0/bd1_axi_gpio_2_0.xci">
+          <Proxy FileSetName="bd1_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_ps2_keyboard_subsyst_0_0/bd1_ps2_keyboard_subsyst_0_0.xci">
+          <Proxy FileSetName="bd1_ps2_keyboard_subsyst_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_axi_gpio_1_0/bd1_axi_gpio_1_0.xci">
+          <Proxy FileSetName="bd1_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_scoring_engine_0_0/bd1_scoring_engine_0_0.xci">
+          <Proxy FileSetName="bd1_scoring_engine_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_axi_gpio_0_0/bd1_axi_gpio_0_0.xci">
           <Proxy FileSetName="bd1_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="bd1.bd" FileRelPathName="ip/bd1_archery_fsm_0_0/bd1_archery_fsm_0_0.xci">
-          <Proxy FileSetName="bd1_archery_fsm_0_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/bd1/hdl/bd1_wrapper.v">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ps2/shift_register.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/peripherals/ps2/shift_register.v"/>
+          <Attr Name="ImportTime" Val="1773002194"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -138,10 +323,163 @@
           <Attr Name="ScopedToCell" Val="bd1_mig_7series_0_1"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/combined.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/bin2bcd.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/bin2bcd.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/gyro_aim_calculator_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/gyro_aim_calculator_tb.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/gyro_top.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/gyro_top.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/gyroscope/spi_top_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/peripherals/gyroscope/spi_top_tb.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ps2/fifo_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/peripherals/ps2/fifo_tb.v"/>
+          <Attr Name="ImportTime" Val="1773002194"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ps2/seven_seg_controller.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/peripherals/ps2/seven_seg_controller.v"/>
+          <Attr Name="ImportTime" Val="1773002194"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ps2/fifo.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/peripherals/ps2/fifo.v"/>
+          <Attr Name="ImportTime" Val="1773002194"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ps2/decimal_display_manager.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/peripherals/ps2/decimal_display_manager.v"/>
+          <Attr Name="ImportTime" Val="1773002194"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hdl/Seg_7_Display.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/imports/hdl/Seg_7_Display.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/new/decimal_display_manager.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/imports/new/decimal_display_manager.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/p2s_2_microblaze.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/p2s_2_microblaze.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/sync_fifo.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/sync_fifo.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/fifo_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/new/fifo_tb.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hdl/PS2Receiver.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Wii-Sports-Archery-FPGA-main_NEW/Wii-Sports-Archery-FPGA-main/project_ps2_only/project_1.srcs/sources_1/imports/hdl/PS2Receiver.v"/>
+          <Attr Name="ImportTime" Val="1773002195"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/physics_calc.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="bd1_wrapper"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -158,8 +496,26 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/new/scoring_system_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/new/archery_fsm_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/top_sound_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/audio/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/top_sound_tb.v"/>
+          <Attr Name="ImportTime" Val="1772560354"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -167,9 +523,8 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="archery_fsm_tb"/>
+        <Option Name="TopModule" Val="scoring_system_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
@@ -260,12 +615,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="bd1_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_xbar_1">
-      <Config>
-        <Option Name="TopModule" Val="bd1_xbar_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="bd1_mig_7series_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_mig_7series_0_1">
       <Config>
         <Option Name="TopModule" Val="bd1_mig_7series_0_1"/>
@@ -275,6 +624,42 @@
     <FileSet Name="bd1_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_axi_gpio_0_0">
       <Config>
         <Option Name="TopModule" Val="bd1_axi_gpio_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="bd1_top_sound_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_top_sound_0_0">
+      <Config>
+        <Option Name="TopModule" Val="bd1_top_sound_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="bd1_gyro_calc_interface_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_gyro_calc_interface_0_0">
+      <Config>
+        <Option Name="TopModule" Val="bd1_gyro_calc_interface_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="bd1_axi_gpio_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_axi_gpio_2_0">
+      <Config>
+        <Option Name="TopModule" Val="bd1_axi_gpio_2_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="bd1_axi_gpio_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_axi_gpio_1_0">
+      <Config>
+        <Option Name="TopModule" Val="bd1_axi_gpio_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="bd1_ps2_keyboard_subsyst_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_ps2_keyboard_subsyst_0_0">
+      <Config>
+        <Option Name="TopModule" Val="bd1_ps2_keyboard_subsyst_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="bd1_scoring_engine_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd1_scoring_engine_0_0">
+      <Config>
+        <Option Name="TopModule" Val="bd1_scoring_engine_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -430,15 +815,6 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="bd1_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="bd1_xbar_1" Part="xc7a100tcsg324-1" ConstrsSet="bd1_xbar_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_xbar_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="bd1_mig_7series_0_1_synth_1" Type="Ft3:Synth" SrcSet="bd1_mig_7series_0_1" Part="xc7a100tcsg324-1" ConstrsSet="bd1_mig_7series_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_mig_7series_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
@@ -457,9 +833,67 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="bd1_archery_fsm_0_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_archery_fsm_0_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_archery_fsm_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_archery_fsm_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="bd1_top_sound_0_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_top_sound_0_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_top_sound_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_top_sound_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_gyro_calc_interface_0_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_gyro_calc_interface_0_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_gyro_calc_interface_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_gyro_calc_interface_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_axi_gpio_2_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_axi_gpio_2_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_axi_gpio_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_axi_gpio_2_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_axi_gpio_1_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_axi_gpio_1_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_axi_gpio_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_axi_gpio_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_ps2_keyboard_subsyst_0_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_ps2_keyboard_subsyst_0_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_ps2_keyboard_subsyst_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_ps2_keyboard_subsyst_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_scoring_engine_0_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_scoring_engine_0_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_scoring_engine_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_scoring_engine_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_archery_fsm_0_0_synth_1" Type="Ft3:Synth" SrcSet="bd1_archery_fsm_0_0" Part="xc7a100tcsg324-1" ConstrsSet="bd1_archery_fsm_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd1_archery_fsm_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -691,22 +1125,6 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="bd1_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_xbar_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_xbar_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="bd1_mig_7series_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_mig_7series_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_mig_7series_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
@@ -739,9 +1157,109 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="bd1_archery_fsm_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_archery_fsm_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_archery_fsm_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="bd1_top_sound_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_top_sound_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_top_sound_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_gyro_calc_interface_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_gyro_calc_interface_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_gyro_calc_interface_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_axi_gpio_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_axi_gpio_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_axi_gpio_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_axi_gpio_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_axi_gpio_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_axi_gpio_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_ps2_keyboard_subsyst_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_ps2_keyboard_subsyst_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_ps2_keyboard_subsyst_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_scoring_engine_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_scoring_engine_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_scoring_engine_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="bd1_archery_fsm_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="bd1_archery_fsm_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd1_archery_fsm_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
