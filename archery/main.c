@@ -8,6 +8,8 @@
 #define TFT_CTRL_ADDR   0x44a00000
 #define DDR2_BASE_ADDR  0x80000000
 #define FSM_GPIO_ADDR   0x40000000
+#define PS2_GPIO_ADDR   0x40010000
+#define GYRO_GPIO_ADDR  0x40020000
 
 #define RESOLUTION_X    640
 #define RESOLUTION_Y    480
@@ -33,6 +35,14 @@
 typedef struct {
     char R; char G; char B;
 } color_t;
+
+/* ===================== PLAYER NAME STORAGE ===================== */
+#define MAX_NAME_LEN 6
+static char p1_name[MAX_NAME_LEN + 1] = "";
+static char p2_name[MAX_NAME_LEN + 1] = "";
+static int name_cursor = 0;
+static bool entering_p1 = true; // True = P1, False = P2
+static bool names_complete = false;
 
 const uint32_t WHITE     = 0x00F0F0F0;
 const uint32_t BLACK     = 0x00000000;
@@ -101,12 +111,12 @@ static const FontChar wiiFont[] = {
     {'r',{0,0,0x2C,0x32,0x20,0x20,0x20,0,0}},
     {'s',{0,0,0x1E,0x20,0x1C,0x02,0x3C,0,0}},
     {'t',{0x10,0x10,0x3C,0x10,0x10,0x12,0x0C,0,0}},
-    {'u',{0,0x22,0x22,0x22,0x26,0x1A,0,0}},
+    {'u',{0,0,0x22,0x22,0x22,0x26,0x1A,0}},
     {'v',{0,0x22,0x22,0x22,0x14,0x08,0,0}},
-    {'w',{0,0x22,0x22,0x2A,0x36,0x22,0,0}},
+    {'w',{0,0,0x22,0x22,0x2A,0x36,0x22,0}},
     {'x',{0,0x22,0x14,0x08,0x14,0x22,0,0}},
-    {'y',{0,0x22,0x22,0x1E,0x02,0x1C,0,0}},
-    {'z',{0,0x3E,0x04,0x08,0x10,0x3E,0,0}},
+    {'y',{0,0,0x22,0x22,0x1E,0x02,0x1C,0}},
+    {'z',{0,0,0x3E,0x04,0x08,0x10,0x3E,0}},
     {'0',{0x1C,0x22,0x26,0x2A,0x32,0x22,0x1C,0,0}},
     {'1',{0x08,0x18,0x08,0x08,0x08,0x08,0x1C,0,0}},
     {'2',{0x1C,0x22,0x02,0x0C,0x10,0x20,0x3E,0,0}},
@@ -118,7 +128,8 @@ static const FontChar wiiFont[] = {
     {'8',{0x1C,0x22,0x22,0x1C,0x22,0x22,0x1C,0,0}},
     {'9',{0x1C,0x22,0x22,0x1E,0x02,0x04,0x18,0,0}},
     {':',{0,0x08,0,0,0x08,0,0,0,0}},
-    {'_',{0,0,0,0,0,0,0x3E,0,0}}
+    {'_',{0,0,0,0,0,0,0x3E,0,0}},
+    {'/',{0x02,0x04,0x04,0x08,0x10,0x10,0x20,0x40,0x40}}
 };
 
 /* ===================== LOW LEVEL TFT HELPERS ===================== */
@@ -150,6 +161,129 @@ void init_tft(void) {
 int get_fsm_state() {
     volatile uint32_t *gpio_ptr = (uint32_t *)FSM_GPIO_ADDR;
     return *gpio_ptr & 0xF;
+}
+
+int get_arrow() {
+	volatile uint32_t *gpio_ptr = (uint32_t *)FSM_GPIO_ADDR;
+	return ((*gpio_ptr) >> 4) & 0x3;
+}
+
+int get_round() {
+	volatile uint32_t *gpio_ptr = (uint32_t *)FSM_GPIO_ADDR;
+	return ((*gpio_ptr) >> 6) & 0x7;
+}
+
+int get_p2_score() {
+    volatile uint32_t *gpio = (uint32_t *)FSM_GPIO_ADDR;
+    return ((*gpio) >> 9) & 0x7F;
+}
+
+int get_p1_score() {
+    volatile uint32_t *gpio = (uint32_t *)FSM_GPIO_ADDR;
+    return ((*gpio) >> 16) & 0x7F;
+}
+
+/* ===================== GYROSCOPE VGA RENDERING ===================== */
+#define CROSS_SIZE 5
+#define CROSS_PIXELS (CROSS_SIZE*2+1)
+
+static uint32_t cross_backup_h[CROSS_PIXELS];
+static uint32_t cross_backup_v[CROSS_PIXELS];
+
+static int prev_x = -1;
+static int prev_y = -1;
+
+uint32_t get_pixel(int x, int y) {
+    int *DDR_ptr = (int *)DDR2_BASE_ADDR;
+    return DDR_ptr[1024 * y + x];
+}
+
+void save_cross_background(int x, int y) {
+    int idx = 0;
+    for (int i = -CROSS_SIZE; i <= CROSS_SIZE; i++) {
+        cross_backup_h[idx++] = get_pixel(x + i, y);
+    }
+
+    idx = 0;
+    for (int i = -CROSS_SIZE; i <= CROSS_SIZE; i++) {
+        cross_backup_v[idx++] = get_pixel(x, y + i);
+    }
+}
+
+void restore_cross_background(int x, int y) {
+    int idx = 0;
+    for (int i = -CROSS_SIZE; i <= CROSS_SIZE; i++) {
+        plot_pixel(x + i, y, cross_backup_h[idx++]);
+    }
+
+    idx = 0;
+    for (int i = -CROSS_SIZE; i <= CROSS_SIZE; i++) {
+        plot_pixel(x, y + i, cross_backup_v[idx++]);
+    }
+}
+
+//void drawCrosshair(uint32_t x_pos, uint32_t y_pos) {
+//    // Draw a square cross centered at x_pos and y_pos.
+//    // Line width of 1 pixel.
+//    uint8_t size = 5; // Total length will be 11 pixels (5 each side + center)
+//
+//    // Horizontal line
+//    for (int16_t i = -size; i <= size; i++) {
+//        plot_pixel(x_pos + i, y_pos, BLACK);
+//    }
+//    // Vertical line
+//    for (int16_t i = -size; i <= size; i++) {
+//        plot_pixel(x_pos, y_pos + i, BLACK);
+//    }
+//}
+
+void drawCrosshair(uint32_t x_pos, uint32_t y_pos) {
+	uint32_t colour = BLACK;
+    for (int i = -CROSS_SIZE; i <= CROSS_SIZE; i++) {
+    	uint32_t temp = get_pixel(x_pos + i, y_pos);
+
+    	if(temp == BLACK) colour = WHITE;
+    	else colour = BLACK;
+        plot_pixel(x_pos + i, y_pos, colour);
+    }
+
+    for (int i = -CROSS_SIZE; i <= CROSS_SIZE; i++) {
+    	uint32_t temp = get_pixel(x_pos, y_pos + i);
+
+    	if(temp == BLACK) colour = WHITE;
+    	else colour = BLACK;
+        plot_pixel(x_pos, y_pos + i, colour);
+    }
+}
+
+/* ===================== GYROSCOPE HELPERS ===================== */
+uint8_t poll_gyroscope() {
+    static bool last_valid_bit = false;
+    volatile uint32_t *gyro_gpio = (uint32_t *)GYRO_GPIO_ADDR;
+    uint32_t rdata = *gyro_gpio; // data is [21:0]
+
+    bool cal_done = (rdata >> 21) & 0x1;
+    bool current_valid_bit = (rdata >> 20) & 0x1;
+
+    // Detect if the bit has toggled (indicating new data is ready)
+    if (cal_done && (current_valid_bit != last_valid_bit)) {
+        last_valid_bit = current_valid_bit;
+
+        // Extract coordinates
+        uint32_t x = rdata & 0x3FF;
+        uint32_t y = (rdata >> 10) & 0x3FF;
+
+        if (prev_x >= 0)
+            restore_cross_background(prev_x, prev_y);
+
+        save_cross_background(x, y);
+        drawCrosshair(x, y);
+
+        prev_x = x;
+        prev_y = y;
+        return 1;
+    }
+    return 0;
 }
 
 /* ===================== DRAWING FUNCTIONS ===================== */
@@ -209,6 +343,14 @@ void drawText(int x, int y, const char *text, uint32_t color, int scale) {
     }
 }
 
+void drawStatus(int x, int y, int rd, int arr) {
+    drawText(x+10, y, "Round ", WHITE, 2);
+    drawChar(x + 90, y, (char)(rd + '1'), WHITE, 2);
+    drawText(x, y+30, "Arrow ", WHITE, 2);
+    drawText(x + 85, y+30, "/3", WHITE, 2);
+    drawChar(x + 70, y+30, (char)(arr + '1'), WHITE, 2);
+}
+
 
 /* ===================== GAME SCREENS ===================== */
 void drawTarget() {
@@ -245,22 +387,221 @@ void drawMainMenu() {
     clear_screen(WHITE);
     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
     drawBox(0, 40, RESOLUTION_X, 16, ORANGE);
+
     drawText(80, 80, "Enter Player Info", GREY, 4);
+
+    // Player 1 Input Box
+    drawText(80, 160, "Player 1:", GREY, 3);
+    drawBox(265, 155, 200, 40, GREY); // Border
+    drawBox(270, 160, 190, 30, WHITE); // Text Area
+    drawText(280, 165, p1_name, BLACK, 3);
+    if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+
+    // Player 2 Input Box
+    drawText(80, 220, "Player 2:", GREY, 3);
+    drawBox(265, 215, 200, 40, GREY);
+    drawBox(270, 220, 190, 30, WHITE);
+    drawText(280, 225, p2_name, BLACK, 3);
+    if (!entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 225, "_", ORANGE, 3);
+
+    if (names_complete) {
+        drawText(50, 300, "READY! Press Start on FPGA", GREEN, 3);
+    } else {
+        drawText(120, 300, "Type name & press ENTER", GREY, 2);
+    }
 }
+
+void drawPlayer1Screen(int curr_round, int curr_arrow) {
+	clear_screen(GREEN);
+	drawTarget();
+
+	const char* displayName = (p1_name[0] != '\0') ? p1_name : "PLAYER 1";
+	    drawText(10, 20, displayName, WHITE, 3);
+
+	drawText(20, 430, "READY YOUR AIM", WHITE, 2);
+	//sprintf(statusBuf, "RD:%d  ARR:%d", current_round + 1, current_arrow + 1);
+	//drawText(440, 20, statusBuf, WHITE, 2);
+	drawStatus(500, 20, curr_round, curr_arrow);
+}
+
+void drawPlayer2Screen(int curr_round, int curr_arrow) {
+	clear_screen(GREEN);
+	drawTarget();
+
+	const char* displayName = (p2_name[0] != '\0') ? p2_name : "PLAYER 2";
+	drawText(10, 20, displayName, WHITE, 3);
+
+	drawText(20, 430, "READY YOUR AIM", WHITE, 2);
+	drawStatus(500, 20, curr_round, curr_arrow);
+}
+
+void drawScoreScreen(int p1, int p2, int round, int arrow) {
+    clear_screen(BLACK);
+    drawText(180, 40, "ROUND RESULTS", TURQUOISE, 4);
+    drawBox(80, 120, 480, 4, WHITE);
+
+    // P1 panel
+	drawBox(100, 160, 250, 180, BLUE);
+	const char* name1 = (p1_name[0] != '\0') ? p1_name : "P1";
+	drawText(140, 180, name1, WHITE, 3);
+
+	char buf1[10];
+	sprintf(buf1, "%d", p1);
+	drawText(170, 230, buf1, YELLOW, 6);
+
+	// P2 panel
+	drawBox(340, 160, 250, 180, RED);
+	const char* name2 = (p2_name[0] != '\0') ? p2_name : "P2";
+	drawText(380, 180, name2, WHITE, 3);
+
+	char buf2[10];
+	sprintf(buf2, "%d", p2);
+	drawText(410, 230, buf2, YELLOW, 6);
+
+    char roundBuf[20];
+    if(arrow+1 == 3) {
+    	sprintf(roundBuf, "ROUND %d COMPLETE", round + 1);
+    }
+    else {
+    	sprintf(roundBuf, "ROUND %d STAGE %d", round + 1, arrow+1);
+    }
+    drawText(180, 380, roundBuf, WHITE, 3);
+
+}
+
+/* ===================== KEYBOARD HELPERS ===================== */
+char poll_keyboard() {
+    volatile uint32_t *ps2_gpio = (uint32_t *)PS2_GPIO_ADDR;
+    uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs)
+
+    // Bit 8 is the 'Empty' flag
+    bool empty = (status >> 8) & 0x1;
+
+    if (!empty) {
+        // We must pop the FIFO FIRST to load the character into read_data
+        *(ps2_gpio + 2) = 1;
+
+        // Wait a few cycles to ensure the hardware updates read_data
+        for (volatile int i = 0; i < 100; i++);
+
+        *(ps2_gpio + 2) = 0;
+
+        // Now read the updated status which contains the popped character
+        status = *ps2_gpio;
+        return (char)(status & 0xFF);
+    }
+    return 0;
+}
+
+/* ===================== KEYBOARD VGA RENDERING ===================== */
+#define MAX_INPUT_LEN 32
+static char keyboard_buffer[MAX_INPUT_LEN + 1] = {0};
+static int  keyboard_cursor = 0;
+
+void render_keyboard_text_to_vga() {
+    // 1. Clear the specific area where the text goes (top left)
+    // Let's clear a box wide enough for MAX_INPUT_LEN
+//    drawBox(10, 10, MAX_INPUT_LEN * 15, 30, BLACK);
+
+    // 2. Draw the updated string
+    if (keyboard_cursor > 0) {
+        drawText(10, 10, keyboard_buffer, WHITE, 3);
+    }
+}
+
+
+void process_keyboard_input(int current_state) {
+    char key = poll_keyboard();
+    if (key == 0) return;
+
+    // Only use the special name-entry logic if we are on the Main Menu
+    if (current_state == HW_MAIN_MENU && !names_complete) {
+        char* current_buf = entering_p1 ? p1_name : p2_name;
+
+        if (key == 0x0D || key == '\n') { // ENTER KEY
+            if (name_cursor > 0) { // Don't allow empty names
+                if (entering_p1) {
+                    entering_p1 = false;
+                    name_cursor = 0;
+                } else {
+                    names_complete = true;
+                }
+                drawMainMenu(); // Redraw to update boxes
+            }
+        }
+        else if (key == 0x08 || key == '\b') { // BACKSPACE
+            if (name_cursor > 0) {
+                name_cursor--;
+                current_buf[name_cursor] = '\0';
+                drawMainMenu();
+            }
+        }
+        else if (key >= ' ' && key <= '~' && name_cursor < MAX_NAME_LEN) {
+            current_buf[name_cursor] = key;
+            name_cursor++;
+            current_buf[name_cursor] = '\0';
+            drawMainMenu();
+        }
+    }
+    else {
+    	printf("Key pressed: %c\n", key);
+
+    	        if (key == '\b' || key == 0x08) { // Backspace
+    	            if (keyboard_cursor > 0) {
+    	                keyboard_cursor--;
+    	                keyboard_buffer[keyboard_cursor] = '\0';
+    	                render_keyboard_text_to_vga();
+    	            }
+    	        }
+    	        else if (key >= ' ' && key <= '~') { // Printable ASCII characters
+    	            if (keyboard_cursor < MAX_INPUT_LEN) {
+    	                keyboard_buffer[keyboard_cursor] = key;
+    	                keyboard_cursor++;
+    	                keyboard_buffer[keyboard_cursor] = '\0';
+    	                render_keyboard_text_to_vga();
+    	            }
+    	        }
+    }
+}
+
 
 /* ===================== MAIN LOOP ===================== */
 
 int main(void) {
+    for (volatile int i = 0; i < 5000000; i++);
+
     init_tft();
     int last_hw_state = -1;
 
+    // drain any junk keyboard inputs that arrived during the wait
+	volatile uint32_t *ps2_gpio = (uint32_t *)PS2_GPIO_ADDR;
+	*(ps2_gpio + 2) = 1;
+	for (volatile int i = 0; i < 1000; i++);
+	*(ps2_gpio + 2) = 0;
+
     while (1) {
-        int current_hw_state = get_fsm_state();
+    	volatile uint32_t *fsm_ptr = (uint32_t *)FSM_GPIO_ADDR;
+//    	uint32_t fsm_combined_data = *fsm_ptr;
+    	uint32_t fsm_combined_data = (*fsm_ptr) & 0x7FFFFF;
+		int current_hw_state = fsm_combined_data & 0xF;
+		int current_arrow = (fsm_combined_data >> 4) & 0x3;
+		int current_round = (fsm_combined_data >> 6) & 0x7;
+		int p2 = (fsm_combined_data >> 9) & 0x7F;
+		int p1 = (fsm_combined_data >> 16) & 0x7F;
+
+        process_keyboard_input(current_hw_state);
 
         // Only redraw if the state actually changes to avoid flickering
         if(current_hw_state != last_hw_state) {
-            switch (current_hw_state) {
+        	if(current_hw_state == HW_MAIN_MENU) {
+				entering_p1 = true;
+				names_complete = false;
+				name_cursor = 0;
+				p1_name[0] = '\0';
+				p2_name[0] = '\0';
+			}
 
+            switch (current_hw_state) {
                 case HW_RESET:
                     drawTitleScreen();
                     break;
@@ -270,10 +611,7 @@ int main(void) {
                     break;
 
                 case HW_PLAYER1_AIM:
-                    clear_screen(GREEN);
-                    drawTarget();
-                    drawText(20, 20, "PLAYER 1", WHITE, 3); // Added Player ID
-                    drawText(20, 420, "READY YOUR AIM", WHITE, 2);
+                    drawPlayer1Screen(current_round, current_arrow);
                     break;
 
                 case HW_PLAYER1_SHOOT:
@@ -283,7 +621,6 @@ int main(void) {
 
                 case HW_PLAYER1_CALC:
                 case HW_PLAYER2_CALC:
-                    // show_trajectory = 1 in Verilog
                     clear_screen(BLUE);
                     drawText(180, 200, "CALCULATING...", WHITE, 4);
                     drawText(180, 260, "PHYSICS IN PROGRESS", WHITE, 2);
@@ -291,19 +628,18 @@ int main(void) {
 
                 case HW_PLAYER1_SCORE:
                 case HW_PLAYER2_SCORE:
-                case HW_DISPLAY_SCORE:
-                    // show_score = 1 in Verilog
                     drawBox(120, 160, 400, 120, YELLOW);
-                    drawBox(125, 165, 390, 110, BLACK); // Border effect
+                    drawBox(125, 165, 390, 110, BLACK);
                     drawText(150, 190, "NICE SHOT!", YELLOW, 4);
                     drawText(150, 230, "UPDATING SCORE...", WHITE, 2);
                     break;
 
+                case HW_DISPLAY_SCORE:
+                    drawScoreScreen(p1, p2, current_round, current_arrow);
+                    break;
+
                 case HW_PLAYER2_AIM:
-                    clear_screen(GREEN);
-                    drawTarget();
-                    drawText(20, 20, "PLAYER 2", WHITE, 3); // Added Player ID
-                    drawText(20, 420, "READY YOUR AIM", WHITE, 2);
+                	drawPlayer2Screen(current_round, current_arrow);
                     break;
 
                 case HW_UPDATE_ROUND:
@@ -319,12 +655,17 @@ int main(void) {
                     break;
 
                 default:
-                    // If state is unknown, show a simple background
                     clear_screen(BLACK);
                     break;
+
             }
+            render_keyboard_text_to_vga();
             last_hw_state = current_hw_state;
         }
+//        poll_gyroscope();
+        if (current_hw_state == HW_PLAYER1_AIM || current_hw_state == HW_PLAYER2_AIM) {
+			poll_gyroscope();
+		}
     }
     return 0;
 }
