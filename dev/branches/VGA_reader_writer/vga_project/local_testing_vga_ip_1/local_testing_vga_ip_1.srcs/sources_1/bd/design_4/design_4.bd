@@ -15,8 +15,8 @@
       "rst_clk_wiz_100M": "",
       "axi_vip_1": "",
       "clk_wiz_0": "",
-      "sync_gen_1": "",
       "axi_vip_2": "",
+      "sync_gen_1": "",
       "framewriter_0": ""
     },
     "ports": {
@@ -277,10 +277,6 @@
           }
         }
       },
-      "sync_gen_1": {
-        "vlnv": "xilinx.com:user:sync_gen:1",
-        "xci_name": "design_4_sync_gen_1_1"
-      },
       "axi_vip_2": {
         "vlnv": "xilinx.com:ip:axi_vip:1.1",
         "xci_name": "design_4_axi_vip_2_0",
@@ -356,6 +352,10 @@
           }
         }
       },
+      "sync_gen_1": {
+        "vlnv": "xilinx.com:user:sync_gen:1",
+        "xci_name": "design_4_sync_gen_1_1"
+      },
       "framewriter_0": {
         "vlnv": "xilinx.com:user:framewriter:1",
         "xci_name": "design_4_framewriter_0_1"
@@ -420,8 +420,8 @@
           "axi_bram_ctrl_0/s_axi_aclk",
           "axi_bram_ctrl_0_bram/clka",
           "axi_vip_1/aclk",
-          "sync_gen_1/s00_axi_aclk",
           "axi_vip_2/aclk",
+          "sync_gen_1/s00_axi_aclk",
           "framewriter_0/s00_axi_aclk"
         ]
       },
@@ -475,8 +475,8 @@
           "axi_vip_0/aresetn",
           "axi_bram_ctrl_0/s_axi_aresetn",
           "axi_vip_1/aresetn",
-          "sync_gen_1/s00_axi_aresetn",
           "axi_vip_2/aresetn",
+          "sync_gen_1/s00_axi_aresetn",
           "framewriter_0/s00_axi_aresetn"
         ]
       },

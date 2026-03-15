@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun Mar 15 10:50:35 2026
+//Date        : Sun Mar 15 13:09:56 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_4.bd
 //Design      : design_4
@@ -131,7 +131,7 @@ module design_4
        (.bram_rddata_a({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
         .bram_rddata_b({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
         .s_axi_aclk(clk_100MHz_clk_out1),
-        .s_axi_araddr(axi_vip_2_M_AXI_ARADDR[17:0]),
+        .s_axi_araddr(axi_vip_2_M_AXI_ARADDR[18:0]),
         .s_axi_arburst(axi_vip_2_M_AXI_ARBURST),
         .s_axi_arcache(axi_vip_2_M_AXI_ARCACHE),
         .s_axi_aresetn(rst_clk_wiz_100M_interconnect_aresetn),
@@ -141,7 +141,7 @@ module design_4
         .s_axi_arready(axi_vip_2_M_AXI_ARREADY),
         .s_axi_arsize(axi_vip_2_M_AXI_ARSIZE),
         .s_axi_arvalid(axi_vip_2_M_AXI_ARVALID),
-        .s_axi_awaddr(axi_vip_2_M_AXI_AWADDR[17:0]),
+        .s_axi_awaddr(axi_vip_2_M_AXI_AWADDR[18:0]),
         .s_axi_awburst(axi_vip_2_M_AXI_AWBURST),
         .s_axi_awcache(axi_vip_2_M_AXI_AWCACHE),
         .s_axi_awlen(axi_vip_2_M_AXI_AWLEN),
