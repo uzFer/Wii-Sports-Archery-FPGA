@@ -1,0 +1,15 @@
+/*
+ * main.c
+ *
+ *  Created on: Mar 15, 2026
+ *      Author: Celine
+ */
+
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xintc.h"
+
+#include "framewriter.h"
+
