@@ -508,3 +508,386 @@ mb-size vga2.elf  |tee "vga2.elf.size"
    5928	    364	   3132	   9424	   24d0	vga2.elf
 'Finished building: vga2.elf.size'
 ' '
+12:23:29 **** Build of project vga_coord_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling framewriter..."
+framewriter_selftest.c: In function 'FRAMEWRITER_Reg_SelfTest':
+framewriter_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( FRAMEWRITER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+framewriter_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+'Finished building libraries'
+
+**** Build of configuration Debug for project vga_coord ****
+
+Nothing to build for project vga_coord
+12:23:53 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: vga_coord.elf] Error 1
+12:24:36 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: vga_coord.elf] Error 1
+12:25:18 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:54:17: warning: unused variable 'intc' [-Wunused-variable]
+    static XIntc intc;
+                 ^~~~
+At top level:
+../src/main.c:54:17: warning: 'intc' defined but not used [-Wunused-variable]
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5928	    364	   3132	   9424	   24d0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:26:29 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:54:17: warning: unused variable 'intc' [-Wunused-variable]
+    static XIntc intc;
+                 ^~~~
+At top level:
+../src/main.c:54:17: warning: 'intc' defined but not used [-Wunused-variable]
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5928	    364	   3132	   9424	   24d0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:27:40 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5844	    364	   3136	   9344	   2480	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:27:44 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5864	    364	   3132	   9360	   2490	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:29:03 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:44:10: error: conflicting types for 'coords'
+ uint32_t coords[3][2] = { {10,10}, {160,120}, {300,150}};
+          ^~~~~~
+../src/main.c:39:10: note: previous definition of 'coords' was here
+ uint32_t coords[10][2] = {
+          ^~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+12:29:43 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:44:1: warning: braces around scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+ ^~~~~~~~
+../src/main.c:44:1: note: (near initialization for 'coords[0][0]')
+../src/main.c:44:33: warning: excess elements in scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+                                 ^~
+../src/main.c:44:33: note: (near initialization for 'coords[0][0]')
+../src/main.c:44:1: warning: braces around scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+ ^~~~~~~~
+../src/main.c:44:1: note: (near initialization for 'coords[0][1]')
+../src/main.c:44:43: warning: excess elements in scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+                                           ^~~
+../src/main.c:44:43: note: (near initialization for 'coords[0][1]')
+../src/main.c:44:1: warning: braces around scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+ ^~~~~~~~
+../src/main.c:44:1: note: (near initialization for 'coords[0][2]')
+../src/main.c:44:55: warning: excess elements in scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+                                                       ^~~
+../src/main.c:44:55: note: (near initialization for 'coords[0][2]')
+../src/main.c:44:49: warning: excess elements in array initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+                                                 ^
+../src/main.c:44:49: note: (near initialization for 'coords[0]')
+../src/main.c:44:60: error: expected '}' before ';' token
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160, 185}};
+                                                            ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+12:29:45 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:44:1: warning: braces around scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+ ^~~~~~~~
+../src/main.c:44:1: note: (near initialization for 'coords[0][0]')
+../src/main.c:44:33: warning: excess elements in scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+                                 ^~
+../src/main.c:44:33: note: (near initialization for 'coords[0][0]')
+../src/main.c:44:1: warning: braces around scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+ ^~~~~~~~
+../src/main.c:44:1: note: (near initialization for 'coords[0][1]')
+../src/main.c:44:43: warning: excess elements in scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+                                           ^~~
+../src/main.c:44:43: note: (near initialization for 'coords[0][1]')
+../src/main.c:44:1: warning: braces around scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+ ^~~~~~~~
+../src/main.c:44:1: note: (near initialization for 'coords[0][2]')
+../src/main.c:44:54: warning: excess elements in scalar initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+                                                      ^~~
+../src/main.c:44:54: note: (near initialization for 'coords[0][2]')
+../src/main.c:44:49: warning: excess elements in array initializer
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+                                                 ^
+../src/main.c:44:49: note: (near initialization for 'coords[0]')
+../src/main.c:44:59: error: expected '}' before ';' token
+ uint32_t coords[3][2] = { {{160,25}, {160,120}, {160,185}};
+                                                           ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+12:29:53 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5864	    364	   3132	   9360	   2490	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:33:05 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5864	    364	   3132	   9360	   2490	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:35:06 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: vga_coord.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 5760 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: vga_coord.elf] Error 1
+12:35:31 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: vga_coord.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 5760 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: vga_coord.elf] Error 1
+12:37:46 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:132:22: error: 'PI' undeclared (first use in this function)
+      if (angle > 2 * PI) angle = 0;
+                      ^~
+../src/main.c:132:22: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+12:38:34 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6632	    364	   3132	  10128	   2790	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:38:36 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6632	    364	   3132	  10128	   2790	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+12:40:17 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6804	    364	   3136	  10304	   2840	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
