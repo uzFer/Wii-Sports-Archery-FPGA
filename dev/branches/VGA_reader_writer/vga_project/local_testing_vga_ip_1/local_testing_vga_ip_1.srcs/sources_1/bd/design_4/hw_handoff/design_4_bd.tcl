@@ -322,6 +322,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net sync_gen_1_bram_rst [get_bd_pins axi_bram_ctrl_0_bram/rstb] [get_bd_pins sync_gen_1/bram_rst]
   connect_bd_net -net sync_gen_1_bram_write_data [get_bd_pins axi_bram_ctrl_0_bram/dinb] [get_bd_pins sync_gen_1/bram_write_data]
   connect_bd_net -net sync_gen_1_bram_write_enable [get_bd_pins axi_bram_ctrl_0_bram/web] [get_bd_pins sync_gen_1/bram_write_enable]
+  connect_bd_net -net sync_gen_1_vsync_trigger [get_bd_pins framewriter_0/vsync_trigger] [get_bd_pins sync_gen_1/vsync_trigger]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces axi_vip_0/Master_AXI] [get_bd_addr_segs sync_gen_1/S00_AXI/S00_AXI_reg] SEG_sync_gen_1_S00_AXI_reg

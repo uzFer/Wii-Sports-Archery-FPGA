@@ -11,123 +11,110 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="36651224477908fs"></ZoomStartTime>
-      <ZoomEndTime time="36651699495569fs"></ZoomEndTime>
-      <Cursor1Time time="36651358019000fs"></Cursor1Time>
+      <ZoomStartTime time="2748444595285fs"></ZoomStartTime>
+      <ZoomEndTime time="2748633465327fs"></ZoomEndTime>
+      <Cursor1Time time="2749685000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="214"></NameColumnWidth>
-      <ValueColumnWidth column_width="218"></ValueColumnWidth>
+      <NameColumnWidth column_width="282"></NameColumnWidth>
+      <ValueColumnWidth column_width="176"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
-   <wvobject fp_name="/tb1/uut/framewriter_1/axi_framewriter_x" type="array">
-      <obj_property name="ElementShortName">axi_framewriter_x[15:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_framewriter_x[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/axi_framewriter_y" type="array">
-      <obj_property name="ElementShortName">axi_framewriter_y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_framewriter_y[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/internal_x" type="array">
-      <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
-      <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/internal_y" type="array">
-      <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/pixel_index" type="array">
-      <obj_property name="ElementShortName">pixel_index[16:0]</obj_property>
-      <obj_property name="ObjectShortName">pixel_index[16:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/bram_address_calc" type="array">
-      <obj_property name="ElementShortName">bram_address_calc[14:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_address_calc[14:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/bram_read_data" type="array">
-      <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/bram_write_data" type="array">
-      <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/bram_address" type="array">
-      <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/start_rmw_pulse" type="logic">
-      <obj_property name="ElementShortName">start_rmw_pulse</obj_property>
-      <obj_property name="ObjectShortName">start_rmw_pulse</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/next_state" type="array">
-      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
-      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/bram_write_enable" type="array">
-      <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/start_rmw_pulse" type="logic">
-      <obj_property name="ElementShortName">start_rmw_pulse</obj_property>
-      <obj_property name="ObjectShortName">start_rmw_pulse</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/frame_busy" type="logic">
-      <obj_property name="ElementShortName">frame_busy</obj_property>
-      <obj_property name="ObjectShortName">frame_busy</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/update_req" type="logic">
-      <obj_property name="ElementShortName">update_req</obj_property>
-      <obj_property name="ObjectShortName">update_req</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/internal_y" type="array">
-      <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/internal_x" type="array">
-      <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
-      <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/y_old" type="array">
-      <obj_property name="ElementShortName">y_old[15:0]</obj_property>
-      <obj_property name="ObjectShortName">y_old[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/x_old" type="array">
-      <obj_property name="ElementShortName">x_old[15:0]</obj_property>
-      <obj_property name="ObjectShortName">x_old[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/score_old" type="array">
-      <obj_property name="ElementShortName">score_old[3:0]</obj_property>
-      <obj_property name="ObjectShortName">score_old[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/current_state" type="array">
-      <obj_property name="ElementShortName">current_state[1:0]</obj_property>
-      <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/next_state" type="array">
-      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
-      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/axi_awvalid" type="logic">
-      <obj_property name="ElementShortName">axi_awvalid</obj_property>
-      <obj_property name="ObjectShortName">axi_awvalid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/axi_awready" type="logic">
-      <obj_property name="ElementShortName">axi_awready</obj_property>
-      <obj_property name="ObjectShortName">axi_awready</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/axi_wvalid" type="logic">
-      <obj_property name="ElementShortName">axi_wvalid</obj_property>
-      <obj_property name="ObjectShortName">axi_wvalid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb1/uut/framewriter_1/axi_wready" type="logic">
-      <obj_property name="ElementShortName">axi_wready</obj_property>
-      <obj_property name="ObjectShortName">axi_wready</obj_property>
+   <WVObjectSize size="1" />
+   <wvobject fp_name="group1346" type="group">
+      <obj_property name="label">square</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb1/uut/vsync_trigger" type="logic">
+         <obj_property name="ElementShortName">vsync_trigger</obj_property>
+         <obj_property name="ObjectShortName">vsync_trigger</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/vsync_sync1" type="logic">
+         <obj_property name="ElementShortName">vsync_sync1</obj_property>
+         <obj_property name="ObjectShortName">vsync_sync1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/vsync_sync2" type="logic">
+         <obj_property name="ElementShortName">vsync_sync2</obj_property>
+         <obj_property name="ObjectShortName">vsync_sync2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/internal_x" type="array">
+         <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/internal_y" type="array">
+         <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/bram_write_enable" type="array">
+         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/bram_write_data" type="array">
+         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/pipe_dx" type="array">
+         <obj_property name="ElementShortName">pipe_dx[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pipe_dx[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/pipe_dy" type="array">
+         <obj_property name="ElementShortName">pipe_dy[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pipe_dy[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/pipe_dx_sq" type="array">
+         <obj_property name="ElementShortName">pipe_dx_sq[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pipe_dx_sq[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/pipe_dy_sq" type="array">
+         <obj_property name="ElementShortName">pipe_dy_sq[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pipe_dy_sq[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/vsync_start" type="logic">
+         <obj_property name="ElementShortName">vsync_start</obj_property>
+         <obj_property name="ObjectShortName">vsync_start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/pipe_dist_sq" type="array">
+         <obj_property name="ElementShortName">pipe_dist_sq[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pipe_dist_sq[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/pipe_is_target" type="logic">
+         <obj_property name="ElementShortName">pipe_is_target</obj_property>
+         <obj_property name="ObjectShortName">pipe_is_target</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/score_latch" type="array">
+         <obj_property name="ElementShortName">score_latch[3:0]</obj_property>
+         <obj_property name="ObjectShortName">score_latch[3:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/target_color" type="array">
+         <obj_property name="ElementShortName">target_color[31:0]</obj_property>
+         <obj_property name="ObjectShortName">target_color[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/final_color" type="array">
+         <obj_property name="ElementShortName">final_color[31:0]</obj_property>
+         <obj_property name="ObjectShortName">final_color[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/final_color_latched" type="array">
+         <obj_property name="ElementShortName">final_color_latched[32:0]</obj_property>
+         <obj_property name="ObjectShortName">final_color_latched[32:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

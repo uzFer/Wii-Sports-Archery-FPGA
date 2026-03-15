@@ -2,52 +2,42 @@
 
 module tb1();
     
-    // ---------------------------------------------------------
     // 1. Parameters
-    // ---------------------------------------------------------
     parameter integer SLAVE_REG_WIDTH   = 16;
-    parameter integer BRAM_ADDR_WIDTH   = 15;
+    parameter integer BRAM_ADDR_WIDTH   = 32;
     parameter integer BRAM_DATA_WIDTH   = 32;
     parameter integer BRAM_WE_WIDTH     = 4;
-    parameter integer C_S00_AXI_DATA_WIDTH = 32;
 
-    // ---------------------------------------------------------
+    // VGA Timing Parameters (Scaled for Simulation)
+    // 60Hz is usually 16.6ms. We'll use 100us to see frames faster.
+    localparam FRAME_PERIOD = 100000; // 100 us
+    localparam V_SYNC_PULSE = 4000;   // 4 us (simulating the sync pulse duration)
+
     // 2. Signals
-    // ---------------------------------------------------------
     reg s00_axi_aclk;
     reg s00_axi_aresetn;
-
-    // Framewriter Inputs (Simulating AXI Register values)
-    reg [SLAVE_REG_WIDTH-1:0] tb_x = 0;
-    reg [SLAVE_REG_WIDTH-1:0] tb_y = 0;
-    reg [SLAVE_REG_WIDTH-1:0] tb_myScore = 0;
-    reg [SLAVE_REG_WIDTH-1:0] tb_oppScore = 0;
+    reg vsync_trigger; 
 
     // BRAM Interface Wires
     wire [BRAM_ADDR_WIDTH-1:0]  bram_address;
     wire [BRAM_DATA_WIDTH-1:0]  bram_write_data;
-    reg  [BRAM_DATA_WIDTH-1:0]  bram_read_data = 32'h0; // Mock data
+    reg  [BRAM_DATA_WIDTH-1:0]  bram_read_data = 32'h0; 
     wire [BRAM_WE_WIDTH-1:0]    bram_write_enable;
     wire bram_en;
     wire bram_rst;
     wire bram_clk;
 
-    // AXI Handshake Signals
-    reg  s00_axi_awvalid = 0;
-    wire s00_axi_awready; // Output from UUT
-    reg  s00_axi_wvalid = 0;
-    wire s00_axi_wready;  // Output from UUT
-
-    // ---------------------------------------------------------
-    // 3. Instantiate Top-Level Module (UUT)
-    // ---------------------------------------------------------
-    framewriter_v1 # (
+    // 3. Instantiate UUT
+    framewriter # (
         .SLAVE_REG_WIDTH(SLAVE_REG_WIDTH),
         .BRAM_ADDR_WIDTH(BRAM_ADDR_WIDTH),
         .BRAM_DATA_WIDTH(BRAM_DATA_WIDTH),
         .BRAM_WE_WIDTH(BRAM_WE_WIDTH)
     ) uut (
-        // BRAM Interface
+        .axi_aclk(s00_axi_aclk),
+        .axi_aresetn(s00_axi_aresetn),
+        .vsync_trigger(vsync_trigger),
+        
         .bram_address(bram_address),
         .bram_write_data(bram_write_data),
         .bram_read_data(bram_read_data),
@@ -55,77 +45,50 @@ module tb1();
         .bram_en(bram_en),
         .bram_rst(bram_rst),
         .bram_clk(bram_clk),
-
-        // AXI Slave Ports (Must match the port list in your framewriter_v1)
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_awaddr(s00_axi_awaddr),
-        .s00_axi_awprot(3'b000),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_awready(s00_axi_awready),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wstrb(4'hF),
-        .s00_axi_wvalid(s00_axi_wvalid),
-        .s00_axi_wready(s00_axi_wready),
-        .s00_axi_bready(s00_axi_bready),
         
-        // Tie off Read Channels
-        .s00_axi_araddr(5'b0),
-        .s00_axi_arprot(3'b0),
-        .s00_axi_arvalid(1'b0),
-        .s00_axi_rready(1'b0)
+        .axi_framewriter_x(16'd160),
+        .axi_framewriter_y(16'd120),
+        .axi_framewriter_myScore(16'd6),
+        .axi_framewriter_oppScore(16'd0)
     );
 
-    // ---------------------------------------------------------
-    // 4. Clock Generation
-    // ---------------------------------------------------------
+    // 4. AXI Clock Generation (100MHz)
     initial begin
         s00_axi_aclk = 0;
-        forever #5 s00_axi_aclk = ~s00_axi_aclk; // 100MHz
+        forever #5 s00_axi_aclk = ~s00_axi_aclk; 
     end
 
-    // ---------------------------------------------------------
-    // 5. Stimulus
-    // ---------------------------------------------------------
-    integer i;
-    
+    // 5. Periodic VSync Generation (Simulating the 25MHz Reader's pace)
     initial begin
-        // 1. Initialize and Reset
-        s00_axi_aresetn = 0;
-        s00_axi_awvalid = 0;
-        s00_axi_wvalid  = 0;
-        #100;
-        s00_axi_aresetn = 1;
-        #20;
-
-        #100;
-        s00_axi_aresetn = 1;
-        #20;
-
-        // 3. The for loop (Standard Verilog Syntax)
-        for (i = 0; i < 5; i = i + 1) begin
-            
-            @(posedge s00_axi_aclk);
-            s00_axi_awvalid = 1;
-            s00_axi_wvalid  = 1;
-            
-            // Wait for handshake
-            // In Verilog, wait is level-sensitive
-            wait(s00_axi_awready == 1'b1 && s00_axi_wready == 1'b1);
-            
-            @(posedge s00_axi_aclk);
-            s00_axi_awvalid = 0;
-            s00_axi_wvalid  = 0;
-
-            // Wait for the RMW FSM to cycle through READ -> WAIT -> WRITE
-            repeat(10) @(posedge s00_axi_aclk); 
+        vsync_trigger = 1; // Start in Active Video
+        forever begin
+            #(FRAME_PERIOD - V_SYNC_PULSE);
+            vsync_trigger = 0; // Enter Sync Pulse (Falling Edge triggers Writer)
+            #V_SYNC_PULSE;
+            vsync_trigger = 1; // Exit Sync Pulse
         end
+    end
 
-        #500;
-        $display("Simulation Complete.");
+    // 6. Stimulus & Monitoring
+    initial begin
+        $display("--- Simulation Starting (scaled VGA timing) ---");
+        s00_axi_aresetn = 0;
+        #100;
+        s00_axi_aresetn = 1;
+
+        // Run for two full frame periods
+        #(FRAME_PERIOD * 2.5);
+
+        $display("Simulation Complete at %t.", $time);
         $finish;
+    end
 
-
+    // 7. Optional: Monitor for the Target being drawn
+    // Watch if the color changes from GREEN (0000F000) to BULLSEYE (00000000)
+    always @(posedge s00_axi_aclk) begin
+        if (bram_write_enable == 4'hF && bram_write_data == 32'h00000000) begin
+            $display("BULLSEYE DETECTED: Writing Black to Address %h at time %t", bram_address, $time);
+        end
     end
 
 endmodule

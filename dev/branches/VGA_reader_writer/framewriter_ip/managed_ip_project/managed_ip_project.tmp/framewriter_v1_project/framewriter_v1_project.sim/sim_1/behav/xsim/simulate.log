@@ -1,4 +1,7 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
+Time:               150000 | FSM should be in IDLE
+Time:               345000 | Triggering VSync Falling Edge...
+Time:              5355000 | Setting VSync back to High
 Simulation Complete.
-$finish called at time : 5000240 ns : File "y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v" Line 126
+$finish called at time : 7355 ns : File "y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v" Line 89

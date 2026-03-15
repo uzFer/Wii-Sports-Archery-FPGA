@@ -16,15 +16,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="200166667fs"></ZoomStartTime>
-      <ZoomEndTime time="713166668fs"></ZoomEndTime>
-      <Cursor1Time time="300000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6339655100001fs"></ZoomEndTime>
+      <Cursor1Time time="6330445000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="336"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <NameColumnWidth column_width="291"></NameColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/tb5/clk_100MHz" type="logic">
       <obj_property name="ElementShortName">clk_100MHz</obj_property>
       <obj_property name="ObjectShortName">clk_100MHz</obj_property>
@@ -33,9 +33,9 @@
       <obj_property name="ElementShortName">reset_rtl_0</obj_property>
       <obj_property name="ObjectShortName">reset_rtl_0</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb5/gpio_io_i_0" type="array">
-      <obj_property name="ElementShortName">gpio_io_i_0[3:0]</obj_property>
-      <obj_property name="ObjectShortName">gpio_io_i_0[3:0]</obj_property>
+   <wvobject fp_name="/tb5/gpio_io_i_0" type="logic">
+      <obj_property name="ElementShortName">gpio_io_i_0</obj_property>
+      <obj_property name="ObjectShortName">gpio_io_i_0</obj_property>
    </wvobject>
    <wvobject fp_name="group287" type="group">
       <obj_property name="label">output pins</obj_property>
@@ -65,7 +65,6 @@
    <wvobject fp_name="group292" type="group">
       <obj_property name="label">framewriter</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/axi_framewriter_myScore" type="array">
          <obj_property name="ElementShortName">axi_framewriter_myScore[15:0]</obj_property>
          <obj_property name="ObjectShortName">axi_framewriter_myScore[15:0]</obj_property>
@@ -82,10 +81,6 @@
          <obj_property name="ElementShortName">axi_framewriter_y[15:0]</obj_property>
          <obj_property name="ObjectShortName">axi_framewriter_y[15:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/modified_data" type="array">
-         <obj_property name="ElementShortName">modified_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">modified_data[31:0]</obj_property>
-      </wvobject>
       <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_address" type="array">
          <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
          <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
@@ -93,27 +88,6 @@
       <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/current_state" type="array">
          <obj_property name="ElementShortName">current_state[1:0]</obj_property>
          <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/frame_busy" type="logic">
-         <obj_property name="ElementShortName">frame_busy</obj_property>
-         <obj_property name="ObjectShortName">frame_busy</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/score_old" type="array">
-         <obj_property name="ElementShortName">score_old[3:0]</obj_property>
-         <obj_property name="ObjectShortName">score_old[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/internal_x" type="array">
-         <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
-         <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/update_req" type="logic">
-         <obj_property name="ElementShortName">update_req</obj_property>
-         <obj_property name="ObjectShortName">update_req</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/internal_y" type="array">
-         <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
-         <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_read_data" type="array">
          <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
@@ -127,30 +101,38 @@
          <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
          <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/is_triangle_pixel" type="logic">
-         <obj_property name="ElementShortName">is_triangle_pixel</obj_property>
-         <obj_property name="ObjectShortName">is_triangle_pixel</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pixel_to_write" type="logic">
-         <obj_property name="ElementShortName">pixel_to_write</obj_property>
-         <obj_property name="ObjectShortName">pixel_to_write</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/modified_data" type="array">
-         <obj_property name="ElementShortName">modified_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">modified_data[31:0]</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/pixel_clk" type="logic">
-      <obj_property name="ElementShortName">pixel_clk</obj_property>
-      <obj_property name="ObjectShortName">pixel_clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pixel_index" type="array">
-      <obj_property name="ElementShortName">pixel_index[16:0]</obj_property>
-      <obj_property name="ObjectShortName">pixel_index[16:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_read_data" type="array">
-      <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
+   <wvobject fp_name="group187" type="group">
+      <obj_property name="label">framwriter score latch</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/axi_aclk" type="logic">
+         <obj_property name="ElementShortName">axi_aclk</obj_property>
+         <obj_property name="ObjectShortName">axi_aclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/pixel_clk" type="logic">
+         <obj_property name="ElementShortName">pixel_clk</obj_property>
+         <obj_property name="ObjectShortName">pixel_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pixel_index" type="array">
+         <obj_property name="ElementShortName">pixel_index[16:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_index[16:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_data" type="array">
+         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_enable" type="array">
+         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_read_data" type="array">
+         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/hcount_640" type="array">
       <obj_property name="ElementShortName">hcount_640[15:0]</obj_property>
@@ -161,5 +143,73 @@
       <obj_property name="ElementShortName">vcount_480[15:0]</obj_property>
       <obj_property name="ObjectShortName">vcount_480[15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group606" type="group">
+      <obj_property name="label">sync gen</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/x_coord" type="array">
+         <obj_property name="ElementShortName">x_coord[9:0]</obj_property>
+         <obj_property name="ObjectShortName">x_coord[9:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/y_coord" type="array">
+         <obj_property name="ElementShortName">y_coord[9:0]</obj_property>
+         <obj_property name="ObjectShortName">y_coord[9:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/hcount" type="array">
+         <obj_property name="ElementShortName">hcount[15:0]</obj_property>
+         <obj_property name="ObjectShortName">hcount[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/vcount" type="array">
+         <obj_property name="ElementShortName">vcount[15:0]</obj_property>
+         <obj_property name="ObjectShortName">vcount[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_read_data" type="array">
+         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_en" type="logic">
+         <obj_property name="ElementShortName">bram_en</obj_property>
+         <obj_property name="ObjectShortName">bram_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_offset" type="array">
+         <obj_property name="ElementShortName">bram_offset[4:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_offset[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/current_pixel" type="logic">
+         <obj_property name="ElementShortName">current_pixel</obj_property>
+         <obj_property name="ObjectShortName">current_pixel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/pixel_index" type="array">
+         <obj_property name="ElementShortName">pixel_index[16:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_index[16:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/display_on" type="logic">
+      <obj_property name="ElementShortName">display_on</obj_property>
+      <obj_property name="ObjectShortName">display_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/display_on_1" type="logic">
+      <obj_property name="ElementShortName">display_on_1</obj_property>
+      <obj_property name="ObjectShortName">display_on_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/vsync_trigger" type="logic">
+      <obj_property name="ElementShortName">vsync_trigger</obj_property>
+      <obj_property name="ObjectShortName">vsync_trigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/vsync_trigger" type="logic">
+      <obj_property name="ElementShortName">vsync_trigger</obj_property>
+      <obj_property name="ObjectShortName">vsync_trigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/vsync_start" type="logic">
+      <obj_property name="ElementShortName">vsync_start</obj_property>
+      <obj_property name="ObjectShortName">vsync_start</obj_property>
    </wvobject>
 </wave_config>
