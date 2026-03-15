@@ -392,7 +392,7 @@ set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets sync_gen_1_VGA_VSYNC]
   connect_bd_net -net sync_gen_1_vsync_trigger [get_bd_pins framewriter_0/vsync_trigger] [get_bd_pins sync_gen_1/vsync_trigger]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00040000 -offset 0xC0000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_1_Mem0
+  create_bd_addr_seg -range 0x00080000 -offset 0xC0000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_1_Mem0
   create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00008000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] SEG_dlmb_bram_if_cntlr_Mem
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs framewriter_0/S00_AXI/S00_AXI_reg] SEG_framewriter_0_S00_AXI_reg

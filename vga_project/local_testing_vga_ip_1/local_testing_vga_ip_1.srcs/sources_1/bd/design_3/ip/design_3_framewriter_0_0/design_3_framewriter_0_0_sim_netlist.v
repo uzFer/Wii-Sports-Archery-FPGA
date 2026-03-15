@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Mar 14 20:37:57 2026
+// Date        : Sat Mar 14 20:56:01 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top design_3_framewriter_0_0 -prefix
 //               design_3_framewriter_0_0_ design_4_framewriter_0_1_sim_netlist.v
@@ -191,6 +191,9 @@ module design_3_framewriter_0_0_framewriter
   wire [15:1]data0;
   wire \final_color_latched[15]_i_10_n_0 ;
   wire \final_color_latched[15]_i_11_n_0 ;
+  wire \final_color_latched[15]_i_12_n_0 ;
+  wire \final_color_latched[15]_i_13_n_0 ;
+  wire \final_color_latched[15]_i_14_n_0 ;
   wire \final_color_latched[15]_i_2_n_0 ;
   wire \final_color_latched[15]_i_3_n_0 ;
   wire \final_color_latched[15]_i_4_n_0 ;
@@ -237,6 +240,8 @@ module design_3_framewriter_0_0_framewriter
   wire \final_color_latched[23]_i_43_n_0 ;
   wire \final_color_latched[23]_i_44_n_0 ;
   wire \final_color_latched[23]_i_45_n_0 ;
+  wire \final_color_latched[23]_i_46_n_0 ;
+  wire \final_color_latched[23]_i_47_n_0 ;
   wire \final_color_latched[23]_i_4_n_0 ;
   wire \final_color_latched[23]_i_5_n_0 ;
   wire \final_color_latched[23]_i_6_n_0 ;
@@ -285,18 +290,16 @@ module design_3_framewriter_0_0_framewriter
   wire i__carry_i_8_n_0;
   wire [18:7]in5;
   wire [15:0]internal_x;
-  wire \internal_x[15]_i_3_n_0 ;
+  wire \internal_x[15]_i_2_n_0 ;
   wire \internal_x[15]_i_4_n_0 ;
   wire \internal_x[15]_i_5_n_0 ;
   wire \internal_x[15]_i_6_n_0 ;
-  wire \internal_x[15]_i_7_n_0 ;
-  wire \internal_x[15]_i_8_n_0 ;
   wire \internal_x_reg[12]_i_2_n_0 ;
   wire \internal_x_reg[12]_i_2_n_1 ;
   wire \internal_x_reg[12]_i_2_n_2 ;
   wire \internal_x_reg[12]_i_2_n_3 ;
-  wire \internal_x_reg[15]_i_2_n_2 ;
-  wire \internal_x_reg[15]_i_2_n_3 ;
+  wire \internal_x_reg[15]_i_3_n_2 ;
+  wire \internal_x_reg[15]_i_3_n_3 ;
   wire \internal_x_reg[4]_i_2_n_0 ;
   wire \internal_x_reg[4]_i_2_n_1 ;
   wire \internal_x_reg[4]_i_2_n_2 ;
@@ -630,8 +633,8 @@ module design_3_framewriter_0_0_framewriter
   wire \x_latch[7]_i_1_n_0 ;
   wire \x_latch_reg_n_0_[3] ;
   wire \x_latch_reg_n_0_[7] ;
-  wire [3:2]\NLW_internal_x_reg[15]_i_2_CO_UNCONNECTED ;
-  wire [3:3]\NLW_internal_x_reg[15]_i_2_O_UNCONNECTED ;
+  wire [3:2]\NLW_internal_x_reg[15]_i_3_CO_UNCONNECTED ;
+  wire [3:3]\NLW_internal_x_reg[15]_i_3_O_UNCONNECTED ;
   wire [3:2]\NLW_internal_y_reg[15]_i_3_CO_UNCONNECTED ;
   wire [3:3]\NLW_internal_y_reg[15]_i_3_O_UNCONNECTED ;
   wire [3:0]NLW_is_cross1_carry_O_UNCONNECTED;
@@ -680,7 +683,7 @@ module design_3_framewriter_0_0_framewriter
   wire [3:3]NLW_pipe_dx_sq_reg_i_1_CO_UNCONNECTED;
   wire [3:3]NLW_pixel_index__1_carry__1_CO_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hFBAA)) 
     \FSM_onehot_current_state[0]_i_1 
@@ -689,7 +692,7 @@ module design_3_framewriter_0_0_framewriter
         .I2(vsync_sync1),
         .I3(\FSM_onehot_current_state_reg_n_0_[0] ),
         .O(\FSM_onehot_current_state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h4444F444)) 
     \FSM_onehot_current_state[1]_i_1 
@@ -700,68 +703,63 @@ module design_3_framewriter_0_0_framewriter
         .I4(vsync_sync1),
         .O(\FSM_onehot_current_state[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000001000)) 
+    .INIT(64'h0000000000000040)) 
     \FSM_onehot_current_state[1]_i_2 
        (.I0(\FSM_onehot_current_state[1]_i_3_n_0 ),
-        .I1(\FSM_onehot_current_state[1]_i_4_n_0 ),
-        .I2(internal_y[3]),
-        .I3(internal_y[2]),
+        .I1(internal_y[3]),
+        .I2(internal_y[2]),
+        .I3(\FSM_onehot_current_state[1]_i_4_n_0 ),
         .I4(\FSM_onehot_current_state[1]_i_5_n_0 ),
-        .I5(\FSM_onehot_current_state[1]_i_6_n_0 ),
+        .I5(\internal_x[15]_i_2_n_0 ),
         .O(frame_done));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \FSM_onehot_current_state[1]_i_3 
        (.I0(internal_y[15]),
         .I1(internal_y[8]),
-        .I2(\FSM_onehot_current_state[1]_i_7_n_0 ),
+        .I2(\FSM_onehot_current_state[1]_i_6_n_0 ),
         .O(\FSM_onehot_current_state[1]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFBFFF)) 
-    \FSM_onehot_current_state[1]_i_4 
-       (.I0(\internal_x[15]_i_4_n_0 ),
-        .I1(\internal_x_reg_n_0_[8] ),
-        .I2(\internal_x_reg_n_0_[5] ),
-        .I3(internal_y[6]),
-        .I4(internal_y[4]),
-        .I5(\FSM_onehot_current_state[1]_i_8_n_0 ),
-        .O(\FSM_onehot_current_state[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h7)) 
-    \FSM_onehot_current_state[1]_i_5 
+    \FSM_onehot_current_state[1]_i_4 
        (.I0(internal_y[1]),
         .I1(internal_y[0]),
+        .O(\FSM_onehot_current_state[1]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF7FFFFFFF)) 
+    \FSM_onehot_current_state[1]_i_5 
+       (.I0(\internal_x_reg_n_0_[4] ),
+        .I1(internal_y[5]),
+        .I2(internal_y[7]),
+        .I3(bram_write_enable[0]),
+        .I4(\FSM_onehot_current_state[1]_i_7_n_0 ),
+        .I5(\FSM_onehot_current_state[1]_i_8_n_0 ),
         .O(\FSM_onehot_current_state[1]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h7FFFFFFFFFFFFFFF)) 
-    \FSM_onehot_current_state[1]_i_6 
-       (.I0(\internal_x_reg_n_0_[3] ),
-        .I1(\internal_x_reg_n_0_[4] ),
-        .I2(\internal_x_reg_n_0_[2] ),
-        .I3(internal_y[5]),
-        .I4(bram_write_enable[0]),
-        .I5(internal_y[7]),
-        .O(\FSM_onehot_current_state[1]_i_6_n_0 ));
-  LUT6 #(
     .INIT(64'h0000000000000001)) 
-    \FSM_onehot_current_state[1]_i_7 
+    \FSM_onehot_current_state[1]_i_6 
        (.I0(internal_y[12]),
         .I1(internal_y[13]),
         .I2(internal_y[14]),
         .I3(internal_y[10]),
         .I4(internal_y[11]),
         .I5(internal_y[9]),
+        .O(\FSM_onehot_current_state[1]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \FSM_onehot_current_state[1]_i_7 
+       (.I0(\internal_x_reg_n_0_[5] ),
+        .I1(\internal_x_reg_n_0_[8] ),
         .O(\FSM_onehot_current_state[1]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'hFFF7)) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
     \FSM_onehot_current_state[1]_i_8 
-       (.I0(\internal_x_reg_n_0_[1] ),
-        .I1(\internal_x_reg_n_0_[0] ),
-        .I2(\internal_x_reg_n_0_[7] ),
-        .I3(\internal_x_reg_n_0_[6] ),
+       (.I0(internal_y[4]),
+        .I1(internal_y[6]),
         .O(\FSM_onehot_current_state[1]_i_8_n_0 ));
   (* FSM_ENCODED_STATES = "WAIT:0100,WRITE:1000,IDLE:0001,READ:0010" *) 
   FDSE #(
@@ -1020,7 +1018,7 @@ module design_3_framewriter_0_0_framewriter
         .I1(bram_write_enable[0]),
         .I2(in5[10]),
         .O(bram_address[10]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT1 #(
     .INIT(2'h1)) 
     bram_en_INST_0
@@ -1031,7 +1029,7 @@ module design_3_framewriter_0_0_framewriter
     bram_rst_INST_0
        (.I0(s00_axi_aresetn),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h70737070)) 
     \current_state[0]_i_1 
@@ -1041,7 +1039,7 @@ module design_3_framewriter_0_0_framewriter
         .I3(vsync_sync1),
         .I4(vsync_sync2),
         .O(next_state[0]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \current_state[1]_i_1 
@@ -1060,517 +1058,560 @@ module design_3_framewriter_0_0_framewriter
         .D(next_state[1]),
         .Q(current_state[1]),
         .R(SR));
-  LUT6 #(
-    .INIT(64'hAAAAAAAABFBBBFBF)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT5 #(
+    .INIT(32'hBBBFAAAA)) 
     \final_color_latched[15]_i_1 
-       (.I0(\final_color_latched[23]_i_5_n_0 ),
+       (.I0(\final_color_latched[23]_i_6_n_0 ),
         .I1(\final_color_latched[15]_i_2_n_0 ),
-        .I2(\final_color_latched[23]_i_3_n_0 ),
-        .I3(\final_color_latched[15]_i_3_n_0 ),
-        .I4(\final_color_latched[15]_i_4_n_0 ),
-        .I5(\final_color_latched[23]_i_2_n_0 ),
+        .I2(\final_color_latched[15]_i_3_n_0 ),
+        .I3(\final_color_latched[15]_i_4_n_0 ),
+        .I4(\final_color_latched[23]_i_2_n_0 ),
         .O(pixel_to_write_data[15]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
-    .INIT(16'hEFEE)) 
+    .INIT(16'h0001)) 
     \final_color_latched[15]_i_10 
-       (.I0(pipe_dist_sq_n_100),
-        .I1(pipe_dist_sq_n_99),
-        .I2(\final_color_latched[23]_i_28_n_0 ),
-        .I3(pipe_dist_sq_n_101),
+       (.I0(pipe_dist_sq_n_103),
+        .I1(pipe_dist_sq_n_102),
+        .I2(pipe_dist_sq_n_105),
+        .I3(pipe_dist_sq_n_104),
         .O(\final_color_latched[15]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
     \final_color_latched[15]_i_11 
-       (.I0(pipe_dist_sq_n_90),
-        .I1(pipe_dist_sq_n_91),
+       (.I0(pipe_dist_sq_n_104),
+        .I1(pipe_dist_sq_n_105),
+        .I2(pipe_dist_sq_n_102),
+        .I3(pipe_dist_sq_n_103),
+        .I4(pipe_dist_sq_n_101),
+        .I5(pipe_dist_sq_n_100),
         .O(\final_color_latched[15]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \final_color_latched[15]_i_2 
-       (.I0(\final_color_latched[15]_i_5_n_0 ),
-        .I1(pipe_dist_sq_n_94),
-        .I2(pipe_dist_sq_n_95),
-        .I3(pipe_dist_sq_n_96),
-        .I4(\final_color_latched[15]_i_6_n_0 ),
-        .I5(\final_color_latched[15]_i_7_n_0 ),
-        .O(\final_color_latched[15]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000000000BBFB)) 
-    \final_color_latched[15]_i_3 
-       (.I0(\final_color_latched[15]_i_8_n_0 ),
-        .I1(pipe_dist_sq_n_94),
-        .I2(\final_color_latched[15]_i_9_n_0 ),
-        .I3(\final_color_latched[15]_i_10_n_0 ),
-        .I4(\final_color_latched[15]_i_5_n_0 ),
-        .I5(\final_color_latched[15]_i_6_n_0 ),
-        .O(\final_color_latched[15]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0001010101010101)) 
-    \final_color_latched[15]_i_4 
-       (.I0(\final_color_latched[15]_i_6_n_0 ),
-        .I1(\final_color_latched[15]_i_11_n_0 ),
-        .I2(pipe_dist_sq_n_92),
-        .I3(pipe_dist_sq_n_93),
-        .I4(pipe_dist_sq_n_94),
-        .I5(\final_color_latched[23]_i_13_n_0 ),
-        .O(\final_color_latched[15]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \final_color_latched[15]_i_12 
+       (.I0(pipe_dist_sq_n_98),
+        .I1(pipe_dist_sq_n_97),
+        .O(\final_color_latched[15]_i_12_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \final_color_latched[15]_i_13 
+       (.I0(pipe_dist_sq_n_96),
+        .I1(pipe_dist_sq_n_95),
+        .I2(pipe_dist_sq_n_94),
+        .O(\final_color_latched[15]_i_13_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \final_color_latched[15]_i_5 
+    \final_color_latched[15]_i_14 
        (.I0(pipe_dist_sq_n_91),
         .I1(pipe_dist_sq_n_90),
         .I2(pipe_dist_sq_n_93),
         .I3(pipe_dist_sq_n_92),
-        .O(\final_color_latched[15]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \final_color_latched[15]_i_6 
-       (.I0(\final_color_latched[23]_i_23_n_0 ),
-        .I1(\final_color_latched[23]_i_22_n_0 ),
-        .I2(\final_color_latched[23]_i_21_n_0 ),
-        .I3(\final_color_latched[23]_i_20_n_0 ),
-        .O(\final_color_latched[15]_i_6_n_0 ));
+        .O(\final_color_latched[15]_i_14_n_0 ));
+  LUT6 #(
+    .INIT(64'h88880000FF8F0000)) 
+    \final_color_latched[15]_i_2 
+       (.I0(\final_color_latched[15]_i_5_n_0 ),
+        .I1(\final_color_latched[15]_i_6_n_0 ),
+        .I2(\final_color_latched[15]_i_7_n_0 ),
+        .I3(\final_color_latched[15]_i_8_n_0 ),
+        .I4(\final_color_latched[23]_i_8_n_0 ),
+        .I5(\final_color_latched[15]_i_9_n_0 ),
+        .O(\final_color_latched[15]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFF2000000000000)) 
-    \final_color_latched[15]_i_7 
+    \final_color_latched[15]_i_3 
        (.I0(pipe_dist_sq_n_101),
-        .I1(\final_color_latched[23]_i_28_n_0 ),
+        .I1(\final_color_latched[15]_i_10_n_0 ),
         .I2(pipe_dist_sq_n_99),
         .I3(pipe_dist_sq_n_100),
         .I4(pipe_dist_sq_n_97),
         .I5(pipe_dist_sq_n_98),
-        .O(\final_color_latched[15]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \final_color_latched[15]_i_8 
-       (.I0(pipe_dist_sq_n_95),
-        .I1(pipe_dist_sq_n_96),
-        .O(\final_color_latched[15]_i_8_n_0 ));
+        .O(\final_color_latched[15]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \final_color_latched[15]_i_4 
+       (.I0(pipe_dist_sq_n_93),
+        .I1(pipe_dist_sq_n_94),
+        .I2(pipe_dist_sq_n_92),
+        .I3(\final_color_latched[23]_i_13_n_0 ),
+        .I4(pipe_dist_sq_n_96),
+        .I5(pipe_dist_sq_n_95),
+        .O(\final_color_latched[15]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h1)) 
+    \final_color_latched[15]_i_5 
+       (.I0(pipe_dist_sq_n_93),
+        .I1(pipe_dist_sq_n_94),
+        .O(\final_color_latched[15]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h777777777777FF7F)) 
+    \final_color_latched[15]_i_6 
+       (.I0(pipe_dist_sq_n_96),
+        .I1(pipe_dist_sq_n_95),
+        .I2(pipe_dist_sq_n_99),
+        .I3(\final_color_latched[15]_i_11_n_0 ),
+        .I4(pipe_dist_sq_n_98),
+        .I5(pipe_dist_sq_n_97),
+        .O(\final_color_latched[15]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF10110000)) 
+    \final_color_latched[15]_i_7 
+       (.I0(pipe_dist_sq_n_100),
+        .I1(pipe_dist_sq_n_99),
+        .I2(\final_color_latched[15]_i_10_n_0 ),
+        .I3(pipe_dist_sq_n_101),
+        .I4(\final_color_latched[15]_i_12_n_0 ),
+        .I5(\final_color_latched[15]_i_13_n_0 ),
+        .O(\final_color_latched[15]_i_7_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \final_color_latched[15]_i_8 
+       (.I0(\final_color_latched[23]_i_27_n_0 ),
+        .I1(\final_color_latched[23]_i_26_n_0 ),
+        .I2(\final_color_latched[23]_i_25_n_0 ),
+        .I3(\final_color_latched[23]_i_24_n_0 ),
+        .I4(\final_color_latched[15]_i_14_n_0 ),
+        .O(\final_color_latched[15]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'hFF8A000000000000)) 
     \final_color_latched[15]_i_9 
-       (.I0(pipe_dist_sq_n_98),
-        .I1(pipe_dist_sq_n_97),
+       (.I0(pipe_dist_sq_n_97),
+        .I1(\final_color_latched[23]_i_22_n_0 ),
+        .I2(\final_color_latched[15]_i_10_n_0 ),
+        .I3(\final_color_latched[23]_i_9_n_0 ),
+        .I4(pipe_dist_sq_n_94),
+        .I5(pipe_dist_sq_n_93),
         .O(\final_color_latched[15]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'hFF54)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFF8A888A8A)) 
     \final_color_latched[23]_i_1 
        (.I0(\final_color_latched[23]_i_2_n_0 ),
         .I1(\final_color_latched[23]_i_3_n_0 ),
         .I2(\final_color_latched[23]_i_4_n_0 ),
         .I3(\final_color_latched[23]_i_5_n_0 ),
+        .I4(pipe_dist_sq_n_92),
+        .I5(\final_color_latched[23]_i_6_n_0 ),
         .O(pixel_to_write_data[23]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFD00)) 
+    .INIT(64'h00000000000000F2)) 
     \final_color_latched[23]_i_10 
-       (.I0(\final_color_latched[23]_i_28_n_0 ),
-        .I1(pipe_dist_sq_n_101),
-        .I2(pipe_dist_sq_n_100),
-        .I3(pipe_dist_sq_n_99),
-        .I4(pipe_dist_sq_n_97),
-        .I5(pipe_dist_sq_n_98),
+       (.I0(\internal_x_reg_n_0_[6] ),
+        .I1(\final_color_latched[23]_i_28_n_0 ),
+        .I2(\internal_x[15]_i_4_n_0 ),
+        .I3(\final_color_latched[23]_i_29_n_0 ),
+        .I4(\final_color_latched[23]_i_30_n_0 ),
+        .I5(\final_color_latched[23]_i_31_n_0 ),
         .O(\final_color_latched[23]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000FFFFEFEE)) 
+    .INIT(64'h0000001011111111)) 
     \final_color_latched[23]_i_11 
-       (.I0(pipe_dist_sq_n_100),
-        .I1(pipe_dist_sq_n_99),
-        .I2(\final_color_latched[23]_i_28_n_0 ),
+       (.I0(pipe_dist_sq_n_97),
+        .I1(pipe_dist_sq_n_98),
+        .I2(\final_color_latched[15]_i_10_n_0 ),
         .I3(pipe_dist_sq_n_101),
-        .I4(pipe_dist_sq_n_98),
-        .I5(\final_color_latched[23]_i_29_n_0 ),
+        .I4(pipe_dist_sq_n_100),
+        .I5(pipe_dist_sq_n_99),
         .O(\final_color_latched[23]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \final_color_latched[23]_i_12 
-       (.I0(\final_color_latched[23]_i_20_n_0 ),
-        .I1(\final_color_latched[23]_i_21_n_0 ),
-        .I2(\final_color_latched[23]_i_22_n_0 ),
-        .I3(\final_color_latched[23]_i_23_n_0 ),
-        .I4(pipe_dist_sq_n_91),
-        .I5(pipe_dist_sq_n_90),
-        .O(\final_color_latched[23]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'hFFEFEEEE)) 
-    \final_color_latched[23]_i_13 
+    \final_color_latched[23]_i_12 
        (.I0(pipe_dist_sq_n_96),
         .I1(pipe_dist_sq_n_95),
-        .I2(\final_color_latched[23]_i_28_n_0 ),
-        .I3(\final_color_latched[23]_i_30_n_0 ),
+        .I2(\final_color_latched[15]_i_10_n_0 ),
+        .I3(\final_color_latched[23]_i_22_n_0 ),
         .I4(pipe_dist_sq_n_97),
+        .O(\final_color_latched[23]_i_12_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \final_color_latched[23]_i_13 
+       (.I0(\final_color_latched[23]_i_27_n_0 ),
+        .I1(\final_color_latched[23]_i_26_n_0 ),
+        .I2(\final_color_latched[23]_i_25_n_0 ),
+        .I3(\final_color_latched[23]_i_24_n_0 ),
+        .I4(pipe_dist_sq_n_91),
+        .I5(pipe_dist_sq_n_90),
         .O(\final_color_latched[23]_i_13_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \final_color_latched[23]_i_14 
+       (.I0(pipe_dist_sq_n_95),
+        .I1(pipe_dist_sq_n_96),
+        .O(\final_color_latched[23]_i_14_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT4 #(
+    .INIT(16'hEFEE)) 
+    \final_color_latched[23]_i_15 
+       (.I0(pipe_dist_sq_n_100),
+        .I1(pipe_dist_sq_n_99),
+        .I2(\final_color_latched[15]_i_10_n_0 ),
+        .I3(pipe_dist_sq_n_101),
+        .O(\final_color_latched[23]_i_15_n_0 ));
   LUT6 #(
     .INIT(64'hFF80808080808080)) 
-    \final_color_latched[23]_i_14 
+    \final_color_latched[23]_i_16 
        (.I0(\is_cross2_inferred__2/i__carry__0_n_0 ),
         .I1(is_cross1),
         .I2(is_cross2_0),
         .I3(is_cross120_in),
         .I4(is_cross20_out),
         .I5(is_cross219_in),
-        .O(\final_color_latched[23]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT5 #(
-    .INIT(32'h3EFFFF00)) 
-    \final_color_latched[23]_i_15 
+        .O(\final_color_latched[23]_i_16_n_0 ));
+  LUT6 #(
+    .INIT(64'hFF00FF003EFFFF00)) 
+    \final_color_latched[23]_i_17 
        (.I0(internal_y[2]),
         .I1(internal_y[3]),
         .I2(internal_y[4]),
-        .I3(\final_color_latched[23]_i_31_n_0 ),
-        .I4(\internal_x[15]_i_5_n_0 ),
-        .O(\final_color_latched[23]_i_15_n_0 ));
+        .I3(\final_color_latched[23]_i_32_n_0 ),
+        .I4(\internal_x_reg_n_0_[2] ),
+        .I5(\final_color_latched[23]_i_33_n_0 ),
+        .O(\final_color_latched[23]_i_17_n_0 ));
   LUT6 #(
     .INIT(64'hEEEEECCC00000000)) 
-    \final_color_latched[23]_i_16 
+    \final_color_latched[23]_i_18 
        (.I0(\internal_x_reg_n_0_[8] ),
         .I1(\internal_x[15]_i_4_n_0 ),
         .I2(\internal_x_reg_n_0_[3] ),
         .I3(\internal_x_reg_n_0_[4] ),
         .I4(\internal_x_reg_n_0_[5] ),
-        .I5(\final_color_latched[23]_i_32_n_0 ),
-        .O(\final_color_latched[23]_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFBFFFBFFFBFFFF)) 
-    \final_color_latched[23]_i_17 
-       (.I0(\final_color_latched[23]_i_33_n_0 ),
-        .I1(\FSM_onehot_current_state[1]_i_7_n_0 ),
-        .I2(\final_color_latched[23]_i_34_n_0 ),
-        .I3(\final_color_latched[23]_i_35_n_0 ),
-        .I4(internal_y[5]),
-        .I5(\final_color_latched[23]_i_36_n_0 ),
-        .O(\final_color_latched[23]_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFBFBABABABBBBBB)) 
-    \final_color_latched[23]_i_18 
-       (.I0(\final_color_latched[23]_i_37_n_0 ),
-        .I1(\internal_x[15]_i_4_n_0 ),
-        .I2(\internal_x[15]_i_7_n_0 ),
-        .I3(\internal_x_reg_n_0_[2] ),
-        .I4(\internal_x_reg_n_0_[3] ),
-        .I5(\internal_x_reg_n_0_[4] ),
+        .I5(\final_color_latched[23]_i_34_n_0 ),
         .O(\final_color_latched[23]_i_18_n_0 ));
   LUT6 #(
-    .INIT(64'h53FFFFFF53FFFF53)) 
+    .INIT(64'hFFFFFFFFFFFFF1FF)) 
     \final_color_latched[23]_i_19 
-       (.I0(\final_color_latched[23]_i_38_n_0 ),
-        .I1(\internal_x[15]_i_5_n_0 ),
-        .I2(\final_color_latched[23]_i_31_n_0 ),
+       (.I0(\final_color_latched[23]_i_35_n_0 ),
+        .I1(internal_y[5]),
+        .I2(\final_color_latched[23]_i_36_n_0 ),
+        .I3(\FSM_onehot_current_state[1]_i_6_n_0 ),
+        .I4(\final_color_latched[23]_i_37_n_0 ),
+        .I5(\final_color_latched[23]_i_38_n_0 ),
+        .O(\final_color_latched[23]_i_19_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000FFFFFEFF)) 
+    \final_color_latched[23]_i_2 
+       (.I0(\final_color_latched[23]_i_7_n_0 ),
+        .I1(pipe_dist_sq_n_93),
+        .I2(pipe_dist_sq_n_94),
+        .I3(\final_color_latched[23]_i_8_n_0 ),
+        .I4(\final_color_latched[23]_i_9_n_0 ),
+        .I5(\final_color_latched[23]_i_10_n_0 ),
+        .O(\final_color_latched[23]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFAAABBBBBBBBBBB)) 
+    \final_color_latched[23]_i_20 
+       (.I0(\final_color_latched[23]_i_39_n_0 ),
+        .I1(\internal_x[15]_i_4_n_0 ),
+        .I2(\internal_x_reg_n_0_[2] ),
+        .I3(\internal_x_reg_n_0_[3] ),
+        .I4(\internal_x_reg_n_0_[4] ),
+        .I5(\FSM_onehot_current_state[1]_i_7_n_0 ),
+        .O(\final_color_latched[23]_i_20_n_0 ));
+  LUT6 #(
+    .INIT(64'h53FFFFFF53FFFF53)) 
+    \final_color_latched[23]_i_21 
+       (.I0(\final_color_latched[23]_i_40_n_0 ),
+        .I1(\final_color_latched[23]_i_41_n_0 ),
+        .I2(\final_color_latched[23]_i_32_n_0 ),
         .I3(internal_y[4]),
         .I4(internal_y[3]),
         .I5(internal_y[2]),
-        .O(\final_color_latched[23]_i_19_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000155)) 
-    \final_color_latched[23]_i_2 
-       (.I0(\final_color_latched[23]_i_6_n_0 ),
-        .I1(pipe_dist_sq_n_104),
-        .I2(pipe_dist_sq_n_105),
-        .I3(pipe_dist_sq_n_103),
-        .I4(\final_color_latched[23]_i_7_n_0 ),
-        .I5(\final_color_latched[23]_i_8_n_0 ),
-        .O(\final_color_latched[23]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \final_color_latched[23]_i_20 
-       (.I0(pipe_dist_sq_n_83),
-        .I1(pipe_dist_sq_n_82),
-        .I2(pipe_dist_sq_n_85),
-        .I3(pipe_dist_sq_n_84),
-        .O(\final_color_latched[23]_i_20_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \final_color_latched[23]_i_21 
-       (.I0(pipe_dist_sq_n_87),
-        .I1(pipe_dist_sq_n_86),
-        .I2(pipe_dist_sq_n_89),
-        .I3(pipe_dist_sq_n_88),
         .O(\final_color_latched[23]_i_21_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \final_color_latched[23]_i_22 
-       (.I0(pipe_dist_sq_n_75),
-        .I1(pipe_dist_sq_n_74),
-        .I2(pipe_dist_sq_n_77),
-        .I3(pipe_dist_sq_n_76),
-        .O(\final_color_latched[23]_i_22_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \final_color_latched[23]_i_23 
-       (.I0(pipe_dist_sq_n_79),
-        .I1(pipe_dist_sq_n_78),
-        .I2(pipe_dist_sq_n_81),
-        .I3(pipe_dist_sq_n_80),
-        .O(\final_color_latched[23]_i_23_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \final_color_latched[23]_i_24 
-       (.I0(pipe_dist_sq_n_96),
-        .I1(pipe_dist_sq_n_95),
-        .I2(pipe_dist_sq_n_94),
-        .O(\final_color_latched[23]_i_24_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000002E3E2E3F)) 
-    \final_color_latched[23]_i_25 
-       (.I0(\final_color_latched[23]_i_39_n_0 ),
-        .I1(\internal_x_reg_n_0_[5] ),
-        .I2(\internal_x_reg_n_0_[7] ),
-        .I3(\internal_x_reg_n_0_[2] ),
-        .I4(\internal_x_reg_n_0_[1] ),
-        .I5(\final_color_latched[23]_i_40_n_0 ),
-        .O(\final_color_latched[23]_i_25_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFEAAAAAAAAAAAA)) 
-    \final_color_latched[23]_i_26 
-       (.I0(\final_color_latched[23]_i_41_n_0 ),
-        .I1(internal_y[2]),
-        .I2(internal_y[3]),
-        .I3(internal_y[1]),
-        .I4(internal_y[5]),
-        .I5(internal_y[4]),
-        .O(\final_color_latched[23]_i_26_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFD)) 
-    \final_color_latched[23]_i_27 
-       (.I0(\FSM_onehot_current_state[1]_i_7_n_0 ),
-        .I1(internal_y[8]),
-        .I2(internal_y[15]),
-        .I3(internal_y[7]),
-        .I4(internal_y[6]),
-        .O(\final_color_latched[23]_i_27_n_0 ));
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \final_color_latched[23]_i_28 
-       (.I0(pipe_dist_sq_n_103),
-        .I1(pipe_dist_sq_n_102),
-        .I2(pipe_dist_sq_n_105),
-        .I3(pipe_dist_sq_n_104),
-        .O(\final_color_latched[23]_i_28_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \final_color_latched[23]_i_29 
-       (.I0(pipe_dist_sq_n_96),
-        .I1(pipe_dist_sq_n_95),
-        .I2(pipe_dist_sq_n_97),
-        .O(\final_color_latched[23]_i_29_n_0 ));
-  LUT6 #(
-    .INIT(64'h0010101010101010)) 
-    \final_color_latched[23]_i_3 
-       (.I0(pipe_dist_sq_n_93),
-        .I1(pipe_dist_sq_n_94),
-        .I2(\final_color_latched[23]_i_9_n_0 ),
-        .I3(pipe_dist_sq_n_95),
-        .I4(pipe_dist_sq_n_96),
-        .I5(\final_color_latched[23]_i_10_n_0 ),
-        .O(\final_color_latched[23]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \final_color_latched[23]_i_30 
        (.I0(pipe_dist_sq_n_101),
         .I1(pipe_dist_sq_n_100),
         .I2(pipe_dist_sq_n_99),
         .I3(pipe_dist_sq_n_98),
+        .O(\final_color_latched[23]_i_22_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \final_color_latched[23]_i_23 
+       (.I0(pipe_dist_sq_n_90),
+        .I1(pipe_dist_sq_n_91),
+        .O(\final_color_latched[23]_i_23_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \final_color_latched[23]_i_24 
+       (.I0(pipe_dist_sq_n_77),
+        .I1(pipe_dist_sq_n_74),
+        .I2(pipe_dist_sq_n_80),
+        .I3(pipe_dist_sq_n_79),
+        .O(\final_color_latched[23]_i_24_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \final_color_latched[23]_i_25 
+       (.I0(pipe_dist_sq_n_84),
+        .I1(pipe_dist_sq_n_83),
+        .I2(pipe_dist_sq_n_89),
+        .I3(pipe_dist_sq_n_86),
+        .O(\final_color_latched[23]_i_25_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \final_color_latched[23]_i_26 
+       (.I0(pipe_dist_sq_n_76),
+        .I1(pipe_dist_sq_n_75),
+        .I2(pipe_dist_sq_n_81),
+        .I3(pipe_dist_sq_n_78),
+        .O(\final_color_latched[23]_i_26_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \final_color_latched[23]_i_27 
+       (.I0(pipe_dist_sq_n_85),
+        .I1(pipe_dist_sq_n_82),
+        .I2(pipe_dist_sq_n_88),
+        .I3(pipe_dist_sq_n_87),
+        .O(\final_color_latched[23]_i_27_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000002E3E2E3F)) 
+    \final_color_latched[23]_i_28 
+       (.I0(\final_color_latched[23]_i_33_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[7] ),
+        .I3(\internal_x_reg_n_0_[2] ),
+        .I4(\internal_x_reg_n_0_[1] ),
+        .I5(\final_color_latched[23]_i_42_n_0 ),
+        .O(\final_color_latched[23]_i_28_n_0 ));
+  LUT6 #(
+    .INIT(64'h8000808080008000)) 
+    \final_color_latched[23]_i_29 
+       (.I0(\internal_x_reg_n_0_[6] ),
+        .I1(\internal_x_reg_n_0_[7] ),
+        .I2(\internal_x_reg_n_0_[5] ),
+        .I3(\final_color_latched[23]_i_43_n_0 ),
+        .I4(\internal_x[15]_i_5_n_0 ),
+        .I5(\internal_x_reg_n_0_[2] ),
+        .O(\final_color_latched[23]_i_29_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000BF00000000)) 
+    \final_color_latched[23]_i_3 
+       (.I0(\final_color_latched[23]_i_11_n_0 ),
+        .I1(pipe_dist_sq_n_95),
+        .I2(pipe_dist_sq_n_96),
+        .I3(pipe_dist_sq_n_93),
+        .I4(pipe_dist_sq_n_94),
+        .I5(\final_color_latched[23]_i_8_n_0 ),
+        .O(\final_color_latched[23]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFEFEEEEEEEEEEEE)) 
+    \final_color_latched[23]_i_30 
+       (.I0(\internal_x[15]_i_4_n_0 ),
+        .I1(\internal_x_reg_n_0_[8] ),
+        .I2(\final_color_latched[23]_i_44_n_0 ),
+        .I3(internal_y[1]),
+        .I4(internal_y[5]),
+        .I5(internal_y[4]),
         .O(\final_color_latched[23]_i_30_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFD)) 
+    \final_color_latched[23]_i_31 
+       (.I0(\FSM_onehot_current_state[1]_i_6_n_0 ),
+        .I1(internal_y[8]),
+        .I2(internal_y[15]),
+        .I3(internal_y[7]),
+        .I4(internal_y[6]),
+        .O(\final_color_latched[23]_i_31_n_0 ));
   LUT6 #(
     .INIT(64'h0004000400040404)) 
-    \final_color_latched[23]_i_31 
-       (.I0(\final_color_latched[23]_i_42_n_0 ),
-        .I1(\final_color_latched[23]_i_43_n_0 ),
-        .I2(\final_color_latched[23]_i_44_n_0 ),
+    \final_color_latched[23]_i_32 
+       (.I0(\final_color_latched[23]_i_45_n_0 ),
+        .I1(\final_color_latched[23]_i_46_n_0 ),
+        .I2(\final_color_latched[23]_i_47_n_0 ),
         .I3(axi_framewriter_myScore[3]),
         .I4(axi_framewriter_myScore[2]),
         .I5(axi_framewriter_myScore[1]),
-        .O(\final_color_latched[23]_i_31_n_0 ));
+        .O(\final_color_latched[23]_i_32_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \final_color_latched[23]_i_33 
+       (.I0(\internal_x_reg_n_0_[3] ),
+        .I1(\internal_x_reg_n_0_[4] ),
+        .O(\final_color_latched[23]_i_33_n_0 ));
   LUT6 #(
-    .INIT(64'h0000001FFFFFFFFF)) 
-    \final_color_latched[23]_i_32 
-       (.I0(\internal_x_reg_n_0_[2] ),
-        .I1(\final_color_latched[23]_i_45_n_0 ),
-        .I2(\internal_x_reg_n_0_[5] ),
+    .INIT(64'h00000057FFFFFFFF)) 
+    \final_color_latched[23]_i_34 
+       (.I0(\internal_x_reg_n_0_[5] ),
+        .I1(\internal_x_reg_n_0_[2] ),
+        .I2(\final_color_latched[23]_i_43_n_0 ),
         .I3(\internal_x_reg_n_0_[6] ),
         .I4(\internal_x_reg_n_0_[7] ),
         .I5(\internal_x_reg_n_0_[8] ),
-        .O(\final_color_latched[23]_i_32_n_0 ));
+        .O(\final_color_latched[23]_i_34_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'hA8)) 
+    \final_color_latched[23]_i_35 
+       (.I0(internal_y[4]),
+        .I1(internal_y[2]),
+        .I2(internal_y[3]),
+        .O(\final_color_latched[23]_i_35_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hEEEA)) 
-    \final_color_latched[23]_i_33 
+    \final_color_latched[23]_i_36 
        (.I0(\internal_x[15]_i_4_n_0 ),
         .I1(internal_y[5]),
         .I2(internal_y[3]),
         .I3(internal_y[4]),
-        .O(\final_color_latched[23]_i_33_n_0 ));
+        .O(\final_color_latched[23]_i_36_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
-    \final_color_latched[23]_i_34 
-       (.I0(internal_y[6]),
-        .I1(internal_y[7]),
-        .O(\final_color_latched[23]_i_34_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \final_color_latched[23]_i_35 
+    \final_color_latched[23]_i_37 
        (.I0(internal_y[8]),
         .I1(internal_y[15]),
-        .O(\final_color_latched[23]_i_35_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+        .O(\final_color_latched[23]_i_37_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \final_color_latched[23]_i_38 
+       (.I0(internal_y[6]),
+        .I1(internal_y[7]),
+        .O(\final_color_latched[23]_i_38_n_0 ));
   LUT3 #(
     .INIT(8'hA8)) 
-    \final_color_latched[23]_i_36 
-       (.I0(internal_y[4]),
-        .I1(internal_y[2]),
-        .I2(internal_y[3]),
-        .O(\final_color_latched[23]_i_36_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hA8)) 
-    \final_color_latched[23]_i_37 
+    \final_color_latched[23]_i_39 
        (.I0(\internal_x_reg_n_0_[8] ),
         .I1(\internal_x_reg_n_0_[7] ),
         .I2(\internal_x_reg_n_0_[6] ),
-        .O(\final_color_latched[23]_i_37_n_0 ));
+        .O(\final_color_latched[23]_i_39_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT5 #(
+    .INIT(32'hFFFF007F)) 
+    \final_color_latched[23]_i_4 
+       (.I0(\final_color_latched[23]_i_12_n_0 ),
+        .I1(pipe_dist_sq_n_94),
+        .I2(pipe_dist_sq_n_93),
+        .I3(pipe_dist_sq_n_92),
+        .I4(\final_color_latched[23]_i_13_n_0 ),
+        .O(\final_color_latched[23]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h28287F00)) 
-    \final_color_latched[23]_i_38 
+    \final_color_latched[23]_i_40 
        (.I0(internal_y[4]),
         .I1(internal_y[2]),
         .I2(internal_y[3]),
         .I3(\internal_x_reg_n_0_[2] ),
-        .I4(\final_color_latched[23]_i_39_n_0 ),
-        .O(\final_color_latched[23]_i_38_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \final_color_latched[23]_i_39 
-       (.I0(\internal_x_reg_n_0_[3] ),
+        .I4(\final_color_latched[23]_i_33_n_0 ),
+        .O(\final_color_latched[23]_i_40_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \final_color_latched[23]_i_41 
+       (.I0(\internal_x_reg_n_0_[2] ),
         .I1(\internal_x_reg_n_0_[4] ),
-        .O(\final_color_latched[23]_i_39_n_0 ));
-  LUT6 #(
-    .INIT(64'h0300001000000010)) 
-    \final_color_latched[23]_i_4 
-       (.I0(\final_color_latched[23]_i_11_n_0 ),
-        .I1(\final_color_latched[23]_i_12_n_0 ),
-        .I2(pipe_dist_sq_n_92),
-        .I3(pipe_dist_sq_n_93),
-        .I4(pipe_dist_sq_n_94),
-        .I5(\final_color_latched[23]_i_13_n_0 ),
-        .O(\final_color_latched[23]_i_4_n_0 ));
+        .I2(\internal_x_reg_n_0_[3] ),
+        .O(\final_color_latched[23]_i_41_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000005700)) 
-    \final_color_latched[23]_i_40 
+    \final_color_latched[23]_i_42 
        (.I0(\internal_x_reg_n_0_[2] ),
         .I1(\internal_x_reg_n_0_[0] ),
         .I2(\internal_x_reg_n_0_[1] ),
         .I3(\internal_x_reg_n_0_[5] ),
         .I4(\internal_x_reg_n_0_[3] ),
         .I5(\internal_x_reg_n_0_[4] ),
-        .O(\final_color_latched[23]_i_40_n_0 ));
-  LUT6 #(
-    .INIT(64'h8000808080008000)) 
-    \final_color_latched[23]_i_41 
-       (.I0(\internal_x_reg_n_0_[6] ),
-        .I1(\internal_x_reg_n_0_[7] ),
-        .I2(\internal_x_reg_n_0_[5] ),
-        .I3(\final_color_latched[23]_i_45_n_0 ),
-        .I4(\internal_x[15]_i_6_n_0 ),
-        .I5(\internal_x_reg_n_0_[2] ),
-        .O(\final_color_latched[23]_i_41_n_0 ));
+        .O(\final_color_latched[23]_i_42_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \final_color_latched[23]_i_43 
+       (.I0(\internal_x_reg_n_0_[3] ),
+        .I1(\internal_x_reg_n_0_[4] ),
+        .O(\final_color_latched[23]_i_43_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \final_color_latched[23]_i_44 
+       (.I0(internal_y[3]),
+        .I1(internal_y[2]),
+        .O(\final_color_latched[23]_i_44_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \final_color_latched[23]_i_42 
+    \final_color_latched[23]_i_45 
        (.I0(axi_framewriter_myScore[11]),
         .I1(axi_framewriter_myScore[13]),
         .I2(axi_framewriter_myScore[7]),
         .I3(axi_framewriter_myScore[10]),
-        .O(\final_color_latched[23]_i_42_n_0 ));
+        .O(\final_color_latched[23]_i_45_n_0 ));
   LUT4 #(
     .INIT(16'h0001)) 
-    \final_color_latched[23]_i_43 
+    \final_color_latched[23]_i_46 
        (.I0(axi_framewriter_myScore[6]),
         .I1(axi_framewriter_myScore[8]),
         .I2(axi_framewriter_myScore[4]),
         .I3(axi_framewriter_myScore[15]),
-        .O(\final_color_latched[23]_i_43_n_0 ));
+        .O(\final_color_latched[23]_i_46_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \final_color_latched[23]_i_44 
+    \final_color_latched[23]_i_47 
        (.I0(axi_framewriter_myScore[5]),
         .I1(axi_framewriter_myScore[14]),
         .I2(axi_framewriter_myScore[9]),
         .I3(axi_framewriter_myScore[12]),
-        .O(\final_color_latched[23]_i_44_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \final_color_latched[23]_i_45 
-       (.I0(\internal_x_reg_n_0_[3] ),
-        .I1(\internal_x_reg_n_0_[4] ),
-        .O(\final_color_latched[23]_i_45_n_0 ));
+        .O(\final_color_latched[23]_i_47_n_0 ));
   LUT6 #(
-    .INIT(64'hAAEAAAEFAAEAAAEA)) 
+    .INIT(64'h1011101110111111)) 
     \final_color_latched[23]_i_5 
-       (.I0(\final_color_latched[23]_i_14_n_0 ),
-        .I1(\final_color_latched[23]_i_15_n_0 ),
-        .I2(\final_color_latched[23]_i_16_n_0 ),
-        .I3(\final_color_latched[23]_i_17_n_0 ),
-        .I4(\final_color_latched[23]_i_18_n_0 ),
-        .I5(\final_color_latched[23]_i_19_n_0 ),
+       (.I0(pipe_dist_sq_n_94),
+        .I1(pipe_dist_sq_n_93),
+        .I2(\final_color_latched[23]_i_14_n_0 ),
+        .I3(pipe_dist_sq_n_97),
+        .I4(pipe_dist_sq_n_98),
+        .I5(\final_color_latched[23]_i_15_n_0 ),
         .O(\final_color_latched[23]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hAAEAAAEFAAEAAAEA)) 
     \final_color_latched[23]_i_6 
-       (.I0(\final_color_latched[23]_i_20_n_0 ),
-        .I1(\final_color_latched[23]_i_21_n_0 ),
-        .I2(\final_color_latched[23]_i_22_n_0 ),
-        .I3(\final_color_latched[23]_i_23_n_0 ),
-        .I4(\final_color_latched[23]_i_24_n_0 ),
-        .I5(\final_color_latched[15]_i_5_n_0 ),
+       (.I0(\final_color_latched[23]_i_16_n_0 ),
+        .I1(\final_color_latched[23]_i_17_n_0 ),
+        .I2(\final_color_latched[23]_i_18_n_0 ),
+        .I3(\final_color_latched[23]_i_19_n_0 ),
+        .I4(\final_color_latched[23]_i_20_n_0 ),
+        .I5(\final_color_latched[23]_i_21_n_0 ),
         .O(\final_color_latched[23]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hFFFFFFFFFFFFFFE0)) 
     \final_color_latched[23]_i_7 
-       (.I0(pipe_dist_sq_n_98),
-        .I1(pipe_dist_sq_n_99),
-        .I2(pipe_dist_sq_n_100),
-        .I3(pipe_dist_sq_n_101),
+       (.I0(pipe_dist_sq_n_104),
+        .I1(pipe_dist_sq_n_105),
+        .I2(pipe_dist_sq_n_103),
+        .I3(pipe_dist_sq_n_97),
         .I4(pipe_dist_sq_n_102),
-        .I5(pipe_dist_sq_n_97),
+        .I5(\final_color_latched[23]_i_22_n_0 ),
         .O(\final_color_latched[23]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000002)) 
+    .INIT(64'h0000000000000001)) 
     \final_color_latched[23]_i_8 
-       (.I0(\internal_x_reg_n_0_[6] ),
-        .I1(\final_color_latched[23]_i_25_n_0 ),
-        .I2(\internal_x[15]_i_4_n_0 ),
-        .I3(\internal_x_reg_n_0_[8] ),
+       (.I0(pipe_dist_sq_n_92),
+        .I1(\final_color_latched[23]_i_23_n_0 ),
+        .I2(\final_color_latched[23]_i_24_n_0 ),
+        .I3(\final_color_latched[23]_i_25_n_0 ),
         .I4(\final_color_latched[23]_i_26_n_0 ),
         .I5(\final_color_latched[23]_i_27_n_0 ),
         .O(\final_color_latched[23]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \final_color_latched[23]_i_9 
-       (.I0(pipe_dist_sq_n_92),
-        .I1(\final_color_latched[15]_i_11_n_0 ),
-        .I2(\final_color_latched[23]_i_23_n_0 ),
-        .I3(\final_color_latched[23]_i_22_n_0 ),
-        .I4(\final_color_latched[23]_i_21_n_0 ),
-        .I5(\final_color_latched[23]_i_20_n_0 ),
+       (.I0(pipe_dist_sq_n_95),
+        .I1(pipe_dist_sq_n_96),
         .O(\final_color_latched[23]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT5 #(
-    .INIT(32'hABABABAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hBA)) 
     \final_color_latched[7]_i_1 
-       (.I0(\final_color_latched[23]_i_5_n_0 ),
-        .I1(\final_color_latched[23]_i_3_n_0 ),
+       (.I0(\final_color_latched[23]_i_6_n_0 ),
+        .I1(\final_color_latched[15]_i_2_n_0 ),
         .I2(\final_color_latched[23]_i_2_n_0 ),
-        .I3(\final_color_latched[23]_i_4_n_0 ),
-        .I4(\final_color_latched[15]_i_3_n_0 ),
         .O(pixel_to_write_data[7]));
   FDRE \final_color_latched_reg[15] 
        (.C(s00_axi_aclk),
@@ -2086,162 +2127,180 @@ module design_3_framewriter_0_0_framewriter
        (.I0(internal_y[0]),
         .I1(internal_y[1]),
         .O(i__carry_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \internal_x[0]_i_1 
        (.I0(\internal_x_reg_n_0_[0] ),
         .O(internal_x[0]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[10]_i_1 
-       (.I0(data0[10]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[10]),
         .O(internal_x[10]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[11]_i_1 
-       (.I0(data0[11]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[11]),
         .O(internal_x[11]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[12]_i_1 
-       (.I0(data0[12]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[12]),
         .O(internal_x[12]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[13]_i_1 
-       (.I0(data0[13]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[13]),
         .O(internal_x[13]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[14]_i_1 
-       (.I0(data0[14]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[14]),
         .O(internal_x[14]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[15]_i_1 
-       (.I0(data0[15]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[15]),
         .O(internal_x[15]));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    \internal_x[15]_i_3 
+    .INIT(64'hFFFEFFFFFFFFFFFF)) 
+    \internal_x[15]_i_2 
        (.I0(\internal_x[15]_i_4_n_0 ),
-        .I1(\internal_x[15]_i_5_n_0 ),
+        .I1(\internal_x_reg_n_0_[7] ),
         .I2(\internal_x_reg_n_0_[6] ),
-        .I3(\internal_x_reg_n_0_[7] ),
-        .I4(\internal_x[15]_i_6_n_0 ),
-        .I5(\internal_x[15]_i_7_n_0 ),
-        .O(\internal_x[15]_i_3_n_0 ));
+        .I3(\internal_x[15]_i_5_n_0 ),
+        .I4(\internal_x_reg_n_0_[2] ),
+        .I5(\internal_x_reg_n_0_[3] ),
+        .O(\internal_x[15]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \internal_x[15]_i_4 
-       (.I0(\internal_x[15]_i_8_n_0 ),
+       (.I0(\internal_x[15]_i_6_n_0 ),
         .I1(\internal_x_reg_n_0_[14] ),
         .I2(\internal_x_reg_n_0_[15] ),
         .I3(\internal_x_reg_n_0_[10] ),
         .I4(\internal_x_reg_n_0_[11] ),
         .I5(\internal_x_reg_n_0_[9] ),
         .O(\internal_x[15]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \internal_x[15]_i_5 
-       (.I0(\internal_x_reg_n_0_[2] ),
-        .I1(\internal_x_reg_n_0_[4] ),
-        .I2(\internal_x_reg_n_0_[3] ),
-        .O(\internal_x[15]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h7)) 
-    \internal_x[15]_i_6 
+    \internal_x[15]_i_5 
        (.I0(\internal_x_reg_n_0_[0] ),
         .I1(\internal_x_reg_n_0_[1] ),
-        .O(\internal_x[15]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \internal_x[15]_i_7 
-       (.I0(\internal_x_reg_n_0_[5] ),
-        .I1(\internal_x_reg_n_0_[8] ),
-        .O(\internal_x[15]_i_7_n_0 ));
+        .O(\internal_x[15]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
-    \internal_x[15]_i_8 
+    \internal_x[15]_i_6 
        (.I0(\internal_x_reg_n_0_[12] ),
         .I1(\internal_x_reg_n_0_[13] ),
-        .O(\internal_x[15]_i_8_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
+        .O(\internal_x[15]_i_6_n_0 ));
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[1]_i_1 
-       (.I0(data0[1]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[1]),
         .O(internal_x[1]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[2]_i_1 
-       (.I0(data0[2]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[2]),
         .O(internal_x[2]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[3]_i_1 
-       (.I0(data0[3]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[3]),
         .O(internal_x[3]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[4]_i_1 
-       (.I0(data0[4]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[4]),
         .O(internal_x[4]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[5]_i_1 
-       (.I0(data0[5]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[5]),
         .O(internal_x[5]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[6]_i_1 
-       (.I0(data0[6]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[6]),
         .O(internal_x[6]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[7]_i_1 
-       (.I0(data0[7]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[7]),
         .O(internal_x[7]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[8]_i_1 
-       (.I0(data0[8]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[8]),
         .O(internal_x[8]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hBFFF0000)) 
     \internal_x[9]_i_1 
-       (.I0(data0[9]),
-        .I1(\internal_x[15]_i_3_n_0 ),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(data0[9]),
         .O(internal_x[9]));
   FDRE \internal_x_reg[0] 
        (.C(s00_axi_aclk),
@@ -2292,12 +2351,12 @@ module design_3_framewriter_0_0_framewriter
         .D(internal_x[15]),
         .Q(\internal_x_reg_n_0_[15] ),
         .R(SR));
-  CARRY4 \internal_x_reg[15]_i_2 
+  CARRY4 \internal_x_reg[15]_i_3 
        (.CI(\internal_x_reg[12]_i_2_n_0 ),
-        .CO({\NLW_internal_x_reg[15]_i_2_CO_UNCONNECTED [3:2],\internal_x_reg[15]_i_2_n_2 ,\internal_x_reg[15]_i_2_n_3 }),
+        .CO({\NLW_internal_x_reg[15]_i_3_CO_UNCONNECTED [3:2],\internal_x_reg[15]_i_3_n_2 ,\internal_x_reg[15]_i_3_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_internal_x_reg[15]_i_2_O_UNCONNECTED [3],data0[15:13]}),
+        .O({\NLW_internal_x_reg[15]_i_3_O_UNCONNECTED [3],data0[15:13]}),
         .S({1'b0,\internal_x_reg_n_0_[15] ,\internal_x_reg_n_0_[14] ,\internal_x_reg_n_0_[13] }));
   FDRE \internal_x_reg[1] 
        (.C(s00_axi_aclk),
@@ -2372,49 +2431,51 @@ module design_3_framewriter_0_0_framewriter
     \internal_y[0]_i_1 
        (.I0(internal_y[0]),
         .O(\internal_y[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[10]_i_1 
        (.I0(\internal_y_reg[12]_i_2_n_6 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[11]_i_1 
        (.I0(\internal_y_reg[12]_i_2_n_5 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[12]_i_1 
        (.I0(\internal_y_reg[12]_i_2_n_4 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[13]_i_1 
        (.I0(\internal_y_reg[15]_i_3_n_7 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[14]_i_1 
        (.I0(\internal_y_reg[15]_i_3_n_6 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[14]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'h4000000000000000)) 
     \internal_y[15]_i_1 
-       (.I0(\internal_x[15]_i_3_n_0 ),
-        .I1(current_state[0]),
-        .I2(current_state[1]),
+       (.I0(\internal_x[15]_i_2_n_0 ),
+        .I1(\internal_x_reg_n_0_[5] ),
+        .I2(\internal_x_reg_n_0_[8] ),
+        .I3(\internal_x_reg_n_0_[4] ),
+        .I4(current_state[0]),
+        .I5(current_state[1]),
         .O(internal_y0));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[15]_i_2 
@@ -2431,7 +2492,7 @@ module design_3_framewriter_0_0_framewriter
         .I4(internal_y[7]),
         .I5(internal_y[2]),
         .O(\internal_y[15]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'hFF7F)) 
     \internal_y[15]_i_5 
@@ -2440,62 +2501,63 @@ module design_3_framewriter_0_0_framewriter
         .I2(internal_y[6]),
         .I3(internal_y[4]),
         .O(\internal_y[15]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[1]_i_1 
        (.I0(\internal_y_reg[4]_i_2_n_7 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[2]_i_1 
        (.I0(\internal_y_reg[4]_i_2_n_6 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[3]_i_1 
        (.I0(\internal_y_reg[4]_i_2_n_5 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[4]_i_1 
        (.I0(\internal_y_reg[4]_i_2_n_4 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[5]_i_1 
        (.I0(\internal_y_reg[8]_i_2_n_7 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[6]_i_1 
        (.I0(\internal_y_reg[8]_i_2_n_6 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[7]_i_1 
        (.I0(\internal_y_reg[8]_i_2_n_5 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[8]_i_1 
        (.I0(\internal_y_reg[8]_i_2_n_4 ),
         .I1(\internal_y[15]_i_4_n_0 ),
         .O(\internal_y[8]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \internal_y[9]_i_1 
@@ -3417,7 +3479,7 @@ module design_3_framewriter_0_0_framewriter
         .D(vsync_sync1),
         .Q(vsync_sync2),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h4)) 
     \x_latch[3]_i_1 

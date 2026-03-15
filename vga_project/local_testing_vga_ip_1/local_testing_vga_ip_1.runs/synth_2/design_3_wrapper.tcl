@@ -17,9 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -55,6 +53,7 @@ set_property used_in_implementation false [get_files -all y:/vga_project/local_t
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_clk_wiz_0_0/design_4_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_clk_wiz_0_0/design_4_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_clk_wiz_0_0/design_4_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_axi_vip_2_0/design_4_axi_vip_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/design_4_ooc.xdc]
 
 add_files Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/design_3.bd

@@ -1026,3 +1026,48 @@ con
 ----------------End of Script----------------
 
 11:17:00 INFO  : Disconnected from the channel tcfchan#2.
+17:05:20 INFO  : Registering command handlers for SDK TCF services
+17:05:21 INFO  : Launching XSCT server: xsct.bat -interactive Y:\vga_project\local_testing_vga_ip_1\local_testing_vga_ip_1.sdk\temp_xsdb_launch_script.tcl
+17:05:24 INFO  : XSCT server has started successfully.
+17:05:27 INFO  : Successfully done setting XSCT server connection channel  
+17:05:27 INFO  : Successfully done setting SDK workspace  
+17:05:27 INFO  : Processing command line option -hwspec Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper.hdf.
+17:05:27 INFO  : Checking for hwspec changes in the project design_3_wrapper_hw_platform_0.
+20:44:24 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1773535302277,  Project:1773499875209
+20:44:24 INFO  : Project design_3_wrapper_hw_platform_0's source hardware specification located at Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:44:35 INFO  : Copied contents of Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper.hdf into \design_3_wrapper_hw_platform_0\system.hdf.
+20:44:35 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:44:38 INFO  : 
+20:44:39 INFO  : Updating hardware inferred compiler options for vga2.
+20:44:39 INFO  : Clearing existing target manager status.
+20:45:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:45:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646032A" && level==0} -index 0' command is executed.
+20:45:24 INFO  : FPGA configured successfully with bitstream "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper_hw_platform_0/download.bit"
+20:46:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646032A" && level==0} -index 0' command is executed.
+20:46:23 INFO  : 'fpga -state' command is executed.
+20:46:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:46:23 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646032A' is selected.
+20:46:23 INFO  : 'jtag frequency' command is executed.
+20:46:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:46:23 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:23 INFO  : Processor reset is completed for 'microblaze_0'.
+20:46:23 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:24 INFO  : The application 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/vga2/Debug/vga2.elf' is downloaded to processor 'microblaze_0'.
+20:46:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646032A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646032A"} -index 0
+dow Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/vga2/Debug/vga2.elf
+----------------End of Script----------------
+
+20:46:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:24 INFO  : 'con' command is executed.
+20:46:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646032A"} -index 0
+con
+----------------End of Script----------------
+
+20:46:24 INFO  : Disconnected from the channel tcfchan#1.
