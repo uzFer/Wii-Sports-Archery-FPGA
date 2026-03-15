@@ -186,16 +186,7 @@
     // Use the delayed offset to select the bit from the newly arrived BRAM data
     assign current_pixel = bram_read_data[bram_offset_delayed];
     
-    // try 2-cycle delay output end 
-    
-    // get data from modified BRAM (with color) START
-    always @(posedge pixel_clk) begin
-        // Match the BRAM latency (1 cycle delay)
-        bram_read_data_reg <= bram_read_data; 
-    end 
-    
-    
-    // END
+
     
 
     // actual output START

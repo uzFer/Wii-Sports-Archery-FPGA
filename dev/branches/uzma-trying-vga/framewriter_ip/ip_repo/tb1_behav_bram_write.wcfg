@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2748444595285fs"></ZoomStartTime>
-      <ZoomEndTime time="2748633465327fs"></ZoomEndTime>
-      <Cursor1Time time="2749685000000fs"></Cursor1Time>
+      <ZoomStartTime time="249665416666fs"></ZoomStartTime>
+      <ZoomEndTime time="250186916667fs"></ZoomEndTime>
+      <Cursor1Time time="250100000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="282"></NameColumnWidth>
-      <ValueColumnWidth column_width="176"></ValueColumnWidth>
+      <ValueColumnWidth column_width="170"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="1" />
    <wvobject fp_name="group1346" type="group">
@@ -36,45 +36,64 @@
          <obj_property name="ElementShortName">vsync_sync2</obj_property>
          <obj_property name="ObjectShortName">vsync_sync2</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/current_state" type="array">
-         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
-         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      <wvobject fp_name="/tb1/uut/vsync_start" type="logic">
+         <obj_property name="ElementShortName">vsync_start</obj_property>
+         <obj_property name="ObjectShortName">vsync_start</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/next_state" type="array">
-         <obj_property name="ElementShortName">next_state[1:0]</obj_property>
-         <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
+      <wvobject fp_name="/tb1/uut/frame_done" type="logic">
+         <obj_property name="ElementShortName">frame_done</obj_property>
+         <obj_property name="ObjectShortName">frame_done</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/internal_x" type="array">
          <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
          <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/internal_y" type="array">
          <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
          <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_write_enable" type="array">
-         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
+      <wvobject fp_name="/tb1/uut/bram_en" type="logic">
+         <obj_property name="ElementShortName">bram_en</obj_property>
+         <obj_property name="ObjectShortName">bram_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/bram_addr_internal" type="array">
+         <obj_property name="ElementShortName">bram_addr_internal[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_addr_internal[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/bram_addr_latched" type="array">
+         <obj_property name="ElementShortName">bram_addr_latched[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_addr_latched[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb1/uut/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/bram_write_data" type="array">
          <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_address" type="array">
-         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      <wvobject fp_name="/tb1/uut/bram_write_enable" type="array">
+         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/pipe_dx" type="array">
          <obj_property name="ElementShortName">pipe_dx[15:0]</obj_property>
          <obj_property name="ObjectShortName">pipe_dx[15:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/pipe_dy" type="array">
          <obj_property name="ElementShortName">pipe_dy[15:0]</obj_property>
          <obj_property name="ObjectShortName">pipe_dy[15:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/pipe_dx_sq" type="array">
          <obj_property name="ElementShortName">pipe_dx_sq[31:0]</obj_property>
@@ -113,8 +132,8 @@
          <obj_property name="ObjectShortName">final_color[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/final_color_latched" type="array">
-         <obj_property name="ElementShortName">final_color_latched[32:0]</obj_property>
-         <obj_property name="ObjectShortName">final_color_latched[32:0]</obj_property>
+         <obj_property name="ElementShortName">final_color_latched[31:0]</obj_property>
+         <obj_property name="ObjectShortName">final_color_latched[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>
