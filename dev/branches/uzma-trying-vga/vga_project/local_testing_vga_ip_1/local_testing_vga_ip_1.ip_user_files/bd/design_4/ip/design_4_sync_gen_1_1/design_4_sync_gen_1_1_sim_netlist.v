@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Mar 14 17:00:21 2026
+// Date        : Sun Mar 15 13:10:45 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_sync_gen_1_1/design_4_sync_gen_1_1_sim_netlist.v
@@ -237,8 +237,6 @@ module design_4_sync_gen_1_1_sync_gen_v1
     VGA_G,
     VGA_B,
     s00_axi_bvalid,
-    bram_read_data,
-    pixel_clk,
     s00_axi_aclk,
     s00_axi_araddr,
     s00_axi_arvalid,
@@ -246,6 +244,8 @@ module design_4_sync_gen_1_1_sync_gen_v1
     s00_axi_wvalid,
     s00_axi_awvalid,
     s00_axi_wdata,
+    pixel_clk,
+    bram_read_data,
     s00_axi_wstrb,
     s00_axi_aresetn,
     s00_axi_bready,
@@ -266,8 +266,6 @@ module design_4_sync_gen_1_1_sync_gen_v1
   output [3:0]VGA_G;
   output [3:0]VGA_B;
   output s00_axi_bvalid;
-  input [11:0]bram_read_data;
-  input pixel_clk;
   input s00_axi_aclk;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
@@ -275,6 +273,8 @@ module design_4_sync_gen_1_1_sync_gen_v1
   input s00_axi_wvalid;
   input s00_axi_awvalid;
   input [31:0]s00_axi_wdata;
+  input pixel_clk;
+  input [11:0]bram_read_data;
   input [3:0]s00_axi_wstrb;
   input s00_axi_aresetn;
   input s00_axi_bready;
@@ -2105,7 +2105,14 @@ module design_4_sync_gen_1_1_sync_generator
   wire [16:0]bram_address;
   wire \bram_address[18]_INST_0_i_1_n_0 ;
   wire [11:0]bram_read_data;
-  wire [23:4]bram_read_data_reg;
+  wire \bram_read_data_reg_reg_n_0_[12] ;
+  wire \bram_read_data_reg_reg_n_0_[13] ;
+  wire \bram_read_data_reg_reg_n_0_[14] ;
+  wire \bram_read_data_reg_reg_n_0_[15] ;
+  wire \bram_read_data_reg_reg_n_0_[4] ;
+  wire \bram_read_data_reg_reg_n_0_[5] ;
+  wire \bram_read_data_reg_reg_n_0_[6] ;
+  wire \bram_read_data_reg_reg_n_0_[7] ;
   wire display_on_1;
   wire display_on_10;
   wire display_on_1_i_2_n_0;
@@ -2171,6 +2178,7 @@ module design_4_sync_gen_1_1_sync_generator
   wire hsync_1;
   wire hsync_1_i_1_n_0;
   wire hsync_1_i_2_n_0;
+  wire [3:0]p_0_in;
   wire pixel_clk;
   wire [16:5]pixel_index0;
   wire pixel_index0__0_carry__0_i_1_n_0;
@@ -2276,84 +2284,84 @@ module design_4_sync_gen_1_1_sync_generator
     .INIT(4'h8)) 
     \VGA_B[0]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[4]),
+        .I1(\bram_read_data_reg_reg_n_0_[4] ),
         .O(VGA_B[0]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_B[1]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[5]),
+        .I1(\bram_read_data_reg_reg_n_0_[5] ),
         .O(VGA_B[1]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_B[2]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[6]),
+        .I1(\bram_read_data_reg_reg_n_0_[6] ),
         .O(VGA_B[2]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_B[3]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[7]),
+        .I1(\bram_read_data_reg_reg_n_0_[7] ),
         .O(VGA_B[3]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_G[0]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[12]),
+        .I1(\bram_read_data_reg_reg_n_0_[12] ),
         .O(VGA_G[0]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_G[1]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[13]),
+        .I1(\bram_read_data_reg_reg_n_0_[13] ),
         .O(VGA_G[1]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_G[2]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[14]),
+        .I1(\bram_read_data_reg_reg_n_0_[14] ),
         .O(VGA_G[2]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_G[3]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[15]),
+        .I1(\bram_read_data_reg_reg_n_0_[15] ),
         .O(VGA_G[3]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_R[0]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[20]),
+        .I1(p_0_in[0]),
         .O(VGA_R[0]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_R[1]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[21]),
+        .I1(p_0_in[1]),
         .O(VGA_R[1]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_R[2]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[22]),
+        .I1(p_0_in[2]),
         .O(VGA_R[2]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \VGA_R[3]_INST_0 
        (.I0(display_on_reg_0),
-        .I1(bram_read_data_reg[23]),
+        .I1(p_0_in[3]),
         .O(VGA_R[3]));
   LUT5 #(
     .INIT(32'h00570000)) 
@@ -2520,73 +2528,73 @@ module design_4_sync_gen_1_1_sync_generator
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[4]),
-        .Q(bram_read_data_reg[12]),
+        .Q(\bram_read_data_reg_reg_n_0_[12] ),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[13] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[5]),
-        .Q(bram_read_data_reg[13]),
+        .Q(\bram_read_data_reg_reg_n_0_[13] ),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[14] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[6]),
-        .Q(bram_read_data_reg[14]),
+        .Q(\bram_read_data_reg_reg_n_0_[14] ),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[15] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[7]),
-        .Q(bram_read_data_reg[15]),
+        .Q(\bram_read_data_reg_reg_n_0_[15] ),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[20] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[8]),
-        .Q(bram_read_data_reg[20]),
+        .Q(p_0_in[0]),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[21] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[9]),
-        .Q(bram_read_data_reg[21]),
+        .Q(p_0_in[1]),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[22] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[10]),
-        .Q(bram_read_data_reg[22]),
+        .Q(p_0_in[2]),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[23] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[11]),
-        .Q(bram_read_data_reg[23]),
+        .Q(p_0_in[3]),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[4] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[0]),
-        .Q(bram_read_data_reg[4]),
+        .Q(\bram_read_data_reg_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[5] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[1]),
-        .Q(bram_read_data_reg[5]),
+        .Q(\bram_read_data_reg_reg_n_0_[5] ),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[6] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[2]),
-        .Q(bram_read_data_reg[6]),
+        .Q(\bram_read_data_reg_reg_n_0_[6] ),
         .R(1'b0));
   FDRE \bram_read_data_reg_reg[7] 
        (.C(pixel_clk),
         .CE(1'b1),
         .D(bram_read_data[3]),
-        .Q(bram_read_data_reg[7]),
+        .Q(\bram_read_data_reg_reg_n_0_[7] ),
         .R(1'b0));
   LUT6 #(
     .INIT(64'h0000000000000057)) 

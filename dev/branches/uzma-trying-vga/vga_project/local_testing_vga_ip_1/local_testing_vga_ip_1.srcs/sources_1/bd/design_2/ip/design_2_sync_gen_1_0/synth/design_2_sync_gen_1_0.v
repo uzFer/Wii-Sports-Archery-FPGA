@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:sync_gen:1
-// IP Revision: 18
+// IP Revision: 19
 
 (* X_CORE_INFO = "sync_gen_v1,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_2_sync_gen_1_0,sync_gen_v1,{}" *)
-(* CORE_GENERATION_INFO = "design_2_sync_gen_1_0,sync_gen_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sync_gen,x_ipVersion=1,x_ipCoreRevision=18,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4,EXT_RGB_WIDTH=4,COUNT_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "design_2_sync_gen_1_0,sync_gen_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sync_gen,x_ipVersion=1,x_ipCoreRevision=19,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4,EXT_RGB_WIDTH=4,COUNT_WIDTH=16}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_2_sync_gen_1_0 (
   pixel_clk,

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:sync_gen:1
-// IP Revision: 18
+// IP Revision: 19
 
 `timescale 1ns/1ps
 
