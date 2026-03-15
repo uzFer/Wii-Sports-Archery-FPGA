@@ -52,7 +52,7 @@ uint32_t current_hw_state = 0;
 // Circle Parameters
 #define CENTER_X 160
 #define CENTER_Y 120
-#define RADIUS   40
+#define RADIUS   10
 
 // Pre-calculated Sine values (scaled by 256 for integer math)
 // These represent sin(0) to sin(350 degrees) in 10-degree steps
@@ -71,6 +71,10 @@ int main ()
 {
 
    xil_printf("---Wii Sports Archery Controller Active---\n\r");
+
+   int x_pos = 120;      // Start at left boundary
+   int direction = 1;    // 1 for moving right, -1 for moving left
+   int y_fixed = 120;    // Keep Y in the middle
 
 
 	while(1)
@@ -103,38 +107,39 @@ int main ()
 		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, current_hw_state); // Update state in IP
 
 
-	   } else if ((btn_data & BTN_L_MASK) && !(last_btn_data & BTN_L_MASK)) {
-		   // --- BUTTON R (Value 2): Iterate Coordinates ---
-
-		   uint32_t x = coords[coord_idx][0];
-		   uint32_t y = coords[coord_idx][1];
-
-		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, x); // Update X in IP
-		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, y); // Update Y in IP
-		   coord_idx = (coord_idx + 1) % 3;
-
-
-	   } else if ((btn_data & BTN_C_MASK) && !(last_btn_data & BTN_C_MASK)) {
-		   // button: one of them
-
-		   is_circling = !is_circling;
 	   }
+//		   else if ((btn_data & BTN_L_MASK) && !(last_btn_data & BTN_L_MASK)) {
+//		   // --- BUTTON R (Value 2): Iterate Coordinates ---
+//
+//		   uint32_t x = coords[coord_idx][0];
+//		   uint32_t y = coords[coord_idx][1];
+//
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, x); // Update X in IP
+//		   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, y); // Update Y in IP
+//		   coord_idx = (coord_idx + 1) % 3;
+//
+//
+//	   } else if ((btn_data & BTN_C_MASK) && !(last_btn_data & BTN_C_MASK)) {
+//		   // button: one of them
+//
+//		   is_circling = !is_circling;
+//	   }
+	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 2);
 
-	   if (is_circling) {
-		   // Integer math: (Radius * Sine_Value) / Scale_Factor
-		   uint32_t x = CENTER_X + (RADIUS * get_cos(angle_idx)) / 256;
-		   uint32_t y = CENTER_Y + (RADIUS * SIN_LUT[angle_idx]) / 256;
-
-		   Xil_Out32(FRAMEWRITER_BASE + REG_X_OFFSET, x);
-		   Xil_Out32(FRAMEWRITER_BASE + REG_Y_OFFSET, y);
-
-		   angle_idx = (angle_idx + 1) % 36; // Step through 360 degrees
+	   x_pos = x_pos + direction;
+	   if (x_pos >= 180) {
+		   direction = -1; // Hit right wall, go left
 	   }
-
-
+	   else if (x_pos <= 120) {
+		   direction = 1;  // Hit left wall, go right
+	   }
+	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, (uint32_t)x_pos);
+	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, (uint32_t)y_fixed);
 
 	   last_btn_data = btn_data; // Store for edge detection
 	   for(int i=0; i<10000; i++); // Simple debounce delay
+
+
 	}
 
 	xil_printf("---Exiting main---\n\r");

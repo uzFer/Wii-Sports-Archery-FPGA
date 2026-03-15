@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-   6804	    364	   3136	  10304	   2840	vga_coord.elf
+   5688	    340	   3124	   9152	   23c0	vga_coord.elf

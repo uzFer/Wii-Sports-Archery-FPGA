@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sat Mar 14 17:00:21 2026
+-- Date        : Sun Mar 15 13:10:45 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top design_3_sync_gen_1_0 -prefix
 --               design_3_sync_gen_1_0_ design_4_sync_gen_1_1_sim_netlist.vhdl
@@ -2230,7 +2230,14 @@ architecture STRUCTURE of design_3_sync_gen_1_0_sync_generator is
   signal \^di\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^s\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \bram_address[18]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal bram_read_data_reg : STD_LOGIC_VECTOR ( 23 downto 4 );
+  signal \bram_read_data_reg_reg_n_0_[12]\ : STD_LOGIC;
+  signal \bram_read_data_reg_reg_n_0_[13]\ : STD_LOGIC;
+  signal \bram_read_data_reg_reg_n_0_[14]\ : STD_LOGIC;
+  signal \bram_read_data_reg_reg_n_0_[15]\ : STD_LOGIC;
+  signal \bram_read_data_reg_reg_n_0_[4]\ : STD_LOGIC;
+  signal \bram_read_data_reg_reg_n_0_[5]\ : STD_LOGIC;
+  signal \bram_read_data_reg_reg_n_0_[6]\ : STD_LOGIC;
+  signal \bram_read_data_reg_reg_n_0_[7]\ : STD_LOGIC;
   signal display_on_1 : STD_LOGIC;
   signal display_on_10 : STD_LOGIC;
   signal display_on_1_i_2_n_0 : STD_LOGIC;
@@ -2295,6 +2302,7 @@ architecture STRUCTURE of design_3_sync_gen_1_0_sync_generator is
   signal hsync_1 : STD_LOGIC;
   signal hsync_1_i_1_n_0 : STD_LOGIC;
   signal hsync_1_i_2_n_0 : STD_LOGIC;
+  signal p_0_in : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pixel_index0 : STD_LOGIC_VECTOR ( 16 downto 5 );
   signal \pixel_index0__0_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \pixel_index0__0_carry__0_i_2_n_0\ : STD_LOGIC;
@@ -2433,7 +2441,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(4),
+      I1 => \bram_read_data_reg_reg_n_0_[4]\,
       O => VGA_B(0)
     );
 \VGA_B[1]_INST_0\: unisim.vcomponents.LUT2
@@ -2442,7 +2450,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(5),
+      I1 => \bram_read_data_reg_reg_n_0_[5]\,
       O => VGA_B(1)
     );
 \VGA_B[2]_INST_0\: unisim.vcomponents.LUT2
@@ -2451,7 +2459,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(6),
+      I1 => \bram_read_data_reg_reg_n_0_[6]\,
       O => VGA_B(2)
     );
 \VGA_B[3]_INST_0\: unisim.vcomponents.LUT2
@@ -2460,7 +2468,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(7),
+      I1 => \bram_read_data_reg_reg_n_0_[7]\,
       O => VGA_B(3)
     );
 \VGA_G[0]_INST_0\: unisim.vcomponents.LUT2
@@ -2469,7 +2477,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(12),
+      I1 => \bram_read_data_reg_reg_n_0_[12]\,
       O => VGA_G(0)
     );
 \VGA_G[1]_INST_0\: unisim.vcomponents.LUT2
@@ -2478,7 +2486,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(13),
+      I1 => \bram_read_data_reg_reg_n_0_[13]\,
       O => VGA_G(1)
     );
 \VGA_G[2]_INST_0\: unisim.vcomponents.LUT2
@@ -2487,7 +2495,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(14),
+      I1 => \bram_read_data_reg_reg_n_0_[14]\,
       O => VGA_G(2)
     );
 \VGA_G[3]_INST_0\: unisim.vcomponents.LUT2
@@ -2496,7 +2504,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(15),
+      I1 => \bram_read_data_reg_reg_n_0_[15]\,
       O => VGA_G(3)
     );
 \VGA_R[0]_INST_0\: unisim.vcomponents.LUT2
@@ -2505,7 +2513,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(20),
+      I1 => p_0_in(0),
       O => VGA_R(0)
     );
 \VGA_R[1]_INST_0\: unisim.vcomponents.LUT2
@@ -2514,7 +2522,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(21),
+      I1 => p_0_in(1),
       O => VGA_R(1)
     );
 \VGA_R[2]_INST_0\: unisim.vcomponents.LUT2
@@ -2523,7 +2531,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(22),
+      I1 => p_0_in(2),
       O => VGA_R(2)
     );
 \VGA_R[3]_INST_0\: unisim.vcomponents.LUT2
@@ -2532,7 +2540,7 @@ begin
     )
         port map (
       I0 => \^display_on_reg_0\,
-      I1 => bram_read_data_reg(23),
+      I1 => p_0_in(3),
       O => VGA_R(3)
     );
 \bram_address[10]_INST_0\: unisim.vcomponents.LUT5
@@ -2755,7 +2763,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(4),
-      Q => bram_read_data_reg(12),
+      Q => \bram_read_data_reg_reg_n_0_[12]\,
       R => '0'
     );
 \bram_read_data_reg_reg[13]\: unisim.vcomponents.FDRE
@@ -2763,7 +2771,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(5),
-      Q => bram_read_data_reg(13),
+      Q => \bram_read_data_reg_reg_n_0_[13]\,
       R => '0'
     );
 \bram_read_data_reg_reg[14]\: unisim.vcomponents.FDRE
@@ -2771,7 +2779,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(6),
-      Q => bram_read_data_reg(14),
+      Q => \bram_read_data_reg_reg_n_0_[14]\,
       R => '0'
     );
 \bram_read_data_reg_reg[15]\: unisim.vcomponents.FDRE
@@ -2779,7 +2787,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(7),
-      Q => bram_read_data_reg(15),
+      Q => \bram_read_data_reg_reg_n_0_[15]\,
       R => '0'
     );
 \bram_read_data_reg_reg[20]\: unisim.vcomponents.FDRE
@@ -2787,7 +2795,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(8),
-      Q => bram_read_data_reg(20),
+      Q => p_0_in(0),
       R => '0'
     );
 \bram_read_data_reg_reg[21]\: unisim.vcomponents.FDRE
@@ -2795,7 +2803,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(9),
-      Q => bram_read_data_reg(21),
+      Q => p_0_in(1),
       R => '0'
     );
 \bram_read_data_reg_reg[22]\: unisim.vcomponents.FDRE
@@ -2803,7 +2811,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(10),
-      Q => bram_read_data_reg(22),
+      Q => p_0_in(2),
       R => '0'
     );
 \bram_read_data_reg_reg[23]\: unisim.vcomponents.FDRE
@@ -2811,7 +2819,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(11),
-      Q => bram_read_data_reg(23),
+      Q => p_0_in(3),
       R => '0'
     );
 \bram_read_data_reg_reg[4]\: unisim.vcomponents.FDRE
@@ -2819,7 +2827,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(0),
-      Q => bram_read_data_reg(4),
+      Q => \bram_read_data_reg_reg_n_0_[4]\,
       R => '0'
     );
 \bram_read_data_reg_reg[5]\: unisim.vcomponents.FDRE
@@ -2827,7 +2835,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(1),
-      Q => bram_read_data_reg(5),
+      Q => \bram_read_data_reg_reg_n_0_[5]\,
       R => '0'
     );
 \bram_read_data_reg_reg[6]\: unisim.vcomponents.FDRE
@@ -2835,7 +2843,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(2),
-      Q => bram_read_data_reg(6),
+      Q => \bram_read_data_reg_reg_n_0_[6]\,
       R => '0'
     );
 \bram_read_data_reg_reg[7]\: unisim.vcomponents.FDRE
@@ -2843,7 +2851,7 @@ begin
       C => pixel_clk,
       CE => '1',
       D => bram_read_data(3),
-      Q => bram_read_data_reg(7),
+      Q => \bram_read_data_reg_reg_n_0_[7]\,
       R => '0'
     );
 display_on_1_i_1: unisim.vcomponents.LUT6
@@ -3982,8 +3990,6 @@ entity design_3_sync_gen_1_0_sync_gen_v1 is
     VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_bvalid : out STD_LOGIC;
-    bram_read_data : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    pixel_clk : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
@@ -3991,6 +3997,8 @@ entity design_3_sync_gen_1_0_sync_gen_v1 is
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pixel_clk : in STD_LOGIC;
+    bram_read_data : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;

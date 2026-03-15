@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "y:/framewriter_ip/ip_repo/framewriter_1/src/framewriter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module framewriter
+INFO: [VRFC 10-2263] Analyzing Verilog file "y:/framewriter_ip/ip_repo/framewriter_1/src/tb_writer_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1
