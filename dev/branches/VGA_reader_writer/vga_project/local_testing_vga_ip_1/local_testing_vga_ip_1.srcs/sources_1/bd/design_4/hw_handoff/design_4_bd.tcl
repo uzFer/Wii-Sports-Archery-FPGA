@@ -175,7 +175,7 @@ proc create_root_design { parentCell } {
   set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 ]
   set_property -dict [ list \
    CONFIG.ECC_TYPE {0} \
-   CONFIG.PROTOCOL {AXI4LITE} \
+   CONFIG.PROTOCOL {AXI4} \
  ] $axi_bram_ctrl_0
 
   # Create instance: axi_bram_ctrl_0_bram, and set properties
@@ -256,6 +256,34 @@ proc create_root_design { parentCell } {
    CONFIG.WUSER_WIDTH {0} \
  ] $axi_vip_1
 
+  # Create instance: axi_vip_2, and set properties
+  set axi_vip_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_2 ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {32} \
+   CONFIG.ARUSER_WIDTH {0} \
+   CONFIG.AWUSER_WIDTH {0} \
+   CONFIG.BUSER_WIDTH {0} \
+   CONFIG.DATA_WIDTH {32} \
+   CONFIG.HAS_BRESP {1} \
+   CONFIG.HAS_BURST {1} \
+   CONFIG.HAS_CACHE {1} \
+   CONFIG.HAS_LOCK {1} \
+   CONFIG.HAS_PROT {1} \
+   CONFIG.HAS_QOS {1} \
+   CONFIG.HAS_REGION {1} \
+   CONFIG.HAS_RRESP {1} \
+   CONFIG.HAS_WSTRB {1} \
+   CONFIG.ID_WIDTH {0} \
+   CONFIG.INTERFACE_MODE {MASTER} \
+   CONFIG.PROTOCOL {AXI4} \
+   CONFIG.READ_WRITE_MODE {READ_WRITE} \
+   CONFIG.RUSER_BITS_PER_BYTE {0} \
+   CONFIG.RUSER_WIDTH {0} \
+   CONFIG.SUPPORTS_NARROW {1} \
+   CONFIG.WUSER_BITS_PER_BYTE {0} \
+   CONFIG.WUSER_WIDTH {0} \
+ ] $axi_vip_2
+
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
@@ -297,12 +325,13 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTB [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTB]
   connect_bd_intf_net -intf_net axi_vip_0_M_AXI [get_bd_intf_pins axi_vip_0/M_AXI] [get_bd_intf_pins sync_gen_1/S00_AXI]
   connect_bd_intf_net -intf_net axi_vip_1_M_AXI [get_bd_intf_pins axi_vip_1/M_AXI] [get_bd_intf_pins framewriter_0/S00_AXI]
+  connect_bd_intf_net -intf_net axi_vip_2_M_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_vip_2/M_AXI]
 
   # Create port connections
   connect_bd_net -net axi_bram_ctrl_0_bram_douta [get_bd_pins axi_bram_ctrl_0_bram/douta] [get_bd_pins framewriter_0/bram_read_data]
   connect_bd_net -net axi_bram_ctrl_0_bram_doutb [get_bd_pins axi_bram_ctrl_0_bram/doutb] [get_bd_pins sync_gen_1/bram_read_data]
   connect_bd_net -net clk_100MHz_1 [get_bd_ports clk_100MHz] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_100MHz_clk_out1 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_0_bram/clka] [get_bd_pins axi_vip_0/aclk] [get_bd_pins axi_vip_1/aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins framewriter_0/s00_axi_aclk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk] [get_bd_pins sync_gen_1/s00_axi_aclk]
+  connect_bd_net -net clk_100MHz_clk_out1 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_0_bram/clka] [get_bd_pins axi_vip_0/aclk] [get_bd_pins axi_vip_1/aclk] [get_bd_pins axi_vip_2/aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins framewriter_0/s00_axi_aclk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk] [get_bd_pins sync_gen_1/s00_axi_aclk]
   connect_bd_net -net clk_100MHz_clk_out2 [get_bd_pins axi_bram_ctrl_0_bram/clkb] [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins sync_gen_1/pixel_clk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
   connect_bd_net -net framewriter_0_bram_address [get_bd_pins axi_bram_ctrl_0_bram/addra] [get_bd_pins framewriter_0/bram_address]
@@ -311,7 +340,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net framewriter_0_bram_write_data [get_bd_pins axi_bram_ctrl_0_bram/dina] [get_bd_pins framewriter_0/bram_write_data]
   connect_bd_net -net framewriter_0_bram_write_enable [get_bd_pins axi_bram_ctrl_0_bram/wea] [get_bd_pins framewriter_0/bram_write_enable]
   connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset_rtl_0] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
-  connect_bd_net -net rst_clk_wiz_100M_interconnect_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_vip_0/aresetn] [get_bd_pins axi_vip_1/aresetn] [get_bd_pins framewriter_0/s00_axi_aresetn] [get_bd_pins rst_clk_wiz_100M/interconnect_aresetn] [get_bd_pins sync_gen_1/s00_axi_aresetn]
+  connect_bd_net -net rst_clk_wiz_100M_interconnect_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_vip_0/aresetn] [get_bd_pins axi_vip_1/aresetn] [get_bd_pins axi_vip_2/aresetn] [get_bd_pins framewriter_0/s00_axi_aresetn] [get_bd_pins rst_clk_wiz_100M/interconnect_aresetn] [get_bd_pins sync_gen_1/s00_axi_aresetn]
   connect_bd_net -net sync_gen_1_VGA_B [get_bd_ports VGA_B] [get_bd_pins sync_gen_1/VGA_B]
   connect_bd_net -net sync_gen_1_VGA_G [get_bd_ports VGA_G] [get_bd_pins sync_gen_1/VGA_G]
   connect_bd_net -net sync_gen_1_VGA_HSYNC [get_bd_ports VGA_HSYNC] [get_bd_pins sync_gen_1/VGA_HSYNC]
@@ -327,6 +356,7 @@ proc create_root_design { parentCell } {
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces axi_vip_0/Master_AXI] [get_bd_addr_segs sync_gen_1/S00_AXI/S00_AXI_reg] SEG_sync_gen_1_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x10000000 [get_bd_addr_spaces axi_vip_1/Master_AXI] [get_bd_addr_segs framewriter_0/S00_AXI/S00_AXI_reg] SEG_framewriter_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00080000 -offset 0xC0000000 [get_bd_addr_spaces axi_vip_2/Master_AXI] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0
 
 
   # Restore current instance

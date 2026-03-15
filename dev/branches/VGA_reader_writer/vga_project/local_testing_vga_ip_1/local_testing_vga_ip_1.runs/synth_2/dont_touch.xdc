@@ -30,6 +30,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_4_axi_vi
 # IP: bd/design_4/ip/design_4_clk_wiz_0_0/design_4_clk_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_4_clk_wiz_0_0 || ORIG_REF_NAME==design_4_clk_wiz_0_0} -quiet] -quiet
 
+# IP: bd/design_4/ip/design_4_axi_vip_2_0/design_4_axi_vip_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_4_axi_vip_2_0 || ORIG_REF_NAME==design_4_axi_vip_2_0} -quiet] -quiet
+
 # Block Designs: bd/design_3/design_3.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3 || ORIG_REF_NAME==design_3} -quiet] -quiet
 

@@ -1,4 +1,4 @@
-12:52:33 **** Auto Build of configuration Debug for project vga2 ****
+20:46:22 **** Incremental Build of configuration Debug for project vga2 ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -10,16 +10,6 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../vga2_bs
 At top level:
 ../src/testperiph.c:76:17: warning: 'intc' defined but not used [-Wunused-variable]
 'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building file: ../src/xintc_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../vga2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
-'Finished building: ../src/xintc_tapp_example.c'
 ' '
 'Building target: vga2.elf'
 'Invoking: MicroBlaze gcc linker'
@@ -33,5 +23,5 @@ mb-size vga2.elf  |tee "vga2.elf.size"
 'Finished building: vga2.elf.size'
 ' '
 
-12:52:35 Build Finished (took 2s.108ms)
+20:46:23 Build Finished (took 666ms)
 

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sat Mar 14 20:22:49 2026
+//Date        : Sun Mar 15 10:50:35 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_4.bd
 //Design      : design_4
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_4,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_4,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_4.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_4,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_4,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_4.hwdef" *) 
 module design_4
    (VGA_B,
     VGA_G,
@@ -66,6 +66,37 @@ module design_4
   wire axi_vip_1_M_AXI_WREADY;
   wire [3:0]axi_vip_1_M_AXI_WSTRB;
   wire axi_vip_1_M_AXI_WVALID;
+  wire [31:0]axi_vip_2_M_AXI_ARADDR;
+  wire [1:0]axi_vip_2_M_AXI_ARBURST;
+  wire [3:0]axi_vip_2_M_AXI_ARCACHE;
+  wire [7:0]axi_vip_2_M_AXI_ARLEN;
+  wire [0:0]axi_vip_2_M_AXI_ARLOCK;
+  wire [2:0]axi_vip_2_M_AXI_ARPROT;
+  wire axi_vip_2_M_AXI_ARREADY;
+  wire [2:0]axi_vip_2_M_AXI_ARSIZE;
+  wire axi_vip_2_M_AXI_ARVALID;
+  wire [31:0]axi_vip_2_M_AXI_AWADDR;
+  wire [1:0]axi_vip_2_M_AXI_AWBURST;
+  wire [3:0]axi_vip_2_M_AXI_AWCACHE;
+  wire [7:0]axi_vip_2_M_AXI_AWLEN;
+  wire [0:0]axi_vip_2_M_AXI_AWLOCK;
+  wire [2:0]axi_vip_2_M_AXI_AWPROT;
+  wire axi_vip_2_M_AXI_AWREADY;
+  wire [2:0]axi_vip_2_M_AXI_AWSIZE;
+  wire axi_vip_2_M_AXI_AWVALID;
+  wire axi_vip_2_M_AXI_BREADY;
+  wire [1:0]axi_vip_2_M_AXI_BRESP;
+  wire axi_vip_2_M_AXI_BVALID;
+  wire [31:0]axi_vip_2_M_AXI_RDATA;
+  wire axi_vip_2_M_AXI_RLAST;
+  wire axi_vip_2_M_AXI_RREADY;
+  wire [1:0]axi_vip_2_M_AXI_RRESP;
+  wire axi_vip_2_M_AXI_RVALID;
+  wire [31:0]axi_vip_2_M_AXI_WDATA;
+  wire axi_vip_2_M_AXI_WLAST;
+  wire axi_vip_2_M_AXI_WREADY;
+  wire [3:0]axi_vip_2_M_AXI_WSTRB;
+  wire axi_vip_2_M_AXI_WVALID;
   wire clk_100MHz_1;
   wire clk_100MHz_clk_out1;
   wire clk_100MHz_clk_out2;
@@ -100,18 +131,38 @@ module design_4
        (.bram_rddata_a({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
         .bram_rddata_b({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
         .s_axi_aclk(clk_100MHz_clk_out1),
-        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_araddr(axi_vip_2_M_AXI_ARADDR[17:0]),
+        .s_axi_arburst(axi_vip_2_M_AXI_ARBURST),
+        .s_axi_arcache(axi_vip_2_M_AXI_ARCACHE),
         .s_axi_aresetn(rst_clk_wiz_100M_interconnect_aresetn),
-        .s_axi_arprot({1'b0,1'b0,1'b0}),
-        .s_axi_arvalid(1'b0),
-        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awprot({1'b0,1'b0,1'b0}),
-        .s_axi_awvalid(1'b0),
-        .s_axi_bready(1'b0),
-        .s_axi_rready(1'b0),
-        .s_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_wstrb({1'b1,1'b1,1'b1,1'b1}),
-        .s_axi_wvalid(1'b0));
+        .s_axi_arlen(axi_vip_2_M_AXI_ARLEN),
+        .s_axi_arlock(axi_vip_2_M_AXI_ARLOCK),
+        .s_axi_arprot(axi_vip_2_M_AXI_ARPROT),
+        .s_axi_arready(axi_vip_2_M_AXI_ARREADY),
+        .s_axi_arsize(axi_vip_2_M_AXI_ARSIZE),
+        .s_axi_arvalid(axi_vip_2_M_AXI_ARVALID),
+        .s_axi_awaddr(axi_vip_2_M_AXI_AWADDR[17:0]),
+        .s_axi_awburst(axi_vip_2_M_AXI_AWBURST),
+        .s_axi_awcache(axi_vip_2_M_AXI_AWCACHE),
+        .s_axi_awlen(axi_vip_2_M_AXI_AWLEN),
+        .s_axi_awlock(axi_vip_2_M_AXI_AWLOCK),
+        .s_axi_awprot(axi_vip_2_M_AXI_AWPROT),
+        .s_axi_awready(axi_vip_2_M_AXI_AWREADY),
+        .s_axi_awsize(axi_vip_2_M_AXI_AWSIZE),
+        .s_axi_awvalid(axi_vip_2_M_AXI_AWVALID),
+        .s_axi_bready(axi_vip_2_M_AXI_BREADY),
+        .s_axi_bresp(axi_vip_2_M_AXI_BRESP),
+        .s_axi_bvalid(axi_vip_2_M_AXI_BVALID),
+        .s_axi_rdata(axi_vip_2_M_AXI_RDATA),
+        .s_axi_rlast(axi_vip_2_M_AXI_RLAST),
+        .s_axi_rready(axi_vip_2_M_AXI_RREADY),
+        .s_axi_rresp(axi_vip_2_M_AXI_RRESP),
+        .s_axi_rvalid(axi_vip_2_M_AXI_RVALID),
+        .s_axi_wdata(axi_vip_2_M_AXI_WDATA),
+        .s_axi_wlast(axi_vip_2_M_AXI_WLAST),
+        .s_axi_wready(axi_vip_2_M_AXI_WREADY),
+        .s_axi_wstrb(axi_vip_2_M_AXI_WSTRB),
+        .s_axi_wvalid(axi_vip_2_M_AXI_WVALID));
   design_4_axi_bram_ctrl_0_bram_1 axi_bram_ctrl_0_bram
        (.addra(framewriter_0_bram_address),
         .addrb(sync_gen_1_bram_address),
@@ -171,6 +222,40 @@ module design_4
         .m_axi_wready(axi_vip_1_M_AXI_WREADY),
         .m_axi_wstrb(axi_vip_1_M_AXI_WSTRB),
         .m_axi_wvalid(axi_vip_1_M_AXI_WVALID));
+  design_4_axi_vip_2_0 axi_vip_2
+       (.aclk(clk_100MHz_clk_out1),
+        .aresetn(rst_clk_wiz_100M_interconnect_aresetn),
+        .m_axi_araddr(axi_vip_2_M_AXI_ARADDR),
+        .m_axi_arburst(axi_vip_2_M_AXI_ARBURST),
+        .m_axi_arcache(axi_vip_2_M_AXI_ARCACHE),
+        .m_axi_arlen(axi_vip_2_M_AXI_ARLEN),
+        .m_axi_arlock(axi_vip_2_M_AXI_ARLOCK),
+        .m_axi_arprot(axi_vip_2_M_AXI_ARPROT),
+        .m_axi_arready(axi_vip_2_M_AXI_ARREADY),
+        .m_axi_arsize(axi_vip_2_M_AXI_ARSIZE),
+        .m_axi_arvalid(axi_vip_2_M_AXI_ARVALID),
+        .m_axi_awaddr(axi_vip_2_M_AXI_AWADDR),
+        .m_axi_awburst(axi_vip_2_M_AXI_AWBURST),
+        .m_axi_awcache(axi_vip_2_M_AXI_AWCACHE),
+        .m_axi_awlen(axi_vip_2_M_AXI_AWLEN),
+        .m_axi_awlock(axi_vip_2_M_AXI_AWLOCK),
+        .m_axi_awprot(axi_vip_2_M_AXI_AWPROT),
+        .m_axi_awready(axi_vip_2_M_AXI_AWREADY),
+        .m_axi_awsize(axi_vip_2_M_AXI_AWSIZE),
+        .m_axi_awvalid(axi_vip_2_M_AXI_AWVALID),
+        .m_axi_bready(axi_vip_2_M_AXI_BREADY),
+        .m_axi_bresp(axi_vip_2_M_AXI_BRESP),
+        .m_axi_bvalid(axi_vip_2_M_AXI_BVALID),
+        .m_axi_rdata(axi_vip_2_M_AXI_RDATA),
+        .m_axi_rlast(axi_vip_2_M_AXI_RLAST),
+        .m_axi_rready(axi_vip_2_M_AXI_RREADY),
+        .m_axi_rresp(axi_vip_2_M_AXI_RRESP),
+        .m_axi_rvalid(axi_vip_2_M_AXI_RVALID),
+        .m_axi_wdata(axi_vip_2_M_AXI_WDATA),
+        .m_axi_wlast(axi_vip_2_M_AXI_WLAST),
+        .m_axi_wready(axi_vip_2_M_AXI_WREADY),
+        .m_axi_wstrb(axi_vip_2_M_AXI_WSTRB),
+        .m_axi_wvalid(axi_vip_2_M_AXI_WVALID));
   design_4_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(clk_100MHz_1),
         .clk_out1(clk_100MHz_clk_out1),
