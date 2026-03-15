@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="249665416666fs"></ZoomStartTime>
-      <ZoomEndTime time="250186916667fs"></ZoomEndTime>
-      <Cursor1Time time="250100000000fs"></Cursor1Time>
+      <ZoomStartTime time="19495962550000fs"></ZoomStartTime>
+      <ZoomEndTime time="19496089450001fs"></ZoomEndTime>
+      <Cursor1Time time="19496032250000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="282"></NameColumnWidth>
-      <ValueColumnWidth column_width="170"></ValueColumnWidth>
+      <NameColumnWidth column_width="356"></NameColumnWidth>
+      <ValueColumnWidth column_width="164"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="1" />
    <wvobject fp_name="group1346" type="group">
@@ -47,43 +47,42 @@
       <wvobject fp_name="/tb1/uut/internal_x" type="array">
          <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
          <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/internal_y" type="array">
          <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
          <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_en" type="logic">
-         <obj_property name="ElementShortName">bram_en</obj_property>
-         <obj_property name="ObjectShortName">bram_en</obj_property>
+      <wvobject fp_name="/tb1/uut/score_latch" type="array">
+         <obj_property name="ElementShortName">score_latch[3:0]</obj_property>
+         <obj_property name="ObjectShortName">score_latch[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_addr_internal" type="array">
-         <obj_property name="ElementShortName">bram_addr_internal[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_addr_internal[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/tb1/uut/x_latch" type="array">
+         <obj_property name="ElementShortName">x_latch[15:0]</obj_property>
+         <obj_property name="ObjectShortName">x_latch[15:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_addr_latched" type="array">
-         <obj_property name="ElementShortName">bram_addr_latched[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_addr_latched[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/tb1/uut/y_latch" type="array">
+         <obj_property name="ElementShortName">y_latch[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y_latch[15:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/tb1/uut/current_state" type="array">
-         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
-         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_address" type="array">
-         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_write_data" type="array">
-         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb1/uut/bram_write_enable" type="array">
-         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
+      <wvobject fp_name="/tb1/uut/score_latch" type="array">
+         <obj_property name="ElementShortName">score_latch[3:0]</obj_property>
+         <obj_property name="ObjectShortName">score_latch[3:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/pipe_dx" type="array">
          <obj_property name="ElementShortName">pipe_dx[15:0]</obj_property>
@@ -98,12 +97,12 @@
       <wvobject fp_name="/tb1/uut/pipe_dx_sq" type="array">
          <obj_property name="ElementShortName">pipe_dx_sq[31:0]</obj_property>
          <obj_property name="ObjectShortName">pipe_dx_sq[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/pipe_dy_sq" type="array">
          <obj_property name="ElementShortName">pipe_dy_sq[31:0]</obj_property>
          <obj_property name="ObjectShortName">pipe_dy_sq[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/vsync_start" type="logic">
          <obj_property name="ElementShortName">vsync_start</obj_property>
@@ -112,7 +111,7 @@
       <wvobject fp_name="/tb1/uut/pipe_dist_sq" type="array">
          <obj_property name="ElementShortName">pipe_dist_sq[31:0]</obj_property>
          <obj_property name="ObjectShortName">pipe_dist_sq[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb1/uut/pipe_is_target" type="logic">
          <obj_property name="ElementShortName">pipe_is_target</obj_property>

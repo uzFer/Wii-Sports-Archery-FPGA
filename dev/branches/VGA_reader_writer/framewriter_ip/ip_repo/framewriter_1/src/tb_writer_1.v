@@ -48,7 +48,7 @@ module tb1();
         
         .axi_framewriter_x(16'd160),
         .axi_framewriter_y(16'd120),
-        .axi_framewriter_myScore(16'd6),
+        .axi_framewriter_myScore(16'd2),
         .axi_framewriter_oppScore(16'd0)
     );
 

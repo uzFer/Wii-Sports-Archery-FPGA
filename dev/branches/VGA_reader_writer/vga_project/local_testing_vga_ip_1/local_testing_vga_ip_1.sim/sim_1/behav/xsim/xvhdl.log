@@ -1,2 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_axi_bram_ctrl_1_0/sim/design_3_axi_bram_ctrl_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_3_axi_bram_ctrl_1_0'
 INFO: [VRFC 10-163] Analyzing VHDL file "Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.ip_user_files/bd/design_4/ip/design_4_axi_bram_ctrl_0_1/sim/design_4_axi_bram_ctrl_0_1.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'design_4_axi_bram_ctrl_0_1'
