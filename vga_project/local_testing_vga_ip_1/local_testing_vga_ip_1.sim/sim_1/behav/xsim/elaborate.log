@@ -25,7 +25,7 @@ Compiling package xilinx_vip.xil_common_vip_pkg
 Compiling package std.std
 Compiling module xil_defaultlib.axi_lite_stimulus_1
 Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.ua_narrow [\ua_narrow(c_bram_addr_adjust_fa...]
-Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.wrap_brst [\wrap_brst(c_axi_addr_width=18,c...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.wrap_brst [\wrap_brst(c_axi_addr_width=19,c...]
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture muxcy_l_v of entity unisim.MUXCY_L [muxcy_l_default]
 Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
@@ -33,11 +33,11 @@ Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(0,15)\]
 Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
 Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
 Compiling architecture imp of entity axi_bram_ctrl_v4_1_0.SRL_FIFO [\SRL_FIFO(c_data_bits=1,c_depth=...]
-Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.wr_chnl [\wr_chnl(c_axi_addr_width=18,c_a...]
-Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.rd_chnl [\rd_chnl(c_axi_addr_width=18,c_a...]
-Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.full_axi [\full_axi(c_s_axi_addr_width=18,...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.wr_chnl [\wr_chnl(c_axi_addr_width=19,c_a...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.rd_chnl [\rd_chnl(c_axi_addr_width=19,c_a...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.full_axi [\full_axi(c_s_axi_addr_width=19,...]
 Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.axi_bram_ctrl_top [\axi_bram_ctrl_top(c_bram_addr_w...]
-Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.axi_bram_ctrl [\axi_bram_ctrl(c_memory_depth=65...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_0.axi_bram_ctrl [\axi_bram_ctrl(c_memory_depth=13...]
 Compiling architecture design_4_axi_bram_ctrl_0_1_arch of entity xil_defaultlib.design_4_axi_bram_ctrl_0_1 [design_4_axi_bram_ctrl_0_1_defau...]
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...

@@ -18,36 +18,36 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28552 
+INFO: Helper process launched with PID 30908 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 498.105 ; gain = 101.883
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 496.621 ; gain = 100.918
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_4_framewriter_0_1' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_framewriter_0_1/synth/design_4_framewriter_0_1.v:57]
-INFO: [Synth 8-6157] synthesizing module 'framewriter_v1' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1.v:4]
+INFO: [Synth 8-6157] synthesizing module 'framewriter_v1' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1.v:4]
 	Parameter SLAVE_REG_WIDTH bound to: 16 - type: integer 
 	Parameter BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_WE_WIDTH bound to: 4 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'framewriter_v1_S00_AXI' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:3]
+INFO: [Synth 8-6157] synthesizing module 'framewriter_v1_S00_AXI' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:3]
 	Parameter SLAVE_REG_WIDTH bound to: 16 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:22]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:23]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:24]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:25]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:119]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:120]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:121]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:122]
-INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:251]
-INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:424]
-INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1_S00_AXI' (1#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1_S00_AXI.v:3]
-INFO: [Synth 8-6157] synthesizing module 'framewriter' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:6]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:22]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:24]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:25]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:119]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:120]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:121]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:122]
+INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:251]
+INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:424]
+INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1_S00_AXI' (1#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v:3]
+INFO: [Synth 8-6157] synthesizing module 'framewriter' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:6]
 	Parameter SLAVE_REG_WIDTH bound to: 16 - type: integer 
 	Parameter BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_DATA_WIDTH bound to: 32 - type: integer 
@@ -79,24 +79,22 @@ INFO: [Synth 8-6157] synthesizing module 'framewriter' [y:/vga_project/local_tes
 	Parameter BLUE bound to: 240 - type: integer 
 	Parameter YELLOW bound to: 15790080 - type: integer 
 	Parameter TURQUOISE bound to: 61680 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:15]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:16]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:17]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:18]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:20]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:21]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:22]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:23]
-INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:483]
-WARNING: [Synth 8-6014] Unused sequential element pipe_dy_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:311]
-WARNING: [Synth 8-6014] Unused sequential element pipe_dy_sq_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:312]
-WARNING: [Synth 8-6014] Unused sequential element pipe_is_target_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:314]
-WARNING: [Synth 8-6014] Unused sequential element pixel_offset_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:517]
-WARNING: [Synth 8-6014] Unused sequential element pixel_to_write_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:518]
-WARNING: [Synth 8-6014] Unused sequential element bit_mask_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:519]
-INFO: [Synth 8-6155] done synthesizing module 'framewriter' (2#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:6]
-WARNING: [Synth 8-350] instance 'framewriter_1' of module 'framewriter' requires 23 connections, but only 22 given [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1.v:116]
-INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1' (3#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/hdl/framewriter_v1.v:4]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:15]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:16]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:17]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:18]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:20]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:21]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:22]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:23]
+INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:483]
+WARNING: [Synth 8-6014] Unused sequential element pipe_is_target_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:314]
+WARNING: [Synth 8-6014] Unused sequential element pixel_offset_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:517]
+WARNING: [Synth 8-6014] Unused sequential element pixel_to_write_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:518]
+WARNING: [Synth 8-6014] Unused sequential element bit_mask_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:519]
+INFO: [Synth 8-6155] done synthesizing module 'framewriter' (2#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:6]
+WARNING: [Synth 8-350] instance 'framewriter_1' of module 'framewriter' requires 23 connections, but only 22 given [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1.v:116]
+INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1' (3#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/hdl/framewriter_v1.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_4_framewriter_0_1' (4#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_framewriter_0_1/synth/design_4_framewriter_0_1.v:57]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[3]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[2]
@@ -113,7 +111,7 @@ WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI
 WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 553.613 ; gain = 157.391
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 552.523 ; gain = 156.820
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -126,10 +124,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 553.613 ; gain = 157.391
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 552.523 ; gain = 156.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 553.613 ; gain = 157.391
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 552.523 ; gain = 156.820
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -138,29 +136,29 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 890.930 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 890.219 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 890.930 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 890.219 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.067 . Memory (MB): peak = 893.395 ; gain = 2.465
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 892.684 ; gain = 2.465
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 893.395 ; gain = 497.172
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 892.684 ; gain = 496.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 893.395 ; gain = 497.172
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 892.684 ; gain = 496.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 893.395 ; gain = 497.172
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 892.684 ; gain = 496.980
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "in00" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "internal_x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -168,7 +166,6 @@ INFO: [Synth 8-5546] ROM "internal_y" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5544] ROM "pipe_dx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "pipe_dx_sq" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "bram_addr_latched" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-DSP Debug: swapped A/B pins for adder 000001A91D43DF60
 INFO: [Synth 8-5544] ROM "in00" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "internal_x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "internal_y" won't be mapped to RAM because it is too sparse
@@ -176,7 +173,6 @@ INFO: [Synth 8-5544] ROM "pipe_dx" won't be mapped to Block RAM because address 
 INFO: [Synth 8-5544] ROM "pipe_dx_sq" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "bram_addr_latched" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tens_val" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ones_val" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "final_color0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "final_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'framewriter'
@@ -190,7 +186,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'framewriter'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 893.395 ; gain = 497.172
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 892.684 ; gain = 496.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -206,7 +202,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 2     
 	   3 Input     17 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 7     
+	   2 Input     16 Bit       Adders := 8     
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 11    
@@ -224,9 +220,8 @@ Detailed RTL Component Info :
 	   4 Input     24 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 16    
+	   2 Input      4 Bit        Muxes := 4     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   3 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 9     
 	   3 Input      1 Bit        Muxes := 1     
@@ -255,7 +250,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 2     
 	   3 Input     17 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 7     
+	   2 Input     16 Bit       Adders := 8     
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 2     
@@ -270,9 +265,8 @@ Detailed RTL Component Info :
 	   7 Input     24 Bit        Muxes := 1     
 	   4 Input     24 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   3 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 1     
@@ -292,23 +286,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'inst/framewriter_1/pipe_dx_reg[15:0]' into 'inst/framewriter_1/pipe_dx_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:311]
-INFO: [Synth 8-4471] merging register 'inst/framewriter_1/pipe_dx_reg[15:0]' into 'inst/framewriter_1/pipe_dx_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:311]
-INFO: [Synth 8-4471] merging register 'inst/framewriter_1/pipe_dx_reg[15:0]' into 'inst/framewriter_1/pipe_dx_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:311]
-INFO: [Synth 8-4471] merging register 'inst/framewriter_1/pipe_dx_sq_reg[31:0]' into 'inst/framewriter_1/pipe_dx_sq_reg[31:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/e7c5/src/framewriter.v:312]
-DSP Debug: swapped A/B pins for adder 000001A91073AFA0
+INFO: [Synth 8-4471] merging register 'inst/framewriter_1/pipe_dx_reg[15:0]' into 'inst/framewriter_1/pipe_dx_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:311]
+INFO: [Synth 8-4471] merging register 'inst/framewriter_1/pipe_dy_reg[15:0]' into 'inst/framewriter_1/pipe_dy_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/6cbc/src/framewriter.v:311]
 DSP Report: Generating DSP inst/framewriter_1/pipe_dx_sq_reg, operation Mode is: (A2*B2)'.
 DSP Report: register inst/framewriter_1/pipe_dx_reg is absorbed into DSP inst/framewriter_1/pipe_dx_sq_reg.
 DSP Report: register inst/framewriter_1/pipe_dx_reg is absorbed into DSP inst/framewriter_1/pipe_dx_sq_reg.
 DSP Report: register inst/framewriter_1/pipe_dx_sq_reg is absorbed into DSP inst/framewriter_1/pipe_dx_sq_reg.
 DSP Report: operator inst/framewriter_1/pipe_dx_sq0 is absorbed into DSP inst/framewriter_1/pipe_dx_sq_reg.
 DSP Report: Generating DSP inst/framewriter_1/pipe_dist_sq_reg, operation Mode is: (PCIN+(A2*B2)')'.
-DSP Report: register inst/framewriter_1/pipe_dx_reg is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
-DSP Report: register inst/framewriter_1/pipe_dx_reg is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
+DSP Report: register inst/framewriter_1/pipe_dy_reg is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
+DSP Report: register inst/framewriter_1/pipe_dy_reg is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
 DSP Report: register inst/framewriter_1/pipe_dist_sq_reg is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
-DSP Report: register inst/framewriter_1/pipe_dx_sq_reg is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
+DSP Report: register inst/framewriter_1/pipe_dy_sq_reg is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
 DSP Report: operator inst/framewriter_1/pipe_dist_sq0 is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
-DSP Report: operator inst/framewriter_1/pipe_dx_sq0 is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
+DSP Report: operator inst/framewriter_1/pipe_dy_sq0 is absorbed into DSP inst/framewriter_1/pipe_dist_sq_reg.
 INFO: [Synth 8-3917] design design_4_framewriter_0_1 has port bram_clk driven by constant 0
 WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_AWPROT[1]
@@ -364,7 +355,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fra
 INFO: [Synth 8-3886] merging instance 'inst/framewriter_v1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/framewriter_v1_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_v1_S00_AXI_inst /\axi_bresp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:27 . Memory (MB): peak = 893.395 ; gain = 497.172
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 892.684 ; gain = 496.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -392,13 +383,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 937.922 ; gain = 541.699
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 932.090 ; gain = 536.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 938.738 ; gain = 542.516
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 933.133 ; gain = 537.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -410,7 +401,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,7 +425,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -447,7 +438,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -459,25 +450,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -493,15 +484,15 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |CARRY4    |    67|
+|1     |CARRY4    |    71|
 |2     |DSP48E1_1 |     1|
 |3     |DSP48E1_2 |     1|
-|4     |LUT1      |   252|
-|5     |LUT2      |    53|
-|6     |LUT3      |    33|
-|7     |LUT4      |   127|
-|8     |LUT5      |    31|
-|9     |LUT6      |   253|
+|4     |LUT1      |   262|
+|5     |LUT2      |    55|
+|6     |LUT3      |    38|
+|7     |LUT4      |   130|
+|8     |LUT5      |    36|
+|9     |LUT6      |   264|
 |10    |MUXF7     |    32|
 |11    |FDRE      |   388|
 |12    |FDSE      |     9|
@@ -511,39 +502,39 @@ Report Instance Areas:
 +------+--------------------------------+-----------------------+------+
 |      |Instance                        |Module                 |Cells |
 +------+--------------------------------+-----------------------+------+
-|1     |top                             |                       |  1247|
-|2     |  inst                          |framewriter_v1         |  1235|
+|1     |top                             |                       |  1287|
+|2     |  inst                          |framewriter_v1         |  1275|
 |3     |    framewriter_v1_S00_AXI_inst |framewriter_v1_S00_AXI |   683|
-|4     |    framewriter_1               |framewriter            |   552|
+|4     |    framewriter_1               |framewriter            |   592|
 +------+--------------------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 954.742 ; gain = 218.738
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 954.742 ; gain = 558.520
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 948.992 ; gain = 213.129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 948.992 ; gain = 553.289
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 101 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 954.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 948.992 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-112 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+109 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 954.742 ; gain = 570.012
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 954.742 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 948.992 ; gain = 564.797
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 948.992 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_4_framewriter_0_1_synth_1/design_4_framewriter_0_1.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_4_framewriter_0_1, cache-ID = 014b20444dbd6d34
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_4_framewriter_0_1, cache-ID = 52edb4067874cca1
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 954.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 948.992 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_4_framewriter_0_1_synth_1/design_4_framewriter_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_4_framewriter_0_1_utilization_synth.rpt -pb design_4_framewriter_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 15 13:15:45 2026...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 15 18:24:32 2026...

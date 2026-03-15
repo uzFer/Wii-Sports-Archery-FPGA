@@ -10,9 +10,9 @@
 
 <MemInfoSimulation Version="1" Minor="1">
   <Processor Endianness="Little" InstPath="design_3/microblaze_0">
-    <AddressSpace Name="design_3_microblaze_0.design_3_microblaze_0_local_memory_lmb_bram_32K_13_ADDR_SPACE" ECC="NONE" Begin="0" End="32767">
+    <AddressSpace Name="design_3_microblaze_0.design_3_microblaze_0_local_memory_lmb_bram_32K_3_ADDR_SPACE" ECC="NONE" Begin="0" End="32767">
       <BusBlock>
-        <BitLane MemType="microblaze_0_local_memory_lmb_bram_32K_13_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="32767">
+        <BitLane MemType="microblaze_0_local_memory_lmb_bram_32K_3_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="32767">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
@@ -20,11 +20,11 @@
         </BitLane>
       </BusBlock>
     </AddressSpace>
-    <AddressSpace Name="design_3_microblaze_0.design_3_axi_bram_ctrl_0_bram_256K_13_ADDR_SPACE" ECC="NONE" Begin="3221225472" End="3221487615">
+    <AddressSpace Name="design_3_microblaze_0.design_3_axi_bram_ctrl_0_bram_512K_3_ADDR_SPACE" ECC="NONE" Begin="3221225472" End="3221749759">
       <BusBlock>
-        <BitLane MemType="axi_bram_ctrl_0_bram_256K_13_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="3221487615">
+        <BitLane MemType="axi_bram_ctrl_0_bram_512K_3_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="3221749759">
           <DataWidth MSB="31" LSB="0"/>
-          <AddressRange Begin="0" End="65535"/>
+          <AddressRange Begin="0" End="131071"/>
           <Parity ON="false" NumBits="0"/>
           <MemFile Name="design_3_axi_bram_ctrl_1_bram_0.mem"/>
         </BitLane>

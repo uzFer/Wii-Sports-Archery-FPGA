@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Mar 15 13:15:44 2026
+| Date         : Sun Mar 15 18:24:31 2026
 | Host         : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_4_framewriter_0_1_utilization_synth.rpt -pb design_4_framewriter_0_1_utilization_synth.pb
 | Design       : design_4_framewriter_0_1
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  666 |     0 |     63400 |  1.05 |
-|   LUT as Logic          |  666 |     0 |     63400 |  1.05 |
+| Slice LUTs*             |  695 |     0 |     63400 |  1.10 |
+|   LUT as Logic          |  695 |     0 |     63400 |  1.10 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
 | Slice Registers         |  397 |     0 |    126800 |  0.31 |
 |   Register as Flip Flop |  397 |     0 |    126800 |  0.31 |
@@ -148,14 +148,14 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  388 |        Flop & Latch |
-| LUT6     |  253 |                 LUT |
-| LUT1     |  252 |                 LUT |
-| LUT4     |  127 |                 LUT |
-| CARRY4   |   67 |          CarryLogic |
-| LUT2     |   53 |                 LUT |
-| LUT3     |   33 |                 LUT |
+| LUT6     |  264 |                 LUT |
+| LUT1     |  262 |                 LUT |
+| LUT4     |  130 |                 LUT |
+| CARRY4   |   71 |          CarryLogic |
+| LUT2     |   55 |                 LUT |
+| LUT3     |   38 |                 LUT |
+| LUT5     |   36 |                 LUT |
 | MUXF7    |   32 |               MuxFx |
-| LUT5     |   31 |                 LUT |
 | FDSE     |    9 |        Flop & Latch |
 | DSP48E1  |    2 |    Block Arithmetic |
 +----------+------+---------------------+

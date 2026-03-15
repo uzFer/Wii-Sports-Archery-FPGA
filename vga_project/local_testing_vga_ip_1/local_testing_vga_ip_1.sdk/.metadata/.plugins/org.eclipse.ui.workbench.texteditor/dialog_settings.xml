@@ -8,6 +8,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="xil_print"/>
 			<item value="framewriter"/>
 			<item value="GPIO_0"/>
 			<item value="xil_cache"/>
@@ -15,7 +16,6 @@
 			<item value="coord_idx"/>
 			<item value="state_idx"/>
 			<item value="state_list"/>
-			<item value="reg_x_offset"/>
 		</list>
 		<list key="replacehistory">
 		</list>
