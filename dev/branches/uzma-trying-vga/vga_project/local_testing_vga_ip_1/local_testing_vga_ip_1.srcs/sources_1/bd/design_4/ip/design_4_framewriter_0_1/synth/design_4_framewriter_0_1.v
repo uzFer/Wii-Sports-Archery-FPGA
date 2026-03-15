@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:framewriter:1
-// IP Revision: 30
+// IP Revision: 56
 
 (* X_CORE_INFO = "framewriter_v1,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_4_framewriter_0_1,framewriter_v1,{}" *)
-(* CORE_GENERATION_INFO = "design_4_framewriter_0_1,framewriter_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=framewriter,x_ipVersion=1,x_ipCoreRevision=30,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,SLAVE_REG_WIDTH=16,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "design_4_framewriter_0_1,framewriter_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=framewriter,x_ipVersion=1,x_ipCoreRevision=56,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,SLAVE_REG_WIDTH=16,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_4_framewriter_0_1 (
   bram_address,
@@ -81,6 +81,7 @@ module design_4_framewriter_0_1 (
   s00_axi_rresp,
   s00_axi_rvalid,
   s00_axi_rready,
+  vsync_trigger,
   s00_axi_aclk,
   s00_axi_aresetn
 );
@@ -136,6 +137,7 @@ output wire s00_axi_rvalid;
 READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *)
 input wire s00_axi_rready;
+input wire vsync_trigger;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 input wire s00_axi_aclk;
@@ -177,6 +179,7 @@ input wire s00_axi_aresetn;
     .s00_axi_rresp(s00_axi_rresp),
     .s00_axi_rvalid(s00_axi_rvalid),
     .s00_axi_rready(s00_axi_rready),
+    .vsync_trigger(vsync_trigger),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn)
   );

@@ -10,12 +10,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="3291fs"></ZoomEndTime>
+      <ZoomEndTime time="2884fs"></ZoomEndTime>
       <Cursor1Time time="363000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="439"></NameColumnWidth>
-      <ValueColumnWidth column_width="196"></ValueColumnWidth>
+      <ValueColumnWidth column_width="184"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wvobject fp_name="design_3_i/sync_gen_1_VGA_HSYNC" type="logic">

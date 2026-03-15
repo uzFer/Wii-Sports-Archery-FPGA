@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:sync_gen:1
-// IP Revision: 10
+// IP Revision: 18
 
 (* X_CORE_INFO = "sync_gen_v1,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_4_sync_gen_1_1,sync_gen_v1,{}" *)
-(* CORE_GENERATION_INFO = "design_4_sync_gen_1_1,sync_gen_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sync_gen,x_ipVersion=1,x_ipCoreRevision=10,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4,EXT_RGB_WIDTH=4,COUNT_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "design_4_sync_gen_1_1,sync_gen_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sync_gen,x_ipVersion=1,x_ipCoreRevision=18,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4,EXT_RGB_WIDTH=4,COUNT_WIDTH=16}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_4_sync_gen_1_1 (
   pixel_clk,
@@ -71,6 +71,7 @@ module design_4_sync_gen_1_1 (
   bram_en,
   bram_rst,
   bram_clk,
+  vsync_trigger,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -116,6 +117,7 @@ output wire bram_rst;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, PHASE 0.000, CLK_DOMAIN design_4_sync_gen_1_1_bram_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 bram_clk CLK" *)
 output wire bram_clk;
+output wire vsync_trigger;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [3 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -188,6 +190,7 @@ input wire s00_axi_aresetn;
     .bram_en(bram_en),
     .bram_rst(bram_rst),
     .bram_clk(bram_clk),
+    .vsync_trigger(vsync_trigger),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

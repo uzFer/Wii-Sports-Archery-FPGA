@@ -7,7 +7,7 @@ module tb5();
     // ---------------------------------------------------------
     reg clk_100MHz;
     reg reset_rtl_0;
-    reg [3:0] gpio_io_i_0; // Added missing GPIO input from your wrapper
+//    reg [3:0] gpio_io_i_0; // Added missing GPIO input from your wrapper
 
     // Outputs from the wrapper
     wire [3:0] VGA_B;
@@ -44,7 +44,7 @@ module tb5();
     initial begin
         // Initialize Inputs
         reset_rtl_0 = 0;      // assert reset
-        gpio_io_i_0 = 4'b0001; // main menu (1) 
+//        gpio_io_i_0 = 4'b0001; // main menu (1) 
         
         // Wait for Global Reset to settle
         #100;
@@ -52,14 +52,14 @@ module tb5();
         #200;                 // Wait for Clock Wizard to lock in simulation
         
         // post-implementation addition
-        force uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore = 16'h01; 
-        #1000ns;
-        release uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore;
-        #1000ns;
+//        force uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore = 16'h4; 
+//        #1000ns;
+//        release uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore;
+//        #1000ns;
         
-        force uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore = 16'h04; 
-        #1000ns;
-        release uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore;
+//        force uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore = 16'h04; 
+//        #1000ns;
+//        release uut.design_3_i.framewriter_0.inst.framewriter_1.axi_framewriter_myScore;
         
         
         // Simulation Run Time

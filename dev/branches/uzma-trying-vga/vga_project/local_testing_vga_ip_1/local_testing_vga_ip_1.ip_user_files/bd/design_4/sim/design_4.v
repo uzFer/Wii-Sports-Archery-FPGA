@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Mar  2 21:29:30 2026
+//Date        : Sat Mar 14 20:22:49 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_4.bd
 //Design      : design_4
@@ -87,6 +87,7 @@ module design_4
   wire sync_gen_1_bram_rst;
   wire [31:0]sync_gen_1_bram_write_data;
   wire [3:0]sync_gen_1_bram_write_enable;
+  wire sync_gen_1_vsync_trigger;
 
   assign VGA_B[3:0] = sync_gen_1_VGA_B;
   assign VGA_G[3:0] = sync_gen_1_VGA_G;
@@ -203,7 +204,8 @@ module design_4
         .s00_axi_wdata(axi_vip_1_M_AXI_WDATA),
         .s00_axi_wready(axi_vip_1_M_AXI_WREADY),
         .s00_axi_wstrb(axi_vip_1_M_AXI_WSTRB),
-        .s00_axi_wvalid(axi_vip_1_M_AXI_WVALID));
+        .s00_axi_wvalid(axi_vip_1_M_AXI_WVALID),
+        .vsync_trigger(sync_gen_1_vsync_trigger));
   design_4_rst_clk_wiz_100M_1 rst_clk_wiz_100M
        (.aux_reset_in(1'b1),
         .dcm_locked(clk_wiz_0_locked),
@@ -244,5 +246,6 @@ module design_4
         .s00_axi_wdata(axi_vip_0_M_AXI_WDATA),
         .s00_axi_wready(axi_vip_0_M_AXI_WREADY),
         .s00_axi_wstrb(axi_vip_0_M_AXI_WSTRB),
-        .s00_axi_wvalid(axi_vip_0_M_AXI_WVALID));
+        .s00_axi_wvalid(axi_vip_0_M_AXI_WVALID),
+        .vsync_trigger(sync_gen_1_vsync_trigger));
 endmodule

@@ -1,11 +1,11 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Feb 28 11:46:34 2026
+// Date        : Sat Mar 14 17:00:21 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_4_sync_gen_1_1 -prefix
-//               design_4_sync_gen_1_1_ design_3_sync_gen_1_0_stub.v
-// Design      : design_3_sync_gen_1_0
+// Command     : write_verilog -force -mode synth_stub
+//               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_sync_gen_1_1/design_4_sync_gen_1_1_stub.v
+// Design      : design_4_sync_gen_1_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
@@ -16,12 +16,12 @@
 (* X_CORE_INFO = "sync_gen_v1,Vivado 2018.3" *)
 module design_4_sync_gen_1_1(pixel_clk, VGA_HSYNC, VGA_VSYNC, VGA_R, VGA_G, 
   VGA_B, hcount_640, vcount_480, display_on, bram_address, bram_write_data, bram_read_data, 
-  bram_write_enable, bram_en, bram_rst, bram_clk, s00_axi_awaddr, s00_axi_awprot, 
-  s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, s00_axi_wstrb, s00_axi_wvalid, 
-  s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, s00_axi_araddr, 
-  s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, s00_axi_rresp, 
-  s00_axi_rvalid, s00_axi_rready, s00_axi_aclk, s00_axi_aresetn)
-/* synthesis syn_black_box black_box_pad_pin="pixel_clk,VGA_HSYNC,VGA_VSYNC,VGA_R[3:0],VGA_G[3:0],VGA_B[3:0],hcount_640[15:0],vcount_480[15:0],display_on,bram_address[31:0],bram_write_data[31:0],bram_read_data[31:0],bram_write_enable[3:0],bram_en,bram_rst,bram_clk,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn" */;
+  bram_write_enable, bram_en, bram_rst, bram_clk, vsync_trigger, s00_axi_awaddr, 
+  s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, s00_axi_wstrb, 
+  s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, 
+  s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, 
+  s00_axi_rresp, s00_axi_rvalid, s00_axi_rready, s00_axi_aclk, s00_axi_aresetn)
+/* synthesis syn_black_box black_box_pad_pin="pixel_clk,VGA_HSYNC,VGA_VSYNC,VGA_R[3:0],VGA_G[3:0],VGA_B[3:0],hcount_640[15:0],vcount_480[15:0],display_on,bram_address[31:0],bram_write_data[31:0],bram_read_data[31:0],bram_write_enable[3:0],bram_en,bram_rst,bram_clk,vsync_trigger,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn" */;
   input pixel_clk;
   output VGA_HSYNC;
   output VGA_VSYNC;
@@ -38,6 +38,7 @@ module design_4_sync_gen_1_1(pixel_clk, VGA_HSYNC, VGA_VSYNC, VGA_R, VGA_G,
   output bram_en;
   output bram_rst;
   output bram_clk;
+  output vsync_trigger;
   input [3:0]s00_axi_awaddr;
   input [2:0]s00_axi_awprot;
   input s00_axi_awvalid;

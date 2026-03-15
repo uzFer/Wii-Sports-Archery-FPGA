@@ -1,4 +1,4 @@
-00:02:51 **** Build of project vga2_bsp ****
+12:52:28 **** Auto Build of project vga2_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -51,5 +51,5 @@ microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly
          ^~~~~~~
 'Finished building libraries'
 
-00:02:57 Build Finished (took 5s.490ms)
+12:52:33 Build Finished (took 5s.423ms)
 

@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sat Feb 28 11:46:34 2026
+-- Date        : Sat Mar 14 17:00:21 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_4_sync_gen_1_1 -prefix
---               design_4_sync_gen_1_1_ design_3_sync_gen_1_0_sim_netlist.vhdl
--- Design      : design_3_sync_gen_1_0
+-- Command     : write_vhdl -force -mode funcsim
+--               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ip/design_4_sync_gen_1_1/design_4_sync_gen_1_1_sim_netlist.vhdl
+-- Design      : design_4_sync_gen_1_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a100tcsg324-1
@@ -35,6 +35,8 @@ entity design_4_sync_gen_1_1_sync_gen_v1_S00_AXI is
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_4_sync_gen_1_1_sync_gen_v1_S00_AXI : entity is "sync_gen_v1_S00_AXI";
 end design_4_sync_gen_1_1_sync_gen_v1_S00_AXI;
 
 architecture STRUCTURE of design_4_sync_gen_1_1_sync_gen_v1_S00_AXI is
@@ -78,10 +80,10 @@ architecture STRUCTURE of design_4_sync_gen_1_1_sync_gen_v1_S00_AXI is
   signal \slv_reg_rden__0\ : STD_LOGIC;
   signal \slv_reg_wren__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \slv_reg3[31]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \slv_reg3[31]_i_2\ : label is "soft_lutpair7";
 begin
   SR(0) <= \^sr\(0);
   axi_arready_reg_0 <= \^axi_arready_reg_0\;
@@ -2194,8 +2196,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_4_sync_gen_1_1_sync_generator is
   port (
     VGA_HSYNC : out STD_LOGIC;
-    VGA_VSYNC : out STD_LOGIC;
-    display_on : out STD_LOGIC;
+    vsync_trigger : out STD_LOGIC;
+    display_on_reg_0 : out STD_LOGIC;
     \hcount_reg[0]_0\ : out STD_LOGIC;
     \hcount_reg[1]_0\ : out STD_LOGIC;
     \hcount_reg[2]_0\ : out STD_LOGIC;
@@ -2216,31 +2218,27 @@ entity design_4_sync_gen_1_1_sync_generator is
     \vcount_reg[8]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \vcount_reg[9]_0\ : out STD_LOGIC;
     vcount_480 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    bram_address : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    VGA_R : out STD_LOGIC_VECTOR ( 0 to 0 );
+    bram_address : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    VGA_R : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
     pixel_clk : in STD_LOGIC;
     \hcount_reg[15]_0\ : in STD_LOGIC;
-    bram_read_data : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    bram_read_data : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_4_sync_gen_1_1_sync_generator : entity is "sync_generator";
 end design_4_sync_gen_1_1_sync_generator;
 
 architecture STRUCTURE of design_4_sync_gen_1_1_sync_generator is
   signal \^di\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^s\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \VGA_B[0]_INST_0_i_10_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_5_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_6_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_7_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_8_n_0\ : STD_LOGIC;
-  signal \VGA_B[0]_INST_0_i_9_n_0\ : STD_LOGIC;
-  signal \^display_on\ : STD_LOGIC;
+  signal \bram_address[18]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal bram_read_data_reg : STD_LOGIC_VECTOR ( 23 downto 4 );
   signal display_on_1 : STD_LOGIC;
   signal display_on_10 : STD_LOGIC;
   signal display_on_1_i_2_n_0 : STD_LOGIC;
+  signal \^display_on_reg_0\ : STD_LOGIC;
   signal \hcount[11]_i_2_n_0\ : STD_LOGIC;
   signal \hcount[11]_i_3_n_0\ : STD_LOGIC;
   signal \hcount[11]_i_4_n_0\ : STD_LOGIC;
@@ -2301,34 +2299,31 @@ architecture STRUCTURE of design_4_sync_gen_1_1_sync_generator is
   signal hsync_1 : STD_LOGIC;
   signal hsync_1_i_1_n_0 : STD_LOGIC;
   signal hsync_1_i_2_n_0 : STD_LOGIC;
-  signal hsync_1_i_3_n_0 : STD_LOGIC;
-  signal hsync_1_i_4_n_0 : STD_LOGIC;
-  signal hsync_1_i_5_n_0 : STD_LOGIC;
-  signal hsync_1_i_6_n_0 : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_1_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_2_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_3_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_4_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_5_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_6_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_7_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_i_8_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_n_1\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_n_2\ : STD_LOGIC;
-  signal \pixel_index__0_carry__0_n_3\ : STD_LOGIC;
-  signal \pixel_index__0_carry__1_i_1_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__1_i_2_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__1_i_3_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry__1_n_2\ : STD_LOGIC;
-  signal \pixel_index__0_carry__1_n_3\ : STD_LOGIC;
-  signal \pixel_index__0_carry_i_1_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry_i_2_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry_i_3_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry_n_0\ : STD_LOGIC;
-  signal \pixel_index__0_carry_n_1\ : STD_LOGIC;
-  signal \pixel_index__0_carry_n_2\ : STD_LOGIC;
-  signal \pixel_index__0_carry_n_3\ : STD_LOGIC;
+  signal pixel_index0 : STD_LOGIC_VECTOR ( 16 downto 5 );
+  signal \pixel_index0__0_carry__0_i_1_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_i_2_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_i_3_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_i_4_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_i_5_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_i_6_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_i_7_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_i_8_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_n_1\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_n_2\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__0_n_3\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__1_i_1_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__1_i_2_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__1_i_3_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__1_n_2\ : STD_LOGIC;
+  signal \pixel_index0__0_carry__1_n_3\ : STD_LOGIC;
+  signal \pixel_index0__0_carry_i_1_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry_i_2_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry_i_3_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry_n_0\ : STD_LOGIC;
+  signal \pixel_index0__0_carry_n_1\ : STD_LOGIC;
+  signal \pixel_index0__0_carry_n_2\ : STD_LOGIC;
+  signal \pixel_index0__0_carry_n_3\ : STD_LOGIC;
   signal \vcount1__14\ : STD_LOGIC;
   signal \vcount[11]_i_2_n_0\ : STD_LOGIC;
   signal \vcount[11]_i_3_n_0\ : STD_LOGIC;
@@ -2337,6 +2332,7 @@ architecture STRUCTURE of design_4_sync_gen_1_1_sync_generator is
   signal \vcount[15]_i_10_n_0\ : STD_LOGIC;
   signal \vcount[15]_i_11_n_0\ : STD_LOGIC;
   signal \vcount[15]_i_12_n_0\ : STD_LOGIC;
+  signal \vcount[15]_i_13_n_0\ : STD_LOGIC;
   signal \vcount[15]_i_1_n_0\ : STD_LOGIC;
   signal \vcount[15]_i_5_n_0\ : STD_LOGIC;
   signal \vcount[15]_i_6_n_0\ : STD_LOGIC;
@@ -2396,23 +2392,27 @@ architecture STRUCTURE of design_4_sync_gen_1_1_sync_generator is
   signal vsync_1 : STD_LOGIC;
   signal vsync_1_i_1_n_0 : STD_LOGIC;
   signal vsync_1_i_2_n_0 : STD_LOGIC;
-  signal vsync_1_i_3_n_0 : STD_LOGIC;
-  signal vsync_1_i_4_n_0 : STD_LOGIC;
-  signal vsync_1_i_5_n_0 : STD_LOGIC;
-  signal vsync_1_i_6_n_0 : STD_LOGIC;
   signal \NLW_hcount_reg[15]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \NLW_pixel_index__0_carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal \NLW_pixel_index__0_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_pixel_index0__0_carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal \NLW_pixel_index0__0_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_vcount_reg[15]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of hsync_1_i_5 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \vcount[15]_i_12\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of vsync_1_i_2 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of vsync_1_i_5 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \VGA_B[0]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \VGA_B[1]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \VGA_B[2]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \VGA_B[3]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \VGA_G[0]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \VGA_G[1]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \VGA_G[2]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \VGA_G[3]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \VGA_R[0]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \VGA_R[1]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \VGA_R[2]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \VGA_R[3]_INST_0\ : label is "soft_lutpair1";
 begin
   DI(2 downto 0) <= \^di\(2 downto 0);
   S(0) <= \^s\(0);
-  display_on <= \^display_on\;
+  display_on_reg_0 <= \^display_on_reg_0\;
   hcount_640(5 downto 0) <= \^hcount_640\(5 downto 0);
   \hcount_reg[0]_0\ <= \^hcount_reg[0]_0\;
   \hcount_reg[1]_0\ <= \^hcount_reg[1]_0\;
@@ -2431,167 +2431,449 @@ begin
   \vcount_reg[7]_0\(0) <= \^vcount_reg[7]_0\(0);
   \vcount_reg[8]_0\(0) <= \^vcount_reg[8]_0\(0);
   \vcount_reg[9]_0\ <= \^vcount_reg[9]_0\;
-\VGA_B[0]_INST_0\: unisim.vcomponents.LUT4
+\VGA_B[0]_INST_0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"A0C0"
+      INIT => X"8"
     )
         port map (
-      I0 => \VGA_B[0]_INST_0_i_1_n_0\,
-      I1 => \VGA_B[0]_INST_0_i_2_n_0\,
-      I2 => \^display_on\,
-      I3 => \^hcount_reg[5]_0\,
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(4),
+      O => VGA_B(0)
+    );
+\VGA_B[1]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(5),
+      O => VGA_B(1)
+    );
+\VGA_B[2]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(6),
+      O => VGA_B(2)
+    );
+\VGA_B[3]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(7),
+      O => VGA_B(3)
+    );
+\VGA_G[0]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(12),
+      O => VGA_G(0)
+    );
+\VGA_G[1]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(13),
+      O => VGA_G(1)
+    );
+\VGA_G[2]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(14),
+      O => VGA_G(2)
+    );
+\VGA_G[3]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(15),
+      O => VGA_G(3)
+    );
+\VGA_R[0]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(20),
       O => VGA_R(0)
     );
-\VGA_B[0]_INST_0_i_1\: unisim.vcomponents.LUT6
+\VGA_R[1]_INST_0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
+      INIT => X"8"
     )
         port map (
-      I0 => \VGA_B[0]_INST_0_i_3_n_0\,
-      I1 => \VGA_B[0]_INST_0_i_4_n_0\,
-      I2 => \^hcount_reg[4]_0\,
-      I3 => \^hcount_reg[3]_0\,
-      I4 => \VGA_B[0]_INST_0_i_5_n_0\,
-      I5 => \VGA_B[0]_INST_0_i_6_n_0\,
-      O => \VGA_B[0]_INST_0_i_1_n_0\
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(21),
+      O => VGA_R(1)
     );
-\VGA_B[0]_INST_0_i_10\: unisim.vcomponents.LUT6
+\VGA_R[2]_INST_0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"8"
     )
         port map (
-      I0 => bram_read_data(9),
-      I1 => bram_read_data(11),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(8),
-      I5 => bram_read_data(10),
-      O => \VGA_B[0]_INST_0_i_10_n_0\
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(22),
+      O => VGA_R(2)
     );
-\VGA_B[0]_INST_0_i_2\: unisim.vcomponents.LUT6
+\VGA_R[3]_INST_0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
+      INIT => X"8"
     )
         port map (
-      I0 => \VGA_B[0]_INST_0_i_7_n_0\,
-      I1 => \VGA_B[0]_INST_0_i_8_n_0\,
-      I2 => \^hcount_reg[4]_0\,
-      I3 => \^hcount_reg[3]_0\,
-      I4 => \VGA_B[0]_INST_0_i_9_n_0\,
-      I5 => \VGA_B[0]_INST_0_i_10_n_0\,
-      O => \VGA_B[0]_INST_0_i_2_n_0\
+      I0 => \^display_on_reg_0\,
+      I1 => bram_read_data_reg(23),
+      O => VGA_R(3)
     );
-\VGA_B[0]_INST_0_i_3\: unisim.vcomponents.LUT6
+\bram_address[10]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"00570000"
     )
         port map (
-      I0 => bram_read_data(21),
-      I1 => bram_read_data(23),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(20),
-      I5 => bram_read_data(22),
-      O => \VGA_B[0]_INST_0_i_3_n_0\
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(8),
+      O => bram_address(8)
     );
-\VGA_B[0]_INST_0_i_4\: unisim.vcomponents.LUT6
+\bram_address[11]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"00570000"
     )
         port map (
-      I0 => bram_read_data(29),
-      I1 => bram_read_data(31),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(28),
-      I5 => bram_read_data(30),
-      O => \VGA_B[0]_INST_0_i_4_n_0\
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(9),
+      O => bram_address(9)
     );
-\VGA_B[0]_INST_0_i_5\: unisim.vcomponents.LUT6
+\bram_address[12]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"00570000"
     )
         port map (
-      I0 => bram_read_data(17),
-      I1 => bram_read_data(19),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(16),
-      I5 => bram_read_data(18),
-      O => \VGA_B[0]_INST_0_i_5_n_0\
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(10),
+      O => bram_address(10)
     );
-\VGA_B[0]_INST_0_i_6\: unisim.vcomponents.LUT6
+\bram_address[13]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"00570000"
     )
         port map (
-      I0 => bram_read_data(25),
-      I1 => bram_read_data(27),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(24),
-      I5 => bram_read_data(26),
-      O => \VGA_B[0]_INST_0_i_6_n_0\
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(11),
+      O => bram_address(11)
     );
-\VGA_B[0]_INST_0_i_7\: unisim.vcomponents.LUT6
+\bram_address[14]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"00570000"
     )
         port map (
-      I0 => bram_read_data(5),
-      I1 => bram_read_data(7),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(4),
-      I5 => bram_read_data(6),
-      O => \VGA_B[0]_INST_0_i_7_n_0\
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(12),
+      O => bram_address(12)
     );
-\VGA_B[0]_INST_0_i_8\: unisim.vcomponents.LUT6
+\bram_address[15]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"00570000"
     )
         port map (
-      I0 => bram_read_data(13),
-      I1 => bram_read_data(15),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(12),
-      I5 => bram_read_data(14),
-      O => \VGA_B[0]_INST_0_i_8_n_0\
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(13),
+      O => bram_address(13)
     );
-\VGA_B[0]_INST_0_i_9\: unisim.vcomponents.LUT6
+\bram_address[16]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFCFA0C0AFC0A0"
+      INIT => X"00570000"
     )
         port map (
-      I0 => bram_read_data(1),
-      I1 => bram_read_data(3),
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[2]_0\,
-      I4 => bram_read_data(0),
-      I5 => bram_read_data(2),
-      O => \VGA_B[0]_INST_0_i_9_n_0\
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(14),
+      O => bram_address(14)
+    );
+\bram_address[17]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(15),
+      O => bram_address(15)
+    );
+\bram_address[18]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(16),
+      O => bram_address(16)
+    );
+\bram_address[18]_INST_0_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => \^vcount_reg[6]_0\,
+      I1 => \^vcount_reg[5]_0\,
+      I2 => \^vcount_reg[8]_0\(0),
+      I3 => \^vcount_reg[7]_0\(0),
+      O => \bram_address[18]_INST_0_i_1_n_0\
+    );
+\bram_address[2]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => \^hcount_reg[1]_0\,
+      O => bram_address(0)
+    );
+\bram_address[3]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => \^hcount_reg[2]_0\,
+      O => bram_address(1)
+    );
+\bram_address[4]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => \^hcount_reg[3]_0\,
+      O => bram_address(2)
+    );
+\bram_address[5]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => \^hcount_reg[4]_0\,
+      O => bram_address(3)
+    );
+\bram_address[6]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => \^hcount_reg[5]_0\,
+      O => bram_address(4)
+    );
+\bram_address[7]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(5),
+      O => bram_address(5)
+    );
+\bram_address[8]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(6),
+      O => bram_address(6)
+    );
+\bram_address[9]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00570000"
+    )
+        port map (
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => pixel_index0(7),
+      O => bram_address(7)
+    );
+\bram_read_data_reg_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(4),
+      Q => bram_read_data_reg(12),
+      R => '0'
+    );
+\bram_read_data_reg_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(5),
+      Q => bram_read_data_reg(13),
+      R => '0'
+    );
+\bram_read_data_reg_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(6),
+      Q => bram_read_data_reg(14),
+      R => '0'
+    );
+\bram_read_data_reg_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(7),
+      Q => bram_read_data_reg(15),
+      R => '0'
+    );
+\bram_read_data_reg_reg[20]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(8),
+      Q => bram_read_data_reg(20),
+      R => '0'
+    );
+\bram_read_data_reg_reg[21]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(9),
+      Q => bram_read_data_reg(21),
+      R => '0'
+    );
+\bram_read_data_reg_reg[22]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(10),
+      Q => bram_read_data_reg(22),
+      R => '0'
+    );
+\bram_read_data_reg_reg[23]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(11),
+      Q => bram_read_data_reg(23),
+      R => '0'
+    );
+\bram_read_data_reg_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(0),
+      Q => bram_read_data_reg(4),
+      R => '0'
+    );
+\bram_read_data_reg_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(1),
+      Q => bram_read_data_reg(5),
+      R => '0'
+    );
+\bram_read_data_reg_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(2),
+      Q => bram_read_data_reg(6),
+      R => '0'
+    );
+\bram_read_data_reg_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => pixel_clk,
+      CE => '1',
+      D => bram_read_data(3),
+      Q => bram_read_data_reg(7),
+      R => '0'
     );
 display_on_1_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000001115"
+      INIT => X"0000000000000057"
     )
         port map (
-      I0 => display_on_1_i_2_n_0,
-      I1 => \^hcount_reg[9]_0\,
-      I2 => \^di\(1),
-      I3 => \^di\(0),
-      I4 => vsync_1_i_5_n_0,
-      I5 => hsync_1_i_4_n_0,
+      I0 => \^hcount_reg[9]_0\,
+      I1 => \^di\(1),
+      I2 => \^di\(0),
+      I3 => \bram_address[18]_INST_0_i_1_n_0\,
+      I4 => display_on_1_i_2_n_0,
+      I5 => vsync_1_i_2_n_0,
       O => display_on_10
     );
-display_on_1_i_2: unisim.vcomponents.LUT2
+display_on_1_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E"
+      INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => vsync_1_i_4_n_0,
-      I1 => \^vcount_reg[9]_0\,
+      I0 => \^hcount_640\(5),
+      I1 => \^hcount_640\(4),
+      I2 => \^hcount_640\(2),
+      I3 => \^hcount_640\(3),
+      I4 => \^hcount_640\(1),
+      I5 => \^hcount_640\(0),
       O => display_on_1_i_2_n_0
     );
 display_on_1_reg: unisim.vcomponents.FDRE
@@ -2607,7 +2889,7 @@ display_on_reg: unisim.vcomponents.FDRE
       C => pixel_clk,
       CE => '1',
       D => display_on_1,
-      Q => \^display_on\,
+      Q => \^display_on_reg_0\,
       R => '0'
     );
 \hcount[11]_i_2\: unisim.vcomponents.LUT2
@@ -2966,75 +3248,26 @@ display_on_reg: unisim.vcomponents.FDRE
     );
 hsync_1_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFF7FFFF"
+      INIT => X"FFBFBFBFBFBFBFFF"
     )
         port map (
       I0 => hsync_1_i_2_n_0,
       I1 => \^di\(0),
-      I2 => hsync_1_i_3_n_0,
-      I3 => hsync_1_i_4_n_0,
-      I4 => \^hcount_reg[9]_0\,
-      I5 => \^di\(1),
+      I2 => \^hcount_reg[9]_0\,
+      I3 => \^s\(0),
+      I4 => \^hcount_reg[5]_0\,
+      I5 => \^hcount_reg[4]_0\,
       O => hsync_1_i_1_n_0
     );
-hsync_1_i_2: unisim.vcomponents.LUT6
+hsync_1_i_2: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFFFFEFEEEEEEEE"
-    )
-        port map (
-      I0 => \^s\(0),
-      I1 => \^hcount_reg[5]_0\,
-      I2 => hsync_1_i_5_n_0,
-      I3 => \^hcount_reg[3]_0\,
-      I4 => \^hcount_reg[2]_0\,
-      I5 => \^hcount_reg[4]_0\,
-      O => hsync_1_i_2_n_0
-    );
-hsync_1_i_3: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0080"
+      INIT => X"F8"
     )
         port map (
       I0 => \^hcount_reg[9]_0\,
-      I1 => \^s\(0),
-      I2 => \^di\(0),
-      I3 => hsync_1_i_6_n_0,
-      O => hsync_1_i_3_n_0
-    );
-hsync_1_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => \^hcount_640\(5),
-      I1 => \^hcount_640\(4),
-      I2 => \^hcount_640\(2),
-      I3 => \^hcount_640\(3),
-      I4 => \^hcount_640\(1),
-      I5 => \^hcount_640\(0),
-      O => hsync_1_i_4_n_0
-    );
-hsync_1_i_5: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => \^hcount_reg[1]_0\,
-      I1 => \^hcount_reg[0]_0\,
-      O => hsync_1_i_5_n_0
-    );
-hsync_1_i_6: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7777777777777FFF"
-    )
-        port map (
-      I0 => \^hcount_reg[5]_0\,
-      I1 => \^hcount_reg[4]_0\,
-      I2 => \^hcount_reg[1]_0\,
-      I3 => \^hcount_reg[0]_0\,
-      I4 => \^hcount_reg[2]_0\,
-      I5 => \^hcount_reg[3]_0\,
-      O => hsync_1_i_6_n_0
+      I1 => \^di\(1),
+      I2 => display_on_1_i_2_n_0,
+      O => hsync_1_i_2_n_0
     );
 hsync_1_reg: unisim.vcomponents.FDRE
      port map (
@@ -3052,77 +3285,77 @@ hsync_reg: unisim.vcomponents.FDRE
       Q => VGA_HSYNC,
       R => '0'
     );
-\pixel_index__0_carry\: unisim.vcomponents.CARRY4
+\pixel_index0__0_carry\: unisim.vcomponents.CARRY4
      port map (
       CI => '0',
-      CO(3) => \pixel_index__0_carry_n_0\,
-      CO(2) => \pixel_index__0_carry_n_1\,
-      CO(1) => \pixel_index__0_carry_n_2\,
-      CO(0) => \pixel_index__0_carry_n_3\,
+      CO(3) => \pixel_index0__0_carry_n_0\,
+      CO(2) => \pixel_index0__0_carry_n_1\,
+      CO(1) => \pixel_index0__0_carry_n_2\,
+      CO(0) => \pixel_index0__0_carry_n_3\,
       CYINIT => '0',
       DI(3 downto 1) => \^di\(2 downto 0),
       DI(0) => '0',
-      O(3 downto 0) => bram_address(3 downto 0),
-      S(3) => \pixel_index__0_carry_i_1_n_0\,
-      S(2) => \pixel_index__0_carry_i_2_n_0\,
-      S(1) => \pixel_index__0_carry_i_3_n_0\,
+      O(3 downto 0) => pixel_index0(8 downto 5),
+      S(3) => \pixel_index0__0_carry_i_1_n_0\,
+      S(2) => \pixel_index0__0_carry_i_2_n_0\,
+      S(1) => \pixel_index0__0_carry_i_3_n_0\,
       S(0) => \^s\(0)
     );
-\pixel_index__0_carry__0\: unisim.vcomponents.CARRY4
+\pixel_index0__0_carry__0\: unisim.vcomponents.CARRY4
      port map (
-      CI => \pixel_index__0_carry_n_0\,
-      CO(3) => \pixel_index__0_carry__0_n_0\,
-      CO(2) => \pixel_index__0_carry__0_n_1\,
-      CO(1) => \pixel_index__0_carry__0_n_2\,
-      CO(0) => \pixel_index__0_carry__0_n_3\,
+      CI => \pixel_index0__0_carry_n_0\,
+      CO(3) => \pixel_index0__0_carry__0_n_0\,
+      CO(2) => \pixel_index0__0_carry__0_n_1\,
+      CO(1) => \pixel_index0__0_carry__0_n_2\,
+      CO(0) => \pixel_index0__0_carry__0_n_3\,
       CYINIT => '0',
-      DI(3) => \pixel_index__0_carry__0_i_1_n_0\,
-      DI(2) => \pixel_index__0_carry__0_i_2_n_0\,
-      DI(1) => \pixel_index__0_carry__0_i_3_n_0\,
-      DI(0) => \pixel_index__0_carry__0_i_4_n_0\,
-      O(3 downto 0) => bram_address(7 downto 4),
-      S(3) => \pixel_index__0_carry__0_i_5_n_0\,
-      S(2) => \pixel_index__0_carry__0_i_6_n_0\,
-      S(1) => \pixel_index__0_carry__0_i_7_n_0\,
-      S(0) => \pixel_index__0_carry__0_i_8_n_0\
+      DI(3) => \pixel_index0__0_carry__0_i_1_n_0\,
+      DI(2) => \pixel_index0__0_carry__0_i_2_n_0\,
+      DI(1) => \pixel_index0__0_carry__0_i_3_n_0\,
+      DI(0) => \pixel_index0__0_carry__0_i_4_n_0\,
+      O(3 downto 0) => pixel_index0(12 downto 9),
+      S(3) => \pixel_index0__0_carry__0_i_5_n_0\,
+      S(2) => \pixel_index0__0_carry__0_i_6_n_0\,
+      S(1) => \pixel_index0__0_carry__0_i_7_n_0\,
+      S(0) => \pixel_index0__0_carry__0_i_8_n_0\
     );
-\pixel_index__0_carry__0_i_1\: unisim.vcomponents.LUT2
+\pixel_index0__0_carry__0_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => \^vcount_reg[6]_0\,
       I1 => \^vcount_reg[4]_0\,
-      O => \pixel_index__0_carry__0_i_1_n_0\
+      O => \pixel_index0__0_carry__0_i_1_n_0\
     );
-\pixel_index__0_carry__0_i_2\: unisim.vcomponents.LUT2
+\pixel_index0__0_carry__0_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => \^vcount_reg[5]_0\,
       I1 => \^vcount_reg[3]_0\,
-      O => \pixel_index__0_carry__0_i_2_n_0\
+      O => \pixel_index0__0_carry__0_i_2_n_0\
     );
-\pixel_index__0_carry__0_i_3\: unisim.vcomponents.LUT2
+\pixel_index0__0_carry__0_i_3\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => \^vcount_reg[4]_0\,
       I1 => \^vcount_reg[2]_0\,
-      O => \pixel_index__0_carry__0_i_3_n_0\
+      O => \pixel_index0__0_carry__0_i_3_n_0\
     );
-\pixel_index__0_carry__0_i_4\: unisim.vcomponents.LUT2
+\pixel_index0__0_carry__0_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => \^vcount_reg[3]_0\,
       I1 => \^hcount_reg[9]_0\,
-      O => \pixel_index__0_carry__0_i_4_n_0\
+      O => \pixel_index0__0_carry__0_i_4_n_0\
     );
-\pixel_index__0_carry__0_i_5\: unisim.vcomponents.LUT4
+\pixel_index0__0_carry__0_i_5\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"8778"
     )
@@ -3131,9 +3364,9 @@ hsync_reg: unisim.vcomponents.FDRE
       I1 => \^vcount_reg[6]_0\,
       I2 => \^vcount_reg[7]_0\(0),
       I3 => \^vcount_reg[5]_0\,
-      O => \pixel_index__0_carry__0_i_5_n_0\
+      O => \pixel_index0__0_carry__0_i_5_n_0\
     );
-\pixel_index__0_carry__0_i_6\: unisim.vcomponents.LUT4
+\pixel_index0__0_carry__0_i_6\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"8778"
     )
@@ -3142,9 +3375,9 @@ hsync_reg: unisim.vcomponents.FDRE
       I1 => \^vcount_reg[5]_0\,
       I2 => \^vcount_reg[6]_0\,
       I3 => \^vcount_reg[4]_0\,
-      O => \pixel_index__0_carry__0_i_6_n_0\
+      O => \pixel_index0__0_carry__0_i_6_n_0\
     );
-\pixel_index__0_carry__0_i_7\: unisim.vcomponents.LUT4
+\pixel_index0__0_carry__0_i_7\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"8778"
     )
@@ -3153,9 +3386,9 @@ hsync_reg: unisim.vcomponents.FDRE
       I1 => \^vcount_reg[4]_0\,
       I2 => \^vcount_reg[5]_0\,
       I3 => \^vcount_reg[3]_0\,
-      O => \pixel_index__0_carry__0_i_7_n_0\
+      O => \pixel_index0__0_carry__0_i_7_n_0\
     );
-\pixel_index__0_carry__0_i_8\: unisim.vcomponents.LUT4
+\pixel_index0__0_carry__0_i_8\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"8778"
     )
@@ -3164,36 +3397,36 @@ hsync_reg: unisim.vcomponents.FDRE
       I1 => \^vcount_reg[3]_0\,
       I2 => \^vcount_reg[4]_0\,
       I3 => \^vcount_reg[2]_0\,
-      O => \pixel_index__0_carry__0_i_8_n_0\
+      O => \pixel_index0__0_carry__0_i_8_n_0\
     );
-\pixel_index__0_carry__1\: unisim.vcomponents.CARRY4
+\pixel_index0__0_carry__1\: unisim.vcomponents.CARRY4
      port map (
-      CI => \pixel_index__0_carry__0_n_0\,
-      CO(3) => bram_address(11),
-      CO(2) => \NLW_pixel_index__0_carry__1_CO_UNCONNECTED\(2),
-      CO(1) => \pixel_index__0_carry__1_n_2\,
-      CO(0) => \pixel_index__0_carry__1_n_3\,
+      CI => \pixel_index0__0_carry__0_n_0\,
+      CO(3) => pixel_index0(16),
+      CO(2) => \NLW_pixel_index0__0_carry__1_CO_UNCONNECTED\(2),
+      CO(1) => \pixel_index0__0_carry__1_n_2\,
+      CO(0) => \pixel_index0__0_carry__1_n_3\,
       CYINIT => '0',
       DI(3 downto 2) => B"00",
       DI(1) => \^vcount_reg[7]_0\(0),
-      DI(0) => \pixel_index__0_carry__1_i_1_n_0\,
-      O(3) => \NLW_pixel_index__0_carry__1_O_UNCONNECTED\(3),
-      O(2 downto 0) => bram_address(10 downto 8),
+      DI(0) => \pixel_index0__0_carry__1_i_1_n_0\,
+      O(3) => \NLW_pixel_index0__0_carry__1_O_UNCONNECTED\(3),
+      O(2 downto 0) => pixel_index0(15 downto 13),
       S(3) => '1',
       S(2) => \^vcount_reg[8]_0\(0),
-      S(1) => \pixel_index__0_carry__1_i_2_n_0\,
-      S(0) => \pixel_index__0_carry__1_i_3_n_0\
+      S(1) => \pixel_index0__0_carry__1_i_2_n_0\,
+      S(0) => \pixel_index0__0_carry__1_i_3_n_0\
     );
-\pixel_index__0_carry__1_i_1\: unisim.vcomponents.LUT2
+\pixel_index0__0_carry__1_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => \^vcount_reg[7]_0\(0),
       I1 => \^vcount_reg[5]_0\,
-      O => \pixel_index__0_carry__1_i_1_n_0\
+      O => \pixel_index0__0_carry__1_i_1_n_0\
     );
-\pixel_index__0_carry__1_i_2\: unisim.vcomponents.LUT3
+\pixel_index0__0_carry__1_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"78"
     )
@@ -3201,9 +3434,9 @@ hsync_reg: unisim.vcomponents.FDRE
       I0 => \^vcount_reg[6]_0\,
       I1 => \^vcount_reg[8]_0\(0),
       I2 => \^vcount_reg[7]_0\(0),
-      O => \pixel_index__0_carry__1_i_2_n_0\
+      O => \pixel_index0__0_carry__1_i_2_n_0\
     );
-\pixel_index__0_carry__1_i_3\: unisim.vcomponents.LUT4
+\pixel_index0__0_carry__1_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"8778"
     )
@@ -3212,9 +3445,9 @@ hsync_reg: unisim.vcomponents.FDRE
       I1 => \^vcount_reg[7]_0\(0),
       I2 => \^vcount_reg[8]_0\(0),
       I3 => \^vcount_reg[6]_0\,
-      O => \pixel_index__0_carry__1_i_3_n_0\
+      O => \pixel_index0__0_carry__1_i_3_n_0\
     );
-\pixel_index__0_carry_i_1\: unisim.vcomponents.LUT3
+\pixel_index0__0_carry_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"96"
     )
@@ -3222,25 +3455,25 @@ hsync_reg: unisim.vcomponents.FDRE
       I0 => \^vcount_reg[3]_0\,
       I1 => \^hcount_reg[9]_0\,
       I2 => \^di\(2),
-      O => \pixel_index__0_carry_i_1_n_0\
+      O => \pixel_index0__0_carry_i_1_n_0\
     );
-\pixel_index__0_carry_i_2\: unisim.vcomponents.LUT2
+\pixel_index0__0_carry_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
       I0 => \^di\(1),
       I1 => \^vcount_reg[2]_0\,
-      O => \pixel_index__0_carry_i_2_n_0\
+      O => \pixel_index0__0_carry_i_2_n_0\
     );
-\pixel_index__0_carry_i_3\: unisim.vcomponents.LUT2
+\pixel_index0__0_carry_i_3\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
       I0 => \^di\(0),
       I1 => \^di\(2),
-      O => \pixel_index__0_carry_i_3_n_0\
+      O => \pixel_index0__0_carry_i_3_n_0\
     );
 \vcount[11]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -3287,65 +3520,78 @@ hsync_reg: unisim.vcomponents.FDRE
       I1 => \hcount_clear__13\,
       O => \vcount[15]_i_1_n_0\
     );
-\vcount[15]_i_10\: unisim.vcomponents.LUT4
+\vcount[15]_i_10\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001"
+      INIT => X"0000000100000000"
+    )
+        port map (
+      I0 => \^vcount_reg[4]_0\,
+      I1 => \^vcount_reg[5]_0\,
+      I2 => \^vcount_reg[6]_0\,
+      I3 => \^vcount_reg[7]_0\(0),
+      I4 => \^vcount_reg[8]_0\(0),
+      I5 => \^vcount_reg[9]_0\,
+      O => \vcount[15]_i_10_n_0\
+    );
+\vcount[15]_i_11\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"1000"
     )
         port map (
       I0 => \^di\(2),
       I1 => \^vcount_reg[0]_0\,
-      I2 => \^vcount_reg[5]_0\,
-      I3 => \^vcount_reg[4]_0\,
-      O => \vcount[15]_i_10_n_0\
+      I2 => \^vcount_reg[3]_0\,
+      I3 => \^vcount_reg[2]_0\,
+      O => \vcount[15]_i_11_n_0\
     );
-\vcount[15]_i_11\: unisim.vcomponents.LUT6
+\vcount[15]_i_12\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1000000000000000"
+      INIT => X"0000000000002000"
     )
         port map (
-      I0 => \^s\(0),
+      I0 => \^hcount_reg[4]_0\,
       I1 => \^di\(0),
       I2 => \^di\(1),
       I3 => \^hcount_reg[9]_0\,
-      I4 => \^hcount_reg[1]_0\,
-      I5 => \^hcount_reg[2]_0\,
-      O => \vcount[15]_i_11_n_0\
+      I4 => \^s\(0),
+      I5 => \^hcount_reg[5]_0\,
+      O => \vcount[15]_i_12_n_0\
     );
-\vcount[15]_i_12\: unisim.vcomponents.LUT4
+\vcount[15]_i_13\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0800"
+      INIT => X"8000"
     )
         port map (
-      I0 => \^hcount_reg[3]_0\,
+      I0 => \^hcount_reg[1]_0\,
       I1 => \^hcount_reg[0]_0\,
-      I2 => \^hcount_reg[5]_0\,
-      I3 => \^hcount_reg[4]_0\,
-      O => \vcount[15]_i_12_n_0\
+      I2 => \^hcount_reg[3]_0\,
+      I3 => \^hcount_reg[2]_0\,
+      O => \vcount[15]_i_13_n_0\
     );
 \vcount[15]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0040000000000000"
     )
         port map (
-      I0 => vsync_1_i_4_n_0,
-      I1 => \vcount[15]_i_9_n_0\,
-      I2 => \vcount[15]_i_10_n_0\,
-      I3 => hsync_1_i_4_n_0,
-      I4 => \vcount[15]_i_11_n_0\,
-      I5 => \vcount[15]_i_12_n_0\,
+      I0 => \vcount[15]_i_9_n_0\,
+      I1 => \vcount[15]_i_10_n_0\,
+      I2 => \vcount[15]_i_11_n_0\,
+      I3 => display_on_1_i_2_n_0,
+      I4 => \vcount[15]_i_12_n_0\,
+      I5 => \vcount[15]_i_13_n_0\,
       O => \vcount1__14\
     );
 \vcount[15]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000008000000"
+      INIT => X"0000000080000000"
     )
         port map (
-      I0 => \^hcount_reg[3]_0\,
+      I0 => \^hcount_reg[1]_0\,
       I1 => \^hcount_reg[0]_0\,
-      I2 => \^hcount_reg[5]_0\,
-      I3 => \^hcount_reg[4]_0\,
-      I4 => \vcount[15]_i_11_n_0\,
-      I5 => hsync_1_i_4_n_0,
+      I2 => \^hcount_reg[3]_0\,
+      I3 => \^hcount_reg[2]_0\,
+      I4 => \vcount[15]_i_12_n_0\,
+      I5 => display_on_1_i_2_n_0,
       O => \hcount_clear__13\
     );
 \vcount[15]_i_5\: unisim.vcomponents.LUT2
@@ -3386,15 +3632,15 @@ hsync_reg: unisim.vcomponents.FDRE
     );
 \vcount[15]_i_9\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0010000000000000"
+      INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \^vcount_reg[6]_0\,
-      I1 => \^vcount_reg[7]_0\(0),
-      I2 => \^vcount_reg[9]_0\,
-      I3 => \^vcount_reg[8]_0\(0),
-      I4 => \^vcount_reg[3]_0\,
-      I5 => \^vcount_reg[2]_0\,
+      I0 => \^vcount_480\(4),
+      I1 => \^vcount_480\(5),
+      I2 => \^vcount_480\(3),
+      I3 => \^vcount_480\(2),
+      I4 => \^vcount_480\(0),
+      I5 => \^vcount_480\(1),
       O => \vcount[15]_i_9_n_0\
     );
 \vcount[3]_i_2\: unisim.vcomponents.LUT2
@@ -3681,75 +3927,25 @@ hsync_reg: unisim.vcomponents.FDRE
     );
 vsync_1_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFF5FFFDFFF5"
+      INIT => X"FFFFFFBFFFFFFFFF"
     )
         port map (
       I0 => vsync_1_i_2_n_0,
-      I1 => vsync_1_i_3_n_0,
-      I2 => vsync_1_i_4_n_0,
-      I3 => \^vcount_reg[9]_0\,
-      I4 => vsync_1_i_5_n_0,
-      I5 => \^vcount_reg[4]_0\,
-      O => vsync_1_i_1_n_0
-    );
-vsync_1_i_2: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0080"
-    )
-        port map (
-      I0 => \^vcount_reg[5]_0\,
-      I1 => \^vcount_reg[6]_0\,
-      I2 => \^vcount_reg[7]_0\(0),
-      I3 => vsync_1_i_6_n_0,
-      O => vsync_1_i_2_n_0
-    );
-vsync_1_i_3: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
-    )
-        port map (
-      I0 => \^di\(2),
-      I1 => \^vcount_reg[0]_0\,
+      I1 => \bram_address[18]_INST_0_i_1_n_0\,
       I2 => \^vcount_reg[3]_0\,
       I3 => \^vcount_reg[2]_0\,
-      O => vsync_1_i_3_n_0
-    );
-vsync_1_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => \^vcount_480\(4),
-      I1 => \^vcount_480\(5),
-      I2 => \^vcount_480\(3),
-      I3 => \^vcount_480\(2),
-      I4 => \^vcount_480\(0),
-      I5 => \^vcount_480\(1),
-      O => vsync_1_i_4_n_0
-    );
-vsync_1_i_5: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
-    )
-        port map (
-      I0 => \^vcount_reg[6]_0\,
-      I1 => \^vcount_reg[5]_0\,
-      I2 => \^vcount_reg[8]_0\(0),
-      I3 => \^vcount_reg[7]_0\(0),
-      O => vsync_1_i_5_n_0
-    );
-vsync_1_i_6: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"557F557F557F55FF"
-    )
-        port map (
-      I0 => \^vcount_reg[8]_0\(0),
-      I1 => \^vcount_reg[3]_0\,
-      I2 => \^vcount_reg[2]_0\,
-      I3 => \^vcount_reg[4]_0\,
-      I4 => \^vcount_reg[0]_0\,
+      I4 => \^vcount_reg[4]_0\,
       I5 => \^di\(2),
-      O => vsync_1_i_6_n_0
+      O => vsync_1_i_1_n_0
+    );
+vsync_1_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \vcount[15]_i_9_n_0\,
+      I1 => \^vcount_reg[9]_0\,
+      O => vsync_1_i_2_n_0
     );
 vsync_1_reg: unisim.vcomponents.FDRE
      port map (
@@ -3764,7 +3960,7 @@ vsync_reg: unisim.vcomponents.FDRE
       C => pixel_clk,
       CE => '1',
       D => vsync_1,
-      Q => VGA_VSYNC,
+      Q => vsync_trigger,
       R => '0'
     );
 end STRUCTURE;
@@ -3776,18 +3972,22 @@ entity design_4_sync_gen_1_1_sync_gen_v1 is
   port (
     hcount_640 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     vcount_480 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    bram_address : out STD_LOGIC_VECTOR ( 16 downto 0 );
     s00_axi_wready : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_awready : out STD_LOGIC;
     s00_axi_arready : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     VGA_HSYNC : out STD_LOGIC;
-    VGA_VSYNC : out STD_LOGIC;
+    vsync_trigger : out STD_LOGIC;
     display_on : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
-    VGA_R : out STD_LOGIC_VECTOR ( 0 to 0 );
-    bram_address : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    VGA_R : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_bvalid : out STD_LOGIC;
+    bram_read_data : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    pixel_clk : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
@@ -3795,13 +3995,13 @@ entity design_4_sync_gen_1_1_sync_gen_v1 is
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pixel_clk : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    bram_read_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_4_sync_gen_1_1_sync_gen_v1 : entity is "sync_gen_v1";
 end design_4_sync_gen_1_1_sync_gen_v1;
 
 architecture STRUCTURE of design_4_sync_gen_1_1_sync_gen_v1 is
@@ -3813,12 +4013,13 @@ sync_generator_1: entity work.design_4_sync_gen_1_1_sync_generator
       DI(2) => vcount_480(1),
       DI(1 downto 0) => hcount_640(8 downto 7),
       S(0) => hcount_640(6),
+      VGA_B(3 downto 0) => VGA_B(3 downto 0),
+      VGA_G(3 downto 0) => VGA_G(3 downto 0),
       VGA_HSYNC => VGA_HSYNC,
-      VGA_R(0) => VGA_R(0),
-      VGA_VSYNC => VGA_VSYNC,
-      bram_address(11 downto 0) => bram_address(11 downto 0),
-      bram_read_data(31 downto 0) => bram_read_data(31 downto 0),
-      display_on => display_on,
+      VGA_R(3 downto 0) => VGA_R(3 downto 0),
+      bram_address(16 downto 0) => bram_address(16 downto 0),
+      bram_read_data(11 downto 0) => bram_read_data(11 downto 0),
+      display_on_reg_0 => display_on,
       hcount_640(5 downto 0) => hcount_640(15 downto 10),
       \hcount_reg[0]_0\ => hcount_640(0),
       \hcount_reg[15]_0\ => \^sr\(0),
@@ -3838,7 +4039,8 @@ sync_generator_1: entity work.design_4_sync_gen_1_1_sync_generator
       \vcount_reg[6]_0\ => vcount_480(6),
       \vcount_reg[7]_0\(0) => vcount_480(7),
       \vcount_reg[8]_0\(0) => vcount_480(8),
-      \vcount_reg[9]_0\ => vcount_480(9)
+      \vcount_reg[9]_0\ => vcount_480(9),
+      vsync_trigger => vsync_trigger
     );
 vga_controller_v1_0_S00_AXI_inst: entity work.design_4_sync_gen_1_1_sync_gen_v1_S00_AXI
      port map (
@@ -3884,6 +4086,7 @@ entity design_4_sync_gen_1_1 is
     bram_en : out STD_LOGIC;
     bram_rst : out STD_LOGIC;
     bram_clk : out STD_LOGIC;
+    vsync_trigger : out STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -3909,7 +4112,7 @@ entity design_4_sync_gen_1_1 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_4_sync_gen_1_1 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_4_sync_gen_1_1 : entity is "design_3_sync_gen_1_0,sync_gen_v1,{}";
+  attribute CHECK_LICENSE_TYPE of design_4_sync_gen_1_1 : entity is "design_4_sync_gen_1_1,sync_gen_v1,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_4_sync_gen_1_1 : entity is "yes";
   attribute X_CORE_INFO : string;
@@ -3919,19 +4122,19 @@ end design_4_sync_gen_1_1;
 architecture STRUCTURE of design_4_sync_gen_1_1 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
-  signal \^vga_r\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \^bram_address\ : STD_LOGIC_VECTOR ( 13 downto 2 );
+  signal \^bram_address\ : STD_LOGIC_VECTOR ( 18 downto 2 );
   signal \^pixel_clk\ : STD_LOGIC;
+  signal \^vsync_trigger\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of bram_clk : signal is "xilinx.com:signal:clock:1.0 bram_clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of bram_clk : signal is "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, PHASE 0.000, CLK_DOMAIN design_3_sync_gen_1_0_bram_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of bram_clk : signal is "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, PHASE 0.000, CLK_DOMAIN design_4_sync_gen_1_1_bram_clk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of bram_rst : signal is "xilinx.com:signal:reset:1.0 bram_rst RST";
   attribute X_INTERFACE_PARAMETER of bram_rst : signal is "XIL_INTERFACENAME bram_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of pixel_clk : signal is "xilinx.com:signal:clock:1.0 pixel_clk CLK";
-  attribute X_INTERFACE_PARAMETER of pixel_clk : signal is "XIL_INTERFACENAME pixel_clk, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of pixel_clk : signal is "XIL_INTERFACENAME pixel_clk, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
   attribute X_INTERFACE_PARAMETER of s00_axi_aresetn : signal is "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY";
@@ -3941,7 +4144,7 @@ architecture STRUCTURE of design_4_sync_gen_1_1 is
   attribute X_INTERFACE_INFO of s00_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BREADY";
   attribute X_INTERFACE_INFO of s00_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
   attribute X_INTERFACE_INFO of s00_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s00_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s00_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RVALID";
   attribute X_INTERFACE_INFO of s00_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WREADY";
   attribute X_INTERFACE_INFO of s00_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
@@ -3955,18 +4158,7 @@ architecture STRUCTURE of design_4_sync_gen_1_1 is
   attribute X_INTERFACE_INFO of s00_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WDATA";
   attribute X_INTERFACE_INFO of s00_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB";
 begin
-  VGA_B(3) <= \^vga_r\(3);
-  VGA_B(2) <= \^vga_r\(3);
-  VGA_B(1) <= \^vga_r\(3);
-  VGA_B(0) <= \^vga_r\(3);
-  VGA_G(3) <= \^vga_r\(3);
-  VGA_G(2) <= \^vga_r\(3);
-  VGA_G(1) <= \^vga_r\(3);
-  VGA_G(0) <= \^vga_r\(3);
-  VGA_R(3) <= \^vga_r\(3);
-  VGA_R(2) <= \^vga_r\(3);
-  VGA_R(1) <= \^vga_r\(3);
-  VGA_R(0) <= \^vga_r\(3);
+  VGA_VSYNC <= \^vsync_trigger\;
   \^pixel_clk\ <= pixel_clk;
   bram_address(31) <= \<const0>\;
   bram_address(30) <= \<const0>\;
@@ -3981,12 +4173,7 @@ begin
   bram_address(21) <= \<const0>\;
   bram_address(20) <= \<const0>\;
   bram_address(19) <= \<const0>\;
-  bram_address(18) <= \<const0>\;
-  bram_address(17) <= \<const0>\;
-  bram_address(16) <= \<const0>\;
-  bram_address(15) <= \<const0>\;
-  bram_address(14) <= \<const0>\;
-  bram_address(13 downto 2) <= \^bram_address\(13 downto 2);
+  bram_address(18 downto 2) <= \^bram_address\(18 downto 2);
   bram_address(1) <= \<const0>\;
   bram_address(0) <= \<const0>\;
   bram_clk <= \^pixel_clk\;
@@ -4031,6 +4218,7 @@ begin
   s00_axi_bresp(0) <= \<const0>\;
   s00_axi_rresp(1) <= \<const0>\;
   s00_axi_rresp(0) <= \<const0>\;
+  vsync_trigger <= \^vsync_trigger\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -4042,11 +4230,14 @@ VCC: unisim.vcomponents.VCC
 inst: entity work.design_4_sync_gen_1_1_sync_gen_v1
      port map (
       SR(0) => bram_rst,
+      VGA_B(3 downto 0) => VGA_B(3 downto 0),
+      VGA_G(3 downto 0) => VGA_G(3 downto 0),
       VGA_HSYNC => VGA_HSYNC,
-      VGA_R(0) => \^vga_r\(3),
-      VGA_VSYNC => VGA_VSYNC,
-      bram_address(11 downto 0) => \^bram_address\(13 downto 2),
-      bram_read_data(31 downto 0) => bram_read_data(31 downto 0),
+      VGA_R(3 downto 0) => VGA_R(3 downto 0),
+      bram_address(16 downto 0) => \^bram_address\(18 downto 2),
+      bram_read_data(11 downto 8) => bram_read_data(23 downto 20),
+      bram_read_data(7 downto 4) => bram_read_data(15 downto 12),
+      bram_read_data(3 downto 0) => bram_read_data(7 downto 4),
       display_on => display_on,
       hcount_640(15 downto 0) => hcount_640(15 downto 0),
       pixel_clk => \^pixel_clk\,
@@ -4067,6 +4258,7 @@ inst: entity work.design_4_sync_gen_1_1_sync_gen_v1
       s00_axi_wready => s00_axi_wready,
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
       s00_axi_wvalid => s00_axi_wvalid,
-      vcount_480(15 downto 0) => vcount_480(15 downto 0)
+      vcount_480(15 downto 0) => vcount_480(15 downto 0),
+      vsync_trigger => \^vsync_trigger\
     );
 end STRUCTURE;
