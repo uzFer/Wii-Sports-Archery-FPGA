@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:sync_gen:1
-// IP Revision: 10
+// IP Revision: 18
 
 `timescale 1ns/1ps
 
@@ -70,6 +70,7 @@ module design_3_sync_gen_1_0 (
   bram_en,
   bram_rst,
   bram_clk,
+  vsync_trigger,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -115,6 +116,7 @@ output wire bram_rst;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, PHASE 0.000, CLK_DOMAIN design_3_sync_gen_1_0_bram_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 bram_clk CLK" *)
 output wire bram_clk;
+output wire vsync_trigger;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [3 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -187,6 +189,7 @@ input wire s00_axi_aresetn;
     .bram_en(bram_en),
     .bram_rst(bram_rst),
     .bram_clk(bram_clk),
+    .vsync_trigger(vsync_trigger),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

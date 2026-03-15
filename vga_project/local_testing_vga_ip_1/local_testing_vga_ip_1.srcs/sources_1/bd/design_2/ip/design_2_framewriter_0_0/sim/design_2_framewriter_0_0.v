@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:framewriter:1
-// IP Revision: 30
+// IP Revision: 56
 
 `timescale 1ns/1ps
 
@@ -80,6 +80,7 @@ module design_2_framewriter_0_0 (
   s00_axi_rresp,
   s00_axi_rvalid,
   s00_axi_rready,
+  vsync_trigger,
   s00_axi_aclk,
   s00_axi_aresetn
 );
@@ -135,6 +136,7 @@ output wire s00_axi_rvalid;
 _READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *)
 input wire s00_axi_rready;
+input wire vsync_trigger;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 input wire s00_axi_aclk;
@@ -176,6 +178,7 @@ input wire s00_axi_aresetn;
     .s00_axi_rresp(s00_axi_rresp),
     .s00_axi_rvalid(s00_axi_rvalid),
     .s00_axi_rready(s00_axi_rready),
+    .vsync_trigger(vsync_trigger),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn)
   );

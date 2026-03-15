@@ -36,12 +36,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3 || ORI
 # IP: bd/design_3/ip/design_3_framewriter_0_0/design_3_framewriter_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_framewriter_0_0 || ORIG_REF_NAME==design_3_framewriter_0_0} -quiet] -quiet
 
-# IP: bd/design_3/ip/design_3_axi_bram_ctrl_0_0/design_3_axi_bram_ctrl_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_bram_ctrl_0_0 || ORIG_REF_NAME==design_3_axi_bram_ctrl_0_0} -quiet] -quiet
-
-# IP: bd/design_3/ip/design_3_axi_bram_ctrl_0_bram_0/design_3_axi_bram_ctrl_0_bram_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_bram_ctrl_0_bram_0 || ORIG_REF_NAME==design_3_axi_bram_ctrl_0_bram_0} -quiet] -quiet
-
 # IP: bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_clk_100MHz_0 || ORIG_REF_NAME==design_3_clk_100MHz_0} -quiet] -quiet
 
@@ -86,6 +80,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_mdm_1_
 
 # IP: bd/design_3/ip/design_3_axi_gpio_0_0/design_3_axi_gpio_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_0_0 || ORIG_REF_NAME==design_3_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_axi_bram_ctrl_1_0/design_3_axi_bram_ctrl_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_bram_ctrl_1_0 || ORIG_REF_NAME==design_3_axi_bram_ctrl_1_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_axi_bram_ctrl_1_bram_0/design_3_axi_bram_ctrl_1_bram_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_bram_ctrl_1_bram_0 || ORIG_REF_NAME==design_3_axi_bram_ctrl_1_bram_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_auto_pc_0 || ORIG_REF_NAME==design_3_auto_pc_0} -quiet] -quiet
 
 # Block Designs: bd/design_2/design_2.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2 || ORIG_REF_NAME==design_2} -quiet] -quiet

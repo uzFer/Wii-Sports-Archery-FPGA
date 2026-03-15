@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Mar  2 21:57:45 2026
+// Date        : Sat Mar 14 20:37:57 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top design_3_framewriter_0_0 -prefix
 //               design_3_framewriter_0_0_ design_4_framewriter_0_1_stub.v
@@ -19,8 +19,9 @@ module design_3_framewriter_0_0(bram_address, bram_write_data,
   s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, s00_axi_wstrb, 
   s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, 
   s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, 
-  s00_axi_rresp, s00_axi_rvalid, s00_axi_rready, s00_axi_aclk, s00_axi_aresetn)
-/* synthesis syn_black_box black_box_pad_pin="bram_address[31:0],bram_write_data[31:0],bram_read_data[31:0],bram_write_enable[3:0],bram_en,bram_rst,bram_clk,s00_axi_awaddr[4:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[4:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn" */;
+  s00_axi_rresp, s00_axi_rvalid, s00_axi_rready, vsync_trigger, s00_axi_aclk, 
+  s00_axi_aresetn)
+/* synthesis syn_black_box black_box_pad_pin="bram_address[31:0],bram_write_data[31:0],bram_read_data[31:0],bram_write_enable[3:0],bram_en,bram_rst,bram_clk,s00_axi_awaddr[4:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[4:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,vsync_trigger,s00_axi_aclk,s00_axi_aresetn" */;
   output [31:0]bram_address;
   output [31:0]bram_write_data;
   input [31:0]bram_read_data;
@@ -47,6 +48,7 @@ module design_3_framewriter_0_0(bram_address, bram_write_data,
   output [1:0]s00_axi_rresp;
   output s00_axi_rvalid;
   input s00_axi_rready;
+  input vsync_trigger;
   input s00_axi_aclk;
   input s00_axi_aresetn;
 endmodule
