@@ -24,3 +24,5 @@
 **/edit_*.sim/
 **/edit_*.hw/
 **/edit_*.ip_user_files/
+
+gyro_local/
