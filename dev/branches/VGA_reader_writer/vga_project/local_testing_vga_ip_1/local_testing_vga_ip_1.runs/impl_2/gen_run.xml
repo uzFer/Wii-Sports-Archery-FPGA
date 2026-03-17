@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1773613426">
+<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1773707626">
   <File Type="BITSTR-BMM" Name="design_3_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_3_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_3_wrapper_timing_summary_init.rpt"/>
@@ -71,15 +71,46 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/design_4/design_4.bd">
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/gyro_aim_calculator.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/gyro_aim_calculator.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_4/hdl/design_4_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/spi_interface.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/spi_interface.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/spi_master.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/spi_master.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/top.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/gyro_calc_interface.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/gyro_calc_interface.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -99,8 +130,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_4/design_4.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_4/hdl/design_4_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -108,6 +156,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_2/hdl/design_2_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -116,6 +165,46 @@
     <File Path="$PPRDIR/../../bram_target.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/spi_top_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/spi_top_tb.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/gyro_aim_calculator_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/gyro_aim_calculator_tb.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/bin2bcd.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/bin2bcd.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/gyroscope/seven_seg_controller.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../gyroscope/seven_seg_controller.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -128,6 +217,14 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/vga_constraints.xdc">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/gyro_nexys_a7.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/constraints/gyro_nexys_a7.xdc"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -158,6 +255,7 @@
   <BlockFileSet Type="BlockSrcs" Name="design_3_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_clk_100MHz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_mdm_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_dlmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_ilmb_v10_0"/>
@@ -173,9 +271,11 @@
   <BlockFileSet Type="BlockSrcs" Name="design_3_axi_bram_ctrl_1_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_axi_bram_ctrl_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_axi_uartlite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_bram_ctrl_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_sync_gen_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_sync_gen_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_framewriter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_gyro_calc_interface_0_0"/>
 </GenRun>
