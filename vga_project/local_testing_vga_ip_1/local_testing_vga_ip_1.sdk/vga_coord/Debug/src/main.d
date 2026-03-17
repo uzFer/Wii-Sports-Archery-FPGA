@@ -12,7 +12,8 @@ src/main.o src/main.o: ../src/main.c \
  ../../vga_coord_bsp/microblaze_0/include/xil_io.h \
  ../../vga_coord_bsp/microblaze_0/include/xil_printf.h \
  ../../vga_coord_bsp/microblaze_0/include/bspconfig.h \
- ../../vga_coord_bsp/microblaze_0/include/framewriter.h
+ ../../vga_coord_bsp/microblaze_0/include/framewriter.h \
+ ../../vga_coord_bsp/microblaze_0/include/xil_printf.h
 
 ../../vga_coord_bsp/microblaze_0/include/xparameters.h:
 
@@ -41,3 +42,5 @@ src/main.o src/main.o: ../src/main.c \
 ../../vga_coord_bsp/microblaze_0/include/bspconfig.h:
 
 ../../vga_coord_bsp/microblaze_0/include/framewriter.h:
+
+../../vga_coord_bsp/microblaze_0/include/xil_printf.h:

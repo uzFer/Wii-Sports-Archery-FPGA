@@ -1,4 +1,5 @@
 set_property SRC_FILE_INFO {cfile:Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc rfile:../../../local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/imports/constraints/gyro_nexys_a7.xdc rfile:../../../local_testing_vga_ip_1.srcs/constrs_1/imports/constraints/gyro_nexys_a7.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk_100MHz]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
@@ -39,3 +40,21 @@ set_property src_info {type:XDC file:1 line:36 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN P18 [get_ports {gpio_io_i_0[2]}]
 set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N17 [get_ports {gpio_io_i_0[3]}]
+set_property src_info {type:XDC file:2 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports {gyroscope_enable_0} ]; # gyroscope_enable
+set_property src_info {type:XDC file:2 line:15 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN M13 IOSTANDARD LVCMOS33} [get_ports {calibrate_0} ]; # calibrate
+set_property src_info {type:XDC file:2 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN J13 IOSTANDARD LVCMOS33} [get_ports {calibration_done_0}];
+set_property src_info {type:XDC file:2 line:107 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN D14 IOSTANDARD LVCMOS33} [get_ports o_CS_0];
+set_property src_info {type:XDC file:2 line:108 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN F16 IOSTANDARD LVCMOS33} [get_ports o_MOSI_0];
+set_property src_info {type:XDC file:2 line:109 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33} [get_ports i_MISO_0];
+set_property src_info {type:XDC file:2 line:110 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN H14 IOSTANDARD LVCMOS33} [get_ports o_SCLK_0];
+set_property src_info {type:XDC file:2 line:257 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0_rxd }]; # Sch=uart_txd_in
+set_property src_info {type:XDC file:2 line:258 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0_txd }]; # Sch=uart_rxd_out
