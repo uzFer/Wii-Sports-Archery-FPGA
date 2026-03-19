@@ -27,7 +27,6 @@ vlib questa_lib/msim/axi_bram_ctrl_v4_1_0
 vlib questa_lib/msim/lib_pkg_v1_0_2
 vlib questa_lib/msim/lib_srl_fifo_v1_0_2
 vlib questa_lib/msim/axi_uartlite_v2_0_22
-vlib questa_lib/msim/xlconstant_v1_1_5
 vlib questa_lib/msim/axi_protocol_converter_v2_1_18
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
@@ -56,7 +55,6 @@ vmap axi_bram_ctrl_v4_1_0 questa_lib/msim/axi_bram_ctrl_v4_1_0
 vmap lib_pkg_v1_0_2 questa_lib/msim/lib_pkg_v1_0_2
 vmap lib_srl_fifo_v1_0_2 questa_lib/msim/lib_srl_fifo_v1_0_2
 vmap axi_uartlite_v2_0_22 questa_lib/msim/axi_uartlite_v2_0_22
-vmap xlconstant_v1_1_5 questa_lib/msim/xlconstant_v1_1_5
 vmap axi_protocol_converter_v2_1_18 questa_lib/msim/axi_protocol_converter_v2_1_18
 
 vlog -work xilinx_vip -64 -sv -L axi_vip_v1_1_4 -L xilinx_vip "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
@@ -78,9 +76,9 @@ vcom -work xpm -64 -93 \
 "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_3/ipshared/6cbc/src/framewriter.v" \
-"../../../bd/design_3/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v" \
-"../../../bd/design_3/ipshared/6cbc/hdl/framewriter_v1.v" \
+"../../../bd/design_3/ipshared/1644/src/framewriter.v" \
+"../../../bd/design_3/ipshared/1644/hdl/framewriter_v1_S00_AXI.v" \
+"../../../bd/design_3/ipshared/1644/hdl/framewriter_v1.v" \
 "../../../bd/design_3/ip/design_3_framewriter_0_0/sim/design_3_framewriter_0_0.v" \
 "../../../bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0_clk_wiz.v" \
 "../../../bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0.v" \
@@ -214,20 +212,22 @@ vcom -work xil_defaultlib -64 -93 \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_3/ip/design_3_top_sound_0_0/sim/design_3_top_sound_0_0.v" \
+"../../../bd/design_3/sim/design_3.v" \
+"../../../bd/design_3/ip/design_3_archery_fsm_0_0/sim/design_3_archery_fsm_0_0.v" \
+"../../../bd/design_3/ip/design_3_scoring_engine_0_0/sim/design_3_scoring_engine_0_0.v" \
+"../../../bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/sim/design_3_ps2_keyboard_subsyst_0_0.v" \
+"../../../bd/design_3/ip/design_3_xlconcat_1_0/sim/design_3_xlconcat_1_0.v" \
 
-vlog -work xlconstant_v1_1_5 -64 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib -64 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_3/ip/design_3_xlconstant_0_0/sim/design_3_xlconstant_0_0.v" \
-"../../../bd/design_3/ip/design_3_xlconstant_1_0/sim/design_3_xlconstant_1_0.v" \
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_3/ip/design_3_axi_gpio_2_0/sim/design_3_axi_gpio_2_0.vhd" \
+"../../../bd/design_3/ip/design_3_axi_gpio_3_0/sim/design_3_axi_gpio_3_0.vhd" \
+"../../../bd/design_3/ip/design_3_axi_gpio_4_0/sim/design_3_axi_gpio_4_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_18 -64 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_3/ip/design_3_auto_pc_0/sim/design_3_auto_pc_0.v" \
-"../../../bd/design_3/sim/design_3.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

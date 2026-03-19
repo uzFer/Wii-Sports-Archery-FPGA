@@ -83,11 +83,26 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_top_so
 # IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
 
-# IP: bd/design_3/ip/design_3_xlconstant_0_0/design_3_xlconstant_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_xlconstant_0_0 || ORIG_REF_NAME==design_3_xlconstant_0_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_archery_fsm_0_0/design_3_archery_fsm_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_archery_fsm_0_0 || ORIG_REF_NAME==design_3_archery_fsm_0_0} -quiet] -quiet
 
-# IP: bd/design_3/ip/design_3_xlconstant_1_0/design_3_xlconstant_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_xlconstant_1_0 || ORIG_REF_NAME==design_3_xlconstant_1_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_scoring_engine_0_0/design_3_scoring_engine_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_scoring_engine_0_0 || ORIG_REF_NAME==design_3_scoring_engine_0_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/design_3_ps2_keyboard_subsyst_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_ps2_keyboard_subsyst_0_0 || ORIG_REF_NAME==design_3_ps2_keyboard_subsyst_0_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_xlconcat_1_0/design_3_xlconcat_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_xlconcat_1_0 || ORIG_REF_NAME==design_3_xlconcat_1_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_axi_gpio_2_0/design_3_axi_gpio_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_2_0 || ORIG_REF_NAME==design_3_axi_gpio_2_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_axi_gpio_3_0/design_3_axi_gpio_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_3_0 || ORIG_REF_NAME==design_3_axi_gpio_3_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_axi_gpio_4_0/design_3_axi_gpio_4_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_4_0 || ORIG_REF_NAME==design_3_axi_gpio_4_0} -quiet] -quiet
 
 # IP: bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_auto_pc_0 || ORIG_REF_NAME==design_3_auto_pc_0} -quiet] -quiet

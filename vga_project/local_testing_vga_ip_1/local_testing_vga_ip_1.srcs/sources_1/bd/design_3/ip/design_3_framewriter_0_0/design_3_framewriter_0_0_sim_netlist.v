@@ -1,21 +1,22 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar 15 18:24:31 2026
+// Date        : Thu Mar 19 15:51:19 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_3_framewriter_0_0 -prefix
-//               design_3_framewriter_0_0_ design_4_framewriter_0_1_sim_netlist.v
-// Design      : design_4_framewriter_0_1
+// Command     : write_verilog -force -mode funcsim
+//               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/design_3_framewriter_0_0_sim_netlist.v
+// Design      : design_3_framewriter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_4_framewriter_0_1,framewriter_v1,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "framewriter_v1,Vivado 2018.3" *) 
+(* CHECK_LICENSE_TYPE = "design_3_framewriter_0_0,framewriter_v1,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "framewriter_v1,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
 module design_3_framewriter_0_0
-   (bram_address,
+   (game_state_archery_fsm,
+    bram_address,
     bram_write_data,
     bram_read_data,
     bram_write_enable,
@@ -44,13 +45,14 @@ module design_3_framewriter_0_0
     vsync_trigger,
     s00_axi_aclk,
     s00_axi_aresetn);
+  input [31:0]game_state_archery_fsm;
   output [31:0]bram_address;
   output [31:0]bram_write_data;
   (* dont_touch = "yes" *) input [31:0]bram_read_data;
   output [3:0]bram_write_enable;
   output bram_en;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 bram_rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bram_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output bram_rst;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 bram_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_4_framewriter_0_1_bram_clk, INSERT_VIP 0" *) output bram_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 bram_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_3_framewriter_0_0_bram_clk, INSERT_VIP 0" *) output bram_clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [4:0]s00_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
@@ -69,9 +71,9 @@ module design_3_framewriter_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
   input vsync_trigger;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input s00_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *) input s00_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axi_aresetn;
 
   wire \<const0> ;
@@ -81,6 +83,7 @@ module design_3_framewriter_0_0
   wire bram_rst;
   wire [31:0]bram_write_data;
   wire [3:0]bram_write_enable;
+  wire [31:0]game_state_archery_fsm;
   wire [15:4]is_triangle3;
   wire [15:4]p_0_in;
   wire s00_axi_aclk;
@@ -115,6 +118,7 @@ module design_3_framewriter_0_0
         .bram_read_data(bram_read_data),
         .bram_write_data(bram_write_data),
         .bram_write_enable(bram_write_enable),
+        .game_state_archery_fsm(game_state_archery_fsm[3:0]),
         .\internal_y_reg[15] (is_triangle3),
         .is_triangle1_carry__0_i_6(p_0_in),
         .s00_axi_aclk(s00_axi_aclk),
@@ -202,6 +206,7 @@ module design_3_framewriter_0_0
         .O(p_0_in[4]));
 endmodule
 
+(* ORIG_REF_NAME = "framewriter" *) 
 module design_3_framewriter_0_0_framewriter
    (bram_address,
     bram_write_data,
@@ -217,7 +222,8 @@ module design_3_framewriter_0_0_framewriter
     vsync_trigger,
     s00_axi_aclk,
     s00_axi_aresetn,
-    is_triangle1_carry__0_i_6_0);
+    is_triangle1_carry__0_i_6_0,
+    game_state_archery_fsm);
   output [31:0]bram_address;
   output [31:0]bram_write_data;
   output [3:0]bram_write_enable;
@@ -233,6 +239,7 @@ module design_3_framewriter_0_0_framewriter
   input s00_axi_aclk;
   input s00_axi_aresetn;
   input [11:0]is_triangle1_carry__0_i_6_0;
+  input [3:0]game_state_archery_fsm;
 
   wire [15:4]A;
   wire \FSM_onehot_current_state[0]_i_1_n_0 ;
@@ -350,6 +357,7 @@ module design_3_framewriter_0_0_framewriter
   wire \final_color_latched[7]_i_3_n_0 ;
   wire \final_color_latched[7]_i_4_n_0 ;
   wire \final_color_latched[7]_i_5_n_0 ;
+  wire [3:0]game_state_archery_fsm;
   wire i__carry__0_i_10__0_n_0;
   wire i__carry__0_i_10__0_n_1;
   wire i__carry__0_i_10__0_n_2;
@@ -618,7 +626,7 @@ module design_3_framewriter_0_0_framewriter
   wire [15:1]is_cross2;
   wire is_cross20_out;
   wire is_cross219_in;
-  wire is_cross2_0;
+  wire is_cross2_1;
   wire is_cross2_carry__0_i_10_n_0;
   wire is_cross2_carry__0_i_10_n_1;
   wire is_cross2_carry__0_i_10_n_2;
@@ -742,7 +750,7 @@ module design_3_framewriter_0_0_framewriter
   wire is_triangle0_carry_n_2;
   wire is_triangle0_carry_n_3;
   wire [16:0]is_triangle1;
-  wire is_triangle1_1;
+  wire is_triangle1_2;
   wire is_triangle1_carry__0_i_10_n_0;
   wire is_triangle1_carry__0_i_10_n_1;
   wire is_triangle1_carry__0_i_10_n_2;
@@ -1576,7 +1584,7 @@ module design_3_framewriter_0_0_framewriter
     \final_color_latched[0]_i_3 
        (.I0(\is_cross2_inferred__2/i__carry__0_n_0 ),
         .I1(is_cross1),
-        .I2(is_cross2_0),
+        .I2(is_cross2_1),
         .I3(is_cross120_in),
         .I4(is_cross20_out),
         .I5(is_cross219_in),
@@ -1940,7 +1948,7 @@ module design_3_framewriter_0_0_framewriter
     .INIT(16'h0080)) 
     \final_color_latched[23]_i_3 
        (.I0(\final_color_latched[23]_i_8_n_0 ),
-        .I1(is_triangle1_1),
+        .I1(is_triangle1_2),
         .I2(is_triangle0),
         .I3(\final_color_latched[15]_i_2_n_0 ),
         .O(\final_color_latched[23]_i_3_n_0 ));
@@ -4151,7 +4159,7 @@ module design_3_framewriter_0_0_framewriter
         .S({i__carry_i_1__2_n_0,i__carry_i_2__2_n_0,i__carry_i_3__2_n_0,i__carry_i_4_n_0}));
   CARRY4 \is_cross2_inferred__4/i__carry__0 
        (.CI(\is_cross2_inferred__4/i__carry_n_0 ),
-        .CO({\NLW_is_cross2_inferred__4/i__carry__0_CO_UNCONNECTED [3:2],is_cross2_0,\is_cross2_inferred__4/i__carry__0_n_3 }),
+        .CO({\NLW_is_cross2_inferred__4/i__carry__0_CO_UNCONNECTED [3:2],is_cross2_1,\is_cross2_inferred__4/i__carry__0_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_is_cross2_inferred__4/i__carry__0_O_UNCONNECTED [3:0]),
@@ -4555,7 +4563,7 @@ module design_3_framewriter_0_0_framewriter
         .S({is_triangle1_carry__0_i_11_n_3,is_triangle1_carry__0_i_11_n_3,is_triangle1_carry__0_i_11_n_3,is_triangle1_carry__0_i_11_n_3}));
   CARRY4 is_triangle1_carry__2
        (.CI(is_triangle1_carry__1_n_0),
-        .CO({is_triangle1_1,is_triangle1_carry__2_n_1,is_triangle1_carry__2_n_2,is_triangle1_carry__2_n_3}),
+        .CO({is_triangle1_2,is_triangle1_carry__2_n_1,is_triangle1_carry__2_n_2,is_triangle1_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(NLW_is_triangle1_carry__2_O_UNCONNECTED[3:0]),
@@ -5211,25 +5219,25 @@ module design_3_framewriter_0_0_framewriter
   FDRE \score_latch_reg[0] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(out_reg2[0]),
+        .D(game_state_archery_fsm[0]),
         .Q(score_latch[0]),
         .R(s00_axi_aresetn_0));
   FDSE \score_latch_reg[1] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(out_reg2[1]),
+        .D(game_state_archery_fsm[1]),
         .Q(score_latch[1]),
         .S(s00_axi_aresetn_0));
   FDRE \score_latch_reg[2] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(out_reg2[2]),
+        .D(game_state_archery_fsm[2]),
         .Q(score_latch[2]),
         .R(s00_axi_aresetn_0));
   FDRE \score_latch_reg[3] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(out_reg2[3]),
+        .D(game_state_archery_fsm[3]),
         .Q(score_latch[3]),
         .R(s00_axi_aresetn_0));
   FDRE vsync_sync1_reg
@@ -5438,6 +5446,7 @@ module design_3_framewriter_0_0_framewriter
         .R(s00_axi_aresetn_0));
 endmodule
 
+(* ORIG_REF_NAME = "framewriter_v1" *) 
 module design_3_framewriter_0_0_framewriter_v1
    (s00_axi_awready,
     s00_axi_wready,
@@ -5468,7 +5477,8 @@ module design_3_framewriter_0_0_framewriter_v1
     s00_axi_rready,
     bram_read_data,
     vsync_trigger,
-    is_triangle1_carry__0_i_6);
+    is_triangle1_carry__0_i_6,
+    game_state_archery_fsm);
   output s00_axi_awready;
   output s00_axi_wready;
   output [1:0]s00_axi_bresp;
@@ -5499,6 +5509,7 @@ module design_3_framewriter_0_0_framewriter_v1
   input [31:0]bram_read_data;
   input vsync_trigger;
   input [11:0]is_triangle1_carry__0_i_6;
+  input [3:0]game_state_archery_fsm;
 
   wire [15:0]axi_framewriter_myScore;
   wire [15:0]axi_framewriter_oppScore;
@@ -5509,6 +5520,7 @@ module design_3_framewriter_0_0_framewriter_v1
   wire [31:0]bram_read_data;
   wire [31:0]bram_write_data;
   wire [3:0]bram_write_enable;
+  wire [3:0]game_state_archery_fsm;
   wire [11:0]\internal_y_reg[15] ;
   wire [11:0]is_triangle1_carry__0_i_6;
   wire s00_axi_aclk;
@@ -5545,6 +5557,7 @@ module design_3_framewriter_0_0_framewriter_v1
         .bram_read_data(bram_read_data),
         .bram_write_data(bram_write_data),
         .bram_write_enable(bram_write_enable),
+        .game_state_archery_fsm(game_state_archery_fsm),
         .\internal_y_reg[15]_0 (\internal_y_reg[15] ),
         .is_triangle1_carry__0_i_6_0(is_triangle1_carry__0_i_6),
         .out_reg0(axi_framewriter_x),
@@ -5589,7 +5602,7 @@ module design_3_framewriter_0_0_framewriter_v1
 endmodule
 
 (* ADDR_LSB = "2" *) (* C_S_AXI_ADDR_WIDTH = "5" *) (* C_S_AXI_DATA_WIDTH = "32" *) 
-(* OPT_MEM_ADDR_BITS = "2" *) (* SLAVE_REG_WIDTH = "16" *) 
+(* OPT_MEM_ADDR_BITS = "2" *) (* ORIG_REF_NAME = "framewriter_v1_S00_AXI" *) (* SLAVE_REG_WIDTH = "16" *) 
 module design_3_framewriter_0_0_framewriter_v1_S00_AXI
    (out_reg0,
     out_reg1,

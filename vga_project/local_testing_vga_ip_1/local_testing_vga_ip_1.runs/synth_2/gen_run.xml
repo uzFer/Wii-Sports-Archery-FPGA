@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1773947548">
+<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1773952562">
   <File Type="PA-TCL" Name="design_3_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_3_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_3_wrapper_reports.tcl"/>
@@ -87,6 +87,105 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../project_audio_pkg/src/top_sound.v"/>
         <Attr Name="ImportTime" Val="1773702123"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/archery/archery_fsm.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../archery/archery_fsm.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/archery/scoring_calc.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../archery/scoring_calc.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/PS2_Receiver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/PS2_Receiver.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/bin2bcd.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/bin2bcd.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/debouncer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/debouncer.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/fifo.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/fifo.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/font_rom/font_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/font_rom/font_rom.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/ps2_decoder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/ps2_decoder.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/seven_seg_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/seven_seg_controller.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/shift_register.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/shift_register.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/ps2_keyboard_subsystem.v"/>
+        <Attr Name="ImportTime" Val="1773951081"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -190,6 +289,66 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/decimal_display_manager.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/decimal_display_manager.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/fifo_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/fifo_tb.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/ps2_decoder_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/ps2_decoder_tb.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/ps2_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/ps2_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/top_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/top_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/peripherals/ps2/ps2_receiver_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../peripherals/ps2/ps2_receiver_tb.v"/>
+        <Attr Name="ImportTime" Val="1773702122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="design_3_wrapper"/>
@@ -228,7 +387,6 @@
       <Option Id="FlattenHierarchy">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_4_framewriter_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_bram_ctrl_0_bram_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_0_0"/>
@@ -237,4 +395,12 @@
   <BlockFileSet Type="BlockSrcs" Name="design_3_gyro_calc_interface_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_sync_gen_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_top_sound_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_scoring_engine_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_archery_fsm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_ps2_keyboard_subsyst_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_axi_gpio_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_axi_gpio_4_0"/>
 </GenRun>

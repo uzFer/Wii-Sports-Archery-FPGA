@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 15 18:24:31 2026
+-- Date        : Thu Mar 19 15:51:19 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_3_framewriter_0_0 -prefix
---               design_3_framewriter_0_0_ design_4_framewriter_0_1_sim_netlist.vhdl
--- Design      : design_4_framewriter_0_1
+-- Command     : write_vhdl -force -mode funcsim
+--               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/design_3_framewriter_0_0_sim_netlist.vhdl
+-- Design      : design_3_framewriter_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a100tcsg324-1
@@ -30,8 +30,11 @@ entity design_3_framewriter_0_0_framewriter is
     vsync_trigger : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
-    \is_triangle1_carry__0_i_6_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    \is_triangle1_carry__0_i_6_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    game_state_archery_fsm : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_3_framewriter_0_0_framewriter : entity is "framewriter";
 end design_3_framewriter_0_0_framewriter;
 
 architecture STRUCTURE of design_3_framewriter_0_0_framewriter is
@@ -419,7 +422,7 @@ architecture STRUCTURE of design_3_framewriter_0_0_framewriter is
   signal is_cross2 : STD_LOGIC_VECTOR ( 15 downto 1 );
   signal is_cross20_out : STD_LOGIC;
   signal is_cross219_in : STD_LOGIC;
-  signal is_cross2_0 : STD_LOGIC;
+  signal is_cross2_1 : STD_LOGIC;
   signal \is_cross2_carry__0_i_10_n_0\ : STD_LOGIC;
   signal \is_cross2_carry__0_i_10_n_1\ : STD_LOGIC;
   signal \is_cross2_carry__0_i_10_n_2\ : STD_LOGIC;
@@ -543,7 +546,7 @@ architecture STRUCTURE of design_3_framewriter_0_0_framewriter is
   signal is_triangle0_carry_n_2 : STD_LOGIC;
   signal is_triangle0_carry_n_3 : STD_LOGIC;
   signal is_triangle1 : STD_LOGIC_VECTOR ( 16 downto 0 );
-  signal is_triangle1_1 : STD_LOGIC;
+  signal is_triangle1_2 : STD_LOGIC;
   signal \is_triangle1_carry__0_i_10_n_0\ : STD_LOGIC;
   signal \is_triangle1_carry__0_i_10_n_1\ : STD_LOGIC;
   signal \is_triangle1_carry__0_i_10_n_2\ : STD_LOGIC;
@@ -1620,7 +1623,7 @@ bram_rst_INST_0: unisim.vcomponents.LUT1
         port map (
       I0 => \is_cross2_inferred__2/i__carry__0_n_0\,
       I1 => is_cross1,
-      I2 => is_cross2_0,
+      I2 => is_cross2_1,
       I3 => is_cross120_in,
       I4 => is_cross20_out,
       I5 => is_cross219_in,
@@ -2099,7 +2102,7 @@ bram_rst_INST_0: unisim.vcomponents.LUT1
     )
         port map (
       I0 => \final_color_latched[23]_i_8_n_0\,
-      I1 => is_triangle1_1,
+      I1 => is_triangle1_2,
       I2 => is_triangle0,
       I3 => \final_color_latched[15]_i_2_n_0\,
       O => \final_color_latched[23]_i_3_n_0\
@@ -5383,7 +5386,7 @@ is_cross2_carry_i_9: unisim.vcomponents.CARRY4
      port map (
       CI => \is_cross2_inferred__4/i__carry_n_0\,
       CO(3 downto 2) => \NLW_is_cross2_inferred__4/i__carry__0_CO_UNCONNECTED\(3 downto 2),
-      CO(1) => is_cross2_0,
+      CO(1) => is_cross2_1,
       CO(0) => \is_cross2_inferred__4/i__carry__0_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
@@ -6052,7 +6055,7 @@ is_triangle1_carry: unisim.vcomponents.CARRY4
 \is_triangle1_carry__2\: unisim.vcomponents.CARRY4
      port map (
       CI => \is_triangle1_carry__1_n_0\,
-      CO(3) => is_triangle1_1,
+      CO(3) => is_triangle1_2,
       CO(2) => \is_triangle1_carry__2_n_1\,
       CO(1) => \is_triangle1_carry__2_n_2\,
       CO(0) => \is_triangle1_carry__2_n_3\,
@@ -7246,7 +7249,7 @@ pipe_dx_sq_reg_i_9: unisim.vcomponents.LUT1
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => out_reg2(0),
+      D => game_state_archery_fsm(0),
       Q => score_latch(0),
       R => \^s00_axi_aresetn_0\
     );
@@ -7254,7 +7257,7 @@ pipe_dx_sq_reg_i_9: unisim.vcomponents.LUT1
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => out_reg2(1),
+      D => game_state_archery_fsm(1),
       Q => score_latch(1),
       S => \^s00_axi_aresetn_0\
     );
@@ -7262,7 +7265,7 @@ pipe_dx_sq_reg_i_9: unisim.vcomponents.LUT1
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => out_reg2(2),
+      D => game_state_archery_fsm(2),
       Q => score_latch(2),
       R => \^s00_axi_aresetn_0\
     );
@@ -7270,7 +7273,7 @@ pipe_dx_sq_reg_i_9: unisim.vcomponents.LUT1
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => out_reg2(3),
+      D => game_state_archery_fsm(3),
       Q => score_latch(3),
       R => \^s00_axi_aresetn_0\
     );
@@ -7587,6 +7590,8 @@ entity design_3_framewriter_0_0_framewriter_v1_S00_AXI is
   attribute C_S_AXI_DATA_WIDTH of design_3_framewriter_0_0_framewriter_v1_S00_AXI : entity is 32;
   attribute OPT_MEM_ADDR_BITS : integer;
   attribute OPT_MEM_ADDR_BITS of design_3_framewriter_0_0_framewriter_v1_S00_AXI : entity is 2;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_3_framewriter_0_0_framewriter_v1_S00_AXI : entity is "framewriter_v1_S00_AXI";
   attribute SLAVE_REG_WIDTH : integer;
   attribute SLAVE_REG_WIDTH of design_3_framewriter_0_0_framewriter_v1_S00_AXI : entity is 16;
 end design_3_framewriter_0_0_framewriter_v1_S00_AXI;
@@ -14646,8 +14651,11 @@ entity design_3_framewriter_0_0_framewriter_v1 is
     s00_axi_rready : in STD_LOGIC;
     bram_read_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
     vsync_trigger : in STD_LOGIC;
-    \is_triangle1_carry__0_i_6\ : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    \is_triangle1_carry__0_i_6\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    game_state_archery_fsm : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_3_framewriter_0_0_framewriter_v1 : entity is "framewriter_v1";
 end design_3_framewriter_0_0_framewriter_v1;
 
 architecture STRUCTURE of design_3_framewriter_0_0_framewriter_v1 is
@@ -14677,6 +14685,7 @@ framewriter_1: entity work.design_3_framewriter_0_0_framewriter
       bram_read_data(31 downto 0) => bram_read_data(31 downto 0),
       bram_write_data(31 downto 0) => bram_write_data(31 downto 0),
       bram_write_enable(3 downto 0) => bram_write_enable(3 downto 0),
+      game_state_archery_fsm(3 downto 0) => game_state_archery_fsm(3 downto 0),
       \internal_y_reg[15]_0\(11 downto 0) => \internal_y_reg[15]\(11 downto 0),
       \is_triangle1_carry__0_i_6_0\(11 downto 0) => \is_triangle1_carry__0_i_6\(11 downto 0),
       out_reg0(15 downto 0) => axi_framewriter_x(15 downto 0),
@@ -14727,6 +14736,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_3_framewriter_0_0 is
   port (
+    game_state_archery_fsm : in STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_address : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_write_data : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_read_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -14760,7 +14770,7 @@ entity design_3_framewriter_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_3_framewriter_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_3_framewriter_0_0 : entity is "design_4_framewriter_0_1,framewriter_v1,{}";
+  attribute CHECK_LICENSE_TYPE of design_3_framewriter_0_0 : entity is "design_3_framewriter_0_0,framewriter_v1,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_3_framewriter_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
@@ -14774,11 +14784,11 @@ architecture STRUCTURE of design_3_framewriter_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of bram_clk : signal is "xilinx.com:signal:clock:1.0 bram_clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of bram_clk : signal is "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_4_framewriter_0_1_bram_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of bram_clk : signal is "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_3_framewriter_0_0_bram_clk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of bram_rst : signal is "xilinx.com:signal:reset:1.0 bram_rst RST";
   attribute X_INTERFACE_PARAMETER of bram_rst : signal is "XIL_INTERFACENAME bram_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
   attribute X_INTERFACE_PARAMETER of s00_axi_aresetn : signal is "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY";
@@ -14788,7 +14798,7 @@ architecture STRUCTURE of design_3_framewriter_0_0 is
   attribute X_INTERFACE_INFO of s00_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BREADY";
   attribute X_INTERFACE_INFO of s00_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
   attribute X_INTERFACE_INFO of s00_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s00_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s00_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RVALID";
   attribute X_INTERFACE_INFO of s00_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WREADY";
   attribute X_INTERFACE_INFO of s00_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
@@ -14816,6 +14826,7 @@ inst: entity work.design_3_framewriter_0_0_framewriter_v1
       bram_read_data(31 downto 0) => bram_read_data(31 downto 0),
       bram_write_data(31 downto 0) => bram_write_data(31 downto 0),
       bram_write_enable(3 downto 0) => bram_write_enable(3 downto 0),
+      game_state_archery_fsm(3 downto 0) => game_state_archery_fsm(3 downto 0),
       \internal_y_reg[15]\(11 downto 0) => is_triangle3(15 downto 4),
       \is_triangle1_carry__0_i_6\(11 downto 0) => p_0_in(15 downto 4),
       s00_axi_aclk => s00_axi_aclk,
