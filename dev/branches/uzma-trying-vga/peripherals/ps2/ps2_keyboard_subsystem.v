@@ -28,10 +28,14 @@ module ps2_keyboard_subsystem (
     input ps2_clk,      // PS/2 Keyboard Clock line
     input ps2_data,     // PS/2 Keyboard Data line
     input read_fifo_en, // Enable signal to read a character from the FIFO
+    input [7:0] ascii_in, // Ascii character requested by CPU
+    input get_user_input, // Flag from Microblaze. Should be connected to AXI GPIO
 
     output [7:0] ascii_out,   // 8-bit ASCII character read from the FIFO
     output fifo_empty,        // Flag indicating if the FIFO is empty
     output fifo_full,         // Flag indicating if the FIFO is full
+    output [63:0] char_bitmap_low, // 7x9 Flattened Bitmap output
+    output [31:0] char_bitmap_high,
 
     // Seven segment display outputs
     output [6:0] seg,
@@ -45,6 +49,11 @@ module ps2_keyboard_subsystem (
     // Wires to connect PS2_Decoder output to FIFO input
     wire [7:0] decoder_ascii_char;
     wire decoder_ascii_valid;
+
+    wire [7:0] rom_input;
+    wire [63:0] char_bitmap;
+    assign char_bitmap_low = char_bitmap[31:0];
+    assign char_bitmap_high = char_bitmap[63:0];
 
     // This module is assumed to be provided by the user.
     PS2_Receiver ps2_rx_inst (
@@ -79,7 +88,15 @@ module ps2_keyboard_subsystem (
         .full(fifo_full),                // FIFO full status
         .empty(fifo_empty)               // FIFO empty status
     );
-
+    
+    assign rom_input = (get_user_input) ? ascii_out : ascii_in;
+    
+    font_rom font_rom_inst (
+        .clk(clk),
+        .addr(rom_input),           // ASCII Character Address
+        .char_bitmap(char_bitmap) // 7x9 Flattened Bitmap
+    );
+    
     // --- Seven Segment Display Logic ---
     wire [15:0] ascii_bcd;
 

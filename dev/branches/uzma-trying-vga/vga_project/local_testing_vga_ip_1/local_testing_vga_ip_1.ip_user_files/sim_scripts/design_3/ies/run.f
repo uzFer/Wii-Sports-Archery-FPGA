@@ -17,9 +17,9 @@
   "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_3/ipshared/6cbc/src/framewriter.v" \
-  "../../../bd/design_3/ipshared/6cbc/hdl/framewriter_v1_S00_AXI.v" \
-  "../../../bd/design_3/ipshared/6cbc/hdl/framewriter_v1.v" \
+  "../../../bd/design_3/ipshared/1644/src/framewriter.v" \
+  "../../../bd/design_3/ipshared/1644/hdl/framewriter_v1_S00_AXI.v" \
+  "../../../bd/design_3/ipshared/1644/hdl/framewriter_v1.v" \
   "../../../bd/design_3/ip/design_3_framewriter_0_0/sim/design_3_framewriter_0_0.v" \
   "../../../bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0_clk_wiz.v" \
   "../../../bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0.v" \
@@ -153,20 +153,22 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_3/ip/design_3_top_sound_0_0/sim/design_3_top_sound_0_0.v" \
--endlib
--makelib ies_lib/xlconstant_v1_1_5 \
-  "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v" \
+  "../../../bd/design_3/sim/design_3.v" \
+  "../../../bd/design_3/ip/design_3_archery_fsm_0_0/sim/design_3_archery_fsm_0_0.v" \
+  "../../../bd/design_3/ip/design_3_scoring_engine_0_0/sim/design_3_scoring_engine_0_0.v" \
+  "../../../bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/sim/design_3_ps2_keyboard_subsyst_0_0.v" \
+  "../../../bd/design_3/ip/design_3_xlconcat_1_0/sim/design_3_xlconcat_1_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_3/ip/design_3_xlconstant_0_0/sim/design_3_xlconstant_0_0.v" \
-  "../../../bd/design_3/ip/design_3_xlconstant_1_0/sim/design_3_xlconstant_1_0.v" \
+  "../../../bd/design_3/ip/design_3_axi_gpio_2_0/sim/design_3_axi_gpio_2_0.vhd" \
+  "../../../bd/design_3/ip/design_3_axi_gpio_3_0/sim/design_3_axi_gpio_3_0.vhd" \
+  "../../../bd/design_3/ip/design_3_axi_gpio_4_0/sim/design_3_axi_gpio_4_0.vhd" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_18 \
   "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_3/ip/design_3_auto_pc_0/sim/design_3_auto_pc_0.v" \
-  "../../../bd/design_3/sim/design_3.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# gyro_calc_interface, top_sound
+# archery_fsm, gyro_calc_interface, ps2_keyboard_subsystem, scoring_engine, top_sound
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -248,31 +248,48 @@ proc create_root_design { parentCell } {
   set uart_rtl_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 uart_rtl_0 ]
 
   # Create ports
+  set AN [ create_bd_port -dir O -from 7 -to 0 AN ]
+  set SEG [ create_bd_port -dir O -from 6 -to 0 SEG ]
   set VGA_B [ create_bd_port -dir O -from 3 -to 0 VGA_B ]
   set VGA_G [ create_bd_port -dir O -from 3 -to 0 VGA_G ]
   set VGA_HSYNC [ create_bd_port -dir O VGA_HSYNC ]
   set VGA_R [ create_bd_port -dir O -from 3 -to 0 VGA_R ]
   set VGA_VSYNC [ create_bd_port -dir O VGA_VSYNC ]
   set aud_sd_0 [ create_bd_port -dir O aud_sd_0 ]
+  set btn_shoot [ create_bd_port -dir I btn_shoot ]
+  set btn_start [ create_bd_port -dir I btn_start ]
   set calibrate_0 [ create_bd_port -dir I calibrate_0 ]
   set calibration_done_0 [ create_bd_port -dir O calibration_done_0 ]
   set clk_100MHz [ create_bd_port -dir I -type clk clk_100MHz ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
  ] $clk_100MHz
-  set gpio_io_i_0 [ create_bd_port -dir I -from 3 -to 0 gpio_io_i_0 ]
   set gyroscope_enable_0 [ create_bd_port -dir I gyroscope_enable_0 ]
   set i_MISO_0 [ create_bd_port -dir I i_MISO_0 ]
   set o_CS_0 [ create_bd_port -dir O o_CS_0 ]
   set o_MOSI_0 [ create_bd_port -dir O o_MOSI_0 ]
   set o_SCLK_0 [ create_bd_port -dir O o_SCLK_0 ]
   set play_done_0 [ create_bd_port -dir O play_done_0 ]
+  set ps2_clk_0 [ create_bd_port -dir I -type clk ps2_clk_0 ]
+  set ps2_data_0 [ create_bd_port -dir I ps2_data_0 ]
   set pwm_out_0 [ create_bd_port -dir O pwm_out_0 ]
+  set reset_fsm [ create_bd_port -dir I -type rst reset_fsm ]
   set reset_rtl_0 [ create_bd_port -dir I -type rst reset_rtl_0 ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_LOW} \
  ] $reset_rtl_0
 
+  # Create instance: archery_fsm_0, and set properties
+  set block_name archery_fsm
+  set block_cell_name archery_fsm_0
+  if { [catch {set archery_fsm_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $archery_fsm_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: axi_bram_ctrl_0, and set properties
   set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 ]
   set_property -dict [ list \
@@ -300,6 +317,36 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS {1} \
    CONFIG.C_GPIO_WIDTH {22} \
  ] $axi_gpio_1
+
+  # Create instance: axi_gpio_2, and set properties
+  set axi_gpio_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_2 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {1} \
+   CONFIG.C_ALL_INPUTS_2 {0} \
+   CONFIG.C_ALL_OUTPUTS {0} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {1} \
+   CONFIG.C_GPIO_WIDTH {10} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_2
+
+  # Create instance: axi_gpio_3, and set properties
+  set axi_gpio_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_3 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {1} \
+   CONFIG.C_GPIO_WIDTH {8} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_3
+
+  # Create instance: axi_gpio_4, and set properties
+  set axi_gpio_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_4 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {1} \
+   CONFIG.C_ALL_INPUTS_2 {1} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_4
 
   # Create instance: axi_uartlite_0, and set properties
   set axi_uartlite_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0 ]
@@ -366,7 +413,7 @@ proc create_root_design { parentCell } {
   # Create instance: microblaze_0_axi_periph, and set properties
   set microblaze_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 microblaze_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {6} \
+   CONFIG.NUM_MI {9} \
    CONFIG.NUM_SI {1} \
  ] $microblaze_0_axi_periph
 
@@ -379,9 +426,31 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_PORTS {1} \
  ] $microblaze_0_xlconcat
 
+  # Create instance: ps2_keyboard_subsyst_0, and set properties
+  set block_name ps2_keyboard_subsystem
+  set block_cell_name ps2_keyboard_subsyst_0
+  if { [catch {set ps2_keyboard_subsyst_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ps2_keyboard_subsyst_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: rst_clk_wiz_100M, and set properties
   set rst_clk_wiz_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_100M ]
 
+  # Create instance: scoring_engine_0, and set properties
+  set block_name scoring_engine
+  set block_cell_name scoring_engine_0
+  if { [catch {set scoring_engine_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $scoring_engine_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: sync_gen_1, and set properties
   set sync_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:sync_gen:1 sync_gen_1 ]
 
@@ -402,14 +471,11 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_PORTS {4} \
  ] $xlconcat_0
 
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-
-  # Create instance: xlconstant_1, and set properties
-  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
+  # Create instance: xlconcat_1, and set properties
+  set xlconcat_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_1 ]
   set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
- ] $xlconstant_1
+   CONFIG.NUM_PORTS {3} \
+ ] $xlconcat_1
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_bram_ctrl_1_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTA]
@@ -421,6 +487,9 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M03_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M03_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M04_AXI [get_bd_intf_pins axi_gpio_1/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M04_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M05_AXI [get_bd_intf_pins axi_uartlite_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M05_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M06_AXI [get_bd_intf_pins axi_gpio_2/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M06_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M07_AXI [get_bd_intf_pins axi_gpio_3/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M07_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M08_AXI [get_bd_intf_pins axi_gpio_4/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M08_AXI]
   connect_bd_intf_net -intf_net microblaze_0_debug [get_bd_intf_pins mdm_1/MBDEBUG_0] [get_bd_intf_pins microblaze_0/DEBUG]
   connect_bd_intf_net -intf_net microblaze_0_dlmb_1 [get_bd_intf_pins microblaze_0/DLMB] [get_bd_intf_pins microblaze_0_local_memory/DLMB]
   connect_bd_intf_net -intf_net microblaze_0_ilmb_1 [get_bd_intf_pins microblaze_0/ILMB] [get_bd_intf_pins microblaze_0_local_memory/ILMB]
@@ -428,8 +497,15 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net microblaze_0_interrupt [get_bd_intf_pins microblaze_0/INTERRUPT] [get_bd_intf_pins microblaze_0_axi_intc/interrupt]
 
   # Create port connections
+  connect_bd_net -net archery_fsm_0_game_state [get_bd_pins archery_fsm_0/game_state] [get_bd_pins framewriter_0/game_state_archery_fsm]
+  connect_bd_net -net archery_fsm_0_play_arrow [get_bd_pins archery_fsm_0/play_arrow] [get_bd_pins top_sound_0/play_arrow]
+  connect_bd_net -net archery_fsm_0_play_menu [get_bd_pins archery_fsm_0/play_menu] [get_bd_pins top_sound_0/play_menu]
+  connect_bd_net -net archery_fsm_0_play_music [get_bd_pins archery_fsm_0/play_music] [get_bd_pins top_sound_0/play_music]
   connect_bd_net -net axi_bram_ctrl_1_bram_douta [get_bd_pins axi_bram_ctrl_0_bram/douta] [get_bd_pins framewriter_0/bram_read_data]
   connect_bd_net -net axi_bram_ctrl_1_bram_doutb [get_bd_pins axi_bram_ctrl_0_bram/doutb] [get_bd_pins sync_gen_1/bram_read_data]
+  connect_bd_net -net axi_gpio_2_gpio2_io_o [get_bd_pins axi_gpio_2/gpio2_io_o] [get_bd_pins ps2_keyboard_subsyst_0/read_fifo_en]
+  connect_bd_net -net axi_gpio_3_gpio2_io_o [get_bd_pins axi_gpio_3/gpio2_io_o] [get_bd_pins ps2_keyboard_subsyst_0/get_user_input]
+  connect_bd_net -net axi_gpio_3_gpio_io_o [get_bd_pins axi_gpio_3/gpio_io_o] [get_bd_pins ps2_keyboard_subsyst_0/ascii_in]
   connect_bd_net -net axi_uartlite_0_interrupt [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In0]
   connect_bd_net -net calibrate_0_1 [get_bd_ports calibrate_0] [get_bd_pins gyro_calc_interface_0/calibrate]
   connect_bd_net -net clk_100MHz_1 [get_bd_ports clk_100MHz] [get_bd_pins clk_100MHz/clk_in1]
@@ -440,24 +516,37 @@ proc create_root_design { parentCell } {
   connect_bd_net -net framewriter_0_bram_rst [get_bd_pins axi_bram_ctrl_0_bram/rsta] [get_bd_pins framewriter_0/bram_rst]
   connect_bd_net -net framewriter_0_bram_write_data [get_bd_pins axi_bram_ctrl_0_bram/dina] [get_bd_pins framewriter_0/bram_write_data]
   connect_bd_net -net framewriter_0_bram_write_enable [get_bd_pins axi_bram_ctrl_0_bram/wea] [get_bd_pins framewriter_0/bram_write_enable]
-  connect_bd_net -net gpio_io_i_0_1 [get_bd_ports gpio_io_i_0] [get_bd_pins axi_gpio_0/gpio_io_i]
   connect_bd_net -net gyro_calc_interface_0_calibration_done [get_bd_ports calibration_done_0] [get_bd_pins gyro_calc_interface_0/calibration_done] [get_bd_pins xlconcat_0/In3]
   connect_bd_net -net gyro_calc_interface_0_o_CS [get_bd_ports o_CS_0] [get_bd_pins gyro_calc_interface_0/o_CS]
   connect_bd_net -net gyro_calc_interface_0_o_MOSI [get_bd_ports o_MOSI_0] [get_bd_pins gyro_calc_interface_0/o_MOSI]
   connect_bd_net -net gyro_calc_interface_0_o_SCLK [get_bd_ports o_SCLK_0] [get_bd_pins gyro_calc_interface_0/o_SCLK]
   connect_bd_net -net gyro_calc_interface_0_output_valid [get_bd_pins gyro_calc_interface_0/output_valid] [get_bd_pins xlconcat_0/In2]
-  connect_bd_net -net gyro_calc_interface_0_x_coord [get_bd_pins gyro_calc_interface_0/x_coord] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net gyro_calc_interface_0_y_coord [get_bd_pins gyro_calc_interface_0/y_coord] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net gyro_calc_interface_0_x_coord [get_bd_pins gyro_calc_interface_0/x_coord] [get_bd_pins scoring_engine_0/gyro_x] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net gyro_calc_interface_0_y_coord [get_bd_pins gyro_calc_interface_0/y_coord] [get_bd_pins scoring_engine_0/gyro_y] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net gyroscope_enable_0_1 [get_bd_ports gyroscope_enable_0] [get_bd_pins gyro_calc_interface_0/gyroscope_enable]
   connect_bd_net -net i_MISO_0_1 [get_bd_ports i_MISO_0] [get_bd_pins gyro_calc_interface_0/i_MISO]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_100M/mb_debug_sys_rst]
-  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_0_bram/clka] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_100MHz/clk_out1] [get_bd_pins framewriter_0/s00_axi_aclk] [get_bd_pins gyro_calc_interface_0/clk] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_intc/processor_clk] [get_bd_pins microblaze_0_axi_intc/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/M05_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk] [get_bd_pins sync_gen_1/s00_axi_aclk] [get_bd_pins top_sound_0/clk]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins archery_fsm_0/clk] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_0_bram/clka] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_gpio_2/s_axi_aclk] [get_bd_pins axi_gpio_3/s_axi_aclk] [get_bd_pins axi_gpio_4/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_100MHz/clk_out1] [get_bd_pins framewriter_0/s00_axi_aclk] [get_bd_pins gyro_calc_interface_0/clk] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_intc/processor_clk] [get_bd_pins microblaze_0_axi_intc/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/M05_ACLK] [get_bd_pins microblaze_0_axi_periph/M06_ACLK] [get_bd_pins microblaze_0_axi_periph/M07_ACLK] [get_bd_pins microblaze_0_axi_periph/M08_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins ps2_keyboard_subsyst_0/clk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk] [get_bd_pins scoring_engine_0/clk] [get_bd_pins sync_gen_1/s00_axi_aclk] [get_bd_pins top_sound_0/clk]
   connect_bd_net -net microblaze_0_intr [get_bd_pins microblaze_0_axi_intc/intr] [get_bd_pins microblaze_0_xlconcat/dout]
+  connect_bd_net -net ps2_clk_0_1 [get_bd_ports ps2_clk_0] [get_bd_pins ps2_keyboard_subsyst_0/ps2_clk]
+  connect_bd_net -net ps2_data_0_1 [get_bd_ports ps2_data_0] [get_bd_pins ps2_keyboard_subsyst_0/ps2_data]
+  connect_bd_net -net ps2_keyboard_subsyst_0_an [get_bd_ports AN] [get_bd_pins ps2_keyboard_subsyst_0/an]
+  connect_bd_net -net ps2_keyboard_subsyst_0_ascii_out [get_bd_pins ps2_keyboard_subsyst_0/ascii_out] [get_bd_pins xlconcat_1/In0]
+  connect_bd_net -net ps2_keyboard_subsyst_0_char_bitmap_high [get_bd_pins axi_gpio_4/gpio2_io_i] [get_bd_pins ps2_keyboard_subsyst_0/char_bitmap_high]
+  connect_bd_net -net ps2_keyboard_subsyst_0_char_bitmap_low [get_bd_pins axi_gpio_4/gpio_io_i] [get_bd_pins ps2_keyboard_subsyst_0/char_bitmap_low]
+  connect_bd_net -net ps2_keyboard_subsyst_0_fifo_empty [get_bd_pins ps2_keyboard_subsyst_0/fifo_empty] [get_bd_pins xlconcat_1/In1]
+  connect_bd_net -net ps2_keyboard_subsyst_0_fifo_full [get_bd_pins ps2_keyboard_subsyst_0/fifo_full] [get_bd_pins xlconcat_1/In2]
+  connect_bd_net -net ps2_keyboard_subsyst_0_seg [get_bd_ports SEG] [get_bd_pins ps2_keyboard_subsyst_0/seg]
+  connect_bd_net -net reset_0_1 [get_bd_ports reset_fsm] [get_bd_pins archery_fsm_0/reset] [get_bd_pins scoring_engine_0/reset]
   connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset_rtl_0] [get_bd_pins clk_100MHz/resetn] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
   connect_bd_net -net rst_clk_wiz_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_wiz_100M/bus_struct_reset]
   connect_bd_net -net rst_clk_wiz_100M_interconnect_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins framewriter_0/s00_axi_aresetn] [get_bd_pins gyro_calc_interface_0/resetn] [get_bd_pins rst_clk_wiz_100M/interconnect_aresetn] [get_bd_pins sync_gen_1/s00_axi_aresetn]
   connect_bd_net -net rst_clk_wiz_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins microblaze_0_axi_intc/processor_rst] [get_bd_pins rst_clk_wiz_100M/mb_reset]
-  connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins microblaze_0_axi_intc/s_axi_aresetn] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/M04_ARESETN] [get_bd_pins microblaze_0_axi_periph/M05_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rst_clk_wiz_100M/peripheral_aresetn] [get_bd_pins top_sound_0/reset]
+  connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins axi_gpio_2/s_axi_aresetn] [get_bd_pins axi_gpio_3/s_axi_aresetn] [get_bd_pins axi_gpio_4/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins microblaze_0_axi_intc/s_axi_aresetn] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/M04_ARESETN] [get_bd_pins microblaze_0_axi_periph/M05_ARESETN] [get_bd_pins microblaze_0_axi_periph/M06_ARESETN] [get_bd_pins microblaze_0_axi_periph/M07_ARESETN] [get_bd_pins microblaze_0_axi_periph/M08_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins ps2_keyboard_subsyst_0/reset] [get_bd_pins rst_clk_wiz_100M/peripheral_aresetn] [get_bd_pins top_sound_0/reset]
+  connect_bd_net -net scoring_engine_0_score [get_bd_pins archery_fsm_0/score_in] [get_bd_pins scoring_engine_0/score]
+  connect_bd_net -net scoring_engine_0_valid_score [get_bd_pins archery_fsm_0/score_valid] [get_bd_pins scoring_engine_0/valid_score]
+  connect_bd_net -net shoot_event_0_1 [get_bd_ports btn_shoot] [get_bd_pins archery_fsm_0/shoot_event] [get_bd_pins scoring_engine_0/trig_calc]
+  connect_bd_net -net start_btn_0_1 [get_bd_ports btn_start] [get_bd_pins archery_fsm_0/start_btn]
   connect_bd_net -net sync_gen_1_VGA_B [get_bd_ports VGA_B] [get_bd_pins sync_gen_1/VGA_B]
   connect_bd_net -net sync_gen_1_VGA_G [get_bd_ports VGA_G] [get_bd_pins sync_gen_1/VGA_G]
   connect_bd_net -net sync_gen_1_VGA_HSYNC [get_bd_ports VGA_HSYNC] [get_bd_pins sync_gen_1/VGA_HSYNC]
@@ -476,13 +565,15 @@ set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets sync_gen_1_VGA_VSYNC]
   connect_bd_net -net top_sound_0_play_done [get_bd_ports play_done_0] [get_bd_pins top_sound_0/play_done]
   connect_bd_net -net top_sound_0_pwm_out [get_bd_ports pwm_out_0] [get_bd_pins top_sound_0/pwm_out]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins axi_gpio_1/gpio_io_i] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins top_sound_0/play_music] [get_bd_pins xlconstant_0/dout]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins top_sound_0/play_arrow] [get_bd_pins top_sound_0/play_menu] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net xlconcat_1_dout [get_bd_pins axi_gpio_2/gpio_io_i] [get_bd_pins xlconcat_1/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00080000 -offset 0xC0000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_1_Mem0
   create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x40010000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_1/S_AXI/Reg] SEG_axi_gpio_1_Reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x40020000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_2/S_AXI/Reg] SEG_axi_gpio_2_Reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x40030000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_3/S_AXI/Reg] SEG_axi_gpio_3_Reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x40040000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_4/S_AXI/Reg] SEG_axi_gpio_4_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x40600000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] SEG_axi_uartlite_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] SEG_dlmb_bram_if_cntlr_Mem
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs framewriter_0/S00_AXI/S00_AXI_reg] SEG_framewriter_0_S00_AXI_reg
