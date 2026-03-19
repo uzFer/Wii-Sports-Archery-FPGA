@@ -15085,3 +15085,49 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-10
 
 !ENTRY com.xilinx.sdk.utils 0 0 2026-03-17 16:22:57.717
 !MESSAGE XSCT command with result: [disconnect tcfchan#9], Result: [null, ]. Thread: Thread-368
+!SESSION 2026-03-19 16:34:09.367 -----------------------------------------------
+eclipse.buildId=2018.3
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk
+
+!ENTRY org.eclipse.ui 2 0 2026-03-19 16:34:24.925
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-03-19 16:34:24.925
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2026-03-19 16:34:25.602
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-03-19 16:34:25.602
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:33.711
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:33.713
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:37.017
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:37.017
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:37.018
+!MESSAGE XSCT Command: [setws Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:37.019
+!MESSAGE XSCT command with result: [setws Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:37.036
+!MESSAGE XSCT Command: [::hsi::utils::openhw Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper_hw_platform_0/system.hdf], Thread: Worker-4
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:39.901
+!MESSAGE XSCT command with result: [::hsi::utils::openhw Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-4
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:42.035
+!MESSAGE XSCT Command: [::hsi::utils::openhw Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_4_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-19 16:34:42.113
+!MESSAGE XSCT command with result: [::hsi::utils::openhw Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_4_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main

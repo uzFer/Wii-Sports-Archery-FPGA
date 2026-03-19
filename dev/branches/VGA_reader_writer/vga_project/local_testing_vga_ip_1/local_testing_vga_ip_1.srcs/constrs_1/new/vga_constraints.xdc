@@ -29,15 +29,16 @@ set_property -dict {PACKAGE_PIN B11 IOSTANDARD LVCMOS33} [get_ports VGA_HSYNC]
 set_property -dict {PACKAGE_PIN B12 IOSTANDARD LVCMOS33} [get_ports VGA_VSYNC]
 
 # pushbuttons: L R D C
-set_property PACKAGE_PIN P17 [get_ports {gpio_io_i_0[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[0]}]
-set_property PACKAGE_PIN M17 [get_ports {gpio_io_i_0[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[1]}]
-set_property PACKAGE_PIN P18 [get_ports {gpio_io_i_0[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[2]}]
-set_property PACKAGE_PIN N17 [get_ports {gpio_io_i_0[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[3]}]
-
+#set_property PACKAGE_PIN P17 [get_ports {gpio_io_i_0[0]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[0]}]
+#set_property PACKAGE_PIN M17 [get_ports {gpio_io_i_0[1]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[1]}]
+#set_property PACKAGE_PIN P18 [get_ports {gpio_io_i_0[2]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[2]}]
+#set_property PACKAGE_PIN N17 [get_ports {gpio_io_i_0[3]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {gpio_io_i_0[3]}]
+set_property -dict { PACKAGE_PIN N17  IOSTANDARD LVCMOS33 } [get_ports { btn_start }];    # center
+set_property -dict { PACKAGE_PIN M18  IOSTANDARD LVCMOS33 } [get_ports { btn_shoot }]; # up
 
 
 create_debug_core u_ila_0 ila

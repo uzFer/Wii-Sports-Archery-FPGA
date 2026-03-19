@@ -109,7 +109,173 @@ void poll_gyroscope() {
     return;
 }
 
+int getWiiFontIndex(char c) {
+    for (int i = 0; i < sizeof(wiiFont)/sizeof(FontChar); i++)
+        if (wiiFont[i].c == c) return i;
+    return 0;
+}
 
+void drawChar(int x, int y, char c, uint32_t color, int scale) {
+    int idx = getWiiFontIndex(c);
+    const uint8_t *bitmap = wiiFont[idx].bitmap;
+    for (int row = 0; row < FONT_HEIGHT; row++) {
+        for (int col = 0; col < FONT_WIDTH; col++) {
+            if (bitmap[row] & (1 << (FONT_WIDTH-1-col))) {
+                drawBox(x + col * scale, y + row * scale, scale, scale, color);
+            }
+        }
+    }
+}
+
+void drawText(int x, int y, const char *text, uint32_t color, int scale) {
+    while (*text) {
+        drawChar(x, y, *text, color, scale);
+        x += (FONT_WIDTH * scale);
+        text++;
+    }
+}
+
+void drawStatus(int x, int y, int rd, int arr) {
+    drawText(x+10, y, "Round ", WHITE, 2);
+    drawChar(x + 90, y, (char)(rd + '1'), WHITE, 2);
+    drawText(x, y+30, "Arrow ", WHITE, 2);
+    drawText(x + 85, y+30, "/3", WHITE, 2);
+    drawChar(x + 70, y+30, (char)(arr + '1'), WHITE, 2);
+}
+
+void drawTitleScreen() {
+    clear_screen(WHITE);
+    drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+    drawBox(0, 350, RESOLUTION_X, 20, ORANGE);
+    drawText(50, 80, "Wii", GREY, 8);
+    drawText(230, 80, "Sports", TURQUOISE, 8);
+    drawText(200, 180, "FPGA", TURQUOISE, 8);
+    drawText(200, 280, "Archery Edition", GREY, 2);
+    drawText(20, 410, "Press Any Key To Start", GREY, 4);
+}
+
+void drawMainMenu() {
+    clear_screen(WHITE);
+    drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+    drawBox(0, 40, RESOLUTION_X, 16, ORANGE);
+
+    drawText(80, 80, "Enter Player Info", GREY, 4);
+
+    // Player 1 Input Box
+    drawText(80, 160, "Player 1:", GREY, 3);
+    drawBox(265, 155, 200, 40, GREY); // Border
+    drawBox(270, 160, 190, 30, WHITE); // Text Area
+    drawText(280, 165, p1_name, BLACK, 3);
+    if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+
+    // Player 2 Input Box
+    drawText(80, 220, "Player 2:", GREY, 3);
+    drawBox(265, 215, 200, 40, GREY);
+    drawBox(270, 220, 190, 30, WHITE);
+    drawText(280, 225, p2_name, BLACK, 3);
+    if (!entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 225, "_", ORANGE, 3);
+
+    if (names_complete) {
+        drawText(50, 300, "READY! Press Start on FPGA", GREEN, 3);
+    } else {
+        drawText(120, 300, "Type name & press ENTER", GREY, 2);
+    }
+}
+
+/* ===================== KEYBOARD HELPERS ===================== */
+char poll_keyboard() {
+    volatile uint32_t *ps2_gpio = (uint32_t *)PS2_GPIO_ADDR;
+    uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs)
+
+    // Bit 8 is the 'Empty' flag
+    bool empty = (status >> 8) & 0x1;
+
+    if (!empty) {
+        // We must pop the FIFO FIRST to load the character into read_data
+        *(ps2_gpio + 2) = 1;
+
+        // Wait a few cycles to ensure the hardware updates read_data
+        for (volatile int i = 0; i < 100; i++);
+
+        *(ps2_gpio + 2) = 0;
+
+        // Now read the updated status which contains the popped character
+        status = *ps2_gpio;
+        return (char)(status & 0xFF);
+    }
+    return 0;
+}
+
+/* ===================== KEYBOARD VGA RENDERING ===================== */
+#define MAX_INPUT_LEN 32
+static char keyboard_buffer[MAX_INPUT_LEN + 1] = {0};
+static int  keyboard_cursor = 0;
+
+void render_keyboard_text_to_vga() {
+    // 1. Clear the specific area where the text goes (top left)
+    // Let's clear a box wide enough for MAX_INPUT_LEN
+//    drawBox(10, 10, MAX_INPUT_LEN * 15, 30, BLACK);
+
+    // 2. Draw the updated string
+    if (keyboard_cursor > 0) {
+        drawText(10, 10, keyboard_buffer, WHITE, 3);
+    }
+}
+
+
+void process_keyboard_input(int current_state) {
+    char key = poll_keyboard();
+    if (key == 0) return;
+
+    // Only use the special name-entry logic if we are on the Main Menu
+    if (current_state == HW_MAIN_MENU && !names_complete) {
+        char* current_buf = entering_p1 ? p1_name : p2_name;
+
+        if (key == 0x0D || key == '\n') { // ENTER KEY
+            if (name_cursor > 0) { // Don't allow empty names
+                if (entering_p1) {
+                    entering_p1 = false;
+                    name_cursor = 0;
+                } else {
+                    names_complete = true;
+                }
+                drawMainMenu(); // Redraw to update boxes
+            }
+        }
+        else if (key == 0x08 || key == '\b') { // BACKSPACE
+            if (name_cursor > 0) {
+                name_cursor--;
+                current_buf[name_cursor] = '\0';
+                drawMainMenu();
+            }
+        }
+        else if (key >= ' ' && key <= '~' && name_cursor < MAX_NAME_LEN) {
+            current_buf[name_cursor] = key;
+            name_cursor++;
+            current_buf[name_cursor] = '\0';
+            drawMainMenu();
+        }
+    }
+    else {
+    	printf("Key pressed: %c\n", key);
+
+    	        if (key == '\b' || key == 0x08) { // Backspace
+    	            if (keyboard_cursor > 0) {
+    	                keyboard_cursor--;
+    	                keyboard_buffer[keyboard_cursor] = '\0';
+    	                render_keyboard_text_to_vga();
+    	            }
+    	        }
+    	        else if (key >= ' ' && key <= '~') { // Printable ASCII characters
+    	            if (keyboard_cursor < MAX_INPUT_LEN) {
+    	                keyboard_buffer[keyboard_cursor] = key;
+    	                keyboard_cursor++;
+    	                keyboard_buffer[keyboard_cursor] = '\0';
+    	                render_keyboard_text_to_vga();
+    	            }
+    	        }
+    }
+}
 
 int main ()
 {
