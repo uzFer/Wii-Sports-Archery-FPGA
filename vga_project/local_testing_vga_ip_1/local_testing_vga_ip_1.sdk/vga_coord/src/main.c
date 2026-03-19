@@ -99,8 +99,8 @@ void poll_gyroscope() {
         y_coord = (rdata >> 10) & 0x3FF;
         xil_printf("x: %d\r\n", x_coord);
         xil_printf("y: %d\r\n", y_coord);
-        //x_coord = 156;
-        //y_coord = 126;
+//        x_coord = 156;
+//        y_coord = 126;
 
         // Plot the x and y coordinates on the VGA screen
 //        draw_crosshair(x, y);
@@ -140,7 +140,7 @@ int main ()
 
 	   // vga stuff start
 	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 2);
-
+//
 //	   x_pos = x_pos + direction;
 //	   if (x_pos >= 180) {
 //		   direction = -1; // Hit right wall, go left
@@ -157,7 +157,7 @@ int main ()
 	   draw_crosshair(x_coord, y_coord);
 
 //	   last_btn_data = btn_data; // Store for edge detection
-//	   for(int i=0; i<10000; i++); // Simple debounce delay
+//	   for(int i=0; i<100000; i++); // Simple debounce delay
 
 
 	}

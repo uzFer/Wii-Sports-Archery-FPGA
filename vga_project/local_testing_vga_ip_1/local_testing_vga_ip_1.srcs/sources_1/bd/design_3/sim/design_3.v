@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Mar 16 20:33:38 2026
+//Date        : Thu Mar 19 15:08:31 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_3.bd
 //Design      : design_3
@@ -9,13 +9,14 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_bram_cntlr_cnt=2,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_3.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=34,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_bram_cntlr_cnt=2,da_clkrst_cnt=1,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_3.hwdef" *) 
 module design_3
    (VGA_B,
     VGA_G,
     VGA_HSYNC,
     VGA_R,
     VGA_VSYNC,
+    aud_sd_0,
     calibrate_0,
     calibration_done_0,
     clk_100MHz,
@@ -25,6 +26,8 @@ module design_3
     o_CS_0,
     o_MOSI_0,
     o_SCLK_0,
+    play_done_0,
+    pwm_out_0,
     reset_rtl_0,
     uart_rtl_0_rxd,
     uart_rtl_0_txd);
@@ -33,6 +36,7 @@ module design_3
   output VGA_HSYNC;
   output [3:0]VGA_R;
   output VGA_VSYNC;
+  output aud_sd_0;
   input calibrate_0;
   output calibration_done_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN design_3_clk_100MHz, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input clk_100MHz;
@@ -42,6 +46,8 @@ module design_3
   output o_CS_0;
   output o_MOSI_0;
   output o_SCLK_0;
+  output play_done_0;
+  output pwm_out_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 RxD" *) input uart_rtl_0_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 TxD" *) output uart_rtl_0_txd;
@@ -257,13 +263,19 @@ module design_3
   wire [31:0]sync_gen_1_bram_write_data;
   wire [3:0]sync_gen_1_bram_write_enable;
   wire sync_gen_1_vsync_trigger;
+  wire top_sound_0_aud_sd;
+  wire top_sound_0_play_done;
+  wire top_sound_0_pwm_out;
   wire [21:0]xlconcat_0_dout;
+  wire [0:0]xlconstant_0_dout;
+  wire [0:0]xlconstant_1_dout;
 
   assign VGA_B[3:0] = sync_gen_1_VGA_B;
   assign VGA_G[3:0] = sync_gen_1_VGA_G;
   assign VGA_HSYNC = sync_gen_1_VGA_HSYNC;
   assign VGA_R[3:0] = sync_gen_1_VGA_R;
   assign VGA_VSYNC = sync_gen_1_VGA_VSYNC;
+  assign aud_sd_0 = top_sound_0_aud_sd;
   assign axi_uartlite_0_UART_RxD = uart_rtl_0_rxd;
   assign calibrate_0_1 = calibrate_0;
   assign calibration_done_0 = gyro_calc_interface_0_calibration_done;
@@ -274,6 +286,8 @@ module design_3
   assign o_CS_0 = gyro_calc_interface_0_o_CS;
   assign o_MOSI_0 = gyro_calc_interface_0_o_MOSI;
   assign o_SCLK_0 = gyro_calc_interface_0_o_SCLK;
+  assign play_done_0 = top_sound_0_play_done;
+  assign pwm_out_0 = top_sound_0_pwm_out;
   assign reset_rtl_0_1 = reset_rtl_0;
   assign uart_rtl_0_txd = axi_uartlite_0_UART_TxD;
   (* BMM_INFO_ADDRESS_SPACE = "byte  0xC0000000 32 > design_3 axi_bram_ctrl_0_bram" *) 
@@ -750,12 +764,25 @@ module design_3
         .s00_axi_wstrb({1'b1,1'b1,1'b1,1'b1}),
         .s00_axi_wvalid(1'b0),
         .vsync_trigger(sync_gen_1_vsync_trigger));
+  design_3_top_sound_0_0 top_sound_0
+       (.aud_sd(top_sound_0_aud_sd),
+        .clk(microblaze_0_Clk),
+        .play_arrow(xlconstant_1_dout),
+        .play_done(top_sound_0_play_done),
+        .play_menu(xlconstant_1_dout),
+        .play_music(xlconstant_0_dout),
+        .pwm_out(top_sound_0_pwm_out),
+        .reset(rst_clk_wiz_100M_peripheral_aresetn));
   design_3_xlconcat_0_0 xlconcat_0
        (.In0(gyro_calc_interface_0_x_coord),
         .In1(gyro_calc_interface_0_y_coord),
         .In2(gyro_calc_interface_0_output_valid),
         .In3(gyro_calc_interface_0_calibration_done),
         .dout(xlconcat_0_dout));
+  design_3_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
+  design_3_xlconstant_1_0 xlconstant_1
+       (.dout(xlconstant_1_dout));
 endmodule
 
 module design_3_microblaze_0_axi_periph_0

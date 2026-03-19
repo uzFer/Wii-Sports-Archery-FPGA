@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Feb 28 09:26:18 2026
+// Date        : Sat Feb 28 09:26:17 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_3_clk_100MHz_0 -prefix
+//               design_3_clk_100MHz_0_ design_3_clk_100MHz_0_stub.v
 // Design      : design_3_clk_100MHz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

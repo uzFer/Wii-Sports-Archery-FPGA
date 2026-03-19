@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon Mar 16 20:37:24 2026
+| Date             : Thu Mar 19 15:18:08 2026
 | Host             : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 | Command          : report_power -file design_3_wrapper_power_routed.rpt -pb design_3_wrapper_power_summary_routed.pb -rpx design_3_wrapper_power_routed.rpx
 | Design           : design_3_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.278        |
+| Total On-Chip Power (W)  | 0.309        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.177        |
+| Dynamic (W)              | 0.208        |
 | Device Static (W)        | 0.101        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 83.7         |
-| Junction Temperature (C) | 26.3         |
+| Max Ambient (C)          | 83.6         |
+| Junction Temperature (C) | 26.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.016 |       12 |       --- |             --- |
-| Slice Logic              |     0.008 |     8249 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     3417 |     63400 |            5.39 |
-|   LUT as Distributed RAM |    <0.001 |       96 |     19000 |            0.51 |
-|   CARRY4                 |    <0.001 |      295 |     15850 |            1.86 |
-|   Register               |    <0.001 |     2795 |    126800 |            2.20 |
-|   F7/F8 Muxes            |    <0.001 |      144 |     63400 |            0.23 |
-|   LUT as Shift Register  |    <0.001 |       76 |     19000 |            0.40 |
-|   Others                 |    <0.001 |      570 |       --- |             --- |
-| Signals                  |     0.014 |     5763 |       --- |             --- |
-| Block RAM                |     0.036 |       64 |       135 |           47.41 |
+| Clocks                   |     0.037 |       13 |       --- |             --- |
+| Slice Logic              |     0.009 |    38463 |       --- |             --- |
+|   LUT as Logic           |     0.006 |    11305 |     63400 |           17.83 |
+|   LUT as Distributed RAM |    <0.001 |      376 |     19000 |            1.98 |
+|   CARRY4                 |    <0.001 |     1154 |     15850 |            7.28 |
+|   Register               |    <0.001 |    14920 |    126800 |           11.77 |
+|   LUT as Shift Register  |    <0.001 |     2722 |     19000 |           14.33 |
+|   F7/F8 Muxes            |    <0.001 |      621 |     63400 |            0.98 |
+|   Others                 |    <0.001 |     3128 |       --- |             --- |
+| Signals                  |     0.019 |    23613 |       --- |             --- |
+| Block RAM                |     0.040 |     71.5 |       135 |           52.96 |
 | PLL                      |     0.100 |        1 |         6 |           16.67 |
 | DSPs                     |     0.002 |        2 |       240 |            0.83 |
-| I/O                      |    <0.001 |       29 |       210 |           13.81 |
+| I/O                      |     0.001 |       32 |       210 |           15.24 |
 | Static Power             |     0.101 |          |           |                 |
-| Total                    |     0.278 |          |           |                 |
+| Total                    |     0.309 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +77,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.098 |       0.081 |      0.017 |
-| Vccaux    |       1.800 |     0.069 |       0.051 |      0.018 |
+| Vccint    |       1.000 |     0.128 |       0.111 |      0.017 |
+| Vccaux    |       1.800 |     0.070 |       0.051 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -130,20 +130,21 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------------------------------------------------------+---------------------------------------------------------------+-----------------+
-| Clock                                                      | Domain                                                        | Constraint (ns) |
-+------------------------------------------------------------+---------------------------------------------------------------+-----------------+
-| clk_100MHz                                                 | clk_100MHz                                                    |            10.0 |
-| clk_out1_design_3_clk_100MHz_0                             | design_3_i/clk_100MHz_RnM/inst/clk_out1_design_3_clk_100MHz_0 |            10.0 |
-| clk_out1_design_3_clk_100MHz_0_1                           | design_3_i/clk_100MHz_RnM/inst/clk_out1_design_3_clk_100MHz_0 |            10.0 |
-| clk_out2_design_3_clk_100MHz_0                             | design_3_i/clk_100MHz_RnM/inst/clk_out2_design_3_clk_100MHz_0 |            40.0 |
-| clk_out2_design_3_clk_100MHz_0_1                           | design_3_i/clk_100MHz_RnM/inst/clk_out2_design_3_clk_100MHz_0 |            40.0 |
-| clkfbout_design_3_clk_100MHz_0                             | design_3_i/clk_100MHz_RnM/inst/clkfbout_design_3_clk_100MHz_0 |            10.0 |
-| clkfbout_design_3_clk_100MHz_0_1                           | design_3_i/clk_100MHz_RnM/inst/clkfbout_design_3_clk_100MHz_0 |            10.0 |
-| design_3_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK   | design_3_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                       |            33.3 |
-| design_3_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE | design_3_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0               |            33.3 |
-| sys_clk_pin                                                | clk_100MHz                                                    |            10.0 |
-+------------------------------------------------------------+---------------------------------------------------------------+-----------------+
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                               | Constraint (ns) |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| clk_100MHz                                                                                 | clk_100MHz                                                           |            10.0 |
+| clk_out1_design_3_clk_100MHz_0                                                             | design_3_i/clk_100MHz_RnM/inst/clk_out1_design_3_clk_100MHz_0        |            10.0 |
+| clk_out1_design_3_clk_100MHz_0_1                                                           | design_3_i/clk_100MHz_RnM/inst/clk_out1_design_3_clk_100MHz_0        |            10.0 |
+| clk_out2_design_3_clk_100MHz_0                                                             | design_3_i/clk_100MHz_RnM/inst/clk_out2_design_3_clk_100MHz_0        |            40.0 |
+| clk_out2_design_3_clk_100MHz_0_1                                                           | design_3_i/clk_100MHz_RnM/inst/clk_out2_design_3_clk_100MHz_0        |            40.0 |
+| clkfbout_design_3_clk_100MHz_0                                                             | design_3_i/clk_100MHz_RnM/inst/clkfbout_design_3_clk_100MHz_0        |            10.0 |
+| clkfbout_design_3_clk_100MHz_0_1                                                           | design_3_i/clk_100MHz_RnM/inst/clkfbout_design_3_clk_100MHz_0        |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |            33.0 |
+| design_3_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                   | design_3_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                              |            33.3 |
+| design_3_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                 | design_3_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                      |            33.3 |
+| sys_clk_pin                                                                                | clk_100MHz                                                           |            10.0 |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -155,24 +156,35 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| design_3_wrapper              |     0.177 |
-|   design_3_i                  |     0.176 |
-|     axi_bram_ctrl_0_bram      |     0.034 |
-|       U0                      |     0.034 |
-|     axi_gpio_1                |     0.001 |
-|       U0                      |     0.001 |
+| design_3_wrapper              |     0.208 |
+|   dbg_hub                     |     0.001 |
+|     inst                      |     0.001 |
+|       BSCANID.u_xsdbm_id      |     0.001 |
+|   design_3_i                  |     0.181 |
+|     axi_bram_ctrl_0_bram      |     0.033 |
+|       U0                      |     0.033 |
+|     axi_gpio_1                |     0.002 |
+|       U0                      |     0.002 |
 |     clk_100MHz_RnM            |     0.101 |
 |       inst                    |     0.101 |
-|     framewriter_0             |     0.011 |
-|       inst                    |     0.011 |
+|     framewriter_0             |     0.012 |
+|       inst                    |     0.012 |
 |     gyro_calc_interface_0     |     0.007 |
 |       inst                    |     0.007 |
 |     microblaze_0              |     0.014 |
 |       U0                      |     0.014 |
 |     microblaze_0_axi_intc     |     0.001 |
 |       U0                      |     0.001 |
-|     microblaze_0_local_memory |     0.004 |
-|       lmb_bram                |     0.004 |
+|     microblaze_0_local_memory |     0.003 |
+|       lmb_bram                |     0.003 |
+|     top_sound_0               |     0.004 |
+|       inst                    |     0.004 |
+|   u_ila_0                     |     0.020 |
+|     inst                      |     0.020 |
+|       ila_core_inst           |     0.020 |
+|   u_ila_1                     |     0.004 |
+|     inst                      |     0.004 |
+|       ila_core_inst           |     0.004 |
 +-------------------------------+-----------+
 
 

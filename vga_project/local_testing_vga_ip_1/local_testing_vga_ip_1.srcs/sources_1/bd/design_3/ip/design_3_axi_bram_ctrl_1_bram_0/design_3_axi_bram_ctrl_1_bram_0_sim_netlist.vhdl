@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 15 12:07:06 2026
+-- Date        : Sun Mar 15 12:07:05 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_bram_ctrl_1_bram_0/design_3_axi_bram_ctrl_1_bram_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_3_axi_bram_ctrl_1_bram_0 -prefix
+--               design_3_axi_bram_ctrl_1_bram_0_ design_3_axi_bram_ctrl_1_bram_0_sim_netlist.vhdl
 -- Design      : design_3_axi_bram_ctrl_1_bram_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -85,8 +85,6 @@ entity design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_mux is
     \douta[31]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \douta[31]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_mux : entity is "blk_mem_gen_mux";
 end design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_mux;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_mux is
@@ -947,8 +945,6 @@ entity design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_wrapper is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_wrapper is
@@ -33083,8 +33079,6 @@ entity design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_prim_width is
@@ -36241,8 +36235,6 @@ entity design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_generic_cstr is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_generic_cstr is
@@ -37693,8 +37685,6 @@ entity design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_top is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_top;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_top is
@@ -37742,8 +37732,6 @@ entity design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2_synth is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2_synth : entity is "blk_mem_gen_v8_4_2_synth";
 end design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2_synth;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2_synth is
@@ -37988,8 +37976,6 @@ entity design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2 is
   attribute C_WRITE_WIDTH_B of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2 : entity is "blk_mem_gen_v8_4_2";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2 : entity is "yes";
 end design_3_axi_bram_ctrl_1_bram_0_blk_mem_gen_v8_4_2;
