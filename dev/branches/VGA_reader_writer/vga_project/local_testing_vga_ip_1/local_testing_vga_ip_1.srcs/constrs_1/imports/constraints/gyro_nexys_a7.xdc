@@ -11,8 +11,8 @@
 ##Switches
 
 #set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {resetn} ]; # resetn
-set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports {gyroscope_enable_0} ]; # gyroscope_enable
-set_property -dict {PACKAGE_PIN M13 IOSTANDARD LVCMOS33} [get_ports {calibrate_0} ]; # calibrate
+set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports gyroscope_enable_0]
+set_property -dict {PACKAGE_PIN M13 IOSTANDARD LVCMOS33} [get_ports calibrate_0]
 ##set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { SW[4] }]; #IO_L12N_T1_MRCC_14 Sch=sw[4]
 #set_property -dict { PACKAGE_PIN T18   IOSTANDARD LVCMOS33 } [get_ports { SW[5] }]; #IO_L7N_T1_D10_14 Sch=sw[5]
 #set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { SW[6] }]; #IO_L17N_T2_A13_D29_14 Sch=sw[6]
@@ -31,8 +31,8 @@ set_property -dict {PACKAGE_PIN M13 IOSTANDARD LVCMOS33} [get_ports {calibrate_0
 
 # set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { LED[0] }]; #IO_L18P_T2_A24_15 Sch=led[0]
 #set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { LED[1] }]; #IO_L24P_T3_RS1_15 Sch=led[1]
-set_property -dict {PACKAGE_PIN J13 IOSTANDARD LVCMOS33} [get_ports {calibration_done_0}];
-#set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { LED[3] }]; #IO_L8P_T1_D11_14 Sch=led[3]
+set_property -dict {PACKAGE_PIN J13 IOSTANDARD LVCMOS33} [get_ports calibration_done_0]
+set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports play_done_0]
 #set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { LED[4] }]; #IO_L7P_T1_D09_14 Sch=led[4]
 #set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { LED[5] }]; #IO_L18N_T2_A11_D27_14 Sch=led[5]
 #set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports { LED[6] }]; #IO_L17P_T2_A14_D30_14 Sch=led[6]
@@ -104,10 +104,10 @@ set_property -dict {PACKAGE_PIN J13 IOSTANDARD LVCMOS33} [get_ports {calibration
 
 ##Pmod Header JB
 
-set_property -dict {PACKAGE_PIN D14 IOSTANDARD LVCMOS33} [get_ports o_CS_0];
-set_property -dict {PACKAGE_PIN F16 IOSTANDARD LVCMOS33} [get_ports o_MOSI_0];
-set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33} [get_ports i_MISO_0];
-set_property -dict {PACKAGE_PIN H14 IOSTANDARD LVCMOS33} [get_ports o_SCLK_0];
+set_property -dict {PACKAGE_PIN D14 IOSTANDARD LVCMOS33} [get_ports o_CS_0]
+set_property -dict {PACKAGE_PIN F16 IOSTANDARD LVCMOS33} [get_ports o_MOSI_0]
+set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33} [get_ports i_MISO_0]
+set_property -dict {PACKAGE_PIN H14 IOSTANDARD LVCMOS33} [get_ports o_SCLK_0]
 #set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { JB[7] }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
 #set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { JB[8] }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
 #set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { JB[9] }]; #IO_0_15 Sch=jb[9]
@@ -209,8 +209,8 @@ set_property -dict {PACKAGE_PIN H14 IOSTANDARD LVCMOS33} [get_ports o_SCLK_0];
 
 ##PWM Audio Amplifier
 
-#set_property -dict { PACKAGE_PIN A11   IOSTANDARD LVCMOS33 } [get_ports { AUD_PWM }]; #IO_L4N_T0_15 Sch=aud_pwm
-#set_property -dict { PACKAGE_PIN D12   IOSTANDARD LVCMOS33 } [get_ports { AUD_SD }]; #IO_L6P_T0_15 Sch=aud_sd
+set_property -dict {PACKAGE_PIN A11 IOSTANDARD LVCMOS33} [get_ports pwm_out_0]
+set_property -dict {PACKAGE_PIN D12 IOSTANDARD LVCMOS33} [get_ports aud_sd_0]
 
 
 ##USB-RS232 Interface
@@ -254,8 +254,9 @@ set_property CONFIG_VOLTAGE 3.3 [current_design]
 #set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { QSPI_CSN }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
 
 ## USB-RS232 Interface
-set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0_rxd }]; # Sch=uart_txd_in
-set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0_txd }]; # Sch=uart_rxd_out
+set_property -dict {PACKAGE_PIN C4 IOSTANDARD LVCMOS33} [get_ports uart_rtl_0_rxd]
+set_property -dict {PACKAGE_PIN D4 IOSTANDARD LVCMOS33} [get_ports uart_rtl_0_txd]
+
 
 
 

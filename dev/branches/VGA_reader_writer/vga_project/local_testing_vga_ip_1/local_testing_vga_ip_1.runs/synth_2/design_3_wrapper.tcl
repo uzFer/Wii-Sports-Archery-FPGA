@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
@@ -38,6 +39,7 @@ update_ip_catalog
 set_property ip_output_repo y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files Y:/bram_target.coe
+add_files y:/project_audio_pkg/src/combined.coe
 read_verilog -library xil_defaultlib Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v
 add_files Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/design_3.bd
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0_board.xdc]
@@ -73,6 +75,7 @@ set_property used_in_implementation false [get_files -all y:/vga_project/local_t
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_uartlite_0_0/design_3_axi_uartlite_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_uartlite_0_0/design_3_axi_uartlite_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_uartlite_0_0/design_3_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_top_sound_0_0/design_3_top_sound_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/design_3_ooc.xdc]
 
