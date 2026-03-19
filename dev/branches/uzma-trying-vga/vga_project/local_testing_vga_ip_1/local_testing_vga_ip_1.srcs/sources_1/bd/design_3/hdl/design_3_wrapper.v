@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Mar 16 20:33:38 2026
+//Date        : Thu Mar 19 15:08:31 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_3_wrapper.bd
 //Design      : design_3_wrapper
@@ -15,6 +15,7 @@ module design_3_wrapper
     VGA_HSYNC,
     VGA_R,
     VGA_VSYNC,
+    aud_sd_0,
     calibrate_0,
     calibration_done_0,
     clk_100MHz,
@@ -24,6 +25,8 @@ module design_3_wrapper
     o_CS_0,
     o_MOSI_0,
     o_SCLK_0,
+    play_done_0,
+    pwm_out_0,
     reset_rtl_0,
     uart_rtl_0_rxd,
     uart_rtl_0_txd);
@@ -32,6 +35,7 @@ module design_3_wrapper
   output VGA_HSYNC;
   output [3:0]VGA_R;
   output VGA_VSYNC;
+  output aud_sd_0;
   input calibrate_0;
   output calibration_done_0;
   input clk_100MHz;
@@ -41,6 +45,8 @@ module design_3_wrapper
   output o_CS_0;
   output o_MOSI_0;
   output o_SCLK_0;
+  output play_done_0;
+  output pwm_out_0;
   input reset_rtl_0;
   input uart_rtl_0_rxd;
   output uart_rtl_0_txd;
@@ -50,6 +56,7 @@ module design_3_wrapper
   wire VGA_HSYNC;
   wire [3:0]VGA_R;
   wire VGA_VSYNC;
+  wire aud_sd_0;
   wire calibrate_0;
   wire calibration_done_0;
   wire clk_100MHz;
@@ -59,6 +66,8 @@ module design_3_wrapper
   wire o_CS_0;
   wire o_MOSI_0;
   wire o_SCLK_0;
+  wire play_done_0;
+  wire pwm_out_0;
   wire reset_rtl_0;
   wire uart_rtl_0_rxd;
   wire uart_rtl_0_txd;
@@ -69,6 +78,7 @@ module design_3_wrapper
         .VGA_HSYNC(VGA_HSYNC),
         .VGA_R(VGA_R),
         .VGA_VSYNC(VGA_VSYNC),
+        .aud_sd_0(aud_sd_0),
         .calibrate_0(calibrate_0),
         .calibration_done_0(calibration_done_0),
         .clk_100MHz(clk_100MHz),
@@ -78,6 +88,8 @@ module design_3_wrapper
         .o_CS_0(o_CS_0),
         .o_MOSI_0(o_MOSI_0),
         .o_SCLK_0(o_SCLK_0),
+        .play_done_0(play_done_0),
+        .pwm_out_0(pwm_out_0),
         .reset_rtl_0(reset_rtl_0),
         .uart_rtl_0_rxd(uart_rtl_0_rxd),
         .uart_rtl_0_txd(uart_rtl_0_txd));

@@ -5,6 +5,9 @@
 
 # XDC: imports/constraints/gyro_nexys_a7.xdc
 
+# IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
+
 # Block Designs: bd/design_3/design_3.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3 || ORIG_REF_NAME==design_3} -quiet] -quiet
 
@@ -74,7 +77,23 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gp
 # IP: bd/design_3/ip/design_3_axi_uartlite_0_0/design_3_axi_uartlite_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_uartlite_0_0 || ORIG_REF_NAME==design_3_axi_uartlite_0_0} -quiet] -quiet
 
+# IP: bd/design_3/ip/design_3_top_sound_0_0/design_3_top_sound_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_top_sound_0_0 || ORIG_REF_NAME==design_3_top_sound_0_0} -quiet] -quiet
+
+# IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_xlconstant_0_0/design_3_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_xlconstant_0_0 || ORIG_REF_NAME==design_3_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_xlconstant_1_0/design_3_xlconstant_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_xlconstant_1_0 || ORIG_REF_NAME==design_3_xlconstant_1_0} -quiet] -quiet
+
 # IP: bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_auto_pc_0 || ORIG_REF_NAME==design_3_auto_pc_0} -quiet] -quiet
+
+# XDC: ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc
+
+# XDC: ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc
 
 # XDC: bd/design_3/design_3_ooc.xdc

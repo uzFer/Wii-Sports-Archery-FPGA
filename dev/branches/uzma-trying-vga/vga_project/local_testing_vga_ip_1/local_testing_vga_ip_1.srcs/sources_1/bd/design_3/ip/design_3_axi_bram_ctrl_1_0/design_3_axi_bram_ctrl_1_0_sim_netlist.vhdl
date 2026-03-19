@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Sun Mar 15 12:04:38 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_axi_bram_ctrl_1_0/design_3_axi_bram_ctrl_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_3_axi_bram_ctrl_1_0 -prefix
+--               design_3_axi_bram_ctrl_1_0_ design_3_axi_bram_ctrl_1_0_sim_netlist.vhdl
 -- Design      : design_3_axi_bram_ctrl_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -51,8 +51,6 @@ entity design_3_axi_bram_ctrl_1_0_SRL_FIFO is
     s_axi_awid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_0_SRL_FIFO : entity is "SRL_FIFO";
 end design_3_axi_bram_ctrl_1_0_SRL_FIFO;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_0_SRL_FIFO is
@@ -527,8 +525,6 @@ entity design_3_axi_bram_ctrl_1_0_wrap_brst is
     \wrap_burst_total_reg[0]_0\ : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_0_wrap_brst : entity is "wrap_brst";
 end design_3_axi_bram_ctrl_1_0_wrap_brst;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_0_wrap_brst is
@@ -2453,8 +2449,6 @@ entity design_3_axi_bram_ctrl_1_0_rd_chnl is
     s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     bram_rddata_b : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_0_rd_chnl : entity is "rd_chnl";
 end design_3_axi_bram_ctrl_1_0_rd_chnl;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_0_rd_chnl is
@@ -6825,8 +6819,6 @@ entity design_3_axi_bram_ctrl_1_0_wr_chnl is
     s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_0_wr_chnl : entity is "wr_chnl";
 end design_3_axi_bram_ctrl_1_0_wr_chnl;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_0_wr_chnl is
@@ -8956,8 +8948,6 @@ entity design_3_axi_bram_ctrl_1_0_full_axi is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_0_full_axi : entity is "full_axi";
 end design_3_axi_bram_ctrl_1_0_full_axi;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_0_full_axi is
@@ -9060,8 +9050,6 @@ entity design_3_axi_bram_ctrl_1_0_axi_bram_ctrl_top is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_0_axi_bram_ctrl_top : entity is "axi_bram_ctrl_top";
 end design_3_axi_bram_ctrl_1_0_axi_bram_ctrl_top;
 
 architecture STRUCTURE of design_3_axi_bram_ctrl_1_0_axi_bram_ctrl_top is
@@ -9219,8 +9207,6 @@ entity design_3_axi_bram_ctrl_1_0_axi_bram_ctrl is
   attribute C_S_AXI_PROTOCOL of design_3_axi_bram_ctrl_1_0_axi_bram_ctrl : entity is "AXI4";
   attribute C_S_AXI_SUPPORTS_NARROW_BURST : integer;
   attribute C_S_AXI_SUPPORTS_NARROW_BURST of design_3_axi_bram_ctrl_1_0_axi_bram_ctrl : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi_bram_ctrl_1_0_axi_bram_ctrl : entity is "axi_bram_ctrl";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_3_axi_bram_ctrl_1_0_axi_bram_ctrl : entity is "yes";
 end design_3_axi_bram_ctrl_1_0_axi_bram_ctrl;

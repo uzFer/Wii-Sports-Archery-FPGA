@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Feb 28 09:26:18 2026
+// Date        : Sat Feb 28 09:26:17 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_3_clk_100MHz_0 -prefix
+//               design_3_clk_100MHz_0_ design_3_clk_100MHz_0_sim_netlist.v
 // Design      : design_3_clk_100MHz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,7 +39,6 @@ module design_3_clk_100MHz_0
         .resetn(resetn));
 endmodule
 
-(* ORIG_REF_NAME = "design_3_clk_100MHz_0_clk_wiz" *) 
 module design_3_clk_100MHz_0_design_3_clk_100MHz_0_clk_wiz
    (clk_out1,
     clk_out2,

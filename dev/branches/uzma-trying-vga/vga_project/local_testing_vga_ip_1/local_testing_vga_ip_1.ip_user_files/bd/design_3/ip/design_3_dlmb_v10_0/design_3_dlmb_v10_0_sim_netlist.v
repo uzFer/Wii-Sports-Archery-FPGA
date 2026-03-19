@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Sat Feb 28 09:26:17 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_dlmb_v10_0/design_3_dlmb_v10_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_3_dlmb_v10_0 -prefix
+//               design_3_dlmb_v10_0_ design_3_dlmb_v10_0_sim_netlist.v
 // Design      : design_3_dlmb_v10_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -125,7 +125,7 @@ module design_3_dlmb_v10_0
 endmodule
 
 (* C_EXT_RESET_HIGH = "1" *) (* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) 
-(* C_LMB_NUM_SLAVES = "1" *) (* ORIG_REF_NAME = "lmb_v10" *) 
+(* C_LMB_NUM_SLAVES = "1" *) 
 module design_3_dlmb_v10_0_lmb_v10
    (LMB_Clk,
     SYS_Rst,

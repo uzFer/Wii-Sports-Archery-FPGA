@@ -30,6 +30,17 @@ module tb5();
         .reset_rtl_0(reset_rtl_0)
     );
 
+ 
+//  input calibrate_0;
+//  input clk_100MHz;
+//  input [3:0]gpio_io_i_0;
+//  input gyroscope_enable_0;
+//  input i_MISO_0;
+  
+//  input reset_rtl_0;
+//  input uart_rtl_0_rxd;
+
+
     // ---------------------------------------------------------
     // 3. Clock Generation (100MHz)
     // ---------------------------------------------------------

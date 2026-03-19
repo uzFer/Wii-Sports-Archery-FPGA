@@ -8,6 +8,7 @@
             <top_module name="axi_bram_ctrl_funcs" />
             <top_module name="glbl" />
             <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
             <top_module name="lmb_bram_if_funcs" />
             <top_module name="mdm_funcs" />
             <top_module name="tb5" />
@@ -16,284 +17,37 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="121600000001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="329073033fs"></ZoomStartTime>
+      <ZoomEndTime time="485814607fs"></ZoomEndTime>
+      <Cursor1Time time="680000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="287"></NameColumnWidth>
+      <NameColumnWidth column_width="281"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject fp_name="/tb5/clk_100MHz" type="logic">
-      <obj_property name="ElementShortName">clk_100MHz</obj_property>
-      <obj_property name="ObjectShortName">clk_100MHz</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/tb5/uut/design_3_i/top_sound_0/aud_sd" type="logic">
+      <obj_property name="ElementShortName">aud_sd</obj_property>
+      <obj_property name="ObjectShortName">aud_sd</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb5/reset_rtl_0" type="logic">
-      <obj_property name="ElementShortName">reset_rtl_0</obj_property>
-      <obj_property name="ObjectShortName">reset_rtl_0</obj_property>
+   <wvobject fp_name="/tb5/uut/design_3_i/top_sound_0/inst/music_inst/playing" type="logic">
+      <obj_property name="ElementShortName">playing</obj_property>
+      <obj_property name="ObjectShortName">playing</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb5/gpio_io_i_0" type="logic">
-      <obj_property name="ElementShortName">gpio_io_i_0</obj_property>
-      <obj_property name="ObjectShortName">gpio_io_i_0</obj_property>
+   <wvobject fp_name="/tb5/uut/design_3_i/top_sound_0/inst/music_inst/play_enable" type="logic">
+      <obj_property name="ElementShortName">play_enable</obj_property>
+      <obj_property name="ObjectShortName">play_enable</obj_property>
    </wvobject>
-   <wvobject fp_name="group287" type="group">
-      <obj_property name="label">output pins</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/tb5/VGA_B" type="array">
-         <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
-         <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/VGA_G" type="array">
-         <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
-         <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/VGA_R" type="array">
-         <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
-         <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/VGA_HSYNC" type="logic">
-         <obj_property name="ElementShortName">VGA_HSYNC</obj_property>
-         <obj_property name="ObjectShortName">VGA_HSYNC</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/VGA_VSYNC" type="logic">
-         <obj_property name="ElementShortName">VGA_VSYNC</obj_property>
-         <obj_property name="ObjectShortName">VGA_VSYNC</obj_property>
-      </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/top_sound_0/inst/music_inst/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="group292" type="group">
-      <obj_property name="label">framewriter</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/axi_framewriter_myScore" type="array">
-         <obj_property name="ElementShortName">axi_framewriter_myScore[15:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_framewriter_myScore[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/axi_framewriter_oppScore" type="array">
-         <obj_property name="ElementShortName">axi_framewriter_oppScore[15:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_framewriter_oppScore[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/axi_framewriter_x" type="array">
-         <obj_property name="ElementShortName">axi_framewriter_x[15:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_framewriter_x[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/axi_framewriter_y" type="array">
-         <obj_property name="ElementShortName">axi_framewriter_y[15:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_framewriter_y[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_address" type="array">
-         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/current_state" type="array">
-         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
-         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_read_data" type="array">
-         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_data" type="array">
-         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_enable" type="array">
-         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/top_sound_0/inst/music_inst/play_enable_prev" type="logic">
+      <obj_property name="ElementShortName">play_enable_prev</obj_property>
+      <obj_property name="ObjectShortName">play_enable_prev</obj_property>
    </wvobject>
-   <wvobject fp_name="group187" type="group">
-      <obj_property name="label">framwriter score latch</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/axi_aclk" type="logic">
-         <obj_property name="ElementShortName">axi_aclk</obj_property>
-         <obj_property name="ObjectShortName">axi_aclk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/pixel_clk" type="logic">
-         <obj_property name="ElementShortName">pixel_clk</obj_property>
-         <obj_property name="ObjectShortName">pixel_clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pixel_index" type="array">
-         <obj_property name="ElementShortName">pixel_index[16:0]</obj_property>
-         <obj_property name="ObjectShortName">pixel_index[16:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_address" type="array">
-         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_data" type="array">
-         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_enable" type="array">
-         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_read_data" type="array">
-         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/hcount_640" type="array">
-      <obj_property name="ElementShortName">hcount_640[15:0]</obj_property>
-      <obj_property name="ObjectShortName">hcount_640[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/vcount_480" type="array">
-      <obj_property name="ElementShortName">vcount_480[15:0]</obj_property>
-      <obj_property name="ObjectShortName">vcount_480[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="group606" type="group">
-      <obj_property name="label">sync gen</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/x_coord" type="array">
-         <obj_property name="ElementShortName">x_coord[9:0]</obj_property>
-         <obj_property name="ObjectShortName">x_coord[9:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/y_coord" type="array">
-         <obj_property name="ElementShortName">y_coord[9:0]</obj_property>
-         <obj_property name="ObjectShortName">y_coord[9:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/hcount" type="array">
-         <obj_property name="ElementShortName">hcount[15:0]</obj_property>
-         <obj_property name="ObjectShortName">hcount[15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/vcount" type="array">
-         <obj_property name="ElementShortName">vcount[15:0]</obj_property>
-         <obj_property name="ObjectShortName">vcount[15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_address" type="array">
-         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_read_data" type="array">
-         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_en" type="logic">
-         <obj_property name="ElementShortName">bram_en</obj_property>
-         <obj_property name="ObjectShortName">bram_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/bram_offset" type="array">
-         <obj_property name="ElementShortName">bram_offset[4:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_offset[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/current_pixel" type="logic">
-         <obj_property name="ElementShortName">current_pixel</obj_property>
-         <obj_property name="ObjectShortName">current_pixel</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/pixel_index" type="array">
-         <obj_property name="ElementShortName">pixel_index[16:0]</obj_property>
-         <obj_property name="ObjectShortName">pixel_index[16:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group179" type="group">
-      <obj_property name="label">display</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/display_on" type="logic">
-         <obj_property name="ElementShortName">display_on</obj_property>
-         <obj_property name="ObjectShortName">display_on</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/inst/sync_generator_1/display_on_1" type="logic">
-         <obj_property name="ElementShortName">display_on_1</obj_property>
-         <obj_property name="ObjectShortName">display_on_1</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/sync_gen_1/vsync_trigger" type="logic">
-         <obj_property name="ElementShortName">vsync_trigger</obj_property>
-         <obj_property name="ObjectShortName">vsync_trigger</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/vsync_trigger" type="logic">
-         <obj_property name="ElementShortName">vsync_trigger</obj_property>
-         <obj_property name="ObjectShortName">vsync_trigger</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/vsync_start" type="logic">
-         <obj_property name="ElementShortName">vsync_start</obj_property>
-         <obj_property name="ObjectShortName">vsync_start</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group218" type="group">
-      <obj_property name="label">pipe</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pipe_dx" type="array">
-         <obj_property name="ElementShortName">pipe_dx[15:0]</obj_property>
-         <obj_property name="ObjectShortName">pipe_dx[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pipe_dy" type="array">
-         <obj_property name="ElementShortName">pipe_dy[15:0]</obj_property>
-         <obj_property name="ObjectShortName">pipe_dy[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pipe_dx_sq" type="array">
-         <obj_property name="ElementShortName">pipe_dx_sq[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pipe_dx_sq[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pipe_dy_sq" type="array">
-         <obj_property name="ElementShortName">pipe_dy_sq[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pipe_dy_sq[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pipe_dist_sq" type="array">
-         <obj_property name="ElementShortName">pipe_dist_sq[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pipe_dist_sq[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pipe_is_target" type="logic">
-         <obj_property name="ElementShortName">pipe_is_target</obj_property>
-         <obj_property name="ObjectShortName">pipe_is_target</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/target_color" type="array">
-         <obj_property name="ElementShortName">target_color[31:0]</obj_property>
-         <obj_property name="ObjectShortName">target_color[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/final_color" type="array">
-         <obj_property name="ElementShortName">final_color[31:0]</obj_property>
-         <obj_property name="ObjectShortName">final_color[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/pixel_to_write_data" type="array">
-         <obj_property name="ElementShortName">pixel_to_write_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pixel_to_write_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/final_color_latched" type="array">
-         <obj_property name="ElementShortName">final_color_latched[31:0]</obj_property>
-         <obj_property name="ObjectShortName">final_color_latched[31:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group227" type="group">
-      <obj_property name="label">bram writing</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/internal_x" type="array">
-         <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
-         <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/internal_y" type="array">
-         <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
-         <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_addr_internal" type="array">
-         <obj_property name="ElementShortName">bram_addr_internal[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_addr_internal[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_addr_latched" type="array">
-         <obj_property name="ElementShortName">bram_addr_latched[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_addr_latched[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_address" type="array">
-         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_en" type="logic">
-         <obj_property name="ElementShortName">bram_en</obj_property>
-         <obj_property name="ObjectShortName">bram_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_data" type="array">
-         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb5/uut/design_3_i/framewriter_0/inst/framewriter_1/bram_write_enable" type="array">
-         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/tb5/uut/design_3_i/top_sound_0/inst/music_inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
 </wave_config>

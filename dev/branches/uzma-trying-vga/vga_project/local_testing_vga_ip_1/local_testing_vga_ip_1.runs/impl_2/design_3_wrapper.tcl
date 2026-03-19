@@ -66,6 +66,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
@@ -83,6 +84,7 @@ set rc [catch {
   add_files -quiet Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/design_3_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
+  read_ip -quiet Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   add_files Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/design_3.bd
   set_param project.isImplRun false
   read_xdc Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/constrs_1/new/vga_constraints.xdc
