@@ -2125,3 +2125,18 @@ con
 16:34:37 INFO  : Successfully done setting SDK workspace  
 16:34:37 INFO  : Processing command line option -hwspec Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper.hdf.
 16:34:37 INFO  : Checking for hwspec changes in the project design_3_wrapper_hw_platform_0.
+17:27:34 INFO  : Registering command handlers for SDK TCF services
+17:27:35 INFO  : Launching XSCT server: xsct.bat -interactive Y:\vga_project\local_testing_vga_ip_1\local_testing_vga_ip_1.sdk\temp_xsdb_launch_script.tcl
+17:27:38 INFO  : XSCT server has started successfully.
+17:27:42 INFO  : Successfully done setting XSCT server connection channel  
+17:27:42 INFO  : Successfully done setting SDK workspace  
+17:27:42 INFO  : Processing command line option -hwspec Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper.hdf.
+17:27:42 INFO  : Checking for hwspec changes in the project design_3_wrapper_hw_platform_0.
+17:30:32 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1773952978207,  Project:1773707898334
+17:30:32 INFO  : Project design_3_wrapper_hw_platform_0's source hardware specification located at Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+17:30:35 INFO  : Copied contents of Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sdk/design_3_wrapper.hdf into \design_3_wrapper_hw_platform_0\system.hdf.
+17:30:35 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:30:39 INFO  : 
+17:31:03 INFO  : Updating hardware inferred compiler options for vga_coord.
+17:31:03 INFO  : Clearing existing target manager status.

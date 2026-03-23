@@ -24,6 +24,10 @@
 #define BTN_BASE          XPAR_AXI_GPIO_0_BASEADDR // btn D = 4, C = 8, L = 1, R = 2, U = 0
 #define FRAMEWRITER_BASE  XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR
 #define GYRO_GPIO_ADDR	XPAR_AXI_GPIO_1_BASEADDR
+#define PS2_FONT_ROM_INPUT_ADDR XPAR_AXI_GPIO_3_BASEADDR
+#define PS2_CONFIG_ADDR_USER_EN XPAR_AXI_GPIO_3_BASEADDR + 0x08
+#define PS2_USER_DATA_ADDR XPAR_AXI_GPIO_2_BASEADDR
+#define PS2_FONT_ROM_OUTPUT_ADDR XPAR_GPIO_4_BASEADDR
 
 /* Register Offsets from your framewriter.h */
 #define REG_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG0_OFFSET
@@ -36,6 +40,10 @@
 #define BTN_D_MASK (1 << 4) // Value 4
 #define BTN_C_MASK (1 << 8) // Value 8
 #define BTN_U_MASK (1 << 0) // Value 0
+
+// Font stuff
+#define FONT_WIDTH  7
+#define FONT_HEIGHT 9
 
 // Valid state sequence: 1, 2, 6, 4, 8, 12
 uint32_t state_list[] = {1, 2, 6, 12};
@@ -109,22 +117,50 @@ void poll_gyroscope() {
     return;
 }
 
-int getWiiFontIndex(char c) {
-    for (int i = 0; i < sizeof(wiiFont)/sizeof(FontChar); i++)
-        if (wiiFont[i].c == c) return i;
-    return 0;
+void setUserKeyboardInput(uint8_t enable) {
+	// Set enable = 1 if we want to get PS/2
+	// Set enable = 0 if we want to just access font rom directly
+	Xil_Out32(PS2_CONFIG_ADDR_USER_EN, enable);
+	return;
+
+}
+
+//int getWiiFontIndex(char c) {
+//    for (int i = 0; i < sizeof(wiiFont)/sizeof(FontChar); i++)
+//        if (wiiFont[i].c == c) return i;
+//    return 0;
+//}
+
+uint64_t getWiiFontBitmap(char c) {
+	// Send char value to font rom
+	// Read font rom output
+	// Remember to set setUserKeyboardInput correctly
+	uint64_t flattened_bitmap = 0; // bitmap is 7x9  = 63 dimension
+	Xil_Out32(PS2_FONT_ROM_INPUT_ADDR, c);
+	volatile uint32_t* font_rom_output = (uint32_t *)PS2_FONT_ROM_OUTPUT_ADDR;
+	flattened_bitmap = *(font_rom_output); // lower bits
+	flattened_bitmap |=  ((uint64_t)*(font_rom_output + 2) << 32);
+	return flattened_bitmap;
+
 }
 
 void drawChar(int x, int y, char c, uint32_t color, int scale) {
-    int idx = getWiiFontIndex(c);
-    const uint8_t *bitmap = wiiFont[idx].bitmap;
+    uint64_t flat_bitmap = getWiiFontBitmap(c);
     for (int row = 0; row < FONT_HEIGHT; row++) {
-        for (int col = 0; col < FONT_WIDTH; col++) {
-            if (bitmap[row] & (1 << (FONT_WIDTH-1-col))) {
-                drawBox(x + col * scale, y + row * scale, scale, scale, color);
-            }
-        }
-    }
+		for (int col = 0; col < FONT_WIDTH; col++) {
+			/* * Calculate bit position:
+			 * There are 63 bits total (0 to 62).
+			 * (row * FONT_WIDTH + col) gives the pixel index (0 to 62).
+			 * We subtract from 62 to keep the "Left/Top = MSB" logic.
+			 */
+			int bit_pos = (FONT_HEIGHT * FONT_WIDTH - 1) - (row * FONT_WIDTH + col);
+
+			// Check if the bit at bit_pos is set
+			if ((flat_bitmap >> bit_pos) & 1ULL) {
+				drawBox(x + col * scale, y + row * scale, scale, scale, color);
+			}
+		}
+	}
 }
 
 void drawText(int x, int y, const char *text, uint32_t color, int scale) {
@@ -184,13 +220,14 @@ void drawMainMenu() {
 
 /* ===================== KEYBOARD HELPERS ===================== */
 char poll_keyboard() {
-    volatile uint32_t *ps2_gpio = (uint32_t *)PS2_GPIO_ADDR;
+    volatile uint32_t *ps2_gpio = (uint32_t *)PS2_USER_DATA_ADDR;
     uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs)
 
     // Bit 8 is the 'Empty' flag
     bool empty = (status >> 8) & 0x1;
 
     if (!empty) {
+
         // We must pop the FIFO FIRST to load the character into read_data
         *(ps2_gpio + 2) = 1;
 

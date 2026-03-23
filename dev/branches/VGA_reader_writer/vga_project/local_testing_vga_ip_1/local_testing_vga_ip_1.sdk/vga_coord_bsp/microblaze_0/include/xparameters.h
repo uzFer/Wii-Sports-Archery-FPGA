@@ -591,7 +591,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 2
+#define XPAR_XGPIO_NUM_INSTANCES 5
 
 /* Definitions for peripheral AXI_GPIO_0 */
 #define XPAR_AXI_GPIO_0_BASEADDR 0x40000000
@@ -609,6 +609,30 @@
 #define XPAR_AXI_GPIO_1_IS_DUAL 0
 
 
+/* Definitions for peripheral AXI_GPIO_2 */
+#define XPAR_AXI_GPIO_2_BASEADDR 0x40020000
+#define XPAR_AXI_GPIO_2_HIGHADDR 0x40020FFF
+#define XPAR_AXI_GPIO_2_DEVICE_ID 2
+#define XPAR_AXI_GPIO_2_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_2_IS_DUAL 1
+
+
+/* Definitions for peripheral AXI_GPIO_3 */
+#define XPAR_AXI_GPIO_3_BASEADDR 0x40030000
+#define XPAR_AXI_GPIO_3_HIGHADDR 0x40030FFF
+#define XPAR_AXI_GPIO_3_DEVICE_ID 3
+#define XPAR_AXI_GPIO_3_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_3_IS_DUAL 1
+
+
+/* Definitions for peripheral AXI_GPIO_4 */
+#define XPAR_AXI_GPIO_4_BASEADDR 0x40040000
+#define XPAR_AXI_GPIO_4_HIGHADDR 0x40040FFF
+#define XPAR_AXI_GPIO_4_DEVICE_ID 4
+#define XPAR_AXI_GPIO_4_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_4_IS_DUAL 1
+
+
 /******************************************************************/
 
 /* Canonical definitions for peripheral AXI_GPIO_0 */
@@ -624,6 +648,27 @@
 #define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
 #define XPAR_GPIO_1_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_1_IS_DUAL 0
+
+/* Canonical definitions for peripheral AXI_GPIO_2 */
+#define XPAR_GPIO_2_BASEADDR 0x40020000
+#define XPAR_GPIO_2_HIGHADDR 0x40020FFF
+#define XPAR_GPIO_2_DEVICE_ID XPAR_AXI_GPIO_2_DEVICE_ID
+#define XPAR_GPIO_2_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_2_IS_DUAL 1
+
+/* Canonical definitions for peripheral AXI_GPIO_3 */
+#define XPAR_GPIO_3_BASEADDR 0x40030000
+#define XPAR_GPIO_3_HIGHADDR 0x40030FFF
+#define XPAR_GPIO_3_DEVICE_ID XPAR_AXI_GPIO_3_DEVICE_ID
+#define XPAR_GPIO_3_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_3_IS_DUAL 1
+
+/* Canonical definitions for peripheral AXI_GPIO_4 */
+#define XPAR_GPIO_4_BASEADDR 0x40040000
+#define XPAR_GPIO_4_HIGHADDR 0x40040FFF
+#define XPAR_GPIO_4_DEVICE_ID XPAR_AXI_GPIO_4_DEVICE_ID
+#define XPAR_GPIO_4_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_4_IS_DUAL 1
 
 
 /******************************************************************/

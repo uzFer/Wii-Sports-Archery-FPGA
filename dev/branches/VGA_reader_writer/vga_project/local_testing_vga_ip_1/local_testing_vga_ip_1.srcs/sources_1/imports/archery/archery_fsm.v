@@ -13,9 +13,15 @@ module archery_fsm (
     output wire  [31:0] game_state,
     
     // audio signals
-    output reg play_menu,
-    output reg play_arrow,
-    output reg play_music 
+    output reg  play_menu,
+    output reg  play_arrow,
+    output reg  play_music,
+    
+    // uart ports
+    input  wire [7:0] uart_in,
+    input  wire uart_in_valid,   
+    output reg  [7:0] uart_out,
+    output reg  uart_out_valid 
 );
 
 // STATE ENCODING

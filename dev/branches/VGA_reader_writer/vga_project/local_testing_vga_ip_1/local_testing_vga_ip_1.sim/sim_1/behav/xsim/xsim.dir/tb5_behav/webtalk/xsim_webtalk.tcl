@@ -22,3 +22,13 @@ webtalk_add_data -client project -key cpu_speed -value "3194 MHz" -context "user
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "16.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
+webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "266580555 ps" -context "xsim\\usage"
+webtalk_add_data -client xsim -key iteration -value "3" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "14.37_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "30808_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3878632456 -regid "" -xml Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sim/sim_1/behav/xsim/xsim.dir/tb5_behav/webtalk/usage_statistics_ext_xsim.xml -html Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sim/sim_1/behav/xsim/xsim.dir/tb5_behav/webtalk/usage_statistics_ext_xsim.html -wdm Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.sim/sim_1/behav/xsim/xsim.dir/tb5_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_terminate
