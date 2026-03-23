@@ -216,8 +216,19 @@ module framewriter #
        (internal_x == x_latch && internal_y >= (y_latch - CROSS_SIZE) && internal_y <= (y_latch + CROSS_SIZE))
    );
    // crosshair logic END 
+
+   // main menu logic START
+    wire is_top_bar1 = (internal_y >= 40 && internal_y < 50);
+    wire is_top_bar2 = (internal_y >= 60 && internal_y < 70);
+   // main menu logic END
+
+   // display score logic START
+    wire is_left_panel  = (internal_x >= 60  && internal_x <= 150) && (internal_y >= 80 && internal_y <= 160);
+    wire is_right_panel = (internal_x >= 170 && internal_x <= 260) && (internal_y >= 80 && internal_y <= 160);
+   // display score logic END
     
    // score output START
+   wire is_bottom_text = (internal_y >= 200);
    // Position: Top Right (Screen is 320 wide)
    localparam DIGIT1_X = 16'd280; // Tens place
    localparam DIGIT2_X = 16'd300; // Ones place
@@ -372,6 +383,8 @@ module framewriter #
    localparam BLUE      = 32'h000000F0;
    localparam YELLOW    = 32'h00F0F000;
    localparam TURQUOISE = 32'h0000F0F0;
+   localparam GREY      = 32'h00404040;
+   localparam ORANGE    = 32'h00F09000;
     
    // --- Combined Logic ---
    reg [BRAM_DATA_WIDTH-1:0] target_color;
@@ -389,11 +402,82 @@ module framewriter #
       else                                     target_color = GREEN;
 //      else                                     target_color = TURQUOISE;
     
+        /*
+            localparam RESET_STATE      = 4'd0;
+            localparam MAIN_MENU        = 4'd1;
+            localparam PLAYER1_AIM      = 4'd2;
+            localparam PLAYER1_SHOOT    = 4'd3;
+            localparam PLAYER1_CALC     = 4'd4;
+            localparam PLAYER1_SCORE    = 4'd5;
+            localparam PLAYER2_AIM      = 4'd6;
+            localparam PLAYER2_SHOOT    = 4'd7;
+            localparam PLAYER2_CALC     = 4'd8;
+            localparam PLAYER2_SCORE    = 4'd9;
+            localparam DISPLAY_SCORE    = 4'd10;
+            localparam UPDATE_ROUND     = 4'd11;
+            localparam GAME_OVER        = 4'd12;
+        */
        // 2. State-based Background Selection (The "score_latch" logic)
+       /* TO DO: ADD TEXT */
        case (score_latch)
-           4'd1:    final_color = (is_triangle) ? WHITE : GREEN;
-           4'd2, 6: final_color = target_color;
-           4'd12:   final_color = is_square; // Logic for score/digits handled in next step
+            // RESET SCREEN
+            4'd0: begin
+                final_color = WHITE;
+                if (is_top_bar1) final_color = TURQUOISE;
+                if (is_top_bar2) final_color = ORANGE;
+            end
+
+            // MAIN MENU SCREEN
+            4'd1: begin
+                final_color = WHITE;
+
+                if (internal_y >= 20 && internal_y < 36)
+                    final_color = TURQUOISE;
+
+                if (internal_y >= 40 && internal_y < 56)
+                    final_color = ORANGE;
+            end
+
+            // PLAYER 1/2 AIM SCREEN (with target)
+            4'd2, 6: begin
+                final_color = target_color;
+
+                if (is_bottom_text)
+                    final_color = GREEN;
+            end
+
+            // SHOOT SCREEN
+            4'd3, 7: begin
+                final_color = (is_triangle) ? WHITE : GREEN;
+    
+                if (is_bottom_text)
+                     final_color = GREEN;
+            end
+
+            // CALC SCREEN
+            4'd4, 8: begin 
+                final_color = BLUE;
+            end
+
+            // DISPLAY SCORE
+            4'd10: begin 
+                final_color = BLACK;
+
+                if (is_left_panel)  final_color = BLUE;
+                if (is_right_panel) final_color = RED;
+
+                // divider line
+                if (internal_y >= 60 && internal_y <= 64)
+                    final_color = WHITE;
+            end
+
+            // GAME OVER
+            4'd12: begin
+                final_color = BLACK;
+
+                if ((internal_x >= 80 && internal_x <= 240) && (internal_y >= 60 && internal_y <= 180))
+                    final_color = GREY;
+            end
           default: final_color = BLACK;
        endcase
     
