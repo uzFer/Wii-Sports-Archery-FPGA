@@ -365,12 +365,63 @@ module framewriter #
    localparam CTR_Y = 16'd120;
     
    // --- Radii Squared (Scaled: 200->100, 160->80, 120->60, 80->40, 40->20, 4->2) ---
-   localparam R_WHITE_SQ    = 32'd10000; // 100^2
-   localparam R_BLACK_SQ    = 32'd6400;  // 80^2
-   localparam R_TURQUOISE_SQ = 32'd3600;  // 60^2
-   localparam R_RED_SQ       = 32'd1600;  // 40^2
-   localparam R_YELLOW_SQ    = 32'd400;   // 20^2
-   localparam R_BULLSEYE_SQ  = 32'd4;     // 2^2
+//    localparam R_WHITE_SQ    = 32'd10000; // 100^2
+//    localparam R_BLACK_SQ    = 32'd6400;  // 80^2
+//    localparam R_TURQUOISE_SQ = 32'd3600;  // 60^2
+//    localparam R_RED_SQ       = 32'd1600;  // 40^2
+//    localparam R_YELLOW_SQ    = 32'd400;   // 20^2
+//    localparam R_BULLSEYE_SQ  = 32'd4;     // 2^2
+   
+    // Outer white ring outline
+    localparam R_OUTER_EDGE_SQ      = 32'd10000; // 100^2 — outermost edge
+    localparam R_OL_OUTER_EDGE_SQ   = 32'd9604;  //  98^2 } thin black outline around entire target
+    localparam R_OL_OUTER_EDGE_ISQ  = 32'd9216;  //  96^2 }
+
+    // White band — 2 rings
+    localparam R_WHITE1_END_SQ      = 32'd9216;  //  96^2
+    localparam R_OL_W1W2_OUTER_SQ   = 32'd8464;  //  92^2 } black outline between white rings
+    localparam R_OL_W1W2_INNER_SQ   = 32'd8100;  //  90^2 }
+    localparam R_WHITE2_END_SQ      = 32'd8100;  //  90^2
+    localparam R_OL_WBLK_OUTER_SQ   = 32'd7396;  //  86^2 } black outline: white → black
+    localparam R_OL_WBLK_INNER_SQ   = 32'd7056;  //  84^2 }
+
+    // Black band — 2 rings
+    localparam R_BLACK1_END_SQ      = 32'd7056;  //  84^2
+    localparam R_OL_B1B2_OUTER_SQ   = 32'd6724;  //  82^2 } WHITE outline between black rings
+    localparam R_OL_B1B2_INNER_SQ   = 32'd6400;  //  80^2 }
+    localparam R_BLACK2_END_SQ      = 32'd6400;  //  80^2
+    localparam R_OL_BTURQ_OUTER_SQ  = 32'd5776;  //  76^2 } WHITE outline: black → turquoise
+    localparam R_OL_BTURQ_INNER_SQ  = 32'd5476;  //  74^2 }
+
+    // Turquoise band — 2 rings
+    localparam R_TURQ1_END_SQ       = 32'd5476;  //  74^2
+    localparam R_OL_T1T2_OUTER_SQ   = 32'd4900;  //  70^2 } black outline between turquoise rings
+    localparam R_OL_T1T2_INNER_SQ   = 32'd4624;  //  68^2 }
+    localparam R_TURQ2_END_SQ       = 32'd4624;  //  68^2
+    localparam R_OL_TRED_OUTER_SQ   = 32'd4096;  //  64^2 } black outline: turquoise → red
+    localparam R_OL_TRED_INNER_SQ   = 32'd3844;  //  62^2 }
+
+    // Red band — 2 rings
+    localparam R_RED1_END_SQ        = 32'd3844;  //  62^2
+    localparam R_OL_R1R2_OUTER_SQ   = 32'd3364;  //  58^2 } black outline between red rings
+    localparam R_OL_R1R2_INNER_SQ   = 32'd3136;  //  56^2 }
+    localparam R_RED2_END_SQ        = 32'd3136;  //  56^2
+    localparam R_OL_RYEL_OUTER_SQ   = 32'd2601;  //  51^2 } black outline: red → yellow
+    localparam R_OL_RYEL_INNER_SQ   = 32'd2401;  //  49^2 }
+
+    // Yellow band — 2 rings
+    localparam R_YEL1_END_SQ        = 32'd2401;  //  49^2
+    localparam R_OL_Y1Y2_OUTER_SQ   = 32'd1936;  //  44^2 } black outline between yellow rings
+    localparam R_OL_Y1Y2_INNER_SQ   = 32'd1764;  //  42^2 }
+    localparam R_YEL2_END_SQ        = 32'd1764;  //  42^2
+    localparam R_OL_YDOT_OUTER_SQ   = 32'd1156;  //  34^2 } black outline: yellow → center
+    localparam R_OL_YDOT_INNER_SQ   = 32'd1024;  //  32^2 }
+
+    // Center dot
+    localparam R_DOT_OUTER_SQ       = 32'd1024;  //  32^2
+    localparam R_OL_DOT_OUTER_SQ    = 32'd576;   //  24^2 } black outline around center dot
+    localparam R_OL_DOT_INNER_SQ    = 32'd484;   //  22^2 }
+    localparam R_DOT_INNER_SQ       = 32'd484;   //  22^2 — solid yellow center
     
    // We still need the pipeline from before to avoid timing errors with dist_sq
    // pipe_dist_sq comes from the 3-stage pipeline (dx*dx + dy*dy)
@@ -393,13 +444,57 @@ module framewriter #
     
    always @(*) begin
        // 1. Determine the "Target" layer color based on your C++ radii
-       if (pipe_dist_sq <= R_BULLSEYE_SQ)       target_color = BLACK;
-       else if (pipe_dist_sq <= R_YELLOW_SQ)    target_color = YELLOW;
-       else if (pipe_dist_sq <= R_RED_SQ)       target_color = RED;
-       else if (pipe_dist_sq <= R_TURQUOISE_SQ) target_color = TURQUOISE;
-       else if (pipe_dist_sq <= R_BLACK_SQ)     target_color = BLACK;
-       else if (pipe_dist_sq <= R_WHITE_SQ)     target_color = WHITE;
-      else                                     target_color = GREEN;
+        if      (pipe_dist_sq > R_OUTER_EDGE_SQ)      target_color = GREEN;      // background
+
+        // Outer black ring around whole target
+        else if (pipe_dist_sq > R_OL_OUTER_EDGE_SQ)   target_color = BLACK;
+        else if (pipe_dist_sq > R_OL_OUTER_EDGE_ISQ)  target_color = WHITE;      // start of white band
+
+        // White band
+        else if (pipe_dist_sq > R_OL_W1W2_OUTER_SQ)   target_color = WHITE;
+        else if (pipe_dist_sq > R_OL_W1W2_INNER_SQ)   target_color = BLACK;      // outline between white rings
+        else if (pipe_dist_sq > R_OL_WBLK_OUTER_SQ)   target_color = WHITE;
+        else if (pipe_dist_sq > R_OL_WBLK_INNER_SQ)   target_color = BLACK;      // outline: white to black
+
+        // Black band
+        else if (pipe_dist_sq > R_OL_B1B2_OUTER_SQ)   target_color = BLACK;
+        else if (pipe_dist_sq > R_OL_B1B2_INNER_SQ)   target_color = WHITE;      // WHITE outline between black rings
+        else if (pipe_dist_sq > R_OL_BTURQ_OUTER_SQ)  target_color = BLACK;
+        else if (pipe_dist_sq > R_OL_BTURQ_INNER_SQ)  target_color = WHITE;      // WHITE outline: black to turquoise
+
+        // Turquoise band
+        else if (pipe_dist_sq > R_OL_T1T2_OUTER_SQ)   target_color = TURQUOISE;
+        else if (pipe_dist_sq > R_OL_T1T2_INNER_SQ)   target_color = BLACK;      // outline between turquoise rings
+        else if (pipe_dist_sq > R_OL_TRED_OUTER_SQ)   target_color = TURQUOISE;
+        else if (pipe_dist_sq > R_OL_TRED_INNER_SQ)   target_color = BLACK;      // outline: turquoise to red
+
+        // Red band
+        else if (pipe_dist_sq > R_OL_R1R2_OUTER_SQ)   target_color = RED;
+        else if (pipe_dist_sq > R_OL_R1R2_INNER_SQ)   target_color = BLACK;      // outline between red rings
+        else if (pipe_dist_sq > R_OL_RYEL_OUTER_SQ)   target_color = RED;
+        else if (pipe_dist_sq > R_OL_RYEL_INNER_SQ)   target_color = BLACK;      // outline: red to yellow
+
+        // Yellow band
+        else if (pipe_dist_sq > R_OL_Y1Y2_OUTER_SQ)   target_color = YELLOW;
+        else if (pipe_dist_sq > R_OL_Y1Y2_INNER_SQ)   target_color = BLACK;      // outline between yellow rings
+        else if (pipe_dist_sq > R_OL_YDOT_OUTER_SQ)   target_color = YELLOW;
+        else if (pipe_dist_sq > R_OL_YDOT_INNER_SQ)   target_color = BLACK;      // outline: yellow to center dot
+
+        // Center dot
+        else if (pipe_dist_sq > R_OL_DOT_OUTER_SQ)    target_color = YELLOW;
+        else if (pipe_dist_sq > R_OL_DOT_INNER_SQ)    target_color = BLACK;      // outline around dot
+        else                                           target_color = YELLOW;
+    //    if (pipe_dist_sq <= R_BULLSEYE_SQ)       target_color = BLACK;
+    //    else if (pipe_dist_sq <= R_YELLOW_SQ)    target_color = YELLOW;
+    //    else if (pipe_dist_sq <= R_RED_SQ)       target_color = RED;
+    //    else if (pipe_dist_sq <= R_TURQUOISE_SQ) target_color = TURQUOISE;
+    //    else if (pipe_dist_sq <= R_BLACK_SQ)     target_color = BLACK;
+    //    else if (pipe_dist_sq <= R_WHITE_SQ)     target_color = WHITE;
+    //   else                                     target_color = GREEN;
+
+
+
+
 //      else                                     target_color = TURQUOISE;
     
         /*
