@@ -193,7 +193,8 @@ module framewriter #
 //    wire [4:0]  pixel_offset = pixel_index % BRAM_DATA_WIDTH;
    wire [4:0] pixel_offset = pixel_index[4:0];
    wire [31:0] bit_mask = (32'h1 << pixel_offset);
-
+    wire [6:0] p1_score_disp = game_state_archery_fsm[22:16];
+    wire [6:0] p2_score_disp = game_state_archery_fsm[15:9];
 
 //    remove bit packing for 256k BRAM START
 //    1. Calculate the Pixel Number (0 to 76,799)
@@ -296,6 +297,76 @@ module framewriter #
     
     
    // score output END 
+
+   // display score output trial START
+    // P1 score digits (shown in left panel, centered around x=105, y=120)
+    localparam P1_TENS_X = 16'd88;
+    localparam P1_ONES_X = 16'd104;
+    localparam P2_TENS_X = 16'd198;
+    localparam P2_ONES_X = 16'd214;
+    localparam PANEL_SCORE_Y = 16'd110;
+    localparam PANEL_FONT_W  = 16'd12;
+    localparam PANEL_FONT_H  = 16'd20;
+
+    wire is_in_p1_tens = (internal_x >= P1_TENS_X && internal_x < P1_TENS_X + PANEL_FONT_W) &&
+                        (internal_y >= PANEL_SCORE_Y && internal_y < PANEL_SCORE_Y + PANEL_FONT_H);
+    wire is_in_p1_ones = (internal_x >= P1_ONES_X && internal_x < P1_ONES_X + PANEL_FONT_W) &&
+                        (internal_y >= PANEL_SCORE_Y && internal_y < PANEL_SCORE_Y + PANEL_FONT_H);
+    wire is_in_p2_tens = (internal_x >= P2_TENS_X && internal_x < P2_TENS_X + PANEL_FONT_W) &&
+                        (internal_y >= PANEL_SCORE_Y && internal_y < PANEL_SCORE_Y + PANEL_FONT_H);
+    wire is_in_p2_ones = (internal_x >= P2_ONES_X && internal_x < P2_ONES_X + PANEL_FONT_W) &&
+                        (internal_y >= PANEL_SCORE_Y && internal_y < PANEL_SCORE_Y + PANEL_FONT_H);
+
+    // Tens/ones decomposition (scores go 0-30 max across 3 arrows * 10pts)
+    wire [3:0] p1_tens = (p1_score_disp >= 30) ? 4'd3 :
+                        (p1_score_disp >= 20) ? 4'd2 :
+                        (p1_score_disp >= 10) ? 4'd1 : 4'd0;
+    wire [3:0] p1_ones = p1_score_disp - (p1_tens * 10);
+
+    wire [3:0] p2_tens = (p2_score_disp >= 30) ? 4'd3 :
+                        (p2_score_disp >= 20) ? 4'd2 :
+                        (p2_score_disp >= 10) ? 4'd1 : 4'd0;
+    wire [3:0] p2_ones = p2_score_disp - (p2_tens * 10);
+
+    // Determine which digit box we're in and which digit value to render
+    wire        in_any_panel_digit = is_in_p1_tens | is_in_p1_ones | is_in_p2_tens | is_in_p2_ones;
+    wire [3:0]  panel_active_digit = is_in_p1_tens ? p1_tens :
+                                    is_in_p1_ones ? p1_ones :
+                                    is_in_p2_tens ? p2_tens : p2_ones;
+
+    // Reuse the same segment logic — just recalculate local coords relative to each digit box
+    wire [4:0] panel_local_x = is_in_p1_tens ? (internal_x - P1_TENS_X) :
+                            is_in_p1_ones ? (internal_x - P1_ONES_X) :
+                            is_in_p2_tens ? (internal_x - P2_TENS_X) :
+                                            (internal_x - P2_ONES_X);
+    wire [4:0] panel_local_y = internal_y - PANEL_SCORE_Y;
+
+    wire p_bar_top    = (panel_local_y <= 3);
+    wire p_bar_bottom = (panel_local_y >= 16);
+    wire p_bar_left   = (panel_local_x <= 3);
+    wire p_bar_right  = (panel_local_x >= 8);
+    wire p_bar_mid_v  = (panel_local_y >= 8 && panel_local_y <= 11);
+    wire p_bar_center = (panel_local_x >= 4 && panel_local_x <= 7);
+
+    reg panel_digit_pixel;
+    always @(*) begin
+        panel_digit_pixel = 1'b0;
+        case (panel_active_digit)
+            4'd0: panel_digit_pixel = p_bar_top | p_bar_bottom | p_bar_left | p_bar_right;
+            4'd1: panel_digit_pixel = p_bar_center;
+            4'd2: panel_digit_pixel = p_bar_top | p_bar_mid_v | p_bar_bottom | (p_bar_right && panel_local_y < 10) | (p_bar_left && panel_local_y > 10);
+            4'd3: panel_digit_pixel = p_bar_top | p_bar_mid_v | p_bar_bottom | p_bar_right;
+            4'd4: panel_digit_pixel = p_bar_mid_v | p_bar_right | (p_bar_left && panel_local_y < 10);
+            4'd5: panel_digit_pixel = p_bar_top | p_bar_mid_v | p_bar_bottom | (p_bar_left && panel_local_y < 10) | (p_bar_right && panel_local_y > 10);
+            4'd6: panel_digit_pixel = p_bar_top | p_bar_mid_v | p_bar_bottom | p_bar_left | (p_bar_right && panel_local_y > 10);
+            4'd7: panel_digit_pixel = p_bar_top | p_bar_right;
+            4'd8: panel_digit_pixel = p_bar_top | p_bar_mid_v | p_bar_bottom | p_bar_left | p_bar_right;
+            4'd9: panel_digit_pixel = p_bar_top | p_bar_mid_v | p_bar_bottom | p_bar_right | (p_bar_left && panel_local_y < 10);
+            default: panel_digit_pixel = 1'b0;
+        endcase
+    end
+
+   // display score output trial END
 
 
 
@@ -563,6 +634,15 @@ module framewriter #
 
                 // divider line
                 if (internal_y >= 60 && internal_y <= 64)
+                    final_color = WHITE;
+
+
+                // P1 score digits (white on blue panel)
+                if (in_any_panel_digit && (is_in_p1_tens || is_in_p1_ones) && panel_digit_pixel)
+                    final_color = WHITE;
+
+                // P2 score digits (white on red panel)
+                if (in_any_panel_digit && (is_in_p2_tens || is_in_p2_ones) && panel_digit_pixel)
                     final_color = WHITE;
             end
 
