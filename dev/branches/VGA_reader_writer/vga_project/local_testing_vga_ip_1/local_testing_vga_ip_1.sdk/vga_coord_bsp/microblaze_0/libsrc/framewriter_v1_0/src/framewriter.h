@@ -11,6 +11,8 @@
 #define FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET 4
 #define FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET 8
 #define FRAMEWRITER_S00_AXI_SLV_REG3_OFFSET 12
+#define FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET 16
+#define FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET 20
 
 
 /**************************** Type Definitions *****************************/

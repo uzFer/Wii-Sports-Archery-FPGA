@@ -25,19 +25,19 @@
 #define FRAMEWRITER_BASE  XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR
 #define GYRO_GPIO_ADDR	  XPAR_AXI_GPIO_1_BASEADDR
 
-#define PS2_FONT_ROM_INPUT_ADDR XPAR_AXI_GPIO_3_BASEADDR // ascii_in (?)
-#define PS2_CONFIG_ADDR_USER_EN XPAR_AXI_GPIO_3_BASEADDR + 0x08 // get_user_input (?)
-#define PS2_USER_DATA_ADDR XPAR_AXI_GPIO_2_BASEADDR // ok
+#define PS2_FONT_ROM_INPUT_ADDR XPAR_AXI_GPIO_3_BASEADDR
+#define PS2_CONFIG_ADDR_USER_EN XPAR_AXI_GPIO_3_BASEADDR + 0x08
+#define PS2_USER_DATA_ADDR XPAR_AXI_GPIO_2_BASEADDR
 #define PS2_FONT_ROM_OUTPUT_ADDR XPAR_GPIO_4_BASEADDR
 
 /* Register Offsets from your framewriter.h */
 #define REG_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG0_OFFSET
 #define REG_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET
 //#define REG_STATE_OFFSET  FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET
-#define REG_LOW_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET // LOW
-#define REG_HIGH_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG3_OFFSET // HIGH
-#define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
-#define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+#define REG_2_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET // top
+#define REG_3_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG3_OFFSET // bottom
+#define REG_4_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+#define REG_5_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
 
 /* Button Bit Masks  */
 #define BTN_L_MASK (1 << 1) // Value 1
@@ -141,11 +141,10 @@ void drawCharHardware(int x, int y, char c) {
     uint32_t high = (uint32_t)(bitmap >> 32);
 
     // Write to the AXI Slave Registers
-    Xil_Out32(REG_CHAR_X_OFFSET, x);
-    Xil_Out32(REG_CHAR_Y_OFFSET, y);
-    Xil_Out32(REG_LOW_OFFSET, low);
-    Xil_Out32(REG_HIGH_OFFSET, high);
-
+    Xil_Out32(FRAMWRITER_X_ADDR, x);
+    Xil_Out32(FRAMWRITER_Y_ADDR, y);
+    Xil_Out32(FRAMWRITER_BITMAP_LOW_ADDR, low);
+    Xil_Out32(FRAMWRITER_BITMAP_HIGH_ADDR, high);
 }
 
 //void drawChar(int x, int y, char c, uint32_t color, int scale) {
@@ -223,35 +222,35 @@ void drawCharHardware(int x, int y, char c) {
 //}
 
 /* ===================== KEYBOARD HELPERS ===================== */
-char poll_keyboard() {
-    volatile uint32_t *ps2_gpio = (uint32_t *)PS2_USER_DATA_ADDR; // gpio 2
-    uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs)
-
-    // Bit 8 is the 'Empty' flag
-    bool empty = (status >> 8) & 0x1;
-
-    if (!empty) {
-
-        // We must pop the FIFO FIRST to load the character into read_data
-        *(ps2_gpio + 2) = 1;
-
-        // Wait a few cycles to ensure the hardware updates read_data
-        for (volatile int i = 0; i < 100; i++);
-
-        *(ps2_gpio + 2) = 0;
-
-        // Now read the updated status which contains the popped character
-        status = *ps2_gpio;
-        return (char)(status & 0xFF);
-    }
-    return 0;
-}
+//char poll_keyboard() {
+//    volatile uint32_t *ps2_gpio = (uint32_t *)PS2_USER_DATA_ADDR;
+//    uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs)
+//
+//    // Bit 8 is the 'Empty' flag
+//    bool empty = (status >> 8) & 0x1;
+//
+//    if (!empty) {
+//
+//        // We must pop the FIFO FIRST to load the character into read_data
+//        *(ps2_gpio + 2) = 1;
+//
+//        // Wait a few cycles to ensure the hardware updates read_data
+//        for (volatile int i = 0; i < 100; i++);
+//
+//        *(ps2_gpio + 2) = 0;
+//
+//        // Now read the updated status which contains the popped character
+//        status = *ps2_gpio;
+//        return (char)(status & 0xFF);
+//    }
+//    return 0;
+//}
 
 /* ===================== KEYBOARD VGA RENDERING ===================== */
 //#define MAX_INPUT_LEN 32
 //static char keyboard_buffer[MAX_INPUT_LEN + 1] = {0};
 //static int  keyboard_cursor = 0;
-
+//
 //void render_keyboard_text_to_vga() {
 //    // 1. Clear the specific area where the text goes (top left)
 //    // Let's clear a box wide enough for MAX_INPUT_LEN
@@ -264,10 +263,10 @@ char poll_keyboard() {
 //}
 
 
-void process_keyboard_input(int current_state) {
-    char key = poll_keyboard();
-    if (key == 0) return;
-
+//void process_keyboard_input(int current_state) {
+//    char key = poll_keyboard();
+//    if (key == 0) return;
+//
 //    // Only use the special name-entry logic if we are on the Main Menu
 //    if (current_state == HW_MAIN_MENU && !names_complete) {
 //        char* current_buf = entering_p1 ? p1_name : p2_name;
@@ -316,7 +315,7 @@ void process_keyboard_input(int current_state) {
 //    	            }
 //    	        }
 //    }
-}
+//}
 
 int main ()
 {
@@ -326,10 +325,6 @@ int main ()
 //   int x_pos = 120;      // Start at left boundary
 //   int direction = 1;    // 1 for moving right, -1 for moving left
 //   int y_fixed = 120;    // Keep Y in the middle
-
-   // ps2 testing
-   int fixed_x = 50;
-   int fixed_y = 50;
 
 
 	while(1)
@@ -370,21 +365,15 @@ int main ()
 //	   last_btn_data = btn_data; // Store for edge detection
 //	   for(int i=0; i<100000; i++); // Simple debounce delay
 
-	   // testcase for font ROM -------------------------------------------------
-	   setUserKeyboardInput(0); // use microblaze
-	   drawCharHardware(10,10,'A'); // draw/control from microblaze
+	   // testcase for font ROM
+	   setUserKeyboardInput(0);
+	   drawCharHardware(10,10,'A');
 
 	   // or directly write into it using slave offsets ('A' = 1c4489f224488000)
 
 
-	   // testcase for PS/2 keyboard -------------------------------------------------
-	   setUserKeyboardInput(0); // using ps2 but still sending stuff via microblaze, use microblaze to process inputs
-	   char typed_key = poll_keyboard();
-	   if (typed_key >= ' ' && typed_key <= '~') { // Printable ASCII characters
-		   drawCharHardware(fixed_x, fixed_y, typed_key);
-	   }
-
-
+	   // testcase for PS/2 keyboard
+//	   setUserKeyboardInput(1);
 
 
 	}
