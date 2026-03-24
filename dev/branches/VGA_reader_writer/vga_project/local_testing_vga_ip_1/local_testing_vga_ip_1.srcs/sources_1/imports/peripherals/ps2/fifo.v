@@ -25,7 +25,7 @@ module fifo #(
     parameter DEPTH = 16
 ) (
     input clk,
-    input reset,
+    input resetn,
 
     // Write Port
     input write_en,
@@ -57,7 +57,7 @@ module fifo #(
 
     always @(posedge clk)
     begin
-        if (reset)
+        if (resetn)
         begin
             wr_ptr <= 0;
             rd_ptr <= 0;

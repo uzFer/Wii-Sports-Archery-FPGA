@@ -24,6 +24,7 @@
 #define BTN_BASE          XPAR_AXI_GPIO_0_BASEADDR // btn D = 4, C = 8, L = 1, R = 2, U = 0
 #define FRAMEWRITER_BASE  XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR
 #define GYRO_GPIO_ADDR	XPAR_AXI_GPIO_1_BASEADDR
+
 #define PS2_FONT_ROM_INPUT_ADDR XPAR_AXI_GPIO_3_BASEADDR
 #define PS2_CONFIG_ADDR_USER_EN XPAR_AXI_GPIO_3_BASEADDR + 0x08
 #define PS2_USER_DATA_ADDR XPAR_AXI_GPIO_2_BASEADDR
@@ -65,23 +66,6 @@ volatile uint32_t y_coord = 0;
 
 uint32_t current_hw_state = 0;
 
-// Circle Parameters
-#define CENTER_X 160
-#define CENTER_Y 120
-#define RADIUS   10
-
-// Pre-calculated Sine values (scaled by 256 for integer math)
-// These represent sin(0) to sin(350 degrees) in 10-degree steps
-const int16_t SIN_LUT[36] = {
-    0, 44, 87, 128, 164, 196, 221, 240, 252, 256, 252, 240,
-    221, 196, 164, 128, 87, 44, 0, -44, -87, -128, -164, -196,
-    -221, -240, -252, -256, -252, -240, -221, -196, -164, -128, -87, -44
-};
-
-// Cosine is just Sine shifted by 90 degrees (9 steps in a 36-step table)
-int16_t get_cos(int index) {
-    return SIN_LUT[(index + 9) % 36];
-}
 
 void draw_crosshair(uint32_t x, uint32_t y) {
    FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, (uint32_t)x);
@@ -103,12 +87,12 @@ void poll_gyroscope() {
         //last_valid_bit = current_valid_bit;
 
         // Extract coordinates
-        x_coord = rdata & 0x3FF;
-        y_coord = (rdata >> 10) & 0x3FF;
-        xil_printf("x: %d\r\n", x_coord);
-        xil_printf("y: %d\r\n", y_coord);
-//        x_coord = 156;
-//        y_coord = 126;
+//        x_coord = rdata & 0x3FF;
+//        y_coord = (rdata >> 10) & 0x3FF;
+//        xil_printf("x: %d\r\n", x_coord);
+//        xil_printf("y: %d\r\n", y_coord);
+        x_coord = 156;
+        y_coord = 126;
 
         // Plot the x and y coordinates on the VGA screen
 //        draw_crosshair(x, y);
@@ -120,7 +104,7 @@ void poll_gyroscope() {
 void setUserKeyboardInput(uint8_t enable) {
 	// Set enable = 1 if we want to get PS/2
 	// Set enable = 0 if we want to just access font rom directly
-	Xil_Out32(PS2_CONFIG_ADDR_USER_EN, enable);
+	Xil_Out32(PS2_CONFIG_ADDR_USER_EN, enable); // addr (in memory), value
 	return;
 
 }
@@ -136,32 +120,47 @@ uint64_t getWiiFontBitmap(char c) {
 	// Read font rom output
 	// Remember to set setUserKeyboardInput correctly
 	uint64_t flattened_bitmap = 0; // bitmap is 7x9  = 63 dimension
-	Xil_Out32(PS2_FONT_ROM_INPUT_ADDR, c);
+	Xil_Out32(PS2_FONT_ROM_INPUT_ADDR, c); // ascii in (?)
 	volatile uint32_t* font_rom_output = (uint32_t *)PS2_FONT_ROM_OUTPUT_ADDR;
 	flattened_bitmap = *(font_rom_output); // lower bits
-	flattened_bitmap |=  ((uint64_t)*(font_rom_output + 2) << 32);
+	flattened_bitmap |=  ((uint64_t)*(font_rom_output + 2) << 32); // upper bits
 	return flattened_bitmap;
 
 }
 
-void drawChar(int x, int y, char c, uint32_t color, int scale) {
-    uint64_t flat_bitmap = getWiiFontBitmap(c);
-    for (int row = 0; row < FONT_HEIGHT; row++) {
-		for (int col = 0; col < FONT_WIDTH; col++) {
-			/* * Calculate bit position:
-			 * There are 63 bits total (0 to 62).
-			 * (row * FONT_WIDTH + col) gives the pixel index (0 to 62).
-			 * We subtract from 62 to keep the "Left/Top = MSB" logic.
-			 */
-			int bit_pos = (FONT_HEIGHT * FONT_WIDTH - 1) - (row * FONT_WIDTH + col);
+// adapted for framewriter
+void drawCharHardware(int x, int y, char c) {
+    uint64_t bitmap = getWiiFontBitmap(c);
 
-			// Check if the bit at bit_pos is set
-			if ((flat_bitmap >> bit_pos) & 1ULL) {
-				drawBox(x + col * scale, y + row * scale, scale, scale, color);
-			}
-		}
-	}
+    // Split 64-bit bitmap into two 32-bit chunks
+    uint32_t low = (uint32_t)(bitmap & 0xFFFFFFFF);
+    uint32_t high = (uint32_t)(bitmap >> 32);
+
+    // Write to the AXI Slave Registers
+    Xil_Out32(FRAMWRITER_X_ADDR, x);
+    Xil_Out32(FRAMWRITER_Y_ADDR, y);
+    Xil_Out32(FRAMWRITER_BITMAP_LOW_ADDR, low);
+    Xil_Out32(FRAMWRITER_BITMAP_HIGH_ADDR, high);
 }
+
+//void drawChar(int x, int y, char c, uint32_t color, int scale) {
+//    uint64_t flat_bitmap = getWiiFontBitmap(c);
+//    for (int row = 0; row < FONT_HEIGHT; row++) {
+//		for (int col = 0; col < FONT_WIDTH; col++) {
+//			/* * Calculate bit position:
+//			 * There are 63 bits total (0 to 62).
+//			 * (row * FONT_WIDTH + col) gives the pixel index (0 to 62).
+//			 * We subtract from 62 to keep the "Left/Top = MSB" logic.
+//			 */
+//			int bit_pos = (FONT_HEIGHT * FONT_WIDTH - 1) - (row * FONT_WIDTH + col);
+//
+//			// Check if the bit at bit_pos is set
+//			if ((flat_bitmap >> bit_pos) & 1ULL) {
+//				drawBox(x + col * scale, y + row * scale, scale, scale, color);
+//			}
+//		}
+//	}
+//}
 
 void drawText(int x, int y, const char *text, uint32_t color, int scale) {
     while (*text) {
@@ -342,8 +341,8 @@ int main ()
 
 
 	   // vga stuff start
-	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 2);
-//
+//	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 2);
+
 //	   x_pos = x_pos + direction;
 //	   if (x_pos >= 180) {
 //		   direction = -1; // Hit right wall, go left
@@ -361,6 +360,10 @@ int main ()
 
 //	   last_btn_data = btn_data; // Store for edge detection
 //	   for(int i=0; i<100000; i++); // Simple debounce delay
+
+	   // ps2
+	   setUserKeyboardInput(0);
+	   drawCharHardware(10,10,'a');
 
 
 	}

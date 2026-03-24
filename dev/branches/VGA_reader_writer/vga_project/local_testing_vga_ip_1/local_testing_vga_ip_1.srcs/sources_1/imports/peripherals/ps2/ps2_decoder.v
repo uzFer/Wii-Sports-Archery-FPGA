@@ -22,7 +22,7 @@
 
 module ps2_decoder(
     input clk,
-    input reset,
+    input resetn,
     
     // Interface to PS2_Receiver
     input [7:0] scan_code,
@@ -39,7 +39,7 @@ module ps2_decoder(
     
     always @(posedge clk)
     begin
-        if (reset)
+        if (!resetn)
         begin
             is_break_code <= 1'b0;
             ascii_valid <= 1'b0;

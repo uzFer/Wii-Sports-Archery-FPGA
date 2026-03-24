@@ -76,9 +76,9 @@ vcom -work xpm -93 \
 "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_3/ipshared/1644/src/framewriter.v" \
-"../../../bd/design_3/ipshared/1644/hdl/framewriter_v1_S00_AXI.v" \
-"../../../bd/design_3/ipshared/1644/hdl/framewriter_v1.v" \
+"../../../bd/design_3/ipshared/f77d/src/framewriter.v" \
+"../../../bd/design_3/ipshared/f77d/hdl/framewriter_v1_S00_AXI.v" \
+"../../../bd/design_3/ipshared/f77d/hdl/framewriter_v1.v" \
 "../../../bd/design_3/ip/design_3_framewriter_0_0/sim/design_3_framewriter_0_0.v" \
 "../../../bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0_clk_wiz.v" \
 "../../../bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0.v" \
@@ -212,7 +212,6 @@ vcom -work xil_defaultlib -93 \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_3/ip/design_3_top_sound_0_0/sim/design_3_top_sound_0_0.v" \
-"../../../bd/design_3/sim/design_3.v" \
 "../../../bd/design_3/ip/design_3_archery_fsm_0_0/sim/design_3_archery_fsm_0_0.v" \
 "../../../bd/design_3/ip/design_3_scoring_engine_0_0/sim/design_3_scoring_engine_0_0.v" \
 "../../../bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/sim/design_3_ps2_keyboard_subsyst_0_0.v" \
@@ -222,12 +221,15 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/design_3/ip/design_3_axi_gpio_2_0/sim/design_3_axi_gpio_2_0.vhd" \
 "../../../bd/design_3/ip/design_3_axi_gpio_3_0/sim/design_3_axi_gpio_3_0.vhd" \
 "../../../bd/design_3/ip/design_3_axi_gpio_4_0/sim/design_3_axi_gpio_4_0.vhd" \
+"../../../bd/design_3/ip/design_3_axi_gpio_5_0/sim/design_3_axi_gpio_5_0.vhd" \
+"../../../bd/design_3/ip/design_3_axi_gpio_5_1/sim/design_3_axi_gpio_5_1.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_18  -v2k5 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" "+incdir+../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_3/ip/design_3_auto_pc_0/sim/design_3_auto_pc_0.v" \
+"../../../bd/design_3/sim/design_3.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

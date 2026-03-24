@@ -14,5 +14,7 @@ vhdl xil_defaultlib  \
 "../../../bd/design_3/ip/design_3_axi_gpio_2_0/sim/design_3_axi_gpio_2_0.vhd" \
 "../../../bd/design_3/ip/design_3_axi_gpio_3_0/sim/design_3_axi_gpio_3_0.vhd" \
 "../../../bd/design_3/ip/design_3_axi_gpio_4_0/sim/design_3_axi_gpio_4_0.vhd" \
+"../../../bd/design_3/ip/design_3_axi_gpio_5_0/sim/design_3_axi_gpio_5_0.vhd" \
+"../../../bd/design_3/ip/design_3_axi_gpio_5_1/sim/design_3_axi_gpio_5_1.vhd" \
 
 nosort

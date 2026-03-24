@@ -26,6 +26,9 @@ module tb1();
     wire bram_en;
     wire bram_rst;
     wire bram_clk;
+    
+    // archery fsm interface
+    reg [31:0] game_state_archery_fsm;
 
     // 3. Instantiate UUT
     framewriter # (
@@ -48,8 +51,13 @@ module tb1();
         
         .axi_framewriter_x(16'd160),
         .axi_framewriter_y(16'd120),
-        .axi_framewriter_myScore(16'd2),
-        .axi_framewriter_oppScore(16'd0)
+//        .axi_framewriter_myScore(16'd2),
+//        .axi_framewriter_oppScore(16'd0),
+        .axi_char_bitmap_low(32'd5),
+        .axi_char_bitmap_high(32'd6),
+        .axi_char_x(32'd10),
+        .axi_char_y(32'd10),
+        .game_state_archery_fsm(game_state_archery_fsm)
     );
 
     // 4. AXI Clock Generation (100MHz)
@@ -75,6 +83,7 @@ module tb1();
         s00_axi_aresetn = 0;
         #100;
         s00_axi_aresetn = 1;
+        game_state_archery_fsm = 32'd12; // game over
 
         // Run for two full frame periods
         #(FRAME_PERIOD * 2.5);

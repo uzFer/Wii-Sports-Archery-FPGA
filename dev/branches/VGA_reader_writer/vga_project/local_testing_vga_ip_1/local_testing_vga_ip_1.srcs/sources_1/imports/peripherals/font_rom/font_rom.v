@@ -13,6 +13,7 @@
 
 module font_rom(
     input clk,
+    input resetn,                // Active-high reset input
     input [7:0] addr,           // ASCII Character Address
     output reg [63:0] char_bitmap // 7x9 Flattened Bitmap (Row0 [62:56], Row1 [55:49] ...)
     );
@@ -24,8 +25,12 @@ module font_rom(
         $readmemh("font_data.mem", rom);
     end
 
-    always @(posedge clk) begin
-        char_bitmap <= rom[addr];
+    always @(posedge clk, negedge resetn) begin
+        if (resetn) begin
+            char_bitmap <= 64'h0; // Clear output on reset
+        end else begin
+            char_bitmap <= rom[addr];
+        end
     end
 
 endmodule

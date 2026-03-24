@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:framewriter:1
-// IP Revision: 62
+// IP Revision: 64
 
 `timescale 1ns/1ps
 

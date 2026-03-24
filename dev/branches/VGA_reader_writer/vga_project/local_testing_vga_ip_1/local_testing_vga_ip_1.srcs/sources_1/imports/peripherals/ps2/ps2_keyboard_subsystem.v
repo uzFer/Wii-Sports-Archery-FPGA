@@ -24,7 +24,7 @@
 
 module ps2_keyboard_subsystem (
     input clk,          // System clock
-    input reset,        // System reset
+    input resetn,        // System reset
     input ps2_clk,      // PS/2 Keyboard Clock line
     input ps2_data,     // PS/2 Keyboard Data line
     input read_fifo_en, // Enable signal to read a character from the FIFO
@@ -58,7 +58,7 @@ module ps2_keyboard_subsystem (
     // This module is assumed to be provided by the user.
     PS2_Receiver ps2_rx_inst (
         .clk(clk),
-        .reset(reset),
+        .resetn(resetn),
         .ps2_clk(ps2_clk),
         .ps2_data(ps2_data),
         .output_data(ps2_receiver_data),
@@ -68,7 +68,7 @@ module ps2_keyboard_subsystem (
     // This module translates raw PS/2 scan codes into ASCII characters.
     ps2_decoder ps2_dec_inst (
         .clk(clk),
-        .reset(reset),
+        .resetn(resetn),
         .scan_code(ps2_receiver_data),
         .scan_code_valid(ps2_receiver_valid),
         .ascii_char(decoder_ascii_char),
@@ -80,7 +80,7 @@ module ps2_keyboard_subsystem (
     // Configured for 8-bit data width and a depth of 16 characters.
     fifo #(.DATA_WIDTH(8), .DEPTH(16)) char_fifo_inst (
         .clk(clk),
-        .reset(reset),
+        .resetn(resetn),
         .write_en(decoder_ascii_valid),  // Write to FIFO when decoder has a valid character
         .write_data(decoder_ascii_char), // Data to write to FIFO
         .read_en(read_fifo_en),          // External signal to read from FIFO
@@ -93,6 +93,7 @@ module ps2_keyboard_subsystem (
     
     font_rom font_rom_inst (
         .clk(clk),
+        .resetn(resetn),
         .addr(rom_input),           // ASCII Character Address
         .char_bitmap(char_bitmap) // 7x9 Flattened Bitmap
     );
@@ -113,7 +114,7 @@ module ps2_keyboard_subsystem (
     // Displays Hex in digits 1-0 and Decimal in digits 5-3
     seven_seg_controller seven_seg_inst (
         .clk(clk),
-        .resetn(~reset),
+        .resetn(resetn),
         .data({8'h0, ascii_bcd[11:0], 4'h0, 4'h0, ps2_receiver_data}),
         .seg(seg),
         .an(an)

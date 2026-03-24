@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="printf" key="selection"/>
+		<item value="XPAR_AXI_GPIO_2" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="XPAR_AXI_GPIO_2"/>
+			<item value="XPAR_AXI_GPIO_3"/>
+			<item value="XPAR_AXI_GPIO_"/>
+			<item value="XPAR_AXI_GPIO_1"/>
 			<item value="PRINTF"/>
 			<item value="xil_printf"/>
 			<item value="xil_print"/>
 			<item value="xil"/>
-			<item value="XPAR_AXI_GPIO_1_BASEADDR"/>
-			<item value="GYRO_GPIO_ADDR"/>
-			<item value="volatile"/>
-			<item value="framewriter"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -57,7 +57,7 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_ps2_keyboard_subsyst_0_0 (
   clk,
-  reset,
+  resetn,
   ps2_clk,
   ps2_data,
   read_fifo_en,
@@ -75,9 +75,9 @@ module design_3_ps2_keyboard_subsyst_0_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
-input wire reset;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 resetn RST" *)
+input wire resetn;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ps2_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_3_ps2_clk_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ps2_clk CLK" *)
 input wire ps2_clk;
@@ -95,7 +95,7 @@ output wire [7 : 0] an;
 
   ps2_keyboard_subsystem inst (
     .clk(clk),
-    .reset(reset),
+    .resetn(resetn),
     .ps2_clk(ps2_clk),
     .ps2_data(ps2_data),
     .read_fifo_en(read_fifo_en),

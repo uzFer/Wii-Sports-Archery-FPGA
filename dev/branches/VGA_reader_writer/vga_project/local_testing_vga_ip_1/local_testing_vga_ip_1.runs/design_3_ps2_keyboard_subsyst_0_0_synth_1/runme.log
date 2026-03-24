@@ -18,9 +18,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6228 
+INFO: Helper process launched with PID 15480 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 496.168 ; gain = 102.250
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 497.301 ; gain = 103.875
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/synth/design_3_ps2_keyboard_subsyst_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'ps2_keyboard_subsystem' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:25]
@@ -42,113 +42,7 @@ INFO: [Synth 8-6157] synthesizing module 'fifo' [Y:/vga_project/local_testing_vg
 	Parameter PTR_WIDTH bound to: 4 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'fifo' (5#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/fifo.v:23]
 INFO: [Synth 8-6157] synthesizing module 'font_rom' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:14]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'font_data.mem'; please make sure the file is added to project and has read permission, ignoring [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:24]
-
-Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
-	1: Unable to determine number of words or word size in RAM. 
-	2: No valid read/write found for RAM. 
-RAM dissolved into registers
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-WARNING: [Synth 8-3848] Net rom in module/entity font_rom does not have driver. [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:21]
-INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3876] $readmem data file 'font_data.mem' is read successfully [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'font_rom' (6#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:14]
 INFO: [Synth 8-6157] synthesizing module 'bin2bcd' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/bin2bcd.v:3]
 	Parameter BIN_WIDTH bound to: 8 - type: integer 
@@ -158,11 +52,11 @@ INFO: [Synth 8-6157] synthesizing module 'seven_seg_controller' [Y:/vga_project/
 INFO: [Synth 8-226] default block is never used [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/seven_seg_controller.v:27]
 INFO: [Synth 8-226] default block is never used [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/seven_seg_controller.v:43]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_controller' (8#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/seven_seg_controller.v:3]
-WARNING: [Synth 8-689] width (36) of port connection 'data' does not match port width (32) of module 'seven_seg_controller' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:117]
+WARNING: [Synth 8-689] width (36) of port connection 'data' does not match port width (32) of module 'seven_seg_controller' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:118]
 INFO: [Synth 8-6155] done synthesizing module 'ps2_keyboard_subsystem' (9#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' (10#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/synth/design_3_ps2_keyboard_subsyst_0_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 553.094 ; gain = 159.176
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 552.379 ; gain = 158.953
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -175,10 +69,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 553.094 ; gain = 159.176
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 552.379 ; gain = 158.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 553.094 ; gain = 159.176
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 552.379 ; gain = 158.953
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -187,29 +81,29 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.223 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 884.547 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.223 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 884.547 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 837.293 ; gain = 2.070
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 887.582 ; gain = 3.035
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 837.293 ; gain = 443.375
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 887.582 ; gain = 494.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 837.293 ; gain = 443.375
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 887.582 ; gain = 494.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 837.293 ; gain = 443.375
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 887.582 ; gain = 494.156
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "O0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cnt0" won't be mapped to RAM because it is too sparse
@@ -219,8 +113,9 @@ INFO: [Synth 8-5544] ROM "rx_done" won't be mapped to Block RAM because address 
 INFO: [Synth 8-5546] ROM "is_break_code" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ascii_valid" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element rd_ptr_reg_rep was removed.  [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/fifo.v:55]
+INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 837.293 ; gain = 443.375
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 887.582 ; gain = 494.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -247,6 +142,7 @@ Detailed RTL Component Info :
 +---RAMs : 
 	              128 Bit         RAMs := 1     
 +---Muxes : 
+	 257 Input     64 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
 	  40 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
@@ -314,6 +210,8 @@ Module font_rom
 Detailed RTL Component Info : 
 +---Registers : 
 	               64 Bit    Registers := 1     
++---Muxes : 
+	 257 Input     64 Bit        Muxes := 1     
 Module bin2bcd 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -352,40 +250,33 @@ INFO: [Synth 8-5546] ROM "inst/ps2_rx_inst/debounce/cnt1" won't be mapped to RAM
 INFO: [Synth 8-5546] ROM "inst/ps2_rx_inst/debounce/O1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "inst/ps2_dec_inst/ascii_valid" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "inst/ps2_dec_inst/is_break_code" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[0]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[1]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[2]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[3]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[4]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[5]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[6]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[7]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[8]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[9]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[10]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[11]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[12]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[12]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[13]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[14]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[15]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[16]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[16]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[17]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[17]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[18]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[18]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[19]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[20]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[20]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[21]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[21]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[22]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[22]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[23]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[23]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[24]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[24]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[25]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[25]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[26]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[26]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[27]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[27]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[28]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[28]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[29]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[29]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[30]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[30]' (FD) to 'inst/font_rom_inst/char_bitmap_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/font_rom_inst /\char_bitmap_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[0]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[34]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[35]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[41]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[42]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[48]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[49]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[55]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[56]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[62]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[63]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[1]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[2]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[3]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[4]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[5]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[6]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[7]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[10]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[13]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[14]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[20]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[21]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[27]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[28]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/font_rom_inst/char_bitmap_reg[28] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 837.293 ; gain = 443.375
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 887.582 ; gain = 494.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -412,13 +303,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 890.098 ; gain = 496.180
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 891.336 ; gain = 497.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 890.246 ; gain = 496.328
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 891.559 ; gain = 498.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -448,7 +339,7 @@ INFO: [Synth 8-3886] merging instance 'inst/char_fifo_inst/rd_ptr_reg_rep[1]' (F
 INFO: [Synth 8-3886] merging instance 'inst/char_fifo_inst/rd_ptr_reg_rep[2]' (FDRE) to 'inst/char_fifo_inst/rd_ptr_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/char_fifo_inst/rd_ptr_reg_rep[3]' (FDRE) to 'inst/char_fifo_inst/rd_ptr_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -472,7 +363,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -485,7 +376,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -497,25 +388,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -532,15 +423,15 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |     5|
-|2     |LUT1   |     4|
+|2     |LUT1   |     5|
 |3     |LUT2   |    12|
-|4     |LUT3   |    16|
+|4     |LUT3   |    24|
 |5     |LUT4   |    19|
-|6     |LUT5   |    21|
-|7     |LUT6   |    39|
+|6     |LUT5   |    27|
+|7     |LUT6   |    81|
 |8     |MUXF7  |     5|
 |9     |RAM32M |     2|
-|10    |FDCE   |    17|
+|10    |FDCE   |    34|
 |11    |FDRE   |    72|
 |12    |FDSE   |     2|
 +------+-------+------+
@@ -549,43 +440,44 @@ Report Instance Areas:
 +------+-------------------+-----------------------+------+
 |      |Instance           |Module                 |Cells |
 +------+-------------------+-----------------------+------+
-|1     |top                |                       |   214|
-|2     |  inst             |ps2_keyboard_subsystem |   214|
-|3     |    char_fifo_inst |fifo                   |    49|
-|4     |    ps2_dec_inst   |ps2_decoder            |    44|
-|5     |    ps2_rx_inst    |PS2_Receiver           |    77|
-|6     |      debounce     |debouncer              |    50|
-|7     |      rx_shift_reg |shift_register         |    11|
-|8     |    seven_seg_inst |seven_seg_controller   |    44|
+|1     |top                |                       |   288|
+|2     |  inst             |ps2_keyboard_subsystem |   288|
+|3     |    char_fifo_inst |fifo                   |   105|
+|4     |    font_rom_inst  |font_rom               |    17|
+|5     |    ps2_dec_inst   |ps2_decoder            |    45|
+|6     |    ps2_rx_inst    |PS2_Receiver           |    77|
+|7     |      debounce     |debouncer              |    50|
+|8     |      rx_shift_reg |shift_register         |    11|
+|9     |    seven_seg_inst |seven_seg_controller   |    44|
 +------+-------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 913.676 ; gain = 519.758
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 913.676 ; gain = 235.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 913.676 ; gain = 519.758
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 921.348 ; gain = 192.719
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 915.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 921.348 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-89 Infos, 103 Warnings, 1 Critical Warnings and 0 Errors encountered.
+83 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 915.656 ; gain = 534.625
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 915.656 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 921.348 ; gain = 540.746
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.348 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_ps2_keyboard_subsyst_0_0_synth_1/design_3_ps2_keyboard_subsyst_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 915.656 ; gain = 0.000
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.348 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_ps2_keyboard_subsyst_0_0_synth_1/design_3_ps2_keyboard_subsyst_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_3_ps2_keyboard_subsyst_0_0_utilization_synth.rpt -pb design_3_ps2_keyboard_subsyst_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 16:31:25 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 11:43:55 2026...

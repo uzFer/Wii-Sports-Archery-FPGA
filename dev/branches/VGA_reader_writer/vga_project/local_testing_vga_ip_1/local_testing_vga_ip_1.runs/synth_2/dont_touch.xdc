@@ -104,6 +104,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gp
 # IP: bd/design_3/ip/design_3_axi_gpio_4_0/design_3_axi_gpio_4_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_4_0 || ORIG_REF_NAME==design_3_axi_gpio_4_0} -quiet] -quiet
 
+# IP: bd/design_3/ip/design_3_axi_gpio_5_0/design_3_axi_gpio_5_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_5_0 || ORIG_REF_NAME==design_3_axi_gpio_5_0} -quiet] -quiet
+
+# IP: bd/design_3/ip/design_3_axi_gpio_5_1/design_3_axi_gpio_5_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_5_1 || ORIG_REF_NAME==design_3_axi_gpio_5_1} -quiet] -quiet
+
 # IP: bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_auto_pc_0 || ORIG_REF_NAME==design_3_auto_pc_0} -quiet] -quiet
 

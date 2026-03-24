@@ -22,7 +22,7 @@
 
 module PS2_Receiver(
     input clk,
-    input reset,
+    input resetn,
     input ps2_clk,
     input ps2_data,
     output [7:0] output_data,
@@ -47,7 +47,7 @@ module PS2_Receiver(
     assign out_valid = rx_done_reg;
 
     always @(posedge clk) begin
-        if (reset) begin
+        if (!resetn) begin
             cnt <= 4'b0;
             state <= STATE_0_IDLE;
             rx_done_reg <= 1'b0;
@@ -99,7 +99,7 @@ module PS2_Receiver(
     // Now synchronous to main clk, shifting on detected falling edge of filtered PS2 clock
     shift_register #(11) rx_shift_reg(
         .clk(clk),
-        .rstn(~reset),
+        .rstn(resetn),
         .data(ps2_data_f), // Use filtered data
         .enable(shift_en && ps2_clk_negedge), 
         .direction(1), 

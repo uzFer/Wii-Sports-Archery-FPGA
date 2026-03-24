@@ -6078,3 +6078,460 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp
          char* current_buf = entering_p1 ? p1_name : p2_name;
                ^~~~~~~~~~~
 make: *** [src/subdir.mk:23: src/main.o] Error 1
+10:22:57 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'drawChar':
+../src/main.c:160:5: warning: implicit declaration of function 'drawBox'; did you mean 'drawChar'? [-Wimplicit-function-declaration]
+     drawBox(x + col * scale, y + row * scale, scale, scale, color);
+     ^~~~~~~
+     drawChar
+../src/main.c: In function 'drawStatus':
+../src/main.c:175:33: error: 'WHITE' undeclared (first use in this function)
+     drawText(x+10, y, "Round ", WHITE, 2);
+                                 ^~~~~
+../src/main.c:175:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'drawTitleScreen':
+../src/main.c:183:5: warning: implicit declaration of function 'clear_screen'; did you mean 'clearerr'? [-Wimplicit-function-declaration]
+     clear_screen(WHITE);
+     ^~~~~~~~~~~~
+     clearerr
+../src/main.c:183:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:184:21: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                     ^~~~~~~~~~~~
+../src/main.c:184:39: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                                       ^~~~~~~~~
+../src/main.c:185:39: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 350, RESOLUTION_X, 20, ORANGE);
+                                       ^~~~~~
+../src/main.c:186:29: error: 'GREY' undeclared (first use in this function)
+     drawText(50, 80, "Wii", GREY, 8);
+                             ^~~~
+../src/main.c: In function 'drawMainMenu':
+../src/main.c:194:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:195:20: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                    ^~~~~~~~~~~~
+../src/main.c:195:38: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                                      ^~~~~~~~~
+../src/main.c:196:38: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 40, RESOLUTION_X, 16, ORANGE);
+                                      ^~~~~~
+../src/main.c:198:43: error: 'GREY' undeclared (first use in this function)
+     drawText(80, 80, "Enter Player Info", GREY, 4);
+                                           ^~~~
+../src/main.c:204:24: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+     drawText(280, 165, p1_name, BLACK, 3);
+                        ^~~~~~~
+                        rename
+../src/main.c:204:33: error: 'BLACK' undeclared (first use in this function)
+     drawText(280, 165, p1_name, BLACK, 3);
+                                 ^~~~~
+../src/main.c:205:9: error: 'entering_p1' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+         ^~~~~~~~~~~
+../src/main.c:205:25: error: 'names_complete' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                         ^~~~~~~~~~~~~~
+../src/main.c:205:57: error: 'name_cursor' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                                                         ^~~~~~~~~~~
+../src/main.c:211:24: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+     drawText(280, 225, p2_name, BLACK, 3);
+                        ^~~~~~~
+                        p1_name
+../src/main.c:215:57: error: 'GREEN' undeclared (first use in this function); did you mean 'GREY'?
+         drawText(50, 300, "READY! Press Start on FPGA", GREEN, 3);
+                                                         ^~~~~
+                                                         GREY
+../src/main.c: In function 'render_keyboard_text_to_vga':
+../src/main.c:258:43: error: 'WHITE' undeclared (first use in this function)
+         drawText(10, 10, keyboard_buffer, WHITE, 3);
+                                           ^~~~~
+../src/main.c: In function 'process_keyboard_input':
+../src/main.c:268:26: error: 'HW_MAIN_MENU' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                          ^~~~~~~~~~~~
+../src/main.c:268:43: error: 'names_complete' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                                           ^~~~~~~~~~~~~~
+../src/main.c:269:29: error: 'entering_p1' undeclared (first use in this function)
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                             ^~~~~~~~~~~
+../src/main.c:269:43: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                           ^~~~~~~
+                                           rename
+../src/main.c:269:53: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                                     ^~~~~~~
+                                                     p1_name
+../src/main.c:272:17: error: 'name_cursor' undeclared (first use in this function); did you mean 'keyboard_cursor'?
+             if (name_cursor > 0) { // Don't allow empty names
+                 ^~~~~~~~~~~
+                 keyboard_cursor
+../src/main.c:289:60: error: 'MAX_NAME_LEN' undeclared (first use in this function); did you mean 'MAX_INPUT_LEN'?
+         else if (key >= ' ' && key <= '~' && name_cursor < MAX_NAME_LEN) {
+                                                            ^~~~~~~~~~~~
+                                                            MAX_INPUT_LEN
+../src/main.c:269:15: warning: variable 'current_buf' set but not used [-Wunused-but-set-variable]
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+               ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+10:23:07 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'drawChar':
+../src/main.c:160:5: warning: implicit declaration of function 'drawBox'; did you mean 'drawChar'? [-Wimplicit-function-declaration]
+     drawBox(x + col * scale, y + row * scale, scale, scale, color);
+     ^~~~~~~
+     drawChar
+../src/main.c: In function 'drawStatus':
+../src/main.c:175:33: error: 'WHITE' undeclared (first use in this function)
+     drawText(x+10, y, "Round ", WHITE, 2);
+                                 ^~~~~
+../src/main.c:175:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'drawTitleScreen':
+../src/main.c:183:5: warning: implicit declaration of function 'clear_screen'; did you mean 'clearerr'? [-Wimplicit-function-declaration]
+     clear_screen(WHITE);
+     ^~~~~~~~~~~~
+     clearerr
+../src/main.c:183:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:184:21: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                     ^~~~~~~~~~~~
+../src/main.c:184:39: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                                       ^~~~~~~~~
+../src/main.c:185:39: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 350, RESOLUTION_X, 20, ORANGE);
+                                       ^~~~~~
+../src/main.c:186:29: error: 'GREY' undeclared (first use in this function)
+     drawText(50, 80, "Wii", GREY, 8);
+                             ^~~~
+../src/main.c: In function 'drawMainMenu':
+../src/main.c:194:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:195:20: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                    ^~~~~~~~~~~~
+../src/main.c:195:38: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                                      ^~~~~~~~~
+../src/main.c:196:38: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 40, RESOLUTION_X, 16, ORANGE);
+                                      ^~~~~~
+../src/main.c:198:43: error: 'GREY' undeclared (first use in this function)
+     drawText(80, 80, "Enter Player Info", GREY, 4);
+                                           ^~~~
+../src/main.c:204:24: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+     drawText(280, 165, p1_name, BLACK, 3);
+                        ^~~~~~~
+                        rename
+../src/main.c:204:33: error: 'BLACK' undeclared (first use in this function)
+     drawText(280, 165, p1_name, BLACK, 3);
+                                 ^~~~~
+../src/main.c:205:9: error: 'entering_p1' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+         ^~~~~~~~~~~
+../src/main.c:205:25: error: 'names_complete' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                         ^~~~~~~~~~~~~~
+../src/main.c:205:57: error: 'name_cursor' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                                                         ^~~~~~~~~~~
+../src/main.c:211:24: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+     drawText(280, 225, p2_name, BLACK, 3);
+                        ^~~~~~~
+                        p1_name
+../src/main.c:215:57: error: 'GREEN' undeclared (first use in this function); did you mean 'GREY'?
+         drawText(50, 300, "READY! Press Start on FPGA", GREEN, 3);
+                                                         ^~~~~
+                                                         GREY
+../src/main.c: In function 'render_keyboard_text_to_vga':
+../src/main.c:258:43: error: 'WHITE' undeclared (first use in this function)
+         drawText(10, 10, keyboard_buffer, WHITE, 3);
+                                           ^~~~~
+../src/main.c: In function 'process_keyboard_input':
+../src/main.c:268:26: error: 'HW_MAIN_MENU' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                          ^~~~~~~~~~~~
+../src/main.c:268:43: error: 'names_complete' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                                           ^~~~~~~~~~~~~~
+../src/main.c:269:29: error: 'entering_p1' undeclared (first use in this function)
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                             ^~~~~~~~~~~
+../src/main.c:269:43: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                           ^~~~~~~
+                                           rename
+../src/main.c:269:53: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                                     ^~~~~~~
+                                                     p1_name
+../src/main.c:272:17: error: 'name_cursor' undeclared (first use in this function); did you mean 'keyboard_cursor'?
+             if (name_cursor > 0) { // Don't allow empty names
+                 ^~~~~~~~~~~
+                 keyboard_cursor
+../src/main.c:289:60: error: 'MAX_NAME_LEN' undeclared (first use in this function); did you mean 'MAX_INPUT_LEN'?
+         else if (key >= ' ' && key <= '~' && name_cursor < MAX_NAME_LEN) {
+                                                            ^~~~~~~~~~~~
+                                                            MAX_INPUT_LEN
+../src/main.c:269:15: warning: variable 'current_buf' set but not used [-Wunused-but-set-variable]
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+               ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+10:35:10 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'drawChar':
+../src/main.c:144:5: warning: implicit declaration of function 'drawBox'; did you mean 'drawChar'? [-Wimplicit-function-declaration]
+     drawBox(x + col * scale, y + row * scale, scale, scale, color);
+     ^~~~~~~
+     drawChar
+../src/main.c: In function 'drawStatus':
+../src/main.c:159:33: error: 'WHITE' undeclared (first use in this function)
+     drawText(x+10, y, "Round ", WHITE, 2);
+                                 ^~~~~
+../src/main.c:159:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'drawTitleScreen':
+../src/main.c:167:5: warning: implicit declaration of function 'clear_screen'; did you mean 'clearerr'? [-Wimplicit-function-declaration]
+     clear_screen(WHITE);
+     ^~~~~~~~~~~~
+     clearerr
+../src/main.c:167:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:168:21: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                     ^~~~~~~~~~~~
+../src/main.c:168:39: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                                       ^~~~~~~~~
+../src/main.c:169:39: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 350, RESOLUTION_X, 20, ORANGE);
+                                       ^~~~~~
+../src/main.c:170:29: error: 'GREY' undeclared (first use in this function)
+     drawText(50, 80, "Wii", GREY, 8);
+                             ^~~~
+../src/main.c: In function 'drawMainMenu':
+../src/main.c:178:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:179:20: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                    ^~~~~~~~~~~~
+../src/main.c:179:38: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                                      ^~~~~~~~~
+../src/main.c:180:38: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 40, RESOLUTION_X, 16, ORANGE);
+                                      ^~~~~~
+../src/main.c:182:43: error: 'GREY' undeclared (first use in this function)
+     drawText(80, 80, "Enter Player Info", GREY, 4);
+                                           ^~~~
+../src/main.c:188:24: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+     drawText(280, 165, p1_name, BLACK, 3);
+                        ^~~~~~~
+                        rename
+../src/main.c:188:33: error: 'BLACK' undeclared (first use in this function)
+     drawText(280, 165, p1_name, BLACK, 3);
+                                 ^~~~~
+../src/main.c:189:9: error: 'entering_p1' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+         ^~~~~~~~~~~
+../src/main.c:189:25: error: 'names_complete' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                         ^~~~~~~~~~~~~~
+../src/main.c:189:57: error: 'name_cursor' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                                                         ^~~~~~~~~~~
+../src/main.c:195:24: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+     drawText(280, 225, p2_name, BLACK, 3);
+                        ^~~~~~~
+                        p1_name
+../src/main.c:199:57: error: 'GREEN' undeclared (first use in this function); did you mean 'GREY'?
+         drawText(50, 300, "READY! Press Start on FPGA", GREEN, 3);
+                                                         ^~~~~
+                                                         GREY
+../src/main.c: In function 'render_keyboard_text_to_vga':
+../src/main.c:242:43: error: 'WHITE' undeclared (first use in this function)
+         drawText(10, 10, keyboard_buffer, WHITE, 3);
+                                           ^~~~~
+../src/main.c: In function 'process_keyboard_input':
+../src/main.c:252:26: error: 'HW_MAIN_MENU' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                          ^~~~~~~~~~~~
+../src/main.c:252:43: error: 'names_complete' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                                           ^~~~~~~~~~~~~~
+../src/main.c:253:29: error: 'entering_p1' undeclared (first use in this function)
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                             ^~~~~~~~~~~
+../src/main.c:253:43: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                           ^~~~~~~
+                                           rename
+../src/main.c:253:53: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                                     ^~~~~~~
+                                                     p1_name
+../src/main.c:256:17: error: 'name_cursor' undeclared (first use in this function); did you mean 'keyboard_cursor'?
+             if (name_cursor > 0) { // Don't allow empty names
+                 ^~~~~~~~~~~
+                 keyboard_cursor
+../src/main.c:273:60: error: 'MAX_NAME_LEN' undeclared (first use in this function); did you mean 'MAX_INPUT_LEN'?
+         else if (key >= ' ' && key <= '~' && name_cursor < MAX_NAME_LEN) {
+                                                            ^~~~~~~~~~~~
+                                                            MAX_INPUT_LEN
+../src/main.c:253:15: warning: variable 'current_buf' set but not used [-Wunused-but-set-variable]
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+               ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+11:24:42 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'drawCharHardware':
+../src/main.c:140:15: error: 'FRAMWRITER_X_ADDR' undeclared (first use in this function); did you mean 'FRAMEWRITER_BASE'?
+     Xil_Out32(FRAMWRITER_X_ADDR, x);
+               ^~~~~~~~~~~~~~~~~
+               FRAMEWRITER_BASE
+../src/main.c:140:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:141:15: error: 'FRAMWRITER_Y_ADDR' undeclared (first use in this function); did you mean 'FRAMWRITER_X_ADDR'?
+     Xil_Out32(FRAMWRITER_Y_ADDR, y);
+               ^~~~~~~~~~~~~~~~~
+               FRAMWRITER_X_ADDR
+../src/main.c:142:15: error: 'FRAMWRITER_BITMAP_LOW_ADDR' undeclared (first use in this function); did you mean 'FRAMWRITER_Y_ADDR'?
+     Xil_Out32(FRAMWRITER_BITMAP_LOW_ADDR, low);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+               FRAMWRITER_Y_ADDR
+../src/main.c:143:15: error: 'FRAMWRITER_BITMAP_HIGH_ADDR' undeclared (first use in this function); did you mean 'FRAMWRITER_BITMAP_LOW_ADDR'?
+     Xil_Out32(FRAMWRITER_BITMAP_HIGH_ADDR, high);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+               FRAMWRITER_BITMAP_LOW_ADDR
+../src/main.c: In function 'drawText':
+../src/main.c:167:9: warning: implicit declaration of function 'drawChar'; did you mean 'drawText'? [-Wimplicit-function-declaration]
+         drawChar(x, y, *text, color, scale);
+         ^~~~~~~~
+         drawText
+../src/main.c: In function 'drawStatus':
+../src/main.c:174:33: error: 'WHITE' undeclared (first use in this function)
+     drawText(x+10, y, "Round ", WHITE, 2);
+                                 ^~~~~
+../src/main.c: In function 'drawTitleScreen':
+../src/main.c:182:5: warning: implicit declaration of function 'clear_screen'; did you mean 'clearerr'? [-Wimplicit-function-declaration]
+     clear_screen(WHITE);
+     ^~~~~~~~~~~~
+     clearerr
+../src/main.c:182:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:183:5: warning: implicit declaration of function 'drawBox'; did you mean 'drawText'? [-Wimplicit-function-declaration]
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+     ^~~~~~~
+     drawText
+../src/main.c:183:21: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                     ^~~~~~~~~~~~
+../src/main.c:183:39: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+                                       ^~~~~~~~~
+../src/main.c:184:39: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 350, RESOLUTION_X, 20, ORANGE);
+                                       ^~~~~~
+../src/main.c:185:29: error: 'GREY' undeclared (first use in this function)
+     drawText(50, 80, "Wii", GREY, 8);
+                             ^~~~
+../src/main.c: In function 'drawMainMenu':
+../src/main.c:193:18: error: 'WHITE' undeclared (first use in this function)
+     clear_screen(WHITE);
+                  ^~~~~
+../src/main.c:194:20: error: 'RESOLUTION_X' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                    ^~~~~~~~~~~~
+../src/main.c:194:38: error: 'TURQUOISE' undeclared (first use in this function)
+     drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+                                      ^~~~~~~~~
+../src/main.c:195:38: error: 'ORANGE' undeclared (first use in this function)
+     drawBox(0, 40, RESOLUTION_X, 16, ORANGE);
+                                      ^~~~~~
+../src/main.c:197:43: error: 'GREY' undeclared (first use in this function)
+     drawText(80, 80, "Enter Player Info", GREY, 4);
+                                           ^~~~
+../src/main.c:203:24: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+     drawText(280, 165, p1_name, BLACK, 3);
+                        ^~~~~~~
+                        rename
+../src/main.c:203:33: error: 'BLACK' undeclared (first use in this function)
+     drawText(280, 165, p1_name, BLACK, 3);
+                                 ^~~~~
+../src/main.c:204:9: error: 'entering_p1' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+         ^~~~~~~~~~~
+../src/main.c:204:25: error: 'names_complete' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                         ^~~~~~~~~~~~~~
+../src/main.c:204:57: error: 'name_cursor' undeclared (first use in this function)
+     if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+                                                         ^~~~~~~~~~~
+../src/main.c:210:24: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+     drawText(280, 225, p2_name, BLACK, 3);
+                        ^~~~~~~
+                        p1_name
+../src/main.c:214:57: error: 'GREEN' undeclared (first use in this function); did you mean 'GREY'?
+         drawText(50, 300, "READY! Press Start on FPGA", GREEN, 3);
+                                                         ^~~~~
+                                                         GREY
+../src/main.c: In function 'render_keyboard_text_to_vga':
+../src/main.c:257:43: error: 'WHITE' undeclared (first use in this function)
+         drawText(10, 10, keyboard_buffer, WHITE, 3);
+                                           ^~~~~
+../src/main.c: In function 'process_keyboard_input':
+../src/main.c:267:26: error: 'HW_MAIN_MENU' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                          ^~~~~~~~~~~~
+../src/main.c:267:43: error: 'names_complete' undeclared (first use in this function)
+     if (current_state == HW_MAIN_MENU && !names_complete) {
+                                           ^~~~~~~~~~~~~~
+../src/main.c:268:29: error: 'entering_p1' undeclared (first use in this function)
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                             ^~~~~~~~~~~
+../src/main.c:268:43: error: 'p1_name' undeclared (first use in this function); did you mean 'rename'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                           ^~~~~~~
+                                           rename
+../src/main.c:268:53: error: 'p2_name' undeclared (first use in this function); did you mean 'p1_name'?
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+                                                     ^~~~~~~
+                                                     p1_name
+../src/main.c:271:17: error: 'name_cursor' undeclared (first use in this function); did you mean 'keyboard_cursor'?
+             if (name_cursor > 0) { // Don't allow empty names
+                 ^~~~~~~~~~~
+                 keyboard_cursor
+../src/main.c:288:60: error: 'MAX_NAME_LEN' undeclared (first use in this function); did you mean 'MAX_INPUT_LEN'?
+         else if (key >= ' ' && key <= '~' && name_cursor < MAX_NAME_LEN) {
+                                                            ^~~~~~~~~~~~
+                                                            MAX_INPUT_LEN
+../src/main.c:268:15: warning: variable 'current_buf' set but not used [-Wunused-but-set-variable]
+         char* current_buf = entering_p1 ? p1_name : p2_name;
+               ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1

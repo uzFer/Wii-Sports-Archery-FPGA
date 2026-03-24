@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7a100tcsg324-1
@@ -39,6 +37,7 @@ set_property ip_repo_paths {
 update_ip_catalog
 set_property ip_output_repo y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+read_mem Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/font_rom/font_data.mem
 read_verilog -library xil_defaultlib {
   Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/gyroscope/gyro_aim_calculator.v
   Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/gyroscope/spi_interface.v
