@@ -7864,3 +7864,659 @@ mb-size vga_coord.elf  |tee "vga_coord.elf.size"
    6576	    316	   2092	   8984	   2318	vga_coord.elf
 'Finished building: vga_coord.elf.size'
 ' '
+14:22:29 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6232	    316	   2092	   8640	   21c0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+14:22:46 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+14:23:01 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+14:23:21 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5220	    316	   2096	   7632	   1dd0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:20:33 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'poll_gyroscope':
+../src/main.c:90:43: error: 'last_valid_bit' undeclared (first use in this function); did you mean 'current_valid_bit'?
+     if (cal_done && (current_valid_bit != last_valid_bit)) {
+                                           ^~~~~~~~~~~~~~
+                                           current_valid_bit
+../src/main.c:90:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+13:20:43 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5828	    316	   2096	   8240	   2030	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:21:23 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'poll_gyroscope':
+../src/main.c:102:24: error: 'x' undeclared (first use in this function)
+         draw_crosshair(x, y);
+                        ^
+../src/main.c:102:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:102:27: error: 'y' undeclared (first use in this function)
+         draw_crosshair(x, y);
+                           ^
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+13:21:36 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5924	    316	   2096	   8336	   2090	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:22:48 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5964	    316	   2096	   8376	   20b8	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:24:18 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5988	    316	   2096	   8400	   20d0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:24:42 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5964	    316	   2096	   8376	   20b8	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:24:48 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+13:25:20 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5988	    316	   2096	   8400	   20d0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:25:26 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+13:26:03 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+13:26:44 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5964	    316	   2096	   8376	   20b8	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:26:48 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+13:30:20 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5988	    316	   2096	   8400	   20d0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+13:30:25 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+13:45:09 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:11:10: fatal error: xil_cache.h: No such file or directory
+ #include "xil_cache.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+13:45:15 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:11:10: fatal error: xil_cache.h: No such file or directory
+ #include "xil_cache.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+13:46:13 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:11:10: fatal error: xil_cache.h: No such file or directory
+ #include "xil_cache.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+13:48:53 **** Auto Build of project vga_coord_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling framewriter..."
+framewriter_selftest.c: In function 'FRAMEWRITER_Reg_SelfTest':
+framewriter_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( FRAMEWRITER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+framewriter_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+13:48:59 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'drawCharHardware':
+../src/main.c:39:32: error: 'FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET' undeclared (first use in this function); did you mean 'FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET'?
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^
+../src/main.c:39:32: note: in definition of macro 'REG_CHAR_X_OFFSET'
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:39:32: note: each undeclared identifier is reported only once for each function it appears in
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^
+../src/main.c:39:32: note: in definition of macro 'REG_CHAR_X_OFFSET'
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:40:32: error: 'FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET' undeclared (first use in this function); did you mean 'FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET'?
+ #define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+                                ^
+../src/main.c:40:32: note: in definition of macro 'REG_CHAR_Y_OFFSET'
+ #define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+13:49:20 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'drawCharHardware':
+../src/main.c:39:32: error: 'FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET' undeclared (first use in this function); did you mean 'FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET'?
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^
+../src/main.c:39:32: note: in definition of macro 'REG_CHAR_X_OFFSET'
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:39:32: note: each undeclared identifier is reported only once for each function it appears in
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^
+../src/main.c:39:32: note: in definition of macro 'REG_CHAR_X_OFFSET'
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:40:32: error: 'FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET' undeclared (first use in this function); did you mean 'FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET'?
+ #define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+                                ^
+../src/main.c:40:32: note: in definition of macro 'REG_CHAR_Y_OFFSET'
+ #define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+14:02:32 **** Auto Build of project vga_coord_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling framewriter..."
+framewriter_selftest.c: In function 'FRAMEWRITER_Reg_SelfTest':
+framewriter_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( FRAMEWRITER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+framewriter_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+14:02:37 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'drawCharHardware':
+../src/main.c:39:32: error: 'FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET' undeclared (first use in this function); did you mean 'FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET'?
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^
+../src/main.c:39:32: note: in definition of macro 'REG_CHAR_X_OFFSET'
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:39:32: note: each undeclared identifier is reported only once for each function it appears in
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^
+../src/main.c:39:32: note: in definition of macro 'REG_CHAR_X_OFFSET'
+ #define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:40:32: error: 'FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET' undeclared (first use in this function); did you mean 'FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET'?
+ #define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+                                ^
+../src/main.c:40:32: note: in definition of macro 'REG_CHAR_Y_OFFSET'
+ #define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+14:03:22 **** Auto Build of project vga_coord_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling framewriter..."
+framewriter_selftest.c: In function 'FRAMEWRITER_Reg_SelfTest':
+framewriter_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( FRAMEWRITER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+framewriter_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+14:03:27 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5988	    316	   2096	   8400	   20d0	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+14:05:11 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.
+14:06:24 **** Auto Build of configuration Debug for project vga_coord ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:332:8: warning: unused variable 'fixed_y' [-Wunused-variable]
+    int fixed_y = 50;
+        ^~~~~~~
+../src/main.c:331:8: warning: unused variable 'fixed_x' [-Wunused-variable]
+    int fixed_x = 50;
+        ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: vga_coord.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga_coord.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size vga_coord.elf  |tee "vga_coord.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5964	    316	   2096	   8376	   20b8	vga_coord.elf
+'Finished building: vga_coord.elf.size'
+' '
+14:06:28 **** Incremental Build of configuration Debug for project vga_coord ****
+make all 
+make: Nothing to be done for 'all'.

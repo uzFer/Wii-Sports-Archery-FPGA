@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Mar 24 11:43:57 2026
+// Date        : Thu Mar 26 13:35:19 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_3_gyro_calc_interface_0_0_sim_netlist.v
@@ -1031,7 +1031,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire \p_0_out_inferred__3/i__carry_n_6 ;
   wire \p_0_out_inferred__3/i__carry_n_7 ;
   wire [15:0]p_1_in;
-  wire r_pos_x1;
   wire r_pos_x1_carry__0_i_1_n_0;
   wire r_pos_x1_carry__0_i_2_n_0;
   wire r_pos_x1_carry__0_i_3_n_0;
@@ -1039,7 +1038,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire r_pos_x1_carry__0_i_5_n_0;
   wire r_pos_x1_carry__0_i_6_n_0;
   wire r_pos_x1_carry__0_i_7_n_0;
-  wire r_pos_x1_carry__0_i_8_n_0;
   wire r_pos_x1_carry__0_n_0;
   wire r_pos_x1_carry__0_n_1;
   wire r_pos_x1_carry__0_n_2;
@@ -1056,6 +1054,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire r_pos_x1_carry__2_i_1_n_0;
   wire r_pos_x1_carry__2_i_2_n_0;
   wire r_pos_x1_carry__2_i_3_n_0;
+  wire r_pos_x1_carry__2_n_0;
   wire r_pos_x1_carry__2_n_1;
   wire r_pos_x1_carry__2_n_2;
   wire r_pos_x1_carry__2_n_3;
@@ -1066,13 +1065,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire r_pos_x1_carry_i_5_n_0;
   wire r_pos_x1_carry_i_6_n_0;
   wire r_pos_x1_carry_i_7_n_0;
-  wire r_pos_x1_carry_i_8_n_0;
   wire r_pos_x1_carry_n_0;
   wire r_pos_x1_carry_n_1;
   wire r_pos_x1_carry_n_2;
   wire r_pos_x1_carry_n_3;
   wire [31:31]r_pos_x2;
-  wire [17:5]r_pos_x2__0;
+  wire [17:4]r_pos_x2__0;
   wire r_pos_x2_carry__0_n_0;
   wire r_pos_x2_carry__0_n_1;
   wire r_pos_x2_carry__0_n_2;
@@ -1081,7 +1079,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire r_pos_x2_carry__1_n_1;
   wire r_pos_x2_carry__1_n_2;
   wire r_pos_x2_carry__1_n_3;
-  wire r_pos_x2_carry__2_n_2;
+  wire r_pos_x2_carry__2_n_1;
+  wire r_pos_x2_carry__2_n_3;
   wire r_pos_x2_carry_i_1_n_0;
   wire r_pos_x2_carry_i_2_n_0;
   wire r_pos_x2_carry_n_0;
@@ -1097,9 +1096,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire \r_pos_x[5]_i_2_n_0 ;
   wire \r_pos_x[6]_i_1_n_0 ;
   wire \r_pos_x[7]_i_1_n_0 ;
-  wire \r_pos_x[8]_i_1_n_0 ;
+  wire \r_pos_x[8]_i_2_n_0 ;
+  wire \r_pos_x[8]_i_3_n_0 ;
+  wire \r_pos_x[9]_i_1_n_0 ;
   wire \r_pos_x[9]_i_2_n_0 ;
-  wire \r_pos_x[9]_i_3_n_0 ;
   wire r_pos_y1_carry__0_i_1_n_0;
   wire r_pos_y1_carry__0_i_2_n_0;
   wire r_pos_y1_carry__0_i_3_n_0;
@@ -1107,6 +1107,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire r_pos_y1_carry__0_i_5_n_0;
   wire r_pos_y1_carry__0_i_6_n_0;
   wire r_pos_y1_carry__0_i_7_n_0;
+  wire r_pos_y1_carry__0_i_8_n_0;
   wire r_pos_y1_carry__0_n_0;
   wire r_pos_y1_carry__0_n_1;
   wire r_pos_y1_carry__0_n_2;
@@ -1133,7 +1134,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire r_pos_y1_carry_i_4_n_0;
   wire r_pos_y1_carry_i_5_n_0;
   wire r_pos_y1_carry_i_6_n_0;
-  wire r_pos_y1_carry_i_7_n_0;
   wire r_pos_y1_carry_n_0;
   wire r_pos_y1_carry_n_1;
   wire r_pos_y1_carry_n_2;
@@ -1182,8 +1182,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire \r_pos_y[4]_i_1_n_0 ;
   wire \r_pos_y[5]_i_1_n_0 ;
   wire \r_pos_y[6]_i_1_n_0 ;
-  wire \r_pos_y[7]_i_1_n_0 ;
-  wire \r_pos_y[8]_i_2_n_0 ;
+  wire \r_pos_y[7]_i_2_n_0 ;
+  wire \r_pos_y[8]_i_1_n_0 ;
   wire \r_pos_y[9]_i_1_n_0 ;
   wire \r_pos_y[9]_i_2_n_0 ;
   wire resetn;
@@ -1347,7 +1347,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire scaled_x0_carry_n_1;
   wire scaled_x0_carry_n_2;
   wire scaled_x0_carry_n_3;
-  wire [9:4]scaled_y;
+  wire [9:3]scaled_y;
   wire scaled_y0__86_carry__0_i_1_n_0;
   wire scaled_y0__86_carry__0_i_2_n_0;
   wire scaled_y0__86_carry__0_i_3_n_0;
@@ -1498,7 +1498,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire scaled_y0_carry_n_1;
   wire scaled_y0_carry_n_2;
   wire scaled_y0_carry_n_3;
-  wire [3:0]scaled_y__0;
+  wire [2:0]scaled_y__0;
   wire \state[0]_i_1_n_0 ;
   wire \state[1]_i_1_n_0 ;
   wire \state[1]_i_2_n_0 ;
@@ -1976,8 +1976,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   wire [3:0]NLW_r_pos_x1_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_r_pos_x1_carry__1_O_UNCONNECTED;
   wire [3:0]NLW_r_pos_x1_carry__2_O_UNCONNECTED;
-  wire [3:0]NLW_r_pos_x2_carry__2_CO_UNCONNECTED;
-  wire [3:1]NLW_r_pos_x2_carry__2_O_UNCONNECTED;
+  wire [3:1]NLW_r_pos_x2_carry__2_CO_UNCONNECTED;
+  wire [3:2]NLW_r_pos_x2_carry__2_O_UNCONNECTED;
   wire [3:0]NLW_r_pos_y1_carry_O_UNCONNECTED;
   wire [3:0]NLW_r_pos_y1_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_r_pos_y1_carry__1_O_UNCONNECTED;
@@ -2414,14 +2414,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
     \cal_cnt[0]_i_1 
        (.I0(cal_cnt_reg__0[0]),
         .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \cal_cnt[1]_i_1 
        (.I0(cal_cnt_reg__0[0]),
         .I1(cal_cnt_reg__0[1]),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \cal_cnt[2]_i_1 
@@ -2429,7 +2429,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(cal_cnt_reg__0[1]),
         .I2(cal_cnt_reg__0[2]),
         .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \cal_cnt[3]_i_1 
@@ -2438,7 +2438,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(cal_cnt_reg__0[1]),
         .I3(cal_cnt_reg__0[2]),
         .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \cal_cnt[4]_i_1 
@@ -2464,7 +2464,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.I0(cal_cnt_reg__0[6]),
         .I1(\cal_cnt[9]_i_3_n_0 ),
         .O(p_0_in__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB4)) 
     \cal_cnt[7]_i_1 
@@ -2472,7 +2472,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(cal_cnt_reg__0[6]),
         .I2(cal_cnt_reg__0[7]),
         .O(p_0_in__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'h9AAA)) 
     \cal_cnt[8]_i_1 
@@ -2488,7 +2488,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[0] ),
         .I2(o_data_valid),
         .O(\cal_cnt[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \cal_cnt[9]_i_2 
@@ -2690,8 +2690,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'h1)) 
     db_x_rate2_carry_i_4
-       (.I0(adj_x_rate[0]),
-        .I1(adj_x_rate[1]),
+       (.I0(adj_x_rate[1]),
+        .I1(adj_x_rate[0]),
         .O(db_x_rate2_carry_i_4_n_0));
   LUT2 #(
     .INIT(4'h2)) 
@@ -2722,7 +2722,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(1'b0),
         .CO({\db_x_rate2_inferred__0/i__carry_n_0 ,\db_x_rate2_inferred__0/i__carry_n_1 ,\db_x_rate2_inferred__0/i__carry_n_2 ,\db_x_rate2_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry_i_1__3_n_0,adj_x_rate[7],i__carry_i_2__1_n_0,i__carry_i_3__0_n_0}),
+        .DI({i__carry_i_1__3_n_0,adj_x_rate[7],i__carry_i_2__0_n_0,i__carry_i_3__0_n_0}),
         .O(\NLW_db_x_rate2_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_4__0_n_0,i__carry_i_5__1_n_0,i__carry_i_6__1_n_0,i__carry_i_7__0_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -2732,7 +2732,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .CYINIT(1'b0),
         .DI({1'b0,i__carry__0_i_1__2_n_0,i__carry__0_i_2__3_n_0,i__carry__0_i_3__3_n_0}),
         .O(\NLW_db_x_rate2_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
-        .S({1'b0,i__carry__0_i_4__3_n_0,i__carry__0_i_5__1_n_0,i__carry__0_i_6__0_n_0}));
+        .S({1'b0,i__carry__0_i_4__1_n_0,i__carry__0_i_5__0_n_0,i__carry__0_i_6__0_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 db_y_rate2_carry
        (.CI(1'b0),
@@ -2849,7 +2849,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(1'b0),
         .CO({\db_y_rate2_inferred__0/i__carry_n_0 ,\db_y_rate2_inferred__0/i__carry_n_1 ,\db_y_rate2_inferred__0/i__carry_n_2 ,\db_y_rate2_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry_i_1_n_0,adj_y_rate[7],i__carry_i_2__0_n_0,i__carry_i_3_n_0}),
+        .DI({i__carry_i_1_n_0,adj_y_rate[7],i__carry_i_2_n_0,i__carry_i_3_n_0}),
         .O(\NLW_db_y_rate2_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_4_n_0,i__carry_i_5__0_n_0,i__carry_i_6__0_n_0,i__carry_i_7_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -2857,9 +2857,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(\db_y_rate2_inferred__0/i__carry_n_0 ),
         .CO({\NLW_db_y_rate2_inferred__0/i__carry__0_CO_UNCONNECTED [3],db_y_rate21_in,\db_y_rate2_inferred__0/i__carry__0_n_2 ,\db_y_rate2_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,i__carry__0_i_1__3_n_0,i__carry__0_i_2__0_n_0,i__carry__0_i_3_n_0}),
+        .DI({1'b0,i__carry__0_i_1__3_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0}),
         .O(\NLW_db_y_rate2_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
-        .S({1'b0,i__carry__0_i_4_n_0,i__carry__0_i_5__0_n_0,i__carry__0_i_6_n_0}));
+        .S({1'b0,i__carry__0_i_4__0_n_0,i__carry__0_i_5_n_0,i__carry__0_i_6_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 db_z_rate2_carry
        (.CI(1'b0),
@@ -2976,7 +2976,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(1'b0),
         .CO({\db_z_rate2_inferred__0/i__carry_n_0 ,\db_z_rate2_inferred__0/i__carry_n_1 ,\db_z_rate2_inferred__0/i__carry_n_2 ,\db_z_rate2_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry_i_1__2_n_0,adj_z_rate[7],i__carry_i_2_n_0,i__carry_i_3__1_n_0}),
+        .DI({i__carry_i_1__2_n_0,adj_z_rate[7],i__carry_i_2__3_n_0,i__carry_i_3__1_n_0}),
         .O(\NLW_db_z_rate2_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_4__3_n_0,i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7__1_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -2984,9 +2984,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(\db_z_rate2_inferred__0/i__carry_n_0 ),
         .CO({\NLW_db_z_rate2_inferred__0/i__carry__0_CO_UNCONNECTED [3],db_z_rate20_in,\db_z_rate2_inferred__0/i__carry__0_n_2 ,\db_z_rate2_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,i__carry__0_i_1__1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3__2_n_0}),
+        .DI({1'b0,i__carry__0_i_1__1_n_0,i__carry__0_i_2__2_n_0,i__carry__0_i_3__2_n_0}),
         .O(\NLW_db_z_rate2_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
-        .S({1'b0,i__carry__0_i_4__2_n_0,i__carry__0_i_5_n_0,i__carry__0_i_6__3_n_0}));
+        .S({1'b0,i__carry__0_i_4_n_0,i__carry__0_i_5__3_n_0,i__carry__0_i_6__3_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \i_/i_/i___143_carry 
        (.CI(1'b0),
@@ -3505,26 +3505,26 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__0_i_2
-       (.I0(adj_z_rate[13]),
-        .I1(adj_z_rate[12]),
-        .O(i__carry__0_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i__carry__0_i_2__0
        (.I0(adj_y_rate[13]),
         .I1(adj_y_rate[12]),
-        .O(i__carry__0_i_2__0_n_0));
+        .O(i__carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    i__carry__0_i_2__1
+    i__carry__0_i_2__0
        (.I0(next_z_acc[10]),
         .I1(next_z_acc[11]),
+        .O(i__carry__0_i_2__0_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i__carry__0_i_2__1
+       (.I0(next_x_acc[10]),
+        .I1(next_x_acc[11]),
         .O(i__carry__0_i_2__1_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__0_i_2__2
-       (.I0(next_x_acc[10]),
-        .I1(next_x_acc[11]),
+       (.I0(adj_z_rate[12]),
+        .I1(adj_z_rate[13]),
         .O(i__carry__0_i_2__2_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -3613,32 +3613,32 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_4
-       (.I0(adj_y_rate[14]),
-        .I1(adj_y_rate[15]),
+       (.I0(adj_z_rate[14]),
+        .I1(adj_z_rate[15]),
         .O(i__carry__0_i_4_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_4__0
-       (.I0(next_z_acc[13]),
-        .I1(next_z_acc[12]),
+       (.I0(adj_y_rate[14]),
+        .I1(adj_y_rate[15]),
         .O(i__carry__0_i_4__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_4__1
-       (.I0(next_x_acc[13]),
-        .I1(next_x_acc[12]),
+       (.I0(adj_x_rate[14]),
+        .I1(adj_x_rate[15]),
         .O(i__carry__0_i_4__1_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_4__2
-       (.I0(adj_z_rate[15]),
-        .I1(adj_z_rate[14]),
+       (.I0(next_z_acc[13]),
+        .I1(next_z_acc[12]),
         .O(i__carry__0_i_4__2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_4__3
-       (.I0(adj_x_rate[15]),
-        .I1(adj_x_rate[14]),
+       (.I0(next_x_acc[13]),
+        .I1(next_x_acc[12]),
         .O(i__carry__0_i_4__3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -3667,32 +3667,32 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_5
-       (.I0(adj_z_rate[12]),
-        .I1(adj_z_rate[13]),
+       (.I0(adj_y_rate[12]),
+        .I1(adj_y_rate[13]),
         .O(i__carry__0_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_5__0
-       (.I0(adj_y_rate[12]),
-        .I1(adj_y_rate[13]),
-        .O(i__carry__0_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i__carry__0_i_5__1
        (.I0(adj_x_rate[12]),
         .I1(adj_x_rate[13]),
-        .O(i__carry__0_i_5__1_n_0));
+        .O(i__carry__0_i_5__0_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    i__carry__0_i_5__2
+    i__carry__0_i_5__1
        (.I0(next_z_acc[11]),
         .I1(next_z_acc[10]),
+        .O(i__carry__0_i_5__1_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i__carry__0_i_5__2
+       (.I0(next_x_acc[11]),
+        .I1(next_x_acc[10]),
         .O(i__carry__0_i_5__2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_5__3
-       (.I0(next_x_acc[11]),
-        .I1(next_x_acc[10]),
+       (.I0(adj_z_rate[13]),
+        .I1(adj_z_rate[12]),
         .O(i__carry__0_i_5__3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -4195,32 +4195,32 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'hE)) 
     i__carry_i_2
-       (.I0(adj_z_rate[5]),
-        .I1(adj_z_rate[4]),
+       (.I0(adj_y_rate[5]),
+        .I1(adj_y_rate[4]),
         .O(i__carry_i_2_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     i__carry_i_2__0
-       (.I0(adj_y_rate[5]),
-        .I1(adj_y_rate[4]),
+       (.I0(adj_x_rate[5]),
+        .I1(adj_x_rate[4]),
         .O(i__carry_i_2__0_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     i__carry_i_2__1
-       (.I0(adj_x_rate[5]),
-        .I1(adj_x_rate[4]),
-        .O(i__carry_i_2__1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i__carry_i_2__2
        (.I0(next_z_acc[1]),
         .I1(next_z_acc[0]),
-        .O(i__carry_i_2__2_n_0));
+        .O(i__carry_i_2__1_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    i__carry_i_2__3
+    i__carry_i_2__2
        (.I0(next_x_acc[3]),
         .I1(next_x_acc[2]),
+        .O(i__carry_i_2__2_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i__carry_i_2__3
+       (.I0(adj_z_rate[5]),
+        .I1(adj_z_rate[4]),
         .O(i__carry_i_2__3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -5778,17 +5778,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(1'b0),
         .CO({r_pos_x1_carry_n_0,r_pos_x1_carry_n_1,r_pos_x1_carry_n_2,r_pos_x1_carry_n_3}),
         .CYINIT(1'b1),
-        .DI({r_pos_x1_carry_i_1_n_0,r_pos_x1_carry_i_2_n_0,r_pos_x1_carry_i_3_n_0,r_pos_x1_carry_i_4_n_0}),
+        .DI({r_pos_x2__0[7],r_pos_x1_carry_i_1_n_0,r_pos_x1_carry_i_2_n_0,r_pos_x1_carry_i_3_n_0}),
         .O(NLW_r_pos_x1_carry_O_UNCONNECTED[3:0]),
-        .S({r_pos_x1_carry_i_5_n_0,r_pos_x1_carry_i_6_n_0,r_pos_x1_carry_i_7_n_0,r_pos_x1_carry_i_8_n_0}));
+        .S({r_pos_x1_carry_i_4_n_0,r_pos_x1_carry_i_5_n_0,r_pos_x1_carry_i_6_n_0,r_pos_x1_carry_i_7_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_x1_carry__0
        (.CI(r_pos_x1_carry_n_0),
         .CO({r_pos_x1_carry__0_n_0,r_pos_x1_carry__0_n_1,r_pos_x1_carry__0_n_2,r_pos_x1_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({r_pos_x1_carry__0_i_1_n_0,r_pos_x1_carry__0_i_2_n_0,r_pos_x1_carry__0_i_3_n_0,r_pos_x1_carry__0_i_4_n_0}),
+        .DI({r_pos_x1_carry__0_i_1_n_0,r_pos_x1_carry__0_i_2_n_0,r_pos_x1_carry__0_i_3_n_0,r_pos_x2__0[9]}),
         .O(NLW_r_pos_x1_carry__0_O_UNCONNECTED[3:0]),
-        .S({r_pos_x1_carry__0_i_5_n_0,r_pos_x1_carry__0_i_6_n_0,r_pos_x1_carry__0_i_7_n_0,r_pos_x1_carry__0_i_8_n_0}));
+        .S({r_pos_x1_carry__0_i_4_n_0,r_pos_x1_carry__0_i_5_n_0,r_pos_x1_carry__0_i_6_n_0,r_pos_x1_carry__0_i_7_n_0}));
   LUT2 #(
     .INIT(4'hE)) 
     r_pos_x1_carry__0_i_1
@@ -5808,35 +5808,29 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(r_pos_x2__0[10]),
         .O(r_pos_x1_carry__0_i_3_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'h1)) 
     r_pos_x1_carry__0_i_4
-       (.I0(r_pos_x2__0[9]),
-        .I1(r_pos_x2__0[8]),
+       (.I0(r_pos_x2__0[14]),
+        .I1(r_pos_x2__0[15]),
         .O(r_pos_x1_carry__0_i_4_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     r_pos_x1_carry__0_i_5
-       (.I0(r_pos_x2__0[14]),
-        .I1(r_pos_x2__0[15]),
+       (.I0(r_pos_x2__0[12]),
+        .I1(r_pos_x2__0[13]),
         .O(r_pos_x1_carry__0_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     r_pos_x1_carry__0_i_6
-       (.I0(r_pos_x2__0[12]),
-        .I1(r_pos_x2__0[13]),
-        .O(r_pos_x1_carry__0_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    r_pos_x1_carry__0_i_7
        (.I0(r_pos_x2__0[10]),
         .I1(r_pos_x2__0[11]),
-        .O(r_pos_x1_carry__0_i_7_n_0));
+        .O(r_pos_x1_carry__0_i_6_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    r_pos_x1_carry__0_i_8
-       (.I0(r_pos_x2__0[9]),
-        .I1(r_pos_x2__0[8]),
-        .O(r_pos_x1_carry__0_i_8_n_0));
+    r_pos_x1_carry__0_i_7
+       (.I0(r_pos_x2__0[8]),
+        .I1(r_pos_x2__0[9]),
+        .O(r_pos_x1_carry__0_i_7_n_0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_x1_carry__1
        (.CI(r_pos_x1_carry__0_n_0),
@@ -5844,21 +5838,21 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .CYINIT(1'b0),
         .DI({r_pos_x1_carry__1_i_1_n_0,r_pos_x1_carry__1_i_2_n_0,r_pos_x1_carry__1_i_3_n_0,r_pos_x1_carry__1_i_4_n_0}),
         .O(NLW_r_pos_x1_carry__1_O_UNCONNECTED[3:0]),
-        .S({r_pos_x2_carry__2_n_2,r_pos_x2_carry__2_n_2,r_pos_x2_carry__2_n_2,r_pos_x1_carry__1_i_5_n_0}));
+        .S({r_pos_x2_carry__2_n_1,r_pos_x2_carry__2_n_1,r_pos_x2_carry__2_n_1,r_pos_x1_carry__1_i_5_n_0}));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x1_carry__1_i_1
-       (.I0(r_pos_x2_carry__2_n_2),
+       (.I0(r_pos_x2_carry__2_n_1),
         .O(r_pos_x1_carry__1_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x1_carry__1_i_2
-       (.I0(r_pos_x2_carry__2_n_2),
+       (.I0(r_pos_x2_carry__2_n_1),
         .O(r_pos_x1_carry__1_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x1_carry__1_i_3
-       (.I0(r_pos_x2_carry__2_n_2),
+       (.I0(r_pos_x2_carry__2_n_1),
         .O(r_pos_x1_carry__1_i_3_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -5875,141 +5869,134 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_x1_carry__2
        (.CI(r_pos_x1_carry__1_n_0),
-        .CO({r_pos_x1,r_pos_x1_carry__2_n_1,r_pos_x1_carry__2_n_2,r_pos_x1_carry__2_n_3}),
+        .CO({r_pos_x1_carry__2_n_0,r_pos_x1_carry__2_n_1,r_pos_x1_carry__2_n_2,r_pos_x1_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,r_pos_x1_carry__2_i_1_n_0,r_pos_x1_carry__2_i_2_n_0,r_pos_x1_carry__2_i_3_n_0}),
         .O(NLW_r_pos_x1_carry__2_O_UNCONNECTED[3:0]),
-        .S({r_pos_x2_carry__2_n_2,r_pos_x2_carry__2_n_2,r_pos_x2_carry__2_n_2,r_pos_x2_carry__2_n_2}));
+        .S({r_pos_x2_carry__2_n_1,r_pos_x2_carry__2_n_1,r_pos_x2_carry__2_n_1,r_pos_x2_carry__2_n_1}));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x1_carry__2_i_1
-       (.I0(r_pos_x2_carry__2_n_2),
+       (.I0(r_pos_x2_carry__2_n_1),
         .O(r_pos_x1_carry__2_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x1_carry__2_i_2
-       (.I0(r_pos_x2_carry__2_n_2),
+       (.I0(r_pos_x2_carry__2_n_1),
         .O(r_pos_x1_carry__2_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x1_carry__2_i_3
-       (.I0(r_pos_x2_carry__2_n_2),
+       (.I0(r_pos_x2_carry__2_n_1),
         .O(r_pos_x1_carry__2_i_3_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'hE)) 
     r_pos_x1_carry_i_1
-       (.I0(r_pos_x2__0[7]),
-        .I1(r_pos_x2__0[6]),
+       (.I0(r_pos_x2__0[5]),
+        .I1(r_pos_x2__0[4]),
         .O(r_pos_x1_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     r_pos_x1_carry_i_2
-       (.I0(r_pos_x2__0[5]),
-        .I1(scaled_x0__86_carry__2_n_6),
+       (.I0(scaled_x0__86_carry__2_n_7),
+        .I1(scaled_x0__86_carry__1_n_4),
         .O(r_pos_x1_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     r_pos_x1_carry_i_3
-       (.I0(scaled_x0__86_carry__2_n_7),
-        .I1(scaled_x0__86_carry__1_n_4),
-        .O(r_pos_x1_carry_i_3_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    r_pos_x1_carry_i_4
        (.I0(scaled_x0__86_carry__1_n_6),
         .I1(scaled_x0__86_carry__1_n_5),
-        .O(r_pos_x1_carry_i_4_n_0));
+        .O(r_pos_x1_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h2)) 
+    r_pos_x1_carry_i_4
+       (.I0(r_pos_x2__0[6]),
+        .I1(r_pos_x2__0[7]),
+        .O(r_pos_x1_carry_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
     r_pos_x1_carry_i_5
-       (.I0(r_pos_x2__0[7]),
-        .I1(r_pos_x2__0[6]),
+       (.I0(r_pos_x2__0[4]),
+        .I1(r_pos_x2__0[5]),
         .O(r_pos_x1_carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     r_pos_x1_carry_i_6
-       (.I0(scaled_x0__86_carry__2_n_6),
-        .I1(r_pos_x2__0[5]),
+       (.I0(scaled_x0__86_carry__1_n_4),
+        .I1(scaled_x0__86_carry__2_n_7),
         .O(r_pos_x1_carry_i_6_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     r_pos_x1_carry_i_7
-       (.I0(scaled_x0__86_carry__1_n_4),
-        .I1(scaled_x0__86_carry__2_n_7),
-        .O(r_pos_x1_carry_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    r_pos_x1_carry_i_8
        (.I0(scaled_x0__86_carry__1_n_5),
         .I1(scaled_x0__86_carry__1_n_6),
-        .O(r_pos_x1_carry_i_8_n_0));
+        .O(r_pos_x1_carry_i_7_n_0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_x2_carry
        (.CI(1'b0),
         .CO({r_pos_x2_carry_n_0,r_pos_x2_carry_n_1,r_pos_x2_carry_n_2,r_pos_x2_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({scaled_x0__86_carry__3_n_6,1'b0,scaled_x0__86_carry__2_n_4,1'b0}),
-        .O(r_pos_x2__0[8:5]),
-        .S({r_pos_x2_carry_i_1_n_0,scaled_x0__86_carry__3_n_7,r_pos_x2_carry_i_2_n_0,scaled_x0__86_carry__2_n_5}));
+        .DI({scaled_x0__86_carry__3_n_7,1'b0,scaled_x0__86_carry__2_n_5,1'b0}),
+        .O(r_pos_x2__0[7:4]),
+        .S({r_pos_x2_carry_i_1_n_0,scaled_x0__86_carry__2_n_4,r_pos_x2_carry_i_2_n_0,scaled_x0__86_carry__2_n_6}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_x2_carry__0
        (.CI(r_pos_x2_carry_n_0),
         .CO({r_pos_x2_carry__0_n_0,r_pos_x2_carry__0_n_1,r_pos_x2_carry__0_n_2,r_pos_x2_carry__0_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(r_pos_x2__0[12:9]),
-        .S({scaled_x0__86_carry__4_n_6,scaled_x0__86_carry__4_n_7,scaled_x0__86_carry__3_n_4,scaled_x0__86_carry__3_n_5}));
+        .O(r_pos_x2__0[11:8]),
+        .S({scaled_x0__86_carry__4_n_7,scaled_x0__86_carry__3_n_4,scaled_x0__86_carry__3_n_5,scaled_x0__86_carry__3_n_6}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_x2_carry__1
        (.CI(r_pos_x2_carry__0_n_0),
         .CO({r_pos_x2_carry__1_n_0,r_pos_x2_carry__1_n_1,r_pos_x2_carry__1_n_2,r_pos_x2_carry__1_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(r_pos_x2__0[16:13]),
-        .S({scaled_x0__86_carry__5_n_6,scaled_x0__86_carry__5_n_7,scaled_x0__86_carry__4_n_4,scaled_x0__86_carry__4_n_5}));
+        .O(r_pos_x2__0[15:12]),
+        .S({scaled_x0__86_carry__5_n_7,scaled_x0__86_carry__4_n_4,scaled_x0__86_carry__4_n_5,scaled_x0__86_carry__4_n_6}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_x2_carry__2
        (.CI(r_pos_x2_carry__1_n_0),
-        .CO({NLW_r_pos_x2_carry__2_CO_UNCONNECTED[3:2],r_pos_x2_carry__2_n_2,NLW_r_pos_x2_carry__2_CO_UNCONNECTED[0]}),
+        .CO({NLW_r_pos_x2_carry__2_CO_UNCONNECTED[3],r_pos_x2_carry__2_n_1,NLW_r_pos_x2_carry__2_CO_UNCONNECTED[1],r_pos_x2_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b1}),
-        .O({NLW_r_pos_x2_carry__2_O_UNCONNECTED[3:1],r_pos_x2__0[17]}),
-        .S({1'b0,1'b0,1'b1,scaled_x0}));
+        .DI({1'b0,1'b0,1'b1,1'b0}),
+        .O({NLW_r_pos_x2_carry__2_O_UNCONNECTED[3:2],r_pos_x2__0[17:16]}),
+        .S({1'b0,1'b1,scaled_x0,scaled_x0__86_carry__5_n_6}));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x2_carry_i_1
-       (.I0(scaled_x0__86_carry__3_n_6),
+       (.I0(scaled_x0__86_carry__3_n_7),
         .O(r_pos_x2_carry_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_x2_carry_i_2
-       (.I0(scaled_x0__86_carry__2_n_4),
+       (.I0(scaled_x0__86_carry__2_n_5),
         .O(r_pos_x2_carry_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \r_pos_x[0]_i_1 
        (.I0(scaled_x0__86_carry__1_n_6),
-        .I1(r_pos_x1),
+        .I1(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'hF6)) 
     \r_pos_x[1]_i_1 
        (.I0(scaled_x0__86_carry__1_n_5),
         .I1(scaled_x0__86_carry__1_n_6),
-        .I2(r_pos_x1),
+        .I2(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT4 #(
     .INIT(16'hFF1E)) 
     \r_pos_x[2]_i_1 
        (.I0(scaled_x0__86_carry__1_n_6),
         .I1(scaled_x0__86_carry__1_n_5),
         .I2(scaled_x0__86_carry__1_n_4),
-        .I3(r_pos_x1),
+        .I3(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'hFFFF01FE)) 
     \r_pos_x[3]_i_1 
@@ -6017,7 +6004,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(scaled_x0__86_carry__1_n_5),
         .I2(scaled_x0__86_carry__1_n_6),
         .I3(scaled_x0__86_carry__2_n_7),
-        .I4(r_pos_x1),
+        .I4(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF0001FFFE)) 
@@ -6027,77 +6014,88 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(scaled_x0__86_carry__2_n_7),
         .I3(scaled_x0__86_carry__1_n_4),
         .I4(scaled_x0__86_carry__2_n_6),
-        .I5(r_pos_x1),
+        .I5(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF0001FFFE)) 
+    .INIT(64'hFFFFFFFFFFFE0001)) 
     \r_pos_x[5]_i_1 
        (.I0(scaled_x0__86_carry__2_n_6),
         .I1(scaled_x0__86_carry__1_n_4),
         .I2(scaled_x0__86_carry__2_n_7),
         .I3(\r_pos_x[5]_i_2_n_0 ),
         .I4(scaled_x0__86_carry__2_n_5),
-        .I5(r_pos_x1),
+        .I5(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \r_pos_x[5]_i_2 
        (.I0(scaled_x0__86_carry__1_n_6),
         .I1(scaled_x0__86_carry__1_n_5),
         .O(\r_pos_x[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
-  LUT3 #(
-    .INIT(8'hF6)) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT4 #(
+    .INIT(16'h0060)) 
     \r_pos_x[6]_i_1 
-       (.I0(\r_pos_x[9]_i_3_n_0 ),
+       (.I0(\r_pos_x[8]_i_3_n_0 ),
         .I1(scaled_x0__86_carry__2_n_4),
-        .I2(r_pos_x1),
+        .I2(r_pos_x2_carry__2_n_1),
+        .I3(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
-    .INIT(32'h0000D200)) 
+    .INIT(32'h0000E100)) 
     \r_pos_x[7]_i_1 
        (.I0(scaled_x0__86_carry__2_n_4),
-        .I1(\r_pos_x[9]_i_3_n_0 ),
+        .I1(\r_pos_x[8]_i_3_n_0 ),
         .I2(scaled_x0__86_carry__3_n_7),
-        .I3(r_pos_x2_carry__2_n_2),
-        .I4(r_pos_x1),
+        .I3(r_pos_x2_carry__2_n_1),
+        .I4(r_pos_x1_carry__2_n_0),
         .O(\r_pos_x[7]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000BA450000)) 
-    \r_pos_x[8]_i_1 
-       (.I0(scaled_x0__86_carry__3_n_7),
-        .I1(\r_pos_x[9]_i_3_n_0 ),
-        .I2(scaled_x0__86_carry__2_n_4),
-        .I3(scaled_x0__86_carry__3_n_6),
-        .I4(r_pos_x2_carry__2_n_2),
-        .I5(r_pos_x1),
-        .O(\r_pos_x[8]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \r_pos_x[9]_i_1 
-       (.I0(r_pos_x2_carry__2_n_2),
+    \r_pos_x[8]_i_1 
+       (.I0(r_pos_x2_carry__2_n_1),
         .O(r_pos_x2));
+  LUT5 #(
+    .INIT(32'hFFFF57A8)) 
+    \r_pos_x[8]_i_2 
+       (.I0(scaled_x0__86_carry__3_n_7),
+        .I1(\r_pos_x[8]_i_3_n_0 ),
+        .I2(scaled_x0__86_carry__2_n_4),
+        .I3(scaled_x0__86_carry__3_n_6),
+        .I4(r_pos_x1_carry__2_n_0),
+        .O(\r_pos_x[8]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF55F7AA08)) 
-    \r_pos_x[9]_i_2 
-       (.I0(scaled_x0__86_carry__3_n_6),
-        .I1(scaled_x0__86_carry__2_n_4),
-        .I2(\r_pos_x[9]_i_3_n_0 ),
-        .I3(scaled_x0__86_carry__3_n_7),
-        .I4(scaled_x0__86_carry__3_n_5),
-        .I5(r_pos_x1),
-        .O(\r_pos_x[9]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \r_pos_x[9]_i_3 
+    .INIT(64'hAAAAAAAAAAAAAAA8)) 
+    \r_pos_x[8]_i_3 
        (.I0(scaled_x0__86_carry__2_n_5),
         .I1(scaled_x0__86_carry__1_n_5),
         .I2(scaled_x0__86_carry__1_n_6),
         .I3(scaled_x0__86_carry__2_n_7),
         .I4(scaled_x0__86_carry__1_n_4),
         .I5(scaled_x0__86_carry__2_n_6),
-        .O(\r_pos_x[9]_i_3_n_0 ));
+        .O(\r_pos_x[8]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000045BA0000)) 
+    \r_pos_x[9]_i_1 
+       (.I0(scaled_x0__86_carry__3_n_6),
+        .I1(\r_pos_x[9]_i_2_n_0 ),
+        .I2(scaled_x0__86_carry__3_n_7),
+        .I3(scaled_x0__86_carry__3_n_5),
+        .I4(r_pos_x2_carry__2_n_1),
+        .I5(r_pos_x1_carry__2_n_0),
+        .O(\r_pos_x[9]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000155555555)) 
+    \r_pos_x[9]_i_2 
+       (.I0(scaled_x0__86_carry__2_n_4),
+        .I1(scaled_x0__86_carry__2_n_6),
+        .I2(scaled_x0__86_carry__1_n_4),
+        .I3(scaled_x0__86_carry__2_n_7),
+        .I4(\r_pos_x[5]_i_2_n_0 ),
+        .I5(scaled_x0__86_carry__2_n_5),
+        .O(\r_pos_x[9]_i_2_n_0 ));
   FDRE \r_pos_x_reg[0] 
        (.C(clk),
         .CE(1'b1),
@@ -6139,7 +6137,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .CE(1'b1),
         .D(\r_pos_x[6]_i_1_n_0 ),
         .Q(x_coord[6]),
-        .R(r_pos_x2));
+        .R(1'b0));
   FDRE \r_pos_x_reg[7] 
        (.C(clk),
         .CE(1'b1),
@@ -6149,31 +6147,31 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   FDRE \r_pos_x_reg[8] 
        (.C(clk),
         .CE(1'b1),
-        .D(\r_pos_x[8]_i_1_n_0 ),
+        .D(\r_pos_x[8]_i_2_n_0 ),
         .Q(x_coord[8]),
-        .R(1'b0));
+        .R(r_pos_x2));
   FDRE \r_pos_x_reg[9] 
        (.C(clk),
         .CE(1'b1),
-        .D(\r_pos_x[9]_i_2_n_0 ),
+        .D(\r_pos_x[9]_i_1_n_0 ),
         .Q(x_coord[9]),
-        .R(r_pos_x2));
+        .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_y1_carry
        (.CI(1'b0),
         .CO({r_pos_y1_carry_n_0,r_pos_y1_carry_n_1,r_pos_y1_carry_n_2,r_pos_y1_carry_n_3}),
         .CYINIT(1'b1),
-        .DI({1'b0,r_pos_y1_carry_i_1_n_0,r_pos_y1_carry_i_2_n_0,r_pos_y1_carry_i_3_n_0}),
+        .DI({1'b0,1'b0,r_pos_y1_carry_i_1_n_0,r_pos_y1_carry_i_2_n_0}),
         .O(NLW_r_pos_y1_carry_O_UNCONNECTED[3:0]),
-        .S({r_pos_y1_carry_i_4_n_0,r_pos_y1_carry_i_5_n_0,r_pos_y1_carry_i_6_n_0,r_pos_y1_carry_i_7_n_0}));
+        .S({r_pos_y1_carry_i_3_n_0,r_pos_y1_carry_i_4_n_0,r_pos_y1_carry_i_5_n_0,r_pos_y1_carry_i_6_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_y1_carry__0
        (.CI(r_pos_y1_carry_n_0),
         .CO({r_pos_y1_carry__0_n_0,r_pos_y1_carry__0_n_1,r_pos_y1_carry__0_n_2,r_pos_y1_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({r_pos_y1_carry__0_i_1_n_0,r_pos_y1_carry__0_i_2_n_0,r_pos_y1_carry__0_i_3_n_0,r_pos_y2__0[9]}),
+        .DI({r_pos_y1_carry__0_i_1_n_0,r_pos_y1_carry__0_i_2_n_0,r_pos_y1_carry__0_i_3_n_0,r_pos_y1_carry__0_i_4_n_0}),
         .O(NLW_r_pos_y1_carry__0_O_UNCONNECTED[3:0]),
-        .S({r_pos_y1_carry__0_i_4_n_0,r_pos_y1_carry__0_i_5_n_0,r_pos_y1_carry__0_i_6_n_0,r_pos_y1_carry__0_i_7_n_0}));
+        .S({r_pos_y1_carry__0_i_5_n_0,r_pos_y1_carry__0_i_6_n_0,r_pos_y1_carry__0_i_7_n_0,r_pos_y1_carry__0_i_8_n_0}));
   LUT2 #(
     .INIT(4'hE)) 
     r_pos_y1_carry__0_i_1
@@ -6193,29 +6191,35 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(r_pos_y2__0[10]),
         .O(r_pos_y1_carry__0_i_3_n_0));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'hE)) 
     r_pos_y1_carry__0_i_4
-       (.I0(r_pos_y2__0[14]),
-        .I1(r_pos_y2__0[15]),
+       (.I0(r_pos_y2__0[9]),
+        .I1(r_pos_y2__0[8]),
         .O(r_pos_y1_carry__0_i_4_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     r_pos_y1_carry__0_i_5
-       (.I0(r_pos_y2__0[12]),
-        .I1(r_pos_y2__0[13]),
+       (.I0(r_pos_y2__0[14]),
+        .I1(r_pos_y2__0[15]),
         .O(r_pos_y1_carry__0_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     r_pos_y1_carry__0_i_6
-       (.I0(r_pos_y2__0[10]),
-        .I1(r_pos_y2__0[11]),
+       (.I0(r_pos_y2__0[12]),
+        .I1(r_pos_y2__0[13]),
         .O(r_pos_y1_carry__0_i_6_n_0));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h1)) 
     r_pos_y1_carry__0_i_7
+       (.I0(r_pos_y2__0[10]),
+        .I1(r_pos_y2__0[11]),
+        .O(r_pos_y1_carry__0_i_7_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    r_pos_y1_carry__0_i_8
        (.I0(r_pos_y2__0[8]),
         .I1(r_pos_y2__0[9]),
-        .O(r_pos_y1_carry__0_i_7_n_0));
+        .O(r_pos_y1_carry__0_i_8_n_0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_y1_carry__1
        (.CI(r_pos_y1_carry__0_n_0),
@@ -6275,82 +6279,76 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.I0(r_pos_y2_carry__3_n_2),
         .O(r_pos_y1_carry__2_i_3_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'hE)) 
     r_pos_y1_carry_i_1
-       (.I0(r_pos_y2__0[5]),
-        .I1(r_pos_y2__0[4]),
+       (.I0(r_pos_y2__0[3]),
+        .I1(r_pos_y2__0[2]),
         .O(r_pos_y1_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     r_pos_y1_carry_i_2
-       (.I0(r_pos_y2__0[3]),
-        .I1(r_pos_y2__0[2]),
-        .O(r_pos_y1_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    r_pos_y1_carry_i_3
        (.I0(r_pos_y2__0[1]),
         .I1(scaled_y__0[0]),
+        .O(r_pos_y1_carry_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    r_pos_y1_carry_i_3
+       (.I0(r_pos_y2__0[7]),
+        .I1(r_pos_y2__0[6]),
         .O(r_pos_y1_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     r_pos_y1_carry_i_4
-       (.I0(r_pos_y2__0[7]),
-        .I1(r_pos_y2__0[6]),
-        .O(r_pos_y1_carry_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    r_pos_y1_carry_i_5
        (.I0(r_pos_y2__0[5]),
         .I1(r_pos_y2__0[4]),
+        .O(r_pos_y1_carry_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    r_pos_y1_carry_i_5
+       (.I0(r_pos_y2__0[2]),
+        .I1(r_pos_y2__0[3]),
         .O(r_pos_y1_carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     r_pos_y1_carry_i_6
-       (.I0(r_pos_y2__0[2]),
-        .I1(r_pos_y2__0[3]),
-        .O(r_pos_y1_carry_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    r_pos_y1_carry_i_7
        (.I0(scaled_y__0[0]),
         .I1(r_pos_y2__0[1]),
-        .O(r_pos_y1_carry_i_7_n_0));
+        .O(r_pos_y1_carry_i_6_n_0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_y2_carry
        (.CI(1'b0),
         .CO({r_pos_y2_carry_n_0,r_pos_y2_carry_n_1,r_pos_y2_carry_n_2,r_pos_y2_carry_n_3}),
         .CYINIT(r_pos_y2_carry_i_1_n_0),
-        .DI({r_pos_y2_carry_i_2_n_0,1'b0,1'b0,1'b0}),
+        .DI({r_pos_y2_carry_i_2_n_0,r_pos_y2_carry_i_3_n_0,1'b0,1'b0}),
         .O(r_pos_y2__0[4:1]),
-        .S({scaled_y[4],r_pos_y2_carry_i_3_n_0,r_pos_y2_carry_i_4_n_0,r_pos_y2_carry_i_5_n_0}));
+        .S({scaled_y[4:3],r_pos_y2_carry_i_4_n_0,r_pos_y2_carry_i_5_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_y2_carry__0
        (.CI(r_pos_y2_carry_n_0),
         .CO({r_pos_y2_carry__0_n_0,r_pos_y2_carry__0_n_1,r_pos_y2_carry__0_n_2,r_pos_y2_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,r_pos_y2_carry__0_i_1_n_0,r_pos_y2_carry__0_i_2_n_0,r_pos_y2_carry__0_i_3_n_0}),
+        .DI({1'b0,1'b0,r_pos_y2_carry__0_i_1_n_0,r_pos_y2_carry__0_i_2_n_0}),
         .O(r_pos_y2__0[8:5]),
-        .S({r_pos_y2_carry__0_i_4_n_0,scaled_y[7:5]}));
+        .S({r_pos_y2_carry__0_i_3_n_0,r_pos_y2_carry__0_i_4_n_0,scaled_y[6:5]}));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_y2_carry__0_i_1
-       (.I0(scaled_y[7]),
+       (.I0(scaled_y[6]),
         .O(r_pos_y2_carry__0_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_y2_carry__0_i_2
-       (.I0(scaled_y[6]),
+       (.I0(scaled_y[5]),
         .O(r_pos_y2_carry__0_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_y2_carry__0_i_3
-       (.I0(scaled_y[5]),
+       (.I0(scaled_y[8]),
         .O(r_pos_y2_carry__0_i_3_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_y2_carry__0_i_4
-       (.I0(scaled_y[8]),
+       (.I0(scaled_y[7]),
         .O(r_pos_y2_carry__0_i_4_n_0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 r_pos_y2_carry__1
@@ -6434,7 +6432,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT1 #(
     .INIT(2'h1)) 
     r_pos_y2_carry_i_3
-       (.I0(scaled_y__0[3]),
+       (.I0(scaled_y[3]),
         .O(r_pos_y2_carry_i_3_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -6446,100 +6444,103 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
     r_pos_y2_carry_i_5
        (.I0(scaled_y__0[1]),
         .O(r_pos_y2_carry_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \r_pos_y[0]_i_1 
        (.I0(scaled_y__0[0]),
         .I1(r_pos_y1_carry__2_n_0),
         .O(\r_pos_y[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \r_pos_y[1]_i_1 
        (.I0(scaled_y__0[1]),
         .I1(r_pos_y1_carry__2_n_0),
         .O(\r_pos_y[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \r_pos_y[2]_i_1 
        (.I0(scaled_y__0[2]),
         .I1(r_pos_y1_carry__2_n_0),
         .O(\r_pos_y[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \r_pos_y[3]_i_1 
-       (.I0(scaled_y__0[3]),
-        .I1(r_pos_y1_carry__2_n_0),
-        .O(\r_pos_y[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT2 #(
     .INIT(4'hB)) 
-    \r_pos_y[4]_i_1 
+    \r_pos_y[3]_i_1 
        (.I0(r_pos_y1_carry__2_n_0),
-        .I1(scaled_y[4]),
-        .O(\r_pos_y[4]_i_1_n_0 ));
+        .I1(scaled_y[3]),
+        .O(\r_pos_y[3]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h0090)) 
-    \r_pos_y[5]_i_1 
-       (.I0(scaled_y[5]),
-        .I1(scaled_y[4]),
+    \r_pos_y[4]_i_1 
+       (.I0(scaled_y[4]),
+        .I1(scaled_y[3]),
         .I2(r_pos_y2_carry__3_n_2),
         .I3(r_pos_y1_carry__2_n_0),
-        .O(\r_pos_y[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+        .O(\r_pos_y[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT4 #(
     .INIT(16'hFFE1)) 
-    \r_pos_y[6]_i_1 
-       (.I0(scaled_y[4]),
-        .I1(scaled_y[5]),
-        .I2(scaled_y[6]),
+    \r_pos_y[5]_i_1 
+       (.I0(scaled_y[3]),
+        .I1(scaled_y[4]),
+        .I2(scaled_y[5]),
         .I3(r_pos_y1_carry__2_n_0),
-        .O(\r_pos_y[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+        .O(\r_pos_y[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT5 #(
     .INIT(32'hFFFFFE01)) 
-    \r_pos_y[7]_i_1 
-       (.I0(scaled_y[5]),
-        .I1(scaled_y[4]),
-        .I2(scaled_y[6]),
-        .I3(scaled_y[7]),
+    \r_pos_y[6]_i_1 
+       (.I0(scaled_y[4]),
+        .I1(scaled_y[3]),
+        .I2(scaled_y[5]),
+        .I3(scaled_y[6]),
         .I4(r_pos_y1_carry__2_n_0),
-        .O(\r_pos_y[7]_i_1_n_0 ));
+        .O(\r_pos_y[6]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \r_pos_y[8]_i_1 
+    \r_pos_y[7]_i_1 
        (.I0(r_pos_y2_carry__3_n_2),
         .O(r_pos_y2));
   LUT6 #(
     .INIT(64'hFFFFFFFF0001FFFE)) 
-    \r_pos_y[8]_i_2 
-       (.I0(scaled_y[6]),
-        .I1(scaled_y[4]),
-        .I2(scaled_y[5]),
-        .I3(scaled_y[7]),
-        .I4(scaled_y[8]),
+    \r_pos_y[7]_i_2 
+       (.I0(scaled_y[5]),
+        .I1(scaled_y[3]),
+        .I2(scaled_y[4]),
+        .I3(scaled_y[6]),
+        .I4(scaled_y[7]),
         .I5(r_pos_y1_carry__2_n_0),
-        .O(\r_pos_y[8]_i_2_n_0 ));
+        .O(\r_pos_y[7]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT4 #(
+    .INIT(16'h0060)) 
+    \r_pos_y[8]_i_1 
+       (.I0(\r_pos_y[9]_i_2_n_0 ),
+        .I1(scaled_y[8]),
+        .I2(r_pos_y2_carry__3_n_2),
+        .I3(r_pos_y1_carry__2_n_0),
+        .O(\r_pos_y[8]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
-    .INIT(32'h0000D200)) 
+    .INIT(32'h00007800)) 
     \r_pos_y[9]_i_1 
-       (.I0(scaled_y[8]),
-        .I1(\r_pos_y[9]_i_2_n_0 ),
+       (.I0(\r_pos_y[9]_i_2_n_0 ),
+        .I1(scaled_y[8]),
         .I2(scaled_y[9]),
         .I3(r_pos_y2_carry__3_n_2),
         .I4(r_pos_y1_carry__2_n_0),
         .O(\r_pos_y[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
+  LUT5 #(
+    .INIT(32'hAAAAAAA8)) 
     \r_pos_y[9]_i_2 
-       (.I0(scaled_y[6]),
-        .I1(scaled_y[4]),
-        .I2(scaled_y[5]),
-        .I3(scaled_y[7]),
+       (.I0(scaled_y[7]),
+        .I1(scaled_y[6]),
+        .I2(scaled_y[4]),
+        .I3(scaled_y[3]),
+        .I4(scaled_y[5]),
         .O(\r_pos_y[9]_i_2_n_0 ));
   FDRE \r_pos_y_reg[0] 
        (.C(clk),
@@ -6570,13 +6571,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .CE(1'b1),
         .D(\r_pos_y[4]_i_1_n_0 ),
         .Q(y_coord[4]),
-        .R(r_pos_y2));
+        .R(1'b0));
   FDRE \r_pos_y_reg[5] 
        (.C(clk),
         .CE(1'b1),
         .D(\r_pos_y[5]_i_1_n_0 ),
         .Q(y_coord[5]),
-        .R(1'b0));
+        .R(r_pos_y2));
   FDRE \r_pos_y_reg[6] 
        (.C(clk),
         .CE(1'b1),
@@ -6586,15 +6587,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   FDRE \r_pos_y_reg[7] 
        (.C(clk),
         .CE(1'b1),
-        .D(\r_pos_y[7]_i_1_n_0 ),
+        .D(\r_pos_y[7]_i_2_n_0 ),
         .Q(y_coord[7]),
         .R(r_pos_y2));
   FDRE \r_pos_y_reg[8] 
        (.C(clk),
         .CE(1'b1),
-        .D(\r_pos_y[8]_i_2_n_0 ),
+        .D(\r_pos_y[8]_i_1_n_0 ),
         .Q(y_coord[8]),
-        .R(r_pos_y2));
+        .R(1'b0));
   FDRE \r_pos_y_reg[9] 
        (.C(clk),
         .CE(1'b1),
@@ -7114,7 +7115,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .CO({scaled_y0__86_carry__1_n_0,scaled_y0__86_carry__1_n_1,scaled_y0__86_carry__1_n_2,scaled_y0__86_carry__1_n_3}),
         .CYINIT(1'b0),
         .DI({scaled_y0_carry__3_n_7,scaled_y0_carry__2_n_4,scaled_y0_carry__2_n_5,scaled_y0_carry__2_n_6}),
-        .O({scaled_y__0[2:0],NLW_scaled_y0__86_carry__1_O_UNCONNECTED[0]}),
+        .O({scaled_y__0,NLW_scaled_y0__86_carry__1_O_UNCONNECTED[0]}),
         .S({scaled_y0__86_carry__1_i_1_n_0,scaled_y0__86_carry__1_i_2_n_0,scaled_y0__86_carry__1_i_3_n_0,scaled_y0__86_carry__1_i_4_n_0}));
   LUT2 #(
     .INIT(4'h6)) 
@@ -7146,7 +7147,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .CO({scaled_y0__86_carry__2_n_0,scaled_y0__86_carry__2_n_1,scaled_y0__86_carry__2_n_2,scaled_y0__86_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({scaled_y0_carry__4_n_7,scaled_y0_carry__3_n_4,scaled_y0_carry__3_n_5,scaled_y0_carry__3_n_6}),
-        .O({scaled_y[6:4],scaled_y__0[3]}),
+        .O(scaled_y[6:3]),
         .S({scaled_y0__86_carry__2_i_1_n_0,scaled_y0__86_carry__2_i_2_n_0,scaled_y0__86_carry__2_i_3_n_0,scaled_y0__86_carry__2_i_4_n_0}));
   LUT2 #(
     .INIT(4'h6)) 
@@ -7554,7 +7555,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I3(\state[1]_i_2_n_0 ),
         .I4(\still_cnt[6]_i_1_n_0 ),
         .O(\state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT5 #(
     .INIT(32'hFFBFFFFF)) 
     \state[1]_i_2 
@@ -7576,7 +7577,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .D(\state[1]_i_1_n_0 ),
         .Q(\state_reg_n_0_[1] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \still_cnt[0]_i_1 
@@ -7584,7 +7585,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(\still_cnt_reg_n_0_[0] ),
         .O(\still_cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \still_cnt[1]_i_1 
@@ -7593,7 +7594,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(\still_cnt_reg_n_0_[1] ),
         .I3(\still_cnt_reg_n_0_[0] ),
         .O(\still_cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT5 #(
     .INIT(32'h04444000)) 
     \still_cnt[2]_i_1 
@@ -7613,7 +7614,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I4(\still_cnt_reg_n_0_[2] ),
         .I5(\still_cnt_reg_n_0_[3] ),
         .O(\still_cnt[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT4 #(
     .INIT(16'h4004)) 
     \still_cnt[4]_i_1 
@@ -7622,7 +7623,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(\still_cnt[4]_i_2_n_0 ),
         .I3(\still_cnt_reg_n_0_[4] ),
         .O(\still_cnt[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \still_cnt[4]_i_2 
@@ -7631,7 +7632,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(\still_cnt_reg_n_0_[1] ),
         .I3(\still_cnt_reg_n_0_[3] ),
         .O(\still_cnt[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT4 #(
     .INIT(16'h4004)) 
     \still_cnt[5]_i_1 
@@ -7656,7 +7657,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I3(\z_bias[15]_i_3_n_0 ),
         .I4(cal_done_i_2_n_0),
         .O(\still_cnt[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT5 #(
     .INIT(32'h40440400)) 
     \still_cnt[6]_i_3 
@@ -7667,16 +7668,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I4(\still_cnt_reg_n_0_[6] ),
         .O(\still_cnt[6]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFBABB)) 
+    .INIT(64'hFFFFFFFF0D0D0DFF)) 
     \still_cnt[6]_i_4 
        (.I0(\z_bias[15]_i_9_n_0 ),
         .I1(\z_bias[15]_i_8_n_0 ),
-        .I2(\still_cnt[6]_i_6_n_0 ),
-        .I3(\still_cnt[6]_i_7_n_0 ),
-        .I4(\z_bias[15]_i_6_n_0 ),
+        .I2(\z_bias[15]_i_7_n_0 ),
+        .I3(\still_cnt[6]_i_6_n_0 ),
+        .I4(\still_cnt[6]_i_7_n_0 ),
         .I5(\z_bias[15]_i_5_n_0 ),
         .O(\still_cnt[6]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT5 #(
     .INIT(32'h7FFFFFFF)) 
     \still_cnt[6]_i_5 
@@ -7686,25 +7687,21 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I3(\still_cnt_reg_n_0_[2] ),
         .I4(\still_cnt_reg_n_0_[4] ),
         .O(\still_cnt[6]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \still_cnt[6]_i_6 
-       (.I0(adj_x_rate[5]),
-        .I1(adj_x_rate[4]),
-        .I2(adj_x_rate[1]),
-        .I3(adj_x_rate[0]),
-        .I4(\z_bias[15]_i_21_n_0 ),
-        .I5(\z_bias[15]_i_20_n_0 ),
+       (.I0(db_z_rate2),
+        .I1(db_z_rate20_in),
         .O(\still_cnt[6]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
+    .INIT(64'h0000000000000100)) 
     \still_cnt[6]_i_7 
-       (.I0(\z_bias[15]_i_19_n_0 ),
-        .I1(\z_bias[15]_i_18_n_0 ),
-        .I2(adj_x_rate[7]),
-        .I3(adj_x_rate[6]),
-        .I4(adj_x_rate[3]),
-        .I5(adj_x_rate[2]),
+       (.I0(adj_z_rate[14]),
+        .I1(adj_z_rate[15]),
+        .I2(\z_bias[15]_i_18_n_0 ),
+        .I3(\z_bias[15]_i_17_n_0 ),
+        .I4(\z_bias[15]_i_16_n_0 ),
+        .I5(\z_bias[15]_i_15_n_0 ),
         .O(\still_cnt[6]_i_7_n_0 ));
   FDRE \still_cnt_reg[0] 
        (.C(clk),
@@ -7950,7 +7947,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(1'b0),
         .CO({\x_acc1_inferred__0/i__carry_n_0 ,\x_acc1_inferred__0/i__carry_n_1 ,\x_acc1_inferred__0/i__carry_n_2 ,\x_acc1_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry_i_1__1_n_0,1'b0,i__carry_i_2__3_n_0,i__carry_i_3__3_n_0}),
+        .DI({i__carry_i_1__1_n_0,1'b0,i__carry_i_2__2_n_0,i__carry_i_3__3_n_0}),
         .O(\NLW_x_acc1_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_4__2_n_0,i__carry_i_5__3_n_0,i__carry_i_6__3_n_0,i__carry_i_7__2_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -7958,9 +7955,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(\x_acc1_inferred__0/i__carry_n_0 ),
         .CO({\x_acc1_inferred__0/i__carry__0_n_0 ,\x_acc1_inferred__0/i__carry__0_n_1 ,\x_acc1_inferred__0/i__carry__0_n_2 ,\x_acc1_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,i__carry__0_i_1__0_n_0,i__carry__0_i_2__2_n_0,next_x_acc[9]}),
+        .DI({1'b0,i__carry__0_i_1__0_n_0,i__carry__0_i_2__1_n_0,next_x_acc[9]}),
         .O(\NLW_x_acc1_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
-        .S({i__carry__0_i_3__1_n_0,i__carry__0_i_4__1_n_0,i__carry__0_i_5__3_n_0,i__carry__0_i_6__2_n_0}));
+        .S({i__carry__0_i_3__1_n_0,i__carry__0_i_4__3_n_0,i__carry__0_i_5__2_n_0,i__carry__0_i_6__2_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \x_acc1_inferred__0/i__carry__1 
        (.CI(\x_acc1_inferred__0/i__carry__0_n_0 ),
@@ -7977,7 +7974,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .DI({i__carry__2_i_1__0_n_0,i__carry__2_i_2__0_n_0,i__carry__2_i_3__0_n_0,i__carry__2_i_4__0_n_0}),
         .O(\NLW_x_acc1_inferred__0/i__carry__2_O_UNCONNECTED [3:0]),
         .S({i__carry__2_i_5__0_n_0,i__carry__2_i_6__0_n_0,i__carry__2_i_7__0_n_0,i__carry__2_i_8__0_n_0}));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \x_acc[0]_i_1 
@@ -8022,7 +8019,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[13]),
         .O(\x_acc[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT4 #(
     .INIT(16'hAA08)) 
     \x_acc[14]_i_1 
@@ -8031,7 +8028,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(x_acc10_in),
         .O(\x_acc[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT4 #(
     .INIT(16'hAA08)) 
     \x_acc[15]_i_1 
@@ -8040,7 +8037,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(x_acc10_in),
         .O(\x_acc[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT4 #(
     .INIT(16'hAA08)) 
     \x_acc[16]_i_1 
@@ -8076,7 +8073,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[19]),
         .O(\x_acc[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \x_acc[1]_i_1 
@@ -8094,7 +8091,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[20]),
         .O(\x_acc[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[21]_i_1 
@@ -8103,7 +8100,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[21]),
         .O(\x_acc[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[22]_i_1 
@@ -8112,7 +8109,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[22]),
         .O(\x_acc[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[23]_i_1 
@@ -8121,7 +8118,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[23]),
         .O(\x_acc[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[24]_i_1 
@@ -8130,7 +8127,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[24]),
         .O(\x_acc[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[25]_i_1 
@@ -8139,7 +8136,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[25]),
         .O(\x_acc[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[26]_i_1 
@@ -8148,7 +8145,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[26]),
         .O(\x_acc[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[27]_i_1 
@@ -8157,7 +8154,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[27]),
         .O(\x_acc[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[28]_i_1 
@@ -8166,7 +8163,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[28]),
         .O(\x_acc[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[29]_i_1 
@@ -8184,7 +8181,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(next_x_acc[2]),
         .I3(x_acc1),
         .O(\x_acc[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[30]_i_1 
@@ -8193,7 +8190,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[30]),
         .O(\x_acc[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \x_acc[31]_i_1 
@@ -8202,7 +8199,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[31]),
         .O(\x_acc[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'hAAA8)) 
     \x_acc[3]_i_1 
@@ -8247,7 +8244,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(x_acc1),
         .I3(next_x_acc[7]),
         .O(\x_acc[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT4 #(
     .INIT(16'hAA08)) 
     \x_acc[8]_i_1 
@@ -8500,8 +8497,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'h1)) 
     x_bias1_carry__0_i_5
-       (.I0(adj_x_rate[15]),
-        .I1(adj_x_rate[14]),
+       (.I0(adj_x_rate[14]),
+        .I1(adj_x_rate[15]),
         .O(x_bias1_carry__0_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -8542,8 +8539,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'hE)) 
     x_bias1_carry_i_4
-       (.I0(adj_x_rate[1]),
-        .I1(adj_x_rate[0]),
+       (.I0(adj_x_rate[0]),
+        .I1(adj_x_rate[1]),
         .O(x_bias1_carry_i_4_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -8566,10 +8563,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'h1)) 
     x_bias1_carry_i_8
-       (.I0(adj_x_rate[0]),
-        .I1(adj_x_rate[1]),
+       (.I0(adj_x_rate[1]),
+        .I1(adj_x_rate[0]),
         .O(x_bias1_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'h74)) 
     \x_bias[0]_i_1 
@@ -8577,7 +8574,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[9]),
         .O(\x_bias[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[10]_i_1 
@@ -8585,7 +8582,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[19]),
         .O(\x_bias[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[11]_i_1 
@@ -8593,7 +8590,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[20]),
         .O(\x_bias[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[12]_i_1 
@@ -8601,7 +8598,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[21]),
         .O(\x_bias[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[13]_i_1 
@@ -8609,7 +8606,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[22]),
         .O(\x_bias[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[14]_i_1 
@@ -8626,7 +8623,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I3(\x_bias[15]_i_3_n_0 ),
         .I4(cal_done_i_2_n_0),
         .O(\x_bias[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[15]_i_2 
@@ -8643,7 +8640,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I3(x_bias1_carry__0_n_0),
         .I4(adj_x_rate[15]),
         .O(\x_bias[15]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[1]_i_1 
@@ -8651,7 +8648,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[10]),
         .O(\x_bias[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[2]_i_1 
@@ -8659,7 +8656,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[11]),
         .O(\x_bias[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[3]_i_1 
@@ -8667,7 +8664,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[12]),
         .O(\x_bias[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[4]_i_1 
@@ -8675,7 +8672,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[13]),
         .O(\x_bias[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[5]_i_1 
@@ -8683,7 +8680,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[14]),
         .O(\x_bias[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[6]_i_1 
@@ -8691,7 +8688,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[15]),
         .O(\x_bias[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[7]_i_1 
@@ -8699,7 +8696,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[16]),
         .O(\x_bias[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[8]_i_1 
@@ -8707,7 +8704,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_x_sum[17]),
         .O(\x_bias[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \x_bias[9]_i_1 
@@ -9073,7 +9070,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.I0(adj_y_rate[1]),
         .I1(adj_y_rate[0]),
         .O(y_bias1_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'h74)) 
     \y_bias[0]_i_1 
@@ -9081,7 +9078,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[9]),
         .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[10]_i_1 
@@ -9089,7 +9086,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[19]),
         .O(p_1_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[11]_i_1 
@@ -9097,7 +9094,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[20]),
         .O(p_1_in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[12]_i_1 
@@ -9105,7 +9102,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[21]),
         .O(p_1_in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[13]_i_1 
@@ -9113,7 +9110,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[22]),
         .O(p_1_in[13]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[14]_i_1 
@@ -9130,7 +9127,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I3(\y_bias[15]_i_3_n_0 ),
         .I4(cal_done_i_2_n_0),
         .O(\y_bias[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[15]_i_2 
@@ -9147,7 +9144,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I3(y_bias1_carry__0_n_0),
         .I4(adj_y_rate[15]),
         .O(\y_bias[15]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[1]_i_1 
@@ -9155,7 +9152,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[10]),
         .O(p_1_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[2]_i_1 
@@ -9163,7 +9160,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[11]),
         .O(p_1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[3]_i_1 
@@ -9171,7 +9168,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[12]),
         .O(p_1_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[4]_i_1 
@@ -9179,7 +9176,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[13]),
         .O(p_1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[5]_i_1 
@@ -9187,7 +9184,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[14]),
         .O(p_1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[6]_i_1 
@@ -9195,7 +9192,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[15]),
         .O(p_1_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[7]_i_1 
@@ -9203,7 +9200,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[16]),
         .O(p_1_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[8]_i_1 
@@ -9211,7 +9208,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_y_sum[17]),
         .O(p_1_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \y_bias[9]_i_1 
@@ -9662,7 +9659,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(1'b0),
         .CO({\z_acc1_inferred__0/i__carry_n_0 ,\z_acc1_inferred__0/i__carry_n_1 ,\z_acc1_inferred__0/i__carry_n_2 ,\z_acc1_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,i__carry_i_1__0_n_0,i__carry_i_2__2_n_0}),
+        .DI({1'b0,1'b0,i__carry_i_1__0_n_0,i__carry_i_2__1_n_0}),
         .O(\NLW_z_acc1_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_3__2_n_0,i__carry_i_4__1_n_0,i__carry_i_5__2_n_0,i__carry_i_6__2_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -9670,9 +9667,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.CI(\z_acc1_inferred__0/i__carry_n_0 ),
         .CO({\z_acc1_inferred__0/i__carry__0_n_0 ,\z_acc1_inferred__0/i__carry__0_n_1 ,\z_acc1_inferred__0/i__carry__0_n_2 ,\z_acc1_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({next_z_acc[15],i__carry__0_i_1_n_0,i__carry__0_i_2__1_n_0,next_z_acc[9]}),
+        .DI({next_z_acc[15],i__carry__0_i_1_n_0,i__carry__0_i_2__0_n_0,next_z_acc[9]}),
         .O(\NLW_z_acc1_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
-        .S({i__carry__0_i_3__0_n_0,i__carry__0_i_4__0_n_0,i__carry__0_i_5__2_n_0,i__carry__0_i_6__1_n_0}));
+        .S({i__carry__0_i_3__0_n_0,i__carry__0_i_4__2_n_0,i__carry__0_i_5__1_n_0,i__carry__0_i_6__1_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \z_acc1_inferred__0/i__carry__1 
        (.CI(\z_acc1_inferred__0/i__carry__0_n_0 ),
@@ -10204,8 +10201,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'hE)) 
     z_bias1_carry__0_i_2
-       (.I0(adj_z_rate[13]),
-        .I1(adj_z_rate[12]),
+       (.I0(adj_z_rate[12]),
+        .I1(adj_z_rate[13]),
         .O(z_bias1_carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -10222,14 +10219,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'h1)) 
     z_bias1_carry__0_i_5
-       (.I0(adj_z_rate[15]),
-        .I1(adj_z_rate[14]),
+       (.I0(adj_z_rate[14]),
+        .I1(adj_z_rate[15]),
         .O(z_bias1_carry__0_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     z_bias1_carry__0_i_6
-       (.I0(adj_z_rate[12]),
-        .I1(adj_z_rate[13]),
+       (.I0(adj_z_rate[13]),
+        .I1(adj_z_rate[12]),
         .O(z_bias1_carry__0_i_6_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -10291,7 +10288,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
        (.I0(adj_z_rate[1]),
         .I1(adj_z_rate[0]),
         .O(z_bias1_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'h74)) 
     \z_bias[0]_i_1 
@@ -10331,7 +10328,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_z_sum[22]),
         .O(\z_bias[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[14]_i_1 
@@ -10389,44 +10386,43 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I2(adj_y_rate[2]),
         .I3(adj_y_rate[3]),
         .O(\z_bias[15]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \z_bias[15]_i_15 
-       (.I0(db_z_rate2),
-        .I1(db_z_rate20_in),
-        .O(\z_bias[15]_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \z_bias[15]_i_16 
-       (.I0(adj_z_rate[4]),
-        .I1(adj_z_rate[5]),
-        .I2(adj_z_rate[14]),
-        .I3(adj_z_rate[6]),
-        .I4(adj_z_rate[13]),
-        .I5(adj_z_rate[12]),
-        .O(\z_bias[15]_i_16_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
+    \z_bias[15]_i_15 
+       (.I0(adj_z_rate[3]),
+        .I1(adj_z_rate[1]),
+        .I2(adj_z_rate[12]),
+        .I3(adj_z_rate[10]),
+        .O(\z_bias[15]_i_15_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \z_bias[15]_i_16 
+       (.I0(adj_z_rate[2]),
+        .I1(adj_z_rate[13]),
+        .I2(adj_z_rate[0]),
+        .I3(adj_z_rate[9]),
+        .O(\z_bias[15]_i_16_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
     \z_bias[15]_i_17 
-       (.I0(adj_x_rate[2]),
-        .I1(adj_x_rate[3]),
-        .I2(adj_x_rate[6]),
-        .I3(adj_x_rate[7]),
+       (.I0(adj_z_rate[6]),
+        .I1(adj_z_rate[8]),
+        .I2(adj_z_rate[11]),
+        .I3(adj_z_rate[7]),
         .O(\z_bias[15]_i_17_n_0 ));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'hE)) 
     \z_bias[15]_i_18 
-       (.I0(adj_x_rate[15]),
-        .I1(adj_x_rate[14]),
+       (.I0(adj_z_rate[5]),
+        .I1(adj_z_rate[4]),
         .O(\z_bias[15]_i_18_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
     \z_bias[15]_i_19 
-       (.I0(adj_x_rate[11]),
-        .I1(adj_x_rate[10]),
+       (.I0(adj_z_rate[15]),
+        .I1(adj_z_rate[14]),
         .O(\z_bias[15]_i_19_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[15]_i_2 
@@ -10437,35 +10433,29 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
   LUT2 #(
     .INIT(4'hE)) 
     \z_bias[15]_i_20 
-       (.I0(adj_x_rate[13]),
-        .I1(adj_x_rate[12]),
+       (.I0(adj_x_rate[11]),
+        .I1(adj_x_rate[10]),
         .O(\z_bias[15]_i_20_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
     \z_bias[15]_i_21 
+       (.I0(adj_x_rate[7]),
+        .I1(adj_x_rate[6]),
+        .O(\z_bias[15]_i_21_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \z_bias[15]_i_22 
        (.I0(adj_x_rate[9]),
         .I1(adj_x_rate[8]),
-        .O(\z_bias[15]_i_21_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \z_bias[15]_i_22 
-       (.I0(adj_x_rate[0]),
-        .I1(adj_x_rate[1]),
-        .I2(adj_x_rate[4]),
-        .I3(adj_x_rate[5]),
         .O(\z_bias[15]_i_22_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFF00FEFEFE00)) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \z_bias[15]_i_23 
-       (.I0(adj_z_rate[10]),
-        .I1(adj_z_rate[8]),
-        .I2(adj_z_rate[2]),
-        .I3(db_z_rate20_in),
-        .I4(db_z_rate2),
-        .I5(adj_z_rate[7]),
+       (.I0(adj_x_rate[13]),
+        .I1(adj_x_rate[12]),
         .O(\z_bias[15]_i_23_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000001110)) 
+    .INIT(64'h0000000010111010)) 
     \z_bias[15]_i_3 
        (.I0(\z_bias[15]_i_5_n_0 ),
         .I1(\z_bias[15]_i_6_n_0 ),
@@ -10494,42 +10484,42 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I5(\z_bias[15]_i_14_n_0 ),
         .O(\z_bias[15]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h5555555555555554)) 
+    .INIT(64'h5555555555555455)) 
     \z_bias[15]_i_6 
-       (.I0(\z_bias[15]_i_15_n_0 ),
-        .I1(\z_bias[15]_i_16_n_0 ),
-        .I2(adj_z_rate[9]),
-        .I3(adj_z_rate[1]),
-        .I4(adj_z_rate[0]),
-        .I5(adj_z_rate[3]),
+       (.I0(\still_cnt[6]_i_6_n_0 ),
+        .I1(\z_bias[15]_i_15_n_0 ),
+        .I2(\z_bias[15]_i_16_n_0 ),
+        .I3(\z_bias[15]_i_17_n_0 ),
+        .I4(\z_bias[15]_i_18_n_0 ),
+        .I5(\z_bias[15]_i_19_n_0 ),
         .O(\z_bias[15]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    \z_bias[15]_i_7 
-       (.I0(\z_bias[15]_i_17_n_0 ),
-        .I1(\z_bias[15]_i_18_n_0 ),
-        .I2(\z_bias[15]_i_19_n_0 ),
-        .I3(\z_bias[15]_i_20_n_0 ),
-        .I4(\z_bias[15]_i_21_n_0 ),
-        .I5(\z_bias[15]_i_22_n_0 ),
-        .O(\z_bias[15]_i_7_n_0 ));
   LUT2 #(
     .INIT(4'h1)) 
-    \z_bias[15]_i_8 
+    \z_bias[15]_i_7 
        (.I0(db_x_rate2),
         .I1(db_x_rate22_in),
+        .O(\z_bias[15]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \z_bias[15]_i_8 
+       (.I0(\z_bias[15]_i_20_n_0 ),
+        .I1(adj_x_rate[15]),
+        .I2(adj_x_rate[14]),
+        .I3(\z_bias[15]_i_21_n_0 ),
+        .I4(adj_x_rate[3]),
+        .I5(adj_x_rate[2]),
         .O(\z_bias[15]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFCA8)) 
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
     \z_bias[15]_i_9 
-       (.I0(adj_z_rate[11]),
-        .I1(db_z_rate20_in),
-        .I2(db_z_rate2),
-        .I3(adj_z_rate[15]),
-        .I4(\z_bias[15]_i_23_n_0 ),
+       (.I0(adj_x_rate[5]),
+        .I1(adj_x_rate[4]),
+        .I2(adj_x_rate[1]),
+        .I3(adj_x_rate[0]),
+        .I4(\z_bias[15]_i_22_n_0 ),
+        .I5(\z_bias[15]_i_23_n_0 ),
         .O(\z_bias[15]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[1]_i_1 
@@ -10537,7 +10527,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_z_sum[10]),
         .O(\z_bias[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[2]_i_1 
@@ -10545,7 +10535,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_z_sum[11]),
         .O(\z_bias[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[3]_i_1 
@@ -10553,7 +10543,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_z_sum[12]),
         .O(\z_bias[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[4]_i_1 
@@ -10561,7 +10551,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_z_sum[13]),
         .O(\z_bias[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[5]_i_1 
@@ -10569,7 +10559,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_z_sum[14]),
         .O(\z_bias[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[6]_i_1 
@@ -10577,7 +10567,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gyro_aim_calculator
         .I1(\state_reg_n_0_[1] ),
         .I2(next_z_sum[15]),
         .O(\z_bias[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \z_bias[7]_i_1 

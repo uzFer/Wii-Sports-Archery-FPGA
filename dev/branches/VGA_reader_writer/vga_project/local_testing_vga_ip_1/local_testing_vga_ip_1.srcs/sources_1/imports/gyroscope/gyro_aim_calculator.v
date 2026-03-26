@@ -6,8 +6,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module gyro_aim_calculator #(
-    parameter SCREEN_WIDTH = 640,
-    parameter SCREEN_HEIGHT = 480,
+    parameter SCREEN_WIDTH = 320,
+    parameter SCREEN_HEIGHT = 240,
     parameter ACCUM_BITS = 32,
     parameter CAL_SAMPLES_LOG2 = 9, // 2^9 = 512 samples
     parameter NUMERATOR = 35,       // Scaling numerator (approx 8.75 factor)

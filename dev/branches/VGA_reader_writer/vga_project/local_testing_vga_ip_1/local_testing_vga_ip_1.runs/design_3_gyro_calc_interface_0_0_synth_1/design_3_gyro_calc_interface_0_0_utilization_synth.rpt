@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Mar 24 11:43:57 2026
+| Date         : Thu Mar 26 13:35:19 2026
 | Host         : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_3_gyro_calc_interface_0_0_utilization_synth.rpt -pb design_3_gyro_calc_interface_0_0_utilization_synth.pb
 | Design       : design_3_gyro_calc_interface_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  831 |     0 |     63400 |  1.31 |
-|   LUT as Logic          |  831 |     0 |     63400 |  1.31 |
+| Slice LUTs*             |  833 |     0 |     63400 |  1.31 |
+|   LUT as Logic          |  833 |     0 |     63400 |  1.31 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
 | Slice Registers         |  417 |     0 |    126800 |  0.33 |
 |   Register as Flip Flop |  417 |     0 |    126800 |  0.33 |
@@ -146,14 +146,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |  705 |                 LUT |
+| LUT2     |  704 |                 LUT |
 | FDRE     |  417 |        Flop & Latch |
 | CARRY4   |  175 |          CarryLogic |
-| LUT4     |  135 |                 LUT |
-| LUT3     |   99 |                 LUT |
+| LUT4     |  137 |                 LUT |
+| LUT3     |   98 |                 LUT |
 | LUT1     |   52 |                 LUT |
-| LUT6     |   47 |                 LUT |
-| LUT5     |   44 |                 LUT |
+| LUT6     |   45 |                 LUT |
+| LUT5     |   45 |                 LUT |
 +----------+------+---------------------+
 
 

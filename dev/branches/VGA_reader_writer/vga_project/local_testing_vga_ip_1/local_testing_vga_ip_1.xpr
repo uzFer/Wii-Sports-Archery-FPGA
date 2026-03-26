@@ -250,14 +250,11 @@
         <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_ps2_keyboard_subsyst_0_0/design_3_ps2_keyboard_subsyst_0_0.xci">
           <Proxy FileSetName="design_3_ps2_keyboard_subsyst_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_framewriter_0_0/design_3_framewriter_0_0.xci">
+          <Proxy FileSetName="design_3_framewriter_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_xbar_0/design_3_xbar_0.xci">
           <Proxy FileSetName="design_3_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_axi_gpio_5_0/design_3_axi_gpio_5_0.xci">
-          <Proxy FileSetName="design_3_axi_gpio_5_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_archery_fsm_0_0/design_3_archery_fsm_0_0.xci">
-          <Proxy FileSetName="design_3_archery_fsm_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_gyro_calc_interface_0_0/design_3_gyro_calc_interface_0_0.xci">
           <Proxy FileSetName="design_3_gyro_calc_interface_0_0"/>
@@ -265,11 +262,14 @@
         <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_top_sound_0_0/design_3_top_sound_0_0.xci">
           <Proxy FileSetName="design_3_top_sound_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_archery_fsm_0_0/design_3_archery_fsm_0_0.xci">
+          <Proxy FileSetName="design_3_archery_fsm_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_scoring_engine_0_0/design_3_scoring_engine_0_0.xci">
           <Proxy FileSetName="design_3_scoring_engine_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_framewriter_0_0/design_3_framewriter_0_0.xci">
-          <Proxy FileSetName="design_3_framewriter_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_3.bd" FileRelPathName="ip/design_3_axi_gpio_5_0/design_3_axi_gpio_5_0.xci">
+          <Proxy FileSetName="design_3_axi_gpio_5_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_3/hdl/design_3_wrapper.v">
@@ -286,23 +286,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_vip_0_0/design_4_axi_vip_0_0.xci">
-          <Proxy FileSetName="design_4_axi_vip_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_vip_2_0/design_4_axi_vip_2_0.xci">
-          <Proxy FileSetName="design_4_axi_vip_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_vip_1_0/design_4_axi_vip_1_0.xci">
-          <Proxy FileSetName="design_4_axi_vip_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_sync_gen_1_1/design_4_sync_gen_1_1.xci">
-          <Proxy FileSetName="design_4_sync_gen_1_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_bram_ctrl_0_1/design_4_axi_bram_ctrl_0_1.xci">
           <Proxy FileSetName="design_4_axi_bram_ctrl_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_bram_ctrl_0_bram_1/design_4_axi_bram_ctrl_0_bram_1.xci">
           <Proxy FileSetName="design_4_axi_bram_ctrl_0_bram_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_vip_0_0/design_4_axi_vip_0_0.xci">
+          <Proxy FileSetName="design_4_axi_vip_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_sync_gen_1_1/design_4_sync_gen_1_1.xci">
+          <Proxy FileSetName="design_4_sync_gen_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_vip_1_0/design_4_axi_vip_1_0.xci">
+          <Proxy FileSetName="design_4_axi_vip_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_4.bd" FileRelPathName="ip/design_4_axi_vip_2_0/design_4_axi_vip_2_0.xci">
+          <Proxy FileSetName="design_4_axi_vip_2_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_4/hdl/design_4_wrapper.v">
@@ -609,12 +609,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_3_gyro_calc_interface_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_3_gyro_calc_interface_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_3_gyro_calc_interface_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_3_top_sound_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_3_top_sound_0_0">
       <Config>
         <Option Name="TopModule" Val="design_3_top_sound_0_0"/>
@@ -642,6 +636,12 @@
     <FileSet Name="design_3_axi_gpio_5_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_3_axi_gpio_5_0">
       <Config>
         <Option Name="TopModule" Val="design_3_axi_gpio_5_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_3_gyro_calc_interface_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_3_gyro_calc_interface_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_3_gyro_calc_interface_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -741,9 +741,7 @@
     </Run>
     <Run Id="design_3_framewriter_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_framewriter_0_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_framewriter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_framewriter_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -752,20 +750,7 @@
     </Run>
     <Run Id="design_3_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_xbar_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_3_gyro_calc_interface_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_gyro_calc_interface_0_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_gyro_calc_interface_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_gyro_calc_interface_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -774,9 +759,7 @@
     </Run>
     <Run Id="design_3_top_sound_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_top_sound_0_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_top_sound_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_top_sound_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -785,9 +768,7 @@
     </Run>
     <Run Id="design_3_archery_fsm_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_archery_fsm_0_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_archery_fsm_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_archery_fsm_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -796,9 +777,7 @@
     </Run>
     <Run Id="design_3_scoring_engine_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_scoring_engine_0_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_scoring_engine_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_scoring_engine_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -807,9 +786,7 @@
     </Run>
     <Run Id="design_3_ps2_keyboard_subsyst_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_ps2_keyboard_subsyst_0_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_ps2_keyboard_subsyst_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_ps2_keyboard_subsyst_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -817,6 +794,15 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="design_3_axi_gpio_5_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_axi_gpio_5_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_axi_gpio_5_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_axi_gpio_5_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_3_gyro_calc_interface_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_3_gyro_calc_interface_0_0" Part="xc7a100tcsg324-1" ConstrsSet="design_3_gyro_calc_interface_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_3_gyro_calc_interface_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -958,9 +944,7 @@
     </Run>
     <Run Id="design_3_framewriter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_framewriter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_framewriter_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -976,27 +960,7 @@
     </Run>
     <Run Id="design_3_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_3_gyro_calc_interface_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_gyro_calc_interface_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_gyro_calc_interface_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1012,9 +976,7 @@
     </Run>
     <Run Id="design_3_top_sound_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_top_sound_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_top_sound_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1030,9 +992,7 @@
     </Run>
     <Run Id="design_3_archery_fsm_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_archery_fsm_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_archery_fsm_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1048,9 +1008,7 @@
     </Run>
     <Run Id="design_3_scoring_engine_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_scoring_engine_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_scoring_engine_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1066,9 +1024,7 @@
     </Run>
     <Run Id="design_3_ps2_keyboard_subsyst_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_ps2_keyboard_subsyst_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_ps2_keyboard_subsyst_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1083,6 +1039,22 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="design_3_axi_gpio_5_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_axi_gpio_5_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_axi_gpio_5_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_3_gyro_calc_interface_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="design_3_gyro_calc_interface_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_3_gyro_calc_interface_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
