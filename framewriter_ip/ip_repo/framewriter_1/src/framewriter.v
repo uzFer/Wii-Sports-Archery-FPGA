@@ -186,15 +186,16 @@ module framewriter #
     
 
     // Math logic (Vivado can now fully optimize these paths)
-   wire [16:0] pixel_index = (internal_y << 8) + (internal_y << 6) + internal_x;
-//    wire [14:0] bram_addr_internal = (pixel_index >> 5) << 2;
-//   wire [14:0] bram_addr_internal = {pixel_index[16:5], 2'b00};
-   wire [31:0] bram_addr_internal = pixel_index << 2;
-//    wire [4:0]  pixel_offset = pixel_index % BRAM_DATA_WIDTH;
-   wire [4:0] pixel_offset = pixel_index[4:0];
-   wire [31:0] bit_mask = (32'h1 << pixel_offset);
+    wire [16:0] pixel_index = (internal_y << 8) + (internal_y << 6) + internal_x;
+    wire [31:0] bram_addr_internal = pixel_index << 2;
+    // wire [4:0]  pixel_offset = pixel_index % BRAM_DATA_WIDTH;
+    // wire [14:0] bram_addr_internal = (pixel_index >> 5) << 2;
+    // wire [14:0] bram_addr_internal = {pixel_index[16:5], 2'b00};
+    wire [4:0] pixel_offset = pixel_index[4:0];
+    wire [31:0] bit_mask = (32'h1 << pixel_offset);
     wire [6:0] p1_score_disp = game_state_archery_fsm[22:16];
     wire [6:0] p2_score_disp = game_state_archery_fsm[15:9];
+    wire [1:0] cur_diff = game_state_archery_fsm[24:23];
 
 //    remove bit packing for 256k BRAM START
 //    1. Calculate the Pixel Number (0 to 76,799)
@@ -219,9 +220,55 @@ module framewriter #
    // crosshair logic END 
 
    // main menu logic START
-    wire is_top_bar1 = (internal_y >= 40 && internal_y < 50);
-    wire is_top_bar2 = (internal_y >= 60 && internal_y < 70);
+    wire is_bottom_bar1 = (internal_y >= 140 && internal_y < 150);
+    wire is_bottom_bar2 = (internal_y >= 160 && internal_y < 170);
+
+    wire is_box_b = (internal_x >= 16'd40  && internal_x <= 16'd111) &&
+                    (internal_y >= 16'd155 && internal_y <= 16'd192);
+    wire is_box_i = (internal_x >= 16'd124 && internal_x <= 16'd195) &&
+                    (internal_y >= 16'd155 && internal_y <= 16'd192);
+    wire is_box_h = (internal_x >= 16'd208 && internal_x <= 16'd279) &&
+                    (internal_y >= 16'd155 && internal_y <= 16'd192);
+
+    wire is_border_b = is_box_b && (
+        internal_x <= 16'd42  || internal_x >= 16'd109 ||
+        internal_y <= 16'd157 || internal_y >= 16'd190);
+    wire is_border_i = is_box_i && (
+        internal_x <= 16'd126 || internal_x >= 16'd193 ||
+        internal_y <= 16'd157 || internal_y >= 16'd190);
+    wire is_border_h = is_box_h && (
+        internal_x <= 16'd210 || internal_x >= 16'd277 ||
+        internal_y <= 16'd157 || internal_y >= 16'd190);
+
+    wire is_tri_b = (internal_y >= 16'd196 && internal_y <= 16'd200) &&
+                    (internal_x >= (16'd75  - (internal_y - 16'd196))) &&
+                    (internal_x <= (16'd75  + (internal_y - 16'd196)));
+    wire is_tri_i = (internal_y >= 16'd196 && internal_y <= 16'd200) &&
+                    (internal_x >= (16'd159 - (internal_y - 16'd196))) &&
+                    (internal_x <= (16'd159 + (internal_y - 16'd196)));
+    wire is_tri_h = (internal_y >= 16'd196 && internal_y <= 16'd200) &&
+                    (internal_x >= (16'd243 - (internal_y - 16'd196))) &&
+                    (internal_x <= (16'd243 + (internal_y - 16'd196)));
    // main menu logic END
+
+
+    // difficulty logic START
+    wire show_wind_hud = (score_latch == 4'd2 || score_latch == 4'd6);
+ 
+    // Bar extent in pixels from centre (matches const_wind_x magnitudes)
+    wire [5:0] hud_extent = (cur_diff == 2'd1) ? 6'd16 :
+                            (cur_diff == 2'd2) ? 6'd32 : 6'd0;
+ 
+    // For intermediate & hard the wind_x is positive (rightward), so bar goes right.
+    // Extend this when you add variable wind by feeding actual wind sign here.
+    wire hud_bar_right = (internal_y >= 16'd4  && internal_y <= 16'd11) &&
+                         (internal_x > 16'd160) &&
+                         (internal_x <= (16'd160 + {10'd0, hud_extent}));
+    wire hud_centre    = (internal_y >= 16'd4  && internal_y <= 16'd11) &&
+                         (internal_x == 16'd160);
+
+    // difficulty logic ENG
+
 
    // display score logic START
     wire is_left_panel  = (internal_x >= 60  && internal_x <= 150) && (internal_y >= 80 && internal_y <= 160);
@@ -589,8 +636,8 @@ module framewriter #
             // RESET SCREEN
             4'd0: begin
                 final_color = WHITE;
-                if (is_top_bar1) final_color = TURQUOISE;
-                if (is_top_bar2) final_color = ORANGE;
+                if (is_bottom_bar1) final_color = TURQUOISE;
+                if (is_bottom_bar2) final_color = ORANGE;
             end
 
             // MAIN MENU SCREEN
@@ -602,6 +649,19 @@ module framewriter #
 
                 if (internal_y >= 40 && internal_y < 56)
                     final_color = ORANGE;
+                
+                if (is_box_b) final_color = GREY;
+                if (is_box_i) final_color = GREY;
+                if (is_box_h) final_color = GREY;
+ 
+                if (cur_diff == 2'd0 && is_border_b) final_color = TURQUOISE;
+                if (cur_diff == 2'd1 && is_border_i) final_color = TURQUOISE;
+                if (cur_diff == 2'd2 && is_border_h) final_color = RED;
+ 
+                // Triangle indicator under active box
+                if (cur_diff == 2'd0 && is_tri_b) final_color = ORANGE;
+                if (cur_diff == 2'd1 && is_tri_i) final_color = ORANGE;
+                if (cur_diff == 2'd2 && is_tri_h) final_color = ORANGE;
             end
 
             // PLAYER 1/2 AIM SCREEN (with target)
@@ -645,6 +705,23 @@ module framewriter #
                 if (in_any_panel_digit && (is_in_p2_tens || is_in_p2_ones) && panel_digit_pixel)
                     final_color = WHITE;
             end
+
+            // PLAYER 1, 2 SCORE SCREENS
+            4'd: begin 
+                final_color = BLACK;
+
+                // P1 score digits (white on blue panel)
+                if (in_any_panel_digit && (is_in_p1_tens || is_in_p1_ones) && panel_digit_pixel)
+                    final_color = WHITE;
+            end
+
+             4'd9: begin 
+                final_color = BLACK;
+                // P2 score digits (white on red panel)
+                if (in_any_panel_digit && (is_in_p2_tens || is_in_p2_ones) && panel_digit_pixel)
+                    final_color = WHITE;
+            end
+
 
             // GAME OVER
             4'd12: begin
