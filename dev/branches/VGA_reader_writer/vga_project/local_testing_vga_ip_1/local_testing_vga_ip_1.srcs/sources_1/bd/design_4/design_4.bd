@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5D6B59B1E0B96991",
+      "boundary_crc": "0x5D6B59B19304C99E",
       "device": "xc7a100tcsg324-1",
       "name": "design_4",
       "synth_flow_mode": "Hierarchical",
@@ -341,12 +341,6 @@
       }
     },
     "interface_nets": {
-      "axi_vip_2_M_AXI": {
-        "interface_ports": [
-          "axi_vip_2/M_AXI",
-          "axi_bram_ctrl_0/S_AXI"
-        ]
-      },
       "axi_vip_0_M_AXI": {
         "interface_ports": [
           "axi_vip_0/M_AXI",
@@ -357,6 +351,12 @@
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTA",
           "axi_bram_ctrl_0_bram/BRAM_PORTA"
+        ]
+      },
+      "axi_vip_2_M_AXI": {
+        "interface_ports": [
+          "axi_vip_2/M_AXI",
+          "axi_bram_ctrl_0/S_AXI"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTB": {

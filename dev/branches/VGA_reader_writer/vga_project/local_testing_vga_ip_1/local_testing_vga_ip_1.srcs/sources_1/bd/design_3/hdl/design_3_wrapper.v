@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Mar 26 13:52:11 2026
+//Date        : Sat Mar 28 17:49:13 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_3_wrapper.bd
 //Design      : design_3_wrapper
@@ -23,6 +23,7 @@ module design_3_wrapper
     calibrate_0,
     calibration_done_0,
     clk_100MHz,
+    get_user_input_0,
     gyroscope_enable_0,
     i_MISO_0,
     o_CS_0,
@@ -49,6 +50,7 @@ module design_3_wrapper
   input calibrate_0;
   output calibration_done_0;
   input clk_100MHz;
+  output [0:0]get_user_input_0;
   input gyroscope_enable_0;
   input i_MISO_0;
   output o_CS_0;
@@ -76,6 +78,7 @@ module design_3_wrapper
   wire calibrate_0;
   wire calibration_done_0;
   wire clk_100MHz;
+  wire [0:0]get_user_input_0;
   wire gyroscope_enable_0;
   wire i_MISO_0;
   wire o_CS_0;
@@ -104,6 +107,7 @@ module design_3_wrapper
         .calibrate_0(calibrate_0),
         .calibration_done_0(calibration_done_0),
         .clk_100MHz(clk_100MHz),
+        .get_user_input_0(get_user_input_0),
         .gyroscope_enable_0(gyroscope_enable_0),
         .i_MISO_0(i_MISO_0),
         .o_CS_0(o_CS_0),

@@ -18,12 +18,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15480 
+INFO: Helper process launched with PID 20644 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 497.301 ; gain = 103.875
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 496.770 ; gain = 103.508
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/synth/design_3_ps2_keyboard_subsyst_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'ps2_keyboard_subsystem' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:25]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:27]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:28]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:29]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:30]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:31]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:32]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:34]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:35]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:36]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:37]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:38]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:41]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:52]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:53]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:59]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:60]
 INFO: [Synth 8-6157] synthesizing module 'PS2_Receiver' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/PS2_Receiver.v:23]
 	Parameter STATE_0_IDLE bound to: 1'b0 
 	Parameter STATE_1_RX bound to: 1'b1 
@@ -42,7 +58,10 @@ INFO: [Synth 8-6157] synthesizing module 'fifo' [Y:/vga_project/local_testing_vg
 	Parameter PTR_WIDTH bound to: 4 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'fifo' (5#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/fifo.v:23]
 INFO: [Synth 8-6157] synthesizing module 'font_rom' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:14]
-INFO: [Synth 8-3876] $readmem data file 'font_data.mem' is read successfully [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:25]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:16]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:17]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:18]
+INFO: [Synth 8-3876] $readmem data file 'font_data.mem' is read successfully [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'font_rom' (6#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v:14]
 INFO: [Synth 8-6157] synthesizing module 'bin2bcd' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/bin2bcd.v:3]
 	Parameter BIN_WIDTH bound to: 8 - type: integer 
@@ -52,11 +71,16 @@ INFO: [Synth 8-6157] synthesizing module 'seven_seg_controller' [Y:/vga_project/
 INFO: [Synth 8-226] default block is never used [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/seven_seg_controller.v:27]
 INFO: [Synth 8-226] default block is never used [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/seven_seg_controller.v:43]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_controller' (8#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/seven_seg_controller.v:3]
-WARNING: [Synth 8-689] width (36) of port connection 'data' does not match port width (32) of module 'seven_seg_controller' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:118]
+WARNING: [Synth 8-689] width (36) of port connection 'data' does not match port width (32) of module 'seven_seg_controller' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:133]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'seven_seg_inst'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:130]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'char_fifo_inst'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:92]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps2_dec_inst'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:80]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps2_rx_inst'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:70]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ascii_to_bcd'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:123]
 INFO: [Synth 8-6155] done synthesizing module 'ps2_keyboard_subsystem' (9#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' (10#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/synth/design_3_ps2_keyboard_subsyst_0_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 552.379 ; gain = 158.953
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 552.617 ; gain = 159.355
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -69,10 +93,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 552.379 ; gain = 158.953
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 552.617 ; gain = 159.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 552.379 ; gain = 158.953
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 552.617 ; gain = 159.355
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -81,29 +105,29 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 884.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 885.785 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 884.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 885.785 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 887.582 ; gain = 3.035
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 887.836 ; gain = 2.051
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 887.582 ; gain = 494.156
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 887.836 ; gain = 494.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 887.582 ; gain = 494.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 887.836 ; gain = 494.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 887.582 ; gain = 494.156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 887.836 ; gain = 494.574
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "O0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cnt0" won't be mapped to RAM because it is too sparse
@@ -115,7 +139,7 @@ INFO: [Synth 8-5546] ROM "ascii_valid" won't be mapped to RAM because it is too 
 WARNING: [Synth 8-6014] Unused sequential element rd_ptr_reg_rep was removed.  [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/fifo.v:55]
 INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 887.582 ; gain = 494.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 887.836 ; gain = 494.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -243,51 +267,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "inst/ps2_rx_inst/rx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "inst/ps2_rx_inst/debounce/cnt0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst/ps2_rx_inst/debounce/O0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst/ps2_rx_inst/debounce/cnt1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst/ps2_rx_inst/debounce/O1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst/ps2_dec_inst/ascii_valid" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst/ps2_dec_inst/is_break_code" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[0]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[34]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[35]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[41]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[42]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[48]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[49]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[55]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[56]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[62]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[63]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[1]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[2]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[3]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[4]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[5]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[6]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[7]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[10]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[13]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[14]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[20]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[20]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[21]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[21]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[27]'
-INFO: [Synth 8-3886] merging instance 'inst/font_rom_inst/char_bitmap_reg[27]' (FDC) to 'inst/font_rom_inst/char_bitmap_reg[28]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/font_rom_inst/char_bitmap_reg[28] )
+INFO: [Synth 8-5544] ROM "rx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "debounce/cnt0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "debounce/O0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "debounce/cnt1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "debounce/O1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ascii_valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_break_code" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 887.582 ; gain = 494.156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 887.836 ; gain = 494.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping  Report (see note below)
-+----------------------------------+-----------------------------+-----------+----------------------+--------------+
-|Module Name                       | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
-+----------------------------------+-----------------------------+-----------+----------------------+--------------+
-|design_3_ps2_keyboard_subsyst_0_0 | inst/char_fifo_inst/mem_reg | Implied   | 16 x 7               | RAM32M x 2   | 
-+----------------------------------+-----------------------------+-----------+----------------------+--------------+
++--------------------+------------+-----------+----------------------+--------------+
+|Module Name         | RTL Object | Inference | Size (Depth x Width) | Primitives   | 
++--------------------+------------+-----------+----------------------+--------------+
+|inst/char_fifo_inst | mem_reg    | Implied   | 16 x 8               | RAM32M x 2   | 
++--------------------+------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -303,24 +302,24 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 891.336 ; gain = 497.910
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 890.363 ; gain = 497.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 891.559 ; gain = 498.133
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 890.512 ; gain = 497.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping  Report
-+----------------------------------+-----------------------------+-----------+----------------------+--------------+
-|Module Name                       | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
-+----------------------------------+-----------------------------+-----------+----------------------+--------------+
-|design_3_ps2_keyboard_subsyst_0_0 | inst/char_fifo_inst/mem_reg | Implied   | 16 x 7               | RAM32M x 2   | 
-+----------------------------------+-----------------------------+-----------+----------------------+--------------+
++--------------------+------------+-----------+----------------------+--------------+
+|Module Name         | RTL Object | Inference | Size (Depth x Width) | Primitives   | 
++--------------------+------------+-----------+----------------------+--------------+
+|inst/char_fifo_inst | mem_reg    | Implied   | 16 x 8               | RAM32M x 2   | 
++--------------------+------------+-----------+----------------------+--------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -339,7 +338,7 @@ INFO: [Synth 8-3886] merging instance 'inst/char_fifo_inst/rd_ptr_reg_rep[1]' (F
 INFO: [Synth 8-3886] merging instance 'inst/char_fifo_inst/rd_ptr_reg_rep[2]' (FDRE) to 'inst/char_fifo_inst/rd_ptr_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/char_fifo_inst/rd_ptr_reg_rep[3]' (FDRE) to 'inst/char_fifo_inst/rd_ptr_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,7 +362,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -376,7 +375,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -388,25 +387,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -423,15 +422,15 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |     5|
-|2     |LUT1   |     5|
-|3     |LUT2   |    12|
-|4     |LUT3   |    24|
-|5     |LUT4   |    19|
-|6     |LUT5   |    27|
-|7     |LUT6   |    81|
-|8     |MUXF7  |     5|
+|2     |LUT1   |     9|
+|3     |LUT2   |     7|
+|4     |LUT3   |    25|
+|5     |LUT4   |    34|
+|6     |LUT5   |    43|
+|7     |LUT6   |   108|
+|8     |MUXF7  |     9|
 |9     |RAM32M |     2|
-|10    |FDCE   |    34|
+|10    |FDCE   |    89|
 |11    |FDRE   |    72|
 |12    |FDSE   |     2|
 +------+-------+------+
@@ -440,44 +439,45 @@ Report Instance Areas:
 +------+-------------------+-----------------------+------+
 |      |Instance           |Module                 |Cells |
 +------+-------------------+-----------------------+------+
-|1     |top                |                       |   288|
-|2     |  inst             |ps2_keyboard_subsystem |   288|
-|3     |    char_fifo_inst |fifo                   |   105|
-|4     |    font_rom_inst  |font_rom               |    17|
-|5     |    ps2_dec_inst   |ps2_decoder            |    45|
-|6     |    ps2_rx_inst    |PS2_Receiver           |    77|
-|7     |      debounce     |debouncer              |    50|
-|8     |      rx_shift_reg |shift_register         |    11|
-|9     |    seven_seg_inst |seven_seg_controller   |    44|
+|1     |top                |                       |   405|
+|2     |  inst             |ps2_keyboard_subsystem |   405|
+|3     |    ps2_rx_inst    |PS2_Receiver           |    73|
+|4     |      debounce     |debouncer              |    46|
+|5     |      rx_shift_reg |shift_register         |    12|
+|6     |    ps2_dec_inst   |ps2_decoder            |    46|
+|7     |    char_fifo_inst |fifo                   |    39|
+|8     |    font_rom_inst  |font_rom               |   176|
+|9     |    ascii_to_bcd   |bin2bcd                |    12|
+|10    |    seven_seg_inst |seven_seg_controller   |    51|
 +------+-------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 921.348 ; gain = 192.719
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 921.348 ; gain = 527.922
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 912.254 ; gain = 183.773
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 912.254 ; gain = 518.992
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 921.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 912.254 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-83 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+82 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 921.348 ; gain = 540.746
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.348 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 912.254 ; gain = 531.691
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 912.254 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_ps2_keyboard_subsyst_0_0_synth_1/design_3_ps2_keyboard_subsyst_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1174] Renamed 8 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.348 ; gain = 0.000
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 912.254 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_ps2_keyboard_subsyst_0_0_synth_1/design_3_ps2_keyboard_subsyst_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_3_ps2_keyboard_subsyst_0_0_utilization_synth.rpt -pb design_3_ps2_keyboard_subsyst_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 11:43:55 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 28 17:40:39 2026...

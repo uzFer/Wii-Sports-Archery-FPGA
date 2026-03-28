@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774547538">
+<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774734559">
   <File Type="PA-TCL" Name="design_3_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_3_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_3_wrapper_reports.tcl"/>
@@ -213,7 +213,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_4/hdl/design_4_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -221,7 +221,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
+    <File Path="$PSRCDIR/sources_1/bd/design_4/hdl/design_4_wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -400,13 +400,11 @@
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_bram_ctrl_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_4_sync_gen_1_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_top_sound_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_archery_fsm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_gyro_calc_interface_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_4_sync_gen_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_top_sound_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_scoring_engine_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_ps2_keyboard_subsyst_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_axi_gpio_5_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_gyro_calc_interface_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
 </GenRun>

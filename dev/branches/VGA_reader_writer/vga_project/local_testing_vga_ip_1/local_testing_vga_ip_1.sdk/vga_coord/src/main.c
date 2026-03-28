@@ -30,14 +30,17 @@
 #define PS2_USER_DATA_ADDR XPAR_AXI_GPIO_2_BASEADDR // ok
 #define PS2_FONT_ROM_OUTPUT_ADDR XPAR_GPIO_4_BASEADDR
 
+#define FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET 16
+#define FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET 20
+
 /* Register Offsets from your framewriter.h */
 #define REG_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG0_OFFSET
 #define REG_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET
 //#define REG_STATE_OFFSET  FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET
 #define REG_LOW_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET // LOW
 #define REG_HIGH_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG3_OFFSET // HIGH
-#define REG_CHAR_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
-#define REG_CHAR_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+#define REG_CHAR_X_OFFSET      16 // FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+#define REG_CHAR_Y_OFFSET      20 // FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
 
 /* Button Bit Masks  */
 #define BTN_L_MASK (1 << 1) // Value 1
@@ -123,11 +126,17 @@ uint64_t getWiiFontBitmap(char c) {
 	// Send char value to font rom
 	// Read font rom output
 	// Remember to set setUserKeyboardInput correctly
-	uint64_t flattened_bitmap = 0; // bitmap is 7x9  = 63 dimension
-	Xil_Out32(PS2_FONT_ROM_INPUT_ADDR, c); // ascii in (?)
-	volatile uint32_t* font_rom_output = (uint32_t *)PS2_FONT_ROM_OUTPUT_ADDR;
-	flattened_bitmap = *(font_rom_output); // lower bits
-	flattened_bitmap |=  ((uint64_t)*(font_rom_output + 2) << 32); // upper bits
+	volatile uint64_t flattened_bitmap = 0; // bitmap is 7x9  = 63 dimension
+	Xil_Out32(PS2_FONT_ROM_INPUT_ADDR, c); // addr
+	volatile uint32_t* font_rom_output = (uint32_t *)PS2_FONT_ROM_OUTPUT_ADDR; // output
+
+	volatile uint32_t lower = *(font_rom_output);
+	volatile uint32_t upper = *(font_rom_output + 2); // plz don't change the 2 T^T
+	flattened_bitmap = ((uint64_t)upper << 32) | lower;
+
+//	xil_printf("Raw Lower: 0x%08x\r\n", lower);
+//	xil_printf("Raw Upper: 0x%08x\r\n", upper);
+
 	return flattened_bitmap;
 
 }
@@ -140,11 +149,14 @@ void drawCharHardware(int x, int y, char c) {
     uint32_t low = (uint32_t)(bitmap & 0xFFFFFFFF);
     uint32_t high = (uint32_t)(bitmap >> 32);
 
+    // debug
+//    xil_printf("Character: %c | bitmap: 0x%08x%08x\r\n", c, high, low);
+
     // Write to the AXI Slave Registers
-    Xil_Out32(REG_CHAR_X_OFFSET, x);
-    Xil_Out32(REG_CHAR_Y_OFFSET, y);
-    Xil_Out32(REG_LOW_OFFSET, low);
-    Xil_Out32(REG_HIGH_OFFSET, high);
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_CHAR_X_OFFSET, (uint32_t)x);
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_CHAR_Y_OFFSET, (uint32_t)y);
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_LOW_OFFSET, (uint32_t)low);
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_HIGH_OFFSET, (uint32_t)high);
 
 }
 
@@ -225,10 +237,16 @@ void drawCharHardware(int x, int y, char c) {
 /* ===================== KEYBOARD HELPERS ===================== */
 char poll_keyboard() {
     volatile uint32_t *ps2_gpio = (uint32_t *)PS2_USER_DATA_ADDR; // gpio 2
-    uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs)
+    uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs) - fifo_en
+
+
+    if (status == 0x100) {
+		xil_printf("status: 0x%08x\r\n", status);
+    }
+
 
     // Bit 8 is the 'Empty' flag
-    bool empty = (status >> 8) & 0x1;
+    bool empty = (status >> 8) & 0x1; // fifo empty
 
     if (!empty) {
 
@@ -363,27 +381,29 @@ int main ()
 //	   // writing cross hair
 //	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, (uint32_t)x_pos);
 //	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, (uint32_t)y_fixed);
-	   poll_gyroscope();
+//	   poll_gyroscope();
 	   // vga stuff end
-	   draw_crosshair(x_coord, y_coord);
+//	   draw_crosshair(x_coord, y_coord);
 
-//	   last_btn_data = btn_data; // Store for edge detection
-  for(int i=0; i<100000; i++); // Simple debounce delay
+//	   last_btn_data = btn_data; // Store pfor edge detection
+	   for(int i=0; i<1000000; i++); // Simple debounce delay
 
 	   // testcase for font ROM -------------------------------------------------
-//	   setUserKeyboardInput(0); // use microblaze
-//	   drawCharHardware(10,10,'A'); // draw/control from microblaze
+//	   setUserKeyboardInput(0); // 0 = use microblaze
+//	   drawCharHardware(10,10,'B'); // draw/control from microblaze
 
 	   // or directly write into it using slave offsets ('A' = 1c4489f224488000)
 
 
 	   // testcase for PS/2 keyboard -------------------------------------------------
-//	   setUserKeyboardInput(0); // using ps2 but still sending stuff via microblaze, use microblaze to process inputs
-//	   char typed_key = poll_keyboard();
-//	   if (typed_key >= ' ' && typed_key <= '~') { // Printable ASCII characters
-//		   drawCharHardware(fixed_x, fixed_y, typed_key);
-//	   }
-
+	   setUserKeyboardInput(1); // using ps2 but still sending stuff via microblaze, use microblaze to process inputs
+	   char typed_key = poll_keyboard();
+	   xil_printf("typed_key = %c\n\r",typed_key);
+	   if (typed_key >= ' ' && typed_key <= '~') { // Printable ASCII characters
+		   drawCharHardware(10, 10, typed_key);
+	   } else {
+		   drawCharHardware(10, 10, 'O');
+	   }
 
 
 

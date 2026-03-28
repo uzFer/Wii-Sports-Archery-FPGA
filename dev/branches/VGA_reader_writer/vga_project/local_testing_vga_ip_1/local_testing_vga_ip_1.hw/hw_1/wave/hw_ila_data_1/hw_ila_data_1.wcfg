@@ -10,64 +10,57 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1391963fs"></ZoomEndTime>
-      <Cursor1Time time="392000fs"></Cursor1Time>
+      <ZoomEndTime time="3760001fs"></ZoomEndTime>
+      <Cursor1Time time="259000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="431"></NameColumnWidth>
-      <ValueColumnWidth column_width="181"></ValueColumnWidth>
+      <NameColumnWidth column_width="563"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="6" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="u_ila_0_dbg_play_music_raw" type="logic">
+   <wvobject fp_name="design_3_i/ps2_keyboard_subsyst_0/inst/fifo_full" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_0_dbg_play_music_raw</obj_property>
-      <obj_property name="ObjectShortName">u_ila_0_dbg_play_music_raw</obj_property>
+      <obj_property name="ElementShortName">design_3_i/ps2_keyboard_subsyst_0/inst/fifo_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_full</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="u_ila_0_dbg_addr_music" type="array">
+   <wvobject fp_name="design_3_i/ps2_keyboard_subsyst_0/inst/fifo_empty" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_0_dbg_addr_music[15:0]</obj_property>
-      <obj_property name="ObjectShortName">u_ila_0_dbg_addr_music[15:0]</obj_property>
+      <obj_property name="ElementShortName">design_3_i/ps2_keyboard_subsyst_0/inst/fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_empty</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_3_i/ps2_keyboard_subsyst_0/inst/ps2_clk" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_3_i/ps2_keyboard_subsyst_0/inst/ps2_clk</obj_property>
+      <obj_property name="ObjectShortName">ps2_clk</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_3_i/ps2_keyboard_subsyst_0/inst/ps2_data" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_3_i/ps2_keyboard_subsyst_0/inst/ps2_data</obj_property>
+      <obj_property name="ObjectShortName">ps2_data</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_3_i/ps2_keyboard_subsyst_0/inst/font_rom_inst/addr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_3_i/ps2_keyboard_subsyst_0/inst/font_rom_inst/addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_3_i/top_sound_0/inst/dbg_pwm" type="logic">
+   <wvobject fp_name="design_3_i/ps2_keyboard_subsyst_0/inst/font_rom_inst/char_bitmap" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_3_i/top_sound_0/inst/dbg_pwm</obj_property>
-      <obj_property name="ObjectShortName">dbg_pwm</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_3_i/top_sound_0/inst/dbg_sample" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_3_i/top_sound_0/inst/dbg_sample[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dbg_sample[7:0]</obj_property>
+      <obj_property name="ElementShortName">design_3_i/ps2_keyboard_subsyst_0/inst/font_rom_inst/char_bitmap[63:0]</obj_property>
+      <obj_property name="ObjectShortName">char_bitmap[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_3_i/top_sound_0/inst/dbg_playing_music" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_3_i/top_sound_0/inst/dbg_playing_music</obj_property>
-      <obj_property name="ObjectShortName">dbg_playing_music</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_3_i/top_sound_0/inst/dbg_playing_arrow" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_3_i/top_sound_0/inst/dbg_playing_arrow</obj_property>
-      <obj_property name="ObjectShortName">dbg_playing_arrow</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_3_i/top_sound_0/inst/dbg_playing_menu" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_3_i/top_sound_0/inst/dbg_playing_menu</obj_property>
-      <obj_property name="ObjectShortName">dbg_playing_menu</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

@@ -24,36 +24,47 @@
 
 module ps2_keyboard_subsystem (
     input clk,          // System clock
-    input resetn,        // System reset
-    input ps2_clk,      // PS/2 Keyboard Clock line
-    input ps2_data,     // PS/2 Keyboard Data line
-    input read_fifo_en, // Enable signal to read a character from the FIFO
-    input [7:0] ascii_in, // Ascii character requested by CPU
-    input get_user_input, // Flag from Microblaze. Should be connected to AXI GPIO
+    (* mark_debug = "true" *) input resetn,        // System reset
+    (* mark_debug = "true" *) input ps2_clk,      // PS/2 Keyboard Clock line
+    (* mark_debug = "true" *) input ps2_data,     // PS/2 Keyboard Data line
+    (* mark_debug = "true" *) input read_fifo_en, // Enable signal to read a character from the FIFO
+    (* mark_debug = "true" *) input [7:0] ascii_in, // Ascii character requested by CPU
+    (* mark_debug = "true" *) input get_user_input, // Flag from Microblaze. Should be connected to AXI GPIO
 
-    output [7:0] ascii_out,   // 8-bit ASCII character read from the FIFO
-    output fifo_empty,        // Flag indicating if the FIFO is empty
-    output fifo_full,         // Flag indicating if the FIFO is full
-    output [31:0] char_bitmap_low, // 7x9 Flattened Bitmap output
-    output [31:0] char_bitmap_high,
+    (* mark_debug = "true" *) output [7:0] ascii_out,   // 8-bit ASCII character read from the FIFO
+    (* mark_debug = "true" *) output fifo_empty,        // Flag indicating if the FIFO is empty
+    (* mark_debug = "true" *) output fifo_full,         // Flag indicating if the FIFO is full
+    (* mark_debug = "true" *) output [31:0] char_bitmap_low, // 7x9 Flattened Bitmap output
+    (* mark_debug = "true" *) output [31:0] char_bitmap_high,
 
     // Seven segment display outputs
-    output [6:0] seg,
+    (* mark_debug = "true" *) output [6:0] seg,
     output [7:0] an
+    
+    // for testing
+//    output [7:0] ps2_receiver_data_o,
+//    output ps2_receiver_valid_o
+    
+    
 );
 
     // Wires to connect PS2_Receiver output to PS2_Decoder input
-    wire [7:0] ps2_receiver_data;
-    wire ps2_receiver_valid;
+    (* mark_debug = "true" *) wire [7:0] ps2_receiver_data;
+    (* mark_debug = "true" *) wire ps2_receiver_valid;    
+//    (* mark_debug = "true" *) reg [7:0] ps2_receiver_data;
+//    (* mark_debug = "true" *) reg ps2_receiver_valid;
+
 
     // Wires to connect PS2_Decoder output to FIFO input
-    wire [7:0] decoder_ascii_char;
-    wire decoder_ascii_valid;
+    (* mark_debug = "true" *)wire [7:0] decoder_ascii_char;
+    (* mark_debug = "true" *)wire decoder_ascii_valid;
 
     wire [7:0] rom_input;
     wire [63:0] char_bitmap;
     assign char_bitmap_low = char_bitmap[31:0];
-    assign char_bitmap_high = char_bitmap[63:0];
+    assign char_bitmap_high = char_bitmap[63:32];
+    
+    wire [7:0] fifo_data_out;
 
     // This module is assumed to be provided by the user.
     PS2_Receiver ps2_rx_inst (
@@ -84,12 +95,16 @@ module ps2_keyboard_subsystem (
         .write_en(decoder_ascii_valid),  // Write to FIFO when decoder has a valid character
         .write_data(decoder_ascii_char), // Data to write to FIFO
         .read_en(read_fifo_en),          // External signal to read from FIFO
-        .read_data(ascii_out),           // Output character read from FIFO
+//        .read_data(ascii_out),           // Output character read from FIFO
+        .read_data(fifo_data_out),
         .full(fifo_full),                // FIFO full status
         .empty(fifo_empty)               // FIFO empty status
     );
     
-    assign rom_input = (get_user_input) ? ascii_out : ascii_in;
+//    assign rom_input = (get_user_input) ? ascii_out : ascii_in;
+    assign rom_input = (get_user_input) ? fifo_data_out : ascii_in;
+    assign ascii_out = fifo_data_out; // test
+
     
     font_rom font_rom_inst (
         .clk(clk),
@@ -119,5 +134,7 @@ module ps2_keyboard_subsystem (
         .seg(seg),
         .an(an)
     );
+    
+   
 
 endmodule

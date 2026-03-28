@@ -57,7 +57,7 @@ module fifo #(
 
     always @(posedge clk)
     begin
-        if (resetn)
+        if (!resetn)
         begin
             wr_ptr <= 0;
             rd_ptr <= 0;
