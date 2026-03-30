@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Mar 28 17:51:10 2026
+| Date         : Sun Mar 29 23:50:39 2026
 | Host         : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_3_wrapper_utilization_synth.rpt -pb design_3_wrapper_utilization_synth.pb
 | Design       : design_3_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   48 |     0 |       210 | 22.86 |
+| Bonded IOB                  |   52 |     0 |       210 | 24.76 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -146,8 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   38 |                  IO |
-| IBUF     |   10 |                  IO |
+| OBUF     |   40 |                  IO |
+| IBUF     |   12 |                  IO |
 +----------+------+---------------------+
 
 
@@ -163,6 +163,7 @@ Table of Contents
 | design_3_scoring_engine_0_0       |    1 |
 | design_3_rst_clk_wiz_100M_0       |    1 |
 | design_3_ps2_keyboard_subsyst_0_0 |    1 |
+| design_3_physics_engine_0_0       |    1 |
 | design_3_microblaze_0_axi_intc_0  |    1 |
 | design_3_microblaze_0_0           |    1 |
 | design_3_mdm_1_0                  |    1 |
@@ -173,6 +174,7 @@ Table of Contents
 | design_3_framewriter_0_0          |    1 |
 | design_3_dlmb_v10_0               |    1 |
 | design_3_dlmb_bram_if_cntlr_0     |    1 |
+| design_3_decimal_display_mana_0_0 |    1 |
 | design_3_clk_100MHz_0             |    1 |
 | design_3_axi_uartlite_0_0         |    1 |
 | design_3_axi_gpio_5_1             |    1 |

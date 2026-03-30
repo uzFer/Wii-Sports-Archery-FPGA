@@ -1,28 +1,6 @@
-19:01:15 **** Auto Build of configuration Debug for project vga_coord ****
+23:43:05 **** Incremental Build of configuration Debug for project vga_coord ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../vga_coord_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:350:8: warning: unused variable 'fixed_y' [-Wunused-variable]
-    int fixed_y = 50;
-        ^~~~~~~
-../src/main.c:349:8: warning: unused variable 'fixed_x' [-Wunused-variable]
-    int fixed_x = 50;
-        ^~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: vga_coord.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vga_coord_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vga_coord.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: vga_coord.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size vga_coord.elf  |tee "vga_coord.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   7132	    316	   2088	   9536	   2540	vga_coord.elf
-'Finished building: vga_coord.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-19:01:16 Build Finished (took 854ms)
+23:43:05 Build Finished (took 176ms)
 

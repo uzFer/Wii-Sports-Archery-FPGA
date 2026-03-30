@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sat Mar 28 17:39:28 2026
+//Date        : Sun Mar 29 23:30:50 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_3.bd
 //Design      : design_3
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=47,numReposBlks=32,numNonXlnxBlks=0,numHierBlks=15,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,da_board_cnt=6,da_bram_cntlr_cnt=2,da_clkrst_cnt=1,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_3.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=51,numReposBlks=36,numNonXlnxBlks=0,numHierBlks=15,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=7,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,da_board_cnt=6,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_3.hwdef" *) 
 module design_3
    (AN,
     SEG,
@@ -19,6 +19,8 @@ module design_3
     VGA_R,
     VGA_VSYNC,
     aud_sd_0,
+    btn_left,
+    btn_right,
     btn_shoot,
     btn_start,
     calibrate_0,
@@ -27,6 +29,8 @@ module design_3
     get_user_input_0,
     gyroscope_enable_0,
     i_MISO_0,
+    led_ps2_clk,
+    led_ps2_data,
     o_CS_0,
     o_MOSI_0,
     o_SCLK_0,
@@ -46,6 +50,8 @@ module design_3
   output [3:0]VGA_R;
   output VGA_VSYNC;
   output aud_sd_0;
+  input btn_left;
+  input btn_right;
   input btn_shoot;
   input btn_start;
   input calibrate_0;
@@ -54,6 +60,8 @@ module design_3
   output [0:0]get_user_input_0;
   input gyroscope_enable_0;
   input i_MISO_0;
+  output led_ps2_clk;
+  output led_ps2_data;
   output o_CS_0;
   output o_MOSI_0;
   output o_SCLK_0;
@@ -66,12 +74,17 @@ module design_3
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 RxD" *) input uart_rtl_0_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 TxD" *) output uart_rtl_0_txd;
 
+  wire archery_fsm_0_fire_pulse;
   wire [31:0]archery_fsm_0_game_state;
+  wire [6:0]archery_fsm_0_p1_score;
+  wire [6:0]archery_fsm_0_p2_score;
   wire archery_fsm_0_play_arrow;
   wire archery_fsm_0_play_menu;
   wire archery_fsm_0_play_music;
   wire [7:0]archery_fsm_0_uart_out;
   wire archery_fsm_0_uart_out_valid;
+  wire [7:0]archery_fsm_0_wind_x_out;
+  wire [7:0]archery_fsm_0_wind_y_out;
   wire [31:0]axi_bram_ctrl_1_bram_douta;
   wire [31:0]axi_bram_ctrl_1_bram_doutb;
   wire [0:0]axi_gpio_2_gpio2_io_o;
@@ -86,6 +99,8 @@ module design_3
   wire clk_100MHz_1;
   wire clk_100MHz_clk_out2;
   wire clk_wiz_locked;
+  wire [7:0]decimal_display_mana_0_an;
+  wire [6:0]decimal_display_mana_0_seg;
   wire [31:0]framewriter_0_bram_address;
   wire framewriter_0_bram_en;
   wire framewriter_0_bram_rst;
@@ -100,6 +115,7 @@ module design_3
   wire [9:0]gyro_calc_interface_0_y_coord;
   wire gyroscope_enable_0_1;
   wire i_MISO_0_1;
+  wire left_btn_0_1;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_axi_dp_ARADDR;
@@ -358,15 +374,14 @@ module design_3
   wire [0:0]microblaze_0_intr;
   wire ps2_clk_0_1;
   wire ps2_data_0_1;
-  wire [7:0]ps2_keyboard_subsyst_0_an;
   wire [7:0]ps2_keyboard_subsyst_0_ascii_out;
   wire [31:0]ps2_keyboard_subsyst_0_char_bitmap_high;
   wire [31:0]ps2_keyboard_subsyst_0_char_bitmap_low;
   wire ps2_keyboard_subsyst_0_fifo_empty;
   wire ps2_keyboard_subsyst_0_fifo_full;
-  wire [6:0]ps2_keyboard_subsyst_0_seg;
   wire reset_0_1;
   wire reset_rtl_0_1;
+  wire right_btn_0_1;
   wire [0:0]rst_clk_wiz_100M_bus_struct_reset;
   wire [0:0]rst_clk_wiz_100M_interconnect_aresetn;
   wire rst_clk_wiz_100M_mb_reset;
@@ -391,9 +406,11 @@ module design_3
   wire top_sound_0_pwm_out;
   wire [21:0]xlconcat_0_dout;
   wire [9:0]xlconcat_1_dout;
+  wire [15:0]xlconstant_0_dout;
+  wire [7:0]xlconstant_1_dout;
 
-  assign AN[7:0] = ps2_keyboard_subsyst_0_an;
-  assign SEG[6:0] = ps2_keyboard_subsyst_0_seg;
+  assign AN[7:0] = decimal_display_mana_0_an;
+  assign SEG[6:0] = decimal_display_mana_0_seg;
   assign VGA_B[3:0] = sync_gen_1_VGA_B;
   assign VGA_G[3:0] = sync_gen_1_VGA_G;
   assign VGA_HSYNC = sync_gen_1_VGA_HSYNC;
@@ -407,6 +424,9 @@ module design_3
   assign get_user_input_0[0] = axi_gpio_3_gpio2_io_o;
   assign gyroscope_enable_0_1 = gyroscope_enable_0;
   assign i_MISO_0_1 = i_MISO_0;
+  assign led_ps2_clk = ps2_clk_0_1;
+  assign led_ps2_data = ps2_data_0_1;
+  assign left_btn_0_1 = btn_left;
   assign o_CS_0 = gyro_calc_interface_0_o_CS;
   assign o_MOSI_0 = gyro_calc_interface_0_o_MOSI;
   assign o_SCLK_0 = gyro_calc_interface_0_o_SCLK;
@@ -416,16 +436,22 @@ module design_3
   assign pwm_out_0 = top_sound_0_pwm_out;
   assign reset_0_1 = reset_fsm;
   assign reset_rtl_0_1 = reset_rtl_0;
+  assign right_btn_0_1 = btn_right;
   assign shoot_event_0_1 = btn_shoot;
   assign start_btn_0_1 = btn_start;
   assign uart_rtl_0_txd = axi_uartlite_0_UART_TxD;
   design_3_archery_fsm_0_0 archery_fsm_0
        (.clk(microblaze_0_Clk),
+        .fire_pulse(archery_fsm_0_fire_pulse),
         .game_state(archery_fsm_0_game_state),
+        .left_btn(left_btn_0_1),
+        .p1_score(archery_fsm_0_p1_score),
+        .p2_score(archery_fsm_0_p2_score),
         .play_arrow(archery_fsm_0_play_arrow),
         .play_menu(archery_fsm_0_play_menu),
         .play_music(archery_fsm_0_play_music),
-        .reset(reset_0_1),
+        .resetn(rst_clk_wiz_100M_peripheral_aresetn),
+        .right_btn(right_btn_0_1),
         .score_in(scoring_engine_0_score),
         .score_valid(scoring_engine_0_valid_score),
         .shoot_event(shoot_event_0_1),
@@ -433,7 +459,9 @@ module design_3
         .uart_in(axi_gpio_uart_output_gpio_io_o),
         .uart_in_valid(axi_gpio_uart_output_gpio2_io_o),
         .uart_out(archery_fsm_0_uart_out),
-        .uart_out_valid(archery_fsm_0_uart_out_valid));
+        .uart_out_valid(archery_fsm_0_uart_out_valid),
+        .wind_x_out(archery_fsm_0_wind_x_out),
+        .wind_y_out(archery_fsm_0_wind_y_out));
   (* BMM_INFO_ADDRESS_SPACE = "byte  0xC0000000 32 > design_3 axi_bram_ctrl_0_bram" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   design_3_axi_bram_ctrl_1_0 axi_bram_ctrl_0
@@ -668,6 +696,13 @@ module design_3
         .clk_out2(clk_100MHz_clk_out2),
         .locked(clk_wiz_locked),
         .resetn(reset_rtl_0_1));
+  design_3_decimal_display_mana_0_0 decimal_display_mana_0
+       (.an(decimal_display_mana_0_an),
+        .clk(microblaze_0_Clk),
+        .resetn(rst_clk_wiz_100M_peripheral_aresetn),
+        .seg(decimal_display_mana_0_seg),
+        .x_coord(archery_fsm_0_p1_score),
+        .y_coord(archery_fsm_0_p2_score));
   design_3_framewriter_0_0 framewriter_0
        (.bram_address(framewriter_0_bram_address),
         .bram_en(framewriter_0_bram_en),
@@ -676,6 +711,8 @@ module design_3
         .bram_write_data(framewriter_0_bram_write_data),
         .bram_write_enable(framewriter_0_bram_write_enable),
         .game_state_archery_fsm(archery_fsm_0_game_state),
+        .left_btn(left_btn_0_1),
+        .right_btn(right_btn_0_1),
         .s00_axi_aclk(microblaze_0_Clk),
         .s00_axi_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(rst_clk_wiz_100M_interconnect_aresetn),
@@ -1087,9 +1124,18 @@ module design_3
   design_3_microblaze_0_xlconcat_0 microblaze_0_xlconcat
        (.In0(axi_uartlite_0_interrupt),
         .dout(microblaze_0_intr));
+  design_3_physics_engine_0_0 physics_engine_0
+       (.aim_x(gyro_calc_interface_0_x_coord[8:0]),
+        .aim_y(gyro_calc_interface_0_y_coord[7:0]),
+        .axi_Z_dist(xlconstant_0_dout),
+        .axi_arrow_vel(xlconstant_1_dout),
+        .clk(microblaze_0_Clk),
+        .fire(archery_fsm_0_fire_pulse),
+        .resetn(rst_clk_wiz_100M_peripheral_aresetn),
+        .wind_x_in(archery_fsm_0_wind_x_out),
+        .wind_y_in(archery_fsm_0_wind_y_out));
   design_3_ps2_keyboard_subsyst_0_0 ps2_keyboard_subsyst_0
-       (.an(ps2_keyboard_subsyst_0_an),
-        .ascii_in(axi_gpio_3_gpio_io_o),
+       (.ascii_in(axi_gpio_3_gpio_io_o),
         .ascii_out(ps2_keyboard_subsyst_0_ascii_out),
         .char_bitmap_high(ps2_keyboard_subsyst_0_char_bitmap_high),
         .char_bitmap_low(ps2_keyboard_subsyst_0_char_bitmap_low),
@@ -1100,8 +1146,7 @@ module design_3
         .ps2_clk(ps2_clk_0_1),
         .ps2_data(ps2_data_0_1),
         .read_fifo_en(axi_gpio_2_gpio2_io_o),
-        .resetn(rst_clk_wiz_100M_interconnect_aresetn),
-        .seg(ps2_keyboard_subsyst_0_seg));
+        .resetn(rst_clk_wiz_100M_interconnect_aresetn));
   design_3_rst_clk_wiz_100M_0 rst_clk_wiz_100M
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_clk_wiz_100M_bus_struct_reset),
@@ -1167,6 +1212,10 @@ module design_3
         .In1(ps2_keyboard_subsyst_0_fifo_empty),
         .In2(ps2_keyboard_subsyst_0_fifo_full),
         .dout(xlconcat_1_dout));
+  design_3_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
+  design_3_xlconstant_0_1 xlconstant_1
+       (.dout(xlconstant_1_dout));
 endmodule
 
 module design_3_microblaze_0_axi_periph_0

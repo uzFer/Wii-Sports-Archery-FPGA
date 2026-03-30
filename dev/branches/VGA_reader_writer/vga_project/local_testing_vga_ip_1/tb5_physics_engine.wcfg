@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb5_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="lmb_bram_if_funcs" />
+            <top_module name="mdm_funcs" />
+            <top_module name="tb5" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="500000000fs"></ZoomStartTime>
+      <ZoomEndTime time="2818275155fs"></ZoomEndTime>
+      <Cursor1Time time="1593429000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="243"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="1" />
+   <wvobject fp_name="group221" type="group">
+      <obj_property name="label">physics_engine</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/resetn" type="logic">
+         <obj_property name="ElementShortName">resetn</obj_property>
+         <obj_property name="ObjectShortName">resetn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/fire" type="logic">
+         <obj_property name="ElementShortName">fire</obj_property>
+         <obj_property name="ObjectShortName">fire</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/axi_Z_dist" type="array">
+         <obj_property name="ElementShortName">axi_Z_dist[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_Z_dist[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/axi_arrow_vel" type="array">
+         <obj_property name="ElementShortName">axi_arrow_vel[7:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_arrow_vel[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/wind_x_in" type="array">
+         <obj_property name="ElementShortName">wind_x_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wind_x_in[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/wind_y_in" type="array">
+         <obj_property name="ElementShortName">wind_y_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wind_y_in[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/aim_x" type="array">
+         <obj_property name="ElementShortName">aim_x[8:0]</obj_property>
+         <obj_property name="ObjectShortName">aim_x[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/aim_y" type="array">
+         <obj_property name="ElementShortName">aim_y[7:0]</obj_property>
+         <obj_property name="ObjectShortName">aim_y[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="label">aim_y[7:0/tb5/uut/design_3_i/physics_engine_0/aim_y]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/result_valid" type="logic">
+         <obj_property name="ElementShortName">result_valid</obj_property>
+         <obj_property name="ObjectShortName">result_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/land_x" type="array">
+         <obj_property name="ElementShortName">land_x[8:0]</obj_property>
+         <obj_property name="ObjectShortName">land_x[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_3_i/physics_engine_0/land_y" type="array">
+         <obj_property name="ElementShortName">land_y[7:0]</obj_property>
+         <obj_property name="ObjectShortName">land_y[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

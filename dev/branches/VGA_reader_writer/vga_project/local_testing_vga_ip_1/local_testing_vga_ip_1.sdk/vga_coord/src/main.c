@@ -32,6 +32,8 @@
 
 #define FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET 16
 #define FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET 20
+#define FRAMEWRITER_S00_AXI_SLV_REG6_OFFSET 24
+#define FRAMEWRITER_S00_AXI_SLV_REG7_OFFSET 28
 
 /* Register Offsets from your framewriter.h */
 #define REG_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG0_OFFSET
@@ -41,6 +43,15 @@
 #define REG_HIGH_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG3_OFFSET // HIGH
 #define REG_CHAR_X_OFFSET      16 // FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
 #define REG_CHAR_Y_OFFSET      20 // FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+#define REG_P1_NAME_OFFSET	   24
+#define REG_P2_NAME_OFFSET	   28
+
+// player box input positions
+#define P1_BOX_X 150
+#define P1_BOX_Y 95
+#define P2_BOX_X 150
+#define P2_BOX_Y 125
+
 
 /* Button Bit Masks  */
 #define BTN_L_MASK (1 << 1) // Value 1
@@ -96,8 +107,8 @@ void poll_gyroscope() {
         // Extract coordinates
         x_coord = rdata & 0x3FF;
         y_coord = (rdata >> 10) & 0x3FF;
-//        xil_printf("x: %d\r\n", x_coord);
-//        xil_printf("y: %d\r\n", y_coord);
+        xil_printf("x: %d\r\n", x_coord);
+        xil_printf("y: %d\r\n", y_coord);
         //x_coord = 156;
         //y_coord = 126;
 
@@ -336,6 +347,117 @@ void process_keyboard_input(int current_state) {
 //    }
 }
 
+//uint32_t p1_reg = 0;
+//uint32_t p2_reg = 0;
+//
+//// update player names in the main menu screen
+//void update_names() {
+//    // static means these values PERSIST between function calls
+//    static char p1_c1 = 32, p1_c2 = 32, p2_c1 = 32, p2_c2 = 32;
+//    static int char_count = 0;
+//
+//    // If we already have 4 characters, stop doing anything
+//    if (char_count >= 4) return;
+//
+//    char typed_key = poll_keyboard();
+//    xil_printf("typed_key = %c\n\r",typed_key);
+//    if (typed_key != 0) { // Only proceed if a key was actually pressed
+//        if (char_count == 0)      p1_c1 = typed_key;
+//        else if (char_count == 1) p1_c2 = typed_key;
+//        else if (char_count == 2) p2_c1 = typed_key;
+//        else if (char_count == 3) p2_c2 = typed_key;
+//
+//        xil_printf("p1 c1= %c, c2= %c, p2 c1= %c, c2= %c,\n\r",p1_c1, p1_c2, p2_c1, p2_c2);
+//
+//        char_count++;
+//
+//        // Pack and Write to Hardware
+//        p1_reg = (200 << 24) | (90 << 16) | (p1_c2 << 8) | p1_c1;
+//        p2_reg = (200 << 24) | (120 << 16) | (p2_c2 << 8) | p2_c1;
+//
+//        xil_printf("p1 reg= 0x%08x, p2 reg= 0x%08x\n\r",p1_reg, p2_reg);
+//
+//        FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P1_NAME_OFFSET, p1_reg);
+//        FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P2_NAME_OFFSET, p2_reg);
+//    }
+//
+//}
+
+void update_names() {
+
+    char p1_c1 = 0, p1_c2 = 0, p2_c1 = 0, p2_c2 = 0;
+
+    int char_count = 0;
+
+
+
+    xil_printf("Enter Player 1 Initials (2 chars), then Player 2 (2 chars):\n\r");
+
+
+
+    while (char_count < 4) {
+
+        char typed_key = poll_keyboard();
+
+        xil_printf("Typed: %c\n\r", typed_key);
+
+
+
+        // Only process if it's a printable character
+
+//        if (typed_key >= ' ' && typed_key <= '~') {
+
+
+
+//            if (char_count == 0)      p1_c1 = typed_key;
+//
+//            else if (char_count == 1) p1_c2 = typed_key;
+//
+//            else if (char_count == 2) p2_c1 = typed_key;
+//
+//            else if (char_count == 3) p2_c2 = typed_key;
+
+            if (char_count == 0)      p1_c1 = 65; // 'A'
+
+            else if (char_count == 1) p1_c2 = 65;
+
+            else if (char_count == 2) p2_c1 = 65;
+
+            else if (char_count == 3) p2_c2 = 65;
+
+
+
+            char_count++;
+
+
+
+            // Pack and Write to Hardware as we go
+
+            uint32_t p1_reg = (P1_BOX_X << 24) | (P1_BOX_Y << 16) | (p1_c2 << 8) | p1_c1;
+
+            uint32_t p2_reg = (P2_BOX_X << 24) | (P2_BOX_Y << 16) | (p2_c2 << 8) | p2_c1;
+
+
+
+            xil_printf("p1_reg=0x%08x, p2_reg=0x%08x\n\r", p1_reg, p2_reg);
+
+
+
+            FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P1_NAME_OFFSET, (uint32_t)p1_reg);
+            FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P2_NAME_OFFSET, (uint32_t)p2_reg);
+
+
+
+//        }
+
+    }
+
+//    xil_printf("Name Entry Complete!\n\r");
+
+}
+
+
+
 int main ()
 {
 
@@ -396,14 +518,18 @@ int main ()
 
 
 	   // testcase for PS/2 keyboard -------------------------------------------------
-	   setUserKeyboardInput(1); // using ps2 but still sending stuff via microblaze, use microblaze to process inputs
-	   char typed_key = poll_keyboard();
-	   xil_printf("typed_key = %c\n\r",typed_key);
-	   if (typed_key >= ' ' && typed_key <= '~') { // Printable ASCII characters
-		   drawCharHardware(10, 10, typed_key);
-	   } else {
-		   drawCharHardware(10, 10, 'O');
-	   }
+//	   setUserKeyboardInput(1); // using ps2 but still sending stuff via microblaze, use microblaze to process inputs
+//	   char typed_key = poll_keyboard();
+//	   xil_printf("typed_key = %c\n\r",typed_key);
+//	   if (typed_key >= ' ' && typed_key <= '~') { // Printable ASCII characters
+//		   drawCharHardware(10, 10, typed_key);
+//	   } else {
+//		   drawCharHardware(10, 10, 'O');
+//	   }
+
+	   // x, y, char1's decimal, char2's decimal
+	   setUserKeyboardInput(1);
+	   update_names();
 
 
 

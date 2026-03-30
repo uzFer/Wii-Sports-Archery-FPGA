@@ -48,13 +48,15 @@
 
 
 // IP VLNV: xilinx.com:user:framewriter:1
-// IP Revision: 72
+// IP Revision: 95
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_framewriter_0_0 (
   game_state_archery_fsm,
+  left_btn,
+  right_btn,
   bram_address,
   bram_write_data,
   bram_read_data,
@@ -87,6 +89,8 @@ module design_3_framewriter_0_0 (
 );
 
 input wire [31 : 0] game_state_archery_fsm;
+input wire left_btn;
+input wire right_btn;
 output wire [31 : 0] bram_address;
 output wire [31 : 0] bram_write_data;
 input wire [31 : 0] bram_read_data;
@@ -155,6 +159,8 @@ input wire s00_axi_aresetn;
     .BRAM_WE_WIDTH(4)
   ) inst (
     .game_state_archery_fsm(game_state_archery_fsm),
+    .left_btn(left_btn),
+    .right_btn(right_btn),
     .bram_address(bram_address),
     .bram_write_data(bram_write_data),
     .bram_read_data(bram_read_data),

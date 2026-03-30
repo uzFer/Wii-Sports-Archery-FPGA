@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sat Mar 28 17:49:13 2026
+//Date        : Sun Mar 29 23:48:05 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_3_wrapper.bd
 //Design      : design_3_wrapper
@@ -18,6 +18,8 @@ module design_3_wrapper
     VGA_R,
     VGA_VSYNC,
     aud_sd_0,
+    btn_left,
+    btn_right,
     btn_shoot,
     btn_start,
     calibrate_0,
@@ -26,6 +28,8 @@ module design_3_wrapper
     get_user_input_0,
     gyroscope_enable_0,
     i_MISO_0,
+    led_ps2_clk,
+    led_ps2_data,
     o_CS_0,
     o_MOSI_0,
     o_SCLK_0,
@@ -45,6 +49,8 @@ module design_3_wrapper
   output [3:0]VGA_R;
   output VGA_VSYNC;
   output aud_sd_0;
+  input btn_left;
+  input btn_right;
   input btn_shoot;
   input btn_start;
   input calibrate_0;
@@ -53,6 +59,8 @@ module design_3_wrapper
   output [0:0]get_user_input_0;
   input gyroscope_enable_0;
   input i_MISO_0;
+  output led_ps2_clk;
+  output led_ps2_data;
   output o_CS_0;
   output o_MOSI_0;
   output o_SCLK_0;
@@ -73,6 +81,8 @@ module design_3_wrapper
   wire [3:0]VGA_R;
   wire VGA_VSYNC;
   wire aud_sd_0;
+  wire btn_left;
+  wire btn_right;
   wire btn_shoot;
   wire btn_start;
   wire calibrate_0;
@@ -81,6 +91,8 @@ module design_3_wrapper
   wire [0:0]get_user_input_0;
   wire gyroscope_enable_0;
   wire i_MISO_0;
+  wire led_ps2_clk;
+  wire led_ps2_data;
   wire o_CS_0;
   wire o_MOSI_0;
   wire o_SCLK_0;
@@ -102,6 +114,8 @@ module design_3_wrapper
         .VGA_R(VGA_R),
         .VGA_VSYNC(VGA_VSYNC),
         .aud_sd_0(aud_sd_0),
+        .btn_left(btn_left),
+        .btn_right(btn_right),
         .btn_shoot(btn_shoot),
         .btn_start(btn_start),
         .calibrate_0(calibrate_0),
@@ -110,6 +124,8 @@ module design_3_wrapper
         .get_user_input_0(get_user_input_0),
         .gyroscope_enable_0(gyroscope_enable_0),
         .i_MISO_0(i_MISO_0),
+        .led_ps2_clk(led_ps2_clk),
+        .led_ps2_data(led_ps2_data),
         .o_CS_0(o_CS_0),
         .o_MOSI_0(o_MOSI_0),
         .o_SCLK_0(o_SCLK_0),

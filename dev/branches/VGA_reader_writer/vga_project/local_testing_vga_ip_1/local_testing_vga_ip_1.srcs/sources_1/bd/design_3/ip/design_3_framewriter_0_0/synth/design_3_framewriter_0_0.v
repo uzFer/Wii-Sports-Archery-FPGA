@@ -48,14 +48,16 @@
 
 
 // IP VLNV: xilinx.com:user:framewriter:1
-// IP Revision: 72
+// IP Revision: 95
 
 (* X_CORE_INFO = "framewriter_v1,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_3_framewriter_0_0,framewriter_v1,{}" *)
-(* CORE_GENERATION_INFO = "design_3_framewriter_0_0,framewriter_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=framewriter,x_ipVersion=1,x_ipCoreRevision=72,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,SLAVE_REG_WIDTH=16,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "design_3_framewriter_0_0,framewriter_v1,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=framewriter,x_ipVersion=1,x_ipCoreRevision=95,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,SLAVE_REG_WIDTH=16,BRAM_ADDR_WIDTH=32,BRAM_DATA_WIDTH=32,BRAM_WE_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_framewriter_0_0 (
   game_state_archery_fsm,
+  left_btn,
+  right_btn,
   bram_address,
   bram_write_data,
   bram_read_data,
@@ -88,6 +90,8 @@ module design_3_framewriter_0_0 (
 );
 
 input wire [31 : 0] game_state_archery_fsm;
+input wire left_btn;
+input wire right_btn;
 output wire [31 : 0] bram_address;
 output wire [31 : 0] bram_write_data;
 input wire [31 : 0] bram_read_data;
@@ -156,6 +160,8 @@ input wire s00_axi_aresetn;
     .BRAM_WE_WIDTH(4)
   ) inst (
     .game_state_archery_fsm(game_state_archery_fsm),
+    .left_btn(left_btn),
+    .right_btn(right_btn),
     .bram_address(bram_address),
     .bram_write_data(bram_write_data),
     .bram_read_data(bram_read_data),

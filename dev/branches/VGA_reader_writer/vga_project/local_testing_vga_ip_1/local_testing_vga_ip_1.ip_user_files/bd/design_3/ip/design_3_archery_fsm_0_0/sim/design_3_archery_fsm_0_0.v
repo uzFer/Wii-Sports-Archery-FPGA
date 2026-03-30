@@ -56,32 +56,44 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_archery_fsm_0_0 (
   clk,
-  reset,
+  resetn,
   start_btn,
   shoot_event,
+  left_btn,
+  right_btn,
   score_in,
   score_valid,
   game_state,
+  fire_pulse,
+  wind_x_out,
+  wind_y_out,
   play_menu,
   play_arrow,
   play_music,
   uart_in,
   uart_in_valid,
   uart_out,
-  uart_out_valid
+  uart_out_valid,
+  p1_score,
+  p2_score
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET resetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
-input wire reset;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 resetn RST" *)
+input wire resetn;
 input wire start_btn;
 input wire shoot_event;
+input wire left_btn;
+input wire right_btn;
 input wire [3 : 0] score_in;
 input wire score_valid;
 output wire [31 : 0] game_state;
+output wire fire_pulse;
+output wire [7 : 0] wind_x_out;
+output wire [7 : 0] wind_y_out;
 output wire play_menu;
 output wire play_arrow;
 output wire play_music;
@@ -89,21 +101,30 @@ input wire [7 : 0] uart_in;
 input wire uart_in_valid;
 output wire [7 : 0] uart_out;
 output wire uart_out_valid;
+output wire [6 : 0] p1_score;
+output wire [6 : 0] p2_score;
 
   archery_fsm inst (
     .clk(clk),
-    .reset(reset),
+    .resetn(resetn),
     .start_btn(start_btn),
     .shoot_event(shoot_event),
+    .left_btn(left_btn),
+    .right_btn(right_btn),
     .score_in(score_in),
     .score_valid(score_valid),
     .game_state(game_state),
+    .fire_pulse(fire_pulse),
+    .wind_x_out(wind_x_out),
+    .wind_y_out(wind_y_out),
     .play_menu(play_menu),
     .play_arrow(play_arrow),
     .play_music(play_music),
     .uart_in(uart_in),
     .uart_in_valid(uart_in_valid),
     .uart_out(uart_out),
-    .uart_out_valid(uart_out_valid)
+    .uart_out_valid(uart_out_valid),
+    .p1_score(p1_score),
+    .p2_score(p2_score)
   );
 endmodule

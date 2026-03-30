@@ -1,0 +1,468 @@
+/*
+ * main.c
+ *
+ *  Created on: Mar 15, 2026
+ *      Author: Celine
+ */
+
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xintc.h"
+#include <math.h>
+#include "framewriter.h"
+#include "xil_printf.h"
+
+#include <stdlib.h>
+#include <stdbool.h>
+
+
+//volatile unsigned int* fw = (unsigned int*) XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR;
+
+/* GPIO Addresses - Replace these with your actual XPAR constants from xparameters.h */
+#define BTN_BASE          XPAR_AXI_GPIO_0_BASEADDR // btn D = 4, C = 8, L = 1, R = 2, U = 0
+#define FRAMEWRITER_BASE  XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR
+#define GYRO_GPIO_ADDR	  XPAR_AXI_GPIO_1_BASEADDR
+
+#define PS2_FONT_ROM_INPUT_ADDR XPAR_AXI_GPIO_3_BASEADDR // ascii_in (?)
+#define PS2_CONFIG_ADDR_USER_EN XPAR_AXI_GPIO_3_BASEADDR + 0x08 // get_user_input (?)
+#define PS2_USER_DATA_ADDR XPAR_AXI_GPIO_2_BASEADDR // ok
+#define PS2_FONT_ROM_OUTPUT_ADDR XPAR_GPIO_4_BASEADDR
+
+#define FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET 16
+#define FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET 20
+#define FRAMEWRITER_S00_AXI_SLV_REG6_OFFSET 24
+#define FRAMEWRITER_S00_AXI_SLV_REG7_OFFSET 28
+
+/* Register Offsets from your framewriter.h */
+#define REG_X_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG0_OFFSET
+#define REG_Y_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG1_OFFSET
+//#define REG_STATE_OFFSET  FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET
+#define REG_LOW_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET // LOW
+#define REG_HIGH_OFFSET      FRAMEWRITER_S00_AXI_SLV_REG3_OFFSET // HIGH
+#define REG_CHAR_X_OFFSET      16 // FRAMEWRITER_S00_AXI_SLV_REG4_OFFSET // x
+#define REG_CHAR_Y_OFFSET      20 // FRAMEWRITER_S00_AXI_SLV_REG5_OFFSET // y
+#define REG_P1_NAME_OFFSET	   24
+#define REG_P2_NAME_OFFSET	   28
+
+// player box input positions
+#define P1_BOX_X 150
+#define P1_BOX_Y 95
+#define P2_BOX_X 150
+#define P2_BOX_Y 125
+
+
+/* Button Bit Masks  */
+#define BTN_L_MASK (1 << 1) // Value 1
+#define BTN_R_MASK (1 << 2) // Value 2
+#define BTN_D_MASK (1 << 4) // Value 4
+#define BTN_C_MASK (1 << 8) // Value 8
+#define BTN_U_MASK (1 << 0) // Value 0
+
+// Font stuff
+#define FONT_WIDTH  7
+#define FONT_HEIGHT 9
+
+// Valid state sequence: 1, 2, 6, 4, 8, 12
+uint32_t state_list[] = {1, 2, 6, 12};
+int state_idx = 0;
+
+// Coordinate pairs: {x, y}
+//uint32_t coords[10][2] = {
+//	{250, 120}, {160, 215}, {225, 185}, {70, 120}, // Outer
+//	{210, 120}, {160, 175}, {125, 85},             // Middle
+//	{175, 120}, {160, 130}, {150, 110}              // Inner
+//};
+uint32_t coords[3][2] = { {160,25}, {160,120}, {160,185}};
+int coord_idx = 0;
+
+uint32_t btn_data;
+uint32_t last_btn_data = 0;
+volatile uint32_t x_coord =0;
+volatile uint32_t y_coord = 0;
+
+uint32_t current_hw_state = 0;
+
+
+void draw_crosshair(uint32_t x, uint32_t y) {
+   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, (uint32_t)x);
+   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, (uint32_t)y);
+   return;
+}
+
+
+void poll_gyroscope() {
+    volatile bool last_valid_bit = false;
+    volatile uint32_t *gyro_gpio = (uint32_t *)GYRO_GPIO_ADDR;
+    uint32_t rdata = *gyro_gpio; // data is [21:0]
+
+    bool cal_done = (rdata >> 21) & 0x1;
+    bool current_valid_bit = (rdata >> 20) & 0x1;
+
+    // Detect if the bit has toggled (indicating new data is ready)
+    if (cal_done && (current_valid_bit != last_valid_bit)) {
+        last_valid_bit = current_valid_bit;
+
+        // Extract coordinates
+        x_coord = rdata & 0x3FF;
+        y_coord = (rdata >> 10) & 0x3FF;
+//        xil_printf("x: %d\r\n", x_coord);
+//        xil_printf("y: %d\r\n", y_coord);
+        //x_coord = 156;
+        //y_coord = 126;
+
+        // Plot the x and y coordinates on the VGA screen
+        draw_crosshair(x_coord, y_coord);
+        return;
+    }
+    return;
+}
+
+void setUserKeyboardInput(uint8_t enable) {
+	// Set enable = 1 if we want to get PS/2
+	// Set enable = 0 if we want to just access font rom directly
+	Xil_Out32(PS2_CONFIG_ADDR_USER_EN, enable); // addr (in memory), value
+	return;
+
+}
+
+//int getWiiFontIndex(char c) {
+//    for (int i = 0; i < sizeof(wiiFont)/sizeof(FontChar); i++)
+//        if (wiiFont[i].c == c) return i;
+//    return 0;
+//}
+
+uint64_t getWiiFontBitmap(char c) {
+	// Send char value to font rom
+	// Read font rom output
+	// Remember to set setUserKeyboardInput correctly
+	volatile uint64_t flattened_bitmap = 0; // bitmap is 7x9  = 63 dimension
+	Xil_Out32(PS2_FONT_ROM_INPUT_ADDR, c); // addr
+	volatile uint32_t* font_rom_output = (uint32_t *)PS2_FONT_ROM_OUTPUT_ADDR; // output
+
+	volatile uint32_t lower = *(font_rom_output);
+	volatile uint32_t upper = *(font_rom_output + 2); // plz don't change the 2 T^T
+	flattened_bitmap = ((uint64_t)upper << 32) | lower;
+
+//	xil_printf("Raw Lower: 0x%08x\r\n", lower);
+//	xil_printf("Raw Upper: 0x%08x\r\n", upper);
+
+	return flattened_bitmap;
+
+}
+
+// adapted for framewriter
+void drawCharHardware(int x, int y, char c) {
+    uint64_t bitmap = getWiiFontBitmap(c);
+
+    // Split 64-bit bitmap into two 32-bit chunks
+    uint32_t low = (uint32_t)(bitmap & 0xFFFFFFFF);
+    uint32_t high = (uint32_t)(bitmap >> 32);
+
+    // debug
+//    xil_printf("Character: %c | bitmap: 0x%08x%08x\r\n", c, high, low);
+
+    // Write to the AXI Slave Registers
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_CHAR_X_OFFSET, (uint32_t)x);
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_CHAR_Y_OFFSET, (uint32_t)y);
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_LOW_OFFSET, (uint32_t)low);
+	FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_HIGH_OFFSET, (uint32_t)high);
+
+}
+
+//void drawChar(int x, int y, char c, uint32_t color, int scale) {
+//    uint64_t flat_bitmap = getWiiFontBitmap(c);
+//    for (int row = 0; row < FONT_HEIGHT; row++) {
+//		for (int col = 0; col < FONT_WIDTH; col++) {
+//			/* * Calculate bit position:
+//			 * There are 63 bits total (0 to 62).
+//			 * (row * FONT_WIDTH + col) gives the pixel index (0 to 62).
+//			 * We subtract from 62 to keep the "Left/Top = MSB" logic.
+//			 */
+//			int bit_pos = (FONT_HEIGHT * FONT_WIDTH - 1) - (row * FONT_WIDTH + col);
+//
+//			// Check if the bit at bit_pos is set
+//			if ((flat_bitmap >> bit_pos) & 1ULL) {
+//				drawBox(x + col * scale, y + row * scale, scale, scale, color);
+//			}
+//		}
+//	}
+//}
+
+//void drawText(int x, int y, const char *text, uint32_t color, int scale) {
+//    while (*text) {
+//        drawChar(x, y, *text, color, scale);
+//        x += (FONT_WIDTH * scale);
+//        text++;
+//    }
+//}
+
+//void drawStatus(int x, int y, int rd, int arr) {
+//    drawText(x+10, y, "Round ", WHITE, 2);
+//    drawChar(x + 90, y, (char)(rd + '1'), WHITE, 2);
+//    drawText(x, y+30, "Arrow ", WHITE, 2);
+//    drawText(x + 85, y+30, "/3", WHITE, 2);
+//    drawChar(x + 70, y+30, (char)(arr + '1'), WHITE, 2);
+//}
+
+//void drawTitleScreen() {
+//    clear_screen(WHITE);
+//    drawBox(0, 320, RESOLUTION_X, 20, TURQUOISE);
+//    drawBox(0, 350, RESOLUTION_X, 20, ORANGE);
+//    drawText(50, 80, "Wii", GREY, 8);
+//    drawText(230, 80, "Sports", TURQUOISE, 8);
+//    drawText(200, 180, "FPGA", TURQUOISE, 8);
+//    drawText(200, 280, "Archery Edition", GREY, 2);
+//    drawText(20, 410, "Press Any Key To Start", GREY, 4);
+//}
+
+//void drawMainMenu() {
+//    clear_screen(WHITE);
+//    drawBox(0, 20, RESOLUTION_X, 16, TURQUOISE);
+//    drawBox(0, 40, RESOLUTION_X, 16, ORANGE);
+//
+//    drawText(80, 80, "Enter Player Info", GREY, 4);
+//
+//    // Player 1 Input Box
+//    drawText(80, 160, "Player 1:", GREY, 3);
+//    drawBox(265, 155, 200, 40, GREY); // Border
+//    drawBox(270, 160, 190, 30, WHITE); // Text Area
+//    drawText(280, 165, p1_name, BLACK, 3);
+//    if (entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 165, "_", TURQUOISE, 3);
+//
+//    // Player 2 Input Box
+//    drawText(80, 220, "Player 2:", GREY, 3);
+//    drawBox(265, 215, 200, 40, GREY);
+//    drawBox(270, 220, 190, 30, WHITE);
+//    drawText(280, 225, p2_name, BLACK, 3);
+//    if (!entering_p1 && !names_complete) drawText(275 + (name_cursor * 21), 225, "_", ORANGE, 3);
+//
+//    if (names_complete) {
+//        drawText(50, 300, "READY! Press Start on FPGA", GREEN, 3);
+//    } else {
+//        drawText(120, 300, "Type name & press ENTER", GREY, 2);
+//    }
+//}
+
+/* ===================== KEYBOARD HELPERS ===================== */
+char poll_keyboard() {
+    volatile uint32_t *ps2_gpio = (uint32_t *)PS2_USER_DATA_ADDR; // gpio 2
+    uint32_t status = *ps2_gpio; // Read Channel 1 (Inputs) - fifo_en
+
+
+    if (status == 0x100) {
+		xil_printf("status: 0x%08x\r\n", status);
+    }
+
+
+    // Bit 8 is the 'Empty' flag
+    bool empty = (status >> 8) & 0x1; // fifo empty
+
+    if (!empty) {
+
+        // We must pop the FIFO FIRST to load the character into read_data
+        *(ps2_gpio + 2) = 1;
+
+        // Wait a few cycles to ensure the hardware updates read_data
+        for (volatile int i = 0; i < 100; i++);
+
+        *(ps2_gpio + 2) = 0;
+
+        // Now read the updated status which contains the popped character
+        status = *ps2_gpio;
+        return (char)(status & 0xFF);
+    }
+    return 0;
+}
+
+/* ===================== KEYBOARD VGA RENDERING ===================== */
+//#define MAX_INPUT_LEN 32
+//static char keyboard_buffer[MAX_INPUT_LEN + 1] = {0};
+//static int  keyboard_cursor = 0;
+
+//void render_keyboard_text_to_vga() {
+//    // 1. Clear the specific area where the text goes (top left)
+//    // Let's clear a box wide enough for MAX_INPUT_LEN
+////    drawBox(10, 10, MAX_INPUT_LEN * 15, 30, BLACK);
+//
+//    // 2. Draw the updated string
+//    if (keyboard_cursor > 0) {
+//        drawText(10, 10, keyboard_buffer, WHITE, 3);
+//    }
+//}
+
+
+void process_keyboard_input(int current_state) {
+    char key = poll_keyboard();
+    if (key == 0) return;
+
+//    // Only use the special name-entry logic if we are on the Main Menu
+//    if (current_state == HW_MAIN_MENU && !names_complete) {
+//        char* current_buf = entering_p1 ? p1_name : p2_name;
+//
+//        if (key == 0x0D || key == '\n') { // ENTER KEY
+//            if (name_cursor > 0) { // Don't allow empty names
+//                if (entering_p1) {
+//                    entering_p1 = false;
+//                    name_cursor = 0;
+//                } else {
+//                    names_complete = true;
+//                }
+//                drawMainMenu(); // Redraw to update boxes
+//            }
+//        }
+//        else if (key == 0x08 || key == '\b') { // BACKSPACE
+//            if (name_cursor > 0) {
+//                name_cursor--;
+//                current_buf[name_cursor] = '\0';
+//                drawMainMenu();
+//            }
+//        }
+//        else if (key >= ' ' && key <= '~' && name_cursor < MAX_NAME_LEN) {
+//            current_buf[name_cursor] = key;
+//            name_cursor++;
+//            current_buf[name_cursor] = '\0';
+//            drawMainMenu();
+//        }
+//    }
+//    else {
+//    	printf("Key pressed: %c\n", key);
+//
+//    	        if (key == '\b' || key == 0x08) { // Backspace
+//    	            if (keyboard_cursor > 0) {
+//    	                keyboard_cursor--;
+//    	                keyboard_buffer[keyboard_cursor] = '\0';
+//    	                render_keyboard_text_to_vga();
+//    	            }
+//    	        }
+//    	        else if (key >= ' ' && key <= '~') { // Printable ASCII characters
+//    	            if (keyboard_cursor < MAX_INPUT_LEN) {
+//    	                keyboard_buffer[keyboard_cursor] = key;
+//    	                keyboard_cursor++;
+//    	                keyboard_buffer[keyboard_cursor] = '\0';
+//    	                render_keyboard_text_to_vga();
+//    	            }
+//    	        }
+//    }
+}
+
+
+// update player names in the main menu screen
+void update_names() {
+    char p1_c1 = 0, p1_c2 = 0, p2_c1 = 0, p2_c2 = 0;
+    int char_count = 0;
+
+    xil_printf("Enter Player 1 Initials (2 chars), then Player 2 (2 chars):\n\r");
+
+    while (char_count < 4) {
+        char typed_key = poll_keyboard();
+        xil_printf("Typed: %c\n\r", typed_key);
+
+        // Only process if it's a printable character
+        if (typed_key >= ' ' && typed_key <= '~') {
+
+            if (char_count == 0)      p1_c1 = typed_key;
+            else if (char_count == 1) p1_c2 = typed_key;
+            else if (char_count == 2) p2_c1 = typed_key;
+            else if (char_count == 3) p2_c2 = typed_key;
+
+            char_count++;
+
+            // Pack and Write to Hardware as we go
+            uint32_t p1_reg = (P1_BOX_X << 24) | (P1_BOX_Y << 16) | (p1_c2 << 8) | p1_c1;
+            uint32_t p2_reg = (P2_BOX_X << 24) | (P2_BOX_Y << 16) | (p2_c2 << 8) | p2_c1;
+
+            FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P1_NAME_OFFSET, (uint32_t)p1_reg);
+            FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P2_NAME_OFFSET, (uint32_t)p2_reg);
+
+        }
+    }
+    xil_printf("Name Entry Complete!\n\r");
+}
+
+
+
+int main ()
+{
+
+   xil_printf("---Wii Sports Archery Controller Active---\n\r");
+
+//   int x_pos = 120;      // Start at left boundary
+//   int direction = 1;    // 1 for moving right, -1 for moving left
+//   int y_fixed = 120;    // Keep Y in the middle
+
+   // ps2 testing
+   int fixed_x = 50;
+   int fixed_y = 50;
+
+
+	while(1)
+	{
+
+	/*
+	* pseudo code
+	*
+		if (push button pressed) {
+		   state = next state -- circle between them;
+		   FRAMEWRITER_mWriteReg(XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR, FRAMEWRITER_S00_AXI_SLV_REG2_OFFSET);
+		}
+
+		if (push button L pressed) {
+		   print("x=%d y= %d\n\r", x, y);
+		}
+	*/
+
+
+	   // vga stuff start
+//	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_STATE_OFFSET, 2);
+
+//	   x_pos = x_pos + direction;
+//	   if (x_pos >= 180) {
+//		   direction = -1; // Hit right wall, go left
+//	   }
+//	   else if (x_pos <= 120) {
+//		   direction = 1;  // Hit left wall, go right
+//	   }
+//
+//	   // writing cross hair
+//	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, (uint32_t)x_pos);
+//	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, (uint32_t)y_fixed);
+//	   poll_gyroscope();
+	   // vga stuff end
+//	   draw_crosshair(x_coord, y_coord);
+
+//	   last_btn_data = btn_data; // Store pfor edge detection
+	   for(int i=0; i<1000000; i++); // Simple debounce delay
+
+	   // testcase for font ROM -------------------------------------------------
+//	   setUserKeyboardInput(0); // 0 = use microblaze
+//	   drawCharHardware(10,10,'B'); // draw/control from microblaze
+
+	   // or directly write into it using slave offsets ('A' = 1c4489f224488000)
+
+
+	   // testcase for PS/2 keyboard -------------------------------------------------
+//	   setUserKeyboardInput(1); // using ps2 but still sending stuff via microblaze, use microblaze to process inputs
+//	   char typed_key = poll_keyboard();
+//	   xil_printf("typed_key = %c\n\r",typed_key);
+//	   if (typed_key >= ' ' && typed_key <= '~') { // Printable ASCII characters
+//		   drawCharHardware(10, 10, typed_key);
+//	   } else {
+//		   drawCharHardware(10, 10, 'O');
+//	   }
+
+	   // x, y, char1's decimal, char2's decimal
+	   setUserKeyboardInput(1);
+	   update_names();
+
+
+
+	}
+
+	xil_printf("---Exiting main---\n\r");
+
+   return 0;
+}
+
+
