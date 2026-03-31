@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774932936">
+<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774985973">
   <File Type="PA-TCL" Name="design_3_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_3_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_3_wrapper_reports.tcl"/>
@@ -403,23 +403,25 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design">
       <Option Id="FlattenHierarchy">1</Option>
     </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_bram_ctrl_0_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_ps2_keyboard_subsyst_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_bram_ctrl_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_gyro_calc_interface_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_sync_gen_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_top_sound_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_decimal_display_mana_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_scoring_engine_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_ps2_keyboard_subsyst_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_decimal_display_mana_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_physics_engine_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_archery_fsm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
 </GenRun>

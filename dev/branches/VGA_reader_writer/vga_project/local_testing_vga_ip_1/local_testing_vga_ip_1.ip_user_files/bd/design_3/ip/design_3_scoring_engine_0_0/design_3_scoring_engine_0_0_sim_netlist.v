@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar 29 18:35:29 2026
+// Date        : Tue Mar 31 14:59:31 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_scoring_engine_0_0/design_3_scoring_engine_0_0_sim_netlist.v
@@ -17,14 +17,14 @@
 (* NotValidForBitStream *)
 module design_3_scoring_engine_0_0
    (clk,
-    reset,
+    resetn,
     trig_calc,
     gyro_x,
     gyro_y,
     score,
     valid_score);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *) input clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET resetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 resetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input resetn;
   input trig_calc;
   input [9:0]gyro_x;
   input [9:0]gyro_y;
@@ -34,7 +34,7 @@ module design_3_scoring_engine_0_0
   wire clk;
   wire [9:0]gyro_x;
   wire [9:0]gyro_y;
-  wire reset;
+  wire resetn;
   wire [3:0]score;
   wire trig_calc;
   wire valid_score;
@@ -43,7 +43,7 @@ module design_3_scoring_engine_0_0
        (.clk(clk),
         .gyro_x(gyro_x),
         .gyro_y(gyro_y),
-        .reset(reset),
+        .resetn(resetn),
         .score(score),
         .trig_calc(trig_calc),
         .valid_score(valid_score));
@@ -56,21 +56,22 @@ module design_3_scoring_engine_0_0_scoring_engine
     gyro_x,
     gyro_y,
     clk,
-    reset,
-    trig_calc);
+    trig_calc,
+    resetn);
   output valid_score;
   output [3:0]score;
   input [9:0]gyro_x;
   input [9:0]gyro_y;
   input clk;
-  input reset;
   input trig_calc;
+  input resetn;
 
-  wire [8:6]A;
+  wire [7:5]A;
   wire clk;
   wire dist_sq1_i_1_n_0;
   wire dist_sq1_i_2_n_0;
-  wire dist_sq1_i_4_n_0;
+  wire dist_sq1_i_3_n_0;
+  wire dist_sq1_i_5_n_0;
   wire dist_sq1_n_106;
   wire dist_sq1_n_107;
   wire dist_sq1_n_108;
@@ -126,6 +127,8 @@ module design_3_scoring_engine_0_0_scoring_engine
   wire dist_sq_reg_i_5_n_0;
   wire dist_sq_reg_i_6_n_0;
   wire dist_sq_reg_i_7_n_0;
+  wire dist_sq_reg_i_8_n_0;
+  wire dist_sq_reg_i_9_n_0;
   wire dist_sq_reg_n_100;
   wire dist_sq_reg_n_101;
   wire dist_sq_reg_n_102;
@@ -150,7 +153,7 @@ module design_3_scoring_engine_0_0_scoring_engine
   wire dist_sq_reg_n_99;
   wire [9:0]gyro_x;
   wire [9:0]gyro_y;
-  wire reset;
+  wire resetn;
   wire [3:0]score;
   wire \score[0]_i_1_n_0 ;
   wire \score[0]_i_2_n_0 ;
@@ -177,6 +180,7 @@ module design_3_scoring_engine_0_0_scoring_engine
   wire \score[3]_i_2_n_0 ;
   wire \score[3]_i_3_n_0 ;
   wire \score[3]_i_4_n_0 ;
+  wire \score[3]_i_5_n_0 ;
   wire trig_calc;
   wire trig_q1;
   wire trig_q2;
@@ -231,11 +235,11 @@ module design_3_scoring_engine_0_0_scoring_engine
     .USE_PATTERN_DETECT("NO_PATDET"),
     .USE_SIMD("ONE48")) 
     dist_sq1
-       (.A({dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_2_n_0,A[8],dist_sq1_i_4_n_0,A[6],gyro_x[5:0]}),
+       (.A({dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_2_n_0,dist_sq1_i_3_n_0,A[7],dist_sq1_i_5_n_0,A[5],gyro_x[4:0]}),
         .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .ACOUT(NLW_dist_sq1_ACOUT_UNCONNECTED[29:0]),
         .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
-        .B({dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_2_n_0,A[8],dist_sq1_i_4_n_0,A[6],gyro_x[5:0]}),
+        .B({dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_1_n_0,dist_sq1_i_2_n_0,dist_sq1_i_3_n_0,A[7],dist_sq1_i_5_n_0,A[5],gyro_x[4:0]}),
         .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .BCOUT(NLW_dist_sq1_BCOUT_UNCONNECTED[17:0]),
         .C({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
@@ -269,10 +273,10 @@ module design_3_scoring_engine_0_0_scoring_engine
         .PATTERNDETECT(NLW_dist_sq1_PATTERNDETECT_UNCONNECTED),
         .PCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .PCOUT({dist_sq1_n_106,dist_sq1_n_107,dist_sq1_n_108,dist_sq1_n_109,dist_sq1_n_110,dist_sq1_n_111,dist_sq1_n_112,dist_sq1_n_113,dist_sq1_n_114,dist_sq1_n_115,dist_sq1_n_116,dist_sq1_n_117,dist_sq1_n_118,dist_sq1_n_119,dist_sq1_n_120,dist_sq1_n_121,dist_sq1_n_122,dist_sq1_n_123,dist_sq1_n_124,dist_sq1_n_125,dist_sq1_n_126,dist_sq1_n_127,dist_sq1_n_128,dist_sq1_n_129,dist_sq1_n_130,dist_sq1_n_131,dist_sq1_n_132,dist_sq1_n_133,dist_sq1_n_134,dist_sq1_n_135,dist_sq1_n_136,dist_sq1_n_137,dist_sq1_n_138,dist_sq1_n_139,dist_sq1_n_140,dist_sq1_n_141,dist_sq1_n_142,dist_sq1_n_143,dist_sq1_n_144,dist_sq1_n_145,dist_sq1_n_146,dist_sq1_n_147,dist_sq1_n_148,dist_sq1_n_149,dist_sq1_n_150,dist_sq1_n_151,dist_sq1_n_152,dist_sq1_n_153}),
-        .RSTA(reset),
+        .RSTA(\score[3]_i_1_n_0 ),
         .RSTALLCARRYIN(1'b0),
         .RSTALUMODE(1'b0),
-        .RSTB(reset),
+        .RSTB(\score[3]_i_1_n_0 ),
         .RSTC(1'b0),
         .RSTCTRL(1'b0),
         .RSTD(1'b0),
@@ -280,40 +284,50 @@ module design_3_scoring_engine_0_0_scoring_engine
         .RSTM(1'b0),
         .RSTP(1'b0),
         .UNDERFLOW(NLW_dist_sq1_UNDERFLOW_UNCONNECTED));
-  LUT4 #(
-    .INIT(16'h001F)) 
+  LUT5 #(
+    .INIT(32'h00001115)) 
     dist_sq1_i_1
-       (.I0(gyro_x[6]),
+       (.I0(gyro_x[8]),
         .I1(gyro_x[7]),
-        .I2(gyro_x[8]),
-        .I3(gyro_x[9]),
+        .I2(gyro_x[6]),
+        .I3(gyro_x[5]),
+        .I4(gyro_x[9]),
         .O(dist_sq1_i_1_n_0));
+  LUT5 #(
+    .INIT(32'hEEEA1115)) 
+    dist_sq1_i_2
+       (.I0(gyro_x[8]),
+        .I1(gyro_x[7]),
+        .I2(gyro_x[6]),
+        .I3(gyro_x[5]),
+        .I4(gyro_x[9]),
+        .O(dist_sq1_i_2_n_0));
   LUT4 #(
     .INIT(16'hE01F)) 
-    dist_sq1_i_2
-       (.I0(gyro_x[6]),
-        .I1(gyro_x[7]),
-        .I2(gyro_x[8]),
-        .I3(gyro_x[9]),
-        .O(dist_sq1_i_2_n_0));
+    dist_sq1_i_3
+       (.I0(gyro_x[5]),
+        .I1(gyro_x[6]),
+        .I2(gyro_x[7]),
+        .I3(gyro_x[8]),
+        .O(dist_sq1_i_3_n_0));
   LUT3 #(
     .INIT(8'h1E)) 
-    dist_sq1_i_3
-       (.I0(gyro_x[7]),
-        .I1(gyro_x[6]),
-        .I2(gyro_x[8]),
-        .O(A[8]));
-  LUT2 #(
-    .INIT(4'h9)) 
     dist_sq1_i_4
        (.I0(gyro_x[6]),
-        .I1(gyro_x[7]),
-        .O(dist_sq1_i_4_n_0));
+        .I1(gyro_x[5]),
+        .I2(gyro_x[7]),
+        .O(A[7]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    dist_sq1_i_5
+       (.I0(gyro_x[5]),
+        .I1(gyro_x[6]),
+        .O(dist_sq1_i_5_n_0));
   LUT1 #(
     .INIT(2'h1)) 
-    dist_sq1_i_5
-       (.I0(gyro_x[6]),
-        .O(A[6]));
+    dist_sq1_i_6
+       (.I0(gyro_x[5]),
+        .O(A[5]));
   DSP48E1 #(
     .ACASCREG(1),
     .ADREG(1),
@@ -341,11 +355,11 @@ module design_3_scoring_engine_0_0_scoring_engine
     .USE_PATTERN_DETECT("NO_PATDET"),
     .USE_SIMD("ONE48")) 
     dist_sq_reg
-       (.A({dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_2_n_0,dist_sq_reg_i_3_n_0,dist_sq_reg_i_4_n_0,dist_sq_reg_i_5_n_0,dist_sq_reg_i_6_n_0,dist_sq_reg_i_7_n_0,gyro_y[3:0]}),
+       (.A({dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_2_n_0,dist_sq_reg_i_3_n_0,dist_sq_reg_i_4_n_0,dist_sq_reg_i_5_n_0,dist_sq_reg_i_6_n_0,dist_sq_reg_i_7_n_0,dist_sq_reg_i_8_n_0,gyro_y[2:0]}),
         .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .ACOUT(NLW_dist_sq_reg_ACOUT_UNCONNECTED[29:0]),
         .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
-        .B({dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_2_n_0,dist_sq_reg_i_3_n_0,dist_sq_reg_i_4_n_0,dist_sq_reg_i_5_n_0,dist_sq_reg_i_6_n_0,dist_sq_reg_i_7_n_0,gyro_y[3:0]}),
+        .B({dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_1_n_0,dist_sq_reg_i_2_n_0,dist_sq_reg_i_3_n_0,dist_sq_reg_i_4_n_0,dist_sq_reg_i_5_n_0,dist_sq_reg_i_6_n_0,dist_sq_reg_i_7_n_0,dist_sq_reg_i_8_n_0,gyro_y[2:0]}),
         .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .BCOUT(NLW_dist_sq_reg_BCOUT_UNCONNECTED[17:0]),
         .C({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
@@ -379,81 +393,93 @@ module design_3_scoring_engine_0_0_scoring_engine
         .PATTERNDETECT(NLW_dist_sq_reg_PATTERNDETECT_UNCONNECTED),
         .PCIN({dist_sq1_n_106,dist_sq1_n_107,dist_sq1_n_108,dist_sq1_n_109,dist_sq1_n_110,dist_sq1_n_111,dist_sq1_n_112,dist_sq1_n_113,dist_sq1_n_114,dist_sq1_n_115,dist_sq1_n_116,dist_sq1_n_117,dist_sq1_n_118,dist_sq1_n_119,dist_sq1_n_120,dist_sq1_n_121,dist_sq1_n_122,dist_sq1_n_123,dist_sq1_n_124,dist_sq1_n_125,dist_sq1_n_126,dist_sq1_n_127,dist_sq1_n_128,dist_sq1_n_129,dist_sq1_n_130,dist_sq1_n_131,dist_sq1_n_132,dist_sq1_n_133,dist_sq1_n_134,dist_sq1_n_135,dist_sq1_n_136,dist_sq1_n_137,dist_sq1_n_138,dist_sq1_n_139,dist_sq1_n_140,dist_sq1_n_141,dist_sq1_n_142,dist_sq1_n_143,dist_sq1_n_144,dist_sq1_n_145,dist_sq1_n_146,dist_sq1_n_147,dist_sq1_n_148,dist_sq1_n_149,dist_sq1_n_150,dist_sq1_n_151,dist_sq1_n_152,dist_sq1_n_153}),
         .PCOUT(NLW_dist_sq_reg_PCOUT_UNCONNECTED[47:0]),
-        .RSTA(reset),
+        .RSTA(\score[3]_i_1_n_0 ),
         .RSTALLCARRYIN(1'b0),
         .RSTALUMODE(1'b0),
-        .RSTB(reset),
+        .RSTB(\score[3]_i_1_n_0 ),
         .RSTC(1'b0),
         .RSTCTRL(1'b0),
         .RSTD(1'b0),
         .RSTINMODE(1'b0),
         .RSTM(1'b0),
-        .RSTP(reset),
+        .RSTP(\score[3]_i_1_n_0 ),
         .UNDERFLOW(NLW_dist_sq_reg_UNDERFLOW_UNCONNECTED));
-  LUT6 #(
-    .INIT(64'h0000000015555555)) 
+  LUT2 #(
+    .INIT(4'h1)) 
     dist_sq_reg_i_1
-       (.I0(gyro_y[8]),
-        .I1(gyro_y[7]),
-        .I2(gyro_y[5]),
-        .I3(gyro_y[4]),
-        .I4(gyro_y[6]),
-        .I5(gyro_y[9]),
+       (.I0(dist_sq_reg_i_9_n_0),
+        .I1(gyro_y[9]),
         .O(dist_sq_reg_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    dist_sq_reg_i_2
+       (.I0(dist_sq_reg_i_9_n_0),
+        .I1(gyro_y[9]),
+        .O(dist_sq_reg_i_2_n_0));
   LUT6 #(
     .INIT(64'hEAAAAAAA15555555)) 
-    dist_sq_reg_i_2
-       (.I0(gyro_y[8]),
-        .I1(gyro_y[7]),
-        .I2(gyro_y[5]),
-        .I3(gyro_y[4]),
-        .I4(gyro_y[6]),
-        .I5(gyro_y[9]),
-        .O(dist_sq_reg_i_2_n_0));
+    dist_sq_reg_i_3
+       (.I0(gyro_y[7]),
+        .I1(gyro_y[6]),
+        .I2(gyro_y[4]),
+        .I3(gyro_y[3]),
+        .I4(gyro_y[5]),
+        .I5(gyro_y[8]),
+        .O(dist_sq_reg_i_3_n_0));
   LUT5 #(
     .INIT(32'h80007FFF)) 
-    dist_sq_reg_i_3
-       (.I0(gyro_y[6]),
-        .I1(gyro_y[4]),
-        .I2(gyro_y[5]),
-        .I3(gyro_y[7]),
-        .I4(gyro_y[8]),
-        .O(dist_sq_reg_i_3_n_0));
-  LUT4 #(
-    .INIT(16'h7F80)) 
     dist_sq_reg_i_4
        (.I0(gyro_y[5]),
-        .I1(gyro_y[4]),
-        .I2(gyro_y[6]),
-        .I3(gyro_y[7]),
+        .I1(gyro_y[3]),
+        .I2(gyro_y[4]),
+        .I3(gyro_y[6]),
+        .I4(gyro_y[7]),
         .O(dist_sq_reg_i_4_n_0));
-  LUT3 #(
-    .INIT(8'h78)) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
     dist_sq_reg_i_5
        (.I0(gyro_y[4]),
-        .I1(gyro_y[5]),
-        .I2(gyro_y[6]),
+        .I1(gyro_y[3]),
+        .I2(gyro_y[5]),
+        .I3(gyro_y[6]),
         .O(dist_sq_reg_i_5_n_0));
+  LUT3 #(
+    .INIT(8'h78)) 
+    dist_sq_reg_i_6
+       (.I0(gyro_y[3]),
+        .I1(gyro_y[4]),
+        .I2(gyro_y[5]),
+        .O(dist_sq_reg_i_6_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    dist_sq_reg_i_6
-       (.I0(gyro_y[4]),
-        .I1(gyro_y[5]),
-        .O(dist_sq_reg_i_6_n_0));
+    dist_sq_reg_i_7
+       (.I0(gyro_y[3]),
+        .I1(gyro_y[4]),
+        .O(dist_sq_reg_i_7_n_0));
   LUT1 #(
     .INIT(2'h1)) 
-    dist_sq_reg_i_7
-       (.I0(gyro_y[4]),
-        .O(dist_sq_reg_i_7_n_0));
+    dist_sq_reg_i_8
+       (.I0(gyro_y[3]),
+        .O(dist_sq_reg_i_8_n_0));
   LUT6 #(
-    .INIT(64'h0000000004FF0400)) 
+    .INIT(64'hFFFFFFFFEAAAAAAA)) 
+    dist_sq_reg_i_9
+       (.I0(gyro_y[7]),
+        .I1(gyro_y[6]),
+        .I2(gyro_y[4]),
+        .I3(gyro_y[3]),
+        .I4(gyro_y[5]),
+        .I5(gyro_y[8]),
+        .O(dist_sq_reg_i_9_n_0));
+  LUT6 #(
+    .INIT(64'h0040CCCC00400000)) 
     \score[0]_i_1 
        (.I0(\score[1]_i_2_n_0 ),
-        .I1(\score[0]_i_2_n_0 ),
-        .I2(\score[0]_i_3_n_0 ),
-        .I3(trig_q2),
-        .I4(score[0]),
-        .I5(reset),
+        .I1(resetn),
+        .I2(\score[0]_i_2_n_0 ),
+        .I3(\score[0]_i_3_n_0 ),
+        .I4(trig_q2),
+        .I5(score[0]),
         .O(\score[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
@@ -491,7 +517,7 @@ module design_3_scoring_engine_0_0_scoring_engine
        (.I0(\score[1]_i_2_n_0 ),
         .I1(\score[1]_i_3_n_0 ),
         .I2(\score[1]_i_4_n_0 ),
-        .I3(\score[3]_i_2_n_0 ),
+        .I3(\score[3]_i_3_n_0 ),
         .I4(trig_q2),
         .I5(score[1]),
         .O(\score[1]_i_1_n_0 ));
@@ -551,7 +577,7 @@ module design_3_scoring_engine_0_0_scoring_engine
   LUT6 #(
     .INIT(64'hDFDDDDDDDFDDDFDD)) 
     \score[1]_i_3 
-       (.I0(\score[3]_i_4_n_0 ),
+       (.I0(\score[3]_i_5_n_0 ),
         .I1(dist_sq_reg_n_91),
         .I2(\score[1]_i_6_n_0 ),
         .I3(dist_sq_reg_n_92),
@@ -611,18 +637,18 @@ module design_3_scoring_engine_0_0_scoring_engine
         .I5(\score[1]_i_6_n_0 ),
         .O(\score[1]_i_9_n_0 ));
   LUT5 #(
-    .INIT(32'h00008F80)) 
+    .INIT(32'h80CC8000)) 
     \score[2]_i_1 
-       (.I0(\score[3]_i_2_n_0 ),
-        .I1(\score[2]_i_2_n_0 ),
-        .I2(trig_q2),
-        .I3(score[2]),
-        .I4(reset),
+       (.I0(\score[3]_i_3_n_0 ),
+        .I1(resetn),
+        .I2(\score[2]_i_2_n_0 ),
+        .I3(trig_q2),
+        .I4(score[2]),
         .O(\score[2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h2A2A2A2A2A2A2AAA)) 
     \score[2]_i_2 
-       (.I0(\score[3]_i_4_n_0 ),
+       (.I0(\score[3]_i_5_n_0 ),
         .I1(dist_sq_reg_n_91),
         .I2(dist_sq_reg_n_92),
         .I3(dist_sq_reg_n_94),
@@ -639,39 +665,44 @@ module design_3_scoring_engine_0_0_scoring_engine
         .I4(dist_sq_reg_n_96),
         .I5(\score[0]_i_4_n_0 ),
         .O(\score[2]_i_3_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \score[3]_i_1 
+       (.I0(resetn),
+        .O(\score[3]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h74)) 
-    \score[3]_i_1 
-       (.I0(\score[3]_i_2_n_0 ),
+    \score[3]_i_2 
+       (.I0(\score[3]_i_3_n_0 ),
         .I1(trig_q2),
         .I2(score[3]),
-        .O(\score[3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFF80FFFFFFFF)) 
-    \score[3]_i_2 
-       (.I0(dist_sq_reg_n_93),
-        .I1(dist_sq_reg_n_94),
-        .I2(\score[3]_i_3_n_0 ),
-        .I3(dist_sq_reg_n_91),
-        .I4(dist_sq_reg_n_92),
-        .I5(\score[3]_i_4_n_0 ),
         .O(\score[3]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFD00)) 
+    .INIT(64'hFFFFFF80FFFFFFFF)) 
     \score[3]_i_3 
+       (.I0(dist_sq_reg_n_93),
+        .I1(dist_sq_reg_n_94),
+        .I2(\score[3]_i_4_n_0 ),
+        .I3(dist_sq_reg_n_91),
+        .I4(dist_sq_reg_n_92),
+        .I5(\score[3]_i_5_n_0 ),
+        .O(\score[3]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFD00)) 
+    \score[3]_i_4 
        (.I0(\score[0]_i_4_n_0 ),
         .I1(dist_sq_reg_n_99),
         .I2(dist_sq_reg_n_98),
         .I3(dist_sq_reg_n_97),
         .I4(dist_sq_reg_n_96),
         .I5(dist_sq_reg_n_95),
-        .O(\score[3]_i_3_n_0 ));
+        .O(\score[3]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h1)) 
-    \score[3]_i_4 
+    \score[3]_i_5 
        (.I0(dist_sq_reg_n_90),
         .I1(\score[1]_i_10_n_0 ),
-        .O(\score[3]_i_4_n_0 ));
+        .O(\score[3]_i_5_n_0 ));
   FDRE \score_reg[0] 
        (.C(clk),
         .CE(1'b1),
@@ -683,7 +714,7 @@ module design_3_scoring_engine_0_0_scoring_engine
         .CE(1'b1),
         .D(\score[1]_i_1_n_0 ),
         .Q(score[1]),
-        .R(reset));
+        .R(\score[3]_i_1_n_0 ));
   FDRE \score_reg[2] 
        (.C(clk),
         .CE(1'b1),
@@ -693,27 +724,27 @@ module design_3_scoring_engine_0_0_scoring_engine
   FDRE \score_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(\score[3]_i_1_n_0 ),
+        .D(\score[3]_i_2_n_0 ),
         .Q(score[3]),
-        .R(reset));
+        .R(\score[3]_i_1_n_0 ));
   FDRE trig_q1_reg
        (.C(clk),
         .CE(1'b1),
         .D(trig_calc),
         .Q(trig_q1),
-        .R(reset));
+        .R(\score[3]_i_1_n_0 ));
   FDRE trig_q2_reg
        (.C(clk),
         .CE(1'b1),
         .D(trig_q1),
         .Q(trig_q2),
-        .R(reset));
+        .R(\score[3]_i_1_n_0 ));
   FDRE valid_score_reg
        (.C(clk),
         .CE(1'b1),
         .D(trig_q2),
         .Q(valid_score),
-        .R(reset));
+        .R(\score[3]_i_1_n_0 ));
 endmodule
 `ifndef GLBL
 `define GLBL

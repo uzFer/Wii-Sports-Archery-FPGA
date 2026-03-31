@@ -237,16 +237,16 @@
           "sync_gen_1/S00_AXI"
         ]
       },
-      "axi_bram_ctrl_0_BRAM_PORTA": {
-        "interface_ports": [
-          "axi_bram_ctrl_0/BRAM_PORTA",
-          "axi_bram_ctrl_0_bram/BRAM_PORTA"
-        ]
-      },
       "axi_bram_ctrl_0_BRAM_PORTB": {
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTB",
           "axi_bram_ctrl_0_bram/BRAM_PORTB"
+        ]
+      },
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_0/BRAM_PORTA",
+          "axi_bram_ctrl_0_bram/BRAM_PORTA"
         ]
       }
     },

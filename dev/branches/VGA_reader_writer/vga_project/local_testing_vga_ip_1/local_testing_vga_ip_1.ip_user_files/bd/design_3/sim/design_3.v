@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Mar 30 23:47:19 2026
+//Date        : Tue Mar 31 14:58:36 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_3.bd
 //Design      : design_3
@@ -382,7 +382,6 @@ module design_3
   wire [31:0]ps2_keyboard_subsyst_0_char_bitmap_low;
   wire ps2_keyboard_subsyst_0_fifo_empty;
   wire ps2_keyboard_subsyst_0_fifo_full;
-  wire reset_0_1;
   wire reset_rtl_0_1;
   wire right_btn_0_1;
   wire [0:0]rst_clk_wiz_100M_bus_struct_reset;
@@ -437,7 +436,6 @@ module design_3
   assign ps2_clk_0_1 = ps2_clk_0;
   assign ps2_data_0_1 = ps2_data_0;
   assign pwm_out_0 = top_sound_0_pwm_out;
-  assign reset_0_1 = reset_fsm;
   assign reset_rtl_0_1 = reset_rtl_0;
   assign right_btn_0_1 = btn_right;
   assign shoot_event_0_1 = btn_shoot;
@@ -1174,11 +1172,11 @@ module design_3
         .slowest_sync_clk(microblaze_0_Clk));
   design_3_scoring_engine_0_0 scoring_engine_0
        (.clk(microblaze_0_Clk),
-        .gyro_x(gyro_calc_interface_0_x_coord),
-        .gyro_y(gyro_calc_interface_0_y_coord),
-        .reset(reset_0_1),
+        .gyro_x(physics_engine_0_land_x),
+        .gyro_y(physics_engine_0_land_y),
+        .resetn(rst_clk_wiz_100M_peripheral_aresetn),
         .score(scoring_engine_0_score),
-        .trig_calc(shoot_event_0_1),
+        .trig_calc(physics_engine_0_result_valid),
         .valid_score(scoring_engine_0_valid_score));
   design_3_sync_gen_1_0 sync_gen_1
        (.VGA_B(sync_gen_1_VGA_B),

@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar 31 00:56:43 2026
-# Process ID: 20824
+# Start of session at: Tue Mar 31 15:40:18 2026
+# Process ID: 18192
 # Current directory: Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2
 # Command line: vivado.exe -log design_3_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_3_wrapper.tcl
 # Log file: Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/design_3_wrapper.vds
@@ -14,106 +14,106 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'y:/framewriter_ip'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'y:/sync_gen_ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 415.672 ; gain = 35.980
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 416.848 ; gain = 36.074
 Command: synth_design -top design_3_wrapper -part xc7a100tcsg324-1 -flatten_hierarchy none
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28392 
+INFO: Helper process launched with PID 33520 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 535.969 ; gain = 108.773
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 536.008 ; gain = 109.957
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_3_wrapper' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_3' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_3_archery_fsm_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_archery_fsm_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_archery_fsm_0_0' (1#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_archery_fsm_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_1_0' (2#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_bram_ctrl_0' of module 'design_3_axi_bram_ctrl_1_0' requires 47 connections, but only 35 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:470]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_1_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_1_bram_0' (3#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_bram_ctrl_0_bram' of module 'design_3_axi_bram_ctrl_1_bram_0' requires 16 connections, but only 14 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:506]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_0_0' (4#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_1_0' (5#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_2_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_2_0' (6#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_3_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_3_0' (7#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_4_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_4_0' (8#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_5_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_5_0' (9#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_5_1' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_5_1' (10#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_uartlite_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_uartlite_0_0' (11#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_clk_100MHz_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_clk_100MHz_0' (12#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_3_decimal_display_mana_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_decimal_display_mana_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_decimal_display_mana_0_0' (13#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_decimal_display_mana_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_framewriter_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_framewriter_0_0' (14#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'framewriter_0' of module 'design_3_framewriter_0_0' requires 41 connections, but only 40 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:709]
-INFO: [Synth 8-6157] synthesizing module 'design_3_gyro_calc_interface_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_gyro_calc_interface_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_gyro_calc_interface_0_0' (15#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_gyro_calc_interface_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_mdm_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_mdm_1_0' (16#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_0' (17#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_axi_intc_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_axi_intc_0' (18#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_axi_periph_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1236]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1V0YUEO' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3072]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1V0YUEO' (19#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3072]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_8J9SPD' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3204]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_8J9SPD' (20#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3204]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1VRZ01F' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3350]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1VRZ01F' (21#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3350]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_7ILWR6' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3482]
-INFO: [Synth 8-6157] synthesizing module 'design_3_auto_pc_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_auto_pc_0' (22#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_auto_pc_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_3_auto_pc_0' requires 56 connections, but only 52 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3697]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_7ILWR6' (23#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3482]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1XFF5O6' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3752]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1XFF5O6' (24#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3752]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_5XYZ6F' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3884]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_5XYZ6F' (25#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3884]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1Z0DEK5' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4016]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1Z0DEK5' (26#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4016]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_4NARDG' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4148]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_4NARDG' (27#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4148]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1S0WF3W' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4280]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1S0WF3W' (28#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4280]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_2NMBH9' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4412]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_2NMBH9' (29#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4412]
-INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_AO2FC8' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4544]
-INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_AO2FC8' (30#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4544]
-INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_1JT1IH5' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4676]
-INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_1JT1IH5' (31#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4676]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_2ER29E' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5056]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_2ER29E' (32#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5056]
-INFO: [Synth 8-6157] synthesizing module 'design_3_xbar_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_xbar_0' (33#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_axi_periph_0' (34#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1236]
-WARNING: [Synth 8-350] instance 'microblaze_0_axi_periph' of module 'design_3_microblaze_0_axi_periph_0' requires 269 connections, but only 258 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:855]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_B2GKS4' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4822]
-INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_bram_if_cntlr_0' (35#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_v10_0' (36#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_3_dlmb_v10_0' requires 25 connections, but only 24 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4968]
-INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_bram_if_cntlr_0' (37#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_v10_0' (38#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_3_ilmb_v10_0' requires 25 connections, but only 24 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5014]
-INFO: [Synth 8-6157] synthesizing module 'design_3_lmb_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_lmb_bram_0' (39#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_3_lmb_bram_0' requires 16 connections, but only 14 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5039]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_B2GKS4' (40#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4822]
+INFO: [Synth 8-6157] synthesizing module 'design_3_archery_fsm_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_archery_fsm_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_archery_fsm_0_0' (1#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_archery_fsm_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_1_0' (2#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_bram_ctrl_0' of module 'design_3_axi_bram_ctrl_1_0' requires 47 connections, but only 35 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:468]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_bram_ctrl_1_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_bram_ctrl_1_bram_0' (3#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_bram_ctrl_1_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_bram_ctrl_0_bram' of module 'design_3_axi_bram_ctrl_1_bram_0' requires 16 connections, but only 14 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:504]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_0_0' (4#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_1_0' (5#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_2_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_2_0' (6#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_3_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_3_0' (7#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_4_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_4_0' (8#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_5_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_5_0' (9#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_5_1' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_5_1' (10#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_gpio_5_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_uartlite_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_uartlite_0_0' (11#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_clk_100MHz_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_clk_100MHz_0' (12#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_clk_100MHz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_3_decimal_display_mana_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_decimal_display_mana_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_decimal_display_mana_0_0' (13#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_decimal_display_mana_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_framewriter_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_framewriter_0_0' (14#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_framewriter_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'framewriter_0' of module 'design_3_framewriter_0_0' requires 41 connections, but only 40 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:707]
+INFO: [Synth 8-6157] synthesizing module 'design_3_gyro_calc_interface_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_gyro_calc_interface_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_gyro_calc_interface_0_0' (15#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_gyro_calc_interface_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_mdm_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_mdm_1_0' (16#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_0' (17#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_axi_intc_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_axi_intc_0' (18#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_axi_periph_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1234]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1V0YUEO' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3070]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1V0YUEO' (19#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3070]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_8J9SPD' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3202]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_8J9SPD' (20#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3202]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1VRZ01F' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3348]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1VRZ01F' (21#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3348]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_7ILWR6' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3480]
+INFO: [Synth 8-6157] synthesizing module 'design_3_auto_pc_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_auto_pc_0' (22#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_3_auto_pc_0' requires 56 connections, but only 52 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3695]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_7ILWR6' (23#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3480]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1XFF5O6' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3750]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1XFF5O6' (24#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3750]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_5XYZ6F' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3882]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_5XYZ6F' (25#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:3882]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1Z0DEK5' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4014]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1Z0DEK5' (26#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4014]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_4NARDG' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4146]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_4NARDG' (27#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4146]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1S0WF3W' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4278]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1S0WF3W' (28#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4278]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_2NMBH9' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4410]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_2NMBH9' (29#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4410]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_AO2FC8' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4542]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_AO2FC8' (30#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4542]
+INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_1JT1IH5' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4674]
+INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_1JT1IH5' (31#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4674]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_2ER29E' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5054]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_2ER29E' (32#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5054]
+INFO: [Synth 8-6157] synthesizing module 'design_3_xbar_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_xbar_0' (33#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_axi_periph_0' (34#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1234]
+WARNING: [Synth 8-350] instance 'microblaze_0_axi_periph' of module 'design_3_microblaze_0_axi_periph_0' requires 269 connections, but only 258 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:853]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_B2GKS4' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4820]
+INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_bram_if_cntlr_0' (35#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_dlmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_dlmb_v10_0' (36#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_3_dlmb_v10_0' requires 25 connections, but only 24 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4966]
+INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_bram_if_cntlr_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_bram_if_cntlr_0' (37#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_ilmb_v10_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_ilmb_v10_0' (38#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_3_ilmb_v10_0' requires 25 connections, but only 24 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5012]
+INFO: [Synth 8-6157] synthesizing module 'design_3_lmb_bram_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_lmb_bram_0' (39#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_3_lmb_bram_0' requires 16 connections, but only 14 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:5037]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_B2GKS4' (40#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:4820]
 INFO: [Synth 8-6157] synthesizing module 'design_3_microblaze_0_xlconcat_0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_microblaze_0_xlconcat_0/synth/design_3_microblaze_0_xlconcat_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -152,21 +152,21 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [y:/vga_proj
 	Parameter NUM_PORTS bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (41#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_microblaze_0_xlconcat_0' (42#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_microblaze_0_xlconcat_0/synth/design_3_microblaze_0_xlconcat_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'design_3_physics_engine_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_physics_engine_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_physics_engine_0_0' (43#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_physics_engine_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_ps2_keyboard_subsyst_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' (44#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_ps2_keyboard_subsyst_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ps2_keyboard_subsyst_0' of module 'design_3_ps2_keyboard_subsyst_0_0' requires 14 connections, but only 12 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1152]
-INFO: [Synth 8-6157] synthesizing module 'design_3_rst_clk_wiz_100M_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_rst_clk_wiz_100M_0' (45#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_clk_wiz_100M' of module 'design_3_rst_clk_wiz_100M_0' requires 10 connections, but only 9 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1165]
-INFO: [Synth 8-6157] synthesizing module 'design_3_scoring_engine_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_scoring_engine_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_scoring_engine_0_0' (46#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_scoring_engine_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_sync_gen_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_sync_gen_1_0' (47#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'sync_gen_1' of module 'design_3_sync_gen_1_0' requires 38 connections, but only 26 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1183]
-INFO: [Synth 8-6157] synthesizing module 'design_3_top_sound_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_top_sound_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_top_sound_0_0' (48#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-20824-DESKTOP-B6PLPOU/realtime/design_3_top_sound_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_physics_engine_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_physics_engine_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_physics_engine_0_0' (43#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_physics_engine_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_ps2_keyboard_subsyst_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_ps2_keyboard_subsyst_0_0' (44#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_ps2_keyboard_subsyst_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ps2_keyboard_subsyst_0' of module 'design_3_ps2_keyboard_subsyst_0_0' requires 14 connections, but only 12 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1150]
+INFO: [Synth 8-6157] synthesizing module 'design_3_rst_clk_wiz_100M_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_rst_clk_wiz_100M_0' (45#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_rst_clk_wiz_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_100M' of module 'design_3_rst_clk_wiz_100M_0' requires 10 connections, but only 9 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1163]
+INFO: [Synth 8-6157] synthesizing module 'design_3_scoring_engine_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_scoring_engine_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_scoring_engine_0_0' (46#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_scoring_engine_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_sync_gen_1_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_sync_gen_1_0' (47#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_sync_gen_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'sync_gen_1' of module 'design_3_sync_gen_1_0' requires 38 connections, but only 26 given [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1181]
+INFO: [Synth 8-6157] synthesizing module 'design_3_top_sound_0_0' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_top_sound_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_top_sound_0_0' (48#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/.Xil/Vivado-18192-DESKTOP-B6PLPOU/realtime/design_3_top_sound_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_3_xlconcat_0_0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_xlconcat_0_0/synth/design_3_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat__parameterized0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 10 - type: integer 
@@ -255,7 +255,7 @@ INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant__paramete
 	Parameter CONST_WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' (52#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_xlconstant_0_1' (53#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_xlconstant_0_1/synth/design_3_xlconstant_0_1.v:57]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sync_gen_1'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1183]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sync_gen_1'. This will prevent further optimization [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:1181]
 INFO: [Synth 8-6155] done synthesizing module 'design_3' (54#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/synth/design_3.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_wrapper' (55#1) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v:12]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In3[0]
@@ -360,7 +360,7 @@ WARNING: [Synth 8-3331] design m10_couplers_imp_AO2FC8 has unconnected port S_AC
 WARNING: [Synth 8-3331] design m10_couplers_imp_AO2FC8 has unconnected port S_ARESETN
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 593.973 ; gain = 166.777
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 593.410 ; gain = 167.359
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -373,10 +373,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 593.973 ; gain = 166.777
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 593.410 ; gain = 167.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 593.973 ; gain = 166.777
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 593.410 ; gain = 167.359
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -455,26 +455,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_3_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/dont_touch.xdc]
 Finished Parsing XDC File [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 932.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 932.859 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 932.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 932.859 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 932.738 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 932.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 932.859 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 932.859 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_3_i/axi_bram_ctrl_0_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_3_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 932.738 ; gain = 505.543
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 932.859 ; gain = 506.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 932.738 ; gain = 505.543
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 932.859 ; gain = 506.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -520,10 +520,10 @@ Applied set_property DONT_TOUCH = true for design_3_i/xlconstant_1. (constraint 
 Applied set_property DONT_TOUCH = true for design_3_i/decimal_display_mana_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_3_i/microblaze_0_axi_periph/m03_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 932.738 ; gain = 505.543
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 932.859 ; gain = 506.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 932.738 ; gain = 505.543
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 932.859 ; gain = 506.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -559,7 +559,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 932.738 ; gain = 505.543
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 932.859 ; gain = 506.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -580,13 +580,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_3_i/axi_bram_ctrl_
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_3_i/axi_bram_ctrl_0/bram_clk_b' to pin 'design_3_i/axi_bram_ctrl_0/bbstub_bram_clk_b/O'
 INFO: [Synth 8-5819] Moved 8 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 932.738 ; gain = 505.543
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 932.859 ; gain = 506.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 932.738 ; gain = 505.543
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 932.859 ; gain = 506.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -598,7 +598,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 937.035 ; gain = 509.840
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 934.570 ; gain = 508.520
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -616,7 +616,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 937.035 ; gain = 509.840
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 934.570 ; gain = 508.520
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -629,7 +629,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 937.035 ; gain = 509.840
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 934.570 ; gain = 508.520
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -641,7 +641,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 937.035 ; gain = 509.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 934.570 ; gain = 508.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -719,7 +719,7 @@ Report Cell Usage:
 |29    |design_3_sync_gen_1_0             |     1|
 |30    |design_3_top_sound_0_0            |     1|
 |31    |design_3_xbar_0                   |     1|
-|32    |IBUF                              |    12|
+|32    |IBUF                              |    11|
 |33    |OBUF                              |    40|
 +------+----------------------------------+------+
 
@@ -727,7 +727,7 @@ Report Instance Areas:
 +------+------------------------------+-------------------------------------+------+
 |      |Instance                      |Module                               |Cells |
 +------+------------------------------+-------------------------------------+------+
-|1     |top                           |                                     |  3492|
+|1     |top                           |                                     |  3491|
 |2     |  design_3_i                  |design_3                             |  3440|
 |3     |    microblaze_0_axi_periph   |design_3_microblaze_0_axi_periph_0   |  1552|
 |4     |      m03_couplers            |m03_couplers_imp_7ILWR6              |   179|
@@ -739,25 +739,27 @@ Report Instance Areas:
 |10    |    xlconstant_1              |design_3_xlconstant_0_1              |     0|
 +------+------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 937.035 ; gain = 509.840
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 934.570 ; gain = 508.520
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 190 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 937.035 ; gain = 171.074
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 937.035 ; gain = 509.840
+Synthesis finished with 0 errors, 0 critical warnings and 191 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 934.570 ; gain = 169.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 934.570 ; gain = 508.520
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 946.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 943.406 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 142 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 946.629 ; gain = 530.957
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 946.629 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 943.406 ; gain = 526.559
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 943.406 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2/design_3_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_3_wrapper_utilization_synth.rpt -pb design_3_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 00:57:37 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 15:41:12 2026...

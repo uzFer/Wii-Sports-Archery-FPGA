@@ -56,7 +56,7 @@ reg [27:0] display_timer;
 reg [26:0] player_display_timer;
 reg [28:0] arrow_land_timer;
 
-localparam [28:0] FIVE_SECONDS = 29'd500_000_000;
+localparam [28:0] TWO_SECONDS = 29'd200_000_000;
 (* mark_debug = "true" *) reg [1:0] difficulty;
 
 // EDGE DETECTION
@@ -145,7 +145,7 @@ always @(*) begin
             end
 
         PLAYER1_SHOOT: begin
-            if (arrow_land_timer == FIVE_SECONDS)
+            if (arrow_land_timer == TWO_SECONDS)
                 next_state = PLAYER1_CALC;
             else
                 next_state = PLAYER1_SHOOT;
@@ -170,7 +170,7 @@ always @(*) begin
                 next_state = PLAYER2_SHOOT;
             end
         PLAYER2_SHOOT: begin
-            if (arrow_land_timer == FIVE_SECONDS)
+            if (arrow_land_timer == TWO_SECONDS)
                 next_state = PLAYER2_CALC;
             else
                 next_state = PLAYER2_SHOOT;

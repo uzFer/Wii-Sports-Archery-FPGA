@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Tue Mar 31 00:56:21 2026
+-- Date        : Tue Mar 31 14:59:30 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_archery_fsm_0_0/design_3_archery_fsm_0_0_sim_netlist.vhdl
@@ -40,8 +40,6 @@ entity design_3_archery_fsm_0_0_archery_fsm is
   );
   attribute DISPLAY_SCORE : string;
   attribute DISPLAY_SCORE of design_3_archery_fsm_0_0_archery_fsm : entity is "4'b1010";
-  attribute FIVE_SECONDS : string;
-  attribute FIVE_SECONDS of design_3_archery_fsm_0_0_archery_fsm : entity is "29'b11101110011010110010100000000";
   attribute GAME_OVER : string;
   attribute GAME_OVER of design_3_archery_fsm_0_0_archery_fsm : entity is "4'b1100";
   attribute MAIN_MENU : string;
@@ -66,6 +64,8 @@ entity design_3_archery_fsm_0_0_archery_fsm is
   attribute PLAYER2_SHOOT of design_3_archery_fsm_0_0_archery_fsm : entity is "4'b0111";
   attribute RESET_STATE : string;
   attribute RESET_STATE of design_3_archery_fsm_0_0_archery_fsm : entity is "4'b0000";
+  attribute TWO_SECONDS : string;
+  attribute TWO_SECONDS of design_3_archery_fsm_0_0_archery_fsm : entity is "29'b01011111010111100001000000000";
   attribute UPDATE_ROUND : string;
   attribute UPDATE_ROUND of design_3_archery_fsm_0_0_archery_fsm : entity is "4'b1011";
 end design_3_archery_fsm_0_0_archery_fsm;
@@ -73,6 +73,7 @@ end design_3_archery_fsm_0_0_archery_fsm;
 architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal \<const0>\ : STD_LOGIC;
   signal \FSM_onehot_current_state[0]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[0]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[10]_i_10_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[10]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[10]_i_2_n_0\ : STD_LOGIC;
@@ -83,30 +84,30 @@ architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal \FSM_onehot_current_state[10]_i_7_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[10]_i_8_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[10]_i_9_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[11]_i_10_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[11]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[11]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[11]_i_3_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[11]_i_4_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[11]_i_5_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[11]_i_6_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[11]_i_7_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[11]_i_8_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[11]_i_9_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_10_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_11_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_12_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[12]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[12]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_3_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_4_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_5_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_6_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_7_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_8_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[12]_i_9_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[1]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[2]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[2]_i_2_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[2]_i_3_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[2]_i_4_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[3]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[3]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_current_state[3]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[4]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[5]_i_1_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[5]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[6]_i_1_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[6]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[7]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[7]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[8]_i_1_n_0\ : STD_LOGIC;
@@ -120,17 +121,15 @@ architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal \FSM_onehot_current_state[8]_i_9_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[9]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state[9]_i_2_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_current_state[9]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[0]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[10]\ : STD_LOGIC;
+  signal \FSM_onehot_current_state_reg_n_0_[11]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[12]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[1]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[2]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[3]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[4]\ : STD_LOGIC;
-  signal \FSM_onehot_current_state_reg_n_0_[5]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[6]\ : STD_LOGIC;
-  signal \FSM_onehot_current_state_reg_n_0_[7]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[8]\ : STD_LOGIC;
   signal \FSM_onehot_current_state_reg_n_0_[9]\ : STD_LOGIC;
   signal arrow_count : STD_LOGIC;
@@ -268,7 +267,6 @@ architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal \display_timer_reg[8]_i_1_n_7\ : STD_LOGIC;
   signal fire_pulse_inferred_i_2_n_0 : STD_LOGIC;
   signal fire_pulse_inferred_i_3_n_0 : STD_LOGIC;
-  signal fire_pulse_inferred_i_4_n_0 : STD_LOGIC;
   signal \^game_state\ : STD_LOGIC_VECTOR ( 24 downto 0 );
   signal left_btn_d : STD_LOGIC;
   signal \^p1_score\ : STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -283,6 +281,7 @@ architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal \p2_score[6]_i_3_n_0\ : STD_LOGIC;
   signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal \p_0_in__1\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal p_1_in : STD_LOGIC;
   signal play_arrow0 : STD_LOGIC;
   signal play_arrow_i_10_n_0 : STD_LOGIC;
   signal play_arrow_i_11_n_0 : STD_LOGIC;
@@ -299,6 +298,8 @@ architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal play_arrow_i_22_n_0 : STD_LOGIC;
   signal play_arrow_i_23_n_0 : STD_LOGIC;
   signal play_arrow_i_24_n_0 : STD_LOGIC;
+  signal play_arrow_i_25_n_0 : STD_LOGIC;
+  signal play_arrow_i_26_n_0 : STD_LOGIC;
   signal play_arrow_i_2_n_0 : STD_LOGIC;
   signal play_arrow_i_3_n_0 : STD_LOGIC;
   signal play_arrow_i_4_n_0 : STD_LOGIC;
@@ -312,7 +313,6 @@ architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal play_menu_i_3_n_0 : STD_LOGIC;
   signal play_menu_i_4_n_0 : STD_LOGIC;
   signal play_menu_i_5_n_0 : STD_LOGIC;
-  signal play_menu_i_6_n_0 : STD_LOGIC;
   signal player_display_timer : STD_LOGIC;
   signal \player_display_timer[0]_i_3_n_0\ : STD_LOGIC;
   signal player_display_timer_reg : STD_LOGIC_VECTOR ( 26 downto 0 );
@@ -381,51 +381,57 @@ architecture STRUCTURE of design_3_archery_fsm_0_0_archery_fsm is
   signal \NLW_player_display_timer_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_player_display_timer_reg[24]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_current_state[11]_i_4\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \FSM_onehot_current_state[2]_i_3\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \FSM_onehot_current_state[2]_i_4\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \FSM_onehot_current_state[9]_i_3\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \FSM_onehot_current_state[11]_i_2\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \FSM_onehot_current_state[12]_i_3\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \FSM_onehot_current_state[1]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \FSM_onehot_current_state[2]_i_2\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \FSM_onehot_current_state[3]_i_2\ : label is "soft_lutpair14";
   attribute FSM_ENCODED_STATES : string;
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[0]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[10]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[11]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[12]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[1]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[2]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[3]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[4]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[5]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[6]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[7]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[8]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[9]\ : label is "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000";
-  attribute SOFT_HLUTNM of \arrow_count[0]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \arrow_count[1]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \current_round[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \difficulty[1]_i_1\ : label is "soft_lutpair11";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[0]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[10]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[11]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[12]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[1]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[2]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[3]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[4]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[5]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[6]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[7]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[8]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_current_state_reg[9]\ : label is "PLAYER1_SHOOT:0000000000001,PLAYER1_CALC:0000000000010,PLAYER1_AIM:0000000001000,UPDATE_ROUND:0000010000000,GAME_OVER:0000000100000,DISPLAY_SCORE:0000100000000,MAIN_MENU:0000001000000,RESET_STATE:0000000010000,PLAYER2_SCORE:0100000000000,PLAYER2_SHOOT:0001000000000,PLAYER2_CALC:0010000000000,PLAYER2_AIM:1000000000000,PLAYER1_SCORE:0000000000100";
+  attribute SOFT_HLUTNM of \arrow_count[0]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \arrow_count[1]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \current_round[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \difficulty[1]_i_1\ : label is "soft_lutpair15";
   attribute KEEP : string;
   attribute KEEP of \difficulty_reg[0]\ : label is "yes";
   attribute mark_debug_string : string;
   attribute mark_debug_string of \difficulty_reg[0]\ : label is "true";
   attribute KEEP of \difficulty_reg[1]\ : label is "yes";
   attribute mark_debug_string of \difficulty_reg[1]\ : label is "true";
-  attribute SOFT_HLUTNM of fire_pulse_inferred_i_3 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of fire_pulse_inferred_i_4 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \p1_score[1]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \p1_score[3]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \p1_score[4]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \p1_score[5]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \p1_score[6]_i_3\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \p1_score[6]_i_5\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \p2_score[1]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \p2_score[3]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \p2_score[4]_i_2\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \p2_score[5]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \p2_score[6]_i_2\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \p2_score[6]_i_3\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of play_arrow_i_14 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of play_arrow_i_4 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of play_menu_i_3 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of fire_pulse_inferred_i_2 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \game_state_reg[3]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \p1_score[1]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \p1_score[3]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \p1_score[4]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \p1_score[5]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \p1_score[6]_i_3\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \p1_score[6]_i_4\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \p1_score[6]_i_5\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \p2_score[1]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \p2_score[3]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \p2_score[4]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \p2_score[5]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \p2_score[6]_i_2\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \p2_score[6]_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of play_arrow_i_11 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of play_arrow_i_12 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of play_arrow_i_14 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of play_arrow_i_16 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of play_arrow_i_20 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of play_arrow_i_24 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of play_menu_i_4 : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of play_menu_i_5 : label is "soft_lutpair10";
   attribute mark_debug_string of fire_pulse : signal is "true";
   attribute mark_debug_string of left_btn : signal is "true";
@@ -460,54 +466,54 @@ begin
   wind_y_out(7 downto 0) <= \^wind_y_out\(7 downto 0);
 \FSM_onehot_current_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FBFBFBAA00000000"
+      INIT => X"FFFFAEAAFFAAAEAA"
     )
         port map (
-      I0 => play_menu_i_4_n_0,
+      I0 => \FSM_onehot_current_state[0]_i_2_n_0\,
       I1 => shoot_event,
       I2 => shoot_btn_d,
-      I3 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I5 => \FSM_onehot_current_state[10]_i_2_n_0\,
       O => \FSM_onehot_current_state[0]_i_1_n_0\
     );
-\FSM_onehot_current_state[10]_i_1\: unisim.vcomponents.LUT5
+\FSM_onehot_current_state[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C8FFC8C8"
+      INIT => X"FFD0D0D000000000"
+    )
+        port map (
+      I0 => shoot_event,
+      I1 => shoot_btn_d,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => \FSM_onehot_current_state[12]_i_3_n_0\,
+      I4 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      O => \FSM_onehot_current_state[0]_i_2_n_0\
+    );
+\FSM_onehot_current_state[10]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F444"
     )
         port map (
       I0 => \FSM_onehot_current_state[10]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
-      I2 => \FSM_onehot_current_state[11]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[10]\,
       I3 => \FSM_onehot_current_state[10]_i_3_n_0\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[9]\,
       O => \FSM_onehot_current_state[10]_i_1_n_0\
     );
-\FSM_onehot_current_state[10]_i_10\: unisim.vcomponents.LUT4
+\FSM_onehot_current_state[10]_i_10\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FFFFFFEF"
     )
         port map (
-      I0 => player_display_timer_reg(2),
-      I1 => player_display_timer_reg(1),
-      I2 => player_display_timer_reg(4),
-      I3 => player_display_timer_reg(3),
+      I0 => arrow_land_timer_reg(0),
+      I1 => arrow_land_timer_reg(28),
+      I2 => arrow_land_timer_reg(27),
+      I3 => arrow_land_timer_reg(2),
+      I4 => arrow_land_timer_reg(1),
       O => \FSM_onehot_current_state[10]_i_10_n_0\
     );
-\FSM_onehot_current_state[10]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFE0EEE0EEE0EE"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I2 => shoot_btn_d,
-      I3 => shoot_event,
-      I4 => play_menu_i_4_n_0,
-      I5 => \FSM_onehot_current_state[11]_i_4_n_0\,
-      O => \FSM_onehot_current_state[10]_i_2_n_0\
-    );
-\FSM_onehot_current_state[10]_i_3\: unisim.vcomponents.LUT3
+\FSM_onehot_current_state[10]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"FE"
     )
@@ -515,426 +521,34 @@ begin
       I0 => \FSM_onehot_current_state[10]_i_4_n_0\,
       I1 => \FSM_onehot_current_state[10]_i_5_n_0\,
       I2 => \FSM_onehot_current_state[10]_i_6_n_0\,
+      O => \FSM_onehot_current_state[10]_i_2_n_0\
+    );
+\FSM_onehot_current_state[10]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFBBB0FFFF"
+    )
+        port map (
+      I0 => shoot_btn_d,
+      I1 => shoot_event,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I4 => start_btn,
+      I5 => start_btn_d,
       O => \FSM_onehot_current_state[10]_i_3_n_0\
     );
 \FSM_onehot_current_state[10]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFF7FFF"
-    )
-        port map (
-      I0 => player_display_timer_reg(15),
-      I1 => player_display_timer_reg(16),
-      I2 => player_display_timer_reg(13),
-      I3 => player_display_timer_reg(14),
-      I4 => \FSM_onehot_current_state[10]_i_7_n_0\,
-      O => \FSM_onehot_current_state[10]_i_4_n_0\
-    );
-\FSM_onehot_current_state[10]_i_5\: unisim.vcomponents.LUT5
-    generic map(
       INIT => X"FFFFFFFB"
-    )
-        port map (
-      I0 => player_display_timer_reg(7),
-      I1 => player_display_timer_reg(8),
-      I2 => player_display_timer_reg(5),
-      I3 => player_display_timer_reg(6),
-      I4 => \FSM_onehot_current_state[10]_i_8_n_0\,
-      O => \FSM_onehot_current_state[10]_i_5_n_0\
-    );
-\FSM_onehot_current_state[10]_i_6\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFD"
-    )
-        port map (
-      I0 => player_display_timer_reg(26),
-      I1 => player_display_timer_reg(25),
-      I2 => player_display_timer_reg(0),
-      I3 => \FSM_onehot_current_state[10]_i_9_n_0\,
-      I4 => \FSM_onehot_current_state[10]_i_10_n_0\,
-      O => \FSM_onehot_current_state[10]_i_6_n_0\
-    );
-\FSM_onehot_current_state[10]_i_7\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFDF"
-    )
-        port map (
-      I0 => player_display_timer_reg(18),
-      I1 => player_display_timer_reg(17),
-      I2 => player_display_timer_reg(20),
-      I3 => player_display_timer_reg(19),
-      O => \FSM_onehot_current_state[10]_i_7_n_0\
-    );
-\FSM_onehot_current_state[10]_i_8\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => player_display_timer_reg(10),
-      I1 => player_display_timer_reg(9),
-      I2 => player_display_timer_reg(12),
-      I3 => player_display_timer_reg(11),
-      O => \FSM_onehot_current_state[10]_i_8_n_0\
-    );
-\FSM_onehot_current_state[10]_i_9\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => player_display_timer_reg(22),
-      I1 => player_display_timer_reg(21),
-      I2 => player_display_timer_reg(24),
-      I3 => player_display_timer_reg(23),
-      O => \FSM_onehot_current_state[10]_i_9_n_0\
-    );
-\FSM_onehot_current_state[11]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F4F4F444F444F444"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[11]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
-      I2 => arrow_count,
-      I3 => \FSM_onehot_current_state[11]_i_3_n_0\,
-      I4 => play_menu_i_4_n_0,
-      I5 => \FSM_onehot_current_state[11]_i_4_n_0\,
-      O => \FSM_onehot_current_state[11]_i_1_n_0\
-    );
-\FSM_onehot_current_state[11]_i_10\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF7F"
-    )
-        port map (
-      I0 => display_timer_reg(17),
-      I1 => display_timer_reg(16),
-      I2 => display_timer_reg(19),
-      I3 => display_timer_reg(18),
-      O => \FSM_onehot_current_state[11]_i_10_n_0\
-    );
-\FSM_onehot_current_state[11]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[11]_i_5_n_0\,
-      I1 => display_timer_reg(1),
-      I2 => display_timer_reg(0),
-      I3 => display_timer_reg(3),
-      I4 => display_timer_reg(2),
-      I5 => \FSM_onehot_current_state[11]_i_6_n_0\,
-      O => \FSM_onehot_current_state[11]_i_2_n_0\
-    );
-\FSM_onehot_current_state[11]_i_3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"DDD0"
-    )
-        port map (
-      I0 => shoot_event,
-      I1 => shoot_btn_d,
-      I2 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      O => \FSM_onehot_current_state[11]_i_3_n_0\
-    );
-\FSM_onehot_current_state[11]_i_4\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      O => \FSM_onehot_current_state[11]_i_4_n_0\
-    );
-\FSM_onehot_current_state[11]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[11]_i_7_n_0\,
-      I1 => display_timer_reg(5),
-      I2 => display_timer_reg(4),
-      I3 => display_timer_reg(7),
-      I4 => display_timer_reg(6),
-      I5 => \FSM_onehot_current_state[11]_i_8_n_0\,
-      O => \FSM_onehot_current_state[11]_i_5_n_0\
-    );
-\FSM_onehot_current_state[11]_i_6\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFF7FF"
-    )
-        port map (
-      I0 => display_timer_reg(22),
-      I1 => display_timer_reg(23),
-      I2 => display_timer_reg(20),
-      I3 => display_timer_reg(21),
-      I4 => \FSM_onehot_current_state[11]_i_9_n_0\,
-      O => \FSM_onehot_current_state[11]_i_6_n_0\
-    );
-\FSM_onehot_current_state[11]_i_7\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFD"
-    )
-        port map (
-      I0 => display_timer_reg(9),
-      I1 => display_timer_reg(8),
-      I2 => display_timer_reg(11),
-      I3 => display_timer_reg(10),
-      O => \FSM_onehot_current_state[11]_i_7_n_0\
-    );
-\FSM_onehot_current_state[11]_i_8\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFF7"
-    )
-        port map (
-      I0 => display_timer_reg(14),
-      I1 => display_timer_reg(15),
-      I2 => display_timer_reg(12),
-      I3 => display_timer_reg(13),
-      I4 => \FSM_onehot_current_state[11]_i_10_n_0\,
-      O => \FSM_onehot_current_state[11]_i_8_n_0\
-    );
-\FSM_onehot_current_state[11]_i_9\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF7F"
-    )
-        port map (
-      I0 => display_timer_reg(25),
-      I1 => display_timer_reg(24),
-      I2 => display_timer_reg(27),
-      I3 => display_timer_reg(26),
-      O => \FSM_onehot_current_state[11]_i_9_n_0\
-    );
-\FSM_onehot_current_state[12]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8888F88888888888"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I1 => \FSM_onehot_current_state[12]_i_2_n_0\,
-      I2 => arrow_count,
-      I3 => \arrow_count_reg_n_0_[1]\,
-      I4 => \arrow_count_reg_n_0_[0]\,
-      I5 => \current_round_reg_n_0_[0]\,
-      O => \FSM_onehot_current_state[12]_i_1_n_0\
-    );
-\FSM_onehot_current_state[12]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFE0EEFFFF"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I2 => shoot_btn_d,
-      I3 => shoot_event,
-      I4 => start_btn,
-      I5 => start_btn_d,
-      O => \FSM_onehot_current_state[12]_i_2_n_0\
-    );
-\FSM_onehot_current_state[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFF444044404440"
-    )
-        port map (
-      I0 => start_btn_d,
-      I1 => start_btn,
-      I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I5 => \FSM_onehot_current_state[12]_i_2_n_0\,
-      O => \FSM_onehot_current_state[1]_i_1_n_0\
-    );
-\FSM_onehot_current_state[2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFF35500"
-    )
-        port map (
-      I0 => play_menu_i_4_n_0,
-      I1 => shoot_event,
-      I2 => shoot_btn_d,
-      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I5 => \FSM_onehot_current_state[2]_i_2_n_0\,
-      O => \FSM_onehot_current_state[2]_i_1_n_0\
-    );
-\FSM_onehot_current_state[2]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFF8888888888888"
-    )
-        port map (
-      I0 => arrow_count,
-      I1 => \FSM_onehot_current_state[2]_i_3_n_0\,
-      I2 => \FSM_onehot_current_state[2]_i_4_n_0\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I4 => play_menu_i_4_n_0,
-      I5 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      O => \FSM_onehot_current_state[2]_i_2_n_0\
-    );
-\FSM_onehot_current_state[2]_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"DF"
-    )
-        port map (
-      I0 => \arrow_count_reg_n_0_[1]\,
-      I1 => \arrow_count_reg_n_0_[0]\,
-      I2 => \current_round_reg_n_0_[0]\,
-      O => \FSM_onehot_current_state[2]_i_3_n_0\
-    );
-\FSM_onehot_current_state[2]_i_4\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      O => \FSM_onehot_current_state[2]_i_4_n_0\
-    );
-\FSM_onehot_current_state[3]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFBAAAFFAABAAA"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[3]_i_2_n_0\,
-      I1 => shoot_btn_d,
-      I2 => shoot_event,
-      I3 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I5 => \FSM_onehot_current_state[8]_i_2_n_0\,
-      O => \FSM_onehot_current_state[3]_i_1_n_0\
-    );
-\FSM_onehot_current_state[3]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFB0B0B000000000"
-    )
-        port map (
-      I0 => shoot_btn_d,
-      I1 => shoot_event,
-      I2 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I3 => \FSM_onehot_current_state[11]_i_4_n_0\,
-      I4 => play_menu_i_4_n_0,
-      I5 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      O => \FSM_onehot_current_state[3]_i_2_n_0\
-    );
-\FSM_onehot_current_state[4]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"F444"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[8]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I3 => \FSM_onehot_current_state[12]_i_2_n_0\,
-      O => \FSM_onehot_current_state[4]_i_1_n_0\
-    );
-\FSM_onehot_current_state[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFCCFFC8FFFFFF88"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[9]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I3 => \FSM_onehot_current_state[5]_i_2_n_0\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I5 => play_menu_i_4_n_0,
-      O => \FSM_onehot_current_state[5]_i_1_n_0\
-    );
-\FSM_onehot_current_state[5]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8A8A8A8A8A8A8A00"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I1 => start_btn_d,
-      I2 => start_btn,
-      I3 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      O => \FSM_onehot_current_state[5]_i_2_n_0\
-    );
-\FSM_onehot_current_state[6]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AA80FFFFAA80AA80"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I1 => play_menu_i_4_n_0,
-      I2 => \FSM_onehot_current_state[11]_i_4_n_0\,
-      I3 => \FSM_onehot_current_state[6]_i_2_n_0\,
-      I4 => \FSM_onehot_current_state[10]_i_3_n_0\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      O => \FSM_onehot_current_state[6]_i_1_n_0\
-    );
-\FSM_onehot_current_state[6]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => shoot_btn_d,
-      I1 => shoot_event,
-      O => \FSM_onehot_current_state[6]_i_2_n_0\
-    );
-\FSM_onehot_current_state[7]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFCFCCEEEECCCC"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[8]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state[7]_i_2_n_0\,
-      I2 => shoot_btn_d,
-      I3 => shoot_event,
-      I4 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      O => \FSM_onehot_current_state[7]_i_1_n_0\
-    );
-\FSM_onehot_current_state[7]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFB0B0B000000000"
-    )
-        port map (
-      I0 => shoot_btn_d,
-      I1 => shoot_event,
-      I2 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I3 => \FSM_onehot_current_state[11]_i_4_n_0\,
-      I4 => play_menu_i_4_n_0,
-      I5 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      O => \FSM_onehot_current_state[7]_i_2_n_0\
-    );
-\FSM_onehot_current_state[8]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"F444"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[8]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I3 => \FSM_onehot_current_state[12]_i_2_n_0\,
-      O => \FSM_onehot_current_state[8]_i_1_n_0\
-    );
-\FSM_onehot_current_state[8]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state[8]_i_3_n_0\,
-      I1 => \FSM_onehot_current_state[8]_i_4_n_0\,
-      I2 => \FSM_onehot_current_state[8]_i_5_n_0\,
-      O => \FSM_onehot_current_state[8]_i_2_n_0\
-    );
-\FSM_onehot_current_state[8]_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFF7"
     )
         port map (
       I0 => arrow_land_timer_reg(13),
       I1 => arrow_land_timer_reg(14),
       I2 => arrow_land_timer_reg(11),
       I3 => arrow_land_timer_reg(12),
-      I4 => \FSM_onehot_current_state[8]_i_6_n_0\,
-      O => \FSM_onehot_current_state[8]_i_3_n_0\
+      I4 => \FSM_onehot_current_state[10]_i_7_n_0\,
+      O => \FSM_onehot_current_state[10]_i_4_n_0\
     );
-\FSM_onehot_current_state[8]_i_4\: unisim.vcomponents.LUT5
+\FSM_onehot_current_state[10]_i_5\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFFFFFE"
     )
@@ -943,42 +557,441 @@ begin
       I1 => arrow_land_timer_reg(6),
       I2 => arrow_land_timer_reg(3),
       I3 => arrow_land_timer_reg(4),
-      I4 => \FSM_onehot_current_state[8]_i_7_n_0\,
-      O => \FSM_onehot_current_state[8]_i_4_n_0\
+      I4 => \FSM_onehot_current_state[10]_i_8_n_0\,
+      O => \FSM_onehot_current_state[10]_i_5_n_0\
     );
-\FSM_onehot_current_state[8]_i_5\: unisim.vcomponents.LUT6
+\FSM_onehot_current_state[10]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFFFBFF"
+      INIT => X"FFFFFFFFFBFFFFFF"
     )
         port map (
-      I0 => \FSM_onehot_current_state[8]_i_8_n_0\,
+      I0 => \FSM_onehot_current_state[10]_i_9_n_0\,
       I1 => arrow_land_timer_reg(19),
       I2 => arrow_land_timer_reg(20),
       I3 => arrow_land_timer_reg(22),
       I4 => arrow_land_timer_reg(21),
-      I5 => \FSM_onehot_current_state[8]_i_9_n_0\,
-      O => \FSM_onehot_current_state[8]_i_5_n_0\
+      I5 => \FSM_onehot_current_state[10]_i_10_n_0\,
+      O => \FSM_onehot_current_state[10]_i_6_n_0\
     );
-\FSM_onehot_current_state[8]_i_6\: unisim.vcomponents.LUT4
+\FSM_onehot_current_state[10]_i_7\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFDF"
+      INIT => X"FF7F"
     )
         port map (
       I0 => arrow_land_timer_reg(16),
       I1 => arrow_land_timer_reg(15),
-      I2 => arrow_land_timer_reg(18),
-      I3 => arrow_land_timer_reg(17),
-      O => \FSM_onehot_current_state[8]_i_6_n_0\
+      I2 => arrow_land_timer_reg(17),
+      I3 => arrow_land_timer_reg(18),
+      O => \FSM_onehot_current_state[10]_i_7_n_0\
     );
-\FSM_onehot_current_state[8]_i_7\: unisim.vcomponents.LUT4
+\FSM_onehot_current_state[10]_i_8\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFDF"
+      INIT => X"FFEF"
     )
         port map (
       I0 => arrow_land_timer_reg(8),
       I1 => arrow_land_timer_reg(7),
-      I2 => arrow_land_timer_reg(10),
-      I3 => arrow_land_timer_reg(9),
+      I2 => arrow_land_timer_reg(9),
+      I3 => arrow_land_timer_reg(10),
+      O => \FSM_onehot_current_state[10]_i_8_n_0\
+    );
+\FSM_onehot_current_state[10]_i_9\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FF7F"
+    )
+        port map (
+      I0 => arrow_land_timer_reg(24),
+      I1 => arrow_land_timer_reg(23),
+      I2 => arrow_land_timer_reg(25),
+      I3 => arrow_land_timer_reg(26),
+      O => \FSM_onehot_current_state[10]_i_9_n_0\
+    );
+\FSM_onehot_current_state[11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF4400FFB04400"
+    )
+        port map (
+      I0 => start_btn_d,
+      I1 => start_btn,
+      I2 => \FSM_onehot_current_state[11]_i_2_n_0\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I5 => \FSM_onehot_current_state[11]_i_3_n_0\,
+      O => \FSM_onehot_current_state[11]_i_1_n_0\
+    );
+\FSM_onehot_current_state[11]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I2 => p_1_in,
+      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      O => \FSM_onehot_current_state[11]_i_2_n_0\
+    );
+\FSM_onehot_current_state[11]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFBBB0"
+    )
+        port map (
+      I0 => shoot_btn_d,
+      I1 => shoot_event,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I4 => \FSM_onehot_current_state[12]_i_5_n_0\,
+      O => \FSM_onehot_current_state[11]_i_3_n_0\
+    );
+\FSM_onehot_current_state[12]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80AAFFFF80AA80AA"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I1 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I2 => \FSM_onehot_current_state[12]_i_3_n_0\,
+      I3 => \FSM_onehot_current_state[12]_i_4_n_0\,
+      I4 => \FSM_onehot_current_state[12]_i_5_n_0\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      O => \FSM_onehot_current_state[12]_i_1_n_0\
+    );
+\FSM_onehot_current_state[12]_i_10\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => player_display_timer_reg(10),
+      I1 => player_display_timer_reg(9),
+      I2 => player_display_timer_reg(12),
+      I3 => player_display_timer_reg(11),
+      O => \FSM_onehot_current_state[12]_i_10_n_0\
+    );
+\FSM_onehot_current_state[12]_i_11\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => player_display_timer_reg(22),
+      I1 => player_display_timer_reg(21),
+      I2 => player_display_timer_reg(24),
+      I3 => player_display_timer_reg(23),
+      O => \FSM_onehot_current_state[12]_i_11_n_0\
+    );
+\FSM_onehot_current_state[12]_i_12\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => player_display_timer_reg(2),
+      I1 => player_display_timer_reg(1),
+      I2 => player_display_timer_reg(4),
+      I3 => player_display_timer_reg(3),
+      O => \FSM_onehot_current_state[12]_i_12_n_0\
+    );
+\FSM_onehot_current_state[12]_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => start_btn_d,
+      I1 => start_btn,
+      O => \FSM_onehot_current_state[12]_i_2_n_0\
+    );
+\FSM_onehot_current_state[12]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I1 => p_1_in,
+      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      O => \FSM_onehot_current_state[12]_i_3_n_0\
+    );
+\FSM_onehot_current_state[12]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => shoot_event,
+      I1 => shoot_btn_d,
+      O => \FSM_onehot_current_state[12]_i_4_n_0\
+    );
+\FSM_onehot_current_state[12]_i_5\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[12]_i_6_n_0\,
+      I1 => \FSM_onehot_current_state[12]_i_7_n_0\,
+      I2 => \FSM_onehot_current_state[12]_i_8_n_0\,
+      O => \FSM_onehot_current_state[12]_i_5_n_0\
+    );
+\FSM_onehot_current_state[12]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFF7FFF"
+    )
+        port map (
+      I0 => player_display_timer_reg(15),
+      I1 => player_display_timer_reg(16),
+      I2 => player_display_timer_reg(13),
+      I3 => player_display_timer_reg(14),
+      I4 => \FSM_onehot_current_state[12]_i_9_n_0\,
+      O => \FSM_onehot_current_state[12]_i_6_n_0\
+    );
+\FSM_onehot_current_state[12]_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFB"
+    )
+        port map (
+      I0 => player_display_timer_reg(7),
+      I1 => player_display_timer_reg(8),
+      I2 => player_display_timer_reg(5),
+      I3 => player_display_timer_reg(6),
+      I4 => \FSM_onehot_current_state[12]_i_10_n_0\,
+      O => \FSM_onehot_current_state[12]_i_7_n_0\
+    );
+\FSM_onehot_current_state[12]_i_8\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFD"
+    )
+        port map (
+      I0 => player_display_timer_reg(26),
+      I1 => player_display_timer_reg(25),
+      I2 => player_display_timer_reg(0),
+      I3 => \FSM_onehot_current_state[12]_i_11_n_0\,
+      I4 => \FSM_onehot_current_state[12]_i_12_n_0\,
+      O => \FSM_onehot_current_state[12]_i_8_n_0\
+    );
+\FSM_onehot_current_state[12]_i_9\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFDF"
+    )
+        port map (
+      I0 => player_display_timer_reg(18),
+      I1 => player_display_timer_reg(17),
+      I2 => player_display_timer_reg(20),
+      I3 => player_display_timer_reg(19),
+      O => \FSM_onehot_current_state[12]_i_9_n_0\
+    );
+\FSM_onehot_current_state[1]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F444"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[10]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I3 => \FSM_onehot_current_state[10]_i_3_n_0\,
+      O => \FSM_onehot_current_state[1]_i_1_n_0\
+    );
+\FSM_onehot_current_state[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF5500FFA85500"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I2 => \FSM_onehot_current_state[2]_i_2_n_0\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I5 => \FSM_onehot_current_state[11]_i_3_n_0\,
+      O => \FSM_onehot_current_state[2]_i_1_n_0\
+    );
+\FSM_onehot_current_state[2]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => p_1_in,
+      I1 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      O => \FSM_onehot_current_state[2]_i_2_n_0\
+    );
+\FSM_onehot_current_state[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFF8C8C8C"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I2 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I3 => arrow_count,
+      I4 => \FSM_onehot_current_state[3]_i_2_n_0\,
+      I5 => \FSM_onehot_current_state[3]_i_3_n_0\,
+      O => \FSM_onehot_current_state[3]_i_1_n_0\
+    );
+\FSM_onehot_current_state[3]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"DF"
+    )
+        port map (
+      I0 => \arrow_count_reg_n_0_[1]\,
+      I1 => \arrow_count_reg_n_0_[0]\,
+      I2 => \current_round_reg_n_0_[0]\,
+      O => \FSM_onehot_current_state[3]_i_2_n_0\
+    );
+\FSM_onehot_current_state[3]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFD555500000000"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[12]_i_4_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I3 => play_menu_i_4_n_0,
+      I4 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      O => \FSM_onehot_current_state[3]_i_3_n_0\
+    );
+\FSM_onehot_current_state[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEFEAAFE00000000"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => shoot_event,
+      I4 => shoot_btn_d,
+      I5 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      O => \FSM_onehot_current_state[4]_i_1_n_0\
+    );
+\FSM_onehot_current_state[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8888F88888888888"
+    )
+        port map (
+      I0 => p_1_in,
+      I1 => \FSM_onehot_current_state[10]_i_3_n_0\,
+      I2 => arrow_count,
+      I3 => \arrow_count_reg_n_0_[1]\,
+      I4 => \arrow_count_reg_n_0_[0]\,
+      I5 => \current_round_reg_n_0_[0]\,
+      O => \FSM_onehot_current_state[5]_i_1_n_0\
+    );
+\FSM_onehot_current_state[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8F888F888F888888"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I1 => \FSM_onehot_current_state[10]_i_3_n_0\,
+      I2 => start_btn_d,
+      I3 => start_btn,
+      I4 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I5 => p_1_in,
+      O => \FSM_onehot_current_state[6]_i_1_n_0\
+    );
+\FSM_onehot_current_state[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4F444F444F444F4"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[8]_i_3_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I2 => arrow_count,
+      I3 => \FSM_onehot_current_state[7]_i_2_n_0\,
+      I4 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I5 => \FSM_onehot_current_state[12]_i_3_n_0\,
+      O => \FSM_onehot_current_state[7]_i_1_n_0\
+    );
+\FSM_onehot_current_state[7]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"444F"
+    )
+        port map (
+      I0 => shoot_btn_d,
+      I1 => shoot_event,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      O => \FSM_onehot_current_state[7]_i_2_n_0\
+    );
+\FSM_onehot_current_state[8]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FF0CAE0C"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[8]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I2 => \FSM_onehot_current_state[12]_i_5_n_0\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I4 => \FSM_onehot_current_state[8]_i_3_n_0\,
+      O => \FSM_onehot_current_state[8]_i_1_n_0\
+    );
+\FSM_onehot_current_state[8]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFBBB0BBB0BBB0"
+    )
+        port map (
+      I0 => shoot_btn_d,
+      I1 => shoot_event,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I4 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I5 => \FSM_onehot_current_state[12]_i_3_n_0\,
+      O => \FSM_onehot_current_state[8]_i_2_n_0\
+    );
+\FSM_onehot_current_state[8]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[8]_i_4_n_0\,
+      I1 => display_timer_reg(1),
+      I2 => display_timer_reg(0),
+      I3 => display_timer_reg(3),
+      I4 => display_timer_reg(2),
+      I5 => \FSM_onehot_current_state[8]_i_5_n_0\,
+      O => \FSM_onehot_current_state[8]_i_3_n_0\
+    );
+\FSM_onehot_current_state[8]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[8]_i_6_n_0\,
+      I1 => display_timer_reg(5),
+      I2 => display_timer_reg(4),
+      I3 => display_timer_reg(7),
+      I4 => display_timer_reg(6),
+      I5 => \FSM_onehot_current_state[8]_i_7_n_0\,
+      O => \FSM_onehot_current_state[8]_i_4_n_0\
+    );
+\FSM_onehot_current_state[8]_i_5\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFF7FF"
+    )
+        port map (
+      I0 => display_timer_reg(22),
+      I1 => display_timer_reg(23),
+      I2 => display_timer_reg(20),
+      I3 => display_timer_reg(21),
+      I4 => \FSM_onehot_current_state[8]_i_8_n_0\,
+      O => \FSM_onehot_current_state[8]_i_5_n_0\
+    );
+\FSM_onehot_current_state[8]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFD"
+    )
+        port map (
+      I0 => display_timer_reg(9),
+      I1 => display_timer_reg(8),
+      I2 => display_timer_reg(11),
+      I3 => display_timer_reg(10),
+      O => \FSM_onehot_current_state[8]_i_6_n_0\
+    );
+\FSM_onehot_current_state[8]_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFF7"
+    )
+        port map (
+      I0 => display_timer_reg(14),
+      I1 => display_timer_reg(15),
+      I2 => display_timer_reg(12),
+      I3 => display_timer_reg(13),
+      I4 => \FSM_onehot_current_state[8]_i_9_n_0\,
       O => \FSM_onehot_current_state[8]_i_7_n_0\
     );
 \FSM_onehot_current_state[8]_i_8\: unisim.vcomponents.LUT4
@@ -986,70 +999,59 @@ begin
       INIT => X"FF7F"
     )
         port map (
-      I0 => arrow_land_timer_reg(24),
-      I1 => arrow_land_timer_reg(23),
-      I2 => arrow_land_timer_reg(26),
-      I3 => arrow_land_timer_reg(25),
+      I0 => display_timer_reg(25),
+      I1 => display_timer_reg(24),
+      I2 => display_timer_reg(27),
+      I3 => display_timer_reg(26),
       O => \FSM_onehot_current_state[8]_i_8_n_0\
     );
-\FSM_onehot_current_state[8]_i_9\: unisim.vcomponents.LUT5
+\FSM_onehot_current_state[8]_i_9\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFBF"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => arrow_land_timer_reg(0),
-      I1 => arrow_land_timer_reg(27),
-      I2 => arrow_land_timer_reg(28),
-      I3 => arrow_land_timer_reg(2),
-      I4 => arrow_land_timer_reg(1),
+      I0 => display_timer_reg(17),
+      I1 => display_timer_reg(16),
+      I2 => display_timer_reg(19),
+      I3 => display_timer_reg(18),
       O => \FSM_onehot_current_state[8]_i_9_n_0\
     );
 \FSM_onehot_current_state[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE00FE00FAF0FE00"
+      INIT => X"FCFCFFFCECECECEC"
     )
         port map (
-      I0 => \FSM_onehot_current_state[9]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state[9]_i_3_n_0\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I4 => start_btn,
-      I5 => start_btn_d,
+      I0 => \FSM_onehot_current_state[10]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state[9]_i_2_n_0\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I3 => shoot_event,
+      I4 => shoot_btn_d,
+      I5 => \FSM_onehot_current_state_reg_n_0_[12]\,
       O => \FSM_onehot_current_state[9]_i_1_n_0\
     );
-\FSM_onehot_current_state[9]_i_2\: unisim.vcomponents.LUT5
+\FSM_onehot_current_state[9]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFE0EE"
+      INIT => X"FFD0D0D000000000"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I2 => shoot_btn_d,
-      I3 => shoot_event,
-      I4 => \FSM_onehot_current_state[10]_i_3_n_0\,
+      I0 => shoot_event,
+      I1 => shoot_btn_d,
+      I2 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I3 => \FSM_onehot_current_state[12]_i_3_n_0\,
+      I4 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[9]\,
       O => \FSM_onehot_current_state[9]_i_2_n_0\
     );
-\FSM_onehot_current_state[9]_i_3\: unisim.vcomponents.LUT4
+\FSM_onehot_current_state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      O => \FSM_onehot_current_state[9]_i_3_n_0\
-    );
-\FSM_onehot_current_state_reg[0]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
       D => \FSM_onehot_current_state[0]_i_1_n_0\,
       Q => \FSM_onehot_current_state_reg_n_0_[0]\,
-      S => play_menu_i_1_n_0
+      R => play_menu_i_1_n_0
     );
 \FSM_onehot_current_state_reg[10]\: unisim.vcomponents.FDRE
     generic map(
@@ -1070,7 +1072,7 @@ begin
       C => clk,
       CE => '1',
       D => \FSM_onehot_current_state[11]_i_1_n_0\,
-      Q => arrow_count,
+      Q => \FSM_onehot_current_state_reg_n_0_[11]\,
       R => play_menu_i_1_n_0
     );
 \FSM_onehot_current_state_reg[12]\: unisim.vcomponents.FDRE
@@ -1117,16 +1119,16 @@ begin
       Q => \FSM_onehot_current_state_reg_n_0_[3]\,
       R => play_menu_i_1_n_0
     );
-\FSM_onehot_current_state_reg[4]\: unisim.vcomponents.FDRE
+\FSM_onehot_current_state_reg[4]\: unisim.vcomponents.FDSE
     generic map(
-      INIT => '0'
+      INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
       D => \FSM_onehot_current_state[4]_i_1_n_0\,
       Q => \FSM_onehot_current_state_reg_n_0_[4]\,
-      R => play_menu_i_1_n_0
+      S => play_menu_i_1_n_0
     );
 \FSM_onehot_current_state_reg[5]\: unisim.vcomponents.FDRE
     generic map(
@@ -1136,7 +1138,7 @@ begin
       C => clk,
       CE => '1',
       D => \FSM_onehot_current_state[5]_i_1_n_0\,
-      Q => \FSM_onehot_current_state_reg_n_0_[5]\,
+      Q => p_1_in,
       R => play_menu_i_1_n_0
     );
 \FSM_onehot_current_state_reg[6]\: unisim.vcomponents.FDRE
@@ -1158,7 +1160,7 @@ begin
       C => clk,
       CE => '1',
       D => \FSM_onehot_current_state[7]_i_1_n_0\,
-      Q => \FSM_onehot_current_state_reg_n_0_[7]\,
+      Q => arrow_count,
       R => play_menu_i_1_n_0
     );
 \FSM_onehot_current_state_reg[8]\: unisim.vcomponents.FDRE
@@ -1230,8 +1232,8 @@ GND: unisim.vcomponents.GND
       INIT => X"1F"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[0]\,
       I2 => resetn,
       O => \arrow_land_timer[0]_i_1_n_0\
     );
@@ -1619,7 +1621,7 @@ GND: unisim.vcomponents.GND
         port map (
       I0 => difficulty(0),
       I1 => \difficulty[0]_i_2_n_0\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[6]\,
       I3 => difficulty(0),
       O => \difficulty[0]_i_1_n_0\
     );
@@ -1642,7 +1644,7 @@ GND: unisim.vcomponents.GND
     )
         port map (
       I0 => difficulty1_in(1),
-      I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
       I2 => difficulty(1),
       O => \difficulty[1]_i_1_n_0\
     );
@@ -1681,7 +1683,7 @@ GND: unisim.vcomponents.GND
     )
         port map (
       I0 => resetn,
-      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[8]\,
       O => \display_timer[0]_i_1_n_0\
     );
 \display_timer[0]_i_3\: unisim.vcomponents.LUT1
@@ -2024,59 +2026,52 @@ GND: unisim.vcomponents.GND
     );
 fire_pulse_inferred_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000030200000202"
+      INIT => X"0000FFFF00000080"
     )
         port map (
-      I0 => fire_pulse_inferred_i_2_n_0,
-      I1 => \FSM_onehot_current_state[8]_i_2_n_0\,
-      I2 => \FSM_onehot_current_state[9]_i_3_n_0\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I4 => fire_pulse_inferred_i_3_n_0,
-      I5 => play_menu_i_6_n_0,
+      I0 => play_menu_i_5_n_0,
+      I1 => fire_pulse_inferred_i_2_n_0,
+      I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I3 => \FSM_onehot_current_state[11]_i_2_n_0\,
+      I4 => \FSM_onehot_current_state[10]_i_2_n_0\,
+      I5 => fire_pulse_inferred_i_3_n_0,
       O => fire_pulse
     );
-fire_pulse_inferred_i_2: unisim.vcomponents.LUT6
+fire_pulse_inferred_i_2: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0000000000000004"
+      INIT => X"0001"
     )
         port map (
-      I0 => fire_pulse_inferred_i_4_n_0,
-      I1 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[9]\,
       O => fire_pulse_inferred_i_2_n_0
     );
-fire_pulse_inferred_i_3: unisim.vcomponents.LUT2
+fire_pulse_inferred_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E"
+      INIT => X"0000000000000020"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I1 => arrow_count,
+      I0 => play_menu_i_5_n_0,
+      I1 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I5 => \FSM_onehot_current_state[12]_i_3_n_0\,
       O => fire_pulse_inferred_i_3_n_0
-    );
-fire_pulse_inferred_i_4: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      O => fire_pulse_inferred_i_4_n_0
     );
 \game_state_reg[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I5 => arrow_count,
+      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I1 => arrow_count,
+      I2 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[6]\,
       O => current_state_reg(0)
     );
 \game_state_reg[1]_i_1\: unisim.vcomponents.LUT6
@@ -2084,12 +2079,12 @@ fire_pulse_inferred_i_4: unisim.vcomponents.LUT2
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I4 => arrow_count,
-      I5 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I3 => arrow_count,
+      I4 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[12]\,
       O => current_state_reg(1)
     );
 \game_state_reg[2]_i_1\: unisim.vcomponents.LUT5
@@ -2097,11 +2092,11 @@ fire_pulse_inferred_i_4: unisim.vcomponents.LUT2
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[7]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[9]\,
       I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[5]\,
+      I3 => p_1_in,
+      I4 => \FSM_onehot_current_state_reg_n_0_[2]\,
       O => current_state_reg(2)
     );
 \game_state_reg[3]_i_1\: unisim.vcomponents.LUT5
@@ -2109,11 +2104,11 @@ fire_pulse_inferred_i_4: unisim.vcomponents.LUT2
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I1 => arrow_count,
-      I2 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I3 => arrow_count,
+      I4 => p_1_in,
       O => current_state_reg(3)
     );
 \game_state_reg_reg[0]\: unisim.vcomponents.FDRE
@@ -2501,25 +2496,26 @@ left_btn_d_reg: unisim.vcomponents.FDRE
     );
 \p1_score[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000008FFFFFFFF"
+      INIT => X"00200000FFFFFFFF"
     )
         port map (
-      I0 => play_menu_i_6_n_0,
+      I0 => play_menu_i_5_n_0,
       I1 => \p1_score[6]_i_4_n_0\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I4 => arrow_count,
+      I2 => p_1_in,
+      I3 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I4 => play_menu_i_3_n_0,
       I5 => resetn,
       O => \p1_score[6]_i_1_n_0\
     );
-\p1_score[6]_i_2\: unisim.vcomponents.LUT3
+\p1_score[6]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"40"
+      INIT => X"4440"
     )
         port map (
       I0 => score_valid_d,
-      I1 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I2 => score_valid,
+      I1 => score_valid,
+      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[0]\,
       O => \p1_score[6]_i_2_n_0\
     );
 \p1_score[6]_i_3\: unisim.vcomponents.LUT4
@@ -2533,16 +2529,13 @@ left_btn_d_reg: unisim.vcomponents.FDRE
       I3 => \^p1_score\(6),
       O => \p_0_in__1\(6)
     );
-\p1_score[6]_i_4\: unisim.vcomponents.LUT5
+\p1_score[6]_i_4\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"00000400"
+      INIT => X"E"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I3 => start_btn,
-      I4 => start_btn_d,
+      I0 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
       O => \p1_score[6]_i_4_n_0\
     );
 \p1_score[6]_i_5\: unisim.vcomponents.LUT5
@@ -2692,15 +2685,17 @@ left_btn_d_reg: unisim.vcomponents.FDRE
       I2 => \^p2_score\(5),
       O => \p_0_in__0\(5)
     );
-\p2_score[6]_i_1\: unisim.vcomponents.LUT4
+\p2_score[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0400"
+      INIT => X"0010001000100000"
     )
         port map (
-      I0 => score_valid_d,
-      I1 => score_valid,
-      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I2 => score_valid,
+      I3 => score_valid_d,
+      I4 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[9]\,
       O => \p2_score[6]_i_1_n_0\
     );
 \p2_score[6]_i_2\: unisim.vcomponents.LUT4
@@ -2797,291 +2792,309 @@ play_arrow_i_1: unisim.vcomponents.LUT6
     );
 play_arrow_i_10: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000001"
+      INIT => X"FFFF3200BA003200"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I5 => arrow_count,
+      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I1 => arrow_count,
+      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I3 => play_menu_i_3_n_0,
+      I4 => \FSM_onehot_current_state[3]_i_2_n_0\,
+      I5 => play_arrow_i_23_n_0,
       O => play_arrow_i_10_n_0
     );
-play_arrow_i_11: unisim.vcomponents.LUT3
+play_arrow_i_11: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"D0"
+      INIT => X"E"
     )
         port map (
-      I0 => start_btn,
-      I1 => start_btn_d,
-      I2 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[12]\,
       O => play_arrow_i_11_n_0
     );
-play_arrow_i_12: unisim.vcomponents.LUT6
+play_arrow_i_12: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFF40FF4040"
+      INIT => X"0008"
     )
         port map (
-      I0 => start_btn_d,
-      I1 => start_btn,
-      I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I3 => shoot_btn_d,
-      I4 => shoot_event,
-      I5 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I1 => fire_pulse_inferred_i_2_n_0,
+      I2 => arrow_count,
+      I3 => p_1_in,
       O => play_arrow_i_12_n_0
     );
 play_arrow_i_13: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44F4040400000000"
+      INIT => X"4444400040004000"
     )
         port map (
-      I0 => play_menu_i_4_n_0,
-      I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I2 => arrow_count,
-      I3 => \FSM_onehot_current_state[9]_i_3_n_0\,
-      I4 => \FSM_onehot_current_state[2]_i_3_n_0\,
-      I5 => play_arrow_i_14_n_0,
+      I0 => play_arrow_i_24_n_0,
+      I1 => play_menu_i_3_n_0,
+      I2 => play_arrow_i_22_n_0,
+      I3 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I4 => play_arrow_i_11_n_0,
+      I5 => \FSM_onehot_current_state_reg_n_0_[1]\,
       O => play_arrow_i_13_n_0
     );
-play_arrow_i_14: unisim.vcomponents.LUT2
+play_arrow_i_14: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"8"
+      INIT => X"000000E2"
     )
         port map (
-      I0 => play_menu_i_6_n_0,
-      I1 => \FSM_onehot_current_state_reg_n_0_[5]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I1 => arrow_count,
+      I2 => \FSM_onehot_current_state[3]_i_2_n_0\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[3]\,
       O => play_arrow_i_14_n_0
     );
 play_arrow_i_15: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"404040FF40404040"
+      INIT => X"0000FC0C0000A000"
     )
         port map (
-      I0 => shoot_btn_d,
-      I1 => shoot_event,
-      I2 => play_arrow_i_23_n_0,
-      I3 => arrow_count,
-      I4 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I0 => play_arrow_i_23_n_0,
+      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I2 => arrow_count,
+      I3 => \FSM_onehot_current_state[3]_i_2_n_0\,
+      I4 => play_arrow_i_11_n_0,
+      I5 => play_arrow_i_25_n_0,
       O => play_arrow_i_15_n_0
     );
-play_arrow_i_16: unisim.vcomponents.LUT4
+play_arrow_i_16: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0001"
+      INIT => X"FE"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[10]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[7]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I2 => arrow_count,
       O => play_arrow_i_16_n_0
     );
 play_arrow_i_17: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0800080008080800"
+      INIT => X"1101000000000000"
     )
         port map (
-      I0 => play_arrow_i_16_n_0,
-      I1 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I2 => \FSM_onehot_current_state[6]_i_2_n_0\,
-      I3 => play_arrow_i_24_n_0,
-      I4 => play_arrow_i_23_n_0,
-      I5 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I0 => p_1_in,
+      I1 => arrow_count,
+      I2 => start_btn,
+      I3 => start_btn_d,
+      I4 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I5 => fire_pulse_inferred_i_2_n_0,
       O => play_arrow_i_17_n_0
     );
 play_arrow_i_18: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFEAEE00000000"
+      INIT => X"FFFFFFFF00800000"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I2 => start_btn_d,
-      I3 => start_btn,
-      I4 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[5]\,
+      I0 => play_arrow_i_21_n_0,
+      I1 => \FSM_onehot_current_state[12]_i_4_n_0\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I4 => fire_pulse_inferred_i_2_n_0,
+      I5 => play_arrow_i_26_n_0,
       O => play_arrow_i_18_n_0
     );
 play_arrow_i_19: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAEAAAEAAAEA0000"
+      INIT => X"AAAAA8AAA8A8A8A8"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I2 => start_btn,
-      I3 => start_btn_d,
-      I4 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I0 => play_arrow_i_12_n_0,
+      I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I3 => start_btn,
+      I4 => start_btn_d,
+      I5 => \FSM_onehot_current_state_reg_n_0_[6]\,
       O => play_arrow_i_19_n_0
     );
 play_arrow_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFACCCA000A000"
+      INIT => X"FFFFFFFFF4000000"
     )
         port map (
-      I0 => play_arrow_i_8_n_0,
-      I1 => play_menu_i_5_n_0,
-      I2 => \FSM_onehot_current_state[8]_i_2_n_0\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I0 => \FSM_onehot_current_state[10]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => play_arrow_i_8_n_0,
+      I4 => fire_pulse_inferred_i_2_n_0,
       I5 => play_arrow_i_9_n_0,
       O => play_arrow_i_2_n_0
     );
-play_arrow_i_20: unisim.vcomponents.LUT6
+play_arrow_i_20: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000400000000000"
+      INIT => X"00010000"
     )
         port map (
-      I0 => shoot_btn_d,
-      I1 => shoot_event,
-      I2 => arrow_count,
-      I3 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I4 => play_menu_i_4_n_0,
-      I5 => \FSM_onehot_current_state[2]_i_3_n_0\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[2]\,
       O => play_arrow_i_20_n_0
     );
 play_arrow_i_21: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5155000000000000"
+      INIT => X"5F5F115F5F5F5F5F"
     )
         port map (
-      I0 => \FSM_onehot_current_state[9]_i_3_n_0\,
-      I1 => \arrow_count_reg_n_0_[1]\,
-      I2 => \arrow_count_reg_n_0_[0]\,
-      I3 => \current_round_reg_n_0_[0]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I5 => play_menu_i_6_n_0,
+      I0 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      I1 => arrow_count,
+      I2 => \FSM_onehot_current_state[11]_i_2_n_0\,
+      I3 => \arrow_count_reg_n_0_[1]\,
+      I4 => \arrow_count_reg_n_0_[0]\,
+      I5 => \current_round_reg_n_0_[0]\,
       O => play_arrow_i_21_n_0
     );
-play_arrow_i_22: unisim.vcomponents.LUT6
+play_arrow_i_22: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"4444004400400040"
+      INIT => X"F4"
     )
         port map (
-      I0 => play_menu_i_4_n_0,
-      I1 => play_menu_i_6_n_0,
-      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I3 => arrow_count,
-      I4 => \FSM_onehot_current_state[2]_i_3_n_0\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[5]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
       O => play_arrow_i_22_n_0
     );
 play_arrow_i_23: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5F5F115F5F5F5F5F"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => play_menu_i_4_n_0,
-      I1 => arrow_count,
-      I2 => \FSM_onehot_current_state[9]_i_3_n_0\,
-      I3 => \arrow_count_reg_n_0_[1]\,
-      I4 => \arrow_count_reg_n_0_[0]\,
-      I5 => \current_round_reg_n_0_[0]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I1 => fire_pulse_inferred_i_2_n_0,
+      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I3 => p_1_in,
+      I4 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I5 => \FSM_onehot_current_state_reg_n_0_[6]\,
       O => play_arrow_i_23_n_0
     );
-play_arrow_i_24: unisim.vcomponents.LUT6
+play_arrow_i_24: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"55101110FF101110"
+      INIT => X"E"
     )
         port map (
-      I0 => play_menu_i_4_n_0,
+      I0 => p_1_in,
       I1 => arrow_count,
-      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I4 => \FSM_onehot_current_state[2]_i_3_n_0\,
-      I5 => \FSM_onehot_current_state[9]_i_3_n_0\,
       O => play_arrow_i_24_n_0
+    );
+play_arrow_i_25: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000002"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I5 => \FSM_onehot_current_state[12]_i_2_n_0\,
+      O => play_arrow_i_25_n_0
+    );
+play_arrow_i_26: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B000000000000000"
+    )
+        port map (
+      I0 => \FSM_onehot_current_state[12]_i_4_n_0\,
+      I1 => play_arrow_i_11_n_0,
+      I2 => arrow_count,
+      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I4 => \FSM_onehot_current_state[3]_i_2_n_0\,
+      I5 => play_menu_i_3_n_0,
+      O => play_arrow_i_26_n_0
     );
 play_arrow_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8080808088888880"
+      INIT => X"FFFFF0008000C000"
     )
         port map (
-      I0 => play_arrow_i_10_n_0,
-      I1 => play_arrow_i_11_n_0,
-      I2 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I5 => \FSM_onehot_current_state[8]_i_2_n_0\,
+      I0 => \FSM_onehot_current_state[12]_i_4_n_0\,
+      I1 => play_arrow_i_10_n_0,
+      I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I3 => \FSM_onehot_current_state[10]_i_2_n_0\,
+      I4 => play_arrow_i_11_n_0,
+      I5 => play_arrow_i_12_n_0,
       O => play_arrow_i_3_n_0
     );
-play_arrow_i_4: unisim.vcomponents.LUT5
+play_arrow_i_4: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F4000000"
+      INIT => X"BFAAAAAAAAAAAAAA"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I3 => play_arrow_i_12_n_0,
-      I4 => play_arrow_i_10_n_0,
+      I0 => play_arrow_i_13_n_0,
+      I1 => \FSM_onehot_current_state[10]_i_2_n_0\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I3 => play_menu_i_4_n_0,
+      I4 => play_menu_i_3_n_0,
+      I5 => play_arrow_i_14_n_0,
       O => play_arrow_i_4_n_0
     );
 play_arrow_i_5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"88888B8888888888"
+      INIT => X"88888888F8888888"
     )
         port map (
-      I0 => play_arrow_i_13_n_0,
-      I1 => \FSM_onehot_current_state[10]_i_3_n_0\,
-      I2 => play_menu_i_4_n_0,
-      I3 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I4 => arrow_count,
-      I5 => play_arrow_i_14_n_0,
+      I0 => play_arrow_i_15_n_0,
+      I1 => \FSM_onehot_current_state[12]_i_5_n_0\,
+      I2 => play_menu_i_3_n_0,
+      I3 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I5 => play_arrow_i_16_n_0,
       O => play_arrow_i_5_n_0
     );
 play_arrow_i_6: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFF4000000"
+      INIT => X"FFFFFFFFFF540000"
     )
         port map (
-      I0 => \FSM_onehot_current_state[8]_i_2_n_0\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I0 => \FSM_onehot_current_state[10]_i_2_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[4]\,
       I2 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I3 => play_arrow_i_15_n_0,
-      I4 => play_arrow_i_16_n_0,
-      I5 => play_arrow_i_17_n_0,
+      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I4 => play_arrow_i_17_n_0,
+      I5 => play_arrow_i_18_n_0,
       O => play_arrow_i_6_n_0
     );
 play_arrow_i_7: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFAA08AA08AA08"
+      INIT => X"2222232222222222"
     )
         port map (
-      I0 => play_arrow_i_10_n_0,
-      I1 => play_arrow_i_18_n_0,
-      I2 => \FSM_onehot_current_state[10]_i_3_n_0\,
-      I3 => play_arrow_i_19_n_0,
-      I4 => play_arrow_i_16_n_0,
+      I0 => play_arrow_i_19_n_0,
+      I1 => \FSM_onehot_current_state[12]_i_5_n_0\,
+      I2 => play_arrow_i_16_n_0,
+      I3 => p_1_in,
+      I4 => \FSM_onehot_current_state[12]_i_2_n_0\,
       I5 => play_arrow_i_20_n_0,
       O => play_arrow_i_7_n_0
     );
 play_arrow_i_8: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFF0008"
+      INIT => X"080808FF08080808"
     )
         port map (
-      I0 => play_arrow_i_16_n_0,
-      I1 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      I3 => arrow_count,
-      I4 => play_arrow_i_21_n_0,
-      I5 => play_arrow_i_22_n_0,
+      I0 => play_arrow_i_21_n_0,
+      I1 => shoot_event,
+      I2 => shoot_btn_d,
+      I3 => p_1_in,
+      I4 => arrow_count,
+      I5 => \FSM_onehot_current_state_reg_n_0_[0]\,
       O => play_arrow_i_8_n_0
     );
 play_arrow_i_9: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4044400000000000"
+      INIT => X"000000E000000000"
     )
         port map (
-      I0 => start_btn_d,
-      I1 => start_btn,
-      I2 => \FSM_onehot_current_state[2]_i_3_n_0\,
-      I3 => arrow_count,
-      I4 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I5 => play_menu_i_6_n_0,
+      I0 => \FSM_onehot_current_state[12]_i_4_n_0\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I2 => fire_pulse_inferred_i_2_n_0,
+      I3 => p_1_in,
+      I4 => arrow_count,
+      I5 => play_arrow_i_22_n_0,
       O => play_arrow_i_9_n_0
     );
 play_arrow_reg: unisim.vcomponents.FDRE
@@ -3102,57 +3115,49 @@ play_menu_i_1: unisim.vcomponents.LUT1
     );
 play_menu_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001000000000000"
+      INIT => X"0002000000000000"
     )
         port map (
       I0 => play_menu_i_3_n_0,
-      I1 => play_menu_i_4_n_0,
-      I2 => \FSM_onehot_current_state_reg_n_0_[3]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[4]\,
-      I4 => play_menu_i_5_n_0,
-      I5 => play_menu_i_6_n_0,
+      I1 => \FSM_onehot_current_state_reg_n_0_[6]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I4 => play_menu_i_4_n_0,
+      I5 => play_menu_i_5_n_0,
       O => play_menu0
     );
-play_menu_i_3: unisim.vcomponents.LUT3
+play_menu_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE"
+      INIT => X"0000000000010000"
     )
         port map (
-      I0 => arrow_count,
-      I1 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[8]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I4 => start_btn,
+      I5 => start_btn_d,
       O => play_menu_i_3_n_0
     );
 play_menu_i_4: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => start_btn_d,
-      I1 => start_btn,
-      O => play_menu_i_4_n_0
-    );
-play_menu_i_5: unisim.vcomponents.LUT2
-    generic map(
       INIT => X"E"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[12]\,
-      O => play_menu_i_5_n_0
+      I0 => \FSM_onehot_current_state_reg_n_0_[4]\,
+      I1 => p_1_in,
+      O => play_menu_i_4_n_0
     );
-play_menu_i_6: unisim.vcomponents.LUT6
+play_menu_i_5: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0000000000000001"
+      INIT => X"0001"
     )
         port map (
-      I0 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I1 => \FSM_onehot_current_state_reg_n_0_[10]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[8]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[6]\,
-      I5 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      O => play_menu_i_6_n_0
+      I0 => arrow_count,
+      I1 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I2 => \FSM_onehot_current_state_reg_n_0_[12]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      O => play_menu_i_5_n_0
     );
 play_menu_reg: unisim.vcomponents.FDRE
      port map (
@@ -3166,20 +3171,20 @@ play_music_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \FSM_onehot_current_state_reg_n_0_[10]\,
+      D => \FSM_onehot_current_state_reg_n_0_[8]\,
       Q => play_music,
       R => play_menu_i_1_n_0
     );
 \player_display_timer[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000002"
+      INIT => X"00000004"
     )
         port map (
-      I0 => resetn,
-      I1 => \FSM_onehot_current_state_reg_n_0_[5]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[9]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[7]\,
-      I4 => \FSM_onehot_current_state_reg_n_0_[3]\,
+      I0 => \FSM_onehot_current_state_reg_n_0_[2]\,
+      I1 => resetn,
+      I2 => \FSM_onehot_current_state_reg_n_0_[11]\,
+      I3 => \FSM_onehot_current_state_reg_n_0_[9]\,
+      I4 => \FSM_onehot_current_state_reg_n_0_[0]\,
       O => player_display_timer
     );
 \player_display_timer[0]_i_3\: unisim.vcomponents.LUT1
@@ -3606,8 +3611,6 @@ end design_3_archery_fsm_0_0;
 architecture STRUCTURE of design_3_archery_fsm_0_0 is
   attribute DISPLAY_SCORE : string;
   attribute DISPLAY_SCORE of inst : label is "4'b1010";
-  attribute FIVE_SECONDS : string;
-  attribute FIVE_SECONDS of inst : label is "29'b11101110011010110010100000000";
   attribute GAME_OVER : string;
   attribute GAME_OVER of inst : label is "4'b1100";
   attribute MAIN_MENU : string;
@@ -3630,6 +3633,8 @@ architecture STRUCTURE of design_3_archery_fsm_0_0 is
   attribute PLAYER2_SHOOT of inst : label is "4'b0111";
   attribute RESET_STATE : string;
   attribute RESET_STATE of inst : label is "4'b0000";
+  attribute TWO_SECONDS : string;
+  attribute TWO_SECONDS of inst : label is "29'b01011111010111100001000000000";
   attribute UPDATE_ROUND : string;
   attribute UPDATE_ROUND of inst : label is "4'b1011";
   attribute X_INTERFACE_INFO : string;

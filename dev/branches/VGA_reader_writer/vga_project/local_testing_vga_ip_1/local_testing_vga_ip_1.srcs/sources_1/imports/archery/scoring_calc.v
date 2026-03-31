@@ -20,15 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 module scoring_engine (
     input clk,
-    input reset,
+    input resetn,
     input trig_calc, 
     input [9:0] gyro_x,
     input [9:0] gyro_y,
     output reg [3:0] score,
     output reg valid_score
 );
-    localparam CENTER_X = 10'd320;
-    localparam CENTER_Y = 10'd240;
+    localparam CENTER_X = 10'd160;
+    localparam CENTER_Y = 10'd120;
 
     reg signed [10:0] dx, dy;
     reg [21:0] dist_sq;
@@ -37,7 +37,7 @@ module scoring_engine (
     reg trig_q1, trig_q2;
 
     always @(posedge clk) begin
-        if (reset) begin
+        if (!resetn) begin
             score <= 0;
             valid_score <= 0;
             trig_q1 <= 0;
@@ -63,18 +63,26 @@ module scoring_engine (
             // find which band it corrresponds to
             if (trig_q2) begin
                 valid_score <= 1;
-                if (dist_sq <= 22'd400)
+                if (dist_sq <= 22'd441)
                     score <= 4'd10;
-                else if (dist_sq <= 22'd1600)
+                else if (dist_sq <= 22'd900)
                     score <= 4'd9;
-                else if (dist_sq <= 22'd6400)
+                else if (dist_sq <= 22'd1444)
                     score <= 4'd8;
-                else if (dist_sq <= 22'd14400)
+                else if (dist_sq <= 22'd2209)
+                    score <= 4'd7;
+                else if (dist_sq <= 22'd3025)
                     score <= 4'd6;
-                else if (dist_sq <= 32'd25600)
+                else if (dist_sq <= 22'd4096)
+                    score <= 4'd5;
+                else if (dist_sq <= 32'd5184)
                     score <= 4'd4;
-                else if (dist_sq <= 22'd40000)
+                else if (dist_sq <= 32'd6561)
+                    score <= 4'd3;
+                else if (dist_sq <= 22'd7921)
                     score <= 4'd2;
+                else if (dist_sq <= 22'd9604)
+                    score <= 4'd1;
                 else
                     score <= 4'd0;
             end 

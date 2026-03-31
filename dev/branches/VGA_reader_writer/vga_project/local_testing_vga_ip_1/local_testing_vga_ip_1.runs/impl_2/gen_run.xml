@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774932941">
+<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774985976">
   <File Type="BITSTR-BMM" Name="design_3_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_3_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_3_wrapper_timing_summary_init.rpt"/>
@@ -463,7 +463,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -476,16 +478,16 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_bram_ctrl_0_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_ps2_keyboard_subsyst_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_vip_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_axi_bram_ctrl_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_gyro_calc_interface_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_4_sync_gen_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_top_sound_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_decimal_display_mana_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_scoring_engine_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_ps2_keyboard_subsyst_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_decimal_display_mana_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_physics_engine_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_3_archery_fsm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_3_framewriter_0_0"/>
 </GenRun>

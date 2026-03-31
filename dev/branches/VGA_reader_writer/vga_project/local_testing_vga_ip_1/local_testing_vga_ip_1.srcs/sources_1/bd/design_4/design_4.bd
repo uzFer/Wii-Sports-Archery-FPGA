@@ -5,7 +5,8 @@
       "device": "xc7a100tcsg324-1",
       "name": "design_4",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2018.3"
+      "tool_version": "2018.3",
+      "validated": "true"
     },
     "design_tree": {
       "axi_bram_ctrl_0": "",
@@ -44,8 +45,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_4_clk_100MHz",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
           }
         }
       },
@@ -53,6 +66,10 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -341,6 +358,18 @@
       }
     },
     "interface_nets": {
+      "axi_vip_0_M_AXI": {
+        "interface_ports": [
+          "axi_vip_0/M_AXI",
+          "sync_gen_1/S00_AXI"
+        ]
+      },
+      "axi_vip_1_M_AXI": {
+        "interface_ports": [
+          "axi_vip_1/M_AXI",
+          "framewriter_0/S00_AXI"
+        ]
+      },
       "axi_bram_ctrl_0_BRAM_PORTB": {
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTB",
@@ -353,22 +382,10 @@
           "axi_bram_ctrl_0/S_AXI"
         ]
       },
-      "axi_vip_0_M_AXI": {
-        "interface_ports": [
-          "axi_vip_0/M_AXI",
-          "sync_gen_1/S00_AXI"
-        ]
-      },
       "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTA",
           "axi_bram_ctrl_0_bram/BRAM_PORTA"
-        ]
-      },
-      "axi_vip_1_M_AXI": {
-        "interface_ports": [
-          "axi_vip_1/M_AXI",
-          "framewriter_0/S00_AXI"
         ]
       }
     },

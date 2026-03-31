@@ -93,8 +93,16 @@ module framewriter #
 
             // other chars + numbers
             8'd32:  rom_data = 64'h0;                // Space
+            8'd48:  rom_data = 64'h1c44995324470000; // 0
             8'd49:  rom_data = 64'h0830204081070000; // 1
             8'd50:  rom_data = 64'h1c440861040f8000; // 2
+            8'd51:  rom_data = 64'h1c44086024470000; // 3
+            8'd52:  rom_data = 64'h04185123e0810000; // 4
+            8'd53:  rom_data = 64'h3e40f01024470000; // 5
+            8'd54:  rom_data = 64'h0e2081e224470000; // 6
+            8'd55:  rom_data = 64'h3e04104102040000; // 7
+            8'd56:  rom_data = 64'h1c4488e224470000; // 8
+            8'd57:  rom_data = 64'h1c4488f020860000; // 9
             8'd58:  rom_data = 64'h0010000080000000; // :
             8'd47:  rom_data = 64'h0204081020408000; // /
 
@@ -106,7 +114,7 @@ module framewriter #
             8'd69:  rom_data = 64'h3e4081e2040f8000; // E
             8'd70:  rom_data = 64'h3e4081e204080000; // F
             8'd71:  rom_data = 64'h1c44817224470000; // G
-            8'd72:  rom_data = 64'h2244891224470000; // H
+            8'd72:  rom_data = 64'h224489f224488000; // H
             8'd73:  rom_data = 64'h1c10204081070000; // I
             8'd75:  rom_data = 64'h2248a18284888000; // K
             8'd76:  rom_data = 64'h20408102040f8000; // L
@@ -121,7 +129,7 @@ module framewriter #
             8'd86:  rom_data = 64'h2244891222820000; // V
             8'd87:  rom_data = 64'h22448912a6c88000; // W
             8'd88:  rom_data = 64'h2244504144488000; // X
-            8'd89:  rom_data = 64'h2244504144488000; // Y
+            8'd89:  rom_data = 64'h2244504081020000; // Y
             8'd90:  rom_data = 64'h3e041041040f8000; // Z
 
             // lowercase letters
@@ -378,28 +386,30 @@ module framewriter #
                                (internal_y >= axi_char_y && internal_y < axi_char_y + 9);
             stg1_is_game_over_box <= (internal_x >= 80 && internal_x <= 240) && 
                                      (internal_y >= 60 && internal_y <= 180);
-            stg1_dyn_rel_x <= internal_x - axi_char_x;
-            stg1_dyn_rel_y <= internal_y - axi_char_y;
+            
+            // Guards for dynamic box relative coordinates
+            stg1_dyn_rel_x <= (internal_x >= axi_char_x) ? (internal_x - axi_char_x) : 4'd0;
+            stg1_dyn_rel_y <= (internal_y >= axi_char_y) ? (internal_y - axi_char_y) : 4'd0;
 
             case (score_latch)
                 4'd0: begin // RESET SCREEN
-
-                    // Line 1: Wii Sports (4x scale: 28px wide, 36px tall)
-                    if (internal_y >= 20 && internal_y < 56 && internal_x >= 5 && internal_x < 315) begin
+                    // Line 1: Wii Sports (4x scale)
+                    if (internal_y >= 20 && internal_y < 52 && internal_x >= 5 && internal_x < 315) begin
                         stg1_rel_y <= (internal_y - 20) >> 2;
-                        stg1_rel_x <= ((internal_x - 5) & 4'h1F) >> 2;
+                        stg1_rel_x <= ((internal_x - 5) >> 2) & 4'h7;
                         case ((internal_x - 5) >> 5)
-                            0: stg1_ascii <= 8'd87; 1, 2: stg1_ascii <= 8'd105; 3: stg1_ascii <= 8'd83; 4: stg1_ascii <= 8'd112; 
-                            5: stg1_ascii <= 8'd111; 6: stg1_ascii <= 8'd114; 7: stg1_ascii <= 8'd116; 8: stg1_ascii <= 8'd115;
+                            0: stg1_ascii <= 8'd87; 1, 2: stg1_ascii <= 8'd105; 3: stg1_ascii <= 8'd83; 
+                            4: stg1_ascii <= 8'd112; 5: stg1_ascii <= 8'd111; 6: stg1_ascii <= 8'd114; 
+                            7: stg1_ascii <= 8'd116; 8: stg1_ascii <= 8'd115;
                         endcase
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
                     end 
                     
-                    // Line 2: FPGA (4x scale: 28px wide, 36px tall)
-                    else if (internal_y >= 80 && internal_y < 116 && internal_x >= 90 && internal_x < 218) begin
+                    // Line 2: FPGA (4x scale)
+                    else if (internal_y >= 80 && internal_y < 112 && internal_x >= 90 && internal_x < 218) begin
                         stg1_rel_y <= (internal_y - 80) >> 2;
-                        stg1_rel_x <= ((internal_x - 90) & 4'h1F) >> 2;
+                        stg1_rel_x <= ((internal_x - 90) >> 2) & 4'h7;
                         case ((internal_x - 90) >> 5)
                             0: stg1_ascii <= 8'd70; 1: stg1_ascii <= 8'd80; 2: stg1_ascii <= 8'd71; 3: stg1_ascii <= 8'd65;
                         endcase
@@ -407,11 +417,11 @@ module framewriter #
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
                     end 
 
-                    // Line 3: Archery Edition (2x scale: 14px wide, 18px tall)
-                    else if (internal_y >= 130 && internal_y < 148 && internal_x >= 85 && internal_x < 245) begin
+                    // Line 3: Archery Edition (2x scale)
+                    else if (internal_y >= 130 && internal_y < 148 && internal_x >= 15 && internal_x < 312) begin
                         stg1_rel_y <= (internal_y - 130) >> 1;
-                        stg1_rel_x <= ((internal_x - 85) & 4'hF) >> 1;
-                        case ((internal_x - 85) >> 4)
+                        stg1_rel_x <= ((internal_x - 15) >> 1) & 4'h7;
+                        case ((internal_x - 15) >> 4)
                             0: stg1_ascii <= 8'd65; 1: stg1_ascii <= 8'd114; 2: stg1_ascii <= 8'd99; 3: stg1_ascii <= 8'd104; 
                             4: stg1_ascii <= 8'd101; 5: stg1_ascii <= 8'd114; 6: stg1_ascii <= 8'd121; 8: stg1_ascii <= 8'd32;
                             9: stg1_ascii <= 8'd69; 10: stg1_ascii <= 8'd100; 11: stg1_ascii <= 8'd105; 12: stg1_ascii <= 8'd116; 
@@ -421,15 +431,15 @@ module framewriter #
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
                     end 
                     
-                    // Line 4: Press Center Button
+                    // Line 4: Press Center Button (2x scale)
                     else if (internal_y >= 210 && internal_y < 228 && internal_x >= 30 && internal_x < 286) begin
                         stg1_rel_y <= (internal_y - 210) >> 1;
-                        stg1_rel_x <= ((internal_x - 30) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 30) >> 1) & 4'h7;
                         case ((internal_x - 30) >> 4)
                             0: stg1_ascii <= 8'd80; 1: stg1_ascii <= 8'd114; 2: stg1_ascii <= 8'd101; 3: stg1_ascii <= 8'd115; 
-                            4: stg1_ascii <= 8'd115; 6: stg1_ascii <= 8'd99; 7: stg1_ascii <= 8'd101; 8: stg1_ascii <= 8'd110; 
-                            9: stg1_ascii <= 8'd116; 10: stg1_ascii <= 8'd101; 11: stg1_ascii <= 8'd114; 13: stg1_ascii <= 8'd98; 
-                            14: stg1_ascii <= 8'd116; 15: stg1_ascii <= 8'd110;
+                            4: stg1_ascii <= 8'd115; 5: stg1_ascii <= 8'd32; 6: stg1_ascii <= 8'd67; 7: stg1_ascii <= 8'd101; 
+                            8: stg1_ascii <= 8'd110; 9: stg1_ascii <= 8'd116; 10: stg1_ascii <= 8'd101; 11: stg1_ascii <= 8'd114; 
+                            12: stg1_ascii <= 8'd32; 13: stg1_ascii <= 8'd66; 14: stg1_ascii <= 8'd116; 15: stg1_ascii <= 8'd110;
                         endcase
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
@@ -437,16 +447,16 @@ module framewriter #
                 end
 
                 4'd1: begin // MAIN MENU
-
                     // Enter Player Information (2x scale)
                     if (internal_y >= 40 && internal_y < 58 && internal_x >= 24 && internal_x < 296) begin
                         stg1_rel_y <= (internal_y - 40) >> 1;
-                        stg1_rel_x <= ((internal_x - 24) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 24) >> 1) & 4'h7;
                         case ((internal_x - 24) >> 4)
                             0:stg1_ascii<=8'd69; 1:stg1_ascii<=8'd110; 2:stg1_ascii<=8'd116; 3:stg1_ascii<=8'd101; 
-                            4:stg1_ascii<=8'd114; 6:stg1_ascii<=8'd80; 7:stg1_ascii<=8'd108; 8:stg1_ascii<=8'd97; 
-                            9:stg1_ascii<=8'd121; 10:stg1_ascii<=8'd101; 11:stg1_ascii<=8'd114; 13:stg1_ascii<=8'd73; 
-                            14:stg1_ascii<=8'd110; 15:stg1_ascii<=8'd102; 16:stg1_ascii<=8'd111;
+                            4:stg1_ascii<=8'd114; 5:stg1_ascii<=8'd32; 6:stg1_ascii<=8'd80; 7:stg1_ascii<=8'd108; 
+                            8:stg1_ascii<=8'd97; 9:stg1_ascii<=8'd121; 10:stg1_ascii<=8'd101; 11:stg1_ascii<=8'd114; 
+                            12:stg1_ascii<=8'd32; 13:stg1_ascii<=8'd73; 14:stg1_ascii<=8'd110; 15:stg1_ascii<=8'd102; 
+                            16:stg1_ascii<=8'd111;
                         endcase
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
@@ -455,10 +465,11 @@ module framewriter #
                     // Player 1: (2x scale)
                     else if (internal_y >= 90 && internal_y < 108 && internal_x >= 30 && internal_x < 174) begin
                         stg1_rel_y <= (internal_y - 90) >> 1;
-                        stg1_rel_x <= ((internal_x - 30) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 30) >> 1) & 4'h7;
                         case ((internal_x - 30) >> 4)
                             0:stg1_ascii<=8'd80; 1:stg1_ascii<=8'd108; 2:stg1_ascii<=8'd97; 3:stg1_ascii<=8'd121; 
-                            4:stg1_ascii<=8'd101; 5:stg1_ascii<=8'd114; 7:stg1_ascii<=8'd49; 8:stg1_ascii<=8'd58;
+                            4:stg1_ascii<=8'd101; 5:stg1_ascii<=8'd114; 6:stg1_ascii<=8'd32; 7:stg1_ascii<=8'd49; 
+                            8:stg1_ascii<=8'd58;
                         endcase
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
@@ -467,10 +478,11 @@ module framewriter #
                     // Player 2: (2x scale)
                     else if (internal_y >= 120 && internal_y < 138 && internal_x >= 30 && internal_x < 174) begin
                         stg1_rel_y <= (internal_y - 120) >> 1;
-                        stg1_rel_x <= ((internal_x - 30) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 30) >> 1) & 4'h7;
                         case ((internal_x - 30) >> 4)
                             0:stg1_ascii<=8'd80; 1:stg1_ascii<=8'd108; 2:stg1_ascii<=8'd97; 3:stg1_ascii<=8'd121; 
-                            4:stg1_ascii<=8'd101; 5:stg1_ascii<=8'd114; 7:stg1_ascii<=8'd50; 8:stg1_ascii<=8'd58;
+                            4:stg1_ascii<=8'd101; 5:stg1_ascii<=8'd114; 6:stg1_ascii<=8'd32; 7:stg1_ascii<=8'd50; 
+                            8:stg1_ascii<=8'd58;
                         endcase
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
@@ -479,31 +491,32 @@ module framewriter #
                     // Type name press ENTER (1x scale)
                     else if (internal_y >= 210 && internal_y < 219 && internal_x >= 40 && internal_x < 312) begin
                         stg1_rel_y <= (internal_y - 210);
-                        stg1_rel_x <= ((internal_x - 40) & 4'h7);
+                        stg1_rel_x <= (internal_x - 40) & 4'h7;
                         case ((internal_x - 40) >> 3)
                             0:stg1_ascii<=8'd84; 1:stg1_ascii<=8'd121; 2:stg1_ascii<=8'd112; 3:stg1_ascii<=8'd101; 
-                            5:stg1_ascii<=8'd110; 6:stg1_ascii<=8'd97; 7:stg1_ascii<=8'd109; 8:stg1_ascii<=8'd101; 
-                            10:stg1_ascii<=8'd112; 11:stg1_ascii<=8'd114; 12:stg1_ascii<=8'd101; 13:stg1_ascii<=8'd115; 
-                            14:stg1_ascii<=8'd115; 16:stg1_ascii<=8'd69; 17:stg1_ascii<=8'd78; 18:stg1_ascii<=8'd84; 
-                            19:stg1_ascii<=8'd69; 20:stg1_ascii<=8'd82;
+                            4:stg1_ascii<=8'd32; 5:stg1_ascii<=8'd110; 6:stg1_ascii<=8'd97; 7:stg1_ascii<=8'd109; 
+                            8:stg1_ascii<=8'd101; 9:stg1_ascii<=8'd32; 10:stg1_ascii<=8'd112; 11:stg1_ascii<=8'd114; 
+                            12:stg1_ascii<=8'd101; 13:stg1_ascii<=8'd115; 14:stg1_ascii<=8'd115; 15:stg1_ascii<=8'd32; 
+                            16:stg1_ascii<=8'd69; 17:stg1_ascii<=8'd78; 18:stg1_ascii<=8'd84; 19:stg1_ascii<=8'd69; 
+                            20:stg1_ascii<=8'd82;
                         endcase
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
                     end 
                     
                     // P1 Initials (2x scale)
-                    else if (internal_y >= 91 && internal_y < 109 && internal_x >= 205 && internal_x < 280) begin 
+                    else if (internal_y >= 91 && internal_y < 109 && internal_x >= 205 && internal_x < 240) begin 
                         stg1_rel_y <= (internal_y - 91) >> 1;
-                        stg1_rel_x <= ((internal_x - 205) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 205) >> 1) & 4'h7;
                         stg1_ascii <= ((internal_x - 205) >> 4 == 0) ? p1_name[7:0] : p1_name[15:8];
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
                     end 
                     
                     // P2 Initials (2x scale)
-                    else if (internal_y >= 121 && internal_y < 139 && internal_x >= 205 && internal_x < 280) begin 
+                    else if (internal_y >= 121 && internal_y < 139 && internal_x >= 205 && internal_x < 240) begin 
                         stg1_rel_y <= (internal_y - 121) >> 1;
-                        stg1_rel_x <= ((internal_x - 205) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 205) >> 1) & 4'h7;
                         stg1_ascii <= ((internal_x - 205) >> 4 == 0) ? p2_name[7:0] : p2_name[15:8];
                         if (stg1_rel_x > 6) stg1_rel_x <= 6;
                         if (stg1_rel_y > 8) stg1_rel_y <= 8;
@@ -555,7 +568,7 @@ module framewriter #
                     // Line 1: "ROUND X"
                     if (internal_y >= 10 && internal_y < 28 && internal_x >= 220 && internal_x < 312) begin
                         stg1_rel_y <= (internal_y - 10) >> 1;
-                        stg1_rel_x <= ((internal_x - 220) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 220) >> 1) & 4'h7;
                         case ((internal_x - 220) >> 4)
                             0: stg1_ascii <= 8'd82; // R
                             1: stg1_ascii <= 8'd79; // O
@@ -573,7 +586,7 @@ module framewriter #
                     // Line 2: "ARROW X/2"
                     else if (internal_y >= 30 && internal_y < 48 && internal_x >= 220 && internal_x < 312) begin
                         stg1_rel_y <= (internal_y - 30) >> 1;
-                        stg1_rel_x <= ((internal_x - 220) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 220) >> 1) & 4'h7;
                         case ((internal_x - 220) >> 4)
                             0: stg1_ascii <= 8'd65; // A
                             1: stg1_ascii <= 8'd82; // R
@@ -604,7 +617,7 @@ module framewriter #
                 
                 4'd4, 4'd8: begin // CALC SCREEN
                     // CALCULATING (3x scale)
-                    if (internal_y >= 100 && internal_y < 127 && internal_x >= 28 && internal_x < 292) begin
+                    if (internal_y >= 100 && internal_y < 127 && internal_x >= 10 && internal_x < 312) begin
                         stg1_rel_x <= rel_x_3x; 
                         stg1_rel_y <= (internal_y-100)/3;
                         case (idx_24)
@@ -619,7 +632,7 @@ module framewriter #
                     // PHYSICS IN PROGRESS (2x scale)
                     else if (internal_y >= 140 && internal_y < 158 && internal_x >= 8 && internal_x < 312) begin
                         stg1_rel_y <= (internal_y - 140) >> 1;
-                        stg1_rel_x <= ((internal_x - 8) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 8) >> 1) & 4'h7;
                         case ((internal_x - 8) >> 4)
                             0, 11: stg1_ascii <= 8'd80; 1: stg1_ascii <= 8'd72; 2: stg1_ascii <= 8'd89; 
                             3, 6, 17, 18: stg1_ascii <= 8'd83; 4, 8: stg1_ascii <= 8'd73; 5: stg1_ascii <= 8'd67; 
@@ -640,47 +653,43 @@ module framewriter #
                     // end
                     
                     // P1 & P2 Physics Engine Data (2x scale)
-                    if (internal_y >= 170 && internal_y < 235) begin 
-                        stg1_rel_y <= ((internal_y - 170) % 10) >> 1;
-                        if (internal_x >= 10 && internal_x < 150) begin // P1 Physics Engine Data
-                            stg1_rel_x <= ((internal_x - 10) & 4'hF) >> 1;
-                            case ((internal_y - 170) / 10)
-                                0: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd87; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p1_wx[7:4]; 3:stg1_ascii<=8'd48+p1_wx[3:0]; endcase
-                                1: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd65; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p1_ax[7:4]; 3:stg1_ascii<=8'd48+p1_ax[3:0]; endcase
-                                2: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd90; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p1_z[7:4]; 3:stg1_ascii<=8'd48+p1_z[3:0]; endcase
-                                3: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd86; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p1_vel[7:4]; 3:stg1_ascii<=8'd48+p1_vel[3:0]; endcase
-                                4: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd76; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p1_lx[7:4]; 3:stg1_ascii<=8'd48+p1_lx[3:0]; endcase
-                            endcase
-                            if (stg1_rel_x > 6) stg1_rel_x <= 6;
-                            if (stg1_rel_y > 8) stg1_rel_y <= 8;
-                        end else if (internal_x >= 170 && internal_x < 310) begin // P2 Physics Engine Data
-                            stg1_rel_x <= ((internal_x - 170) & 4'hF) >> 1;
-                            case ((internal_y - 170) / 10)
-                                0: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd87; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p2_wx[7:4]; 3:stg1_ascii<=8'd48+p2_wx[3:0]; endcase
-                                1: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd65; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p2_ax[7:4]; 3:stg1_ascii<=8'd48+p2_ax[3:0]; endcase
-                                2: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd90; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p2_z[7:4]; 3:stg1_ascii<=8'd48+p2_z[3:0]; endcase
-                                3: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd86; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p2_vel[7:4]; 3:stg1_ascii<=8'd48+p2_vel[3:0]; endcase
-                                4: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd76; 1:stg1_ascii<=8'd58; 
-                                   2:stg1_ascii<=8'd48+p2_lx[7:4]; 3:stg1_ascii<=8'd48+p2_lx[3:0]; endcase
-                            endcase
-                            if (stg1_rel_x > 6) stg1_rel_x <= 6;
-                            if (stg1_rel_y > 8) stg1_rel_y <= 8;
-                        end
-                    end 
+                    // if (internal_y >= 170 && internal_y < 235) begin 
+                    //     stg1_rel_y <= ((internal_y - 170) % 10) >> 1;
+                    //     if (internal_x >= 10 && internal_x < 150) begin // P1 Physics Engine Data
+                    //         stg1_rel_x <= ((internal_x - 10) >> 1) & 4'h7;
+                    //         case ((internal_y - 170) / 10)
+                    //             0: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd87; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p1_wx[7:4]; 3:stg1_ascii<=8'd48+p1_wx[3:0]; endcase
+                    //             1: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd65; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p1_ax[7:4]; 3:stg1_ascii<=8'd48+p1_ax[3:0]; endcase
+                    //             2: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd90; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p1_z[7:4]; 3:stg1_ascii<=8'd48+p1_z[3:0]; endcase
+                    //             3: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd86; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p1_vel[7:4]; 3:stg1_ascii<=8'd48+p1_vel[3:0]; endcase
+                    //             4: case ((internal_x-10)>>4) 0:stg1_ascii<=8'd76; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p1_lx[7:4]; 3:stg1_ascii<=8'd48+p1_lx[3:0]; endcase
+                    //         endcase
+                    //     end else if (internal_x >= 170 && internal_x < 310) begin // P2 Physics Engine Data
+                    //         stg1_rel_x <= ((internal_x - 170) >> 1) & 4'h7;
+                    //         case ((internal_y - 170) / 10)
+                    //             0: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd87; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p2_wx[7:4]; 3:stg1_ascii<=8'd48+p2_wx[3:0]; endcase
+                    //             1: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd65; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p2_ax[7:4]; 3:stg1_ascii<=8'd48+p2_ax[3:0]; endcase
+                    //             2: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd90; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p2_z[7:4]; 3:stg1_ascii<=8'd48+p2_z[3:0]; endcase
+                    //             3: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd86; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p2_vel[7:4]; 3:stg1_ascii<=8'd48+p2_vel[3:0]; endcase
+                    //             4: case ((internal_x-170)>>4) 0:stg1_ascii<=8'd76; 1:stg1_ascii<=8'd58; 
+                    //                2:stg1_ascii<=8'd48+p2_lx[7:4]; 3:stg1_ascii<=8'd48+p2_lx[3:0]; endcase
+                    //         endcase
+                    //     end
+                    // end 
                     
                     // "ROUND RESULTS" (2x scale)
-                    else if (internal_y >= 20 && internal_y < 38 && internal_x >= 56 && internal_x < 264) begin
+                    if (internal_y >= 20 && internal_y < 38 && internal_x >= 56 && internal_x < 264) begin
                         stg1_rel_y <= (internal_y - 20) >> 1;
-                        stg1_rel_x <= ((internal_x - 56) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 56) >> 1) & 4'h7;
                         case ((internal_x - 56) >> 4)
                             0, 6: stg1_ascii <= 8'd82; 1: stg1_ascii <= 8'd79; 2, 9: stg1_ascii <= 8'd85; 
                             3: stg1_ascii <= 8'd78; 4: stg1_ascii <= 8'd68; 7: stg1_ascii <= 8'd69; 
@@ -694,14 +703,14 @@ module framewriter #
                     else if (internal_y >= 110 && internal_y < 128) begin
                         stg1_rel_y <= (internal_y - 110) >> 1;
                         if (internal_x >= 90 && internal_x < 122) begin // P1 Blue Box
-                            stg1_rel_x <= ((internal_x - 90) & 4'hF) >> 1;
+                            stg1_rel_x <= ((internal_x - 90) >> 1) & 4'h7;
                             stg1_ascii <= ((internal_x - 90) >> 4 == 0) ? 
                                         (p1_score_latch[6:4] < 10 ? 8'd48+p1_score_latch[6:4] : 8'd55+p1_score_latch[6:4]) : 
                                         (p1_score_latch[3:0] < 10 ? 8'd48+p1_score_latch[3:0] : 8'd55+p1_score_latch[3:0]);
                             if (stg1_rel_x > 6) stg1_rel_x <= 6;
                             if (stg1_rel_y > 8) stg1_rel_y <= 8;
                         end else if (internal_x >= 200 && internal_x < 232) begin // P2 Red Box
-                            stg1_rel_x <= ((internal_x - 200) & 4'hF) >> 1;
+                            stg1_rel_x <= ((internal_x - 200) >> 1) & 4'h7;
                             stg1_ascii <= ((internal_x - 200) >> 4 == 0) ? 
                                         (p2_score_latch[6:4] < 10 ? 8'd48+p2_score_latch[6:4] : 8'd55+p2_score_latch[6:4]) : 
                                         (p2_score_latch[3:0] < 10 ? 8'd48+p2_score_latch[3:0] : 8'd55+p2_score_latch[3:0]);
@@ -714,7 +723,7 @@ module framewriter #
                     else if (internal_y >= 210 && internal_y < 228) begin
                         stg1_rel_y <= (internal_y - 210) >> 1;
                         if (internal_x >= 20 && internal_x < 280) begin
-                            stg1_rel_x <= ((internal_x - 20) & 4'hF) >> 1;
+                            stg1_rel_x <= ((internal_x - 20) >> 1) & 4'h7;
                             case ((internal_x - 20) >> 4)
                                 0: stg1_ascii <= 8'd82; 1: stg1_ascii <= 8'd79; 2: stg1_ascii <= 8'd85; 
                                 3: stg1_ascii <= 8'd78; 4: stg1_ascii <= 8'd68; 6: stg1_ascii <= 8'd48 + round_latch;
@@ -731,7 +740,7 @@ module framewriter #
                     // "GAME OVER" text (2x scale, centered in grey box)
                     if (internal_y >= 111 && internal_y < 129 && internal_x >= 88 && internal_x < 232) begin
                         stg1_rel_y <= (internal_y - 111) >> 1;
-                        stg1_rel_x <= ((internal_x - 88) & 4'hF) >> 1;
+                        stg1_rel_x <= ((internal_x - 88) >> 1) & 4'h7;
                         case ((internal_x - 88) >> 4)
                             0: stg1_ascii <= 8'd71; 1: stg1_ascii <= 8'd65; 2: stg1_ascii <= 8'd77; 
                             3: stg1_ascii <= 8'd69; 4: stg1_ascii <= 8'd32; 5: stg1_ascii <= 8'd79; 
@@ -772,26 +781,26 @@ module framewriter #
     always @(*) begin
         if      (short_dist_sq > 10000) target_color = GREEN;
         else if (short_dist_sq > 9801)  target_color = BLACK;
-        else if (short_dist_sq > 9604)  target_color = WHITE;
-        else if (short_dist_sq > 8100)  target_color = WHITE;
-        else if (short_dist_sq > 7921)  target_color = BLACK;
-        else if (short_dist_sq > 6724)  target_color = WHITE;
+        else if (short_dist_sq > 9604)  target_color = WHITE; // 1
+        else if (short_dist_sq > 8100)  target_color = WHITE; 
+        else if (short_dist_sq > 7921)  target_color = BLACK; 
+        else if (short_dist_sq > 6724)  target_color = WHITE; // 2
         else if (short_dist_sq > 6561)  target_color = BLACK;
-        else if (short_dist_sq > 5329)  target_color = BLACK;
+        else if (short_dist_sq > 5329)  target_color = BLACK; // 3
         else if (short_dist_sq > 5184)  target_color = WHITE;
-        else if (short_dist_sq > 4225)  target_color = BLACK;
+        else if (short_dist_sq > 4225)  target_color = BLACK; // 4
         else if (short_dist_sq > 4096)  target_color = WHITE;
-        else if (short_dist_sq > 3136)  target_color = TURQUOISE;
+        else if (short_dist_sq > 3136)  target_color = TURQUOISE;// 5
         else if (short_dist_sq > 3025)  target_color = BLACK;
-        else if (short_dist_sq > 2304)  target_color = TURQUOISE;
+        else if (short_dist_sq > 2304)  target_color = TURQUOISE; // 6
         else if (short_dist_sq > 2209)  target_color = BLACK;
-        else if (short_dist_sq > 1521)  target_color = RED;
+        else if (short_dist_sq > 1521)  target_color = RED; // 7
         else if (short_dist_sq > 1444)  target_color = BLACK;
-        else if (short_dist_sq > 961)   target_color = RED;
+        else if (short_dist_sq > 961)   target_color = RED; // 8
         else if (short_dist_sq > 900)   target_color = BLACK;
-        else if (short_dist_sq > 484)   target_color = YELLOW;
+        else if (short_dist_sq > 484)   target_color = YELLOW; // 9
         else if (short_dist_sq > 441)   target_color = BLACK;
-        else                            target_color = YELLOW;
+        else                            target_color = YELLOW; // 10
     end
 
     always @(posedge axi_aclk) begin

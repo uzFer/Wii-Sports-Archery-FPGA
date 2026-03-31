@@ -56,7 +56,7 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_scoring_engine_0_0 (
   clk,
-  reset,
+  resetn,
   trig_calc,
   gyro_x,
   gyro_y,
@@ -64,12 +64,12 @@ module design_3_scoring_engine_0_0 (
   valid_score
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET resetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
-input wire reset;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 resetn RST" *)
+input wire resetn;
 input wire trig_calc;
 input wire [9 : 0] gyro_x;
 input wire [9 : 0] gyro_y;
@@ -78,7 +78,7 @@ output wire valid_score;
 
   scoring_engine inst (
     .clk(clk),
-    .reset(reset),
+    .resetn(resetn),
     .trig_calc(trig_calc),
     .gyro_x(gyro_x),
     .gyro_y(gyro_y),

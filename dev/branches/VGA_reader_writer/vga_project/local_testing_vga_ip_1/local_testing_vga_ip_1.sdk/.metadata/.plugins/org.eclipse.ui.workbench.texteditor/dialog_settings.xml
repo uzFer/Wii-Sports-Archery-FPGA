@@ -9,13 +9,13 @@
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
 			<item value="update_names"/>
+			<item value="enter player 1 initials"/>
+			<item value="poll_gyroscope"/>
+			<item value="poll_gyro"/>
 			<item value="REG_P1_NAME_OFFSET"/>
 			<item value="FRAMEWRITER_BASE"/>
 			<item value="XPAR_FRAMEWRITER_0_S00_AXI_BASEADDR"/>
 			<item value="framewriter"/>
-			<item value="%08"/>
-			<item value="typed_key"/>
-			<item value="name entry complete"/>
 		</list>
 		<list key="replacehistory">
 		</list>

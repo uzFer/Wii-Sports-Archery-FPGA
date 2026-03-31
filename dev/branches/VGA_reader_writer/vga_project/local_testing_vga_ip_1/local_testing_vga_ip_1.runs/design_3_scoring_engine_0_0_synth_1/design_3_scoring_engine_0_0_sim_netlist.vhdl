@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 29 18:35:29 2026
+-- Date        : Tue Mar 31 15:40:16 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_3_scoring_engine_0_0_sim_netlist.vhdl
@@ -21,16 +21,17 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engine is
     gyro_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
     gyro_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
     clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    trig_calc : in STD_LOGIC
+    trig_calc : in STD_LOGIC;
+    resetn : in STD_LOGIC
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engine;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engine is
-  signal A : STD_LOGIC_VECTOR ( 8 downto 6 );
+  signal A : STD_LOGIC_VECTOR ( 7 downto 5 );
   signal dist_sq1_i_1_n_0 : STD_LOGIC;
   signal dist_sq1_i_2_n_0 : STD_LOGIC;
-  signal dist_sq1_i_4_n_0 : STD_LOGIC;
+  signal dist_sq1_i_3_n_0 : STD_LOGIC;
+  signal dist_sq1_i_5_n_0 : STD_LOGIC;
   signal dist_sq1_n_106 : STD_LOGIC;
   signal dist_sq1_n_107 : STD_LOGIC;
   signal dist_sq1_n_108 : STD_LOGIC;
@@ -86,6 +87,8 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engi
   signal dist_sq_reg_i_5_n_0 : STD_LOGIC;
   signal dist_sq_reg_i_6_n_0 : STD_LOGIC;
   signal dist_sq_reg_i_7_n_0 : STD_LOGIC;
+  signal dist_sq_reg_i_8_n_0 : STD_LOGIC;
+  signal dist_sq_reg_i_9_n_0 : STD_LOGIC;
   signal dist_sq_reg_n_100 : STD_LOGIC;
   signal dist_sq_reg_n_101 : STD_LOGIC;
   signal dist_sq_reg_n_102 : STD_LOGIC;
@@ -109,15 +112,22 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engi
   signal dist_sq_reg_n_98 : STD_LOGIC;
   signal dist_sq_reg_n_99 : STD_LOGIC;
   signal \^score\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \score[0]_i_10_n_0\ : STD_LOGIC;
+  signal \score[0]_i_11_n_0\ : STD_LOGIC;
+  signal \score[0]_i_12_n_0\ : STD_LOGIC;
   signal \score[0]_i_1_n_0\ : STD_LOGIC;
   signal \score[0]_i_2_n_0\ : STD_LOGIC;
   signal \score[0]_i_3_n_0\ : STD_LOGIC;
   signal \score[0]_i_4_n_0\ : STD_LOGIC;
+  signal \score[0]_i_5_n_0\ : STD_LOGIC;
+  signal \score[0]_i_6_n_0\ : STD_LOGIC;
+  signal \score[0]_i_7_n_0\ : STD_LOGIC;
+  signal \score[0]_i_8_n_0\ : STD_LOGIC;
+  signal \score[0]_i_9_n_0\ : STD_LOGIC;
   signal \score[1]_i_10_n_0\ : STD_LOGIC;
   signal \score[1]_i_11_n_0\ : STD_LOGIC;
   signal \score[1]_i_12_n_0\ : STD_LOGIC;
   signal \score[1]_i_13_n_0\ : STD_LOGIC;
-  signal \score[1]_i_14_n_0\ : STD_LOGIC;
   signal \score[1]_i_1_n_0\ : STD_LOGIC;
   signal \score[1]_i_2_n_0\ : STD_LOGIC;
   signal \score[1]_i_3_n_0\ : STD_LOGIC;
@@ -130,10 +140,20 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engi
   signal \score[2]_i_1_n_0\ : STD_LOGIC;
   signal \score[2]_i_2_n_0\ : STD_LOGIC;
   signal \score[2]_i_3_n_0\ : STD_LOGIC;
+  signal \score[2]_i_4_n_0\ : STD_LOGIC;
+  signal \score[2]_i_5_n_0\ : STD_LOGIC;
+  signal \score[2]_i_6_n_0\ : STD_LOGIC;
+  signal \score[2]_i_7_n_0\ : STD_LOGIC;
+  signal \score[2]_i_8_n_0\ : STD_LOGIC;
+  signal \score[2]_i_9_n_0\ : STD_LOGIC;
   signal \score[3]_i_1_n_0\ : STD_LOGIC;
   signal \score[3]_i_2_n_0\ : STD_LOGIC;
   signal \score[3]_i_3_n_0\ : STD_LOGIC;
   signal \score[3]_i_4_n_0\ : STD_LOGIC;
+  signal \score[3]_i_5_n_0\ : STD_LOGIC;
+  signal \score[3]_i_6_n_0\ : STD_LOGIC;
+  signal \score[3]_i_7_n_0\ : STD_LOGIC;
+  signal \score[3]_i_8_n_0\ : STD_LOGIC;
   signal trig_q1 : STD_LOGIC;
   signal trig_q2 : STD_LOGIC;
   signal NLW_dist_sq1_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
@@ -160,12 +180,24 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engi
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of dist_sq1 : label is "{SYNTH-11 {cell *THIS*}}";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \score[1]_i_11\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \score[1]_i_13\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \score[1]_i_14\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \score[1]_i_6\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \score[1]_i_7\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \score[1]_i_8\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \score[0]_i_10\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \score[0]_i_12\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \score[0]_i_7\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \score[0]_i_8\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \score[0]_i_9\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \score[1]_i_10\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \score[1]_i_12\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \score[1]_i_13\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \score[1]_i_3\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \score[1]_i_8\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \score[1]_i_9\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \score[2]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \score[2]_i_3\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \score[2]_i_7\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \score[2]_i_8\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \score[3]_i_4\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \score[3]_i_6\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \score[3]_i_8\ : label is "soft_lutpair3";
 begin
   score(3 downto 0) <= \^score\(3 downto 0);
 dist_sq1: unisim.vcomponents.DSP48E1
@@ -218,10 +250,11 @@ dist_sq1: unisim.vcomponents.DSP48E1
       A(11) => dist_sq1_i_1_n_0,
       A(10) => dist_sq1_i_1_n_0,
       A(9) => dist_sq1_i_2_n_0,
-      A(8) => A(8),
-      A(7) => dist_sq1_i_4_n_0,
-      A(6) => A(6),
-      A(5 downto 0) => gyro_x(5 downto 0),
+      A(8) => dist_sq1_i_3_n_0,
+      A(7) => A(7),
+      A(6) => dist_sq1_i_5_n_0,
+      A(5) => A(5),
+      A(4 downto 0) => gyro_x(4 downto 0),
       ACIN(29 downto 0) => B"000000000000000000000000000000",
       ACOUT(29 downto 0) => NLW_dist_sq1_ACOUT_UNCONNECTED(29 downto 0),
       ALUMODE(3 downto 0) => B"0000",
@@ -234,10 +267,11 @@ dist_sq1: unisim.vcomponents.DSP48E1
       B(11) => dist_sq1_i_1_n_0,
       B(10) => dist_sq1_i_1_n_0,
       B(9) => dist_sq1_i_2_n_0,
-      B(8) => A(8),
-      B(7) => dist_sq1_i_4_n_0,
-      B(6) => A(6),
-      B(5 downto 0) => gyro_x(5 downto 0),
+      B(8) => dist_sq1_i_3_n_0,
+      B(7) => A(7),
+      B(6) => dist_sq1_i_5_n_0,
+      B(5) => A(5),
+      B(4 downto 0) => gyro_x(4 downto 0),
       BCIN(17 downto 0) => B"000000000000000000",
       BCOUT(17 downto 0) => NLW_dist_sq1_BCOUT_UNCONNECTED(17 downto 0),
       C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
@@ -318,10 +352,10 @@ dist_sq1: unisim.vcomponents.DSP48E1
       PCOUT(2) => dist_sq1_n_151,
       PCOUT(1) => dist_sq1_n_152,
       PCOUT(0) => dist_sq1_n_153,
-      RSTA => reset,
+      RSTA => \score[3]_i_1_n_0\,
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
-      RSTB => reset,
+      RSTB => \score[3]_i_1_n_0\,
       RSTC => '0',
       RSTCTRL => '0',
       RSTD => '0',
@@ -330,54 +364,67 @@ dist_sq1: unisim.vcomponents.DSP48E1
       RSTP => '0',
       UNDERFLOW => NLW_dist_sq1_UNDERFLOW_UNCONNECTED
     );
-dist_sq1_i_1: unisim.vcomponents.LUT4
+dist_sq1_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"001F"
+      INIT => X"00001115"
     )
         port map (
-      I0 => gyro_x(6),
+      I0 => gyro_x(8),
       I1 => gyro_x(7),
-      I2 => gyro_x(8),
-      I3 => gyro_x(9),
+      I2 => gyro_x(6),
+      I3 => gyro_x(5),
+      I4 => gyro_x(9),
       O => dist_sq1_i_1_n_0
     );
-dist_sq1_i_2: unisim.vcomponents.LUT4
+dist_sq1_i_2: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EEEA1115"
+    )
+        port map (
+      I0 => gyro_x(8),
+      I1 => gyro_x(7),
+      I2 => gyro_x(6),
+      I3 => gyro_x(5),
+      I4 => gyro_x(9),
+      O => dist_sq1_i_2_n_0
+    );
+dist_sq1_i_3: unisim.vcomponents.LUT4
     generic map(
       INIT => X"E01F"
     )
         port map (
-      I0 => gyro_x(6),
-      I1 => gyro_x(7),
-      I2 => gyro_x(8),
-      I3 => gyro_x(9),
-      O => dist_sq1_i_2_n_0
+      I0 => gyro_x(5),
+      I1 => gyro_x(6),
+      I2 => gyro_x(7),
+      I3 => gyro_x(8),
+      O => dist_sq1_i_3_n_0
     );
-dist_sq1_i_3: unisim.vcomponents.LUT3
+dist_sq1_i_4: unisim.vcomponents.LUT3
     generic map(
       INIT => X"1E"
     )
         port map (
-      I0 => gyro_x(7),
-      I1 => gyro_x(6),
-      I2 => gyro_x(8),
-      O => A(8)
+      I0 => gyro_x(6),
+      I1 => gyro_x(5),
+      I2 => gyro_x(7),
+      O => A(7)
     );
-dist_sq1_i_4: unisim.vcomponents.LUT2
+dist_sq1_i_5: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
-      I0 => gyro_x(6),
-      I1 => gyro_x(7),
-      O => dist_sq1_i_4_n_0
+      I0 => gyro_x(5),
+      I1 => gyro_x(6),
+      O => dist_sq1_i_5_n_0
     );
-dist_sq1_i_5: unisim.vcomponents.LUT1
+dist_sq1_i_6: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => gyro_x(6),
-      O => A(6)
+      I0 => gyro_x(5),
+      O => A(5)
     );
 dist_sq_reg: unisim.vcomponents.DSP48E1
     generic map(
@@ -434,7 +481,8 @@ dist_sq_reg: unisim.vcomponents.DSP48E1
       A(6) => dist_sq_reg_i_5_n_0,
       A(5) => dist_sq_reg_i_6_n_0,
       A(4) => dist_sq_reg_i_7_n_0,
-      A(3 downto 0) => gyro_y(3 downto 0),
+      A(3) => dist_sq_reg_i_8_n_0,
+      A(2 downto 0) => gyro_y(2 downto 0),
       ACIN(29 downto 0) => B"000000000000000000000000000000",
       ACOUT(29 downto 0) => NLW_dist_sq_reg_ACOUT_UNCONNECTED(29 downto 0),
       ALUMODE(3 downto 0) => B"0000",
@@ -452,7 +500,8 @@ dist_sq_reg: unisim.vcomponents.DSP48E1
       B(6) => dist_sq_reg_i_5_n_0,
       B(5) => dist_sq_reg_i_6_n_0,
       B(4) => dist_sq_reg_i_7_n_0,
-      B(3 downto 0) => gyro_y(3 downto 0),
+      B(3) => dist_sq_reg_i_8_n_0,
+      B(2 downto 0) => gyro_y(2 downto 0),
       BCIN(17 downto 0) => B"000000000000000000",
       BCOUT(17 downto 0) => NLW_dist_sq_reg_BCOUT_UNCONNECTED(17 downto 0),
       C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
@@ -555,182 +604,292 @@ dist_sq_reg: unisim.vcomponents.DSP48E1
       PCIN(1) => dist_sq1_n_152,
       PCIN(0) => dist_sq1_n_153,
       PCOUT(47 downto 0) => NLW_dist_sq_reg_PCOUT_UNCONNECTED(47 downto 0),
-      RSTA => reset,
+      RSTA => \score[3]_i_1_n_0\,
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
-      RSTB => reset,
+      RSTB => \score[3]_i_1_n_0\,
       RSTC => '0',
       RSTCTRL => '0',
       RSTD => '0',
       RSTINMODE => '0',
       RSTM => '0',
-      RSTP => reset,
+      RSTP => \score[3]_i_1_n_0\,
       UNDERFLOW => NLW_dist_sq_reg_UNDERFLOW_UNCONNECTED
     );
-dist_sq_reg_i_1: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000015555555"
-    )
-        port map (
-      I0 => gyro_y(8),
-      I1 => gyro_y(7),
-      I2 => gyro_y(5),
-      I3 => gyro_y(4),
-      I4 => gyro_y(6),
-      I5 => gyro_y(9),
-      O => dist_sq_reg_i_1_n_0
-    );
-dist_sq_reg_i_2: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAAAAAAA15555555"
-    )
-        port map (
-      I0 => gyro_y(8),
-      I1 => gyro_y(7),
-      I2 => gyro_y(5),
-      I3 => gyro_y(4),
-      I4 => gyro_y(6),
-      I5 => gyro_y(9),
-      O => dist_sq_reg_i_2_n_0
-    );
-dist_sq_reg_i_3: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"80007FFF"
-    )
-        port map (
-      I0 => gyro_y(6),
-      I1 => gyro_y(4),
-      I2 => gyro_y(5),
-      I3 => gyro_y(7),
-      I4 => gyro_y(8),
-      O => dist_sq_reg_i_3_n_0
-    );
-dist_sq_reg_i_4: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => gyro_y(5),
-      I1 => gyro_y(4),
-      I2 => gyro_y(6),
-      I3 => gyro_y(7),
-      O => dist_sq_reg_i_4_n_0
-    );
-dist_sq_reg_i_5: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => gyro_y(4),
-      I1 => gyro_y(5),
-      I2 => gyro_y(6),
-      O => dist_sq_reg_i_5_n_0
-    );
-dist_sq_reg_i_6: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => gyro_y(4),
-      I1 => gyro_y(5),
-      O => dist_sq_reg_i_6_n_0
-    );
-dist_sq_reg_i_7: unisim.vcomponents.LUT1
+dist_sq_reg_i_1: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
+      I0 => dist_sq_reg_i_9_n_0,
+      I1 => gyro_y(9),
+      O => dist_sq_reg_i_1_n_0
+    );
+dist_sq_reg_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => dist_sq_reg_i_9_n_0,
+      I1 => gyro_y(9),
+      O => dist_sq_reg_i_2_n_0
+    );
+dist_sq_reg_i_3: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA15555555"
+    )
+        port map (
+      I0 => gyro_y(7),
+      I1 => gyro_y(6),
+      I2 => gyro_y(4),
+      I3 => gyro_y(3),
+      I4 => gyro_y(5),
+      I5 => gyro_y(8),
+      O => dist_sq_reg_i_3_n_0
+    );
+dist_sq_reg_i_4: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"80007FFF"
+    )
+        port map (
+      I0 => gyro_y(5),
+      I1 => gyro_y(3),
+      I2 => gyro_y(4),
+      I3 => gyro_y(6),
+      I4 => gyro_y(7),
+      O => dist_sq_reg_i_4_n_0
+    );
+dist_sq_reg_i_5: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7F80"
+    )
+        port map (
       I0 => gyro_y(4),
+      I1 => gyro_y(3),
+      I2 => gyro_y(5),
+      I3 => gyro_y(6),
+      O => dist_sq_reg_i_5_n_0
+    );
+dist_sq_reg_i_6: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"78"
+    )
+        port map (
+      I0 => gyro_y(3),
+      I1 => gyro_y(4),
+      I2 => gyro_y(5),
+      O => dist_sq_reg_i_6_n_0
+    );
+dist_sq_reg_i_7: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => gyro_y(3),
+      I1 => gyro_y(4),
       O => dist_sq_reg_i_7_n_0
+    );
+dist_sq_reg_i_8: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gyro_y(3),
+      O => dist_sq_reg_i_8_n_0
+    );
+dist_sq_reg_i_9: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEAAAAAAA"
+    )
+        port map (
+      I0 => gyro_y(7),
+      I1 => gyro_y(6),
+      I2 => gyro_y(4),
+      I3 => gyro_y(3),
+      I4 => gyro_y(5),
+      I5 => gyro_y(8),
+      O => dist_sq_reg_i_9_n_0
     );
 \score[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000004FF0400"
+      INIT => X"8088AAAA80880000"
     )
         port map (
-      I0 => \score[1]_i_2_n_0\,
-      I1 => \score[0]_i_2_n_0\,
-      I2 => \score[0]_i_3_n_0\,
-      I3 => trig_q2,
-      I4 => \^score\(0),
-      I5 => reset,
+      I0 => resetn,
+      I1 => \score[1]_i_4_n_0\,
+      I2 => \score[0]_i_2_n_0\,
+      I3 => \score[0]_i_3_n_0\,
+      I4 => trig_q2,
+      I5 => \^score\(0),
       O => \score[0]_i_1_n_0\
+    );
+\score[0]_i_10\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"E000"
+    )
+        port map (
+      I0 => dist_sq_reg_n_100,
+      I1 => dist_sq_reg_n_99,
+      I2 => dist_sq_reg_n_98,
+      I3 => dist_sq_reg_n_97,
+      O => \score[0]_i_10_n_0\
+    );
+\score[0]_i_11\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => dist_sq_reg_n_97,
+      I1 => dist_sq_reg_n_96,
+      I2 => dist_sq_reg_n_98,
+      I3 => dist_sq_reg_n_94,
+      I4 => dist_sq_reg_n_95,
+      I5 => dist_sq_reg_n_99,
+      O => \score[0]_i_11_n_0\
+    );
+\score[0]_i_12\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFEEEEE"
+    )
+        port map (
+      I0 => dist_sq_reg_n_102,
+      I1 => dist_sq_reg_n_101,
+      I2 => dist_sq_reg_n_104,
+      I3 => dist_sq_reg_n_105,
+      I4 => dist_sq_reg_n_103,
+      O => \score[0]_i_12_n_0\
     );
 \score[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000001"
+      INIT => X"FFFFFFFF77470000"
     )
         port map (
-      I0 => dist_sq_reg_n_91,
-      I1 => dist_sq_reg_n_92,
-      I2 => dist_sq_reg_n_90,
-      I3 => \score[1]_i_10_n_0\,
-      I4 => dist_sq_reg_n_94,
-      I5 => dist_sq_reg_n_93,
+      I0 => \score[0]_i_4_n_0\,
+      I1 => \score[2]_i_4_n_0\,
+      I2 => \score[1]_i_5_n_0\,
+      I3 => \score[0]_i_5_n_0\,
+      I4 => \score[2]_i_3_n_0\,
+      I5 => \score[0]_i_6_n_0\,
       O => \score[0]_i_2_n_0\
     );
 \score[0]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBA000000000000"
+      INIT => X"AAAAAAAAAAAAAA08"
     )
         port map (
-      I0 => dist_sq_reg_n_98,
-      I1 => \score[0]_i_4_n_0\,
-      I2 => dist_sq_reg_n_99,
-      I3 => dist_sq_reg_n_97,
-      I4 => dist_sq_reg_n_96,
-      I5 => dist_sq_reg_n_95,
+      I0 => \score[1]_i_3_n_0\,
+      I1 => dist_sq_reg_n_96,
+      I2 => \score[0]_i_7_n_0\,
+      I3 => dist_sq_reg_n_95,
+      I4 => dist_sq_reg_n_94,
+      I5 => \score[0]_i_8_n_0\,
       O => \score[0]_i_3_n_0\
     );
 \score[0]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000001"
+      INIT => X"FFFFFFFFFFFFFFD0"
     )
         port map (
-      I0 => dist_sq_reg_n_102,
-      I1 => dist_sq_reg_n_103,
-      I2 => dist_sq_reg_n_104,
-      I3 => dist_sq_reg_n_101,
-      I4 => dist_sq_reg_n_105,
-      I5 => dist_sq_reg_n_100,
+      I0 => \score[0]_i_7_n_0\,
+      I1 => dist_sq_reg_n_96,
+      I2 => dist_sq_reg_n_95,
+      I3 => dist_sq_reg_n_94,
+      I4 => dist_sq_reg_n_93,
+      I5 => \score[0]_i_9_n_0\,
       O => \score[0]_i_4_n_0\
     );
-\score[1]_i_1\: unisim.vcomponents.LUT6
+\score[0]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FBAAFFFFFBAA0000"
+      INIT => X"777777777777FF7F"
+    )
+        port map (
+      I0 => dist_sq_reg_n_94,
+      I1 => dist_sq_reg_n_93,
+      I2 => \score[0]_i_10_n_0\,
+      I3 => \score[2]_i_8_n_0\,
+      I4 => dist_sq_reg_n_95,
+      I5 => dist_sq_reg_n_96,
+      O => \score[0]_i_5_n_0\
+    );
+\score[0]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"004F0040"
+    )
+        port map (
+      I0 => \score[0]_i_11_n_0\,
+      I1 => \score[2]_i_9_n_0\,
+      I2 => dist_sq_reg_n_93,
+      I3 => \score[2]_i_4_n_0\,
+      I4 => \score[1]_i_6_n_0\,
+      O => \score[0]_i_6_n_0\
+    );
+\score[0]_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7777777F"
+    )
+        port map (
+      I0 => dist_sq_reg_n_98,
+      I1 => dist_sq_reg_n_97,
+      I2 => dist_sq_reg_n_99,
+      I3 => dist_sq_reg_n_100,
+      I4 => \score[0]_i_12_n_0\,
+      O => \score[0]_i_7_n_0\
+    );
+\score[0]_i_8\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => dist_sq_reg_n_93,
+      I1 => \score[2]_i_4_n_0\,
+      O => \score[0]_i_8_n_0\
+    );
+\score[0]_i_9\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => dist_sq_reg_n_84,
+      I1 => dist_sq_reg_n_86,
+      I2 => dist_sq_reg_n_89,
+      I3 => dist_sq_reg_n_91,
+      I4 => \score[3]_i_7_n_0\,
+      O => \score[0]_i_9_n_0\
+    );
+\score[1]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"BFFFBF00"
     )
         port map (
       I0 => \score[1]_i_2_n_0\,
       I1 => \score[1]_i_3_n_0\,
       I2 => \score[1]_i_4_n_0\,
-      I3 => \score[3]_i_2_n_0\,
-      I4 => trig_q2,
-      I5 => \^score\(1),
+      I3 => trig_q2,
+      I4 => \^score\(1),
       O => \score[1]_i_1_n_0\
     );
-\score[1]_i_10\: unisim.vcomponents.LUT6
+\score[1]_i_10\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => dist_sq_reg_n_86,
-      I1 => dist_sq_reg_n_87,
-      I2 => dist_sq_reg_n_84,
-      I3 => dist_sq_reg_n_85,
-      I4 => dist_sq_reg_n_89,
-      I5 => dist_sq_reg_n_88,
+      I0 => dist_sq_reg_n_101,
+      I1 => dist_sq_reg_n_100,
+      I2 => dist_sq_reg_n_99,
+      I3 => dist_sq_reg_n_98,
       O => \score[1]_i_10_n_0\
     );
-\score[1]_i_11\: unisim.vcomponents.LUT5
+\score[1]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEFEEEE"
+      INIT => X"1FFFFFFFFFFFFFFF"
     )
         port map (
-      I0 => dist_sq_reg_n_94,
-      I1 => dist_sq_reg_n_93,
-      I2 => \score[0]_i_4_n_0\,
-      I3 => \score[1]_i_14_n_0\,
-      I4 => dist_sq_reg_n_95,
+      I0 => dist_sq_reg_n_101,
+      I1 => dist_sq_reg_n_100,
+      I2 => dist_sq_reg_n_98,
+      I3 => dist_sq_reg_n_99,
+      I4 => dist_sq_reg_n_97,
+      I5 => dist_sq_reg_n_96,
       O => \score[1]_i_11_n_0\
     );
 \score[1]_i_12\: unisim.vcomponents.LUT3
@@ -738,206 +897,312 @@ dist_sq_reg_i_7: unisim.vcomponents.LUT1
       INIT => X"FE"
     )
         port map (
-      I0 => dist_sq_reg_n_104,
-      I1 => dist_sq_reg_n_103,
-      I2 => dist_sq_reg_n_102,
+      I0 => dist_sq_reg_n_99,
+      I1 => dist_sq_reg_n_104,
+      I2 => dist_sq_reg_n_103,
       O => \score[1]_i_12_n_0\
     );
 \score[1]_i_13\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"E"
+      INIT => X"7"
     )
         port map (
-      I0 => dist_sq_reg_n_96,
-      I1 => dist_sq_reg_n_97,
-      O => \score[1]_i_13_n_0\
-    );
-\score[1]_i_14\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => dist_sq_reg_n_99,
+      I0 => dist_sq_reg_n_97,
       I1 => dist_sq_reg_n_98,
-      I2 => dist_sq_reg_n_97,
-      I3 => dist_sq_reg_n_96,
-      O => \score[1]_i_14_n_0\
+      O => \score[1]_i_13_n_0\
     );
 \score[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000007F00"
+      INIT => X"00800080008000AA"
     )
         port map (
-      I0 => dist_sq_reg_n_98,
-      I1 => dist_sq_reg_n_97,
+      I0 => \score[2]_i_2_n_0\,
+      I1 => \score[2]_i_3_n_0\,
       I2 => \score[1]_i_5_n_0\,
-      I3 => \score[0]_i_2_n_0\,
-      I4 => dist_sq_reg_n_95,
-      I5 => dist_sq_reg_n_96,
+      I3 => \score[2]_i_4_n_0\,
+      I4 => dist_sq_reg_n_93,
+      I5 => \score[1]_i_6_n_0\,
       O => \score[1]_i_2_n_0\
     );
-\score[1]_i_3\: unisim.vcomponents.LUT6
+\score[1]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"DFDDDDDDDFDDDFDD"
+      INIT => X"FFF2FFFF"
     )
         port map (
-      I0 => \score[3]_i_4_n_0\,
-      I1 => dist_sq_reg_n_91,
-      I2 => \score[1]_i_6_n_0\,
-      I3 => dist_sq_reg_n_92,
-      I4 => \score[1]_i_7_n_0\,
-      I5 => \score[1]_i_8_n_0\,
+      I0 => dist_sq_reg_n_94,
+      I1 => \score[2]_i_5_n_0\,
+      I2 => dist_sq_reg_n_93,
+      I3 => \score[2]_i_4_n_0\,
+      I4 => \score[3]_i_3_n_0\,
       O => \score[1]_i_3_n_0\
     );
 \score[1]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0300001000000010"
+      INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \score[1]_i_9_n_0\,
-      I1 => \score[1]_i_10_n_0\,
-      I2 => dist_sq_reg_n_90,
-      I3 => dist_sq_reg_n_91,
-      I4 => dist_sq_reg_n_92,
-      I5 => \score[1]_i_11_n_0\,
+      I0 => \score[1]_i_7_n_0\,
+      I1 => dist_sq_reg_n_95,
+      I2 => dist_sq_reg_n_94,
+      I3 => \score[2]_i_4_n_0\,
+      I4 => dist_sq_reg_n_93,
+      I5 => dist_sq_reg_n_96,
       O => \score[1]_i_4_n_0\
     );
-\score[1]_i_5\: unisim.vcomponents.LUT5
+\score[1]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFE0"
+      INIT => X"BFBFBFBFFFFFBFFF"
     )
         port map (
-      I0 => dist_sq_reg_n_105,
-      I1 => \score[1]_i_12_n_0\,
-      I2 => dist_sq_reg_n_101,
-      I3 => dist_sq_reg_n_100,
-      I4 => dist_sq_reg_n_99,
+      I0 => \score[1]_i_8_n_0\,
+      I1 => dist_sq_reg_n_95,
+      I2 => dist_sq_reg_n_96,
+      I3 => \score[1]_i_9_n_0\,
+      I4 => \score[1]_i_10_n_0\,
+      I5 => dist_sq_reg_n_97,
       O => \score[1]_i_5_n_0\
     );
-\score[1]_i_6\: unisim.vcomponents.LUT2
+\score[1]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"8A8A8A88"
+    )
+        port map (
+      I0 => dist_sq_reg_n_94,
+      I1 => dist_sq_reg_n_95,
+      I2 => \score[1]_i_11_n_0\,
+      I3 => \score[1]_i_9_n_0\,
+      I4 => dist_sq_reg_n_100,
+      O => \score[1]_i_6_n_0\
+    );
+\score[1]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000FF800000"
+    )
+        port map (
+      I0 => dist_sq_reg_n_102,
+      I1 => dist_sq_reg_n_101,
+      I2 => dist_sq_reg_n_100,
+      I3 => dist_sq_reg_n_99,
+      I4 => \score[1]_i_12_n_0\,
+      I5 => \score[1]_i_13_n_0\,
+      O => \score[1]_i_7_n_0\
+    );
+\score[1]_i_8\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => dist_sq_reg_n_93,
       I1 => dist_sq_reg_n_94,
-      O => \score[1]_i_6_n_0\
+      O => \score[1]_i_8_n_0\
     );
-\score[1]_i_7\: unisim.vcomponents.LUT4
+\score[1]_i_9\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFAE"
+      INIT => X"FE"
     )
         port map (
-      I0 => dist_sq_reg_n_97,
-      I1 => dist_sq_reg_n_99,
-      I2 => \score[0]_i_4_n_0\,
-      I3 => dist_sq_reg_n_98,
-      O => \score[1]_i_7_n_0\
+      I0 => dist_sq_reg_n_102,
+      I1 => dist_sq_reg_n_104,
+      I2 => dist_sq_reg_n_103,
+      O => \score[1]_i_9_n_0\
     );
-\score[1]_i_8\: unisim.vcomponents.LUT2
+\score[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0888AAAA08880000"
+    )
+        port map (
+      I0 => resetn,
+      I1 => \score[3]_i_3_n_0\,
+      I2 => \score[2]_i_2_n_0\,
+      I3 => \score[2]_i_3_n_0\,
+      I4 => trig_q2,
+      I5 => \^score\(2),
+      O => \score[2]_i_1_n_0\
+    );
+\score[2]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"EFEE"
+    )
+        port map (
+      I0 => \score[2]_i_4_n_0\,
+      I1 => dist_sq_reg_n_93,
+      I2 => \score[2]_i_5_n_0\,
+      I3 => dist_sq_reg_n_94,
+      O => \score[2]_i_2_n_0\
+    );
+\score[2]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EEEAAAAA"
+    )
+        port map (
+      I0 => \score[2]_i_4_n_0\,
+      I1 => dist_sq_reg_n_93,
+      I2 => dist_sq_reg_n_95,
+      I3 => dist_sq_reg_n_94,
+      I4 => \score[2]_i_6_n_0\,
+      O => \score[2]_i_3_n_0\
+    );
+\score[2]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => dist_sq_reg_n_92,
+      I1 => \score[3]_i_7_n_0\,
+      I2 => dist_sq_reg_n_91,
+      I3 => dist_sq_reg_n_89,
+      I4 => dist_sq_reg_n_86,
+      I5 => dist_sq_reg_n_84,
+      O => \score[2]_i_4_n_0\
+    );
+\score[2]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000000000F7"
+    )
+        port map (
+      I0 => dist_sq_reg_n_98,
+      I1 => \score[2]_i_7_n_0\,
+      I2 => \score[2]_i_8_n_0\,
+      I3 => dist_sq_reg_n_95,
+      I4 => dist_sq_reg_n_96,
+      I5 => dist_sq_reg_n_97,
+      O => \score[2]_i_5_n_0\
+    );
+\score[2]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF4"
+    )
+        port map (
+      I0 => \score[2]_i_9_n_0\,
+      I1 => dist_sq_reg_n_99,
+      I2 => dist_sq_reg_n_98,
+      I3 => dist_sq_reg_n_96,
+      I4 => dist_sq_reg_n_97,
+      I5 => dist_sq_reg_n_94,
+      O => \score[2]_i_6_n_0\
+    );
+\score[2]_i_7\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => dist_sq_reg_n_99,
+      I1 => dist_sq_reg_n_100,
+      O => \score[2]_i_7_n_0\
+    );
+\score[2]_i_8\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000001"
+    )
+        port map (
+      I0 => dist_sq_reg_n_102,
+      I1 => dist_sq_reg_n_101,
+      I2 => dist_sq_reg_n_103,
+      I3 => dist_sq_reg_n_104,
+      I4 => dist_sq_reg_n_99,
+      O => \score[2]_i_8_n_0\
+    );
+\score[2]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => dist_sq_reg_n_103,
+      I1 => dist_sq_reg_n_104,
+      I2 => dist_sq_reg_n_102,
+      I3 => dist_sq_reg_n_100,
+      I4 => dist_sq_reg_n_101,
+      I5 => dist_sq_reg_n_105,
+      O => \score[2]_i_9_n_0\
+    );
+\score[3]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => dist_sq_reg_n_95,
-      I1 => dist_sq_reg_n_96,
-      O => \score[1]_i_8_n_0\
+      I0 => resetn,
+      O => \score[3]_i_1_n_0\
     );
-\score[1]_i_9\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000FFBA0000"
-    )
-        port map (
-      I0 => dist_sq_reg_n_98,
-      I1 => \score[0]_i_4_n_0\,
-      I2 => dist_sq_reg_n_99,
-      I3 => \score[1]_i_13_n_0\,
-      I4 => dist_sq_reg_n_95,
-      I5 => \score[1]_i_6_n_0\,
-      O => \score[1]_i_9_n_0\
-    );
-\score[2]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00008F80"
-    )
-        port map (
-      I0 => \score[3]_i_2_n_0\,
-      I1 => \score[2]_i_2_n_0\,
-      I2 => trig_q2,
-      I3 => \^score\(2),
-      I4 => reset,
-      O => \score[2]_i_1_n_0\
-    );
-\score[2]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2A2A2A2A2A2A2AAA"
-    )
-        port map (
-      I0 => \score[3]_i_4_n_0\,
-      I1 => dist_sq_reg_n_91,
-      I2 => dist_sq_reg_n_92,
-      I3 => dist_sq_reg_n_94,
-      I4 => dist_sq_reg_n_93,
-      I5 => \score[2]_i_3_n_0\,
-      O => \score[2]_i_2_n_0\
-    );
-\score[2]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAA8AAAAAAAA"
-    )
-        port map (
-      I0 => dist_sq_reg_n_95,
-      I1 => dist_sq_reg_n_99,
-      I2 => dist_sq_reg_n_98,
-      I3 => dist_sq_reg_n_97,
-      I4 => dist_sq_reg_n_96,
-      I5 => \score[0]_i_4_n_0\,
-      O => \score[2]_i_3_n_0\
-    );
-\score[3]_i_1\: unisim.vcomponents.LUT3
+\score[3]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"74"
     )
         port map (
-      I0 => \score[3]_i_2_n_0\,
+      I0 => \score[3]_i_3_n_0\,
       I1 => trig_q2,
       I2 => \^score\(3),
-      O => \score[3]_i_1_n_0\
-    );
-\score[3]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFF80FFFFFFFF"
-    )
-        port map (
-      I0 => dist_sq_reg_n_93,
-      I1 => dist_sq_reg_n_94,
-      I2 => \score[3]_i_3_n_0\,
-      I3 => dist_sq_reg_n_91,
-      I4 => dist_sq_reg_n_92,
-      I5 => \score[3]_i_4_n_0\,
       O => \score[3]_i_2_n_0\
     );
 \score[3]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFFFD00"
+      INIT => X"FFFFFFFFFFFFFFF4"
     )
         port map (
-      I0 => \score[0]_i_4_n_0\,
-      I1 => dist_sq_reg_n_99,
-      I2 => dist_sq_reg_n_98,
-      I3 => dist_sq_reg_n_97,
-      I4 => dist_sq_reg_n_96,
-      I5 => dist_sq_reg_n_95,
+      I0 => \score[3]_i_4_n_0\,
+      I1 => \score[3]_i_5_n_0\,
+      I2 => \score[3]_i_6_n_0\,
+      I3 => dist_sq_reg_n_92,
+      I4 => \score[3]_i_7_n_0\,
+      I5 => \score[3]_i_8_n_0\,
       O => \score[3]_i_3_n_0\
     );
-\score[3]_i_4\: unisim.vcomponents.LUT2
+\score[3]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"1"
+      INIT => X"7F7F7FFF"
     )
         port map (
-      I0 => dist_sq_reg_n_90,
-      I1 => \score[1]_i_10_n_0\,
+      I0 => dist_sq_reg_n_95,
+      I1 => dist_sq_reg_n_97,
+      I2 => dist_sq_reg_n_98,
+      I3 => dist_sq_reg_n_99,
+      I4 => dist_sq_reg_n_100,
       O => \score[3]_i_4_n_0\
+    );
+\score[3]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFEEEA"
+    )
+        port map (
+      I0 => dist_sq_reg_n_99,
+      I1 => dist_sq_reg_n_103,
+      I2 => dist_sq_reg_n_105,
+      I3 => dist_sq_reg_n_104,
+      I4 => dist_sq_reg_n_101,
+      I5 => dist_sq_reg_n_102,
+      O => \score[3]_i_5_n_0\
+    );
+\score[3]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFF8"
+    )
+        port map (
+      I0 => dist_sq_reg_n_96,
+      I1 => dist_sq_reg_n_95,
+      I2 => dist_sq_reg_n_94,
+      I3 => dist_sq_reg_n_93,
+      O => \score[3]_i_6_n_0\
+    );
+\score[3]_i_7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => dist_sq_reg_n_87,
+      I1 => dist_sq_reg_n_85,
+      I2 => dist_sq_reg_n_90,
+      I3 => dist_sq_reg_n_88,
+      O => \score[3]_i_7_n_0\
+    );
+\score[3]_i_8\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => dist_sq_reg_n_91,
+      I1 => dist_sq_reg_n_89,
+      I2 => dist_sq_reg_n_86,
+      I3 => dist_sq_reg_n_84,
+      O => \score[3]_i_8_n_0\
     );
 \score_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -953,7 +1218,7 @@ dist_sq_reg_i_7: unisim.vcomponents.LUT1
       CE => '1',
       D => \score[1]_i_1_n_0\,
       Q => \^score\(1),
-      R => reset
+      R => \score[3]_i_1_n_0\
     );
 \score_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -967,9 +1232,9 @@ dist_sq_reg_i_7: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => '1',
-      D => \score[3]_i_1_n_0\,
+      D => \score[3]_i_2_n_0\,
       Q => \^score\(3),
-      R => reset
+      R => \score[3]_i_1_n_0\
     );
 trig_q1_reg: unisim.vcomponents.FDRE
      port map (
@@ -977,7 +1242,7 @@ trig_q1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => trig_calc,
       Q => trig_q1,
-      R => reset
+      R => \score[3]_i_1_n_0\
     );
 trig_q2_reg: unisim.vcomponents.FDRE
      port map (
@@ -985,7 +1250,7 @@ trig_q2_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => trig_q1,
       Q => trig_q2,
-      R => reset
+      R => \score[3]_i_1_n_0\
     );
 valid_score_reg: unisim.vcomponents.FDRE
      port map (
@@ -993,7 +1258,7 @@ valid_score_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => trig_q2,
       Q => valid_score,
-      R => reset
+      R => \score[3]_i_1_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -1003,7 +1268,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
+    resetn : in STD_LOGIC;
     trig_calc : in STD_LOGIC;
     gyro_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
     gyro_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
@@ -1026,16 +1291,16 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0";
-  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET resetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_100MHz_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of resetn : signal is "xilinx.com:signal:reset:1.0 resetn RST";
+  attribute X_INTERFACE_PARAMETER of resetn : signal is "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_scoring_engine
      port map (
       clk => clk,
       gyro_x(9 downto 0) => gyro_x(9 downto 0),
       gyro_y(9 downto 0) => gyro_y(9 downto 0),
-      reset => reset,
+      resetn => resetn,
       score(3 downto 0) => score(3 downto 0),
       trig_calc => trig_calc,
       valid_score => valid_score

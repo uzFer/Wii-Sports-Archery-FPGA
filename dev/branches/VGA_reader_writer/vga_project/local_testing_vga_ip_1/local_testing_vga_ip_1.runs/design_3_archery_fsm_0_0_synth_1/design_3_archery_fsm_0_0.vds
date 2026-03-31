@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar 31 00:55:42 2026
-# Process ID: 27900
+# Start of session at: Tue Mar 31 14:58:49 2026
+# Process ID: 34312
 # Current directory: Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_archery_fsm_0_0_synth_1
 # Command line: vivado.exe -log design_3_archery_fsm_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_3_archery_fsm_0_0.tcl
 # Log file: Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_archery_fsm_0_0_synth_1/design_3_archery_fsm_0_0.vds
@@ -19,9 +19,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 27668 
+INFO: Helper process launched with PID 34496 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 497.289 ; gain = 104.336
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 496.168 ; gain = 103.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_3_archery_fsm_0_0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_archery_fsm_0_0/synth/design_3_archery_fsm_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'archery_fsm' [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/archery/archery_fsm.v:3]
@@ -38,7 +38,7 @@ INFO: [Synth 8-6157] synthesizing module 'archery_fsm' [Y:/vga_project/local_tes
 	Parameter DISPLAY_SCORE bound to: 4'b1010 
 	Parameter UPDATE_ROUND bound to: 4'b1011 
 	Parameter GAME_OVER bound to: 4'b1100 
-	Parameter FIVE_SECONDS bound to: 29'b11101110011010110010100000000 
+	Parameter TWO_SECONDS bound to: 29'b01011111010111100001000000000 
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/archery/archery_fsm.v:6]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/archery/archery_fsm.v:7]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/imports/archery/archery_fsm.v:8]
@@ -70,7 +70,7 @@ WARNING: [Synth 8-3331] design archery_fsm has unconnected port uart_in[1]
 WARNING: [Synth 8-3331] design archery_fsm has unconnected port uart_in[0]
 WARNING: [Synth 8-3331] design archery_fsm has unconnected port uart_in_valid
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 553.410 ; gain = 160.457
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 552.176 ; gain = 159.785
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -83,10 +83,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 553.410 ; gain = 160.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 552.176 ; gain = 159.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 553.410 ; gain = 160.457
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 552.176 ; gain = 159.785
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -95,29 +95,29 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 883.879 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 882.484 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 883.879 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 882.484 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 886.207 ; gain = 2.328
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 885.285 ; gain = 2.801
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 886.207 ; gain = 493.254
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 885.285 ; gain = 492.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 886.207 ; gain = 493.254
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 885.285 ; gain = 492.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 886.207 ; gain = 493.254
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 885.285 ; gain = 492.895
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'archery_fsm'
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
@@ -125,10 +125,9 @@ INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address siz
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "difficulty" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "play_music" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "p1_score" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "arrow_count" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "play_music" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "difficulty" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
@@ -138,23 +137,23 @@ INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because addre
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-             RESET_STATE |                    0000000000001 |                             0000
-               MAIN_MENU |                    0000000000010 |                             0001
-             PLAYER1_AIM |                    0000000000100 |                             0010
-           PLAYER1_SHOOT |                    0000000001000 |                             0011
-            PLAYER1_CALC |                    0000000010000 |                             0100
-           PLAYER1_SCORE |                    0000000100000 |                             0101
-             PLAYER2_AIM |                    0000001000000 |                             0110
-           PLAYER2_SHOOT |                    0000010000000 |                             0111
-            PLAYER2_CALC |                    0000100000000 |                             1000
-           PLAYER2_SCORE |                    0001000000000 |                             1001
-           DISPLAY_SCORE |                    0010000000000 |                             1010
-            UPDATE_ROUND |                    0100000000000 |                             1011
-               GAME_OVER |                    1000000000000 |                             1100
+             RESET_STATE |                    0000000010000 |                             0000
+               MAIN_MENU |                    0000001000000 |                             0001
+             PLAYER1_AIM |                    0000000001000 |                             0010
+           PLAYER1_SHOOT |                    0000000000001 |                             0011
+            PLAYER1_CALC |                    0000000000010 |                             0100
+           PLAYER1_SCORE |                    0000000000100 |                             0101
+             PLAYER2_AIM |                    1000000000000 |                             0110
+           PLAYER2_SHOOT |                    0001000000000 |                             0111
+            PLAYER2_CALC |                    0010000000000 |                             1000
+           PLAYER2_SCORE |                    0100000000000 |                             1001
+           DISPLAY_SCORE |                    0000100000000 |                             1010
+            UPDATE_ROUND |                    0000010000000 |                             1011
+               GAME_OVER |                    0000000100000 |                             1100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'archery_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 886.207 ; gain = 493.254
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 885.285 ; gain = 492.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -185,7 +184,6 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -214,7 +212,6 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -262,7 +259,7 @@ WARNING: [Synth 8-3331] design archery_fsm has unconnected port uart_in_valid
 INFO: [Synth 8-3886] merging instance 'inst/game_state_reg_reg[7]' (FD) to 'inst/game_state_reg_reg[8]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\game_state_reg_reg[8] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 886.207 ; gain = 493.254
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 885.285 ; gain = 492.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -274,13 +271,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 886.207 ; gain = 493.254
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 887.305 ; gain = 494.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 886.207 ; gain = 493.254
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 887.602 ; gain = 495.211
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,7 +289,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -316,7 +313,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -329,7 +326,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -341,25 +338,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -378,10 +375,10 @@ Report Cell Usage:
 |1     |CARRY4 |    22|
 |2     |LUT1   |    18|
 |3     |LUT2   |    11|
-|4     |LUT3   |    11|
-|5     |LUT4   |    25|
+|4     |LUT3   |    10|
+|5     |LUT4   |    27|
 |6     |LUT5   |    21|
-|7     |LUT6   |    52|
+|7     |LUT6   |    51|
 |8     |FDRE   |   146|
 |9     |FDSE   |     1|
 +------+-------+------+
@@ -394,31 +391,31 @@ Report Instance Areas:
 |2     |  inst   |archery_fsm |   307|
 +------+---------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 898.203 ; gain = 172.453
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 898.203 ; gain = 505.250
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 899.727 ; gain = 174.227
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 899.727 ; gain = 507.336
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 909.070 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 910.191 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-56 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+55 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 909.070 ; gain = 529.105
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 909.070 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 910.191 ; gain = 530.688
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 910.191 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_archery_fsm_0_0_synth_1/design_3_archery_fsm_0_0.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 909.070 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 910.191 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_archery_fsm_0_0_synth_1/design_3_archery_fsm_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_3_archery_fsm_0_0_utilization_synth.rpt -pb design_3_archery_fsm_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 00:56:21 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 14:59:30 2026...
