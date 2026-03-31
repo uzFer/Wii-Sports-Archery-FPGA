@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "physics_engine,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_3_physics_engine_0_0,physics_engine,{}" *)
-(* CORE_GENERATION_INFO = "design_3_physics_engine_0_0,physics_engine,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=physics_engine,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_3_physics_engine_0_0,physics_engine,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=physics_engine,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,SCREEN_WIDTH=320,SCREEN_HEIGHT=240}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_physics_engine_0_0 (
@@ -78,7 +78,7 @@ input wire clk;
 input wire resetn;
 input wire fire;
 input wire [15 : 0] axi_Z_dist;
-input wire [7 : 0] axi_arrow_vel;
+input wire [15 : 0] axi_arrow_vel;
 input wire [7 : 0] wind_x_in;
 input wire [7 : 0] wind_y_in;
 input wire [8 : 0] aim_x;
@@ -87,7 +87,10 @@ output wire result_valid;
 output wire [8 : 0] land_x;
 output wire [7 : 0] land_y;
 
-  physics_engine inst (
+  physics_engine #(
+    .SCREEN_WIDTH(320),
+    .SCREEN_HEIGHT(240)
+  ) inst (
     .clk(clk),
     .resetn(resetn),
     .fire(fire),

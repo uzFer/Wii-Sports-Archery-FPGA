@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun Mar 29 23:48:05 2026
+//Date        : Tue Mar 31 00:55:27 2026
 //Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 //Command     : generate_target design_3.bd
 //Design      : design_3
@@ -372,6 +372,9 @@ module design_3
   wire [31:0]microblaze_0_interrupt_ADDRESS;
   wire microblaze_0_interrupt_INTERRUPT;
   wire [0:0]microblaze_0_intr;
+  wire [8:0]physics_engine_0_land_x;
+  wire [7:0]physics_engine_0_land_y;
+  wire physics_engine_0_result_valid;
   wire ps2_clk_0_1;
   wire ps2_data_0_1;
   wire [7:0]ps2_keyboard_subsyst_0_ascii_out;
@@ -407,7 +410,7 @@ module design_3
   wire [21:0]xlconcat_0_dout;
   wire [9:0]xlconcat_1_dout;
   wire [15:0]xlconstant_0_dout;
-  wire [7:0]xlconstant_1_dout;
+  wire [15:0]xlconstant_1_dout;
 
   assign AN[7:0] = decimal_display_mana_0_an;
   assign SEG[6:0] = decimal_display_mana_0_seg;
@@ -704,14 +707,21 @@ module design_3
         .x_coord(archery_fsm_0_p1_score),
         .y_coord(archery_fsm_0_p2_score));
   design_3_framewriter_0_0 framewriter_0
-       (.bram_address(framewriter_0_bram_address),
+       (.aim_x(gyro_calc_interface_0_x_coord[8:0]),
+        .aim_y(gyro_calc_interface_0_y_coord[7:0]),
+        .axi_Z_dist(xlconstant_0_dout),
+        .axi_arrow_vel(xlconstant_1_dout[7:0]),
+        .bram_address(framewriter_0_bram_address),
         .bram_en(framewriter_0_bram_en),
         .bram_read_data(axi_bram_ctrl_1_bram_douta),
         .bram_rst(framewriter_0_bram_rst),
         .bram_write_data(framewriter_0_bram_write_data),
         .bram_write_enable(framewriter_0_bram_write_enable),
         .game_state_archery_fsm(archery_fsm_0_game_state),
+        .land_x(physics_engine_0_land_x),
+        .land_y(physics_engine_0_land_y),
         .left_btn(left_btn_0_1),
+        .result_valid(physics_engine_0_result_valid),
         .right_btn(right_btn_0_1),
         .s00_axi_aclk(microblaze_0_Clk),
         .s00_axi_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR[4:0]),
@@ -734,7 +744,9 @@ module design_3
         .s00_axi_wready(microblaze_0_axi_periph_M01_AXI_WREADY),
         .s00_axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .s00_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
-        .vsync_trigger(sync_gen_1_vsync_trigger));
+        .vsync_trigger(sync_gen_1_vsync_trigger),
+        .wind_x_in(archery_fsm_0_wind_x_out),
+        .wind_y_in(archery_fsm_0_wind_y_out));
   design_3_gyro_calc_interface_0_0 gyro_calc_interface_0
        (.calibrate(calibrate_0_1),
         .calibration_done(gyro_calc_interface_0_calibration_done),
@@ -1131,7 +1143,10 @@ module design_3
         .axi_arrow_vel(xlconstant_1_dout),
         .clk(microblaze_0_Clk),
         .fire(archery_fsm_0_fire_pulse),
+        .land_x(physics_engine_0_land_x),
+        .land_y(physics_engine_0_land_y),
         .resetn(rst_clk_wiz_100M_peripheral_aresetn),
+        .result_valid(physics_engine_0_result_valid),
         .wind_x_in(archery_fsm_0_wind_x_out),
         .wind_y_in(archery_fsm_0_wind_y_out));
   design_3_ps2_keyboard_subsyst_0_0 ps2_keyboard_subsyst_0
@@ -1159,11 +1174,11 @@ module design_3
         .slowest_sync_clk(microblaze_0_Clk));
   design_3_scoring_engine_0_0 scoring_engine_0
        (.clk(microblaze_0_Clk),
-        .gyro_x(gyro_calc_interface_0_x_coord),
-        .gyro_y(gyro_calc_interface_0_y_coord),
+        .gyro_x(physics_engine_0_land_x),
+        .gyro_y(physics_engine_0_land_y),
         .reset(reset_0_1),
         .score(scoring_engine_0_score),
-        .trig_calc(shoot_event_0_1),
+        .trig_calc(physics_engine_0_result_valid),
         .valid_score(scoring_engine_0_valid_score));
   design_3_sync_gen_1_0 sync_gen_1
        (.VGA_B(sync_gen_1_VGA_B),

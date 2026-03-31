@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 29 18:35:30 2026
+-- Date        : Mon Mar 30 23:28:51 2026
 -- Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_physics_engine_0_0/design_3_physics_engine_0_0_stub.vhdl
+--               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_physics_engine_0_0/design_3_physics_engine_0_0_stub.vhdl
 -- Design      : design_3_physics_engine_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
@@ -18,7 +18,7 @@ entity design_3_physics_engine_0_0 is
     resetn : in STD_LOGIC;
     fire : in STD_LOGIC;
     axi_Z_dist : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    axi_arrow_vel : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    axi_arrow_vel : in STD_LOGIC_VECTOR ( 15 downto 0 );
     wind_x_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wind_y_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     aim_x : in STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -34,7 +34,7 @@ architecture stub of design_3_physics_engine_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,resetn,fire,axi_Z_dist[15:0],axi_arrow_vel[7:0],wind_x_in[7:0],wind_y_in[7:0],aim_x[8:0],aim_y[7:0],result_valid,land_x[8:0],land_y[7:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,resetn,fire,axi_Z_dist[15:0],axi_arrow_vel[15:0],wind_x_in[7:0],wind_y_in[7:0],aim_x[8:0],aim_y[7:0],result_valid,land_x[8:0],land_y[7:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "physics_engine,Vivado 2018.3";
 begin

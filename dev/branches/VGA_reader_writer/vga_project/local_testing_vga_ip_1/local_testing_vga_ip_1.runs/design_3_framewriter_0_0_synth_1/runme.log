@@ -18,40 +18,42 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25960 
+INFO: Helper process launched with PID 21836 
+WARNING: [Synth 8-2292] literal value truncated to fit in 4 bits [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:390]
+WARNING: [Synth 8-2292] literal value truncated to fit in 4 bits [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:402]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 497.723 ; gain = 101.379
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 509.156 ; gain = 112.988
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_3_framewriter_0_0' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/synth/design_3_framewriter_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'framewriter_v1' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1.v:4]
+INFO: [Synth 8-6157] synthesizing module 'framewriter_v1' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1.v:4]
 	Parameter SLAVE_REG_WIDTH bound to: 16 - type: integer 
 	Parameter BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_WE_WIDTH bound to: 4 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'framewriter_v1_S00_AXI' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:3]
+INFO: [Synth 8-6157] synthesizing module 'framewriter_v1_S00_AXI' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:3]
 	Parameter SLAVE_REG_WIDTH bound to: 16 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:22]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:23]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:24]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:25]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:26]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:27]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:28]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:29]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:123]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:124]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:125]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:126]
-INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:255]
-INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:428]
-INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1_S00_AXI' (1#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1_S00_AXI.v:3]
-INFO: [Synth 8-6157] synthesizing module 'framewriter' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:6]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:22]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:24]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:25]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:26]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:27]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:28]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:29]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:123]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:124]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:125]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:126]
+INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:255]
+INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:428]
+INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1_S00_AXI' (1#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1_S00_AXI.v:3]
+INFO: [Synth 8-6157] synthesizing module 'framewriter' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:6]
 	Parameter SLAVE_REG_WIDTH bound to: 16 - type: integer 
 	Parameter BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_DATA_WIDTH bound to: 32 - type: integer 
@@ -62,58 +64,6 @@ INFO: [Synth 8-6157] synthesizing module 'framewriter' [y:/vga_project/local_tes
 	Parameter WRITE bound to: 2'b11 
 	Parameter SCREEN_WIDTH bound to: 320 - type: integer 
 	Parameter SCREEN_HEIGHT bound to: 240 - type: integer 
-	Parameter CROSS_SIZE bound to: 16'b0000000000000101 
-	Parameter DIGIT1_X bound to: 16'b0000000100011000 
-	Parameter DIGIT2_X bound to: 16'b0000000100101100 
-	Parameter SCORE_Y bound to: 16'b0000000000010100 
-	Parameter FONT_W bound to: 16'b0000000000001100 
-	Parameter FONT_H bound to: 16'b0000000000010100 
-	Parameter P1_TENS_X bound to: 16'b0000000001011000 
-	Parameter P1_ONES_X bound to: 16'b0000000001101000 
-	Parameter P2_TENS_X bound to: 16'b0000000011000110 
-	Parameter P2_ONES_X bound to: 16'b0000000011010110 
-	Parameter PANEL_SCORE_Y bound to: 16'b0000000001101110 
-	Parameter PANEL_FONT_W bound to: 16'b0000000000001100 
-	Parameter PANEL_FONT_H bound to: 16'b0000000000010100 
-	Parameter CTR_X bound to: 16'b0000000010100000 
-	Parameter CTR_Y bound to: 16'b0000000001111000 
-	Parameter R_OUTER_EDGE_SQ bound to: 10000 - type: integer 
-	Parameter R_OL_OUTER_EDGE_SQ bound to: 9604 - type: integer 
-	Parameter R_OL_OUTER_EDGE_ISQ bound to: 9216 - type: integer 
-	Parameter R_WHITE1_END_SQ bound to: 9216 - type: integer 
-	Parameter R_OL_W1W2_OUTER_SQ bound to: 8464 - type: integer 
-	Parameter R_OL_W1W2_INNER_SQ bound to: 8100 - type: integer 
-	Parameter R_WHITE2_END_SQ bound to: 8100 - type: integer 
-	Parameter R_OL_WBLK_OUTER_SQ bound to: 7396 - type: integer 
-	Parameter R_OL_WBLK_INNER_SQ bound to: 7056 - type: integer 
-	Parameter R_BLACK1_END_SQ bound to: 7056 - type: integer 
-	Parameter R_OL_B1B2_OUTER_SQ bound to: 6724 - type: integer 
-	Parameter R_OL_B1B2_INNER_SQ bound to: 6400 - type: integer 
-	Parameter R_BLACK2_END_SQ bound to: 6400 - type: integer 
-	Parameter R_OL_BTURQ_OUTER_SQ bound to: 5776 - type: integer 
-	Parameter R_OL_BTURQ_INNER_SQ bound to: 5476 - type: integer 
-	Parameter R_TURQ1_END_SQ bound to: 5476 - type: integer 
-	Parameter R_OL_T1T2_OUTER_SQ bound to: 4900 - type: integer 
-	Parameter R_OL_T1T2_INNER_SQ bound to: 4624 - type: integer 
-	Parameter R_TURQ2_END_SQ bound to: 4624 - type: integer 
-	Parameter R_OL_TRED_OUTER_SQ bound to: 4096 - type: integer 
-	Parameter R_OL_TRED_INNER_SQ bound to: 3844 - type: integer 
-	Parameter R_RED1_END_SQ bound to: 3844 - type: integer 
-	Parameter R_OL_R1R2_OUTER_SQ bound to: 3364 - type: integer 
-	Parameter R_OL_R1R2_INNER_SQ bound to: 3136 - type: integer 
-	Parameter R_RED2_END_SQ bound to: 3136 - type: integer 
-	Parameter R_OL_RYEL_OUTER_SQ bound to: 2601 - type: integer 
-	Parameter R_OL_RYEL_INNER_SQ bound to: 2401 - type: integer 
-	Parameter R_YEL1_END_SQ bound to: 2401 - type: integer 
-	Parameter R_OL_Y1Y2_OUTER_SQ bound to: 1936 - type: integer 
-	Parameter R_OL_Y1Y2_INNER_SQ bound to: 1764 - type: integer 
-	Parameter R_YEL2_END_SQ bound to: 1764 - type: integer 
-	Parameter R_OL_YDOT_OUTER_SQ bound to: 1156 - type: integer 
-	Parameter R_OL_YDOT_INNER_SQ bound to: 1024 - type: integer 
-	Parameter R_DOT_OUTER_SQ bound to: 1024 - type: integer 
-	Parameter R_OL_DOT_OUTER_SQ bound to: 576 - type: integer 
-	Parameter R_OL_DOT_INNER_SQ bound to: 484 - type: integer 
-	Parameter R_DOT_INNER_SQ bound to: 484 - type: integer 
 	Parameter WHITE bound to: 15790320 - type: integer 
 	Parameter BLACK bound to: 0 - type: integer 
 	Parameter RED bound to: 15728640 - type: integer 
@@ -123,39 +73,88 @@ INFO: [Synth 8-6157] synthesizing module 'framewriter' [y:/vga_project/local_tes
 	Parameter TURQUOISE bound to: 61680 - type: integer 
 	Parameter GREY bound to: 4210752 - type: integer 
 	Parameter ORANGE bound to: 15765504 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:15]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:16]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:19]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:20]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:21]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:22]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:23]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:24]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:27]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:28]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:30]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:31]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:32]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:33]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:469]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:512]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:524]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:534]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1113]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1129]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1139]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1160]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1275]
-INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1317]
-INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1432]
-WARNING: [Synth 8-6014] Unused sequential element pipe_is_target_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:901]
-WARNING: [Synth 8-6014] Unused sequential element pixel_offset_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1466]
-WARNING: [Synth 8-6014] Unused sequential element pixel_to_write_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1467]
-WARNING: [Synth 8-6014] Unused sequential element bit_mask_latched_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:1468]
-INFO: [Synth 8-6155] done synthesizing module 'framewriter' (2#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:6]
-WARNING: [Synth 8-350] instance 'framewriter_1' of module 'framewriter' requires 30 connections, but only 29 given [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1.v:132]
-INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1' (3#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/hdl/framewriter_v1.v:4]
+	Parameter CTR_X bound to: 16'b0000000010100000 
+	Parameter CTR_Y bound to: 16'b0000000001111000 
+	Parameter CROSS_SIZE bound to: 16'b0000000000000101 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:15]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:16]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:17]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:18]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:19]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:20]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:39]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:40]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:41]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "yes" *) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:42]
+INFO: [Synth 8-226] default block is never used [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:279]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:391]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:403]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:414]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:428]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:445]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:459]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:471]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:483]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:517]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:529]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:540]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:610]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:623]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:648]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:650]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:652]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:654]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:656]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:647]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:664]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:666]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:668]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:670]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:672]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:663]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:684]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:718]
+INFO: [Synth 8-155] case statement is not full and has no default [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:384]
+WARNING: [Synth 8-6014] Unused sequential element p1_wy_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:235]
+WARNING: [Synth 8-6014] Unused sequential element p2_wy_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:236]
+WARNING: [Synth 8-6014] Unused sequential element stg1_is_triangle_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:375]
+WARNING: [Synth 8-6014] Unused sequential element stg2_is_triangle_reg was removed.  [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:761]
+INFO: [Synth 8-6155] done synthesizing module 'framewriter' (2#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:6]
+WARNING: [Synth 8-350] instance 'framewriter_1' of module 'framewriter' requires 39 connections, but only 38 given [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'framewriter_v1' (3#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/hdl/framewriter_v1.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_framewriter_0_0' (4#1) [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_framewriter_0_0/synth/design_3_framewriter_0_0.v:57]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[31]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[30]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[29]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[28]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[27]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[26]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[25]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[24]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[23]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[22]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[21]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[20]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[19]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[18]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[17]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[16]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[31]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[30]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[29]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[28]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[27]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[26]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[25]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[24]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[23]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[22]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[21]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[20]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[19]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[18]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[17]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[16]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[31]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[30]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[29]
@@ -163,11 +162,24 @@ WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_arche
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[27]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[26]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[25]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[8]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[7]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[6]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[5]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[4]
+WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[24]
+WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[23]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[15]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[14]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[13]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[12]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[11]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[10]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[9]
+WARNING: [Synth 8-3331] design framewriter has unconnected port axi_arrow_vel[8]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[7]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[6]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[5]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[4]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[3]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[2]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[1]
+WARNING: [Synth 8-3331] design framewriter has unconnected port wind_y_in[0]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[3]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[2]
 WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[1]
@@ -183,7 +195,7 @@ WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI
 WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 559.066 ; gain = 162.723
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 564.047 ; gain = 167.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -196,10 +208,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 559.066 ; gain = 162.723
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 564.047 ; gain = 167.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 559.066 ; gain = 162.723
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 564.047 ; gain = 167.879
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -208,71 +220,87 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 902.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 907.234 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 902.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 907.234 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 906.535 ; gain = 3.582
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 910.195 ; gain = 2.961
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 906.535 ; gain = 510.191
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 910.195 ; gain = 514.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 906.535 ; gain = 510.191
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 910.195 ; gain = 514.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 906.535 ; gain = 510.191
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 910.195 ; gain = 514.027
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "in00" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "internal_x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "internal_y" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "menu_diff_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "menu_diff_select0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "menu_diff_select0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pipe_dx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pipe_dx_sq" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bram_addr_latched" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "idx_24" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "rel_x_3x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "score_latch" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "stg1_ascii" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "stg1_ascii" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg1_dx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "rom_data" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5587] ROM size for "splash_char_ascii" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "in00" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "internal_x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "internal_y" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "menu_diff_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "menu_diff_select0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "menu_diff_select0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pipe_dx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pipe_dx_sq" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bram_addr_latched" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg2_rom_data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "in00" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_x" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_y" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "idx_24" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "rel_x_3x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "score_latch" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "stg1_ascii" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stg1_ascii" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "stg1_ascii" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg1_dx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "rom_data" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5587] ROM size for "splash_char_ascii" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "splash_char_ascii" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "final_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "final_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "final_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "final_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "final_color0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "splash_char_ascii" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "p1_tens1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "p2_tens1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "final_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg2_rom_data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg3_final_pixel_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg3_final_pixel_color0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg3_final_pixel_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg3_final_pixel_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stg3_final_pixel_color0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'framewriter'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -284,7 +312,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'framewriter'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 906.535 ; gain = 510.191
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 910.195 ; gain = 514.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -298,58 +326,64 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     33 Bit       Adders := 2     
-	   2 Input     32 Bit       Adders := 27    
-	   3 Input     22 Bit       Adders := 2     
-	   3 Input     17 Bit       Adders := 7     
+	   2 Input     32 Bit       Adders := 40    
+	   3 Input     26 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 15    
-	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 2     
-	   4 Input      6 Bit       Adders := 1     
-	   3 Input      6 Bit       Adders := 15    
-	   2 Input      5 Bit       Adders := 3     
-	   3 Input      4 Bit       Adders := 4     
-	   2 Input      2 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 16    
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 3     
 +---Registers : 
-	               32 Bit    Registers := 11    
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 10    
 	               16 Bit    Registers := 6     
-	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 10    
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 17    
 +---Muxes : 
-	  43 Input     62 Bit        Muxes := 1     
-	   8 Input     32 Bit        Muxes := 8     
+	  56 Input     62 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 9     
 	   2 Input     32 Bit        Muxes := 5     
-	   3 Input     32 Bit        Muxes := 1     
-	   7 Input     32 Bit        Muxes := 1     
-	   5 Input     32 Bit        Muxes := 1     
 	   4 Input     24 Bit        Muxes := 1     
-	  16 Input     24 Bit        Muxes := 1     
+	   7 Input     24 Bit        Muxes := 1     
+	  22 Input     24 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 3     
-	  27 Input     24 Bit        Muxes := 1     
-	   3 Input     24 Bit        Muxes := 1     
-	   8 Input     24 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 1     
 	   3 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 16    
-	   5 Input      8 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 4     
-	   4 Input      7 Bit        Muxes := 2     
-	  23 Input      7 Bit        Muxes := 1     
-	  10 Input      7 Bit        Muxes := 1     
-	  11 Input      7 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 25    
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 36    
+	   4 Input      7 Bit        Muxes := 11    
+	  16 Input      7 Bit        Muxes := 1     
+	  19 Input      7 Bit        Muxes := 1     
 	   5 Input      7 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
+	   6 Input      7 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 1     
+	  10 Input      7 Bit        Muxes := 2     
+	  13 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 5     
-	   8 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 20    
+	   2 Input      4 Bit        Muxes := 90    
+	   7 Input      4 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 18    
 	   3 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -373,55 +407,64 @@ Module framewriter
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     33 Bit       Adders := 2     
-	   2 Input     32 Bit       Adders := 27    
-	   3 Input     22 Bit       Adders := 2     
-	   3 Input     17 Bit       Adders := 7     
+	   2 Input     32 Bit       Adders := 40    
+	   3 Input     26 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 15    
-	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 2     
-	   4 Input      6 Bit       Adders := 1     
-	   3 Input      6 Bit       Adders := 15    
-	   2 Input      5 Bit       Adders := 3     
-	   3 Input      4 Bit       Adders := 4     
-	   2 Input      2 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 16    
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 3     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
 	               16 Bit    Registers := 6     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 11    
 +---Muxes : 
-	  43 Input     62 Bit        Muxes := 1     
+	  56 Input     62 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
-	   7 Input     32 Bit        Muxes := 1     
-	   5 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 1     
 	   4 Input     24 Bit        Muxes := 1     
-	  16 Input     24 Bit        Muxes := 1     
+	   7 Input     24 Bit        Muxes := 1     
+	  22 Input     24 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 3     
-	  27 Input     24 Bit        Muxes := 1     
-	   3 Input     24 Bit        Muxes := 1     
-	   8 Input     24 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 1     
 	   3 Input     16 Bit        Muxes := 1     
-	   5 Input      8 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 4     
-	   4 Input      7 Bit        Muxes := 2     
-	  23 Input      7 Bit        Muxes := 1     
-	  10 Input      7 Bit        Muxes := 1     
-	  11 Input      7 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 9     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 36    
+	   4 Input      7 Bit        Muxes := 11    
+	  16 Input      7 Bit        Muxes := 1     
+	  19 Input      7 Bit        Muxes := 1     
 	   5 Input      7 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
+	   6 Input      7 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 1     
+	  10 Input      7 Bit        Muxes := 2     
+	  13 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 5     
-	   8 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 15    
+	   2 Input      4 Bit        Muxes := 90    
+	   7 Input      4 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 13    
 	   3 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -438,113 +481,127 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'pipe_dx_reg[15:0]' into 'pipe_dx_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:898]
-INFO: [Synth 8-4471] merging register 'pipe_dy_reg[15:0]' into 'pipe_dy_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/db76/src/framewriter.v:898]
+INFO: [Synth 8-4471] merging register 'stg1_rel_y_reg[3:0]' into 'stg1_rel_y_reg[3:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:355]
+INFO: [Synth 8-4471] merging register 'stg1_dx_reg[15:0]' into 'stg1_dx_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:356]
+INFO: [Synth 8-4471] merging register 'stg1_dy_reg[15:0]' into 'stg1_dy_reg[15:0]' [y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/1261/src/framewriter.v:357]
+INFO: [Synth 8-5546] ROM "idx_24" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "stg1_ascii" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "stg1_ascii" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "rom_data" won't be mapped to RAM because it is too sparse
-DSP Report: Generating DSP pipe_dx_sq_reg, operation Mode is: (A2*B2)'.
-DSP Report: register pipe_dx_reg is absorbed into DSP pipe_dx_sq_reg.
-DSP Report: register pipe_dx_reg is absorbed into DSP pipe_dx_sq_reg.
-DSP Report: register pipe_dx_sq_reg is absorbed into DSP pipe_dx_sq_reg.
-DSP Report: operator pipe_dx_sq0 is absorbed into DSP pipe_dx_sq_reg.
-DSP Report: Generating DSP pipe_dist_sq_reg, operation Mode is: (PCIN+(A2*B2)')'.
-DSP Report: register pipe_dy_reg is absorbed into DSP pipe_dist_sq_reg.
-DSP Report: register pipe_dy_reg is absorbed into DSP pipe_dist_sq_reg.
-DSP Report: register pipe_dist_sq_reg is absorbed into DSP pipe_dist_sq_reg.
-DSP Report: register pipe_dy_sq_reg is absorbed into DSP pipe_dist_sq_reg.
-DSP Report: operator pipe_dist_sq0 is absorbed into DSP pipe_dist_sq_reg.
-DSP Report: operator pipe_dy_sq0 is absorbed into DSP pipe_dist_sq_reg.
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[31]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[30]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[29]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[28]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[27]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[26]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[25]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[8]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[7]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[6]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[5]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state_archery_fsm[4]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[3]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[2]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[1]
-WARNING: [Synth 8-3331] design framewriter has unconnected port game_state[0]
-WARNING: [Synth 8-3331] design framewriter has unconnected port axi_awvalid
-WARNING: [Synth 8-3331] design framewriter has unconnected port axi_awready
-WARNING: [Synth 8-3331] design framewriter has unconnected port axi_wvalid
-WARNING: [Synth 8-3331] design framewriter has unconnected port axi_wready
-WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design framewriter_v1_S00_AXI has unconnected port S_AXI_ARPROT[0]
+DSP Report: Generating DSP stg2_dist_sq1, operation Mode is: A2*B2.
+DSP Report: register stg1_dx_reg is absorbed into DSP stg2_dist_sq1.
+DSP Report: register stg1_dx_reg is absorbed into DSP stg2_dist_sq1.
+DSP Report: operator stg2_dist_sq1 is absorbed into DSP stg2_dist_sq1.
+DSP Report: Generating DSP stg2_dist_sq_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register stg1_dy_reg is absorbed into DSP stg2_dist_sq_reg.
+DSP Report: register stg1_dy_reg is absorbed into DSP stg2_dist_sq_reg.
+DSP Report: register stg2_dist_sq_reg is absorbed into DSP stg2_dist_sq_reg.
+DSP Report: operator stg2_dist_sq0 is absorbed into DSP stg2_dist_sq_reg.
+DSP Report: operator stg2_dist_sq1 is absorbed into DSP stg2_dist_sq_reg.
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[31]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[30]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[29]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[28]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[27]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[26]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[25]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[24]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[23]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[22]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[21]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[20]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[19]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[18]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[17]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p1_name[16]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[31]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[30]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[29]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[28]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[27]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[26]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[25]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[24]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[23]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[22]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[21]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[20]
+WARNING: [Synth 8-3331] design framewriter has unconnected port p2_name[19]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'inst/framewriter_v1_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/framewriter_v1_S00_AXI_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_v1_S00_AXI_inst /\axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'inst/framewriter_v1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/framewriter_v1_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_v1_S00_AXI_inst /\axi_bresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[0]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[1]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[2]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[3]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[4]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[5]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[8]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[9]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[10]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[11]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[16]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[12]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[16]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[17]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[17]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[18]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[18]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[19]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[24]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[20]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[21]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[21]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[23]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[24]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[25]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[25]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[26]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[26]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[27]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[27]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[28]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[28]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[29]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[29]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[30]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/final_color_latched_reg[30]' (FDRE) to 'inst/framewriter_1/final_color_latched_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_1 /\final_color_latched_reg[31] )
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[0]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_1 /\bram_addr_latched_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[19]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[20]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[20]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[21]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[21]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[22]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[22]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[23]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[23]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[24]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[24]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[25]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[25]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[26]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[26]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[27]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[27]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[28]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[28]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[29]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[29]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[30]'
-INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/bram_addr_latched_reg[30]' (FDRE) to 'inst/framewriter_1/bram_addr_latched_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_1 /\bram_addr_latched_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[56]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[55]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[49]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[48]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[42]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[41]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[35]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[34]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[28]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[27]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[21]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[20]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[14]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[13]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[11]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[7]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[6]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[5]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[4]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[3]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[2]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg2_rom_data_reg[1]' (FDE) to 'inst/framewriter_1/stg2_rom_data_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_1 /\stg2_rom_data_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[0]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[1]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[2]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[3]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[4]' (FDSE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[5]' (FDSE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[8]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[9]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[10]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[11]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[12]' (FDSE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[16]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[17]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[18]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[19]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[20]' (FDSE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[21]' (FDSE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[24]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[25]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[26]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[27]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[28]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[29]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/framewriter_1/stg3_final_pixel_color_reg[30]' (FDRE) to 'inst/framewriter_1/stg3_final_pixel_color_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/framewriter_1 /\stg3_final_pixel_color_reg[31] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 962.586 ; gain = 566.242
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 910.195 ; gain = 514.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM:
-+------------+-------------------+---------------+----------------+
-|Module Name | RTL Object        | Depth x Width | Implemented As | 
-+------------+-------------------+---------------+----------------+
-|framewriter | splash_char_ascii | 32x7          | LUT            | 
-+------------+-------------------+---------------+----------------+
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|framewriter | stg1_ascii | 32x7          | LUT            | 
++------------+------------+---------------+----------------+
 
 
 DSP: Preliminary Mapping  Report (see note below)
-+------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|framewriter | (A2*B2)'         | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
-|framewriter | (PCIN+(A2*B2)')' | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
-+------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|framewriter | A2*B2         | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|framewriter | (PCIN+A2*B2)' | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -560,13 +617,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 962.586 ; gain = 566.242
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 953.523 ; gain = 557.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 962.586 ; gain = 566.242
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 956.582 ; gain = 560.414
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -578,7 +635,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -602,7 +659,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -615,7 +672,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -627,25 +684,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -661,18 +718,18 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |CARRY4    |   429|
-|2     |DSP48E1_1 |     1|
-|3     |DSP48E1_2 |     1|
-|4     |LUT1      |   601|
-|5     |LUT2      |   576|
-|6     |LUT3      |   256|
-|7     |LUT4      |   709|
-|8     |LUT5      |   280|
-|9     |LUT6      |   982|
-|10    |MUXF7     |   119|
-|11    |MUXF8     |    22|
-|12    |FDRE      |   397|
+|1     |CARRY4    |   484|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     1|
+|4     |LUT1      |   655|
+|5     |LUT2      |   459|
+|6     |LUT3      |   339|
+|7     |LUT4      |   707|
+|8     |LUT5      |   341|
+|9     |LUT6      |   955|
+|10    |MUXF7     |    49|
+|11    |MUXF8     |     4|
+|12    |FDRE      |   616|
 |13    |FDSE      |     9|
 +------+----------+------+
 
@@ -680,40 +737,40 @@ Report Instance Areas:
 +------+--------------------------------+-----------------------+------+
 |      |Instance                        |Module                 |Cells |
 +------+--------------------------------+-----------------------+------+
-|1     |top                             |                       |  4382|
-|2     |  inst                          |framewriter_v1         |  4382|
+|1     |top                             |                       |  4620|
+|2     |  inst                          |framewriter_v1         |  4620|
 |3     |    framewriter_v1_S00_AXI_inst |framewriter_v1_S00_AXI |   683|
-|4     |    framewriter_1               |framewriter            |  3699|
+|4     |    framewriter_1               |framewriter            |  3937|
 +------+--------------------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:06 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1028.855 ; gain = 632.688
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1036.316 ; gain = 292.504
-Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:07 . Memory (MB): peak = 1036.316 ; gain = 639.973
+Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1028.855 ; gain = 286.539
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 1028.855 ; gain = 632.688
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 572 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 539 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'design_3_framewriter_0_0' is not ideal for floorplanning, since the cellview 'framewriter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1036.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1028.855 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-152 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
+195 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 1036.316 ; gain = 651.496
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1036.316 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 1028.855 ; gain = 644.164
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1028.855 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_framewriter_0_0_synth_1/design_3_framewriter_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_3_framewriter_0_0, cache-ID = a6e1162c43358641
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_3_framewriter_0_0, cache-ID = d9d03059abcf3191
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1036.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1028.855 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_framewriter_0_0_synth_1/design_3_framewriter_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_3_framewriter_0_0_utilization_synth.rpt -pb design_3_framewriter_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 29 23:49:35 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 00:56:41 2026...

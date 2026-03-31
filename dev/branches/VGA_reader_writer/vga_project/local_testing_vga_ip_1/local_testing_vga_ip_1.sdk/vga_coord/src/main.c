@@ -383,73 +383,46 @@ void process_keyboard_input(int current_state) {
 //
 //}
 
+int char_count = 0;
+
 void update_names() {
+    static char p1_c1 = 0, p1_c2 = 0, p2_c1 = 0, p2_c2 = 0;
 
-    char p1_c1 = 0, p1_c2 = 0, p2_c1 = 0, p2_c2 = 0;
-
-    int char_count = 0;
-
-
-
-    xil_printf("Enter Player 1 Initials (2 chars), then Player 2 (2 chars):\n\r");
-
-
-
-    while (char_count < 4) {
-
+    if (char_count < 4) {
+    	xil_printf("Enter Player 1 Initials (2 chars), then Player 2 (2 chars):\n\r");
         char typed_key = poll_keyboard();
 
-        xil_printf("Typed: %c\n\r", typed_key);
-
-
-
         // Only process if it's a printable character
+        if (typed_key >= ' ' && typed_key <= '~') {
+        	xil_printf("Typed: %c\n\r", typed_key);
 
-//        if (typed_key >= ' ' && typed_key <= '~') {
+            if (char_count == 0)      p1_c1 = typed_key;
+            else if (char_count == 1) p1_c2 = typed_key;
+            else if (char_count == 2) p2_c1 = typed_key;
+            else if (char_count == 3) p2_c2 = typed_key;
 
-
-
-//            if (char_count == 0)      p1_c1 = typed_key;
-//
-//            else if (char_count == 1) p1_c2 = typed_key;
-//
-//            else if (char_count == 2) p2_c1 = typed_key;
-//
-//            else if (char_count == 3) p2_c2 = typed_key;
-
-            if (char_count == 0)      p1_c1 = 65; // 'A'
-
-            else if (char_count == 1) p1_c2 = 65;
-
-            else if (char_count == 2) p2_c1 = 65;
-
-            else if (char_count == 3) p2_c2 = 65;
-
-
+//            if (char_count == 0)      p1_c1 = 65; // 'A'
+//            else if (char_count == 1) p1_c2 = 65;
+//            else if (char_count == 2) p2_c1 = 65;
+//            else if (char_count == 3) p2_c2 = 65;
 
             char_count++;
 
-
-
             // Pack and Write to Hardware as we go
-
             uint32_t p1_reg = (P1_BOX_X << 24) | (P1_BOX_Y << 16) | (p1_c2 << 8) | p1_c1;
-
             uint32_t p2_reg = (P2_BOX_X << 24) | (P2_BOX_Y << 16) | (p2_c2 << 8) | p2_c1;
 
-
+//            uint32_t p1_reg = (P1_BOX_X << 24) | (P1_BOX_Y << 16) | (65 << 8) | 65;//
+//            uint32_t p2_reg = (P2_BOX_X << 24) | (P2_BOX_Y << 16) | (65 << 8) | 65;
 
             xil_printf("p1_reg=0x%08x, p2_reg=0x%08x\n\r", p1_reg, p2_reg);
 
-
-
             FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P1_NAME_OFFSET, (uint32_t)p1_reg);
             FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_P2_NAME_OFFSET, (uint32_t)p2_reg);
+        }
 
-
-
-//        }
-
+    } else {
+    	return;
     }
 
 //    xil_printf("Name Entry Complete!\n\r");
@@ -503,12 +476,12 @@ int main ()
 //	   // writing cross hair
 //	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_X_OFFSET, (uint32_t)x_pos);
 //	   FRAMEWRITER_mWriteReg(FRAMEWRITER_BASE, REG_Y_OFFSET, (uint32_t)y_fixed);
-//	   poll_gyroscope();
+	   poll_gyroscope();
 	   // vga stuff end
 //	   draw_crosshair(x_coord, y_coord);
 
 //	   last_btn_data = btn_data; // Store pfor edge detection
-	   for(int i=0; i<1000000; i++); // Simple debounce delay
+	   for(int i=0; i<1000; i++); // Simple debounce delay
 
 	   // testcase for font ROM -------------------------------------------------
 //	   setUserKeyboardInput(0); // 0 = use microblaze

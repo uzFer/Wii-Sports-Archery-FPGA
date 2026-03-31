@@ -54,6 +54,9 @@ reg [1:0] arrow_count;
 reg [2:0] current_round;
 reg [27:0] display_timer;
 reg [26:0] player_display_timer;
+reg [28:0] arrow_land_timer;
+
+localparam [28:0] FIVE_SECONDS = 29'd500_000_000;
 (* mark_debug = "true" *) reg [1:0] difficulty;
 
 // EDGE DETECTION
@@ -142,7 +145,10 @@ always @(*) begin
             end
 
         PLAYER1_SHOOT: begin
-            next_state = PLAYER1_CALC;
+            if (arrow_land_timer == FIVE_SECONDS)
+                next_state = PLAYER1_CALC;
+            else
+                next_state = PLAYER1_SHOOT;
         end
         PLAYER1_CALC:
             // if (start_pressed) // wait for scoring engine?
@@ -164,7 +170,10 @@ always @(*) begin
                 next_state = PLAYER2_SHOOT;
             end
         PLAYER2_SHOOT: begin
-            next_state = PLAYER2_CALC;
+            if (arrow_land_timer == FIVE_SECONDS)
+                next_state = PLAYER2_CALC;
+            else
+                next_state = PLAYER2_SHOOT;
         end
         PLAYER2_CALC:
             // if (start_pressed) // wait for scoring engine?
@@ -216,6 +225,7 @@ always @(posedge clk) begin
         play_arrow    <= 0;
         play_music    <= 0;
         difficulty    <= 2'd0;
+        arrow_land_timer <= 0;
     end
     else begin
         current_state <= next_state;
@@ -238,16 +248,21 @@ always @(posedge clk) begin
         else
             display_timer <= display_timer + 1;
 
-        if (current_state != PLAYER1_SCORE && current_state != PLAYER2_SCORE)
+        if (current_state != PLAYER1_SCORE && current_state != PLAYER2_SCORE && current_state != PLAYER1_SHOOT && current_state != PLAYER2_SHOOT)
             player_display_timer <= 0;
         else
             player_display_timer <= player_display_timer + 1;
+            
+        if (current_state != PLAYER1_SHOOT && current_state != PLAYER2_SHOOT) 
+            arrow_land_timer <=0;
+        else
+            arrow_land_timer <= arrow_land_timer + 1;
 
         // SCORE UPDATES
         if (score_pulse) begin
-            if (current_state == PLAYER1_CALC)
+            if (current_state == PLAYER1_CALC || current_state == PLAYER1_SHOOT)
                 p1_score <= p1_score + score_in;
-            else if (current_state == PLAYER2_CALC)
+            else if (current_state == PLAYER2_CALC || current_state == PLAYER2_SHOOT)
                 p2_score <= p2_score + score_in;
         end
         

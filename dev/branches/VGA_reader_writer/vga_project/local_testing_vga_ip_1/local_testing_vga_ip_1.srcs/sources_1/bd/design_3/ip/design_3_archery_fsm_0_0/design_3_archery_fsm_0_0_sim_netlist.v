@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar 29 22:52:15 2026
+// Date        : Tue Mar 31 00:56:21 2026
 // Host        : DESKTOP-B6PLPOU running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ip/design_3_archery_fsm_0_0/design_3_archery_fsm_0_0_sim_netlist.v
@@ -82,6 +82,7 @@ module design_3_archery_fsm_0_0
   wire [7:0]wind_y_out;
 
   (* DISPLAY_SCORE = "4'b1010" *) 
+  (* FIVE_SECONDS = "29'b11101110011010110010100000000" *) 
   (* GAME_OVER = "4'b1100" *) 
   (* MAIN_MENU = "4'b0001" *) 
   (* PLAYER1_AIM = "4'b0010" *) 
@@ -118,11 +119,11 @@ module design_3_archery_fsm_0_0
         .wind_y_out(wind_y_out));
 endmodule
 
-(* DISPLAY_SCORE = "4'b1010" *) (* GAME_OVER = "4'b1100" *) (* MAIN_MENU = "4'b0001" *) 
-(* ORIG_REF_NAME = "archery_fsm" *) (* PLAYER1_AIM = "4'b0010" *) (* PLAYER1_CALC = "4'b0100" *) 
-(* PLAYER1_SCORE = "4'b0101" *) (* PLAYER1_SHOOT = "4'b0011" *) (* PLAYER2_AIM = "4'b0110" *) 
-(* PLAYER2_CALC = "4'b1000" *) (* PLAYER2_SCORE = "4'b1001" *) (* PLAYER2_SHOOT = "4'b0111" *) 
-(* RESET_STATE = "4'b0000" *) (* UPDATE_ROUND = "4'b1011" *) 
+(* DISPLAY_SCORE = "4'b1010" *) (* FIVE_SECONDS = "29'b11101110011010110010100000000" *) (* GAME_OVER = "4'b1100" *) 
+(* MAIN_MENU = "4'b0001" *) (* ORIG_REF_NAME = "archery_fsm" *) (* PLAYER1_AIM = "4'b0010" *) 
+(* PLAYER1_CALC = "4'b0100" *) (* PLAYER1_SCORE = "4'b0101" *) (* PLAYER1_SHOOT = "4'b0011" *) 
+(* PLAYER2_AIM = "4'b0110" *) (* PLAYER2_CALC = "4'b1000" *) (* PLAYER2_SCORE = "4'b1001" *) 
+(* PLAYER2_SHOOT = "4'b0111" *) (* RESET_STATE = "4'b0000" *) (* UPDATE_ROUND = "4'b1011" *) 
 module design_3_archery_fsm_0_0_archery_fsm
    (clk,
     resetn,
@@ -169,13 +170,17 @@ module design_3_archery_fsm_0_0_archery_fsm
 
   wire \<const0> ;
   wire \FSM_onehot_current_state[0]_i_1_n_0 ;
+  wire \FSM_onehot_current_state[10]_i_10_n_0 ;
   wire \FSM_onehot_current_state[10]_i_1_n_0 ;
   wire \FSM_onehot_current_state[10]_i_2_n_0 ;
   wire \FSM_onehot_current_state[10]_i_3_n_0 ;
   wire \FSM_onehot_current_state[10]_i_4_n_0 ;
   wire \FSM_onehot_current_state[10]_i_5_n_0 ;
+  wire \FSM_onehot_current_state[10]_i_6_n_0 ;
+  wire \FSM_onehot_current_state[10]_i_7_n_0 ;
+  wire \FSM_onehot_current_state[10]_i_8_n_0 ;
+  wire \FSM_onehot_current_state[10]_i_9_n_0 ;
   wire \FSM_onehot_current_state[11]_i_10_n_0 ;
-  wire \FSM_onehot_current_state[11]_i_11_n_0 ;
   wire \FSM_onehot_current_state[11]_i_1_n_0 ;
   wire \FSM_onehot_current_state[11]_i_2_n_0 ;
   wire \FSM_onehot_current_state[11]_i_3_n_0 ;
@@ -191,16 +196,28 @@ module design_3_archery_fsm_0_0_archery_fsm
   wire \FSM_onehot_current_state[2]_i_1_n_0 ;
   wire \FSM_onehot_current_state[2]_i_2_n_0 ;
   wire \FSM_onehot_current_state[2]_i_3_n_0 ;
+  wire \FSM_onehot_current_state[2]_i_4_n_0 ;
   wire \FSM_onehot_current_state[3]_i_1_n_0 ;
+  wire \FSM_onehot_current_state[3]_i_2_n_0 ;
   wire \FSM_onehot_current_state[4]_i_1_n_0 ;
   wire \FSM_onehot_current_state[5]_i_1_n_0 ;
   wire \FSM_onehot_current_state[5]_i_2_n_0 ;
   wire \FSM_onehot_current_state[6]_i_1_n_0 ;
+  wire \FSM_onehot_current_state[6]_i_2_n_0 ;
   wire \FSM_onehot_current_state[7]_i_1_n_0 ;
+  wire \FSM_onehot_current_state[7]_i_2_n_0 ;
   wire \FSM_onehot_current_state[8]_i_1_n_0 ;
   wire \FSM_onehot_current_state[8]_i_2_n_0 ;
+  wire \FSM_onehot_current_state[8]_i_3_n_0 ;
+  wire \FSM_onehot_current_state[8]_i_4_n_0 ;
+  wire \FSM_onehot_current_state[8]_i_5_n_0 ;
+  wire \FSM_onehot_current_state[8]_i_6_n_0 ;
+  wire \FSM_onehot_current_state[8]_i_7_n_0 ;
+  wire \FSM_onehot_current_state[8]_i_8_n_0 ;
+  wire \FSM_onehot_current_state[8]_i_9_n_0 ;
   wire \FSM_onehot_current_state[9]_i_1_n_0 ;
   wire \FSM_onehot_current_state[9]_i_2_n_0 ;
+  wire \FSM_onehot_current_state[9]_i_3_n_0 ;
   wire \FSM_onehot_current_state_reg_n_0_[0] ;
   wire \FSM_onehot_current_state_reg_n_0_[10] ;
   wire \FSM_onehot_current_state_reg_n_0_[12] ;
@@ -218,6 +235,66 @@ module design_3_archery_fsm_0_0_archery_fsm
   wire \arrow_count[1]_i_1_n_0 ;
   wire \arrow_count_reg_n_0_[0] ;
   wire \arrow_count_reg_n_0_[1] ;
+  wire \arrow_land_timer[0]_i_1_n_0 ;
+  wire \arrow_land_timer[0]_i_3_n_0 ;
+  wire [28:0]arrow_land_timer_reg;
+  wire \arrow_land_timer_reg[0]_i_2_n_0 ;
+  wire \arrow_land_timer_reg[0]_i_2_n_1 ;
+  wire \arrow_land_timer_reg[0]_i_2_n_2 ;
+  wire \arrow_land_timer_reg[0]_i_2_n_3 ;
+  wire \arrow_land_timer_reg[0]_i_2_n_4 ;
+  wire \arrow_land_timer_reg[0]_i_2_n_5 ;
+  wire \arrow_land_timer_reg[0]_i_2_n_6 ;
+  wire \arrow_land_timer_reg[0]_i_2_n_7 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_0 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_1 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_2 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_3 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_4 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_5 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_6 ;
+  wire \arrow_land_timer_reg[12]_i_1_n_7 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_0 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_1 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_2 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_3 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_4 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_5 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_6 ;
+  wire \arrow_land_timer_reg[16]_i_1_n_7 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_0 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_1 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_2 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_3 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_4 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_5 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_6 ;
+  wire \arrow_land_timer_reg[20]_i_1_n_7 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_0 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_1 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_2 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_3 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_4 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_5 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_6 ;
+  wire \arrow_land_timer_reg[24]_i_1_n_7 ;
+  wire \arrow_land_timer_reg[28]_i_1_n_7 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_0 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_1 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_2 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_3 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_4 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_5 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_6 ;
+  wire \arrow_land_timer_reg[4]_i_1_n_7 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_0 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_1 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_2 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_3 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_4 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_5 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_6 ;
+  wire \arrow_land_timer_reg[8]_i_1_n_7 ;
   wire clk;
   wire \current_round[0]_i_1_n_0 ;
   wire \current_round_reg_n_0_[0] ;
@@ -288,6 +365,7 @@ module design_3_archery_fsm_0_0_archery_fsm
   (* MARK_DEBUG *) wire fire_pulse;
   wire fire_pulse_inferred_i_2_n_0;
   wire fire_pulse_inferred_i_3_n_0;
+  wire fire_pulse_inferred_i_4_n_0;
   wire [24:0]\^game_state ;
   (* MARK_DEBUG *) wire left_btn;
   wire left_btn_d;
@@ -296,6 +374,7 @@ module design_3_archery_fsm_0_0_archery_fsm
   wire \p1_score[6]_i_1_n_0 ;
   wire \p1_score[6]_i_2_n_0 ;
   wire \p1_score[6]_i_4_n_0 ;
+  wire \p1_score[6]_i_5_n_0 ;
   wire [6:0]p2_score;
   wire \p2_score[4]_i_2_n_0 ;
   wire \p2_score[6]_i_1_n_0 ;
@@ -403,6 +482,8 @@ module design_3_archery_fsm_0_0_archery_fsm
   wire start_btn_d;
   (* MARK_DEBUG *) wire [7:0]wind_x_out;
   (* MARK_DEBUG *) wire [7:0]wind_y_out;
+  wire [3:0]\NLW_arrow_land_timer_reg[28]_i_1_CO_UNCONNECTED ;
+  wire [3:1]\NLW_arrow_land_timer_reg[28]_i_1_O_UNCONNECTED ;
   wire [3:3]\NLW_display_timer_reg[24]_i_1_CO_UNCONNECTED ;
   wire [3:2]\NLW_player_display_timer_reg[24]_i_1_CO_UNCONNECTED ;
   wire [3:3]\NLW_player_display_timer_reg[24]_i_1_O_UNCONNECTED ;
@@ -446,6 +527,14 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I3(\FSM_onehot_current_state[10]_i_3_n_0 ),
         .I4(\FSM_onehot_current_state_reg_n_0_[9] ),
         .O(\FSM_onehot_current_state[10]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \FSM_onehot_current_state[10]_i_10 
+       (.I0(player_display_timer_reg[2]),
+        .I1(player_display_timer_reg[1]),
+        .I2(player_display_timer_reg[4]),
+        .I3(player_display_timer_reg[3]),
+        .O(\FSM_onehot_current_state[10]_i_10_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFE0EEE0EEE0EE)) 
     \FSM_onehot_current_state[10]_i_2 
@@ -461,9 +550,8 @@ module design_3_archery_fsm_0_0_archery_fsm
     \FSM_onehot_current_state[10]_i_3 
        (.I0(\FSM_onehot_current_state[10]_i_4_n_0 ),
         .I1(\FSM_onehot_current_state[10]_i_5_n_0 ),
-        .I2(play_arrow_i_13_n_0),
+        .I2(\FSM_onehot_current_state[10]_i_6_n_0 ),
         .O(\FSM_onehot_current_state[10]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'hFFFF7FFF)) 
     \FSM_onehot_current_state[10]_i_4 
@@ -471,9 +559,8 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I1(player_display_timer_reg[16]),
         .I2(player_display_timer_reg[13]),
         .I3(player_display_timer_reg[14]),
-        .I4(play_arrow_i_21_n_0),
+        .I4(\FSM_onehot_current_state[10]_i_7_n_0 ),
         .O(\FSM_onehot_current_state[10]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFB)) 
     \FSM_onehot_current_state[10]_i_5 
@@ -481,8 +568,41 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I1(player_display_timer_reg[8]),
         .I2(player_display_timer_reg[5]),
         .I3(player_display_timer_reg[6]),
-        .I4(play_arrow_i_19_n_0),
+        .I4(\FSM_onehot_current_state[10]_i_8_n_0 ),
         .O(\FSM_onehot_current_state[10]_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFD)) 
+    \FSM_onehot_current_state[10]_i_6 
+       (.I0(player_display_timer_reg[26]),
+        .I1(player_display_timer_reg[25]),
+        .I2(player_display_timer_reg[0]),
+        .I3(\FSM_onehot_current_state[10]_i_9_n_0 ),
+        .I4(\FSM_onehot_current_state[10]_i_10_n_0 ),
+        .O(\FSM_onehot_current_state[10]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFDF)) 
+    \FSM_onehot_current_state[10]_i_7 
+       (.I0(player_display_timer_reg[18]),
+        .I1(player_display_timer_reg[17]),
+        .I2(player_display_timer_reg[20]),
+        .I3(player_display_timer_reg[19]),
+        .O(\FSM_onehot_current_state[10]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \FSM_onehot_current_state[10]_i_8 
+       (.I0(player_display_timer_reg[10]),
+        .I1(player_display_timer_reg[9]),
+        .I2(player_display_timer_reg[12]),
+        .I3(player_display_timer_reg[11]),
+        .O(\FSM_onehot_current_state[10]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    \FSM_onehot_current_state[10]_i_9 
+       (.I0(player_display_timer_reg[22]),
+        .I1(player_display_timer_reg[21]),
+        .I2(player_display_timer_reg[24]),
+        .I3(player_display_timer_reg[23]),
+        .O(\FSM_onehot_current_state[10]_i_9_n_0 ));
   LUT6 #(
     .INIT(64'hF4F4F444F444F444)) 
     \FSM_onehot_current_state[11]_i_1 
@@ -496,25 +616,20 @@ module design_3_archery_fsm_0_0_archery_fsm
   LUT4 #(
     .INIT(16'hFF7F)) 
     \FSM_onehot_current_state[11]_i_10 
-       (.I0(display_timer_reg[25]),
-        .I1(display_timer_reg[24]),
-        .I2(display_timer_reg[27]),
-        .I3(display_timer_reg[26]),
+       (.I0(display_timer_reg[17]),
+        .I1(display_timer_reg[16]),
+        .I2(display_timer_reg[19]),
+        .I3(display_timer_reg[18]),
         .O(\FSM_onehot_current_state[11]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \FSM_onehot_current_state[11]_i_11 
-       (.I0(display_timer_reg[1]),
-        .I1(display_timer_reg[0]),
-        .I2(display_timer_reg[3]),
-        .I3(display_timer_reg[2]),
-        .O(\FSM_onehot_current_state[11]_i_11_n_0 ));
-  LUT3 #(
-    .INIT(8'hFE)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \FSM_onehot_current_state[11]_i_2 
        (.I0(\FSM_onehot_current_state[11]_i_5_n_0 ),
-        .I1(\FSM_onehot_current_state[11]_i_6_n_0 ),
-        .I2(\FSM_onehot_current_state[11]_i_7_n_0 ),
+        .I1(display_timer_reg[1]),
+        .I2(display_timer_reg[0]),
+        .I3(display_timer_reg[3]),
+        .I4(display_timer_reg[2]),
+        .I5(\FSM_onehot_current_state[11]_i_6_n_0 ),
         .O(\FSM_onehot_current_state[11]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hDDD0)) 
@@ -529,54 +644,54 @@ module design_3_archery_fsm_0_0_archery_fsm
     .INIT(32'hFFFFFFFE)) 
     \FSM_onehot_current_state[11]_i_4 
        (.I0(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[12] ),
         .I2(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[12] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[4] ),
         .I4(\FSM_onehot_current_state_reg_n_0_[8] ),
         .O(\FSM_onehot_current_state[11]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFF7)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \FSM_onehot_current_state[11]_i_5 
-       (.I0(display_timer_reg[14]),
-        .I1(display_timer_reg[15]),
-        .I2(display_timer_reg[12]),
-        .I3(display_timer_reg[13]),
-        .I4(\FSM_onehot_current_state[11]_i_8_n_0 ),
+       (.I0(\FSM_onehot_current_state[11]_i_7_n_0 ),
+        .I1(display_timer_reg[5]),
+        .I2(display_timer_reg[4]),
+        .I3(display_timer_reg[7]),
+        .I4(display_timer_reg[6]),
+        .I5(\FSM_onehot_current_state[11]_i_8_n_0 ),
         .O(\FSM_onehot_current_state[11]_i_5_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+    .INIT(32'hFFFFF7FF)) 
     \FSM_onehot_current_state[11]_i_6 
-       (.I0(display_timer_reg[6]),
-        .I1(display_timer_reg[7]),
-        .I2(display_timer_reg[4]),
-        .I3(display_timer_reg[5]),
+       (.I0(display_timer_reg[22]),
+        .I1(display_timer_reg[23]),
+        .I2(display_timer_reg[20]),
+        .I3(display_timer_reg[21]),
         .I4(\FSM_onehot_current_state[11]_i_9_n_0 ),
         .O(\FSM_onehot_current_state[11]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFBFFFFFF)) 
-    \FSM_onehot_current_state[11]_i_7 
-       (.I0(\FSM_onehot_current_state[11]_i_10_n_0 ),
-        .I1(display_timer_reg[21]),
-        .I2(display_timer_reg[20]),
-        .I3(display_timer_reg[23]),
-        .I4(display_timer_reg[22]),
-        .I5(\FSM_onehot_current_state[11]_i_11_n_0 ),
-        .O(\FSM_onehot_current_state[11]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF7F)) 
-    \FSM_onehot_current_state[11]_i_8 
-       (.I0(display_timer_reg[17]),
-        .I1(display_timer_reg[16]),
-        .I2(display_timer_reg[19]),
-        .I3(display_timer_reg[18]),
-        .O(\FSM_onehot_current_state[11]_i_8_n_0 ));
   LUT4 #(
     .INIT(16'hFFFD)) 
-    \FSM_onehot_current_state[11]_i_9 
+    \FSM_onehot_current_state[11]_i_7 
        (.I0(display_timer_reg[9]),
         .I1(display_timer_reg[8]),
         .I2(display_timer_reg[11]),
         .I3(display_timer_reg[10]),
+        .O(\FSM_onehot_current_state[11]_i_7_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFF7)) 
+    \FSM_onehot_current_state[11]_i_8 
+       (.I0(display_timer_reg[14]),
+        .I1(display_timer_reg[15]),
+        .I2(display_timer_reg[12]),
+        .I3(display_timer_reg[13]),
+        .I4(\FSM_onehot_current_state[11]_i_10_n_0 ),
+        .O(\FSM_onehot_current_state[11]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'hFF7F)) 
+    \FSM_onehot_current_state[11]_i_9 
+       (.I0(display_timer_reg[25]),
+        .I1(display_timer_reg[24]),
+        .I2(display_timer_reg[27]),
+        .I3(display_timer_reg[26]),
         .O(\FSM_onehot_current_state[11]_i_9_n_0 ));
   LUT6 #(
     .INIT(64'h8888F88888888888)) 
@@ -609,71 +724,88 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I5(\FSM_onehot_current_state[12]_i_2_n_0 ),
         .O(\FSM_onehot_current_state[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hEEEEFFFFEEECECEC)) 
+    .INIT(64'hFFFFFFFFFFF35500)) 
     \FSM_onehot_current_state[2]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\FSM_onehot_current_state[2]_i_2_n_0 ),
-        .I2(\FSM_onehot_current_state[8]_i_2_n_0 ),
-        .I3(\FSM_onehot_current_state[2]_i_3_n_0 ),
-        .I4(play_menu_i_4_n_0),
-        .I5(\FSM_onehot_current_state_reg_n_0_[1] ),
+       (.I0(play_menu_i_4_n_0),
+        .I1(shoot_event),
+        .I2(shoot_btn_d),
+        .I3(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I5(\FSM_onehot_current_state[2]_i_2_n_0 ),
         .O(\FSM_onehot_current_state[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT4 #(
-    .INIT(16'hDF00)) 
+  LUT6 #(
+    .INIT(64'hFFF8888888888888)) 
     \FSM_onehot_current_state[2]_i_2 
-       (.I0(\current_round_reg_n_0_[0] ),
-        .I1(\arrow_count_reg_n_0_[0] ),
-        .I2(\arrow_count_reg_n_0_[1] ),
-        .I3(arrow_count),
+       (.I0(arrow_count),
+        .I1(\FSM_onehot_current_state[2]_i_3_n_0 ),
+        .I2(\FSM_onehot_current_state[2]_i_4_n_0 ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
+        .I4(play_menu_i_4_n_0),
+        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
         .O(\FSM_onehot_current_state[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hDF)) 
     \FSM_onehot_current_state[2]_i_3 
+       (.I0(\arrow_count_reg_n_0_[1] ),
+        .I1(\arrow_count_reg_n_0_[0] ),
+        .I2(\current_round_reg_n_0_[0] ),
+        .O(\FSM_onehot_current_state[2]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \FSM_onehot_current_state[2]_i_4 
        (.I0(\FSM_onehot_current_state_reg_n_0_[12] ),
         .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
         .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
-        .O(\FSM_onehot_current_state[2]_i_3_n_0 ));
+        .O(\FSM_onehot_current_state[2]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCCC888EAAAEAAA)) 
+    .INIT(64'hFFFFBAAAFFAABAAA)) 
     \FSM_onehot_current_state[3]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .I2(play_menu_i_4_n_0),
-        .I3(\FSM_onehot_current_state[11]_i_4_n_0 ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+       (.I0(\FSM_onehot_current_state[3]_i_2_n_0 ),
+        .I1(shoot_btn_d),
+        .I2(shoot_event),
+        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[3] ),
         .I5(\FSM_onehot_current_state[8]_i_2_n_0 ),
         .O(\FSM_onehot_current_state[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAA800)) 
-    \FSM_onehot_current_state[4]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
+    .INIT(64'hFFB0B0B000000000)) 
+    \FSM_onehot_current_state[3]_i_2 
+       (.I0(shoot_btn_d),
+        .I1(shoot_event),
         .I2(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I3(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I3(\FSM_onehot_current_state[11]_i_4_n_0 ),
         .I4(play_menu_i_4_n_0),
         .I5(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .O(\FSM_onehot_current_state[3]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'hF444)) 
+    \FSM_onehot_current_state[4]_i_1 
+       (.I0(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I3(\FSM_onehot_current_state[12]_i_2_n_0 ),
         .O(\FSM_onehot_current_state[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFF5555FFF80000)) 
+    .INIT(64'hFFCCFFC8FFFFFF88)) 
     \FSM_onehot_current_state[5]_i_1 
-       (.I0(play_menu_i_4_n_0),
-        .I1(\FSM_onehot_current_state[5]_i_2_n_0 ),
-        .I2(\FSM_onehot_current_state[10]_i_3_n_0 ),
-        .I3(\FSM_onehot_current_state[11]_i_3_n_0 ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[4] ),
+       (.I0(\FSM_onehot_current_state[9]_i_2_n_0 ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I3(\FSM_onehot_current_state[5]_i_2_n_0 ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I5(play_menu_i_4_n_0),
         .O(\FSM_onehot_current_state[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT6 #(
+    .INIT(64'h8A8A8A8A8A8A8A00)) 
     \FSM_onehot_current_state[5]_i_2 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[8] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[12] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[0] ),
+       (.I0(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I1(start_btn_d),
+        .I2(start_btn),
+        .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[0] ),
+        .I5(\FSM_onehot_current_state_reg_n_0_[12] ),
         .O(\FSM_onehot_current_state[5]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAA80FFFFAA80AA80)) 
@@ -681,56 +813,141 @@ module design_3_archery_fsm_0_0_archery_fsm
        (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
         .I1(play_menu_i_4_n_0),
         .I2(\FSM_onehot_current_state[11]_i_4_n_0 ),
-        .I3(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I3(\FSM_onehot_current_state[6]_i_2_n_0 ),
         .I4(\FSM_onehot_current_state[10]_i_3_n_0 ),
         .I5(\FSM_onehot_current_state_reg_n_0_[5] ),
         .O(\FSM_onehot_current_state[6]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \FSM_onehot_current_state[6]_i_2 
+       (.I0(shoot_btn_d),
+        .I1(shoot_event),
+        .O(\FSM_onehot_current_state[6]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hF3F3F3F3F0808080)) 
+    .INIT(64'hFFFFCFCCEEEECCCC)) 
     \FSM_onehot_current_state[7]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\FSM_onehot_current_state[8]_i_2_n_0 ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .I3(play_menu_i_4_n_0),
-        .I4(\FSM_onehot_current_state[11]_i_4_n_0 ),
+       (.I0(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I1(\FSM_onehot_current_state[7]_i_2_n_0 ),
+        .I2(shoot_btn_d),
+        .I3(shoot_event),
+        .I4(\FSM_onehot_current_state_reg_n_0_[7] ),
         .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
         .O(\FSM_onehot_current_state[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAA800)) 
-    \FSM_onehot_current_state[8]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[8] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I3(\FSM_onehot_current_state[8]_i_2_n_0 ),
-        .I4(play_menu_i_4_n_0),
-        .I5(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .O(\FSM_onehot_current_state[8]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \FSM_onehot_current_state[8]_i_2 
+    .INIT(64'hFFB0B0B000000000)) 
+    \FSM_onehot_current_state[7]_i_2 
        (.I0(shoot_btn_d),
         .I1(shoot_event),
+        .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I3(\FSM_onehot_current_state[11]_i_4_n_0 ),
+        .I4(play_menu_i_4_n_0),
+        .I5(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .O(\FSM_onehot_current_state[7]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'hF444)) 
+    \FSM_onehot_current_state[8]_i_1 
+       (.I0(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[8] ),
+        .I3(\FSM_onehot_current_state[12]_i_2_n_0 ),
+        .O(\FSM_onehot_current_state[8]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \FSM_onehot_current_state[8]_i_2 
+       (.I0(\FSM_onehot_current_state[8]_i_3_n_0 ),
+        .I1(\FSM_onehot_current_state[8]_i_4_n_0 ),
+        .I2(\FSM_onehot_current_state[8]_i_5_n_0 ),
         .O(\FSM_onehot_current_state[8]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFF7)) 
+    \FSM_onehot_current_state[8]_i_3 
+       (.I0(arrow_land_timer_reg[13]),
+        .I1(arrow_land_timer_reg[14]),
+        .I2(arrow_land_timer_reg[11]),
+        .I3(arrow_land_timer_reg[12]),
+        .I4(\FSM_onehot_current_state[8]_i_6_n_0 ),
+        .O(\FSM_onehot_current_state[8]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \FSM_onehot_current_state[8]_i_4 
+       (.I0(arrow_land_timer_reg[5]),
+        .I1(arrow_land_timer_reg[6]),
+        .I2(arrow_land_timer_reg[3]),
+        .I3(arrow_land_timer_reg[4]),
+        .I4(\FSM_onehot_current_state[8]_i_7_n_0 ),
+        .O(\FSM_onehot_current_state[8]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFE0000FFEEFF00)) 
+    .INIT(64'hFFFFFFFFFFFFFBFF)) 
+    \FSM_onehot_current_state[8]_i_5 
+       (.I0(\FSM_onehot_current_state[8]_i_8_n_0 ),
+        .I1(arrow_land_timer_reg[19]),
+        .I2(arrow_land_timer_reg[20]),
+        .I3(arrow_land_timer_reg[22]),
+        .I4(arrow_land_timer_reg[21]),
+        .I5(\FSM_onehot_current_state[8]_i_9_n_0 ),
+        .O(\FSM_onehot_current_state[8]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFDF)) 
+    \FSM_onehot_current_state[8]_i_6 
+       (.I0(arrow_land_timer_reg[16]),
+        .I1(arrow_land_timer_reg[15]),
+        .I2(arrow_land_timer_reg[18]),
+        .I3(arrow_land_timer_reg[17]),
+        .O(\FSM_onehot_current_state[8]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFDF)) 
+    \FSM_onehot_current_state[8]_i_7 
+       (.I0(arrow_land_timer_reg[8]),
+        .I1(arrow_land_timer_reg[7]),
+        .I2(arrow_land_timer_reg[10]),
+        .I3(arrow_land_timer_reg[9]),
+        .O(\FSM_onehot_current_state[8]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'hFF7F)) 
+    \FSM_onehot_current_state[8]_i_8 
+       (.I0(arrow_land_timer_reg[24]),
+        .I1(arrow_land_timer_reg[23]),
+        .I2(arrow_land_timer_reg[26]),
+        .I3(arrow_land_timer_reg[25]),
+        .O(\FSM_onehot_current_state[8]_i_8_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFBF)) 
+    \FSM_onehot_current_state[8]_i_9 
+       (.I0(arrow_land_timer_reg[0]),
+        .I1(arrow_land_timer_reg[27]),
+        .I2(arrow_land_timer_reg[28]),
+        .I3(arrow_land_timer_reg[2]),
+        .I4(arrow_land_timer_reg[1]),
+        .O(\FSM_onehot_current_state[8]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hFE00FE00FAF0FE00)) 
     \FSM_onehot_current_state[9]_i_1 
-       (.I0(\FSM_onehot_current_state[10]_i_3_n_0 ),
-        .I1(\FSM_onehot_current_state[11]_i_3_n_0 ),
-        .I2(\FSM_onehot_current_state[9]_i_2_n_0 ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[9] ),
-        .I5(play_menu_i_4_n_0),
+       (.I0(\FSM_onehot_current_state[9]_i_2_n_0 ),
+        .I1(\FSM_onehot_current_state[9]_i_3_n_0 ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[8] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[9] ),
+        .I4(start_btn),
+        .I5(start_btn_d),
         .O(\FSM_onehot_current_state[9]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFE0EE)) 
+    \FSM_onehot_current_state[9]_i_2 
+       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I2(shoot_btn_d),
+        .I3(shoot_event),
+        .I4(\FSM_onehot_current_state[10]_i_3_n_0 ),
+        .O(\FSM_onehot_current_state[9]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \FSM_onehot_current_state[9]_i_2 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[12] ),
+    \FSM_onehot_current_state[9]_i_3 
+       (.I0(\FSM_onehot_current_state_reg_n_0_[4] ),
         .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[12] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .O(\FSM_onehot_current_state[9]_i_2_n_0 ));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+        .O(\FSM_onehot_current_state[9]_i_3_n_0 ));
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDSE #(
     .INIT(1'b1)) 
     \FSM_onehot_current_state_reg[0] 
@@ -739,7 +956,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[0]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[0] ),
         .S(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[10] 
@@ -748,7 +965,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[10]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[10] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[11] 
@@ -757,7 +974,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[11]_i_1_n_0 ),
         .Q(arrow_count),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[12] 
@@ -766,7 +983,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[12]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[12] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[1] 
@@ -775,7 +992,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[1]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[1] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[2] 
@@ -784,7 +1001,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[2]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[2] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[3] 
@@ -793,7 +1010,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[3]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[3] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[4] 
@@ -802,7 +1019,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[4]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[4] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[5] 
@@ -811,7 +1028,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[5]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[5] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[6] 
@@ -820,7 +1037,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[6]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[6] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[7] 
@@ -829,7 +1046,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[7]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[7] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[8] 
@@ -838,7 +1055,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state[8]_i_1_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[8] ),
         .R(play_menu_i_1_n_0));
-  (* FSM_ENCODED_STATES = "PLAYER1_CALC:0000000010000,PLAYER1_SHOOT:0000000001000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SHOOT:0000010000000,PLAYER2_SCORE:0001000000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
+  (* FSM_ENCODED_STATES = "PLAYER1_SHOOT:0000000001000,PLAYER1_CALC:0000000010000,PLAYER1_AIM:0000000000100,UPDATE_ROUND:0100000000000,GAME_OVER:1000000000000,DISPLAY_SCORE:0010000000000,MAIN_MENU:0000000000010,RESET_STATE:0000000000001,PLAYER2_SCORE:0001000000000,PLAYER2_SHOOT:0000010000000,PLAYER2_CALC:0000100000000,PLAYER2_AIM:0000001000000,PLAYER1_SCORE:0000000100000" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_current_state_reg[9] 
@@ -849,7 +1066,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .R(play_menu_i_1_n_0));
   GND GND
        (.G(\<const0> ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h0026)) 
     \arrow_count[0]_i_1 
@@ -858,7 +1075,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I2(\arrow_count_reg_n_0_[1] ),
         .I3(\p1_score[6]_i_1_n_0 ),
         .O(\arrow_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h0062)) 
     \arrow_count[1]_i_1 
@@ -879,7 +1096,249 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\arrow_count[1]_i_1_n_0 ),
         .Q(\arrow_count_reg_n_0_[1] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h1F)) 
+    \arrow_land_timer[0]_i_1 
+       (.I0(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I2(resetn),
+        .O(\arrow_land_timer[0]_i_1_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \arrow_land_timer[0]_i_3 
+       (.I0(arrow_land_timer_reg[0]),
+        .O(\arrow_land_timer[0]_i_3_n_0 ));
+  FDRE \arrow_land_timer_reg[0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[0]_i_2_n_7 ),
+        .Q(arrow_land_timer_reg[0]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[0]_i_2 
+       (.CI(1'b0),
+        .CO({\arrow_land_timer_reg[0]_i_2_n_0 ,\arrow_land_timer_reg[0]_i_2_n_1 ,\arrow_land_timer_reg[0]_i_2_n_2 ,\arrow_land_timer_reg[0]_i_2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b1}),
+        .O({\arrow_land_timer_reg[0]_i_2_n_4 ,\arrow_land_timer_reg[0]_i_2_n_5 ,\arrow_land_timer_reg[0]_i_2_n_6 ,\arrow_land_timer_reg[0]_i_2_n_7 }),
+        .S({arrow_land_timer_reg[3:1],\arrow_land_timer[0]_i_3_n_0 }));
+  FDRE \arrow_land_timer_reg[10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[8]_i_1_n_5 ),
+        .Q(arrow_land_timer_reg[10]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[8]_i_1_n_4 ),
+        .Q(arrow_land_timer_reg[11]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[12]_i_1_n_7 ),
+        .Q(arrow_land_timer_reg[12]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[12]_i_1 
+       (.CI(\arrow_land_timer_reg[8]_i_1_n_0 ),
+        .CO({\arrow_land_timer_reg[12]_i_1_n_0 ,\arrow_land_timer_reg[12]_i_1_n_1 ,\arrow_land_timer_reg[12]_i_1_n_2 ,\arrow_land_timer_reg[12]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\arrow_land_timer_reg[12]_i_1_n_4 ,\arrow_land_timer_reg[12]_i_1_n_5 ,\arrow_land_timer_reg[12]_i_1_n_6 ,\arrow_land_timer_reg[12]_i_1_n_7 }),
+        .S(arrow_land_timer_reg[15:12]));
+  FDRE \arrow_land_timer_reg[13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[12]_i_1_n_6 ),
+        .Q(arrow_land_timer_reg[13]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[12]_i_1_n_5 ),
+        .Q(arrow_land_timer_reg[14]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[12]_i_1_n_4 ),
+        .Q(arrow_land_timer_reg[15]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[16] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[16]_i_1_n_7 ),
+        .Q(arrow_land_timer_reg[16]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[16]_i_1 
+       (.CI(\arrow_land_timer_reg[12]_i_1_n_0 ),
+        .CO({\arrow_land_timer_reg[16]_i_1_n_0 ,\arrow_land_timer_reg[16]_i_1_n_1 ,\arrow_land_timer_reg[16]_i_1_n_2 ,\arrow_land_timer_reg[16]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\arrow_land_timer_reg[16]_i_1_n_4 ,\arrow_land_timer_reg[16]_i_1_n_5 ,\arrow_land_timer_reg[16]_i_1_n_6 ,\arrow_land_timer_reg[16]_i_1_n_7 }),
+        .S(arrow_land_timer_reg[19:16]));
+  FDRE \arrow_land_timer_reg[17] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[16]_i_1_n_6 ),
+        .Q(arrow_land_timer_reg[17]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[18] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[16]_i_1_n_5 ),
+        .Q(arrow_land_timer_reg[18]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[19] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[16]_i_1_n_4 ),
+        .Q(arrow_land_timer_reg[19]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[0]_i_2_n_6 ),
+        .Q(arrow_land_timer_reg[1]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[20] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[20]_i_1_n_7 ),
+        .Q(arrow_land_timer_reg[20]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[20]_i_1 
+       (.CI(\arrow_land_timer_reg[16]_i_1_n_0 ),
+        .CO({\arrow_land_timer_reg[20]_i_1_n_0 ,\arrow_land_timer_reg[20]_i_1_n_1 ,\arrow_land_timer_reg[20]_i_1_n_2 ,\arrow_land_timer_reg[20]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\arrow_land_timer_reg[20]_i_1_n_4 ,\arrow_land_timer_reg[20]_i_1_n_5 ,\arrow_land_timer_reg[20]_i_1_n_6 ,\arrow_land_timer_reg[20]_i_1_n_7 }),
+        .S(arrow_land_timer_reg[23:20]));
+  FDRE \arrow_land_timer_reg[21] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[20]_i_1_n_6 ),
+        .Q(arrow_land_timer_reg[21]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[22] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[20]_i_1_n_5 ),
+        .Q(arrow_land_timer_reg[22]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[23] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[20]_i_1_n_4 ),
+        .Q(arrow_land_timer_reg[23]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[24] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[24]_i_1_n_7 ),
+        .Q(arrow_land_timer_reg[24]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[24]_i_1 
+       (.CI(\arrow_land_timer_reg[20]_i_1_n_0 ),
+        .CO({\arrow_land_timer_reg[24]_i_1_n_0 ,\arrow_land_timer_reg[24]_i_1_n_1 ,\arrow_land_timer_reg[24]_i_1_n_2 ,\arrow_land_timer_reg[24]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\arrow_land_timer_reg[24]_i_1_n_4 ,\arrow_land_timer_reg[24]_i_1_n_5 ,\arrow_land_timer_reg[24]_i_1_n_6 ,\arrow_land_timer_reg[24]_i_1_n_7 }),
+        .S(arrow_land_timer_reg[27:24]));
+  FDRE \arrow_land_timer_reg[25] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[24]_i_1_n_6 ),
+        .Q(arrow_land_timer_reg[25]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[26] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[24]_i_1_n_5 ),
+        .Q(arrow_land_timer_reg[26]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[27] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[24]_i_1_n_4 ),
+        .Q(arrow_land_timer_reg[27]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[28] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[28]_i_1_n_7 ),
+        .Q(arrow_land_timer_reg[28]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[28]_i_1 
+       (.CI(\arrow_land_timer_reg[24]_i_1_n_0 ),
+        .CO(\NLW_arrow_land_timer_reg[28]_i_1_CO_UNCONNECTED [3:0]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_arrow_land_timer_reg[28]_i_1_O_UNCONNECTED [3:1],\arrow_land_timer_reg[28]_i_1_n_7 }),
+        .S({1'b0,1'b0,1'b0,arrow_land_timer_reg[28]}));
+  FDRE \arrow_land_timer_reg[2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[0]_i_2_n_5 ),
+        .Q(arrow_land_timer_reg[2]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[0]_i_2_n_4 ),
+        .Q(arrow_land_timer_reg[3]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[4]_i_1_n_7 ),
+        .Q(arrow_land_timer_reg[4]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[4]_i_1 
+       (.CI(\arrow_land_timer_reg[0]_i_2_n_0 ),
+        .CO({\arrow_land_timer_reg[4]_i_1_n_0 ,\arrow_land_timer_reg[4]_i_1_n_1 ,\arrow_land_timer_reg[4]_i_1_n_2 ,\arrow_land_timer_reg[4]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\arrow_land_timer_reg[4]_i_1_n_4 ,\arrow_land_timer_reg[4]_i_1_n_5 ,\arrow_land_timer_reg[4]_i_1_n_6 ,\arrow_land_timer_reg[4]_i_1_n_7 }),
+        .S(arrow_land_timer_reg[7:4]));
+  FDRE \arrow_land_timer_reg[5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[4]_i_1_n_6 ),
+        .Q(arrow_land_timer_reg[5]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[4]_i_1_n_5 ),
+        .Q(arrow_land_timer_reg[6]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[4]_i_1_n_4 ),
+        .Q(arrow_land_timer_reg[7]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  FDRE \arrow_land_timer_reg[8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[8]_i_1_n_7 ),
+        .Q(arrow_land_timer_reg[8]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  CARRY4 \arrow_land_timer_reg[8]_i_1 
+       (.CI(\arrow_land_timer_reg[4]_i_1_n_0 ),
+        .CO({\arrow_land_timer_reg[8]_i_1_n_0 ,\arrow_land_timer_reg[8]_i_1_n_1 ,\arrow_land_timer_reg[8]_i_1_n_2 ,\arrow_land_timer_reg[8]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\arrow_land_timer_reg[8]_i_1_n_4 ,\arrow_land_timer_reg[8]_i_1_n_5 ,\arrow_land_timer_reg[8]_i_1_n_6 ,\arrow_land_timer_reg[8]_i_1_n_7 }),
+        .S(arrow_land_timer_reg[11:8]));
+  FDRE \arrow_land_timer_reg[9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\arrow_land_timer_reg[8]_i_1_n_6 ),
+        .Q(arrow_land_timer_reg[9]),
+        .R(\arrow_land_timer[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h0000AAEA)) 
     \current_round[0]_i_1 
@@ -904,16 +1363,16 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I3(difficulty[0]),
         .O(\difficulty[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0044FFF400440044)) 
+    .INIT(64'h0F0F2F2200002222)) 
     \difficulty[0]_i_2 
-       (.I0(right_btn_d),
-        .I1(right_btn),
-        .I2(difficulty[0]),
-        .I3(difficulty[1]),
-        .I4(left_btn_d),
+       (.I0(right_btn),
+        .I1(right_btn_d),
+        .I2(left_btn_d),
+        .I3(difficulty[0]),
+        .I4(difficulty[1]),
         .I5(left_btn),
         .O(\difficulty[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \difficulty[1]_i_1 
@@ -922,14 +1381,14 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I2(difficulty[1]),
         .O(\difficulty[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFF4404FF0F0000)) 
+    .INIT(64'hFF22FF00FF020F00)) 
     \difficulty[1]_i_2 
-       (.I0(right_btn_d),
-        .I1(right_btn),
+       (.I0(right_btn),
+        .I1(right_btn_d),
         .I2(left_btn),
-        .I3(left_btn_d),
-        .I4(difficulty[1]),
-        .I5(difficulty[0]),
+        .I3(difficulty[1]),
+        .I4(difficulty[0]),
+        .I5(left_btn_d),
         .O(difficulty1_in));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
@@ -1176,52 +1635,58 @@ module design_3_archery_fsm_0_0_archery_fsm
         .Q(display_timer_reg[9]),
         .R(\display_timer[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0020002000FF0020)) 
+    .INIT(64'h0000030200000202)) 
     fire_pulse_inferred_i_1
-       (.I0(play_menu_i_5_n_0),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .I3(\FSM_onehot_current_state[9]_i_2_n_0 ),
-        .I4(fire_pulse_inferred_i_2_n_0),
-        .I5(fire_pulse_inferred_i_3_n_0),
+       (.I0(fire_pulse_inferred_i_2_n_0),
+        .I1(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I2(\FSM_onehot_current_state[9]_i_3_n_0 ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I4(fire_pulse_inferred_i_3_n_0),
+        .I5(play_menu_i_6_n_0),
         .O(fire_pulse));
   LUT6 #(
-    .INIT(64'h0000000000000010)) 
+    .INIT(64'h0000000000000004)) 
     fire_pulse_inferred_i_2
-       (.I0(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .I3(arrow_count),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(fire_pulse_inferred_i_4_n_0),
+        .I1(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[9] ),
+        .I5(\FSM_onehot_current_state_reg_n_0_[10] ),
         .O(fire_pulse_inferred_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     fire_pulse_inferred_i_3
-       (.I0(\FSM_onehot_current_state_reg_n_0_[10] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[9] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[8] ),
+       (.I0(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I1(arrow_count),
         .O(fire_pulse_inferred_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    fire_pulse_inferred_i_4
+       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .O(fire_pulse_inferred_i_4_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \game_state_reg[0]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[9] ),
-        .I2(arrow_count),
+       (.I0(\FSM_onehot_current_state_reg_n_0_[9] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[7] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I5(arrow_count),
         .O(current_state_reg[0]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \game_state_reg[1]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[10] ),
-        .I3(arrow_count),
-        .I4(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[3] ),
+       (.I0(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I4(arrow_count),
+        .I5(\FSM_onehot_current_state_reg_n_0_[10] ),
         .O(current_state_reg[1]));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
@@ -1232,7 +1697,6 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
         .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
         .O(current_state_reg[2]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \game_state_reg[3]_i_1 
@@ -1462,7 +1926,7 @@ module design_3_archery_fsm_0_0_archery_fsm
        (.I0(p1_score[0]),
         .I1(score_in[0]),
         .O(p_0_in__1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h8778)) 
     \p1_score[1]_i_1 
@@ -1481,7 +1945,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I4(score_in[2]),
         .I5(p1_score[2]),
         .O(p_0_in__1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hE81717E8)) 
     \p1_score[3]_i_1 
@@ -1501,7 +1965,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I4(score_in[3]),
         .I5(p1_score[4]),
         .O(p_0_in__1[4]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'hF880)) 
     \p1_score[4]_i_2 
@@ -1510,22 +1974,22 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I2(p1_score[1]),
         .I3(score_in[1]),
         .O(\p1_score[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \p1_score[5]_i_1 
        (.I0(p1_score[4]),
-        .I1(\p1_score[6]_i_4_n_0 ),
+        .I1(\p1_score[6]_i_5_n_0 ),
         .I2(p1_score[5]),
         .O(p_0_in__1[5]));
   LUT6 #(
-    .INIT(64'h00000020FFFFFFFF)) 
+    .INIT(64'h00000008FFFFFFFF)) 
     \p1_score[6]_i_1 
-       (.I0(play_menu_i_5_n_0),
-        .I1(play_menu_i_4_n_0),
-        .I2(\FSM_onehot_current_state_reg_n_0_[12] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .I4(play_menu_i_3_n_0),
+       (.I0(play_menu_i_6_n_0),
+        .I1(\p1_score[6]_i_4_n_0 ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I4(arrow_count),
         .I5(resetn),
         .O(\p1_score[6]_i_1_n_0 ));
   LUT3 #(
@@ -1535,25 +1999,34 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I1(\FSM_onehot_current_state_reg_n_0_[4] ),
         .I2(score_valid),
         .O(\p1_score[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \p1_score[6]_i_3 
-       (.I0(\p1_score[6]_i_4_n_0 ),
+       (.I0(\p1_score[6]_i_5_n_0 ),
         .I1(p1_score[4]),
         .I2(p1_score[5]),
         .I3(p1_score[6]),
         .O(p_0_in__1[6]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'h00000400)) 
+    \p1_score[6]_i_4 
+       (.I0(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[12] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I3(start_btn),
+        .I4(start_btn_d),
+        .O(\p1_score[6]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hEEE8E888)) 
-    \p1_score[6]_i_4 
+    \p1_score[6]_i_5 
        (.I0(score_in[3]),
         .I1(p1_score[3]),
         .I2(\p1_score[4]_i_2_n_0 ),
         .I3(score_in[2]),
         .I4(p1_score[2]),
-        .O(\p1_score[6]_i_4_n_0 ));
+        .O(\p1_score[6]_i_5_n_0 ));
   FDRE \p1_score_reg[0] 
        (.C(clk),
         .CE(\p1_score[6]_i_2_n_0 ),
@@ -1621,7 +2094,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I4(score_in[2]),
         .I5(p2_score[2]),
         .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hE81717E8)) 
     \p2_score[3]_i_1 
@@ -1650,7 +2123,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I2(p2_score[1]),
         .I3(score_in[1]),
         .O(\p2_score[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \p2_score[5]_i_1 
@@ -1666,7 +2139,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
         .O(\p2_score[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \p2_score[6]_i_2 
@@ -1675,7 +2148,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I2(p2_score[5]),
         .I3(p2_score[6]),
         .O(p_0_in__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hEEE8E888)) 
     \p2_score[6]_i_3 
@@ -1728,7 +2201,7 @@ module design_3_archery_fsm_0_0_archery_fsm
         .Q(p2_score[6]),
         .R(\p1_score[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFEEEFEEEFEEE)) 
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     play_arrow_i_1
        (.I0(play_arrow_i_2_n_0),
         .I1(play_arrow_i_3_n_0),
@@ -1738,210 +2211,226 @@ module design_3_archery_fsm_0_0_archery_fsm
         .I5(play_arrow_i_7_n_0),
         .O(play_arrow0));
   LUT6 #(
-    .INIT(64'hAAAAAA8000000000)) 
-    play_arrow_i_10
-       (.I0(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I2(play_menu_i_4_n_0),
-        .I3(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I5(play_arrow_i_4_n_0),
-        .O(play_arrow_i_10_n_0));
-  LUT6 #(
-    .INIT(64'hAAAA22A200000000)) 
-    play_arrow_i_11
-       (.I0(play_menu_i_6_n_0),
-        .I1(\FSM_onehot_current_state[8]_i_2_n_0 ),
-        .I2(play_arrow_i_16_n_0),
-        .I3(play_menu_i_4_n_0),
-        .I4(play_menu_i_3_n_0),
-        .I5(play_arrow_i_4_n_0),
-        .O(play_arrow_i_11_n_0));
-  LUT6 #(
-    .INIT(64'h0040000000000000)) 
-    play_arrow_i_12
-       (.I0(start_btn_d),
-        .I1(start_btn),
-        .I2(\FSM_onehot_current_state_reg_n_0_[12] ),
-        .I3(arrow_count),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(play_arrow_i_8_n_0),
-        .O(play_arrow_i_12_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFD)) 
-    play_arrow_i_13
-       (.I0(player_display_timer_reg[26]),
-        .I1(player_display_timer_reg[25]),
-        .I2(player_display_timer_reg[0]),
-        .I3(play_arrow_i_17_n_0),
-        .I4(play_arrow_i_18_n_0),
-        .O(play_arrow_i_13_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    play_arrow_i_14
-       (.I0(play_arrow_i_19_n_0),
-        .I1(play_arrow_i_20_n_0),
-        .I2(play_arrow_i_21_n_0),
-        .I3(play_arrow_i_22_n_0),
-        .O(play_arrow_i_14_n_0));
-  LUT6 #(
-    .INIT(64'hC040C0000000C000)) 
-    play_arrow_i_15
-       (.I0(\FSM_onehot_current_state[9]_i_2_n_0 ),
-        .I1(play_arrow_i_8_n_0),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(play_arrow_i_23_n_0),
-        .I4(arrow_count),
-        .I5(play_arrow_i_24_n_0),
-        .O(play_arrow_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    play_arrow_i_16
-       (.I0(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .O(play_arrow_i_16_n_0));
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    play_arrow_i_17
-       (.I0(player_display_timer_reg[22]),
-        .I1(player_display_timer_reg[21]),
-        .I2(player_display_timer_reg[24]),
-        .I3(player_display_timer_reg[23]),
-        .O(play_arrow_i_17_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    play_arrow_i_18
-       (.I0(player_display_timer_reg[2]),
-        .I1(player_display_timer_reg[1]),
-        .I2(player_display_timer_reg[4]),
-        .I3(player_display_timer_reg[3]),
-        .O(play_arrow_i_18_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    play_arrow_i_19
-       (.I0(player_display_timer_reg[10]),
-        .I1(player_display_timer_reg[9]),
-        .I2(player_display_timer_reg[12]),
-        .I3(player_display_timer_reg[11]),
-        .O(play_arrow_i_19_n_0));
-  LUT6 #(
-    .INIT(64'h00F0000000400000)) 
-    play_arrow_i_2
-       (.I0(arrow_count),
-        .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I2(play_arrow_i_8_n_0),
-        .I3(play_menu_i_4_n_0),
-        .I4(play_arrow_i_9_n_0),
-        .I5(\FSM_onehot_current_state[2]_i_2_n_0 ),
-        .O(play_arrow_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    play_arrow_i_20
-       (.I0(player_display_timer_reg[6]),
-        .I1(player_display_timer_reg[5]),
-        .I2(player_display_timer_reg[8]),
-        .I3(player_display_timer_reg[7]),
-        .O(play_arrow_i_20_n_0));
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    play_arrow_i_21
-       (.I0(player_display_timer_reg[18]),
-        .I1(player_display_timer_reg[17]),
-        .I2(player_display_timer_reg[20]),
-        .I3(player_display_timer_reg[19]),
-        .O(play_arrow_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    play_arrow_i_22
-       (.I0(player_display_timer_reg[14]),
-        .I1(player_display_timer_reg[13]),
-        .I2(player_display_timer_reg[16]),
-        .I3(player_display_timer_reg[15]),
-        .O(play_arrow_i_22_n_0));
-  LUT3 #(
-    .INIT(8'h08)) 
-    play_arrow_i_23
-       (.I0(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I1(start_btn),
-        .I2(start_btn_d),
-        .O(play_arrow_i_23_n_0));
-  LUT3 #(
-    .INIT(8'hDF)) 
-    play_arrow_i_24
-       (.I0(\arrow_count_reg_n_0_[1] ),
-        .I1(\arrow_count_reg_n_0_[0] ),
-        .I2(\current_round_reg_n_0_[0] ),
-        .O(play_arrow_i_24_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFECCCCCCFE)) 
-    play_arrow_i_3
-       (.I0(play_arrow_i_10_n_0),
-        .I1(play_arrow_i_11_n_0),
-        .I2(play_arrow_i_12_n_0),
-        .I3(play_arrow_i_13_n_0),
-        .I4(play_arrow_i_14_n_0),
-        .I5(play_arrow_i_15_n_0),
-        .O(play_arrow_i_3_n_0));
-  LUT6 #(
     .INIT(64'h0000000000000001)) 
-    play_arrow_i_4
+    play_arrow_i_10
        (.I0(\FSM_onehot_current_state_reg_n_0_[7] ),
         .I1(\FSM_onehot_current_state_reg_n_0_[10] ),
         .I2(\FSM_onehot_current_state_reg_n_0_[9] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
         .I4(\FSM_onehot_current_state_reg_n_0_[12] ),
         .I5(arrow_count),
-        .O(play_arrow_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h8A8A8A8A8A8A8A00)) 
-    play_arrow_i_5
-       (.I0(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .O(play_arrow_i_10_n_0));
+  LUT3 #(
+    .INIT(8'hD0)) 
+    play_arrow_i_11
+       (.I0(start_btn),
         .I1(start_btn_d),
-        .I2(start_btn),
-        .I3(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .O(play_arrow_i_5_n_0));
+        .I2(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .O(play_arrow_i_11_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    play_arrow_i_6
-       (.I0(\FSM_onehot_current_state[8]_i_2_n_0 ),
+    .INIT(64'hFFFFFFFF40FF4040)) 
+    play_arrow_i_12
+       (.I0(start_btn_d),
+        .I1(start_btn),
+        .I2(\FSM_onehot_current_state_reg_n_0_[0] ),
+        .I3(shoot_btn_d),
+        .I4(shoot_event),
+        .I5(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .O(play_arrow_i_12_n_0));
+  LUT6 #(
+    .INIT(64'h44F4040400000000)) 
+    play_arrow_i_13
+       (.I0(play_menu_i_4_n_0),
+        .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I2(arrow_count),
+        .I3(\FSM_onehot_current_state[9]_i_3_n_0 ),
+        .I4(\FSM_onehot_current_state[2]_i_3_n_0 ),
+        .I5(play_arrow_i_14_n_0),
+        .O(play_arrow_i_13_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    play_arrow_i_14
+       (.I0(play_menu_i_6_n_0),
+        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .O(play_arrow_i_14_n_0));
+  LUT6 #(
+    .INIT(64'h404040FF40404040)) 
+    play_arrow_i_15
+       (.I0(shoot_btn_d),
+        .I1(shoot_event),
+        .I2(play_arrow_i_23_n_0),
+        .I3(arrow_count),
+        .I4(\FSM_onehot_current_state_reg_n_0_[12] ),
+        .I5(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .O(play_arrow_i_15_n_0));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    play_arrow_i_16
+       (.I0(\FSM_onehot_current_state_reg_n_0_[8] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[9] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[10] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .O(play_arrow_i_16_n_0));
+  LUT6 #(
+    .INIT(64'h0800080008080800)) 
+    play_arrow_i_17
+       (.I0(play_arrow_i_16_n_0),
+        .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I2(\FSM_onehot_current_state[6]_i_2_n_0 ),
+        .I3(play_arrow_i_24_n_0),
+        .I4(play_arrow_i_23_n_0),
+        .I5(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .O(play_arrow_i_17_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFEAEE00000000)) 
+    play_arrow_i_18
+       (.I0(\FSM_onehot_current_state_reg_n_0_[0] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I2(start_btn_d),
+        .I3(start_btn),
+        .I4(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I5(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .O(play_arrow_i_18_n_0));
+  LUT6 #(
+    .INIT(64'hAAEAAAEAAAEA0000)) 
+    play_arrow_i_19
+       (.I0(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I2(start_btn),
+        .I3(start_btn_d),
+        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .O(play_arrow_i_19_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFACCCA000A000)) 
+    play_arrow_i_2
+       (.I0(play_arrow_i_8_n_0),
+        .I1(play_menu_i_5_n_0),
+        .I2(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I5(play_arrow_i_9_n_0),
+        .O(play_arrow_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h0000400000000000)) 
+    play_arrow_i_20
+       (.I0(shoot_btn_d),
+        .I1(shoot_event),
+        .I2(arrow_count),
+        .I3(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I4(play_menu_i_4_n_0),
+        .I5(\FSM_onehot_current_state[2]_i_3_n_0 ),
+        .O(play_arrow_i_20_n_0));
+  LUT6 #(
+    .INIT(64'h5155000000000000)) 
+    play_arrow_i_21
+       (.I0(\FSM_onehot_current_state[9]_i_3_n_0 ),
+        .I1(\arrow_count_reg_n_0_[1] ),
+        .I2(\arrow_count_reg_n_0_[0] ),
+        .I3(\current_round_reg_n_0_[0] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I5(play_menu_i_6_n_0),
+        .O(play_arrow_i_21_n_0));
+  LUT6 #(
+    .INIT(64'h4444004400400040)) 
+    play_arrow_i_22
+       (.I0(play_menu_i_4_n_0),
         .I1(play_menu_i_6_n_0),
-        .I2(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[10] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[9] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[8] ),
-        .O(play_arrow_i_6_n_0));
+        .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I3(arrow_count),
+        .I4(\FSM_onehot_current_state[2]_i_3_n_0 ),
+        .I5(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .O(play_arrow_i_22_n_0));
   LUT6 #(
     .INIT(64'h5F5F115F5F5F5F5F)) 
-    play_arrow_i_7
+    play_arrow_i_23
        (.I0(play_menu_i_4_n_0),
         .I1(arrow_count),
-        .I2(\FSM_onehot_current_state[9]_i_2_n_0 ),
+        .I2(\FSM_onehot_current_state[9]_i_3_n_0 ),
         .I3(\arrow_count_reg_n_0_[1] ),
         .I4(\arrow_count_reg_n_0_[0] ),
         .I5(\current_round_reg_n_0_[0] ),
+        .O(play_arrow_i_23_n_0));
+  LUT6 #(
+    .INIT(64'h55101110FF101110)) 
+    play_arrow_i_24
+       (.I0(play_menu_i_4_n_0),
+        .I1(arrow_count),
+        .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I4(\FSM_onehot_current_state[2]_i_3_n_0 ),
+        .I5(\FSM_onehot_current_state[9]_i_3_n_0 ),
+        .O(play_arrow_i_24_n_0));
+  LUT6 #(
+    .INIT(64'h8080808088888880)) 
+    play_arrow_i_3
+       (.I0(play_arrow_i_10_n_0),
+        .I1(play_arrow_i_11_n_0),
+        .I2(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[0] ),
+        .I5(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .O(play_arrow_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'hF4000000)) 
+    play_arrow_i_4
+       (.I0(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(play_arrow_i_12_n_0),
+        .I4(play_arrow_i_10_n_0),
+        .O(play_arrow_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h88888B8888888888)) 
+    play_arrow_i_5
+       (.I0(play_arrow_i_13_n_0),
+        .I1(\FSM_onehot_current_state[10]_i_3_n_0 ),
+        .I2(play_menu_i_4_n_0),
+        .I3(\FSM_onehot_current_state_reg_n_0_[12] ),
+        .I4(arrow_count),
+        .I5(play_arrow_i_14_n_0),
+        .O(play_arrow_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF4000000)) 
+    play_arrow_i_6
+       (.I0(\FSM_onehot_current_state[8]_i_2_n_0 ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(play_arrow_i_15_n_0),
+        .I4(play_arrow_i_16_n_0),
+        .I5(play_arrow_i_17_n_0),
+        .O(play_arrow_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFAA08AA08AA08)) 
+    play_arrow_i_7
+       (.I0(play_arrow_i_10_n_0),
+        .I1(play_arrow_i_18_n_0),
+        .I2(\FSM_onehot_current_state[10]_i_3_n_0 ),
+        .I3(play_arrow_i_19_n_0),
+        .I4(play_arrow_i_16_n_0),
+        .I5(play_arrow_i_20_n_0),
         .O(play_arrow_i_7_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
+    .INIT(64'hFFFFFFFFFFFF0008)) 
     play_arrow_i_8
-       (.I0(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[10] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[9] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(play_arrow_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
-    play_arrow_i_9
-       (.I0(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
+       (.I0(play_arrow_i_16_n_0),
+        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
         .I2(\FSM_onehot_current_state_reg_n_0_[12] ),
+        .I3(arrow_count),
+        .I4(play_arrow_i_21_n_0),
+        .I5(play_arrow_i_22_n_0),
+        .O(play_arrow_i_8_n_0));
+  LUT6 #(
+    .INIT(64'h4044400000000000)) 
+    play_arrow_i_9
+       (.I0(start_btn_d),
+        .I1(start_btn),
+        .I2(\FSM_onehot_current_state[2]_i_3_n_0 ),
+        .I3(arrow_count),
+        .I4(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I5(play_menu_i_6_n_0),
         .O(play_arrow_i_9_n_0));
   FDRE play_arrow_reg
        (.C(clk),
@@ -1955,21 +2444,21 @@ module design_3_archery_fsm_0_0_archery_fsm
        (.I0(resetn),
         .O(play_menu_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0101010000000000)) 
+    .INIT(64'h0001000000000000)) 
     play_menu_i_2
        (.I0(play_menu_i_3_n_0),
-        .I1(\FSM_onehot_current_state_reg_n_0_[4] ),
-        .I2(play_menu_i_4_n_0),
-        .I3(\FSM_onehot_current_state_reg_n_0_[12] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I5(play_menu_i_5_n_0),
+        .I1(play_menu_i_4_n_0),
+        .I2(\FSM_onehot_current_state_reg_n_0_[3] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[4] ),
+        .I4(play_menu_i_5_n_0),
+        .I5(play_menu_i_6_n_0),
         .O(play_menu0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     play_menu_i_3
-       (.I0(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[3] ),
+       (.I0(arrow_count),
+        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
         .I2(\FSM_onehot_current_state_reg_n_0_[1] ),
         .O(play_menu_i_3_n_0));
   LUT2 #(
@@ -1978,21 +2467,22 @@ module design_3_archery_fsm_0_0_archery_fsm
        (.I0(start_btn_d),
         .I1(start_btn),
         .O(play_menu_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    play_menu_i_5
-       (.I0(play_menu_i_6_n_0),
-        .I1(\FSM_onehot_current_state_reg_n_0_[8] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[9] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[10] ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[7] ),
-        .I5(arrow_count),
-        .O(play_menu_i_5_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'hE)) 
+    play_menu_i_5
+       (.I0(\FSM_onehot_current_state_reg_n_0_[0] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[12] ),
+        .O(play_menu_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
     play_menu_i_6
-       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
+       (.I0(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[10] ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[9] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[8] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
         .O(play_menu_i_6_n_0));
   FDRE play_menu_reg
        (.C(clk),
@@ -2006,12 +2496,14 @@ module design_3_archery_fsm_0_0_archery_fsm
         .D(\FSM_onehot_current_state_reg_n_0_[10] ),
         .Q(play_music),
         .R(play_menu_i_1_n_0));
-  LUT3 #(
-    .INIT(8'h10)) 
+  LUT5 #(
+    .INIT(32'h00000002)) 
     \player_display_timer[0]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[9] ),
+       (.I0(resetn),
         .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(resetn),
+        .I2(\FSM_onehot_current_state_reg_n_0_[9] ),
+        .I3(\FSM_onehot_current_state_reg_n_0_[7] ),
+        .I4(\FSM_onehot_current_state_reg_n_0_[3] ),
         .O(player_display_timer));
   LUT1 #(
     .INIT(2'h1)) 

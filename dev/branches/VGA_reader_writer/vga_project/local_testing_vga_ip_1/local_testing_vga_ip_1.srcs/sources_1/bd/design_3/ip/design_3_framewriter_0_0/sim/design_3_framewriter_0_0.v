@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:framewriter:1
-// IP Revision: 95
+// IP Revision: 105
 
 `timescale 1ns/1ps
 
@@ -57,6 +57,15 @@ module design_3_framewriter_0_0 (
   game_state_archery_fsm,
   left_btn,
   right_btn,
+  axi_Z_dist,
+  axi_arrow_vel,
+  wind_x_in,
+  wind_y_in,
+  aim_x,
+  aim_y,
+  land_x,
+  land_y,
+  result_valid,
   bram_address,
   bram_write_data,
   bram_read_data,
@@ -91,6 +100,15 @@ module design_3_framewriter_0_0 (
 input wire [31 : 0] game_state_archery_fsm;
 input wire left_btn;
 input wire right_btn;
+input wire [15 : 0] axi_Z_dist;
+input wire [7 : 0] axi_arrow_vel;
+input wire [7 : 0] wind_x_in;
+input wire [7 : 0] wind_y_in;
+input wire [8 : 0] aim_x;
+input wire [7 : 0] aim_y;
+input wire [8 : 0] land_x;
+input wire [7 : 0] land_y;
+input wire result_valid;
 output wire [31 : 0] bram_address;
 output wire [31 : 0] bram_write_data;
 input wire [31 : 0] bram_read_data;
@@ -161,6 +179,15 @@ input wire s00_axi_aresetn;
     .game_state_archery_fsm(game_state_archery_fsm),
     .left_btn(left_btn),
     .right_btn(right_btn),
+    .axi_Z_dist(axi_Z_dist),
+    .axi_arrow_vel(axi_arrow_vel),
+    .wind_x_in(wind_x_in),
+    .wind_y_in(wind_y_in),
+    .aim_x(aim_x),
+    .aim_y(aim_y),
+    .land_x(land_x),
+    .land_y(land_y),
+    .result_valid(result_valid),
     .bram_address(bram_address),
     .bram_write_data(bram_write_data),
     .bram_read_data(bram_read_data),

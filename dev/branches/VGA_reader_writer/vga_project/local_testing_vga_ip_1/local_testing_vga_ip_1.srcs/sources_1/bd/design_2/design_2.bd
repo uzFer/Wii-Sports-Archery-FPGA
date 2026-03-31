@@ -231,6 +231,12 @@
       }
     },
     "interface_nets": {
+      "axi_vip_0_M_AXI": {
+        "interface_ports": [
+          "axi_vip_0/M_AXI",
+          "sync_gen_1/S00_AXI"
+        ]
+      },
       "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTA",
@@ -241,12 +247,6 @@
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTB",
           "axi_bram_ctrl_0_bram/BRAM_PORTB"
-        ]
-      },
-      "axi_vip_0_M_AXI": {
-        "interface_ports": [
-          "axi_vip_0/M_AXI",
-          "sync_gen_1/S00_AXI"
         ]
       }
     },

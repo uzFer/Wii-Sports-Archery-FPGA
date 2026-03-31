@@ -77,7 +77,7 @@ input wire clk;
 input wire resetn;
 input wire fire;
 input wire [15 : 0] axi_Z_dist;
-input wire [7 : 0] axi_arrow_vel;
+input wire [15 : 0] axi_arrow_vel;
 input wire [7 : 0] wind_x_in;
 input wire [7 : 0] wind_y_in;
 input wire [8 : 0] aim_x;
@@ -86,7 +86,10 @@ output wire result_valid;
 output wire [8 : 0] land_x;
 output wire [7 : 0] land_y;
 
-  physics_engine inst (
+  physics_engine #(
+    .SCREEN_WIDTH(320),
+    .SCREEN_HEIGHT(240)
+  ) inst (
     .clk(clk),
     .resetn(resetn),
     .fire(fire),
