@@ -15,3 +15,13 @@ This project will implement a 2-player Wii Sports archery recreation on two Nexy
 | PS/2 Mouse/Keyboard Connector PMOD | x2 |
 | VGA cable/connector | x2 |
 | Jumper wires for Inter-board connector | x2 |
+
+## Design Tree 
+Repository Design Tree Structure is organized into the following folders:
+- docs: PDF of final report and presentation slides
+- video: final demo video 
+- dev: files from main and branches used during development
+- sdk_code: C code to run on Microblaze
+- project_tcl_scripts: tcl script which can be used to regenerate the project
+- verilog: verilog modules for final design block diagram 
+- constraints: constraints for final design block diagram
