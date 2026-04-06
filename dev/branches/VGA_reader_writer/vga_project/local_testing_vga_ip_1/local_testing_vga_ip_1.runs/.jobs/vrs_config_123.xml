@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_3_physics_engine_0_0_synth_1" LaunchDir="Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_physics_engine_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_3_archery_fsm_0_0_synth_1" LaunchDir="Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/design_3_archery_fsm_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_2" LaunchDir="Y:/vga_project/local_testing_vga_ip_1/local_testing_vga_ip_1.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_3_physics_engine_0_0_synth_1"/>
+		<Parent Id="design_3_archery_fsm_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

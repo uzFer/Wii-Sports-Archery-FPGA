@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb5_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="tb5" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="154833271533fs"></ZoomStartTime>
+      <ZoomEndTime time="155023642340fs"></ZoomEndTime>
+      <Cursor1Time time="154865000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="155"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="group320" type="group">
+      <obj_property name="label">framewriter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/axi_framewriter_x" type="array">
+         <obj_property name="ElementShortName">axi_framewriter_x[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_framewriter_x[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/axi_framewriter_y" type="array">
+         <obj_property name="ElementShortName">axi_framewriter_y[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_framewriter_y[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/axi_framewriter_myScore" type="array">
+         <obj_property name="ElementShortName">axi_framewriter_myScore[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_framewriter_myScore[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/axi_framewriter_oppScore" type="array">
+         <obj_property name="ElementShortName">axi_framewriter_oppScore[15:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_framewriter_oppScore[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/bram_read_data" type="array">
+         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/bram_write_data" type="array">
+         <obj_property name="ElementShortName">bram_write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/bram_write_enable" type="array">
+         <obj_property name="ElementShortName">bram_write_enable[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_enable[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/bram_address_calc" type="array">
+         <obj_property name="ElementShortName">bram_address_calc[14:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address_calc[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/start_rmw_pulse" type="logic">
+         <obj_property name="ElementShortName">start_rmw_pulse</obj_property>
+         <obj_property name="ObjectShortName">start_rmw_pulse</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group731" type="group">
+      <obj_property name="label">one frame</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/internal_y" type="array">
+         <obj_property name="ElementShortName">internal_y[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_y[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/internal_x" type="array">
+         <obj_property name="ElementShortName">internal_x[15:0]</obj_property>
+         <obj_property name="ObjectShortName">internal_x[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/is_crosshair_pixel" type="logic">
+         <obj_property name="ElementShortName">is_crosshair_pixel</obj_property>
+         <obj_property name="ObjectShortName">is_crosshair_pixel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/framewriter_0/inst/framewriter_1/pixel_to_write" type="logic">
+         <obj_property name="ElementShortName">pixel_to_write</obj_property>
+         <obj_property name="ObjectShortName">pixel_to_write</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group732" type="group">
+      <obj_property name="label">sync gen</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb5/uut/design_4_i/sync_gen_1/pixel_clk" type="logic">
+         <obj_property name="ElementShortName">pixel_clk</obj_property>
+         <obj_property name="ObjectShortName">pixel_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/sync_gen_1/inst/sync_generator_1/bram_address" type="array">
+         <obj_property name="ElementShortName">bram_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/sync_gen_1/bram_read_data" type="array">
+         <obj_property name="ElementShortName">bram_read_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_read_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/sync_gen_1/inst/sync_generator_1/pin_red" type="array">
+         <obj_property name="ElementShortName">pin_red[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pin_red[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/sync_gen_1/inst/sync_generator_1/pin_green" type="array">
+         <obj_property name="ElementShortName">pin_green[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pin_green[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb5/uut/design_4_i/sync_gen_1/inst/sync_generator_1/pin_blue" type="array">
+         <obj_property name="ElementShortName">pin_blue[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pin_blue[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

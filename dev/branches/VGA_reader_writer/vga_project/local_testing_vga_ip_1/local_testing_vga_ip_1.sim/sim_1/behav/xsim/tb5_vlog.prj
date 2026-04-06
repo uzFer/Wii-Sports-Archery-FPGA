@@ -1,0 +1,61 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/ec67/hdl" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/85a3" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_2/ipshared/85a3" --include "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/gyroscope/gyro_aim_calculator.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/gyroscope/spi_interface.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/gyroscope/spi_master.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/gyroscope/top.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/gyroscope/gyro_calc_interface.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/src/addr_counter.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/src/pwm_modulator.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/src/top_sound.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/archery/archery_fsm.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/archery/scoring_calc.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/PS2_Receiver.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/bin2bcd.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/debouncer.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/fifo.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/font_rom/font_rom.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_decoder.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/seven_seg_controller.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/shift_register.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/ps2_keyboard_subsystem.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/new/physics_engine.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/imports/peripherals/ps2/decimal_display_manager.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0295/src/framewriter.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0295/hdl/framewriter_v1_S00_AXI.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/0295/hdl/framewriter_v1.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_framewriter_0_0/sim/design_3_framewriter_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0_clk_wiz.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_clk_100MHz_0/design_3_clk_100MHz_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/68ae/hdl/sync_gen_v1_S00_AXI.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/68ae/src/sync_generator.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ipshared/68ae/hdl/sync_gen_v1.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_sync_gen_1_0/sim/design_3_sync_gen_1_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_lmb_bram_0/sim/design_3_lmb_bram_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_xbar_0/sim/design_3_xbar_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_microblaze_0_xlconcat_0/sim/design_3_microblaze_0_xlconcat_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_axi_bram_ctrl_1_bram_0/sim/design_3_axi_bram_ctrl_1_bram_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_gyro_calc_interface_0_0/sim/design_3_gyro_calc_interface_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_xlconcat_0_0/sim/design_3_xlconcat_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_top_sound_0_0/sim/design_3_top_sound_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_archery_fsm_0_0/sim/design_3_archery_fsm_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_scoring_engine_0_0/sim/design_3_scoring_engine_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_ps2_keyboard_subsyst_0_0/sim/design_3_ps2_keyboard_subsyst_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_xlconcat_1_0/sim/design_3_xlconcat_1_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_physics_engine_0_0/sim/design_3_physics_engine_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_xlconstant_0_0/sim/design_3_xlconstant_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_xlconstant_0_1/sim/design_3_xlconstant_0_1.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_decimal_display_mana_0_0/sim/design_3_decimal_display_mana_0_0.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/sim/design_3.v" \
+"../../../../local_testing_vga_ip_1.ip_user_files/bd/design_3/ip/design_3_auto_pc_0/sim/design_3_auto_pc_0.v" \
+"../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v" \
+
+sv xil_defaultlib  --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/85a3" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_3/ipshared/ec67/hdl" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/ec67/hdl" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_4/ipshared/85a3" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" --include "../../../../local_testing_vga_ip_1.srcs/sources_1/bd/design_2/ipshared/85a3" --include "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../local_testing_vga_ip_1.srcs/sim_1/new/tb5.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
