@@ -1,0 +1,140 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "axi_bram_ctrl_0": "",
+      "vga_custom_ip_0": "",
+      "axi_bram_ctrl_0_bram": "",
+      "vga_controller_0": ""
+    },
+    "components": {
+      "axi_bram_ctrl_0": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "design_1_axi_bram_ctrl_0_0"
+      },
+      "vga_custom_ip_0": {
+        "vlnv": "xilinx.com:user:vga_custom_ip:1.0",
+        "xci_name": "design_1_vga_custom_ip_0_1"
+      },
+      "axi_bram_ctrl_0_bram": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_1_axi_bram_ctrl_0_bram_0",
+        "parameters": {
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          }
+        }
+      },
+      "vga_controller_0": {
+        "vlnv": "xilinx.com:user:vga_controller:1.0",
+        "xci_name": "design_1_vga_controller_0_1"
+      }
+    },
+    "interface_nets": {
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_0_bram/BRAM_PORTA",
+          "axi_bram_ctrl_0/BRAM_PORTA"
+        ]
+      },
+      "axi_bram_ctrl_0_BRAM_PORTB": {
+        "interface_ports": [
+          "axi_bram_ctrl_0_bram/BRAM_PORTB",
+          "axi_bram_ctrl_0/BRAM_PORTB"
+        ]
+      }
+    },
+    "nets": {
+      "vga_controller_0_bram_address": {
+        "ports": [
+          "vga_controller_0/bram_address",
+          "axi_bram_ctrl_0_bram/addrb"
+        ]
+      },
+      "vga_controller_0_bram_clk": {
+        "ports": [
+          "vga_controller_0/bram_clk",
+          "axi_bram_ctrl_0_bram/clkb"
+        ]
+      },
+      "vga_controller_0_bram_write_data": {
+        "ports": [
+          "vga_controller_0/bram_write_data",
+          "axi_bram_ctrl_0_bram/dinb"
+        ]
+      },
+      "axi_bram_ctrl_0_bram_doutb": {
+        "ports": [
+          "axi_bram_ctrl_0_bram/doutb",
+          "vga_controller_0/bram_read_data"
+        ]
+      },
+      "vga_controller_0_bram_rst": {
+        "ports": [
+          "vga_controller_0/bram_rst",
+          "axi_bram_ctrl_0_bram/rstb"
+        ]
+      },
+      "vga_controller_0_bram_write_enable": {
+        "ports": [
+          "vga_controller_0/bram_write_enable",
+          "axi_bram_ctrl_0_bram/web"
+        ]
+      },
+      "vga_custom_ip_0_bram_address": {
+        "ports": [
+          "vga_custom_ip_0/bram_address",
+          "axi_bram_ctrl_0_bram/addra"
+        ]
+      },
+      "vga_custom_ip_0_bram_write_data": {
+        "ports": [
+          "vga_custom_ip_0/bram_write_data",
+          "axi_bram_ctrl_0_bram/dina"
+        ]
+      },
+      "axi_bram_ctrl_0_bram_douta": {
+        "ports": [
+          "axi_bram_ctrl_0_bram/douta",
+          "vga_custom_ip_0/bram_read_data"
+        ]
+      },
+      "vga_custom_ip_0_bram_en": {
+        "ports": [
+          "vga_custom_ip_0/bram_en",
+          "axi_bram_ctrl_0_bram/ena"
+        ]
+      },
+      "vga_custom_ip_0_bram_rst": {
+        "ports": [
+          "vga_custom_ip_0/bram_rst",
+          "axi_bram_ctrl_0_bram/rsta"
+        ]
+      },
+      "vga_custom_ip_0_bram_write_enable": {
+        "ports": [
+          "vga_custom_ip_0/bram_write_enable",
+          "axi_bram_ctrl_0_bram/wea"
+        ]
+      },
+      "vga_custom_ip_0_bram_clk": {
+        "ports": [
+          "vga_custom_ip_0/bram_clk",
+          "axi_bram_ctrl_0_bram/clka"
+        ]
+      },
+      "vga_controller_0_bram_en": {
+        "ports": [
+          "vga_controller_0/bram_en",
+          "axi_bram_ctrl_0_bram/enb"
+        ]
+      }
+    }
+  }
+}

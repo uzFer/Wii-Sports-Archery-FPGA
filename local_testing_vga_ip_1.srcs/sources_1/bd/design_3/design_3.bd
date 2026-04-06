@@ -1,0 +1,20 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
+      "name": "design_3",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "sync_gen_0": ""
+    },
+    "components": {
+      "sync_gen_0": {
+        "vlnv": "xilinx.com:user:sync_gen:1",
+        "xci_name": "design_3_sync_gen_0_0"
+      }
+    }
+  }
+}
