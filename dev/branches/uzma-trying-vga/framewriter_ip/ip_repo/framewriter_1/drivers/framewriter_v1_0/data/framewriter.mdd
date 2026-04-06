@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER framewriter
+	OPTION supported_peripherals = (framewriter);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = framewriter;
+END DRIVER

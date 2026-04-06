@@ -1,0 +1,28 @@
+# Vivado/Vitis auto-generated folders
+/IP/
+/*.jou
+/*.log
+/*.str
+/scripts/.Xil/
+/.Xil/
+
+# Simulation files (The culprit!)
+*.wdb
+*.pb
+*.jou
+/xsim/
+*.mem
+*.vcd
+
+# Hardware build artifacts
+*.bit
+*.bin
+*.xsa
+*.hdf
+
+# IP Repo temporary edit folders
+**/edit_*.sim/
+**/edit_*.hw/
+**/edit_*.ip_user_files/
+
+gyro_local/

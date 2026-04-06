@@ -1,0 +1,427 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5D6B59B19304C99E",
+      "device": "xc7a100tcsg324-1",
+      "name": "design_2",
+      "synth_flow_mode": "None",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "axi_vip_0": "",
+      "clk_100MHz": "",
+      "rst_clk_wiz_100M": "",
+      "axi_bram_ctrl_0": "",
+      "axi_bram_ctrl_0_bram": "",
+      "sync_gen_1": "",
+      "framewriter_0": ""
+    },
+    "ports": {
+      "reset_rtl_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "clk_100MHz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      },
+      "VGA_R": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "VGA_G": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "VGA_VSYNC": {
+        "direction": "O"
+      },
+      "VGA_B": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "VGA_HSYNC": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "axi_vip_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "design_2_axi_vip_0_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        }
+      },
+      "clk_100MHz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_2_clk_wiz_1",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "137.681"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "105.461"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "183.467"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "105.461"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "25.175"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "9"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "9"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "36"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "rst_clk_wiz_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "design_2_rst_clk_wiz_100M_1"
+      },
+      "axi_bram_ctrl_0": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "design_2_axi_bram_ctrl_0_0",
+        "parameters": {
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          }
+        }
+      },
+      "axi_bram_ctrl_0_bram": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_2_axi_bram_ctrl_0_bram_0",
+        "parameters": {
+          "EN_SAFETY_CKT": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Operating_Mode_B": {
+            "value": "WRITE_FIRST"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "sync_gen_1": {
+        "vlnv": "xilinx.com:user:sync_gen:1",
+        "xci_name": "design_2_sync_gen_1_0"
+      },
+      "framewriter_0": {
+        "vlnv": "xilinx.com:user:framewriter:1",
+        "xci_name": "design_2_framewriter_0_0"
+      }
+    },
+    "interface_nets": {
+      "axi_bram_ctrl_0_BRAM_PORTB": {
+        "interface_ports": [
+          "axi_bram_ctrl_0/BRAM_PORTB",
+          "axi_bram_ctrl_0_bram/BRAM_PORTB"
+        ]
+      },
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_0/BRAM_PORTA",
+          "axi_bram_ctrl_0_bram/BRAM_PORTA"
+        ]
+      },
+      "axi_vip_0_M_AXI": {
+        "interface_ports": [
+          "axi_vip_0/M_AXI",
+          "sync_gen_1/S00_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "clk_wiz_locked": {
+        "ports": [
+          "clk_100MHz/locked",
+          "rst_clk_wiz_100M/dcm_locked"
+        ]
+      },
+      "reset_rtl_0_1": {
+        "ports": [
+          "reset_rtl_0",
+          "rst_clk_wiz_100M/ext_reset_in",
+          "clk_100MHz/resetn"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_100MHz",
+          "clk_100MHz/clk_in1"
+        ]
+      },
+      "rst_clk_wiz_100M_interconnect_aresetn": {
+        "ports": [
+          "rst_clk_wiz_100M/interconnect_aresetn",
+          "axi_vip_0/aresetn",
+          "axi_bram_ctrl_0/s_axi_aresetn",
+          "sync_gen_1/s00_axi_aresetn",
+          "framewriter_0/s00_axi_aresetn"
+        ]
+      },
+      "clk_100MHz_clk_out1": {
+        "ports": [
+          "clk_100MHz/clk_out1",
+          "axi_vip_0/aclk",
+          "rst_clk_wiz_100M/slowest_sync_clk",
+          "axi_bram_ctrl_0/s_axi_aclk",
+          "axi_bram_ctrl_0_bram/clka",
+          "sync_gen_1/s00_axi_aclk",
+          "framewriter_0/s00_axi_aclk"
+        ]
+      },
+      "clk_100MHz_clk_out2": {
+        "ports": [
+          "clk_100MHz/clk_out2",
+          "axi_bram_ctrl_0_bram/clkb",
+          "sync_gen_1/pixel_clk"
+        ]
+      },
+      "framewriter_0_bram_address": {
+        "ports": [
+          "framewriter_0/bram_address",
+          "axi_bram_ctrl_0_bram/addra"
+        ]
+      },
+      "framewriter_0_bram_write_data": {
+        "ports": [
+          "framewriter_0/bram_write_data",
+          "axi_bram_ctrl_0_bram/dina"
+        ]
+      },
+      "axi_bram_ctrl_0_bram_douta": {
+        "ports": [
+          "axi_bram_ctrl_0_bram/douta",
+          "framewriter_0/bram_read_data"
+        ]
+      },
+      "framewriter_0_bram_en": {
+        "ports": [
+          "framewriter_0/bram_en",
+          "axi_bram_ctrl_0_bram/ena"
+        ]
+      },
+      "framewriter_0_bram_rst": {
+        "ports": [
+          "framewriter_0/bram_rst",
+          "axi_bram_ctrl_0_bram/rsta"
+        ]
+      },
+      "framewriter_0_bram_write_enable": {
+        "ports": [
+          "framewriter_0/bram_write_enable",
+          "axi_bram_ctrl_0_bram/wea"
+        ]
+      },
+      "sync_gen_1_VGA_HSYNC": {
+        "ports": [
+          "sync_gen_1/VGA_HSYNC",
+          "VGA_HSYNC"
+        ]
+      },
+      "sync_gen_1_VGA_VSYNC": {
+        "ports": [
+          "sync_gen_1/VGA_VSYNC",
+          "VGA_VSYNC"
+        ]
+      },
+      "sync_gen_1_VGA_R": {
+        "ports": [
+          "sync_gen_1/VGA_R",
+          "VGA_R"
+        ]
+      },
+      "sync_gen_1_VGA_G": {
+        "ports": [
+          "sync_gen_1/VGA_G",
+          "VGA_G"
+        ]
+      },
+      "sync_gen_1_VGA_B": {
+        "ports": [
+          "sync_gen_1/VGA_B",
+          "VGA_B"
+        ]
+      },
+      "sync_gen_1_bram_address": {
+        "ports": [
+          "sync_gen_1/bram_address",
+          "axi_bram_ctrl_0_bram/addrb"
+        ]
+      },
+      "sync_gen_1_bram_write_enable": {
+        "ports": [
+          "sync_gen_1/bram_write_enable",
+          "axi_bram_ctrl_0_bram/web"
+        ]
+      },
+      "sync_gen_1_bram_rst": {
+        "ports": [
+          "sync_gen_1/bram_rst",
+          "axi_bram_ctrl_0_bram/rstb"
+        ]
+      },
+      "sync_gen_1_bram_en": {
+        "ports": [
+          "sync_gen_1/bram_en",
+          "axi_bram_ctrl_0_bram/enb"
+        ]
+      },
+      "axi_bram_ctrl_0_bram_doutb": {
+        "ports": [
+          "axi_bram_ctrl_0_bram/doutb",
+          "sync_gen_1/bram_read_data"
+        ]
+      },
+      "sync_gen_1_bram_write_data": {
+        "ports": [
+          "sync_gen_1/bram_write_data",
+          "axi_bram_ctrl_0_bram/dinb"
+        ]
+      },
+      "sync_gen_1_vsync_trigger": {
+        "ports": [
+          "sync_gen_1/vsync_trigger",
+          "framewriter_0/vsync_trigger"
+        ]
+      }
+    },
+    "addressing": {
+      "/axi_vip_0": {
+        "address_spaces": {
+          "Master_AXI": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_sync_gen_1_S00_AXI_reg": {
+                "address_block": "/sync_gen_1/S00_AXI/S00_AXI_reg",
+                "offset": "0x44A00000",
+                "range": "64K"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

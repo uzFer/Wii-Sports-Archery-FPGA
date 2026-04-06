@@ -1,0 +1,56 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port clk_100MHz -pg 1 -y 560 -defaultsOSRD
+preplace port VGA_VSYNC -pg 1 -y 260 -defaultsOSRD
+preplace port VGA_HSYNC -pg 1 -y 230 -defaultsOSRD
+preplace port reset_rtl_0 -pg 1 -y 450 -defaultsOSRD
+preplace portBus VGA_B -pg 1 -y 320 -defaultsOSRD
+preplace portBus VGA_R -pg 1 -y 350 -defaultsOSRD
+preplace portBus VGA_G -pg 1 -y 290 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 4 -y 580 -defaultsOSRD
+preplace inst axi_vip_0 -pg 1 -lvl 3 -y 330 -defaultsOSRD
+preplace inst sync_gen_1 -pg 1 -lvl 5 -y 370 -defaultsOSRD
+preplace inst axi_vip_1 -pg 1 -lvl 3 -y 480 -defaultsOSRD
+preplace inst axi_vip_2 -pg 1 -lvl 3 -y 650 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst framewriter_0 -pg 1 -lvl 1 -y 300 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 550 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y 260 -defaultsOSRD
+preplace netloc framewriter_0_bram_rst 1 1 3 630 260 840 240 1280
+preplace netloc framewriter_0_bram_address 1 1 3 N 250 820 220 1330
+preplace netloc clk_wiz_0_locked 1 2 1 850
+preplace netloc sync_gen_1_bram_write_data 1 3 3 1340 850 N 850 2110
+preplace netloc sync_gen_1_bram_en 1 3 3 1380 830 N 830 2060
+preplace netloc framewriter_0_bram_write_enable 1 1 3 N 290 880 260 1240
+preplace netloc axi_vip_1_M_AXI 1 0 4 10 -10 N -10 N -10 1230
+preplace netloc sync_gen_1_VGA_R 1 5 1 2110
+preplace netloc sync_gen_1_VGA_HSYNC 1 5 1 N
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 2 1360 790 1670
+preplace netloc sync_gen_1_bram_write_enable 1 3 3 1400 820 N 820 2070
+preplace netloc sync_gen_1_bram_rst 1 3 3 1390 840 N 840 2050
+preplace netloc clk_100MHz_clk_out1 1 0 5 30 180 N 180 860 230 1260 800 1700
+preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 3 2 1340 360 1660
+preplace netloc sync_gen_1_VGA_G 1 5 1 N
+preplace netloc clk_100MHz_clk_out2 1 2 3 N 550 1270 350 N
+preplace netloc sync_gen_1_bram_address 1 3 3 1370 810 N 810 2080
+preplace netloc framewriter_0_bram_write_data 1 1 3 N 270 870 250 1310
+preplace netloc framewriter_0_bram_en 1 1 3 610 210 N 210 1320
+preplace netloc axi_vip_0_M_AXI 1 3 2 1300 340 1680
+preplace netloc sync_gen_1_VGA_VSYNC 1 5 1 2110
+preplace netloc rst_clk_wiz_100M_interconnect_aresetn 1 0 5 40 190 N 190 830 200 1360 180 1690
+preplace netloc sync_gen_1_vsync_trigger 1 0 6 20J 0 NJ 0 NJ 0 NJ 0 NJ 0 2090
+preplace netloc reset_rtl_0_1 1 0 3 N 450 620 80 N
+preplace netloc axi_vip_2_M_AXI 1 3 1 1290
+preplace netloc axi_bram_ctrl_0_bram_douta 1 0 4 50 410 N 410 N 410 1250
+preplace netloc sync_gen_1_VGA_B 1 5 1 2100
+preplace netloc clk_100MHz_1 1 0 2 NJ 560 N
+preplace netloc axi_bram_ctrl_0_bram_doutb 1 3 2 1350 370 N
+levelinfo -pg 1 -10 420 730 1060 1530 1880 2140 -top -80 -bot 860
+"
+}
+{
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"2"
+}

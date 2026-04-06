@@ -1,0 +1,2187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>design_4_framewriter_0_1</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">4</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.DATA_WIDTH">32</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PROTOCOL</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.PROTOCOL">AXI4LITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.ID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ADDR_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH">5</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>AWUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ARUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>BUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.BUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>READ_WRITE_MODE</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.READ_WRITE_MODE">READ_WRITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_LOCK</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_LOCK">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_PROT</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_PROT">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_CACHE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_CACHE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_QOS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_QOS">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_REGION</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_REGION">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_WSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_WSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_BRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_RRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_RRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MAX_BURST_LENGTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.MAX_BURST_LENGTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.RUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>bram_rst</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>bram_rst</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.BRAM_RST.POLARITY">ACTIVE_LOW</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.BRAM_RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>bram_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>bram_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.BRAM_CLK.ASSOCIATED_RESET">bram_rst</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.BRAM_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.BRAM_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.BRAM_CLK.CLK_DOMAIN">design_4_framewriter_0_1_bram_clk</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.BRAM_CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.BRAM_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>game_state_archery_fsm</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bram_address</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.BRAM_ADDR_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bram_write_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.BRAM_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bram_read_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.BRAM_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bram_write_enable</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.BRAM_WE_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bram_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bram_rst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bram_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>vsync_trigger</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>SLAVE_REG_WIDTH</spirit:name>
+        <spirit:displayName>Slave Reg Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SLAVE_REG_WIDTH">16</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>BRAM_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>Bram Addr Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BRAM_ADDR_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>BRAM_DATA_WIDTH</spirit:name>
+        <spirit:displayName>Bram Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BRAM_DATA_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>BRAM_WE_WIDTH</spirit:name>
+        <spirit:displayName>Bram We Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BRAM_WE_WIDTH">4</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:description>My new AXI IP</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_4_framewriter_0_1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SLAVE_REG_WIDTH</spirit:name>
+      <spirit:displayName>Slave Reg Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SLAVE_REG_WIDTH">16</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BRAM_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>Bram Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BRAM_ADDR_WIDTH">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BRAM_DATA_WIDTH</spirit:name>
+      <spirit:displayName>Bram Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BRAM_DATA_WIDTH">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BRAM_WE_WIDTH</spirit:name>
+      <spirit:displayName>Bram We Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BRAM_WE_WIDTH">4</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>framewriter_v1</xilinx:displayName>
+      <xilinx:coreRevision>62</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c10e6d8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@541bb9db_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36b85b58_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b72f0a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@762d67c2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@541ce597_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@121eea84_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d6c34aa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fa4fb43_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10b43a9a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3efff642_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38fdf411_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5567b8ef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66bd78ca_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14e0af83_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69ab450_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a5fe94b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f777b8b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f824849_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fe5ca0a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d6d0c74_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@367f9c14_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dd19f34_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22496f06_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@350720ea_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4147ded2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ca190b3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@262d86ad_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@503de98a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7bbe71_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b182b54_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4503b13f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3894843a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64666ef8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@113e61a3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3917e590_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb5833a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38079071_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25c6da25_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@798045c2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a88cc2e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c58384_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20e45e58_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3817eb6f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fd02473_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a4857ae_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fc56b78_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a8c4dd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13490331_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58a8fdf6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eb1f730_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59fb24e2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef388ef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9b60ee3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67fce50f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c5a5b4b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29530ed1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3982a229_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@286c76fb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11254bcd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c285b22_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@179adec2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a1bdef9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@87f2def_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b949094_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e9178f0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e77704a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5116dc86_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@405be722_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a61a51f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10600761_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@419fb70b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41af146c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67eda944_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50cba40f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39968d3f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23792552_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@300cb178_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14593b9a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31953af6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50533e4a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fac3b20_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1576ac1b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a5548a9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e31a116_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2052e352_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cd3c320_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33059141_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ca80aa8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@783515ec_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6363b3df_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cf1e251_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@392c17b4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32c67ccc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3164bf6d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37ab319e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5925f135_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d6003c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3451c833_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68cc2521_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ec8032a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24fa764b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75052673_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3de6b1e4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e6ee919_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33cddd87_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1102bc3a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@749fd7ba_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29700230_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4662fabd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3706fcfe_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e99548_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b022b79_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f596700_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f7057c0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1642181c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d04eae5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@82a2a64_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ac36f1c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fcb64c4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45033068_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c71bff3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c888709_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189b1073_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c70c9ef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58d51592_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b1ec0f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69ac1661_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2723b01a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5be3cf1e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7885b392_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59609ec7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@539d2667_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c7439ab_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e2f41b7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9c46448_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b4a5c4b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48044038_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@648517a8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58602803_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e95efe_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ae3e4dc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70792fe2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cfc23da_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7874173e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3058036c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23b5e7ee_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c07940_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a74967e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21bfe3bc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a539ea3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6efbf0e5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44ab89bd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9c74e17_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@774b641c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a1c36ac_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a56e159_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15144e71_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b8bca80_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce3ca48_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d6ff269_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27682b52_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@712558a3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d72dbc0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e722bd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2832b26f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e5d9b6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebac2c7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@211061d4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e378abe_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29068e78_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30805f74_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@210748c3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f93acdd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b9778ba_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3179fbea_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@727725db_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bf92f67_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1243ae60_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a9c937f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@147ef48a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c0aa26b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2db6913b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@532141f9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fe02bba_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c9a006d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32bf9242_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@692c710a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d8141ab_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5101d43e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70795bda_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@572a52a3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47cc56ef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b1dfd73_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@651b8ca1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@608c847b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@390906f5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bed4258_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5105db73_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da6cefd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54cee7cf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b128b09_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b03473_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b8a6e8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@805add4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@613fe261_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@137189ff_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@232c5432_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209086f6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c8a2af8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32740e34_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@664c922c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36ad7d91_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@225974ab_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197cf464_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7065b938_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43896dbf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ca4fca5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@583276b1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47153be5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6acdad88_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42f7809c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36396acc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4805b94e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d339c64_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b0477ab_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d8e5051_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76bfe684_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cf57d94_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57b108c0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e5e25f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11019eb3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@123eefa5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2065a397_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cd1af9f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b9580b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b5969ad_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f443f4d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c711230_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d77a6b1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58b7c6a3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bc7c6f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@165b5387_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4042d05e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25d83a4c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75de5430_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d40c81e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26b6971c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6be076ef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dcd0d9a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fddfd67_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dd84255_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43bf1d9a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4204fa67_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b520c2e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b94709d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78118e43_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16d5956b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7837bf88_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e08b49a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b473b1e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6432d205_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@624352e4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dbf57ba_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a92b14_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33d4553_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48d14109_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e4f1e1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5717f947_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@286670a7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9787a21_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11398f4a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@728fd6b4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d5387e1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e57a36e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bc308fa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36bbc641_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@559ac29d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70d39cbf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8b07ba7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd0947e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c3ed00d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad32d30_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e9c7b02_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd2108a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1099c2e7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3403ee95_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dea10f2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@590922d3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a54c392_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@473fe40_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e4b53c2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@539a0d64_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e7e1f1f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5012c6b8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72feb0c1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f51c2ec_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c8e6f09_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a56d663_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2466a6d8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57b6a420_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59d007fa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51886d9b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@593cb13d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f80ee32_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ccacdf5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b63cad1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12e3a522_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cd25261_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@630dc6d9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@584c676e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bcbfe9a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e6b63be_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2463ec69_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e36fedf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eaf67c7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@693fa703_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776ad937_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@646450a9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75ea42bc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@428cac82_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c06ee9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b609b3e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c270073_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13abc1a0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1754c3e3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@563a8bbb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@724520de_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f5a157_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ca20adf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e892748_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c0d17d8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a97aeb9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe89a10_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@717757b5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b29d9b1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e509f11_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c867d5d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cdaeadf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69d84bae_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64d5f9db_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@121c8606_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16cc8a30_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bc7ecdf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d2c80d6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e24e8ab_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@400be53_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c91c1c0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c311b44_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d620989_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43b2b60c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ae653b6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e229501_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2445b7d9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3abd0ad9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@205947fd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32dab62_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4224d120_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e584b0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44a6a029_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1085bd9f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d115e03_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68d8b41a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6880a46c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@117d6f21_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d633d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11d7ea4c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28889d5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e92ab0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48000a13_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39b21bed_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bf1d70e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@216c073d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e3ebd05_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76396aaa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4243f518_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5378e31e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@758ec2d8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b10fdc4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@205822f4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bb6ee0a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@326aabf8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6463e8c8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5837f2e1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eb67536_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17d9d951_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47dc22db_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b9dce70_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e9b11ef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39cb45e9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5129d261_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@599e683_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d566449_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a4c1a6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27054d40_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a1d3eb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@169f570f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b7c33d1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ea2ab1c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a80b76_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23da7d03_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@422deded_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@602fc028_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0c1bef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d0ecbb5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f310ce_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7478b076_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a6fcfff_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42359c29_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d80fcc1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b145c38_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@461acd31_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61f7df8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe9b55f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@464ff952_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33e66933_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@693b96ab_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43393328_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cdf0bdd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a86b550_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@780689ba_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ee70c52_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24681da5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75227d97_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23606d66_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ff3f653_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d0f3a3a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6082ab07_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc13927_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c9b8a81_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c9d4daa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bc38b65_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71d27d54_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6db40bd2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17669e83_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60600e76_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb6d3c0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@267289d1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d476d1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@290d9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4da59ad4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f683f9d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3920e87f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34118b92_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f586f6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@151ad325_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@619d0886_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e668514_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@228212c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344e7b17_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c0d3487_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46254b0c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@534433a9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76991d80_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49f1ea9e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52052914_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52e86e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e4b3af_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54f3db07_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79114ceb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@674e033d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f566fa8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e56dd40_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53e1ebe6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72118daf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c1db739_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344ed318_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c6e356_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bc13ae3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@784be348_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18006a3f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43a52031_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@611fcfe0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@351f8aea_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2337734b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ea8181_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1de4d498_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f3bfa87_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b0fa97_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b629c66_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78d29be3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@90a36bf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13782bc6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b64763d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9171c3a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6145bc86_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@793162e2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@119c2220_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69b67941_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55c43117_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3218e782_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e616de_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26f03eec_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24bb57a1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a4de63_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b688a9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ab5b258_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ef61adf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fc9299d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e6b1de7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15ca6bbf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@335172ac_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f99061_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bf1ca03_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aafb2f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3764405a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@450585dc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4282b70_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@738d5d1f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f0a3a9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@793f679a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73b5a176_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32eb9710_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32969ba4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6235754f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@643f5caa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39bbbc6c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@589376d2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@199e190f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a50df95_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ea142d7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bb518d7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b085107_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2500c968_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32ea5cc1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b9e6707_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c3438f0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@181a8099_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@628b564a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bd10bd0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@251a797b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50319ad3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36241ac4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@563ecd34_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e2dc722_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e08098a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5781c623_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75480a27_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d41daa8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@aa388e6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d02cde_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@168001_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1748dfd8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eb8feb3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6517b82b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@279eb21d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67fe8b1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40a1e2a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78562ddc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fa34124_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70d8cb62_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a39cde5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3df612b5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d9b76e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f0f4efa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dca2b7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8b1f00a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e84f81_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b4f194_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a70fb97_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@329b7198_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@483c9fda_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cfa79c4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59dab7fd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@224accad_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e0a46be_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@464f9fad_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3356b98_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b1df1b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e31a238_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7601d1bd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fecdedb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ddf9108_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@beb395a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b00fb2c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@334902ea_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a61f85a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ceb30e0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38965929_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4136758f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22953882_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40ed933a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0f7d14_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4385ba50_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ec5069_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45342db7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e57baa7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21b1efe9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@412bf56e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209f65c9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7560d3f7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@469dc17f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f63be03_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b83f5a7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e6bf448_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c3a5b7b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63bb966d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34f00b57_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f13b5fc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1576f3a5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a947942_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@620d6493_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55f9001_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dfee8fc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aed45cd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e273316_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63ecec6e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b69766_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7132db81_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e376524_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b645a33_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317dcfc0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f8efb91_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b00ccf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@508daf18_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27851c89_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@265c891c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21007206_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@133902d1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f4c9c64_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@420c4b97_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b57533c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b75d63_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dff9acd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46eeb502_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62cc6b95_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cc1f532_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72900c52_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b0aa660_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52991411_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@283a54c6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fe4708a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60da7717_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d44091_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32a4d14b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a0dea0e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a30193_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48dea615_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29b13b96_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d40bc4d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4533c39f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23f81cd4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba62741_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5acc7104_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2af8c516_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@303cac2b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7415d243_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4743a39e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53ef1474_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c42bcfd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b323c3f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32e54e27_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2888191a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49e300c0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1825f6d1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e3dec88_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d7caf06_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c237f3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c24a628_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48f62428_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48a69666_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5859b810_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@247f94ae_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26887655_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e660bbd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c05be7a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ddb793f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58f20c60_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f8a8e94_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fb013d0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4837e2df_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e744a77_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fb2758a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f619710_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3da0340e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d8cdbba_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e74dbcb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bb41beb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@192bdcfb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a2965a2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57a1dda1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58506b77_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@595704bc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65c9e06a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77d0c05b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17ee84b0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2815be3d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31d6c8e9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@665bd53c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18f7a09c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b18b59e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@104b4691_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66e5416d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4546b96f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb4a479_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12bdc713_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1891c4c9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@375f0faa_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7126d80e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fed6e9e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c0ea1e0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41b98d7e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69b518c3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47a195f4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6994b3b5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ccae3cd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d5d0874_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56af78c2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44ac5a1b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ecb7d47_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c61ad3c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1de1938b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f91c745_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6441e8d6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1119b252_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b64cb3b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@783ee2f5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c95b672_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60ad1761_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@206a4b60_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@265aee8e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ee291fd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ca8ff89_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@655b2e56_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4134097b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27fb6310_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c0a12e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7060cb14_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ebfb4d3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1027e388_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e0c80d5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@329d9d63_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e70dbc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38528289_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a4e48f1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d14c5d0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7effd6cb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@795cc3e9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f2bf324_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7efdffaf_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62d72699_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bf826c6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28470dc3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2df54c4c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fdcf6a1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30a9aa53_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8e73428_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dafc783_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12642ab0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53bf4255_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a2477c3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d03aef6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32251f74_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bdfcbb7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17f3505e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f1c83e6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11238aa2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38991b78_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b8671ea_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e349513_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37c9f769_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cbd73e0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4720bb11_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71147abd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e066d3c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ff4afbd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a15c0d3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e032802_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c043d47_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1393b806_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7c7c89_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2258a0a8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@415d022_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ced47ec_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79315a7f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f22b1d0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e7ccf5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b88471_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@91884d6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e3f3231_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@103ebfb4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ae999b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d57ab5f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3585226d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@766b96fc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72f23a71_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a451efd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fa5fb70_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bb7fefc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d3dd734_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30da67b2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e38e412_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f117260_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e0f2932_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b016e9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf0195c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cd4abd3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6515f146_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e3d25db_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eea8473_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d461040_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6f98f2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed48f63_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19612cef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6059242e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25ecdf43_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1229252a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f122147_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@883178b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1648f786_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3672b1b2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4103d2e7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@731f4332_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ab685b9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50a977d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b41fd61_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67ad9513_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@251f686e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56133127_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57a87b1d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@240c3896_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ebe0878_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ecdc67e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ee29473_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@515226ed_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61279c6b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@703d2df6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f76186_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d965ff1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c783419_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ef10f5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69f91e60_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2535c689_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6535aa3a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc96f86_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@caa3aa1_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38eab750_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37aabe62_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7baa5d74_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@529374f6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fefe8ab_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b3cac2c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f75e80b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@132091b2_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b378578_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21046b5b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fadccdc_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@791e916c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d0426d4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528e3716_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a44705_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f74a08_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d36dfa9_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c3754b0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b5a5ccb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@357e1567_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@690f038a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e187bb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33781571_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70e55218_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@676d6bcd_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f111ef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@454a23b8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e070dae_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@591a8215_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e2dda5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e567ee_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78c63811_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@765099ea_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d43d3b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77181c56_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@352bc0e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5acba35f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d08315_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e72857_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8bb6a68_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e8a60a7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@646086c6_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1de9f94_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15155e58_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d7a99c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72c8a11_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76f7e0d0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7596562a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@694e50e5_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@439c3ad0_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@663d251b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b48b578_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ac9564e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@340d138c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fcc2175_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d514d48_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@624ead2b_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@94c8b46_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f9ecc28_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f95483_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e74eaf3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e85f105_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bc26a92_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@235cced3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@477f9acb_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d5127c7_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@206982e8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40ed66ce_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c09f1c8_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38691649_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dd3ba7f_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@730996ad_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2269c8a4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@599920a3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1186d736_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ca6626d_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f926e19_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531148c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b92abf4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d51274_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39ca3aef_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c66faf3_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43015c93_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66c401fe_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@739a605e_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20cce07a_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52cabe60_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c4ad70c_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2661e2a4_ARCHIVE_LOCATION">y:/framewriter_ip/ip_repo/framewriter_1</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.BRAM_CLK.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.MAX_BURST_LENGTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="469a6ca5"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a1c37656"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4fe94524"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="5d863e7f"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="934c4bb4"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

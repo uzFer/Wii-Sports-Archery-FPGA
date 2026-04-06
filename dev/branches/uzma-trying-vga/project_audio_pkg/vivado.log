@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 19 13:44:18 2026
+# Process ID: 8732
+# Current directory: C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17036 C:\Users\Celine\Documents\4Winter\ECE532_Local\Wii-Sports-Archery-FPGA-main\project_audio_pkg\tmp_edit_project.xpr
+# Log file: C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg/vivado.log
+# Journal file: C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg/tmp_edit_project.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg'
+INFO: [Project 1-313] Project file moved from '/nfs/ug/homes-5/l/lilahann/ece532/project/project_audio_pkg' since last save.
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/addr_counter.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/pwm_modulator.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/top_sound.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg/src/top_sound_tb.v:]
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/Celine/Documents/4Winter/ECE532_Local/Wii-Sports-Archery-FPGA-main/project_audio_pkg/tmp_edit_project.ip_user_files', nor could it be found using path 'C:/nfs/ug/homes-5/l/lilahann/ece532/project/project_audio_pkg/tmp_edit_project.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1

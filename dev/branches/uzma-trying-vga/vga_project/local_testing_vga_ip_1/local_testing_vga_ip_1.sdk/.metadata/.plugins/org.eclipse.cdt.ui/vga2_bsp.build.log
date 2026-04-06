@@ -1,0 +1,654 @@
+13:20:22 **** Auto Build of project vga2_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram.c:58:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_g.c:50:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_g.c:50:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_intr.c:54:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_intr.c:54:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_selftest.c:68:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_selftest.c:68:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xbram_sinit.c:56:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_sinit.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xbram_hw.h:59,
+                 from xbram.h:135,
+                 from xbram_sinit.c:57:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Makefile:20: libs] Error 1
+make: *** [Makefile:30: microblaze_0/libsrc/bram_v4_2/src/make.libs] Error 2
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/framewriter_v1_0/src"
+make -C microblaze_0/libsrc/framewriter_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling framewriter..."
+In file included from framewriter_selftest.c:4:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from framewriter_selftest.c:6:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from framewriter_selftest.c:6:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Makefile:18: libs] Error 1
+make: *** [Makefile:30: microblaze_0/libsrc/framewriter_v1_0/src/make.libs] Error 2
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio.c:70:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio.c:70:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_extra.c:60:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_extra.c:60:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_g.c:54:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_g.c:54:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_intr.c:59:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_intr.c:59:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_selftest.c:55:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_selftest.c:55:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xgpio_sinit.c:57:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_i.h:60,
+                 from xgpio_sinit.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xgpio_l.h:83,
+                 from xgpio.h:132,
+                 from xgpio_i.h:60,
+                 from xgpio_sinit.c:58:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Makefile:20: libs] Error 1
+make: *** [Makefile:30: microblaze_0/libsrc/gpio_v4_3/src/make.libs] Error 2
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+In file included from xintc.h:230:0,
+                 from xintc.c:79:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:94:0,
+                 from xintc.h:232,
+                 from xintc.c:79:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc.c:79:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc.c:79:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xintc.h:230:0,
+                 from xintc_g.c:68:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:94:0,
+                 from xintc.h:232,
+                 from xintc_g.c:68:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_g.c:68:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_g.c:68:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xintc_intr.c:96:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc.h:230:0,
+                 from xintc_intr.c:97:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:94:0,
+                 from xintc.h:232,
+                 from xintc_intr.c:97:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_intr.c:97:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_intr.c:97:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xintc_l.c:79:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc.h:230:0,
+                 from xintc_l.c:82:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:94:0,
+                 from xintc.h:232,
+                 from xintc_l.c:82:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_l.c:82:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_l.c:82:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xintc.h:230:0,
+                 from xintc_options.c:60:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:94:0,
+                 from xintc.h:232,
+                 from xintc_options.c:60:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_options.c:60:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_options.c:60:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xintc.h:230:0,
+                 from xintc_selftest.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:94:0,
+                 from xintc.h:232,
+                 from xintc_selftest.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:61,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_selftest.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_io.h:61:0,
+                 from xintc_l.h:95,
+                 from xintc.h:232,
+                 from xintc_selftest.c:58:
+../../../include/xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Makefile:20: libs] Error 1
+make: *** [Makefile:30: microblaze_0/libsrc/intc_v3_8/src/make.libs] Error 2
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+In file included from microblaze_interrupts_g.c:47:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from pvr.c:37:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from pvr.h:59:0,
+                 from pvr.c:38:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from pvr.c:38:0:
+pvr.h:61:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:61,
+                 from xil_testmem.c:47:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_io.h:61:0,
+                 from xil_testmem.c:47:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:61,
+                 from xil_sleepcommon.c:46:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_io.h:61:0,
+                 from xil_sleepcommon.c:46:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_printf.h:12:0,
+                 from xil_printf.c:8:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.c:8:0:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:61,
+                 from xil_io.c:51:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_io.h:61:0,
+                 from xil_io.c:51:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_cache.h:74:0,
+                 from xil_cache.c:53:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:61,
+                 from xil_testio.c:48:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_io.h:61:0,
+                 from xil_testio.c:48:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:61,
+                 from xplatform_info.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_io.h:61:0,
+                 from xplatform_info.c:58:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_printf.h:12:0,
+                 from print.c:20:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from print.c:20:0:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from microblaze_sleep.h:66:0,
+                 from microblaze_sleep.c:63:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:61,
+                 from sleep.h:52,
+                 from microblaze_sleep.h:67,
+                 from microblaze_sleep.c:63:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_io.h:61:0,
+                 from sleep.h:52,
+                 from microblaze_sleep.h:67,
+                 from microblaze_sleep.c:63:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:61,
+                 from xil_misc_psreset_api.h:54,
+                 from xil_misc_psreset_api.c:51:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_io.h:61:0,
+                 from xil_misc_psreset_api.h:54,
+                 from xil_misc_psreset_api.c:51:
+xil_printf.h:13:10: fatal error: bspconfig.h: No such file or directory
+ #include "bspconfig.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from microblaze_enable_exceptions.S:35:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_enable_dcache.S:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_icache_range.S:42:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_dcache_range.S:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_init_dcache_range.S:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_scrub.S:47:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_dcache.S:37:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_interrupts.S:52:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_icache.S:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_cache_ext_range.S:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_dcache_range.S:42:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_dcache.S:37:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_cache_ext_range.S:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_update_dcache.S:57:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_enable_interrupts.S:53:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_enable_icache.S:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_update_icache.S:56:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_init_icache_range.S:42:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_icache.S:38:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_exceptions.S:35:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_dcache.S:39:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from hw_exception_handler.S:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_cache_ext.S:37:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_cache_ext.S:37:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+make[1]: *** [Makefile:58: standalone_libs] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [Makefile:30: microblaze_0/libsrc/standalone_v6_8/src/make.libs] Error 2
+make: Target 'all' not remade because of errors.
+
+13:20:26 Build Finished (took 3s.595ms)
+
