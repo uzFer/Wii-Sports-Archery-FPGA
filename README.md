@@ -18,10 +18,11 @@ This project will implement a 2-player Wii Sports archery recreation on two Nexy
 
 ## Design Tree 
 Repository Design Tree Structure is organized into the following folders:
-- docs: PDF of final report and presentation slides
-- video: final demo video 
-- dev: files from main and branches used during development
-- sdk_code: C code to run on Microblaze
-- project_tcl_scripts: tcl script which can be used to regenerate the project
-- verilog: verilog modules for final design block diagram 
-- constraints: constraints for final design block diagram
+- docs: This folder includes the PDF of final report and presentation slides.
+- video: This folder contains the final demo video.
+- dev: This folder includes all files from main and other branches made during development. There are .xpr files available in the dedicated subfolders for each branch.
+- sdk_code: This folder contains the main.c file used to run on Microblaze.
+project_tcl_scripts: This folder includes tcl scripts to regenerate the project.
+- verilog: This folder has the Verilog modules for the final design block diagram.
+- constraints: This folder holds the constraints file for the final design block diagram.
+- resources: This folder contains audio resources (scripts to convert raw audio into .coe files, as well as sample .coe files for different game sounds), and vga resources (block diagram), community contributions
